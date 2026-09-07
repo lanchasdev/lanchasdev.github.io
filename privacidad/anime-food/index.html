@@ -44,10 +44,8 @@ article li{margin:6px 0}
 <ul>
 <li><strong>No profile is created or updated.</strong></li>
 <li><strong>No IP address is stored and no location is derived from it.</strong></li>
-<li><strong>The identifier is renewed at the start of every session</strong>, so two sessions from the</li>
-<p>same device cannot be joined together — not on the device and not on our servers.</p>
-<li><strong>No search text is recorded</strong> at this level, and nothing about how long ago the</li>
-<p>Application was installed.</p>
+<li><strong>The identifier is renewed at the start of every session</strong>, so two sessions from the same device cannot be joined together — not on the device and not on our servers.</li>
+<li><strong>No search text is recorded</strong> at this level, and nothing about how long ago the Application was installed.</li>
 </ul>
 <p>What is recorded: application opened, screen viewed, session ended, recipe opened, added to or removed from favourites, Cooking Mode started and completed, filters applied, language changed, onboarding steps viewed and completed, review prompt shown, and — for searches — only the number of results, never the words typed.</p>
 <p>Each of these events carries technical context only: the app version, the operating system, the device model and type, the language, and a marker saying whether the event came from a released build or from our own internal testing.</p>
@@ -55,8 +53,7 @@ article li{margin:6px 0}
 <h3>2.2 Identified analytics and advertising — only with your consent</h3>
 <p>If you consent (see section 4), two things change. Advertising events are recorded — an ad was requested, shown, failed or skipped, and how much an impression earned — and the analytics above stop being anonymous:</p>
 <ul>
-<li><strong>Searches performed</strong> — the search text is recorded in lower case and **truncated to</li>
-<p>50 characters**, together with the number of results. This is the only free-text content the Application records. Please do not type personal information into the search field.</p>
+<li><strong>Searches performed</strong> — the search text is recorded in lower case and <strong>truncated to 50 characters</strong>, together with the number of results. This is the only free-text content the Application records. Please do not type personal information into the search field.</li>
 <li>An <strong>approximate location</strong> derived from your IP address.</li>
 <li>How long ago the Application was installed on your device.</li>
 </ul>
@@ -67,26 +64,19 @@ article li{margin:6px 0}
 <h2>3. Advertising identifiers</h2>
 <p>The Application shows advertising supplied by Google AdMob. Handling differs by platform, and the difference is real:</p>
 <ul>
-<li><strong>Android.</strong> The Application uses the Google Advertising ID. It is processed by AdMob</li>
-<p>to serve personalised or non-personalised advertising, to measure ad performance and to prevent fraud. You can reset or delete it at any time from *Settings → Google → Ads*.</p>
-<li><strong>iOS.</strong> The Application asks for <strong>App Tracking Transparency</strong> permission the first</li>
-<p>time it runs. <strong>The choice is yours and it is a real one:</strong></p>
-<li>If you <strong>allow</strong> it, the Application may access your device&#x27;s advertising identifier</li>
-<p>(IDFA), and AdMob may use it — together with data from other apps and websites — to show you personalised advertising and to measure it. In Apple&#x27;s terms, this is tracking.</p>
-<li>If you <strong>decline</strong>, the IDFA is not accessed, no tracking takes place, and the</li>
-<p>advertising you see is non-personalised. The Application works exactly the same.</p>
+<li><strong>Android.</strong> The Application uses the Google Advertising ID. It is processed by AdMob to serve personalised or non-personalised advertising, to measure ad performance and to prevent fraud. You can reset or delete it at any time from *Settings → Google → Ads*.</li>
+<li><strong>iOS.</strong> The Application asks for <strong>App Tracking Transparency</strong> permission the first time it runs. <strong>The choice is yours and it is a real one:</strong></li>
+<li>If you <strong>allow</strong> it, the Application may access your device&#x27;s advertising identifier (IDFA), and AdMob may use it — together with data from other apps and websites — to show you personalised advertising and to measure it. In Apple&#x27;s terms, this is tracking.</li>
+<li>If you <strong>decline</strong>, the IDFA is not accessed, no tracking takes place, and the advertising you see is non-personalised. The Application works exactly the same.</li>
 </ul>
 <p>You can change your answer at any time in *Settings → Privacy &amp; Security → Tracking*, and review the system-wide controls in *Settings → Privacy &amp; Security → Apple Advertising*.</p>
 <h2>4. Consent</h2>
 <p>On iOS you will see <strong>two separate prompts</strong> the first time you open the Application, and they ask different things: Apple&#x27;s <strong>App Tracking Transparency</strong> prompt decides whether the advertising identifier may be used (see section 3), and the consent form below decides everything else. Declining one does not answer the other.</p>
 <p>If you are in the European Economic Area or the United Kingdom, the Application shows a consent form, provided through Google&#x27;s User Messaging Platform.</p>
 <ul>
-<li><strong>Personalised advertising and identified analytics are only enabled if you consent.</strong></li>
-<p>Until you answer, nothing from section 2.2 leaves your device.</p>
-<li>If you decline, the profile, the search text, the approximate location and the</li>
-<p>advertising events are not sent, and any advertising shown is non-personalised.</p>
-<li><strong>The anonymous statistics of section 2.1 are not covered by this choice</strong> and</li>
-<p>continue to be collected. They contain nothing that identifies you or that links one session of yours to another.</p>
+<li><strong>Personalised advertising and identified analytics are only enabled if you consent.</strong> Until you answer, nothing from section 2.2 leaves your device.</li>
+<li>If you decline, the profile, the search text, the approximate location and the advertising events are not sent, and any advertising shown is non-personalised.</li>
+<li><strong>The anonymous statistics of section 2.1 are not covered by this choice</strong> and continue to be collected. They contain nothing that identifies you or that links one session of yours to another.</li>
 <li>Your choice is stored on your device.</li>
 </ul>
 <p>You can change your answer at any time from <strong>Profile → Ad privacy options</strong> inside the Application. Turning consent off there stops the identified analytics immediately and switches advertising to non-personalised.</p>
@@ -96,27 +86,19 @@ article li{margin:6px 0}
 <p>Our advertising partner may use SDKs, cookies or similar mobile technologies to deliver relevant content and evaluate the effectiveness of advertising campaigns.</p>
 <h2>7. Data retention</h2>
 <ul>
-<li><strong>Advertising and platform data</strong> collected by Google&#x27;s SDKs is retained under their</li>
-<p>own privacy policies, typically between 30 days and 14 months.</p>
-<li><strong>Analytics data</strong> held in PostHog is retained for <strong>12 months</strong> from collection and</li>
-<p>then deleted.</p>
-<li><strong>Support emails.</strong> If you write to us, your message and address are kept for at most</li>
-<p>6 months, unless a legal obligation requires longer.</p>
-<li><strong>No permanent database.</strong> We do not maintain user accounts or cloud profiles for this</li>
-<p>Application.</p>
+<li><strong>Advertising and platform data</strong> collected by Google&#x27;s SDKs is retained under their own privacy policies, typically between 30 days and 14 months.</li>
+<li><strong>Analytics data</strong> held in PostHog is retained for <strong>12 months</strong> from collection and then deleted.</li>
+<li><strong>Support emails.</strong> If you write to us, your message and address are kept for at most 6 months, unless a legal obligation requires longer.</li>
+<li><strong>No permanent database.</strong> We do not maintain user accounts or cloud profiles for this Application.</li>
 </ul>
 <h2>8. Data deletion and user controls</h2>
 <ul>
-<li><strong>Clear all local data — Android:</strong> *Settings → Apps → Anime Food Recipes → Storage →</li>
-<p>Clear data*. This also erases the analytics identifier and your consent choice.</p>
-<li><strong>Clear all local data — iOS:</strong> delete the Application from the Home Screen or from</li>
-<p>*Settings → General → iPhone Storage*, then reinstall it.</p>
+<li><strong>Clear all local data — Android:</strong> *Settings → Apps → Anime Food Recipes → Storage → Clear data*. This also erases the analytics identifier and your consent choice.</li>
+<li><strong>Clear all local data — iOS:</strong> delete the Application from the Home Screen or from *Settings → General → iPhone Storage*, then reinstall it.</li>
 <li><strong>Advertising profile — Android:</strong> *Settings → Google → Ads → Delete advertising ID*.</li>
-<li><strong>Advertising profile — iOS:</strong> *Settings → Privacy &amp; Security → Apple Advertising →</li>
-<p>turn off Personalised Ads*.</p>
+<li><strong>Advertising profile — iOS:</strong> *Settings → Privacy &amp; Security → Apple Advertising → turn off Personalised Ads*.</li>
 <li><strong>Uninstalling</strong> the Application stops all future collection.</li>
-<li><strong>By request:</strong> for anything related to support correspondence, write to</li>
-<p>lanchasdev@gmail.com. We will respond within 30 days.</p>
+<li><strong>By request:</strong> for anything related to support correspondence, write to lanchasdev@gmail.com. We will respond within 30 days.</li>
 </ul>
 <h2>9. Your rights</h2>
 <p>If you are in the European Economic Area or the United Kingdom, you have the right to access, rectify, erase, restrict and object to the processing of your personal data, and to withdraw your consent at any time.</p>
