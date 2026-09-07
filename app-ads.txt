@@ -1,5 +1,10 @@
 # Vendedores autorizados de los huecos de anuncio de estas apps.
-# Una linea por cuenta de red publicitaria, no por app: este fichero cubre
-# todas las apps que declaren este dominio como web de desarrollador.
-# Si alguna app esta en OTRA cuenta de AdMob, se anade su linea aqui debajo.
+# Una linea por cuenta de red publicitaria, no por app: este fichero cubre todas
+# las apps que declaren este dominio como web de desarrollador.
+#
+# La linea de Tappx venia del app-ads.txt que ellos alojaban en
+# if93504f2.app-ads-txt.com, que era lo que declaraban tres de las fichas de Play.
+# Al traer el fichero aqui hay que traerla tambien: sin ella se pierde esa
+# autorizacion y con ella la demanda que Tappx trae.
 google.com, pub-2712277498452610, DIRECT, f08c47fec0942fa0
+tappx.com, if93504f2, DIRECT, 9f375a07da0318ec
