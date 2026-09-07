@@ -9,12 +9,21 @@ más:
   desarrollador declarada en cada ficha de tienda. Una línea por cuenta de red,
   no por app, así que este único fichero cubre las once.
 - **El índice**, con las apps y sus enlaces a las tiendas.
-- **Las políticas de privacidad**, una por app. De momento solo está la de Anime
-  Food: cada app recoge cosas distintas y copiar la de otra sería declarar lo
-  que no hace.
+- **Las políticas de privacidad**, una por app: las once, sin pendientes. Cada
+  app recoge cosas distintas y copiar la de otra sería declarar lo que no hace,
+  así que cada una está escrita contra el código de SU app. Cuatro dicen que no
+  recogen nada porque no recogen nada; la de Medicina China es larga porque es
+  la única con cuentas, sincronización y suscripción.
 
-Se genera con el script del kit a partir de `apps.toml`, así que para añadir una
-app se toca allí y se vuelve a generar, no se edita el HTML a mano.
+El armazón (estilo, cabecera, migas) es el mismo en todas y sale de copiar el de
+una existente. El texto no se genera: se escribe leyendo qué SDK lleva la app,
+qué permisos pide y a dónde llama. Cuando una app cambie lo que recoge, se toca
+su página; no hay plantilla que regenerar.
+
+**El enlace que hay que declarar en la ficha** es
+`https://lanchasdev.github.io/privacidad/<slug>/`, y el mismo tiene que ir en el
+botón de privacidad DENTRO de la app. Si los dos no coinciden, la tienda enseña
+uno y el usuario ve otro.
 
 ## Para que AdMob lo dé por bueno
 
