@@ -1,0 +1,5 @@
+# Vendedores autorizados de los huecos de anuncio de estas apps.
+# Una linea por cuenta de red publicitaria, no por app: este fichero cubre
+# todas las apps que declaren este dominio como web de desarrollador.
+# Si alguna app esta en OTRA cuenta de AdMob, se anade su linea aqui debajo.
+google.com, pub-2712277498452610, DIRECT, f08c47fec0942fa0
