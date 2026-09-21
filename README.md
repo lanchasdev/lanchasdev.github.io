@@ -1,6 +1,6 @@
 # lanchasdev.github.io
 
-La web de desarrollador de las apps de Lanchas Dev. Tiene tres cosas y ninguna
+La web de desarrollador de las apps de Lanchas Dev. Tiene cuatro cosas y ninguna
 más:
 
 - **`app-ads.txt`**, en la raíz. Es lo que declara qué redes tienen permiso para
@@ -9,6 +9,12 @@ más:
   desarrollador declarada en cada ficha de tienda. Una línea por cuenta de red,
   no por app, así que este único fichero cubre las once.
 - **El índice**, con las apps y sus enlaces a las tiendas.
+- **Las páginas de enlace para la bio** de TikTok, Instagram y YouTube: `/mtc/`,
+  `/anime/`, `/looksmax/` y `/zodiaco/`. Estas sí se generan, con
+  `python3 enlaces/generar.py --bajar` (nombre, frase, icono y capturas salen de
+  las fichas de las tiendas; los colores y las etiquetas están en el propio
+  script). En la bio va con la red detrás, `lanchasdev.github.io/mtc?s=tt`
+  (`ig`, `yt`), y la página se lo pasa a Play como `utm_source`.
 - **Las políticas de privacidad**, una por app: las once, sin pendientes. Cada
   app recoge cosas distintas y copiar la de otra sería declarar lo que no hace,
   así que cada una está escrita contra el código de SU app. Cuatro dicen que no

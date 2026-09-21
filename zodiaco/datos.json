@@ -1,0 +1,28 @@
+{
+ "nombre": {
+  "es": "Horóscopo Chino Zodiaco 2026",
+  "en": "Chinese Zodiac Horoscope & Pet"
+ },
+ "frase": {
+  "es": "Horóscopo diario chino 2026: tu signo, compatibilidad y una mascota que crece",
+  "en": "Your Chinese zodiac sign, daily horoscope oracle, soulmate compatibility & pet"
+ },
+ "capturas": {
+  "es": [
+   "es-1.jpg",
+   "es-2.jpg",
+   "es-3.jpg",
+   "es-4.jpg",
+   "es-5.jpg",
+   "es-6.jpg"
+  ],
+  "en": [
+   "en-1.jpg",
+   "en-2.jpg",
+   "en-3.jpg",
+   "en-4.jpg",
+   "en-5.jpg",
+   "en-6.jpg"
+  ]
+ }
+}

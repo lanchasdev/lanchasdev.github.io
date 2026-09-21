@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="es"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Looksmaxxing: Glow Up Hombres</title>
+<meta name="description" content="Gamifica tu vida y tu autocontrol: gira la ruleta, misión y reto contrarreloj.">
+<meta name="theme-color" content="#0b0f1c">
+<meta property="og:title" content="Looksmaxxing: Glow Up Hombres">
+<meta property="og:description" content="Gamifica tu vida y tu autocontrol: gira la ruleta, misión y reto contrarreloj.">
+<meta property="og:image" content="https://lanchasdev.github.io/looksmax/icono.jpg">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="icono.jpg">
+<link rel="apple-touch-icon" href="icono.jpg">
+<style>
+:root{--bg:#0b0f1c;--bg2:#141a30;--fg:#f2f4fb;--muted:#a9b0c7;--accent:#7c5cff;--glow:#3b5bff;
+--card:rgba(255,255,255,.06);
+--line:rgba(255,255,255,.12);
+--btn:#fff;--btnfg:#0b0b0f}
+*{box-sizing:border-box;margin:0;padding:0}
+html{background:var(--bg)}
+body{min-height:100svh;color:var(--fg);font:16px/1.45 -apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,sans-serif;
+-webkit-font-smoothing:antialiased;background:radial-gradient(120% 70% at 50% -10%,color-mix(in srgb,var(--glow) 55%,transparent) 0%,transparent 60%),
+linear-gradient(180deg,var(--bg2),var(--bg) 70%);overflow-x:hidden}
+.halo{position:fixed;inset:-20% -20% auto;height:70vh;background:url(icono.jpg) center/cover;filter:blur(70px) saturate(1.4);
+opacity:.28;z-index:0;pointer-events:none}
+main{position:relative;z-index:1;max-width:440px;margin:0 auto;padding:max(48px,env(safe-area-inset-top)) 20px
+max(28px,env(safe-area-inset-bottom));display:flex;flex-direction:column;align-items:center;text-align:center}
+.icono{position:relative;width:124px;height:124px;margin-bottom:22px;animation:entra .6s cubic-bezier(.2,.8,.2,1) both}
+.icono img{width:100%;height:100%;border-radius:28px;display:block;box-shadow:0 18px 40px -12px rgba(0,0,0,.55),0 0 0 1px var(--line)}
+.icono::before{content:"";position:absolute;inset:-7px;border-radius:34px;background:conic-gradient(#22c55e,#eab308,#f97316,#ef4444,#d946ef,#6366f1,#0ea5e9,#22c55e);filter:blur(10px);opacity:.75;z-index:-1;animation:gira 8s linear infinite}
+h1{font-size:1.65rem;line-height:1.15;letter-spacing:-.02em;font-weight:750;animation:entra .6s .05s both}
+.frase{color:var(--muted);margin-top:10px;font-size:1rem;max-width:34ch;animation:entra .6s .1s both}
+.pills{list-style:none;display:flex;flex-wrap:wrap;justify-content:center;gap:6px;margin-top:16px;animation:entra .6s .15s both}
+.pills li{font-size:.78rem;font-weight:600;padding:5px 11px;border-radius:99px;background:var(--card);border:1px solid var(--line);
+backdrop-filter:blur(8px)}
+.pills .gratis,.pills .dl{background:color-mix(in srgb,var(--accent) 22%,transparent);border-color:color-mix(in srgb,var(--accent) 45%,transparent)}
+.botones{width:100%;display:flex;flex-direction:column;gap:12px;margin-top:28px;animation:entra .6s .2s both}
+.store{display:flex;align-items:center;justify-content:center;gap:14px;height:64px;border-radius:18px;text-decoration:none;
+color:var(--fg);background:var(--card);border:1px solid var(--line);backdrop-filter:blur(10px);font-size:1.25rem;font-weight:650;
+letter-spacing:-.01em;transition:transform .15s ease,box-shadow .15s ease}
+.store svg{width:28px;height:28px;flex:none}
+.store span{display:flex;flex-direction:column;align-items:flex-start;line-height:1.05}
+.store small{font-size:.68rem;font-weight:500;opacity:.75;letter-spacing:.01em;margin-bottom:3px}
+.store.primero{background:var(--btn);color:var(--btnfg);border-color:transparent;height:70px;
+box-shadow:0 14px 30px -12px color-mix(in srgb,var(--glow) 80%,transparent)}
+.store:active{transform:scale(.97)}
+@media(hover:hover){.store:hover{transform:translateY(-2px)}}
+.aviso{font-size:.82rem;color:var(--muted);margin-top:2px}
+h2{align-self:flex-start;font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:38px 0 12px;font-weight:650}
+.capturas{width:calc(100% + 40px);display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 20px 8px;
+scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.capturas::-webkit-scrollbar{display:none}
+.capturas img{flex:none;width:44%;max-width:190px;height:auto;aspect-ratio:auto;border-radius:16px;scroll-snap-align:start;
+box-shadow:0 10px 24px -12px rgba(0,0,0,.6);border:1px solid var(--line);background:var(--card)}
+footer{margin-top:34px;font-size:.8rem;color:var(--muted)}
+footer a{color:inherit;text-underline-offset:3px}
+@keyframes entra{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+@keyframes gira{to{filter:blur(10px) hue-rotate(360deg)}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important}}
+</style>
+</head><body>
+<div class="halo" aria-hidden="true"></div>
+<main>
+<div class="icono"><img src="icono.jpg" alt="" width="124" height="124"></div>
+<h1 data-nombre>Looksmaxxing: Glow Up Hombres</h1>
+<p class="frase" data-frase>Gamifica tu vida y tu autocontrol: gira la ruleta, misión y reto contrarreloj.</p>
+<ul class="pills"><li class="gratis" data-t="gratis">Gratis</li><li>Ruleta de hábitos</li><li>Misiones</li><li>Sube de nivel</li></ul>
+<div class="botones">
+<a class="store" id="ios" href="https://apps.apple.com/app/id6756071839"><svg viewBox="0 0 384 512" aria-hidden="true"><path fill="currentColor" d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg><span><small data-t="ios_sub">Descárgala en</small>App Store</span></a>
+<a class="store" id="play" href="https://play.google.com/store/apps/details?id=com.bydark.looksmaxinghabit"><svg viewBox="0 0 512 512" aria-hidden="true"><path fill="#00d7fe" d="M47 25c-6 6-9 15-9 27v408c0 12 3 21 9 27l2 2 229-229v-6L49 23z"/><path fill="#ffce00" d="M354 336l-76-76v-6l76-76 2 1 90 51c26 15 26 39 0 54l-90 51z"/><path fill="#ff3a44" d="M356 335l-78-78L47 488c9 9 23 10 39 1l270-154"/><path fill="#00f076" d="M356 179L86 26c-16-9-30-8-39 1l231 230z"/></svg><span><small data-t="play_sub">Disponible en</small>Google Play</span></a>
+
+</div>
+<h2 data-t="capturas">Así es por dentro</h2>
+<div class="capturas"><img src="es-1.jpg" alt="" loading="lazy" width="230" height="500" data-lang-src><img src="es-2.jpg" alt="" loading="lazy" width="230" height="500" data-lang-src><img src="es-3.jpg" alt="" loading="lazy" width="230" height="500" data-lang-src><img src="es-4.jpg" alt="" loading="lazy" width="230" height="500" data-lang-src><img src="es-5.jpg" alt="" loading="lazy" width="230" height="500" data-lang-src><img src="es-6.jpg" alt="" loading="lazy" width="230" height="500" data-lang-src></div>
+<footer><a href="/privacidad/looksmax/" data-t="privacidad">Privacidad</a> · <a href="/" data-t="hecha">Hecha por Lanchas Dev</a></footer>
+</main>
+<script>
+(function(){
+var D={"slug": "looksmax", "ios": "6756071839", "play": "com.bydark.looksmaxinghabit", "pt": "", "nombre": {"es": "Looksmaxxing: Glow Up Hombres", "en": "Looksmaxxing: Glow Up Coach"}, "frase": {"es": "Gamifica tu vida y tu autocontrol: gira la ruleta, misión y reto contrarreloj.", "en": "Gamify your life: spin the wheel, get a mission, beat the timer. Level up free."}, "capturas": {"es": ["es-1.jpg", "es-2.jpg", "es-3.jpg", "es-4.jpg", "es-5.jpg", "es-6.jpg"], "en": ["en-1.jpg", "en-2.jpg", "en-3.jpg", "en-4.jpg", "en-5.jpg", "en-6.jpg"]}, "etiquetas": {"es": ["Ruleta de hábitos", "Misiones", "Sube de nivel"], "en": ["Habit wheel", "Missions", "Level up"]}, "descargas": null, "textos": {"es": {"ios_sub": "Descárgala en", "play_sub": "Disponible en", "gratis": "Gratis", "solo_android": "Por ahora solo en Android · pronto en iPhone", "privacidad": "Privacidad", "hecha": "Hecha por Lanchas Dev", "capturas": "Así es por dentro"}, "en": {"ios_sub": "Download on the", "play_sub": "Get it on", "gratis": "Free", "solo_android": "Android only for now · iPhone soon", "privacidad": "Privacy", "hecha": "Made by Lanchas Dev", "capturas": "Take a look inside"}}};
+var q=new URLSearchParams(location.search), s=(q.get("s")||q.get("utm_source")||"").replace(/[^\w.-]/g,"").slice(0,40);
+var lang=/^es\b/i.test(navigator.language||"es")?"es":"en", T=D.textos[lang];
+document.documentElement.lang=lang;
+if(lang!=="es"){
+  document.title=D.nombre.en;
+  document.querySelector("[data-nombre]").textContent=D.nombre.en;
+  document.querySelector("[data-frase]").textContent=D.frase.en;
+  var p=document.querySelectorAll(".pills li:not(.gratis):not(.dl)");
+  D.etiquetas.en.forEach(function(x,i){if(p[i])p[i].textContent=x;});
+  var dl=document.querySelector("[data-desc]"); if(dl&&D.descargas) dl.textContent=D.descargas.en;
+  var im=document.querySelectorAll("[data-lang-src]");
+  D.capturas.en.forEach(function(c,i){if(im[i])im[i].src=c;});
+}
+document.querySelectorAll("[data-t]").forEach(function(n){n.textContent=T[n.dataset.t];});
+var ua=navigator.userAgent, android=/Android/.test(ua);
+// El iPad se presenta como un Mac: lo delata que tenga pantalla táctil.
+var ios=!android&&(/iPhone|iPad|iPod/.test(ua)||(navigator.platform==="MacIntel"&&navigator.maxTouchPoints>1));
+var a=document.getElementById("ios"), g=document.getElementById("play"), cont=g.parentNode;
+if(s){
+  if(a&&D.pt) a.href+="?pt="+D.pt+"&ct="+encodeURIComponent(s+"-"+D.slug)+"&mt=8";
+  g.href+="&referrer="+encodeURIComponent("utm_source="+s+"&utm_medium=bio&utm_campaign="+D.slug);
+}
+if(ios&&a){a.classList.add("primero");}
+else if(android||!a){g.classList.add("primero");cont.insertBefore(g,cont.firstChild);}
+else{a.classList.add("primero");}
+if(ios&&!a){var av=document.getElementById("aviso");if(av)av.hidden=false;}
+})();
+</script>
+</body></html>

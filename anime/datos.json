@@ -1,0 +1,28 @@
+{
+ "nombre": {
+  "es": "Comida de Anime: Sushi Ramen",
+  "en": "Anime Food: Japanese Recipes"
+ },
+ "frase": {
+  "es": "Cocina ramen, sushi y platos de anime, ¡recetas japonesas fáciles!",
+  "en": "Cook ramen, sushi & iconic anime dishes — easy Japanese recipes for fans!"
+ },
+ "capturas": {
+  "es": [
+   "es-1.jpg",
+   "es-2.jpg",
+   "es-3.jpg",
+   "es-4.jpg",
+   "es-5.jpg",
+   "es-6.jpg"
+  ],
+  "en": [
+   "en-1.jpg",
+   "en-2.jpg",
+   "en-3.jpg",
+   "en-4.jpg",
+   "en-5.jpg",
+   "en-6.jpg"
+  ]
+ }
+}

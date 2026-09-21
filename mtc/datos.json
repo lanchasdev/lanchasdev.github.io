@@ -1,0 +1,27 @@
+{
+ "nombre": {
+  "es": "Manual Yin Yang: Guía MTC",
+  "en": "TCM Herbs, Acupuncture & Qi"
+ },
+ "frase": {
+  "es": "Manual de estudio de medicina tradicional china. Acupuntura, hierbas y canales",
+  "en": "Traditional Chinese Medicine study guide for meridians, pulse & tongue analysis"
+ },
+ "capturas": {
+  "es": [
+   "es-1.jpg",
+   "es-2.jpg",
+   "es-3.jpg",
+   "es-4.jpg",
+   "es-5.jpg",
+   "es-6.jpg"
+  ],
+  "en": [
+   "en-1.jpg",
+   "en-2.jpg",
+   "en-3.jpg",
+   "en-4.jpg",
+   "en-5.jpg"
+  ]
+ }
+}
