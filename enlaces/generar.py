@@ -28,6 +28,9 @@ PT = ""  # provider token de App Store Connect; vacío = los clics de iOS no se 
 APPS = [
     {
         "slug": "mtc", "ios": "6759268591", "play": "com.bydark.traditional.chinese.acupuncture",
+        # Las láminas con las mascotas enseñando la app gustan más que las capturas de la ficha:
+        # están solo en español, así que en inglés siguen saliendo las de App Store.
+        "capturas_propias": {"es": "/Users/alberto/Proyectos/mtc/phone/assets/new-screens/store-concepts-v1"},
         "privacidad": "medicina-china", "descargas": {"es": "+1000 descargas", "en": "1K+ downloads"},
         "tema": {"bg": "#0d1f19", "bg2": "#12302a", "fg": "#f3ecdb", "muted": "#b6c2b3",
                  "accent": "#d8b25a", "glow": "#1f7a4a"},
@@ -93,6 +96,16 @@ def bajar(app):
             urls = [u + "=w460-h1000-rw" for u in capturas]
             icono = icono_play + "=s512"
         nombres = []
+        propias = app.get("capturas_propias", {}).get(lang)
+        if propias:
+            for viejo in dest.glob(f"{lang}-*.jpg"):
+                viejo.unlink()
+            for i, f in enumerate(sorted(pathlib.Path(propias).glob("*.png")), 1):
+                nombre = f"{lang}-{i}.jpg"
+                subprocess.run(["sips", "-Z", "1000", "-s", "format", "jpeg", "-s", "formatOptions", "80",
+                                str(f), "--out", str(dest / nombre)], check=True, capture_output=True)
+                nombres.append(nombre)
+            urls = []
         for i, u in enumerate(urls[:6], 1):
             nombre = f"{lang}-{i}.jpg"
             (dest / nombre).write_bytes(_get(u))
@@ -235,8 +248,9 @@ if(lang!=="es"){{
   var p=document.querySelectorAll(".pills li:not(.gratis):not(.dl)");
   D.etiquetas.en.forEach(function(x,i){{if(p[i])p[i].textContent=x;}});
   var dl=document.querySelector("[data-desc]"); if(dl&&D.descargas) dl.textContent=D.descargas.en;
-  var im=document.querySelectorAll("[data-lang-src]");
-  D.capturas.en.forEach(function(c,i){{if(im[i])im[i].src=c;}});
+  // Cada idioma puede tener un número distinto de capturas: la tira se rehace entera.
+  document.querySelector(".capturas").innerHTML=D.capturas.en.map(function(c){{
+    return '<img src="'+c+'" alt="" loading="lazy" width="230" height="500">';}}).join("");
 }}
 document.querySelectorAll("[data-t]").forEach(function(n){{n.textContent=T[n.dataset.t];}});
 var ua=navigator.userAgent, android=/Android/.test(ua);

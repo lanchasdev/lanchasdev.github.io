@@ -72,12 +72,12 @@ footer a{color:inherit;text-underline-offset:3px}
 
 </div>
 <h2 data-t="capturas">Así es por dentro</h2>
-<div class="capturas"><img src="es-1.jpg" alt="" loading="lazy" width="230" height="500" data-lang-src><img src="es-2.jpg" alt="" loading="lazy" width="230" height="500" data-lang-src><img src="es-3.jpg" alt="" loading="lazy" width="230" height="500" data-lang-src><img src="es-4.jpg" alt="" loading="lazy" width="230" height="500" data-lang-src><img src="es-5.jpg" alt="" loading="lazy" width="230" height="500" data-lang-src><img src="es-6.jpg" alt="" loading="lazy" width="230" height="500" data-lang-src></div>
+<div class="capturas"><img src="es-1.jpg" alt="" loading="lazy" width="230" height="500" data-lang-src><img src="es-2.jpg" alt="" loading="lazy" width="230" height="500" data-lang-src><img src="es-3.jpg" alt="" loading="lazy" width="230" height="500" data-lang-src><img src="es-4.jpg" alt="" loading="lazy" width="230" height="500" data-lang-src><img src="es-5.jpg" alt="" loading="lazy" width="230" height="500" data-lang-src><img src="es-6.jpg" alt="" loading="lazy" width="230" height="500" data-lang-src><img src="es-7.jpg" alt="" loading="lazy" width="230" height="500" data-lang-src><img src="es-8.jpg" alt="" loading="lazy" width="230" height="500" data-lang-src><img src="es-9.jpg" alt="" loading="lazy" width="230" height="500" data-lang-src></div>
 <footer><a href="/privacidad/medicina-china/" data-t="privacidad">Privacidad</a> · <a href="/" data-t="hecha">Hecha por Lanchas Dev</a></footer>
 </main>
 <script>
 (function(){
-var D={"slug": "mtc", "ios": "6759268591", "play": "com.bydark.traditional.chinese.acupuncture", "pt": "", "nombre": {"es": "Manual Yin Yang: Guía MTC", "en": "TCM Herbs, Acupuncture & Qi"}, "frase": {"es": "Manual de estudio de medicina tradicional china. Acupuntura, hierbas y canales", "en": "Traditional Chinese Medicine study guide for meridians, pulse & tongue analysis"}, "capturas": {"es": ["es-1.jpg", "es-2.jpg", "es-3.jpg", "es-4.jpg", "es-5.jpg", "es-6.jpg"], "en": ["en-1.jpg", "en-2.jpg", "en-3.jpg", "en-4.jpg", "en-5.jpg"]}, "etiquetas": {"es": ["Acupuntura", "Hierbas", "Meridianos"], "en": ["Acupuncture", "Herbs", "Meridians"]}, "descargas": {"es": "+1000 descargas", "en": "1K+ downloads"}, "textos": {"es": {"ios_sub": "Descárgala en", "play_sub": "Disponible en", "gratis": "Gratis", "solo_android": "Por ahora solo en Android · pronto en iPhone", "privacidad": "Privacidad", "hecha": "Hecha por Lanchas Dev", "capturas": "Así es por dentro"}, "en": {"ios_sub": "Download on the", "play_sub": "Get it on", "gratis": "Free", "solo_android": "Android only for now · iPhone soon", "privacidad": "Privacy", "hecha": "Made by Lanchas Dev", "capturas": "Take a look inside"}}};
+var D={"slug": "mtc", "ios": "6759268591", "play": "com.bydark.traditional.chinese.acupuncture", "pt": "", "nombre": {"es": "Manual Yin Yang: Guía MTC", "en": "TCM Herbs, Acupuncture & Qi"}, "frase": {"es": "Manual de estudio de medicina tradicional china. Acupuntura, hierbas y canales", "en": "Traditional Chinese Medicine study guide for meridians, pulse & tongue analysis"}, "capturas": {"es": ["es-1.jpg", "es-2.jpg", "es-3.jpg", "es-4.jpg", "es-5.jpg", "es-6.jpg", "es-7.jpg", "es-8.jpg", "es-9.jpg"], "en": ["en-1.jpg", "en-2.jpg", "en-3.jpg", "en-4.jpg", "en-5.jpg"]}, "etiquetas": {"es": ["Acupuntura", "Hierbas", "Meridianos"], "en": ["Acupuncture", "Herbs", "Meridians"]}, "descargas": {"es": "+1000 descargas", "en": "1K+ downloads"}, "textos": {"es": {"ios_sub": "Descárgala en", "play_sub": "Disponible en", "gratis": "Gratis", "solo_android": "Por ahora solo en Android · pronto en iPhone", "privacidad": "Privacidad", "hecha": "Hecha por Lanchas Dev", "capturas": "Así es por dentro"}, "en": {"ios_sub": "Download on the", "play_sub": "Get it on", "gratis": "Free", "solo_android": "Android only for now · iPhone soon", "privacidad": "Privacy", "hecha": "Made by Lanchas Dev", "capturas": "Take a look inside"}}};
 var q=new URLSearchParams(location.search), s=(q.get("s")||q.get("utm_source")||"").replace(/[^\w.-]/g,"").slice(0,40);
 var lang=/^es\b/i.test(navigator.language||"es")?"es":"en", T=D.textos[lang];
 document.documentElement.lang=lang;
@@ -88,8 +88,9 @@ if(lang!=="es"){
   var p=document.querySelectorAll(".pills li:not(.gratis):not(.dl)");
   D.etiquetas.en.forEach(function(x,i){if(p[i])p[i].textContent=x;});
   var dl=document.querySelector("[data-desc]"); if(dl&&D.descargas) dl.textContent=D.descargas.en;
-  var im=document.querySelectorAll("[data-lang-src]");
-  D.capturas.en.forEach(function(c,i){if(im[i])im[i].src=c;});
+  // Cada idioma puede tener un número distinto de capturas: la tira se rehace entera.
+  document.querySelector(".capturas").innerHTML=D.capturas.en.map(function(c){
+    return '<img src="'+c+'" alt="" loading="lazy" width="230" height="500">';}).join("");
 }
 document.querySelectorAll("[data-t]").forEach(function(n){n.textContent=T[n.dataset.t];});
 var ua=navigator.userAgent, android=/Android/.test(ua);
