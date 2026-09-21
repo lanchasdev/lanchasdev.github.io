@@ -88,8 +88,9 @@ if(lang!=="es"){
   var p=document.querySelectorAll(".pills li:not(.gratis):not(.dl)");
   D.etiquetas.en.forEach(function(x,i){if(p[i])p[i].textContent=x;});
   var dl=document.querySelector("[data-desc]"); if(dl&&D.descargas) dl.textContent=D.descargas.en;
-  var im=document.querySelectorAll("[data-lang-src]");
-  D.capturas.en.forEach(function(c,i){if(im[i])im[i].src=c;});
+  // Cada idioma puede tener un número distinto de capturas: la tira se rehace entera.
+  document.querySelector(".capturas").innerHTML=D.capturas.en.map(function(c){
+    return '<img src="'+c+'" alt="" loading="lazy" width="230" height="500">';}).join("");
 }
 document.querySelectorAll("[data-t]").forEach(function(n){n.textContent=T[n.dataset.t];});
 var ua=navigator.userAgent, android=/Android/.test(ua);
