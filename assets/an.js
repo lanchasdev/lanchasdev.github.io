@@ -1,14 +1,23 @@
 /* an.js — quién entra en la web y quién pulsa «descargar», en PostHog.
  *
- * Lo carga cada página con <script defer src="/assets/an.js"></script> y manda dos cosas:
+ * Lo carga cada página con:
  *
- *   $pageview  — una por página vista, con `fuente` (la red de la bio: ?s=tt|ig|yt) y,
- *                en las páginas de app, `app`.
+ *     <script defer src="/assets/an.js" data-sitio="portfolio"></script>
+ *
+ * y manda dos cosas:
+ *
+ *   $pageview  — una por página vista, con `sitio`, `fuente` (la red de la bio:
+ *                ?s=tt|ig|yt) y, en las páginas de app, `app`.
  *   descarga   — cada clic en un enlace a App Store o Google Play, venga del índice o de
  *                una página de app, con `app`, `tienda`, `fuente` y `pagina`.
  *
  * Va a su propio proyecto de PostHog (`web`, 281538), no al de ninguna app: mezclarlos
  * obligaría a filtrar por una propiedad en todas las consultas de producto para siempre.
+ *
+ * Las tres webs (portfolio, Medicina China Hoy, Anime Recetas) comparten ese proyecto y
+ * se distinguen por `sitio`, no por clave: una clave de PostHog ES un proyecto, así que
+ * darle una a cada web costaría tres de los seis huecos del plan. `sitio` sale del
+ * `data-sitio` del propio <script>, y si falta, del dominio.
  *
  * Sin cookies y sin localStorage: `cookieless_mode: 'always'` hace que la identidad la
  * calcule PostHog en su servidor con un hash del día + IP + navegador, que caduca cada
@@ -22,6 +31,11 @@
 (function () {
   var TOKEN = 'phc_no447c6NMGBvvAZHX3mVHadBXjF6sks5ZvVFSULqbEUd';
   var HOST = 'https://eu.i.posthog.com';
+
+  // Qué web es esta. Lo dice el <script data-sitio>; si a alguien se le olvida ponerlo,
+  // el dominio sirve de recambio antes que perder el evento.
+  var marca = document.querySelector('script[data-sitio]');
+  var sitio = (marca && marca.getAttribute('data-sitio')) || location.hostname;
 
   // La red de la que viene, tal cual la lleva la bio: ?s=tt (TikTok), ig, yt.
   var REDES = { tt: 'tiktok', ig: 'instagram', yt: 'youtube' };
@@ -60,7 +74,7 @@
       capture_performance: false,
       capture_pageview: false      // la manda esta misma función, con `fuente` y `app` puestas
     });
-    window.posthog.register({ fuente: fuente });
+    window.posthog.register({ sitio: sitio, fuente: fuente });
     if (app) window.posthog.register({ app: app });
     window.posthog.capture('$pageview');
 
@@ -70,6 +84,7 @@
       var t = tienda(a.href);
       if (!t) return;
       window.posthog.capture('descarga', {
+        sitio: sitio,
         app: deQuien(a),
         tienda: t,
         fuente: fuente,

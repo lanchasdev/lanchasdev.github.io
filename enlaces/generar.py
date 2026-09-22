@@ -172,7 +172,7 @@ def pagina(app, datos):
 <meta name="twitter:card" content="summary">
 <link rel="icon" href="icono.jpg">
 <link rel="apple-touch-icon" href="icono.jpg">
-<script defer src="/assets/an.js"></script>
+<script defer src="/assets/an.js" data-sitio="portfolio"></script>
 <style>
 :root{{--bg:{t["bg"]};--bg2:{t["bg2"]};--fg:{t["fg"]};--muted:{t["muted"]};--accent:{t["accent"]};--glow:{t["glow"]};
 --card:{"rgba(255,255,255,.55)" if t.get("claro") else "rgba(255,255,255,.06)"};

@@ -26,7 +26,9 @@ más:
   por cada clic en un botón de App Store o Google Play, con la app, la tienda y
   la red de la que venía (`?s=tt|ig|yt`). Es lo que cierra el círculo: la página
   de la bio ya decía a la tienda de dónde venía el clic, pero no se sabía cuánta
-  gente llegaba y no pulsaba.
+  gente llegaba y no pulsaba. El mismo fichero vale para las otras dos webs
+  (Medicina China Hoy y Anime Recetas): lo que las separa es el `data-sitio` del
+  `<script>`, no una clave distinta.
 
 El armazón (estilo, cabecera, migas) es el mismo en todas y sale de copiar el de
 una existente. El texto no se genera: se escribe leyendo qué SDK lleva la app,
@@ -55,6 +57,15 @@ Los datos van a su propio proyecto de PostHog (**web**, `281538`, en la nube
 europea), no al de ninguna app: mezclar la web con el producto obliga a filtrar
 por una propiedad en todas las consultas para siempre. El panel está en
 <https://eu.posthog.com/project/281538/dashboard/968605>.
+
+Las tres webs comparten ese proyecto y se distinguen por la propiedad `sitio`,
+que sale del `data-sitio` del `<script>`:
+
+    <script defer src="/assets/an.js" data-sitio="portfolio"></script>
+
+Separarlas por clave no es una opción: en PostHog una clave **es** un proyecto, y
+el plan trae seis. Una propiedad hace lo mismo —filtrar y partir por web— sin
+gastar huecos, y además deja comparar las tres en el mismo gráfico.
 
 No hay banner de cookies porque no hay cookies: `an.js` arranca PostHog en modo
 `cookieless`, sin cookies ni `localStorage`, y la identidad la calcula el
