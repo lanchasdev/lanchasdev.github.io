@@ -172,6 +172,7 @@ def pagina(app, datos):
 <meta name="twitter:card" content="summary">
 <link rel="icon" href="icono.jpg">
 <link rel="apple-touch-icon" href="icono.jpg">
+<script defer src="/assets/an.js"></script>
 <style>
 :root{{--bg:{t["bg"]};--bg2:{t["bg2"]};--fg:{t["fg"]};--muted:{t["muted"]};--accent:{t["accent"]};--glow:{t["glow"]};
 --card:{"rgba(255,255,255,.55)" if t.get("claro") else "rgba(255,255,255,.06)"};
@@ -219,7 +220,7 @@ footer a{{color:inherit;text-underline-offset:3px}}
 @keyframes gira{{to{{filter:blur(10px) hue-rotate(360deg)}}}}
 @media(prefers-reduced-motion:reduce){{*{{animation:none!important}}}}
 </style>
-</head><body>
+</head><body data-app="{app["slug"]}">
 <div class="halo" aria-hidden="true"></div>
 <main>
 <div class="icono"><img src="icono.jpg" alt="" width="124" height="124"></div>
