@@ -54,13 +54,23 @@
     return '';
   }
 
-  // Cuál es la app de ESTE enlace. En una página de app es la de la página; en el índice
-  // es el nombre de su tarjeta, que es lo que se lee en la propia web.
+  // Cuál es la app de ESTE enlace, probando de lo más explícito a lo más adivinado:
+  //   1. `data-app` del enlace o de lo que lo contenga —incluido el `<body data-app>` de
+  //      las páginas de una sola app, que es a donde llega `closest` cuando el botón no
+  //      dice nada;
+  //   2. el nombre de su tarjeta, que es lo que hay en el índice del portfolio;
+  //   3. lo que diga el enlace de la tienda.
+  // El último escalón existe para que un botón nuevo en cualquiera de las tres webs salga
+  // identificado —aunque sea por su id de App Store— en vez de caer en «desconocida».
   function deQuien(a) {
+    var suyo = a.closest ? a.closest('[data-app]') : null;
+    if (suyo) return suyo.getAttribute('data-app');
     if (app) return app;
     var tarjeta = a.closest ? a.closest('.card') : null;
     var nombre = tarjeta && tarjeta.querySelector('.name');
-    return nombre ? nombre.textContent.replace(/\s*→\s*$/, '').trim() : 'desconocida';
+    if (nombre) return nombre.textContent.replace(/\s*→\s*$/, '').trim();
+    var play = a.href.match(/[?&]id=([\w.]+)/), ios = a.href.match(/\/id(\d+)/);
+    return (play && play[1]) || (ios && ios[1]) || 'desconocida';
   }
 
   function arranca() {
