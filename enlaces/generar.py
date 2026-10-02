@@ -46,10 +46,13 @@ APPS = [
     {
         "slug": "looksmax", "ios": "6756071839", "play": "com.bydark.looksmaxinghabit",
         "privacidad": "looksmax", "descargas": None,
-        "tema": {"bg": "#0b0f1c", "bg2": "#141a30", "fg": "#f2f4fb", "muted": "#a9b0c7",
-                 "accent": "#7c5cff", "glow": "#3b5bff", "anillo": True},
-        "etiquetas": {"es": ["Ruleta de hábitos", "Misiones", "Sube de nivel"],
-                      "en": ["Habit wheel", "Missions", "Level up"]},
+        # Leo Glow 2.0 (oct 2026): negro y lima, como la app. Las capturas y el texto se
+        # pusieron a mano desde store-assets/ antes de que las tiendas aprobaran la ficha
+        # nueva; con --bajar ya salen de las tiendas.
+        "tema": {"bg": "#0a0b0a", "bg2": "#141712", "fg": "#f4f7ec", "muted": "#b3baa6",
+                 "accent": "#e3fa5c", "glow": "#9bd400"},
+        "etiquetas": {"es": ["Coach IA", "Reto diario", "Plan de 4 semanas"],
+                      "en": ["AI coach", "Daily challenge", "4-week plan"]},
     },
     {
         "slug": "zodiaco", "ios": "", "play": "com.celestialpath.zodiac",

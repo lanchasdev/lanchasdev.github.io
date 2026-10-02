@@ -1,11 +1,11 @@
 {
  "nombre": {
-  "es": "Looksmaxxing: Glow Up Hombres",
-  "en": "Looksmaxxing: Glow Up Coach"
+  "es": "Leo IA: Glow Up y Looksmaxxing",
+  "en": "Leo AI: Glow Up & Looksmaxxing"
  },
  "frase": {
-  "es": "Gamifica tu vida y tu autocontrol: gira la ruleta, misión y reto contrarreloj.",
-  "en": "Gamify your life: spin the wheel, get a mission, beat the timer. Level up free."
+  "es": "Coach IA de glow up para hombres: autodisciplina, autocontrol y enfoque",
+  "en": "Your AI glow up coach: gamify your life, self discipline app & skincare routine"
  },
  "capturas": {
   "es": [
@@ -14,7 +14,9 @@
    "es-3.jpg",
    "es-4.jpg",
    "es-5.jpg",
-   "es-6.jpg"
+   "es-6.jpg",
+   "es-7.jpg",
+   "es-8.jpg"
   ],
   "en": [
    "en-1.jpg",
@@ -22,7 +24,9 @@
    "en-3.jpg",
    "en-4.jpg",
    "en-5.jpg",
-   "en-6.jpg"
+   "en-6.jpg",
+   "en-7.jpg",
+   "en-8.jpg"
   ]
  }
 }
