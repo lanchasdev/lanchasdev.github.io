@@ -53,6 +53,86 @@ APPS = [
                  "accent": "#e3fa5c", "glow": "#9bd400"},
         "etiquetas": {"es": ["Coach IA", "Reto diario", "Plan de 4 semanas"],
                       "en": ["AI coach", "Daily challenge", "4-week plan"]},
+        # Texto para quien lee la página sin mirarla: ChatGPT y Google mandan ~60 descargas al
+        # mes a la app (App Store Connect ▸ Referencias de app, sep 2026) y lo que citan sale de
+        # aquí y de la ficha. Solo hechos comprobados en el repo de la app; sin precios.
+        "antes": ["Looksmaxxing: Glow Up Coach"],
+        "categoria": "LifestyleApplication",
+        "info": {
+            "en": {
+                "titulo": "What is Leo?",
+                "texto": [
+                    "Leo is a free looksmaxxing and glow up app for men, built on daily habits "
+                    "instead of face ratings. It used to be called Looksmaxxing: Glow Up Coach.",
+                    "Every day you spin a wheel that gives you one small, concrete challenge in one "
+                    "area (skin, physique, style, sleep, posture, mind, water, grooming or social). "
+                    "You do it for real and your avatar levels up with you. Leo, the AI coach, "
+                    "helps you fit it into your actual day.",
+                    "No face scans, no attractiveness scores, no extreme diets.",
+                ],
+                "funciones": [
+                    "Daily challenge wheel: one random mission a day that earns XP",
+                    "Coach Leo, an AI coach you can ask to adjust your day or get unstuck",
+                    "4-week plans and step-by-step challenges from 14 to 60 days",
+                    "Avatar, streaks, a weekly recap and Glow Leagues",
+                    "iPhone and Android, in 17 languages",
+                ],
+                "faq": [
+                    ("Does Leo rate my face or my looks?",
+                     "No. Leo never scans your face and never gives you an attractiveness score. "
+                     "It works on what you can change with habits: skin care, training, sleep, "
+                     "posture, style and confidence."),
+                    ("Is Leo free?",
+                     "Yes. It is free to download and the daily challenges are free. Glow+ is an "
+                     "optional subscription that unlocks the full plans, unlimited Coach Leo and "
+                     "removes ads."),
+                    ("Is it a healthy way to do looksmaxxing?",
+                     "That is the idea: small daily challenges you can actually keep, with no "
+                     "extreme diets and no fixation on a score."),
+                    ("Who is it for?",
+                     "Guys who want a glow up through self discipline and daily routines. "
+                     "Anyone can use it."),
+                    ("Which devices does it work on?",
+                     "iPhone (App Store) and Android (Google Play)."),
+                ],
+            },
+            "es": {
+                "titulo": "¿Qué es Leo?",
+                "texto": [
+                    "Leo es una app gratis de looksmaxxing y glow up para hombres basada en hábitos "
+                    "diarios, no en puntuar tu cara. Antes se llamaba Looksmaxxing: Glow Up Coach.",
+                    "Cada día giras una ruleta que te da un reto pequeño y concreto de un área (piel, "
+                    "físico, estilo, sueño, postura, mente, agua, grooming o social). Lo haces de "
+                    "verdad y tu avatar sube de nivel contigo. Leo, el coach con IA, te ayuda a "
+                    "encajarlo en tu día real.",
+                    "Sin escanear tu cara, sin notas de atractivo, sin dietas extremas.",
+                ],
+                "funciones": [
+                    "Ruleta del reto diario: una misión al azar cada día que da XP",
+                    "Coach Leo, un coach con IA al que pedirle que ajuste tu día o te desatasque",
+                    "Planes de 4 semanas y retos paso a paso de 14 a 60 días",
+                    "Avatar, rachas, resumen semanal y Ligas Glow",
+                    "iPhone y Android, en 17 idiomas",
+                ],
+                "faq": [
+                    ("¿Leo puntúa mi cara o mi físico?",
+                     "No. Leo nunca escanea tu cara ni te pone una nota de atractivo. Trabaja lo que "
+                     "puedes cambiar con hábitos: cuidado de la piel, entrenamiento, sueño, postura, "
+                     "estilo y confianza."),
+                    ("¿Es gratis?",
+                     "Sí. Se descarga gratis y los retos diarios son gratis. Glow+ es una suscripción "
+                     "opcional que abre los planes completos, el Coach Leo sin límite y quita los anuncios."),
+                    ("¿Es una forma sana de hacer looksmaxxing?",
+                     "Esa es la idea: retos diarios pequeños que se pueden mantener, sin dietas "
+                     "extremas y sin obsesionarse con una nota."),
+                    ("¿Para quién es?",
+                     "Para chicos que quieren un glow up a base de autodisciplina y rutina diaria. "
+                     "La puede usar cualquiera."),
+                    ("¿En qué móviles funciona?",
+                     "iPhone (App Store) y Android (Google Play)."),
+                ],
+            },
+        },
     },
     {
         "slug": "zodiaco", "ios": "", "play": "com.celestialpath.zodiac",
@@ -145,9 +225,54 @@ TEXTOS = {
 }
 
 
+def info(app, datos):
+    """El bloque «qué es» y su JSON-LD, o dos cadenas vacías si la app no lo tiene.
+
+    Va escrito en el HTML en los dos idiomas, no metido después con JavaScript: los
+    rastreadores de los asistentes (ChatGPT, Gemini) y de los buscadores leen el HTML tal
+    cual llega. El script solo esconde el idioma que no toca."""
+    if not app.get("info"):
+        return "", ""
+    e = lambda s: html.escape(s, quote=True)
+    bloques = []
+    for lang in ("es", "en"):
+        i = app["info"][lang]
+        parrafos = "".join(f"<p>{e(p)}</p>" for p in i["texto"])
+        funciones = "".join(f"<li>{e(f)}</li>" for f in i["funciones"])
+        faq = "".join(f"<details><summary>{e(q)}</summary><p>{e(a)}</p></details>" for q, a in i["faq"])
+        oculto = "" if lang == "es" else " hidden"
+        bloques.append(f'<section class="info" lang="{lang}" data-info{oculto}><h2>{e(i["titulo"])}</h2>'
+                       f'{parrafos}<ul>{funciones}</ul><div class="faq">{faq}</div></section>')
+    url = f"https://lanchasdev.github.io/{app['slug']}/"
+    tiendas = [f"https://play.google.com/store/apps/details?id={app['play']}"]
+    if app["ios"]:
+        tiendas.insert(0, f"https://apps.apple.com/app/id{app['ios']}")
+    ld = [{
+        "@context": "https://schema.org", "@type": "SoftwareApplication",
+        "name": datos["nombre"]["en"],
+        "alternateName": list(dict.fromkeys([datos["nombre"]["es"], *app.get("antes", [])])),
+        "description": " ".join(app["info"]["en"]["texto"]),
+        "applicationCategory": app.get("categoria", "LifestyleApplication"),
+        "operatingSystem": "iOS, Android" if app["ios"] else "Android",
+        "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
+        "image": f"{url}icono.jpg", "url": url, "sameAs": tiendas,
+        "author": {"@type": "Organization", "name": "Lanchas Dev", "url": "https://lanchasdev.github.io/"},
+    }, {
+        "@context": "https://schema.org", "@type": "FAQPage",
+        "mainEntity": [{"@type": "Question", "name": q, "inLanguage": lang,
+                        "acceptedAnswer": {"@type": "Answer", "text": a}}
+                       for lang in ("en", "es") for q, a in app["info"][lang]["faq"]],
+    }]
+    # `</` dentro de un <script> lo cerraría: se escapa la barra.
+    jsonld = "".join('<script type="application/ld+json">'
+                     + json.dumps(x, ensure_ascii=False).replace("</", "<\\/") + "</script>" for x in ld)
+    return "".join(bloques), jsonld
+
+
 def pagina(app, datos):
     t = app["tema"]
     e = lambda s: html.escape(s, quote=True)
+    bloque_info, jsonld = info(app, datos)
     capturas = "".join(
         f'<img src="{c}" alt="" loading="lazy" width="230" height="500" data-lang-src>' for c in datos["capturas"]["es"])
     etiquetas = "".join(f"<li>{e(x)}</li>" for x in app["etiquetas"]["es"])
@@ -173,6 +298,8 @@ def pagina(app, datos):
 <meta property="og:image" content="https://lanchasdev.github.io/{app["slug"]}/icono.jpg">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary">
+<link rel="canonical" href="https://lanchasdev.github.io/{app["slug"]}/">
+{jsonld}
 <link rel="icon" href="icono.jpg">
 <link rel="apple-touch-icon" href="icono.jpg">
 <script defer src="/assets/an.js" data-sitio="portfolio"></script>
@@ -217,6 +344,15 @@ scrollbar-width:none;-webkit-overflow-scrolling:touch}}
 .capturas::-webkit-scrollbar{{display:none}}
 .capturas img{{flex:none;width:44%;max-width:190px;height:auto;aspect-ratio:auto;border-radius:16px;scroll-snap-align:start;
 box-shadow:0 10px 24px -12px rgba(0,0,0,.6);border:1px solid var(--line);background:var(--card)}}
+.info{{width:100%;text-align:left;margin-top:6px}}
+.info h2{{margin-top:34px}}
+.info p{{color:var(--fg);opacity:.9;margin:0 0 10px;font-size:.95rem}}
+.info ul{{margin:4px 0 6px 18px;color:var(--muted);font-size:.9rem}}
+.info li{{margin:4px 0}}
+.faq{{margin-top:14px;display:flex;flex-direction:column;gap:8px}}
+.faq details{{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px}}
+.faq summary{{cursor:pointer;font-weight:650;font-size:.92rem}}
+.faq details p{{margin:8px 0 0;color:var(--muted);font-size:.9rem}}
 footer{{margin-top:34px;font-size:.8rem;color:var(--muted)}}
 footer a{{color:inherit;text-underline-offset:3px}}
 @keyframes entra{{from{{opacity:0;transform:translateY(10px)}}to{{opacity:1;transform:none}}}}
@@ -237,6 +373,7 @@ footer a{{color:inherit;text-underline-offset:3px}}
 </div>
 <h2 data-t="capturas">Así es por dentro</h2>
 <div class="capturas">{capturas}</div>
+{bloque_info}
 <footer>{privacidad}<a href="/" data-t="hecha">Hecha por Lanchas Dev</a></footer>
 </main>
 <script>
@@ -256,6 +393,7 @@ if(lang!=="es"){{
   document.querySelector(".capturas").innerHTML=D.capturas.en.map(function(c){{
     return '<img src="'+c+'" alt="" loading="lazy" width="230" height="500">';}}).join("");
 }}
+document.querySelectorAll("[data-info]").forEach(function(n){{n.hidden=n.lang!==lang;}});
 document.querySelectorAll("[data-t]").forEach(function(n){{n.textContent=T[n.dataset.t];}});
 var ua=navigator.userAgent, android=/Android/.test(ua);
 // El iPad se presenta como un Mac: lo delata que tenga pantalla táctil.
@@ -281,6 +419,24 @@ def main():
         datos = bajar(app) if "--bajar" in sys.argv or not f.exists() else json.loads(f.read_text())
         (RAIZ / app["slug"] / "index.html").write_text(pagina(app, datos))
         print(f"{app['slug']:9} {datos['nombre']['es']} · {len(datos['capturas']['es'])} capturas")
+    mapa()
+
+
+def mapa():
+    """robots.txt y sitemap.xml de todo el sitio, sacados de los index.html que hay.
+
+    Sin ellos el sitio solo se descubre si alguien lo enlaza; con ellos los buscadores, y los
+    asistentes que tiran de sus índices, encuentran también las páginas de cada app."""
+    paginas = sorted(f.parent.relative_to(RAIZ).as_posix() for f in RAIZ.glob("**/index.html")
+                     if not any(p.startswith((".", "_")) or p in ("node_modules", "enlaces")
+                                for p in f.relative_to(RAIZ).parts))
+    urls = "".join(f"<url><loc>https://lanchasdev.github.io/{'' if p == '.' else p + '/'}</loc></url>\n"
+                   for p in paginas)
+    (RAIZ / "sitemap.xml").write_text('<?xml version="1.0" encoding="UTF-8"?>\n'
+                                      '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+                                      f"{urls}</urlset>\n")
+    (RAIZ / "robots.txt").write_text("User-agent: *\nAllow: /\n\n"
+                                     "Sitemap: https://lanchasdev.github.io/sitemap.xml\n")
 
 
 if __name__ == "__main__":

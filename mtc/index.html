@@ -10,6 +10,8 @@
 <meta property="og:image" content="https://lanchasdev.github.io/mtc/icono.jpg">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary">
+<link rel="canonical" href="https://lanchasdev.github.io/mtc/">
+
 <link rel="icon" href="icono.jpg">
 <link rel="apple-touch-icon" href="icono.jpg">
 <script defer src="/assets/an.js" data-sitio="portfolio"></script>
@@ -54,6 +56,15 @@ scrollbar-width:none;-webkit-overflow-scrolling:touch}
 .capturas::-webkit-scrollbar{display:none}
 .capturas img{flex:none;width:44%;max-width:190px;height:auto;aspect-ratio:auto;border-radius:16px;scroll-snap-align:start;
 box-shadow:0 10px 24px -12px rgba(0,0,0,.6);border:1px solid var(--line);background:var(--card)}
+.info{width:100%;text-align:left;margin-top:6px}
+.info h2{margin-top:34px}
+.info p{color:var(--fg);opacity:.9;margin:0 0 10px;font-size:.95rem}
+.info ul{margin:4px 0 6px 18px;color:var(--muted);font-size:.9rem}
+.info li{margin:4px 0}
+.faq{margin-top:14px;display:flex;flex-direction:column;gap:8px}
+.faq details{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px}
+.faq summary{cursor:pointer;font-weight:650;font-size:.92rem}
+.faq details p{margin:8px 0 0;color:var(--muted);font-size:.9rem}
 footer{margin-top:34px;font-size:.8rem;color:var(--muted)}
 footer a{color:inherit;text-underline-offset:3px}
 @keyframes entra{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
@@ -74,6 +85,7 @@ footer a{color:inherit;text-underline-offset:3px}
 </div>
 <h2 data-t="capturas">Así es por dentro</h2>
 <div class="capturas"><img src="es-1.jpg" alt="" loading="lazy" width="230" height="500" data-lang-src><img src="es-2.jpg" alt="" loading="lazy" width="230" height="500" data-lang-src><img src="es-3.jpg" alt="" loading="lazy" width="230" height="500" data-lang-src><img src="es-4.jpg" alt="" loading="lazy" width="230" height="500" data-lang-src><img src="es-5.jpg" alt="" loading="lazy" width="230" height="500" data-lang-src><img src="es-6.jpg" alt="" loading="lazy" width="230" height="500" data-lang-src><img src="es-7.jpg" alt="" loading="lazy" width="230" height="500" data-lang-src><img src="es-8.jpg" alt="" loading="lazy" width="230" height="500" data-lang-src><img src="es-9.jpg" alt="" loading="lazy" width="230" height="500" data-lang-src></div>
+
 <footer><a href="/privacidad/medicina-china/" data-t="privacidad">Privacidad</a> · <a href="/" data-t="hecha">Hecha por Lanchas Dev</a></footer>
 </main>
 <script>
@@ -93,6 +105,7 @@ if(lang!=="es"){
   document.querySelector(".capturas").innerHTML=D.capturas.en.map(function(c){
     return '<img src="'+c+'" alt="" loading="lazy" width="230" height="500">';}).join("");
 }
+document.querySelectorAll("[data-info]").forEach(function(n){n.hidden=n.lang!==lang;});
 document.querySelectorAll("[data-t]").forEach(function(n){n.textContent=T[n.dataset.t];});
 var ua=navigator.userAgent, android=/Android/.test(ua);
 // El iPad se presenta como un Mac: lo delata que tenga pantalla táctil.
