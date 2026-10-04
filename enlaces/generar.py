@@ -35,6 +35,103 @@ APPS = [
         "tema": {"bg": "#0d1f19", "bg2": "#12302a", "fg": "#f3ecdb", "muted": "#b6c2b3",
                  "accent": "#d8b25a", "glow": "#1f7a4a"},
         "etiquetas": {"es": ["Acupuntura", "Hierbas", "Meridianos"], "en": ["Acupuncture", "Herbs", "Meridians"]},
+        # Los nombres con los que ha estado en cada tienda, para que un asistente que la conozca
+        # por uno los junte. Las cifras son las de la ficha de App Store 1.0.8 (oct 2026).
+        "antes": ["Chinese Medicine: Acupuncture", "Medicina China: Acupuntura",
+                  "TCM: Acupuncture & Acupressure"],
+        "categoria": "EducationalApplication",
+        "info": {
+            "en": {
+                "titulo": "What is this app?",
+                "texto": [
+                    "A study reference for Traditional Chinese Medicine (TCM) on iPhone, iPad and "
+                    "Android: acupuncture points, acupressure, meridians, Chinese herbs and formulas, "
+                    "tongue and pulse diagnosis, Yin Yang, the Five Elements, body constitutions, "
+                    "Chinese dietetics and Qi Gong, in one structured library.",
+                    "It is made for students preparing TCM exams, practitioners reviewing clinical "
+                    "patterns and anyone new to eastern medicine.",
+                    "Educational purposes only: it does not provide medical advice, diagnosis or "
+                    "treatment, and does not replace a qualified health professional.",
+                ],
+                "funciones": [
+                    "110 illustrated acupuncture points with location, function and category",
+                    "The 12 primary meridians, a 3D body view and five microsystems (ear, scalp, "
+                    "hand, abdomen, face)",
+                    "86 Chinese herbs and 30 classical formulas explained by their roles",
+                    "Six diagnostic methods with guided walkthroughs: tongue, pulse, Eight "
+                    "Principles, Zang-Fu, Five Elements and meridians",
+                    "Nine body constitutions, Chinese dietetics and seasonal eating",
+                    "Moxibustion, cupping, gua sha, tuina and Qi Gong (Ba Duan Jin, Wu Qin Xi…)",
+                    "Eight classics in context and a clinical case simulator",
+                ],
+                "faq": [
+                    ("Is it free?",
+                     "Yes, a large part is free: 30 key points with illustrations, 20 herbs, four "
+                     "formulas, Eight Principles and tongue diagnosis, cupping, Ba Duan Jin and two "
+                     "clinical cases. Premium opens everything, monthly, yearly or as a one-time "
+                     "purchase."),
+                    ("Does it include acupressure?",
+                     "Yes. Acupressure uses the same point map with manual pressure, and points for "
+                     "back pain, headache, sleep, digestion and stress are flagged for daily use."),
+                    ("Who is it for?",
+                     "TCM and acupuncture students, practitioners who want a quick reference, and "
+                     "beginners who want to understand how Chinese medicine works."),
+                    ("Is it medical advice?",
+                     "No. It is an educational reference and does not replace a qualified health "
+                     "professional."),
+                    ("Do I need an account?",
+                     "No account and no sign-up. Analytics stay off unless you turn them on."),
+                    ("Which devices and languages?",
+                     "iPhone, iPad and Android, in 11 languages: English, Spanish, French, "
+                     "Portuguese, Arabic, Hindi, Japanese, Korean and Chinese (Simplified and "
+                     "Traditional)."),
+                ],
+            },
+            "es": {
+                "titulo": "¿Qué es esta app?",
+                "texto": [
+                    "Un manual de estudio de medicina tradicional china (MTC) para iPhone, iPad y "
+                    "Android: puntos de acupuntura, acupresión, meridianos, hierbas y fórmulas chinas, "
+                    "diagnóstico por la lengua y el pulso, Yin Yang, los Cinco Elementos, "
+                    "constituciones, dietética china y Qi Gong, en una sola biblioteca ordenada.",
+                    "Está pensada para estudiantes que preparan exámenes de MTC, terapeutas que "
+                    "repasan patrones clínicos y cualquiera que empiece en la medicina oriental.",
+                    "Solo con fines educativos: no da consejo médico, diagnóstico ni tratamiento, y "
+                    "no sustituye a un profesional sanitario.",
+                ],
+                "funciones": [
+                    "110 puntos de acupuntura ilustrados con localización, función y categoría",
+                    "Los 12 meridianos principales, un cuerpo en 3D y cinco microsistemas (oreja, "
+                    "cuero cabelludo, mano, abdomen y cara)",
+                    "86 hierbas chinas y 30 fórmulas clásicas explicadas por sus papeles",
+                    "Seis métodos de diagnóstico guiados: lengua, pulso, Ocho Principios, Zang-Fu, "
+                    "Cinco Elementos y meridianos",
+                    "Nueve constituciones, dietética china y alimentación por estaciones",
+                    "Moxibustión, ventosas, gua sha, tuina y Qi Gong (Ba Duan Jin, Wu Qin Xi…)",
+                    "Ocho clásicos en contexto y un simulador de casos clínicos",
+                ],
+                "faq": [
+                    ("¿Es gratis?",
+                     "Sí, buena parte es gratis: 30 puntos clave ilustrados, 20 hierbas, cuatro "
+                     "fórmulas, Ocho Principios y diagnóstico por la lengua, ventosas, Ba Duan Jin y "
+                     "dos casos clínicos. Premium lo abre todo, al mes, al año o con un pago único."),
+                    ("¿Incluye acupresión?",
+                     "Sí. La acupresión usa el mismo mapa de puntos con presión manual, y los puntos "
+                     "para dolor de espalda, cabeza, sueño, digestión y estrés están marcados para el "
+                     "día a día."),
+                    ("¿Para quién es?",
+                     "Para estudiantes de MTC y acupuntura, terapeutas que quieren una referencia "
+                     "rápida y principiantes que quieren entender cómo funciona la medicina china."),
+                    ("¿Da consejo médico?",
+                     "No. Es una referencia educativa y no sustituye a un profesional sanitario."),
+                    ("¿Hace falta crear una cuenta?",
+                     "No hay cuenta ni registro. La analítica está apagada salvo que la actives."),
+                    ("¿En qué móviles e idiomas?",
+                     "iPhone, iPad y Android, en 11 idiomas: inglés, español, francés, portugués, "
+                     "árabe, hindi, japonés, coreano y chino (simplificado y tradicional)."),
+                ],
+            },
+        },
     },
     {
         "slug": "anime", "ios": "6755445114", "play": "com.bydark.animefoodrecipe",
