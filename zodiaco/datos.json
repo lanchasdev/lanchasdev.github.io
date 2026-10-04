@@ -1,11 +1,45 @@
 {
  "nombre": {
   "es": "Horóscopo Chino Zodiaco 2026",
-  "en": "Chinese Zodiac Horoscope & Pet"
+  "en": "Chinese Zodiac Horoscope & Pet",
+  "ar": "أبراج صينية 2026: حظك وتوافقك",
+  "bn": "Chinese Zodiac Horoscope & Pet",
+  "de": "Chinesisches Horoskop 2026",
+  "fr": "Mon Horoscope Chinois Zodiaque",
+  "hi": "Chinese Zodiac Horoscope & Pet",
+  "id": "Shio & Primbon Ramalan Zodiak",
+  "it": "Oroscopo Cinese Zodiaco 2026",
+  "ja": "中国占星術2026 干支占い・今日の運勢・相性診断",
+  "ko": "중국 별자리 띠별 운세 2026 - 사주 오라클 궁합",
+  "ms": "Shio & Primbon Ramalan Zodiak",
+  "pt": "Horóscopo Chinês Zodíaco 2026",
+  "ru": "Китайский Гороскоп 2026: Знак",
+  "th": "ดูดวงจีน ปฏิทินจีน ดูดวงฟรี 26",
+  "tr": "Çin Burçları: Günlük Fal, Uyum",
+  "vi": "Xem Tử Vi 12 Con Giáp Năm 2026",
+  "zh": "中國生肖運勢2026：紫微斗數每日運程・夾唔夾・寵物養成",
+  "zh-TW": "中國生肖運勢2026：十二生肖、紫微斗數、每日運勢配對"
  },
  "frase": {
   "es": "Horóscopo diario chino 2026: tu signo, compatibilidad y una mascota que crece",
-  "en": "Your Chinese zodiac sign, daily horoscope oracle, soulmate compatibility & pet"
+  "en": "Your Chinese zodiac sign, daily horoscope oracle, soulmate compatibility & pet",
+  "ar": "اكتشف برجك الصيني وعناصرك الخمسة، حظك اليوم، توافق الأبراج، وحيوان أليف ينمو معك",
+  "bn": "Your Chinese zodiac sign, daily horoscope oracle, soulmate compatibility & pet",
+  "de": "Tierkreiszeichen berechnen, Tageshoroskop, Kompatibilität & virtuelles Haustier",
+  "fr": "Votre horoscope du jour, votre signe chinois, animal qui évolue, compatibilité",
+  "hi": "Your Chinese zodiac sign, daily horoscope oracle, soulmate compatibility & pet",
+  "id": "Kalkulator shio, primbon, ramalan harian, cek jodoh & peliharaan zodiakmu tumbuh",
+  "it": "Oroscopo del giorno gratis: oroscopo cinese, animale che cresce e compatibilita",
+  "ja": "干支・五行・陰陽で占う本格中国占星術。毎日届く神託と今日の運勢、無料の相性診断、干支早見表つき。人生8分野を分析し、育てるペットと一緒に毎日成長する占いアプリ",
+  "ko": "띠별 운세와 사주로 나를 알아보고, 오늘의 운세와 궁합까지 확인하세요. 인생 8영역 레이더와 매일 자라는 나만의 운세 펫까지 함께 키워보세요",
+  "ms": "Kalkulator shio, primbon, ramalan harian, cek jodoh & peliharaan zodiakmu tumbuh",
+  "pt": "Horóscopo do dia, signo chinês, compatibilidade de casal e um bicho que evolui",
+  "ru": "Знак зодиака, гороскоп на каждый день, оракул и совместимость, растущий питомец",
+  "th": "ดูดวงฟรีตามวันเดือนปีเกิด ปฏิทินจีน ดวงรายวัน ดูดวงความรัก สัตว์เลี้ยงโตไปกับคุณ",
+  "tr": "Çin burcunu bul, günlük burç yorumunu oku, burç uyumuna bak, evcil hayvanı büyüt",
+  "vi": "Xem tử vi 12 con giáp mỗi ngày - phong thủy, độ hợp và thú cưng lớn lên cùng bạn",
+  "zh": "十二生肖運勢計算、紫微斗數命盤每日運勢解析、農民曆宜忌、自由配對分析、人生8大領域雷達圖，還有陪你一起成長的虛擬生肖寵物，天天養成2026好運氣",
+  "zh-TW": "十二生肖運勢計算、紫微斗數命盤每日運勢解析、農民曆宜忌、自由配對分析、人生8大領域雷達圖，還有陪你一起成長的虛擬生肖寵物，天天養成2026好運氣"
  },
  "capturas": {
   "es": [

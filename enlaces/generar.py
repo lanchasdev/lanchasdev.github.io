@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """Páginas de enlace para la bio de TikTok, Instagram y YouTube: una por app.
 
-    python3 enlaces/generar.py           # rehace el HTML con lo ya bajado
-    python3 enlaces/generar.py --bajar   # además vuelve a bajar icono y capturas de las tiendas
+    python3 enlaces/generar.py                # rehace el HTML con lo ya bajado
+    python3 enlaces/generar.py --bajar mtc    # además vuelve a bajar icono, capturas y textos
+    python3 enlaces/generar.py --textos       # solo nombre y frase de Play en cada idioma
 
 Cada página sale en `/<slug>/index.html` y lleva al lado su icono y sus capturas, bajadas
 de las tiendas para que no dependan de enlazar su CDN. El texto de la página (nombre, frase,
@@ -34,212 +35,52 @@ APPS = [
         "privacidad": "medicina-china", "descargas": {"es": "+1000 descargas", "en": "1K+ downloads"},
         "tema": {"bg": "#0d1f19", "bg2": "#12302a", "fg": "#f3ecdb", "muted": "#b6c2b3",
                  "accent": "#d8b25a", "glow": "#1f7a4a"},
-        "etiquetas": {"es": ["Acupuntura", "Hierbas", "Meridianos"], "en": ["Acupuncture", "Herbs", "Meridians"]},
         # Los nombres con los que ha estado en cada tienda, para que un asistente que la conozca
-        # por uno los junte. Las cifras son las de la ficha de App Store 1.0.8 (oct 2026).
+        # por uno los junte. Las cifras de info.json son las de la ficha de App Store 1.0.8.
         "antes": ["Chinese Medicine: Acupuncture", "Medicina China: Acupuntura",
                   "TCM: Acupuncture & Acupressure"],
         "categoria": "EducationalApplication",
-        "info": {
-            "en": {
-                "titulo": "What is this app?",
-                "texto": [
-                    "A study reference for Traditional Chinese Medicine (TCM) on iPhone, iPad and "
-                    "Android: acupuncture points, acupressure, meridians, Chinese herbs and formulas, "
-                    "tongue and pulse diagnosis, Yin Yang, the Five Elements, body constitutions, "
-                    "Chinese dietetics and Qi Gong, in one structured library.",
-                    "It is made for students preparing TCM exams, practitioners reviewing clinical "
-                    "patterns and anyone new to eastern medicine.",
-                    "Educational purposes only: it does not provide medical advice, diagnosis or "
-                    "treatment, and does not replace a qualified health professional.",
-                ],
-                "funciones": [
-                    "110 illustrated acupuncture points with location, function and category",
-                    "The 12 primary meridians, a 3D body view and five microsystems (ear, scalp, "
-                    "hand, abdomen, face)",
-                    "86 Chinese herbs and 30 classical formulas explained by their roles",
-                    "Six diagnostic methods with guided walkthroughs: tongue, pulse, Eight "
-                    "Principles, Zang-Fu, Five Elements and meridians",
-                    "Nine body constitutions, Chinese dietetics and seasonal eating",
-                    "Moxibustion, cupping, gua sha, tuina and Qi Gong (Ba Duan Jin, Wu Qin Xi…)",
-                    "Eight classics in context and a clinical case simulator",
-                ],
-                "faq": [
-                    ("Is it free?",
-                     "Yes, a large part is free: 30 key points with illustrations, 20 herbs, four "
-                     "formulas, Eight Principles and tongue diagnosis, cupping, Ba Duan Jin and two "
-                     "clinical cases. Premium opens everything, monthly, yearly or as a one-time "
-                     "purchase."),
-                    ("Does it include acupressure?",
-                     "Yes. Acupressure uses the same point map with manual pressure, and points for "
-                     "back pain, headache, sleep, digestion and stress are flagged for daily use."),
-                    ("Who is it for?",
-                     "TCM and acupuncture students, practitioners who want a quick reference, and "
-                     "beginners who want to understand how Chinese medicine works."),
-                    ("Is it medical advice?",
-                     "No. It is an educational reference and does not replace a qualified health "
-                     "professional."),
-                    ("Do I need an account?",
-                     "No account and no sign-up. Analytics stay off unless you turn them on."),
-                    ("Which devices and languages?",
-                     "iPhone, iPad and Android, in 11 languages: English, Spanish, French, "
-                     "Portuguese, Arabic, Hindi, Japanese, Korean and Chinese (Simplified and "
-                     "Traditional)."),
-                ],
-            },
-            "es": {
-                "titulo": "¿Qué es esta app?",
-                "texto": [
-                    "Un manual de estudio de medicina tradicional china (MTC) para iPhone, iPad y "
-                    "Android: puntos de acupuntura, acupresión, meridianos, hierbas y fórmulas chinas, "
-                    "diagnóstico por la lengua y el pulso, Yin Yang, los Cinco Elementos, "
-                    "constituciones, dietética china y Qi Gong, en una sola biblioteca ordenada.",
-                    "Está pensada para estudiantes que preparan exámenes de MTC, terapeutas que "
-                    "repasan patrones clínicos y cualquiera que empiece en la medicina oriental.",
-                    "Solo con fines educativos: no da consejo médico, diagnóstico ni tratamiento, y "
-                    "no sustituye a un profesional sanitario.",
-                ],
-                "funciones": [
-                    "110 puntos de acupuntura ilustrados con localización, función y categoría",
-                    "Los 12 meridianos principales, un cuerpo en 3D y cinco microsistemas (oreja, "
-                    "cuero cabelludo, mano, abdomen y cara)",
-                    "86 hierbas chinas y 30 fórmulas clásicas explicadas por sus papeles",
-                    "Seis métodos de diagnóstico guiados: lengua, pulso, Ocho Principios, Zang-Fu, "
-                    "Cinco Elementos y meridianos",
-                    "Nueve constituciones, dietética china y alimentación por estaciones",
-                    "Moxibustión, ventosas, gua sha, tuina y Qi Gong (Ba Duan Jin, Wu Qin Xi…)",
-                    "Ocho clásicos en contexto y un simulador de casos clínicos",
-                ],
-                "faq": [
-                    ("¿Es gratis?",
-                     "Sí, buena parte es gratis: 30 puntos clave ilustrados, 20 hierbas, cuatro "
-                     "fórmulas, Ocho Principios y diagnóstico por la lengua, ventosas, Ba Duan Jin y "
-                     "dos casos clínicos. Premium lo abre todo, al mes, al año o con un pago único."),
-                    ("¿Incluye acupresión?",
-                     "Sí. La acupresión usa el mismo mapa de puntos con presión manual, y los puntos "
-                     "para dolor de espalda, cabeza, sueño, digestión y estrés están marcados para el "
-                     "día a día."),
-                    ("¿Para quién es?",
-                     "Para estudiantes de MTC y acupuntura, terapeutas que quieren una referencia "
-                     "rápida y principiantes que quieren entender cómo funciona la medicina china."),
-                    ("¿Da consejo médico?",
-                     "No. Es una referencia educativa y no sustituye a un profesional sanitario."),
-                    ("¿Hace falta crear una cuenta?",
-                     "No hay cuenta ni registro. La analítica está apagada salvo que la actives."),
-                    ("¿En qué móviles e idiomas?",
-                     "iPhone, iPad y Android, en 11 idiomas: inglés, español, francés, portugués, "
-                     "árabe, hindi, japonés, coreano y chino (simplificado y tradicional)."),
-                ],
-            },
-        },
+        "idiomas": ["es", "en", "fr", "pt", "ar", "hi", "ja", "ko", "zh", "zh-TW"],
     },
     {
         "slug": "anime", "ios": "6755445114", "play": "com.bydark.animefoodrecipe",
         "privacidad": "anime-food", "descargas": None,
         "tema": {"bg": "#1e0f05", "bg2": "#3a1a06", "fg": "#fff4e6", "muted": "#e8c9a6",
                  "accent": "#ff8a1f", "glow": "#ff7a00"},
-        "etiquetas": {"es": ["Ramen", "Sushi", "Recetas de anime"], "en": ["Ramen", "Sushi", "Anime recipes"]},
+        "antes": ["Japanese Food Anime: Cookbook"],
+        "categoria": "LifestyleApplication",
+        "idiomas": ["es", "en", "ar", "de", "fr", "hi", "id", "it", "ja", "ko", "pt", "ru", "th", "tr", "zh"],
     },
     {
         "slug": "looksmax", "ios": "6756071839", "play": "com.bydark.looksmaxinghabit",
         "privacidad": "looksmax", "descargas": None,
-        # Leo Glow 2.0 (oct 2026): negro y lima, como la app. Las capturas y el texto se
-        # pusieron a mano desde store-assets/ antes de que las tiendas aprobaran la ficha
-        # nueva; con --bajar ya salen de las tiendas.
+        # Leo Glow 2.0 (oct 2026): negro y lima, como la app. Icono y capturas puestos a mano desde
+        # store-assets/ porque App Store sigue en la 1.2.0 hasta que aprueben la 2.0.3: un
+        # --bajar de esta app traería el icono viejo. Los textos sí se pueden refrescar (--textos).
+        "fijas": True,
         "tema": {"bg": "#0a0b0a", "bg2": "#141712", "fg": "#f4f7ec", "muted": "#b3baa6",
                  "accent": "#e3fa5c", "glow": "#9bd400"},
-        "etiquetas": {"es": ["Coach IA", "Reto diario", "Plan de 4 semanas"],
-                      "en": ["AI coach", "Daily challenge", "4-week plan"]},
-        # Texto para quien lee la página sin mirarla: ChatGPT y Google mandan ~60 descargas al
-        # mes a la app (App Store Connect ▸ Referencias de app, sep 2026) y lo que citan sale de
-        # aquí y de la ficha. Solo hechos comprobados en el repo de la app; sin precios.
+        # ChatGPT y Google mandan ~60 descargas al mes (App Store Connect ▸ Referencias de app,
+        # sep 2026): el nombre viejo va como alias para que no la pierdan con el cambio a «Leo».
         "antes": ["Looksmaxxing: Glow Up Coach"],
         "categoria": "LifestyleApplication",
-        "info": {
-            "en": {
-                "titulo": "What is Leo?",
-                "texto": [
-                    "Leo is a free looksmaxxing and glow up app for men, built on daily habits "
-                    "instead of face ratings. It used to be called Looksmaxxing: Glow Up Coach.",
-                    "Every day you spin a wheel that gives you one small, concrete challenge in one "
-                    "area (skin, physique, style, sleep, posture, mind, water, grooming or social). "
-                    "You do it for real and your avatar levels up with you. Leo, the AI coach, "
-                    "helps you fit it into your actual day.",
-                    "No face scans, no attractiveness scores, no extreme diets.",
-                ],
-                "funciones": [
-                    "Daily challenge wheel: one random mission a day that earns XP",
-                    "Coach Leo, an AI coach you can ask to adjust your day or get unstuck",
-                    "4-week plans and step-by-step challenges from 14 to 60 days",
-                    "Avatar, streaks, a weekly recap and Glow Leagues",
-                    "iPhone and Android, in 17 languages",
-                ],
-                "faq": [
-                    ("Does Leo rate my face or my looks?",
-                     "No. Leo never scans your face and never gives you an attractiveness score. "
-                     "It works on what you can change with habits: skin care, training, sleep, "
-                     "posture, style and confidence."),
-                    ("Is Leo free?",
-                     "Yes. It is free to download and the daily challenges are free. Glow+ is an "
-                     "optional subscription that unlocks the full plans, unlimited Coach Leo and "
-                     "removes ads."),
-                    ("Is it a healthy way to do looksmaxxing?",
-                     "That is the idea: small daily challenges you can actually keep, with no "
-                     "extreme diets and no fixation on a score."),
-                    ("Who is it for?",
-                     "Guys who want a glow up through self discipline and daily routines. "
-                     "Anyone can use it."),
-                    ("Which devices does it work on?",
-                     "iPhone (App Store) and Android (Google Play)."),
-                ],
-            },
-            "es": {
-                "titulo": "¿Qué es Leo?",
-                "texto": [
-                    "Leo es una app gratis de looksmaxxing y glow up para hombres basada en hábitos "
-                    "diarios, no en puntuar tu cara. Antes se llamaba Looksmaxxing: Glow Up Coach.",
-                    "Cada día giras una ruleta que te da un reto pequeño y concreto de un área (piel, "
-                    "físico, estilo, sueño, postura, mente, agua, grooming o social). Lo haces de "
-                    "verdad y tu avatar sube de nivel contigo. Leo, el coach con IA, te ayuda a "
-                    "encajarlo en tu día real.",
-                    "Sin escanear tu cara, sin notas de atractivo, sin dietas extremas.",
-                ],
-                "funciones": [
-                    "Ruleta del reto diario: una misión al azar cada día que da XP",
-                    "Coach Leo, un coach con IA al que pedirle que ajuste tu día o te desatasque",
-                    "Planes de 4 semanas y retos paso a paso de 14 a 60 días",
-                    "Avatar, rachas, resumen semanal y Ligas Glow",
-                    "iPhone y Android, en 17 idiomas",
-                ],
-                "faq": [
-                    ("¿Leo puntúa mi cara o mi físico?",
-                     "No. Leo nunca escanea tu cara ni te pone una nota de atractivo. Trabaja lo que "
-                     "puedes cambiar con hábitos: cuidado de la piel, entrenamiento, sueño, postura, "
-                     "estilo y confianza."),
-                    ("¿Es gratis?",
-                     "Sí. Se descarga gratis y los retos diarios son gratis. Glow+ es una suscripción "
-                     "opcional que abre los planes completos, el Coach Leo sin límite y quita los anuncios."),
-                    ("¿Es una forma sana de hacer looksmaxxing?",
-                     "Esa es la idea: retos diarios pequeños que se pueden mantener, sin dietas "
-                     "extremas y sin obsesionarse con una nota."),
-                    ("¿Para quién es?",
-                     "Para chicos que quieren un glow up a base de autodisciplina y rutina diaria. "
-                     "La puede usar cualquiera."),
-                    ("¿En qué móviles funciona?",
-                     "iPhone (App Store) y Android (Google Play)."),
-                ],
-            },
-        },
+        "idiomas": ["es", "en", "ar", "de", "fr", "hi", "id", "it", "ja", "ko", "pl", "pt", "ru", "th", "tr",
+                    "vi", "zh"],
     },
     {
         "slug": "zodiaco", "ios": "", "play": "com.celestialpath.zodiac",
         "privacidad": "", "descargas": {"es": "+1000 descargas", "en": "1K+ downloads"},
         "tema": {"bg": "#f6ecd8", "bg2": "#efdcb8", "fg": "#3b2415", "muted": "#7a5a40",
                  "accent": "#c4561d", "glow": "#e9a44a", "claro": True},
-        "etiquetas": {"es": ["Horóscopo diario", "Compatibilidad", "Mascota"],
-                      "en": ["Daily horoscope", "Compatibility", "Pet"]},
+        "categoria": "LifestyleApplication",
+        "idiomas": ["es", "en", "ar", "bn", "de", "fr", "hi", "id", "it", "ja", "ko", "ms", "pt", "ru", "th",
+                    "tr", "vi", "zh", "zh-TW"],
     },
 ]
+
+# Cómo pide Play cada idioma de la página (`hl`), cuando no es el mismo código.
+HL_PLAY = {"zh": "zh-CN", "zh-TW": "zh-TW", "pt": "pt-BR"}
+RTL = {"ar"}
 
 
 def _get(url):
@@ -250,7 +91,10 @@ def _get(url):
 def _play(pkg, hl):
     h = _get(f"https://play.google.com/store/apps/details?id={pkg}&hl={hl}").decode()
     titulo = html.unescape(re.search(r'og:title" content="([^"]*)', h).group(1))
-    titulo = re.sub(r"\s+-\s+(Aplicaciones en Google Play|Apps on Google Play)$", "", titulo)
+    # Play pega su nombre al título en cada idioma, unas veces detrás («… - Google Play のアプリ»)
+    # y otras delante («Приложения в Google Play – …»): se quita el trozo que lo lleva.
+    titulo = re.sub(r"\s+[-–]\s+[^-–]*Google Play[^-–]*$", "", titulo)
+    titulo = re.sub(r"^[^-–]*Google Play[^-–]*\s+[-–]\s+", "", titulo)
     frase = html.unescape(re.search(r'og:description" content="([^"]*)', h).group(1))
     icono = re.search(r'og:image" content="([^"=]*)', h).group(1)
     # Las capturas de la ficha son las únicas imágenes que Play sirve a 526x296 (el resto son
@@ -259,8 +103,19 @@ def _play(pkg, hl):
     return titulo, frase, icono, capturas
 
 
+def textos(app, datos):
+    """Nombre y frase de la ficha de Play en cada idioma de la página.
+
+    Es el texto que cada mercado ve en su tienda, no una traducción: si Play no tiene ficha en
+    ese idioma devuelve la inglesa, y entonces la página se queda con la inglesa también."""
+    for lang in app["idiomas"]:
+        titulo, frase, _, _ = _play(app["play"], HL_PLAY.get(lang, lang))
+        datos["nombre"][lang], datos["frase"][lang] = titulo, frase
+    return datos
+
+
 def bajar(app):
-    """Nombre y frase de Play en los dos idiomas; icono y capturas de App Store si la hay."""
+    """Icono y capturas (español e inglés) de las tiendas, y los textos de todos los idiomas."""
     dest = RAIZ / app["slug"]
     dest.mkdir(exist_ok=True)
     datos = {"nombre": {}, "frase": {}, "capturas": {}}
@@ -298,6 +153,7 @@ def bajar(app):
     subprocess.run(["sips", "-s", "format", "jpeg", "-s", "formatOptions", "85", str(dest / "icono.png"),
                     "--out", str(dest / "icono.jpg")], check=True, capture_output=True)
     (dest / "icono.png").unlink()
+    textos(app, datos)
     (dest / "datos.json").write_text(json.dumps(datos, ensure_ascii=False, indent=1))
     return datos
 
@@ -312,45 +168,55 @@ PLAY = ('<svg viewBox="0 0 512 512" aria-hidden="true"><path fill="#00d7fe" d="M
         '51z"/><path fill="#ff3a44" d="M356 335l-78-78L47 488c9 9 23 10 39 1l270-154"/><path fill="#00f076" '
         'd="M356 179L86 26c-16-9-30-8-39 1l231 230z"/></svg>')
 
-TEXTOS = {
-    "es": {"ios_sub": "Descárgala en", "play_sub": "Disponible en", "gratis": "Gratis",
-           "solo_android": "Por ahora solo en Android · pronto en iPhone",
-           "privacidad": "Privacidad", "hecha": "Hecha por Lanchas Dev", "capturas": "Así es por dentro"},
-    "en": {"ios_sub": "Download on the", "play_sub": "Get it on", "gratis": "Free",
-           "solo_android": "Android only for now · iPhone soon",
-           "privacidad": "Privacy", "hecha": "Made by Lanchas Dev", "capturas": "Take a look inside"},
-}
+# Los textos fijos de la página (botones, pie), por idioma. Los de cada app van en <slug>/info.json.
+TEXTOS = json.loads((RAIZ / "enlaces" / "textos.json").read_text())
 
 
-def info(app, datos):
-    """El bloque «qué es» y su JSON-LD, o dos cadenas vacías si la app no lo tiene.
+def contenido(app):
+    """El info.json de la app: {idioma: {etiquetas, titulo, texto, funciones, faq}}."""
+    f = RAIZ / app["slug"] / "info.json"
+    return json.loads(f.read_text()) if f.exists() else {}
 
-    Va escrito en el HTML en los dos idiomas, no metido después con JavaScript: los
+
+def idiomas_de(app, info_app):
+    """Los idiomas que la página puede enseñar enteros: los de la app que tienen info.json y
+    botones traducidos. El español va primero porque es el que lleva el HTML visible."""
+    return [l for l in app["idiomas"] if l in info_app and l in TEXTOS]
+
+
+def info(app, datos, info_app, langs):
+    """El bloque «qué es» en todos los idiomas y su JSON-LD.
+
+    Todos los idiomas van escritos en el HTML, no metidos después con JavaScript: los
     rastreadores de los asistentes (ChatGPT, Gemini) y de los buscadores leen el HTML tal
-    cual llega. El script solo esconde el idioma que no toca."""
-    if not app.get("info"):
+    cual llega. El script solo esconde los que no tocan."""
+    if not langs:
         return "", ""
     e = lambda s: html.escape(s, quote=True)
     bloques = []
-    for lang in ("es", "en"):
-        i = app["info"][lang]
+    for lang in langs:
+        i = info_app[lang]
         parrafos = "".join(f"<p>{e(p)}</p>" for p in i["texto"])
         funciones = "".join(f"<li>{e(f)}</li>" for f in i["funciones"])
         faq = "".join(f"<details><summary>{e(q)}</summary><p>{e(a)}</p></details>" for q, a in i["faq"])
         oculto = "" if lang == "es" else " hidden"
-        bloques.append(f'<section class="info" lang="{lang}" data-info{oculto}><h2>{e(i["titulo"])}</h2>'
+        rtl = ' dir="rtl"' if lang in RTL else ""
+        bloques.append(f'<section class="info" lang="{lang}"{rtl} data-info{oculto}><h2>{e(i["titulo"])}</h2>'
                        f'{parrafos}<ul>{funciones}</ul><div class="faq">{faq}</div></section>')
     url = f"https://lanchasdev.github.io/{app['slug']}/"
     tiendas = [f"https://play.google.com/store/apps/details?id={app['play']}"]
     if app["ios"]:
         tiendas.insert(0, f"https://apps.apple.com/app/id{app['ios']}")
+    nombre = datos["nombre"].get("en") or datos["nombre"]["es"]
+    alias = [n for n in dict.fromkeys([*datos["nombre"].values(), *app.get("antes", [])]) if n != nombre]
+    base = info_app.get("en") or info_app[langs[0]]
     ld = [{
         "@context": "https://schema.org", "@type": "SoftwareApplication",
-        "name": datos["nombre"]["en"],
-        "alternateName": list(dict.fromkeys([datos["nombre"]["es"], *app.get("antes", [])])),
-        "description": " ".join(app["info"]["en"]["texto"]),
+        "name": nombre, "alternateName": alias,
+        "description": " ".join(base["texto"]),
         "applicationCategory": app.get("categoria", "LifestyleApplication"),
         "operatingSystem": "iOS, Android" if app["ios"] else "Android",
+        "inLanguage": langs,
         "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
         "image": f"{url}icono.jpg", "url": url, "sameAs": tiendas,
         "author": {"@type": "Organization", "name": "Lanchas Dev", "url": "https://lanchasdev.github.io/"},
@@ -358,7 +224,7 @@ def info(app, datos):
         "@context": "https://schema.org", "@type": "FAQPage",
         "mainEntity": [{"@type": "Question", "name": q, "inLanguage": lang,
                         "acceptedAnswer": {"@type": "Answer", "text": a}}
-                       for lang in ("en", "es") for q, a in app["info"][lang]["faq"]],
+                       for lang in langs for q, a in info_app[lang]["faq"]],
     }]
     # `</` dentro de un <script> lo cerraría: se escapa la barra.
     jsonld = "".join('<script type="application/ld+json">'
@@ -369,10 +235,12 @@ def info(app, datos):
 def pagina(app, datos):
     t = app["tema"]
     e = lambda s: html.escape(s, quote=True)
-    bloque_info, jsonld = info(app, datos)
+    info_app = contenido(app)
+    langs = idiomas_de(app, info_app)
+    bloque_info, jsonld = info(app, datos, info_app, langs)
     capturas = "".join(
         f'<img src="{c}" alt="" loading="lazy" width="230" height="500" data-lang-src>' for c in datos["capturas"]["es"])
-    etiquetas = "".join(f"<li>{e(x)}</li>" for x in app["etiquetas"]["es"])
+    etiquetas = "".join(f"<li>{e(x)}</li>" for x in info_app["es"]["etiquetas"]) if langs else ""
     privacidad = (f'<a href="/privacidad/{app["privacidad"]}/" data-t="privacidad">Privacidad</a> · '
                   if app["privacidad"] else "")
     ios = (f'<a class="store" id="ios" href="https://apps.apple.com/app/id{app["ios"]}">{APPLE}'
@@ -380,7 +248,8 @@ def pagina(app, datos):
     datos_js = json.dumps({
         "slug": app["slug"], "ios": app["ios"], "play": app["play"], "pt": PT,
         "nombre": datos["nombre"], "frase": datos["frase"], "capturas": datos["capturas"],
-        "etiquetas": app["etiquetas"], "descargas": app["descargas"], "textos": TEXTOS,
+        "etiquetas": {l: info_app[l]["etiquetas"] for l in langs}, "descargas": app["descargas"],
+        "textos": {l: TEXTOS[l] for l in langs}, "langs": langs, "rtl": sorted(RTL),
     }, ensure_ascii=False)
     pill_desc = f'<li class="dl" data-desc>{e(app["descargas"]["es"])}</li>' if app["descargas"] else ""
     return f"""<!doctype html>
@@ -477,16 +346,28 @@ footer a{{color:inherit;text-underline-offset:3px}}
 (function(){{
 var D={datos_js};
 var q=new URLSearchParams(location.search), s=(q.get("s")||q.get("utm_source")||"").replace(/[^\\w.-]/g,"").slice(0,40);
-var lang=/^es\\b/i.test(navigator.language||"es")?"es":"en", T=D.textos[lang];
+// El idioma del móvil, si la app lo tiene: primero el código entero (zh-TW), luego la raíz
+// (pt-BR → pt). Si no hay ninguno, inglés. `?lang=xx` lo fuerza, para revisar cada uno.
+var pedidos=[q.get("lang")].concat(navigator.languages||[navigator.language]).filter(Boolean), lang="";
+for(var i=0;i<pedidos.length&&!lang;i++){{
+  var c=pedidos[i].replace("_","-"), r=c.split("-")[0].toLowerCase();
+  if(/^zh-(tw|hk|hant)/i.test(c)&&D.langs.indexOf("zh-TW")>=0) lang="zh-TW";
+  else if(D.langs.indexOf(c)>=0) lang=c;
+  else if(D.langs.indexOf(r)>=0) lang=r;
+}}
+if(!lang) lang=D.langs.indexOf("en")>=0?"en":"es";
+var T=D.textos[lang], uno=function(o){{return o&&(o[lang]||o.en||o.es);}};
 document.documentElement.lang=lang;
+if(D.rtl.indexOf(lang)>=0) document.documentElement.dir="rtl";
 if(lang!=="es"){{
-  document.title=D.nombre.en;
-  document.querySelector("[data-nombre]").textContent=D.nombre.en;
-  document.querySelector("[data-frase]").textContent=D.frase.en;
+  document.title=uno(D.nombre);
+  document.querySelector("[data-nombre]").textContent=uno(D.nombre);
+  document.querySelector("[data-frase]").textContent=uno(D.frase);
   var p=document.querySelectorAll(".pills li:not(.gratis):not(.dl)");
-  D.etiquetas.en.forEach(function(x,i){{if(p[i])p[i].textContent=x;}});
-  var dl=document.querySelector("[data-desc]"); if(dl&&D.descargas) dl.textContent=D.descargas.en;
-  // Cada idioma puede tener un número distinto de capturas: la tira se rehace entera.
+  (uno(D.etiquetas)||[]).forEach(function(x,i){{if(p[i])p[i].textContent=x;}});
+  // Todas las apps con cifra tienen la misma («1K+»): el texto sale de textos.json.
+  var dl=document.querySelector("[data-desc]"); if(dl&&D.descargas) dl.textContent=T.descargas;
+  // Capturas solo hay en español e inglés: el resto de idiomas ve las inglesas.
   document.querySelector(".capturas").innerHTML=D.capturas.en.map(function(c){{
     return '<img src="'+c+'" alt="" loading="lazy" width="230" height="500">';}}).join("");
 }}
@@ -511,9 +392,21 @@ if(ios&&!a){{var av=document.getElementById("aviso");if(av)av.hidden=false;}}
 
 
 def main():
+    """`--bajar [slug…]` rehace icono, capturas y textos de esas apps (de todas si no se dice
+    cuáles, menos las `fijas`); `--textos` solo vuelve a pedir a Play el nombre y la frase de
+    cada idioma. Sin nada, rehace el HTML con lo ya bajado."""
+    args = sys.argv[1:]
+    pedidas = [a for a in args if not a.startswith("--")]
     for app in APPS:
         f = RAIZ / app["slug"] / "datos.json"
-        datos = bajar(app) if "--bajar" in sys.argv or not f.exists() else json.loads(f.read_text())
+        bajar_esta = "--bajar" in args and (app["slug"] in pedidas or (not pedidas and not app.get("fijas")))
+        if bajar_esta or not f.exists():
+            datos = bajar(app)
+        else:
+            datos = json.loads(f.read_text())
+            if "--textos" in args:
+                datos = textos(app, datos)
+                f.write_text(json.dumps(datos, ensure_ascii=False, indent=1))
         (RAIZ / app["slug"] / "index.html").write_text(pagina(app, datos))
         print(f"{app['slug']:9} {datos['nombre']['es']} · {len(datos['capturas']['es'])} capturas")
     mapa()

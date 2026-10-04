@@ -1,0 +1,482 @@
+{
+ "en": {
+  "etiquetas": [
+   "Acupuncture",
+   "Herbs",
+   "Meridians"
+  ],
+  "titulo": "What is this app?",
+  "texto": [
+   "A study reference for Traditional Chinese Medicine (TCM) on iPhone, iPad and Android: acupuncture points, acupressure, meridians, Chinese herbs and formulas, tongue and pulse diagnosis, Yin Yang, the Five Elements, body constitutions, Chinese dietetics and Qi Gong, in one structured library.",
+   "It is made for students preparing TCM exams, practitioners reviewing clinical patterns and anyone new to eastern medicine.",
+   "Educational purposes only: it does not provide medical advice, diagnosis or treatment, and does not replace a qualified health professional."
+  ],
+  "funciones": [
+   "110 illustrated acupuncture points with location, function and category",
+   "The 12 primary meridians, a 3D body view and five microsystems (ear, scalp, hand, abdomen, face)",
+   "86 Chinese herbs and 30 classical formulas explained by their roles",
+   "Six diagnostic methods with guided walkthroughs: tongue, pulse, Eight Principles, Zang-Fu, Five Elements and meridians",
+   "Nine body constitutions, Chinese dietetics and seasonal eating",
+   "Moxibustion, cupping, gua sha, tuina and Qi Gong (Ba Duan Jin, Wu Qin Xi…)",
+   "Eight classics in context and a clinical case simulator"
+  ],
+  "faq": [
+   [
+    "Is it free?",
+    "Yes, a large part is free: 30 key points with illustrations, 20 herbs, four formulas, Eight Principles and tongue diagnosis, cupping, Ba Duan Jin and two clinical cases. Premium opens everything, monthly, yearly or as a one-time purchase."
+   ],
+   [
+    "Does it include acupressure?",
+    "Yes. Acupressure uses the same point map with manual pressure, and points for back pain, headache, sleep, digestion and stress are flagged for daily use."
+   ],
+   [
+    "Who is it for?",
+    "TCM and acupuncture students, practitioners who want a quick reference, and beginners who want to understand how Chinese medicine works."
+   ],
+   [
+    "Is it medical advice?",
+    "No. It is an educational reference and does not replace a qualified health professional."
+   ],
+   [
+    "Do I need an account?",
+    "No account and no sign-up. Analytics stay off unless you turn them on."
+   ],
+   [
+    "Which devices and languages?",
+    "iPhone, iPad and Android, in 11 languages: English, Spanish, French, Portuguese, Arabic, Hindi, Japanese, Korean and Chinese (Simplified and Traditional)."
+   ]
+  ]
+ },
+ "es": {
+  "etiquetas": [
+   "Acupuntura",
+   "Hierbas",
+   "Meridianos"
+  ],
+  "titulo": "¿Qué es esta app?",
+  "texto": [
+   "Un manual de estudio de medicina tradicional china (MTC) para iPhone, iPad y Android: puntos de acupuntura, acupresión, meridianos, hierbas y fórmulas chinas, diagnóstico por la lengua y el pulso, Yin Yang, los Cinco Elementos, constituciones, dietética china y Qi Gong, en una sola biblioteca ordenada.",
+   "Está pensada para estudiantes que preparan exámenes de MTC, terapeutas que repasan patrones clínicos y cualquiera que empiece en la medicina oriental.",
+   "Solo con fines educativos: no da consejo médico, diagnóstico ni tratamiento, y no sustituye a un profesional sanitario."
+  ],
+  "funciones": [
+   "110 puntos de acupuntura ilustrados con localización, función y categoría",
+   "Los 12 meridianos principales, un cuerpo en 3D y cinco microsistemas (oreja, cuero cabelludo, mano, abdomen y cara)",
+   "86 hierbas chinas y 30 fórmulas clásicas explicadas por sus papeles",
+   "Seis métodos de diagnóstico guiados: lengua, pulso, Ocho Principios, Zang-Fu, Cinco Elementos y meridianos",
+   "Nueve constituciones, dietética china y alimentación por estaciones",
+   "Moxibustión, ventosas, gua sha, tuina y Qi Gong (Ba Duan Jin, Wu Qin Xi…)",
+   "Ocho clásicos en contexto y un simulador de casos clínicos"
+  ],
+  "faq": [
+   [
+    "¿Es gratis?",
+    "Sí, buena parte es gratis: 30 puntos clave ilustrados, 20 hierbas, cuatro fórmulas, Ocho Principios y diagnóstico por la lengua, ventosas, Ba Duan Jin y dos casos clínicos. Premium lo abre todo, al mes, al año o con un pago único."
+   ],
+   [
+    "¿Incluye acupresión?",
+    "Sí. La acupresión usa el mismo mapa de puntos con presión manual, y los puntos para dolor de espalda, cabeza, sueño, digestión y estrés están marcados para el día a día."
+   ],
+   [
+    "¿Para quién es?",
+    "Para estudiantes de MTC y acupuntura, terapeutas que quieren una referencia rápida y principiantes que quieren entender cómo funciona la medicina china."
+   ],
+   [
+    "¿Da consejo médico?",
+    "No. Es una referencia educativa y no sustituye a un profesional sanitario."
+   ],
+   [
+    "¿Hace falta crear una cuenta?",
+    "No hay cuenta ni registro. La analítica está apagada salvo que la actives."
+   ],
+   [
+    "¿En qué móviles e idiomas?",
+    "iPhone, iPad y Android, en 11 idiomas: inglés, español, francés, portugués, árabe, hindi, japonés, coreano y chino (simplificado y tradicional)."
+   ]
+  ]
+ },
+ "fr": {
+  "etiquetas": [
+   "Acupuncture",
+   "Plantes",
+   "Méridiens"
+  ],
+  "titulo": "Qu'est-ce que cette application ?",
+  "texto": [
+   "Un outil de référence pour étudier la médecine traditionnelle chinoise (MTC) sur iPhone, iPad et Android : points d'acupuncture, acupressure, méridiens, plantes et formules chinoises, diagnostic par la langue et par le pouls, Yin Yang, les Cinq Éléments, constitutions corporelles, diététique chinoise et Qi Gong, réunis dans une seule bibliothèque structurée.",
+   "Elle s'adresse aux étudiants qui préparent des examens de MTC, aux praticiens qui révisent les tableaux cliniques et à toute personne qui découvre la médecine orientale.",
+   "À visée éducative uniquement : elle ne fournit ni conseil médical, ni diagnostic, ni traitement, et ne remplace pas un professionnel de santé qualifié."
+  ],
+  "funciones": [
+   "110 points d'acupuncture illustrés avec localisation, fonction et catégorie",
+   "Les 12 méridiens principaux, une vue du corps en 3D et cinq microsystèmes (oreille, cuir chevelu, main, abdomen, visage)",
+   "86 plantes chinoises et 30 formules classiques expliquées par leurs rôles",
+   "Six méthodes de diagnostic avec parcours guidés : langue, pouls, Huit Principes, Zang-Fu, Cinq Éléments et méridiens",
+   "Neuf constitutions corporelles, diététique chinoise et alimentation de saison",
+   "Moxibustion, ventouses, gua sha, tuina et Qi Gong (Ba Duan Jin, Wu Qin Xi…)",
+   "Huit classiques en contexte et un simulateur de cas cliniques"
+  ],
+  "faq": [
+   [
+    "Est-ce gratuit ?",
+    "Oui, une grande partie est gratuite : 30 points clés illustrés, 20 plantes, quatre formules, les Huit Principes et le diagnostic par la langue, les ventouses, le Ba Duan Jin et deux cas cliniques. Premium débloque tout, au mois, à l'année ou en achat unique."
+   ],
+   [
+    "Y a-t-il de l'acupressure ?",
+    "Oui. L'acupressure utilise la même carte de points avec une pression manuelle, et les points pour le mal de dos, les maux de tête, le sommeil, la digestion et le stress sont signalés pour un usage quotidien."
+   ],
+   [
+    "Pour qui ?",
+    "Les étudiants en MTC et en acupuncture, les praticiens qui veulent une référence rapide et les débutants qui veulent comprendre comment fonctionne la médecine chinoise."
+   ],
+   [
+    "Est-ce un conseil médical ?",
+    "Non. C'est une référence éducative qui ne remplace pas un professionnel de santé qualifié."
+   ],
+   [
+    "Faut-il un compte ?",
+    "Aucun compte ni inscription. Les statistiques d'usage restent désactivées tant que vous ne les activez pas."
+   ],
+   [
+    "Quels appareils et quelles langues ?",
+    "iPhone, iPad et Android, en 11 langues : anglais, espagnol, français, portugais, arabe, hindi, japonais, coréen et chinois (simplifié et traditionnel)."
+   ]
+  ]
+ },
+ "pt": {
+  "etiquetas": [
+   "Acupuntura",
+   "Ervas",
+   "Meridianos"
+  ],
+  "titulo": "O que é este app?",
+  "texto": [
+   "Um material de estudo de medicina tradicional chinesa (MTC) para iPhone, iPad e Android: pontos de acupuntura, acupressão, meridianos, ervas e fórmulas chinesas, diagnóstico pela língua e pelo pulso, Yin Yang, os Cinco Elementos, constituições corporais, dietética chinesa e Qi Gong, em uma única biblioteca organizada.",
+   "Foi feito para estudantes que se preparam para provas de MTC, profissionais que revisam padrões clínicos e qualquer pessoa que esteja começando na medicina oriental.",
+   "Apenas para fins educacionais: não oferece aconselhamento médico, diagnóstico nem tratamento, e não substitui um profissional de saúde qualificado."
+  ],
+  "funciones": [
+   "110 pontos de acupuntura ilustrados com localização, função e categoria",
+   "Os 12 meridianos principais, uma visão 3D do corpo e cinco microssistemas (orelha, couro cabeludo, mão, abdômen, rosto)",
+   "86 ervas chinesas e 30 fórmulas clássicas explicadas por suas funções",
+   "Seis métodos de diagnóstico com passo a passo guiado: língua, pulso, Oito Princípios, Zang-Fu, Cinco Elementos e meridianos",
+   "Nove constituições corporais, dietética chinesa e alimentação sazonal",
+   "Moxabustão, ventosaterapia, gua sha, tuiná e Qi Gong (Ba Duan Jin, Wu Qin Xi…)",
+   "Oito clássicos em contexto e um simulador de casos clínicos"
+  ],
+  "faq": [
+   [
+    "É gratuito?",
+    "Sim, boa parte é gratuita: 30 pontos principais ilustrados, 20 ervas, quatro fórmulas, Oito Princípios e diagnóstico pela língua, ventosas, Ba Duan Jin e dois casos clínicos. O Premium libera tudo, por mês, por ano ou em pagamento único."
+   ],
+   [
+    "Inclui acupressão?",
+    "Sim. A acupressão usa o mesmo mapa de pontos com pressão manual, e os pontos para dor nas costas, dor de cabeça, sono, digestão e estresse são sinalizados para o uso diário."
+   ],
+   [
+    "Para quem é?",
+    "Para estudantes de MTC e acupuntura, profissionais que querem uma consulta rápida e iniciantes que querem entender como a medicina chinesa funciona."
+   ],
+   [
+    "É aconselhamento médico?",
+    "Não. É uma referência educacional e não substitui um profissional de saúde qualificado."
+   ],
+   [
+    "Preciso de uma conta?",
+    "Sem conta e sem cadastro. As análises de uso ficam desativadas, a menos que você as ative."
+   ],
+   [
+    "Quais dispositivos e idiomas?",
+    "iPhone, iPad e Android, em 11 idiomas: inglês, espanhol, francês, português, árabe, hindi, japonês, coreano e chinês (simplificado e tradicional)."
+   ]
+  ]
+ },
+ "ar": {
+  "etiquetas": [
+   "الوخز بالإبر",
+   "الأعشاب",
+   "المريديانات"
+  ],
+  "titulo": "ما هذا التطبيق؟",
+  "texto": [
+   "مرجع دراسي للطب الصيني التقليدي على iPhone وiPad وAndroid: نقاط الوخز بالإبر، والضغط بالأصابع (الأكوبريشر)، والمريديانات، والأعشاب والتركيبات الصينية، والتشخيص باللسان والنبض، واليين واليانغ، والعناصر الخمسة، وأنماط بنية الجسم، والتغذية الصينية، والتشي غونغ، كلها في مكتبة واحدة منظّمة.",
+   "صُمّم لطلاب الطب الصيني التقليدي الذين يستعدون للامتحانات، وللممارسين الذين يراجعون الأنماط السريرية، ولكل من يبدأ رحلته مع الطب الشرقي.",
+   "لأغراض تعليمية فقط: لا يقدّم نصيحة طبية ولا تشخيصًا ولا علاجًا، ولا يغني عن أخصائي رعاية صحية مؤهل."
+  ],
+  "funciones": [
+   "110 نقاط وخز بالإبر مصوّرة مع الموقع والوظيفة والفئة",
+   "المريديانات الاثنا عشر الرئيسية، وعرض ثلاثي الأبعاد للجسم، وخمسة أنظمة مصغّرة (الأذن، فروة الرأس، اليد، البطن، الوجه)",
+   "86 عشبة صينية و30 تركيبة كلاسيكية موضّحة بحسب أدوار مكوّناتها",
+   "ست طرق تشخيص مع جولات إرشادية: اللسان، النبض، المبادئ الثمانية، الزانغ-فو، العناصر الخمسة، والمريديانات",
+   "تسعة أنماط لبنية الجسم، والتغذية الصينية، والأكل الموسمي",
+   "الكيّ بالموكسا، والحجامة، وغوا شا، وتوينا، والتشي غونغ (با دوان جين، وو تشين شي…)",
+   "ثمانية كتب كلاسيكية في سياقها، ومحاكي للحالات السريرية"
+  ],
+  "faq": [
+   [
+    "هل هو مجاني؟",
+    "نعم، جزء كبير منه مجاني: 30 نقطة رئيسية مصوّرة، و20 عشبة، وأربع تركيبات، والمبادئ الثمانية والتشخيص باللسان، والحجامة، وبا دوان جين، وحالتان سريريتان. ويفتح الاشتراك المميز (Premium) كل شيء، شهريًا أو سنويًا أو بدفعة واحدة."
+   ],
+   [
+    "هل يتضمن الضغط بالأصابع؟",
+    "نعم. يعتمد الضغط بالأصابع على خريطة النقاط نفسها بضغط يدوي، وقد وُسمت النقاط الخاصة بآلام الظهر والصداع والنوم والهضم والتوتر للاستخدام اليومي."
+   ],
+   [
+    "لمن هو؟",
+    "لطلاب الطب الصيني والوخز بالإبر، وللممارسين الذين يريدون مرجعًا سريعًا، وللمبتدئين الراغبين في فهم كيف يعمل الطب الصيني."
+   ],
+   [
+    "هل هو نصيحة طبية؟",
+    "لا. إنه مرجع تعليمي ولا يغني عن أخصائي رعاية صحية مؤهل."
+   ],
+   [
+    "هل أحتاج إلى حساب؟",
+    "لا حساب ولا تسجيل. تبقى التحليلات متوقفة ما لم تفعّلها."
+   ],
+   [
+    "ما الأجهزة واللغات المدعومة؟",
+    "iPhone وiPad وAndroid، بـ 11 لغة: الإنجليزية والإسبانية والفرنسية والبرتغالية والعربية والهندية واليابانية والكورية والصينية (المبسّطة والتقليدية)."
+   ]
+  ]
+ },
+ "hi": {
+  "etiquetas": [
+   "एक्यूपंक्चर",
+   "जड़ी-बूटियाँ",
+   "मेरिडियन"
+  ],
+  "titulo": "यह ऐप क्या है?",
+  "texto": [
+   "iPhone, iPad और Android के लिए पारंपरिक चीनी चिकित्सा (TCM) का अध्ययन-संदर्भ: एक्यूपंक्चर बिंदु, एक्यूप्रेशर, मेरिडियन, चीनी जड़ी-बूटियाँ और फ़ॉर्मूले, जीभ और नाड़ी से निदान, यिन-यांग, पंच तत्व, शारीरिक प्रकृतियाँ, चीनी आहार-विज्ञान और क्यूई गोंग, सब एक सुव्यवस्थित लाइब्रेरी में।",
+   "यह TCM परीक्षाओं की तैयारी कर रहे विद्यार्थियों, क्लिनिकल पैटर्न दोहराने वाले चिकित्सकों और पूर्वी चिकित्सा में नए किसी भी व्यक्ति के लिए बनाया गया है।",
+   "केवल शैक्षिक उद्देश्य के लिए: यह चिकित्सकीय सलाह, निदान या उपचार नहीं देता और किसी योग्य स्वास्थ्य पेशेवर का विकल्प नहीं है।"
+  ],
+  "funciones": [
+   "स्थान, कार्य और श्रेणी के साथ 110 चित्रित एक्यूपंक्चर बिंदु",
+   "12 प्रमुख मेरिडियन, शरीर का 3D दृश्य और पाँच सूक्ष्म-प्रणालियाँ (कान, खोपड़ी, हाथ, पेट, चेहरा)",
+   "86 चीनी जड़ी-बूटियाँ और 30 शास्त्रीय फ़ॉर्मूले, उनकी भूमिकाओं के आधार पर समझाए गए",
+   "मार्गदर्शित चरणों के साथ निदान की छह विधियाँ: जीभ, नाड़ी, आठ सिद्धांत, ज़ांग-फ़ू, पंच तत्व और मेरिडियन",
+   "नौ शारीरिक प्रकृतियाँ, चीनी आहार-विज्ञान और मौसमी भोजन",
+   "मोक्सीबस्टन, कपिंग, गुआ शा, तुइना और क्यूई गोंग (बा दुआन जिन, वू छिन शी…)",
+   "संदर्भ सहित आठ शास्त्रीय ग्रंथ और एक क्लिनिकल केस सिमुलेटर"
+  ],
+  "faq": [
+   [
+    "क्या यह मुफ़्त है?",
+    "हाँ, एक बड़ा हिस्सा मुफ़्त है: चित्रों सहित 30 प्रमुख बिंदु, 20 जड़ी-बूटियाँ, चार फ़ॉर्मूले, आठ सिद्धांत और जीभ से निदान, कपिंग, बा दुआन जिन और दो क्लिनिकल केस। प्रीमियम सब कुछ खोल देता है, मासिक, वार्षिक या एक बार के भुगतान में।"
+   ],
+   [
+    "क्या इसमें एक्यूप्रेशर है?",
+    "हाँ। एक्यूप्रेशर उसी बिंदु-मानचित्र पर हाथ के दबाव से किया जाता है, और पीठ दर्द, सिरदर्द, नींद, पाचन और तनाव के बिंदु रोज़मर्रा के उपयोग के लिए चिह्नित हैं।"
+   ],
+   [
+    "यह किसके लिए है?",
+    "TCM और एक्यूपंक्चर के विद्यार्थियों, तेज़ संदर्भ चाहने वाले चिकित्सकों और उन शुरुआती लोगों के लिए जो समझना चाहते हैं कि चीनी चिकित्सा कैसे काम करती है।"
+   ],
+   [
+    "क्या यह चिकित्सकीय सलाह है?",
+    "नहीं। यह एक शैक्षिक संदर्भ है और किसी योग्य स्वास्थ्य पेशेवर का विकल्प नहीं है।"
+   ],
+   [
+    "क्या खाता चाहिए?",
+    "कोई खाता या साइन-अप नहीं। एनालिटिक्स तब तक बंद रहता है जब तक आप उसे चालू न करें।"
+   ],
+   [
+    "कौन-से डिवाइस और भाषाएँ?",
+    "iPhone, iPad और Android, 11 भाषाओं में: अंग्रेज़ी, स्पेनिश, फ़्रेंच, पुर्तगाली, अरबी, हिंदी, जापानी, कोरियाई और चीनी (सरलीकृत और पारंपरिक)।"
+   ]
+  ]
+ },
+ "ja": {
+  "etiquetas": [
+   "鍼灸",
+   "中薬",
+   "経絡"
+  ],
+  "titulo": "このアプリとは?",
+  "texto": [
+   "iPhone、iPad、Androidで使える中医学(TCM)の学習リファレンス。経穴(ツボ)、指圧(ツボ押し)、経絡、中薬と方剤、舌診・脈診、陰陽、五行、体質、薬膳、気功までを、ひとつの整理されたライブラリにまとめています。",
+   "中医学の試験に備える学生、臨床パターンを復習する施術者、東洋医学をこれから学ぶ方のために作られています。",
+   "教育目的のみ:医療上のアドバイス、診断、治療は提供せず、資格を持つ医療専門家の代わりにはなりません。"
+  ],
+  "funciones": [
+   "位置・働き・分類つきのイラスト付き経穴(ツボ)110個",
+   "主要な12経絡、3Dボディビュー、五つの微小システム(耳、頭皮、手、腹部、顔)",
+   "中薬86種と古典方剤30処方を、それぞれの役割から解説",
+   "ガイド付きで学べる6つの診断法:舌診、脈診、八綱、臓腑、五行、経絡",
+   "九つの体質、薬膳、季節の食養生",
+   "灸、カッピング、刮痧(かっさ)、推拿(すいな)、気功(八段錦、五禽戯…)",
+   "文脈つきで読む八つの古典と、臨床症例シミュレーター"
+  ],
+  "faq": [
+   [
+    "無料ですか?",
+    "はい、大部分は無料です。イラスト付きの主要な経穴30個、中薬20種、方剤4つ、八綱と舌診、カッピング、八段錦、臨床症例2つが含まれます。プレミアムですべてが開放され、月額・年額・買い切りから選べます。"
+   ],
+   [
+    "指圧(ツボ押し)も含まれますか?",
+    "はい。指圧は同じ経穴マップを使い、手で押して行います。腰痛、頭痛、睡眠、消化、ストレス向けの経穴には、日常で使えるよう印が付いています。"
+   ],
+   [
+    "どんな人向けですか?",
+    "中医学・鍼灸を学ぶ学生、すばやく調べられる資料がほしい施術者、中国医学のしくみを知りたい初心者向けです。"
+   ],
+   [
+    "医療アドバイスですか?",
+    "いいえ。教育目的のリファレンスであり、資格を持つ医療専門家の代わりにはなりません。"
+   ],
+   [
+    "アカウントは必要ですか?",
+    "アカウント登録は不要です。分析機能は、オンにしない限りオフのままです。"
+   ],
+   [
+    "対応デバイスと言語は?",
+    "iPhone、iPad、Androidに対応し、11言語で利用できます:英語、スペイン語、フランス語、ポルトガル語、アラビア語、ヒンディー語、日本語、韓国語、中国語(簡体字・繁体字)。"
+   ]
+  ]
+ },
+ "ko": {
+  "etiquetas": [
+   "침술",
+   "약초",
+   "경락"
+  ],
+  "titulo": "이 앱은 무엇인가요?",
+  "texto": [
+   "iPhone, iPad, Android에서 쓰는 중의학(TCM) 학습 참고서입니다. 경혈, 지압, 경락, 중국 약재와 처방, 설진과 맥진, 음양, 오행, 체질, 중국 식이요법, 기공까지 하나의 체계적인 라이브러리에 담았습니다.",
+   "중의학 시험을 준비하는 학생, 임상 패턴을 복습하는 시술자, 동양 의학을 처음 접하는 분을 위해 만들었습니다.",
+   "교육 목적으로만 제공됩니다. 의학적 조언, 진단, 치료를 제공하지 않으며 자격을 갖춘 의료 전문가를 대체하지 않습니다."
+  ],
+  "funciones": [
+   "위치, 효능, 분류를 담은 일러스트 경혈 110개",
+   "주요 경락 12개, 3D 인체 뷰, 다섯 가지 미세 시스템(귀, 두피, 손, 복부, 얼굴)",
+   "중국 약재 86종과 고전 처방 30개를 역할별로 설명",
+   "안내형 단계별 진단법 여섯 가지: 설진, 맥진, 팔강, 장부, 오행, 경락",
+   "아홉 가지 체질, 중국 식이요법, 계절 식단",
+   "뜸, 부항, 괄사, 추나, 기공(팔단금, 오금희…)",
+   "맥락과 함께 보는 고전 여덟 권과 임상 사례 시뮬레이터"
+  ],
+  "faq": [
+   [
+    "무료인가요?",
+    "네, 상당 부분이 무료입니다. 일러스트가 있는 핵심 경혈 30개, 약재 20종, 처방 4개, 팔강과 설진, 부항, 팔단금, 임상 사례 2개가 포함됩니다. 프리미엄은 모든 것을 열어 주며 월간, 연간 또는 1회 결제로 이용할 수 있습니다."
+   ],
+   [
+    "지압도 포함되나요?",
+    "네. 지압은 같은 경혈 지도를 사용해 손으로 눌러 주는 방식이며, 요통, 두통, 수면, 소화, 스트레스에 쓰는 경혈은 일상에서 쓰기 쉽게 표시되어 있습니다."
+   ],
+   [
+    "누구를 위한 앱인가요?",
+    "중의학·침구학 전공 학생, 빠른 참고 자료가 필요한 시술자, 중국 의학이 어떻게 작동하는지 이해하고 싶은 입문자를 위한 앱입니다."
+   ],
+   [
+    "의학적 조언인가요?",
+    "아니요. 교육용 참고 자료이며 자격을 갖춘 의료 전문가를 대체하지 않습니다."
+   ],
+   [
+    "계정이 필요한가요?",
+    "계정도 가입도 필요 없습니다. 분석 기능은 직접 켜지 않는 한 꺼져 있습니다."
+   ],
+   [
+    "지원 기기와 언어는?",
+    "iPhone, iPad, Android에서 11개 언어로 쓸 수 있습니다: 영어, 스페인어, 프랑스어, 포르투갈어, 아랍어, 힌디어, 일본어, 한국어, 중국어(간체 및 번체)."
+   ]
+  ]
+ },
+ "zh": {
+  "etiquetas": [
+   "针灸",
+   "中药",
+   "经络"
+  ],
+  "titulo": "这是一款什么应用?",
+  "texto": [
+   "适用于 iPhone、iPad 和 Android 的中医学习参考工具:穴位、穴位按压、经络、中药与方剂、舌诊与脉诊、阴阳、五行、体质、中医食疗和气功,集中在一个条理清晰的资料库里。",
+   "专为备考中医的学生、复习临床证型的从业者,以及刚接触东方医学的人而设计。",
+   "仅供教育用途:不提供医疗建议、诊断或治疗,也不能替代合格的医疗专业人员。"
+  ],
+  "funciones": [
+   "110 个带插图的穴位,附定位、功效与分类",
+   "12 条主要经络、3D 人体视图,以及五大微针系统(耳、头皮、手、腹、面)",
+   "86 味中药和 30 首经典方剂,按各药在方中的角色讲解",
+   "六种诊断方法配有引导式学习:舌诊、脉诊、八纲、脏腑、五行和经络",
+   "九种体质、中医食疗与四季饮食",
+   "艾灸、拔罐、刮痧、推拿和气功(八段锦、五禽戏……)",
+   "结合背景解读的八部经典,以及临床病例模拟器"
+  ],
+  "faq": [
+   [
+    "免费吗?",
+    "是的,大部分内容免费:30 个带插图的重点穴位、20 味中药、4 首方剂、八纲和舌诊、拔罐、八段锦以及 2 个临床病例。高级版(Premium)可解锁全部内容,支持按月、按年或一次性买断。"
+   ],
+   [
+    "包含穴位按压吗?",
+    "包含。穴位按压使用同一张穴位图,通过手法按压进行;针对背痛、头痛、睡眠、消化和压力的穴位都做了标注,方便日常使用。"
+   ],
+   [
+    "适合哪些人?",
+    "中医和针灸专业的学生、需要快速查阅资料的从业者,以及想了解中医如何运作的初学者。"
+   ],
+   [
+    "这是医疗建议吗?",
+    "不是。这是教育参考资料,不能替代合格的医疗专业人员。"
+   ],
+   [
+    "需要账号吗?",
+    "无需账号,也无需注册。数据分析默认关闭,只有你主动开启才会启用。"
+   ],
+   [
+    "支持哪些设备和语言?",
+    "支持 iPhone、iPad 和 Android,提供 11 种语言:英语、西班牙语、法语、葡萄牙语、阿拉伯语、印地语、日语、韩语和中文(简体和繁体)。"
+   ]
+  ]
+ },
+ "zh-TW": {
+  "etiquetas": [
+   "針灸",
+   "中藥",
+   "經絡"
+  ],
+  "titulo": "這是什麼 App?",
+  "texto": [
+   "適用於 iPhone、iPad 與 Android 的中醫學習參考工具:穴位、穴位按壓、經絡、中藥與方劑、舌診與脈診、陰陽、五行、體質、中醫食療與氣功,整合在一個架構清楚的資料庫中。",
+   "專為準備中醫考試的學生、複習臨床證型的從業人員,以及剛接觸東方醫學的人所設計。",
+   "僅供教育用途:不提供醫療建議、診斷或治療,也無法取代合格的醫療專業人員。"
+  ],
+  "funciones": [
+   "110 個附插圖的穴位,標示定位、功效與分類",
+   "12 條主要經絡、3D 人體檢視,以及五大微針系統(耳、頭皮、手、腹、面)",
+   "86 味中藥與 30 首經典方劑,依各自在方中的角色說明",
+   "六種診斷方法並附引導式教學:舌診、脈診、八綱、臟腑、五行與經絡",
+   "九種體質、中醫食療與四季飲食",
+   "艾灸、拔罐、刮痧、推拿與氣功(八段錦、五禽戲……)",
+   "結合背景解讀的八部經典,以及臨床病例模擬器"
+  ],
+  "faq": [
+   [
+    "免費嗎?",
+    "是的,大部分內容免費:30 個附插圖的重點穴位、20 味中藥、4 首方劑、八綱與舌診、拔罐、八段錦,以及 2 個臨床病例。Premium 可解鎖全部內容,提供月訂、年訂或單次購買。"
+   ],
+   [
+    "包含穴位按壓嗎?",
+    "包含。穴位按壓使用同一張穴位圖,以手法按壓進行;針對背痛、頭痛、睡眠、消化與壓力的穴位都有標示,方便日常使用。"
+   ],
+   [
+    "適合哪些人?",
+    "中醫與針灸科系的學生、需要快速查閱資料的從業人員,以及想了解中醫如何運作的初學者。"
+   ],
+   [
+    "這是醫療建議嗎?",
+    "不是。這是教育參考資料,無法取代合格的醫療專業人員。"
+   ],
+   [
+    "需要帳號嗎?",
+    "不需要帳號,也不需要註冊。分析功能預設為關閉,除非你自行開啟。"
+   ],
+   [
+    "支援哪些裝置和語言?",
+    "支援 iPhone、iPad 與 Android,提供 11 種語言:英文、西班牙文、法文、葡萄牙文、阿拉伯文、印地文、日文、韓文與中文(簡體與繁體)。"
+   ]
+  ]
+ }
+}

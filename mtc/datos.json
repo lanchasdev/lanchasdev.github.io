@@ -1,11 +1,27 @@
 {
  "nombre": {
-  "es": "Manual Yin Yang: Guía MTC",
-  "en": "TCM Herbs, Acupuncture & Qi"
+  "es": "MTC: Acupuntura y Acupresión",
+  "en": "TCM: Acupuncture & Acupressure",
+  "fr": "MTC: Acupuncture & Acupression",
+  "pt": "Acupuntura e Auriculoterapia",
+  "ar": "الوخز بالإبر والطب الصيني",
+  "hi": "Acupressure Points in Hindi",
+  "ja": "東洋医学：ツボ押し・経絡経穴・漢方薬・鍼灸国家試験",
+  "ko": "한의학 혈자리 지압: 혈자리찾기·체질검사·한약재",
+  "zh": "中医宝典：针灸穴位、中药与舌诊",
+  "zh-TW": "中醫穴位圖鑑：針灸穴位按摩、中藥方劑與舌診"
  },
  "frase": {
-  "es": "Manual de estudio de medicina tradicional china. Acupuntura, hierbas y canales",
-  "en": "Traditional Chinese Medicine study guide for meridians, pulse & tongue analysis"
+  "es": "Acupuntura en español: auriculoterapia, qi gong, migraña y remedios naturales",
+  "en": "Acupoints index, acupuncture points, qi gong, yin yang, tongue & pulse diagnosis",
+  "fr": "Acupuncture 3D, auriculothérapie, remèdes naturels, yin yang et qi gong",
+  "pt": "Pontos de acupuntura em português, ervas medicinais, yin yang e qigong",
+  "ar": "دليل الوخز بالإبر: نقاط الجسم، المسارات، الأعشاب الصينية، الحجامة وعلاج الألم.",
+  "hi": "एक्यूप्रेशर, acupuncture points, herbal medicine app offline, sujok therapy",
+  "ja": "ツボ押し・経絡経穴・漢方薬・舌診断・八段錦・気功瞑想を収録。暗記カードと経穴図で鍼灸師 国家試験や漢方薬の勉強にも使える東洋医学アプリ",
+  "ko": "혈자리찾기와 경혈검색, 혈자리 지압, 한의학 처방검색, 경락지도, 체질검사, 자가진단, 홈케어, 침술·설진·맥진 학습",
+  "zh": "中医 App：针灸穴位、经络、中药、方剂、舌诊、脉诊、八段锦、五行与阴阳，完整中医学习工具",
+  "zh-TW": "中醫 App：中藥圖鑑、中藥方劑、本草題庫、經絡穴位、3D 穴位圖、穴位按摩、舌診脈診、五行陰陽、濕氣、焦慮、偏頭痛與中醫考試複習"
  },
  "capturas": {
   "es": [
@@ -24,7 +40,8 @@
    "en-2.jpg",
    "en-3.jpg",
    "en-4.jpg",
-   "en-5.jpg"
+   "en-5.jpg",
+   "en-6.jpg"
   ]
  }
 }

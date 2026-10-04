@@ -1,11 +1,41 @@
 {
  "nombre": {
   "es": "Leo IA: Glow Up y Looksmaxxing",
-  "en": "Leo AI: Glow Up & Looksmaxxing"
+  "en": "Leo AI: Glow Up & Looksmaxxing",
+  "ar": "Leo AI: Glow Up و Looksmaxxing",
+  "de": "Leo KI: Glow Up & Looksmaxxing",
+  "fr": "Leo IA : Glow Up, Looksmaxxing",
+  "hi": "Leo AI: Glow Up & Looksmaxxing",
+  "id": "Leo AI: Glow Up & Looksmaxxing",
+  "it": "Leo IA: Glow Up e Looksmaxxing",
+  "ja": "Leo：AI垢抜けコーチ｜Looksmaxxing",
+  "ko": "Leo AI: 글로우업 코치·룩스맥싱",
+  "pl": "Leo AI: Glow Up i Looksmaxxing",
+  "pt": "Leo IA: Glow Up e Looksmaxxing",
+  "ru": "Leo ИИ: Glow Up и Looksmaxxing",
+  "th": "Leo AI: Glow Up & Looksmaxxing",
+  "tr": "Leo AI: Glow Up & Looksmaxxing",
+  "vi": "Leo AI: Glow Up & Looksmaxxing",
+  "zh": "Leo：AI颜值提升教练 Glow Up"
  },
  "frase": {
   "es": "Coach IA de glow up para hombres: autodisciplina, autocontrol y enfoque",
-  "en": "Your AI glow up coach: gamify your life, self discipline app & skincare routine"
+  "en": "Your AI glow up coach: gamify your life, self discipline app & skincare routine",
+  "ar": "مدرب ذكاء اصطناعي للـ glow up: الانضباط الذاتي والعادات والعناية الذاتية",
+  "de": "Dein KI Glow Up Coach: Selbstdisziplin, Willenskraft & Habit Tracker",
+  "fr": "Coach IA glow up : discipline personnelle, confiance en soi, habit tracker",
+  "hi": "AI glow up coach: habit tracker, self discipline और रोज़ की आदतें",
+  "id": "Coach AI glow up cowok: habit tracker dan disiplin diri. Gamify your life!",
+  "it": "Coach IA di glow up: habit tracker, autodisciplina e routine mattutina",
+  "ja": "垢抜けたい男子のAIコーチ。自分磨きを習慣化、規律が身につくハビットトラッカー",
+  "ko": "AI 글로우업 코치와 외모관리. 운동·스킨케어 습관 트래커로 매일 레벨업",
+  "pl": "Twój coach AI od glow up: habit tracker, samodyscyplina i pewność siebie",
+  "pt": "Coach IA de glow up: desafios diários, hábitos diários e suba de nível",
+  "ru": "ИИ коуч для glow up: трекер привычек, самодисциплина и уход за собой",
+  "th": "โค้ช AI สาย glow up: habit tracker ออกกำลังกาย สร้างนิสัย และวินัย",
+  "tr": "Yapay zeka glow up koçu: öz disiplin, özgüven, alışkanlık. Gamify your life.",
+  "vi": "Huấn luyện viên AI glow up: kỷ luật bản thân, thói quen và chăm sóc da",
+  "zh": "你的AI颜值提升教练：自律打卡、男生护肤、健身与形象管理，每天变帅一点。"
  },
  "capturas": {
   "es": [

@@ -1,0 +1,202 @@
+{
+ "es": {
+  "ios_sub": "Descárgala en",
+  "play_sub": "Disponible en",
+  "gratis": "Gratis",
+  "solo_android": "Por ahora solo en Android · pronto en iPhone",
+  "privacidad": "Privacidad",
+  "hecha": "Hecha por Lanchas Dev",
+  "capturas": "Así es por dentro",
+  "descargas": "+1000 descargas"
+ },
+ "en": {
+  "ios_sub": "Download on the",
+  "play_sub": "Get it on",
+  "gratis": "Free",
+  "solo_android": "Android only for now · iPhone soon",
+  "privacidad": "Privacy",
+  "hecha": "Made by Lanchas Dev",
+  "capturas": "Take a look inside",
+  "descargas": "1K+ downloads"
+ },
+ "ar": {
+  "ios_sub": "حمّله من",
+  "play_sub": "احصل عليه من",
+  "gratis": "مجاني",
+  "solo_android": "على أندرويد فقط حاليًا · آيفون قريبًا",
+  "privacidad": "الخصوصية",
+  "hecha": "من تطوير Lanchas Dev",
+  "capturas": "نظرة من الداخل",
+  "descargas": "+1K تنزيل"
+ },
+ "bn": {
+  "ios_sub": "ডাউনলোড করুন",
+  "play_sub": "পান",
+  "gratis": "বিনামূল্যে",
+  "solo_android": "আপাতত শুধু অ্যান্ড্রয়েডে · শীঘ্রই আইফোনে",
+  "privacidad": "গোপনীয়তা",
+  "hecha": "তৈরি করেছে Lanchas Dev",
+  "capturas": "ভেতরে এক নজর",
+  "descargas": "1K+ ডাউনলোড"
+ },
+ "de": {
+  "ios_sub": "Laden im",
+  "play_sub": "Jetzt bei",
+  "gratis": "Kostenlos",
+  "solo_android": "Vorerst nur für Android · iPhone folgt bald",
+  "privacidad": "Datenschutz",
+  "hecha": "Entwickelt von Lanchas Dev",
+  "capturas": "Ein Blick ins Innere",
+  "descargas": "1K+ Downloads"
+ },
+ "fr": {
+  "ios_sub": "Télécharger dans l'",
+  "play_sub": "Disponible sur",
+  "gratis": "Gratuit",
+  "solo_android": "Android uniquement pour l'instant · iPhone bientôt",
+  "privacidad": "Confidentialité",
+  "hecha": "Créé par Lanchas Dev",
+  "capturas": "Jetez un œil à l'intérieur",
+  "descargas": "1K+ téléchargements"
+ },
+ "hi": {
+  "ios_sub": "डाउनलोड करें",
+  "play_sub": "यहाँ से पाएँ",
+  "gratis": "मुफ़्त",
+  "solo_android": "फ़िलहाल सिर्फ़ Android पर · iPhone पर जल्द",
+  "privacidad": "गोपनीयता",
+  "hecha": "Lanchas Dev द्वारा बनाया गया",
+  "capturas": "अंदर एक झलक देखें",
+  "descargas": "1K+ डाउनलोड"
+ },
+ "id": {
+  "ios_sub": "Unduh di",
+  "play_sub": "Dapatkan di",
+  "gratis": "Gratis",
+  "solo_android": "Untuk saat ini hanya Android · iPhone segera hadir",
+  "privacidad": "Privasi",
+  "hecha": "Dibuat oleh Lanchas Dev",
+  "capturas": "Intip bagian dalamnya",
+  "descargas": "1K+ unduhan"
+ },
+ "it": {
+  "ios_sub": "Scarica su",
+  "play_sub": "Scaricalo su",
+  "gratis": "Gratis",
+  "solo_android": "Per ora solo Android · iPhone presto",
+  "privacidad": "Privacy",
+  "hecha": "Creata da Lanchas Dev",
+  "capturas": "Dai un'occhiata dentro",
+  "descargas": "1K+ download"
+ },
+ "ja": {
+  "ios_sub": "ダウンロード",
+  "play_sub": "入手先",
+  "gratis": "無料",
+  "solo_android": "現在はAndroidのみ · iPhone版も近日公開",
+  "privacidad": "プライバシー",
+  "hecha": "制作：Lanchas Dev",
+  "capturas": "中をのぞいてみよう",
+  "descargas": "1K+ ダウンロード"
+ },
+ "ko": {
+  "ios_sub": "다운로드",
+  "play_sub": "다운로드",
+  "gratis": "무료",
+  "solo_android": "현재는 Android 전용 · iPhone 버전 출시 예정",
+  "privacidad": "개인정보처리방침",
+  "hecha": "제작: Lanchas Dev",
+  "capturas": "앱 속을 미리 살펴보세요",
+  "descargas": "1K+ 다운로드"
+ },
+ "ms": {
+  "ios_sub": "Muat turun di",
+  "play_sub": "Dapatkan di",
+  "gratis": "Percuma",
+  "solo_android": "Android sahaja buat masa ini · iPhone tidak lama lagi",
+  "privacidad": "Privasi",
+  "hecha": "Dibuat oleh Lanchas Dev",
+  "capturas": "Intai di dalamnya",
+  "descargas": "1K+ muat turun"
+ },
+ "pl": {
+  "ios_sub": "Pobierz z",
+  "play_sub": "Pobierz z",
+  "gratis": "Za darmo",
+  "solo_android": "Na razie tylko Android · iPhone wkrótce",
+  "privacidad": "Prywatność",
+  "hecha": "Stworzone przez Lanchas Dev",
+  "capturas": "Zajrzyj do środka",
+  "descargas": "1K+ pobrań"
+ },
+ "pt": {
+  "ios_sub": "Baixe na",
+  "play_sub": "Disponível no",
+  "gratis": "Grátis",
+  "solo_android": "Por enquanto só no Android · iPhone em breve",
+  "privacidad": "Privacidade",
+  "hecha": "Feito pela Lanchas Dev",
+  "capturas": "Dê uma olhada por dentro",
+  "descargas": "1K+ downloads"
+ },
+ "ru": {
+  "ios_sub": "Загрузите в",
+  "play_sub": "Доступно в",
+  "gratis": "Бесплатно",
+  "solo_android": "Пока только для Android · iPhone скоро",
+  "privacidad": "Конфиденциальность",
+  "hecha": "Создано Lanchas Dev",
+  "capturas": "Загляните внутрь",
+  "descargas": "1K+ загрузок"
+ },
+ "th": {
+  "ios_sub": "ดาวน์โหลดบน",
+  "play_sub": "ดาวน์โหลดได้ที่",
+  "gratis": "ฟรี",
+  "solo_android": "ตอนนี้มีเฉพาะ Android · iPhone เร็วๆ นี้",
+  "privacidad": "ความเป็นส่วนตัว",
+  "hecha": "สร้างโดย Lanchas Dev",
+  "capturas": "ดูภายในแอป",
+  "descargas": "ดาวน์โหลด 1K+"
+ },
+ "tr": {
+  "ios_sub": "İndirin:",
+  "play_sub": "Şuradan edinin:",
+  "gratis": "Ücretsiz",
+  "solo_android": "Şimdilik yalnızca Android · iPhone yakında",
+  "privacidad": "Gizlilik",
+  "hecha": "Lanchas Dev tarafından yapıldı",
+  "capturas": "İçeriye bir göz atın",
+  "descargas": "1K+ indirme"
+ },
+ "vi": {
+  "ios_sub": "Tải xuống trên",
+  "play_sub": "Tải trên",
+  "gratis": "Miễn phí",
+  "solo_android": "Hiện chỉ có trên Android · iPhone sắp ra mắt",
+  "privacidad": "Quyền riêng tư",
+  "hecha": "Được tạo bởi Lanchas Dev",
+  "capturas": "Xem qua bên trong",
+  "descargas": "1K+ lượt tải"
+ },
+ "zh": {
+  "ios_sub": "下载自",
+  "play_sub": "获取自",
+  "gratis": "免费",
+  "solo_android": "目前仅支持 Android · iPhone 版即将推出",
+  "privacidad": "隐私",
+  "hecha": "由 Lanchas Dev 制作",
+  "capturas": "一览应用内部",
+  "descargas": "1K+ 次下载"
+ },
+ "zh-TW": {
+  "ios_sub": "下載自",
+  "play_sub": "取得應用程式：",
+  "gratis": "免費",
+  "solo_android": "目前僅支援 Android · iPhone 版即將推出",
+  "privacidad": "隱私權",
+  "hecha": "由 Lanchas Dev 製作",
+  "capturas": "一覽應用程式內部",
+  "descargas": "1K+ 次下載"
+ }
+}
