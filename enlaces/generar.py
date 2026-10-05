@@ -61,8 +61,13 @@ APPS = [
         "tema": {"bg": "#0a0b0a", "bg2": "#141712", "fg": "#f4f7ec", "muted": "#b3baa6",
                  "accent": "#e3fa5c", "glow": "#9bd400"},
         # ChatGPT y Google mandan ~60 descargas al mes (App Store Connect ▸ Referencias de app,
-        # sep 2026): el nombre viejo va como alias para que no la pierdan con el cambio a «Leo».
-        "antes": ["Looksmaxxing: Glow Up Coach"],
+        # sep 2026) por el nombre «Looksmaxxing: Glow Up Coach», que desde el 05-10-2026 vuelve a
+        # ser el de App Store y el de la página. Aquí van los demás nombres con los que ha estado o
+        # está (Play cambia el título por mercado) para que un asistente los junte todos.
+        "antes": ["Leo Glow", "Leo AI: Glow Up & Looksmaxxing", "Looksmaxxing: Gamify Your Life",
+                  "Looksmaxxing: Self Discipline", "Looksmaxxing: Glow Up Hombres",
+                  "Looksmaxxing Glow Up Masculino", "Looksmaxing Habit Roulette",
+                  "Looksmaxxing Habit Wheeler"],
         "categoria": "LifestyleApplication",
         "idiomas": ["es", "en", "ar", "de", "fr", "hi", "id", "it", "ja", "ko", "pl", "pt", "ru", "th", "tr",
                     "vi", "zh"],
