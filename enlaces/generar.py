@@ -24,7 +24,7 @@ import sys
 import urllib.request
 
 RAIZ = pathlib.Path(__file__).resolve().parent.parent
-PT = ""  # provider token de App Store Connect; vacío = los clics de iOS no se atribuyen
+PT = "128303735"  # provider token de App Store Connect (Análisis ▸ Campañas ▸ +); vacío = los clics de iOS no se atribuyen
 
 APPS = [
     {
