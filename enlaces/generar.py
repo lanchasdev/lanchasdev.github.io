@@ -78,6 +78,7 @@ APPS = [
     {
         "slug": "zodiaco", "ios": "", "play": "com.celestialpath.zodiac",
         "privacidad": "", "descargas": {"es": "+1000 descargas", "en": "1K+ downloads"},
+        "web": ("https://horoscopochinohoy.com/", "Horóscopo chino 2027"),
         "tema": {"bg": "#f6ecd8", "bg2": "#efdcb8", "fg": "#3b2415", "muted": "#7a5a40",
                  "accent": "#c4561d", "glow": "#e9a44a", "claro": True},
         "categoria": "LifestyleApplication",
