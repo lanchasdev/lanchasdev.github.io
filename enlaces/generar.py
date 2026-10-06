@@ -57,6 +57,7 @@ APPS = [
     {
         "slug": "looksmax", "ios": "6756071839", "play": "com.bydark.looksmaxinghabit",
         "privacidad": "looksmax", "descargas": None,
+        "web": ("https://glowupformen.com/", "Guías de glow up"),
         # Leo Glow 2.0 (oct 2026): negro y lima, como la app. Icono y capturas puestos a mano desde
         # store-assets/ porque App Store sigue en la 1.2.0 hasta que aprueben la 2.0.3: un
         # --bajar de esta app traería el icono viejo. Los textos sí se pueden refrescar (--textos).
