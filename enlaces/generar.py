@@ -33,6 +33,8 @@ APPS = [
         # están solo en español, así que en inglés siguen saliendo las de App Store.
         "capturas_propias": {"es": "/Users/alberto/Proyectos/mtc/phone/assets/new-screens/store-concepts-v1"},
         "privacidad": "medicina-china", "descargas": {"es": "+1000 descargas", "en": "1K+ downloads"},
+        # Su web de contenido, enlazada en el pie: es un enlace más hacia ella para Google.
+        "web": ("https://medicinatradicionalchina.com/", "Guía de medicina china"),
         "tema": {"bg": "#0d1f19", "bg2": "#12302a", "fg": "#f3ecdb", "muted": "#b6c2b3",
                  "accent": "#d8b25a", "glow": "#1f7a4a"},
         # Los nombres con los que ha estado en cada tienda, para que un asistente que la conozca
@@ -45,6 +47,7 @@ APPS = [
     {
         "slug": "anime", "ios": "6755445114", "play": "com.bydark.animefoodrecipe",
         "privacidad": "anime-food", "descargas": None,
+        "web": ("https://recetasdeanime.com/", "Recetas de anime"),
         "tema": {"bg": "#1e0f05", "bg2": "#3a1a06", "fg": "#fff4e6", "muted": "#e8c9a6",
                  "accent": "#ff8a1f", "glow": "#ff7a00"},
         "antes": ["Japanese Food Anime: Cookbook"],
@@ -248,6 +251,7 @@ def pagina(app, datos):
     etiquetas = "".join(f"<li>{e(x)}</li>" for x in info_app["es"]["etiquetas"]) if langs else ""
     privacidad = (f'<a href="/privacidad/{app["privacidad"]}/" data-t="privacidad">Privacidad</a> · '
                   if app["privacidad"] else "")
+    web = (f'<a href="{app["web"][0]}">{html.escape(app["web"][1])}</a> · ' if app.get("web") else "")
     ios = (f'<a class="store" id="ios" href="https://apps.apple.com/app/id{app["ios"]}">{APPLE}'
            f'<span><small data-t="ios_sub">Descárgala en</small>App Store</span></a>') if app["ios"] else ""
     datos_js = json.dumps({
@@ -345,7 +349,7 @@ footer a{{color:inherit;text-underline-offset:3px}}
 <h2 data-t="capturas">Así es por dentro</h2>
 <div class="capturas">{capturas}</div>
 {bloque_info}
-<footer>{privacidad}<a href="/" data-t="hecha">Hecha por Lanchas Dev</a></footer>
+<footer>{web}{privacidad}<a href="/" data-t="hecha">Hecha por Lanchas Dev</a></footer>
 </main>
 <script>
 (function(){{
