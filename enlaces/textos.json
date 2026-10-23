@@ -7,7 +7,8 @@
   "privacidad": "Privacidad",
   "hecha": "Hecha por Lanchas Dev",
   "capturas": "Así es por dentro",
-  "descargas": "+1000 descargas"
+  "descargas": "+1000 descargas",
+  "desde": "Llegaste desde"
  },
  "en": {
   "ios_sub": "Download on the",
@@ -17,7 +18,8 @@
   "privacidad": "Privacy",
   "hecha": "Made by Lanchas Dev",
   "capturas": "Take a look inside",
-  "descargas": "1K+ downloads"
+  "descargas": "1K+ downloads",
+  "desde": "You came from"
  },
  "ar": {
   "ios_sub": "حمّله من",
