@@ -30,10 +30,10 @@ PT = "128303735"  # provider token de App Store Connect (Análisis ▸ Campañas
 APPS = [
     {
         "slug": "mtc", "ios": "6759268591", "play": "com.bydark.traditional.chinese.acupuncture",
-        # Las láminas con las mascotas enseñando la app gustan más que las capturas de la ficha:
-        # están solo en español, así que en inglés siguen saliendo las de App Store.
-        "capturas_propias": {"es": "/Users/alberto/Proyectos/mtc/phone/assets/store-screenshots/play/v2-localized/es-ES/phone",
-                             "en": "/Users/alberto/Proyectos/mtc/phone/assets/store-screenshots/play/v2-localized/en-US/phone"},
+        # Las de la ficha de Play desde el 16-10 (verde, paciente real): las v2 con mascotas
+        # de store-screenshots/ son las de antes.
+        "capturas_propias": {"es": "/Users/alberto/Proyectos/mtc/output/imagegen/app-store-50-localizaciones-2026-10-16/play-movil-rgb/es-ES",
+                             "en": "/Users/alberto/Proyectos/mtc/output/imagegen/app-store-50-localizaciones-2026-10-16/play-movil-rgb/en-US"},
         "privacidad": "medicina-china", "descargas": {"es": "+1000 descargas", "en": "1K+ downloads"},
         # Su web de contenido, enlazada en el pie: es un enlace más hacia ella para Google.
         "web": ("https://medicinatradicionalchina.com/", "Guía de medicina china"),
@@ -48,6 +48,8 @@ APPS = [
     },
     {
         "slug": "anime", "ios": "6755445114", "play": "com.bydark.animefoodrecipe",
+        # Las capturas, de Play (las rojas de Kai, «Del anime a tu cocina»): App Store sigue con las viejas.
+        "capturas_play": True,
         "privacidad": "anime-food", "descargas": None,
         "web": ("https://recetasdeanime.com/", "Recetas de anime"),
         "tema": {"bg": "#1e0f05", "bg2": "#3a1a06", "fg": "#fff4e6", "muted": "#e8c9a6",
@@ -154,19 +156,21 @@ def bajar(app):
     for lang in ("es", "en"):
         titulo, frase, icono_play, capturas = _play(app["play"], lang)
         datos["nombre"][lang], datos["frase"][lang] = titulo, frase
-        if app["ios"]:
+        if app["ios"] and not app.get("capturas_play"):
             pais = "es" if lang == "es" else "us"
-            r = json.loads(_get(f"https://itunes.apple.com/lookup?id={app['ios']}&country={pais}"))["results"][0]
+            # Desde el 19-10-2026 las apps iOS no están en la UE (DSA): la consulta de España sale vacía.
+            res = json.loads(_get(f"https://itunes.apple.com/lookup?id={app['ios']}&country={pais}"))["results"]
+            r = res[0] if res else json.loads(_get(f"https://itunes.apple.com/lookup?id={app['ios']}&country=us"))["results"][0]
             urls = [re.sub(r"/\d+x\d+bb\.\w+$", "/460x1000bb.jpg", u) for u in r["screenshotUrls"]]
             icono = re.sub(r"/\d+x\d+bb\.\w+$", "/512x512bb.png", r["artworkUrl512"])
         else:
             urls = [u + "=w460-h1000-rw" for u in capturas]
             icono = icono_play + "=s512"
         nombres = []
+        for viejo in dest.glob(f"{lang}-*.jpg"):  # si ahora hay menos, que no queden sueltas las de antes
+            viejo.unlink()
         propias = app.get("capturas_propias", {}).get(lang)
         if propias:
-            for viejo in dest.glob(f"{lang}-*.jpg"):
-                viejo.unlink()
             for i, f in enumerate(sorted(pathlib.Path(propias).glob("*.png")), 1):
                 nombre = f"{lang}-{i}.jpg"
                 subprocess.run(["sips", "-Z", "1000", "-s", "format", "jpeg", "-s", "formatOptions", "80",
@@ -176,7 +180,7 @@ def bajar(app):
         for i, u in enumerate(urls[:6], 1):
             nombre = f"{lang}-{i}.jpg"
             (dest / nombre).write_bytes(_get(u))
-            if not app["ios"]:  # Play las da en webp sin pérdida: ~700 KB cada una
+            if not app["ios"] or app.get("capturas_play"):  # Play las da en webp sin pérdida: ~700 KB cada una
                 subprocess.run(["sips", "-s", "format", "jpeg", "-s", "formatOptions", "80",
                                 str(dest / nombre), "--out", str(dest / nombre)], check=True, capture_output=True)
             nombres.append(nombre)
