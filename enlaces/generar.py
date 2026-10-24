@@ -328,9 +328,6 @@ max(28px,env(safe-area-inset-bottom));display:flex;flex-direction:column;align-i
 .icono{{position:relative;width:124px;height:124px;margin-bottom:22px;animation:entra .6s cubic-bezier(.2,.8,.2,1) both}}
 .icono img{{width:100%;height:100%;border-radius:28px;display:block;box-shadow:0 18px 40px -12px rgba(0,0,0,.55),0 0 0 1px var(--line)}}
 {'.icono::before{content:"";position:absolute;inset:-7px;border-radius:34px;background:conic-gradient(#22c55e,#eab308,#f97316,#ef4444,#d946ef,#6366f1,#0ea5e9,#22c55e);filter:blur(10px);opacity:.75;z-index:-1;animation:gira 8s linear infinite}' if t.get("anillo") else ""}
-.origen{{display:inline-flex;align-items:center;gap:8px;margin:-6px 0 14px;padding:6px 13px 6px 10px;border-radius:99px;background:var(--card);border:1px solid var(--line);font-size:.8rem;font-weight:600;color:var(--muted);animation:entra .6s both}}
-.origen i{{width:9px;height:9px;border-radius:50%;background:var(--red,#888);box-shadow:0 0 0 3px color-mix(in srgb,var(--red,#888) 25%,transparent)}}
-.origen[hidden]{{display:none}}
 h1{{font-size:1.65rem;line-height:1.15;letter-spacing:-.02em;font-weight:750;animation:entra .6s .05s both}}
 .frase{{color:var(--muted);margin-top:10px;font-size:1rem;max-width:34ch;animation:entra .6s .1s both}}
 .pills{{list-style:none;display:flex;flex-wrap:wrap;justify-content:center;gap:6px;margin-top:16px;animation:entra .6s .15s both}}
@@ -374,7 +371,6 @@ footer a{{color:inherit;text-underline-offset:3px}}
 <div class="halo" aria-hidden="true"></div>
 <main>
 <div class="icono"><img src="icono.jpg" alt="" width="124" height="124"></div>
-<p class="origen" id="origen" hidden><i></i><span></span></p>
 <h1 data-nombre>{e(datos["nombre"]["es"])}</h1>
 <p class="frase" data-frase>{e(datos["frase"]["es"])}</p>
 <ul class="pills"><li class="gratis" data-t="gratis">Gratis</li>{pill_desc}{etiquetas}</ul>
@@ -423,11 +419,6 @@ var ua=navigator.userAgent, android=/Android/.test(ua);
 // El iPad se presenta como un Mac: lo delata que tenga pantalla táctil.
 var ios=!android&&(/iPhone|iPad|iPod/.test(ua)||(navigator.platform==="MacIntel"&&navigator.maxTouchPoints>1));
 var a=document.getElementById("ios"), g=document.getElementById("play"), cont=g.parentNode;
-var MARCA={{tt:["TikTok","#FE2C55"],ig:["Instagram","#E1306C"],yt:["YouTube","#FF0000"]}};
-if(MARCA[s]){{
-  var o=document.getElementById("origen"), txt=T.desde?T.desde+" "+MARCA[s][0]:MARCA[s][0];
-  o.style.setProperty("--red",MARCA[s][1]); o.querySelector("span").textContent=txt; o.hidden=false;
-}}
 if(s){{
   if(a&&D.pt) a.href+="?pt="+D.pt+"&ct="+encodeURIComponent(s+"-"+D.slug)+"&mt=8";
   g.href+="&referrer="+encodeURIComponent("utm_source="+s+"&utm_medium=bio&utm_campaign="+D.slug);
