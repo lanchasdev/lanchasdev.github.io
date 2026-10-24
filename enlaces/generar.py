@@ -19,6 +19,7 @@ import html
 import json
 import pathlib
 import re
+import shutil
 import subprocess
 import sys
 import urllib.request
@@ -92,6 +93,22 @@ APPS = [
                     "tr", "vi", "zh", "zh-TW"],
     },
 ]
+
+# La misma página en el dominio de cada app, en `/get/`, para la bio de TikTok e Instagram:
+# `medicinatradicionalchina.com/get?s=tt`. Se escribe en el `static` de la web (lo copia su
+# build) y en su `dist` (para desplegar ya, sin reconstruir): `npx wrangler deploy` en la web.
+# Va con noindex: es la misma página que la de aquí, y la web no necesita un duplicado en Google.
+PROYECTOS = pathlib.Path("/Users/alberto/Proyectos")
+DOMINIOS = {
+    "mtc": {"url": "https://medicinatradicionalchina.com", "sitio": "medicina-china", "an": "/an.js",
+            "dirs": ["mtc/web/static", "mtc/web/dist"]},
+    "anime": {"url": "https://recetasdeanime.com", "sitio": "anime-recetas", "an": "/assets/an.js",
+              "dirs": ["anime-food/web/public", "anime-food/web/dist"]},
+    "looksmax": {"url": "https://glowupformen.com", "sitio": "looksmax", "an": "/an.js",
+                 "dirs": ["looksmax/web/static", "looksmax/web/dist"]},
+    "zodiaco": {"url": "https://horoscopochinohoy.com", "sitio": "zodiaco", "an": "/an.js",
+                "dirs": ["zodiac/web/static", "zodiac/web/dist"]},
+}
 
 # Cómo pide Play cada idioma de la página (`hl`), cuando no es el mismo código.
 HL_PLAY = {"zh": "zh-CN", "zh-TW": "zh-TW", "pt": "pt-BR"}
@@ -247,8 +264,13 @@ def info(app, datos, info_app, langs):
     return "".join(bloques), jsonld
 
 
-def pagina(app, datos):
+def pagina(app, datos, dom=None):
+    """La página de la app; con `dom` (de DOMINIOS), la copia para /get/ de su web."""
     t = app["tema"]
+    porta = "https://lanchasdev.github.io" if dom else ""  # los enlaces al portfolio, desde fuera
+    url = f"{dom['url']}/get/" if dom else f"https://lanchasdev.github.io/{app['slug']}/"
+    an = (f'<script defer src="{dom["an"]}" data-sitio="{dom["sitio"]}"></script>\n<meta name="robots" content="noindex,follow">'
+          if dom else '<script defer src="/assets/an.js" data-sitio="portfolio"></script>')
     e = lambda s: html.escape(s, quote=True)
     info_app = contenido(app)
     langs = idiomas_de(app, info_app)
@@ -256,9 +278,9 @@ def pagina(app, datos):
     capturas = "".join(
         f'<img src="{c}" alt="" loading="lazy" width="230" height="500" data-lang-src>' for c in datos["capturas"]["es"])
     etiquetas = "".join(f"<li>{e(x)}</li>" for x in info_app["es"]["etiquetas"]) if langs else ""
-    privacidad = (f'<a href="/privacidad/{app["privacidad"]}/" data-t="privacidad">Privacidad</a> · '
+    privacidad = (f'<a href="{porta}/privacidad/{app["privacidad"]}/" data-t="privacidad">Privacidad</a> · '
                   if app["privacidad"] else "")
-    web = (f'<a href="{app["web"][0]}">{html.escape(app["web"][1])}</a> · ' if app.get("web") else "")
+    web = (f'<a href="{"/" if dom else app["web"][0]}">{html.escape(app["web"][1])}</a> · ' if app.get("web") else "")
     ios = (f'<a class="store" id="ios" href="https://apps.apple.com/app/id{app["ios"]}">{APPLE}'
            f'<span><small data-t="ios_sub">Descárgala en</small>App Store</span></a>') if app["ios"] else ""
     datos_js = json.dumps({
@@ -277,14 +299,14 @@ def pagina(app, datos):
 <meta name="theme-color" content="{t["bg"]}">
 <meta property="og:title" content="{e(datos["nombre"]["es"])}">
 <meta property="og:description" content="{e(datos["frase"]["es"])}">
-<meta property="og:image" content="https://lanchasdev.github.io/{app["slug"]}/icono.jpg">
+<meta property="og:image" content="{url}icono.jpg">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary">
-<link rel="canonical" href="https://lanchasdev.github.io/{app["slug"]}/">
+<link rel="canonical" href="{url}">
 {jsonld}
 <link rel="icon" href="icono.jpg">
 <link rel="apple-touch-icon" href="icono.jpg">
-<script defer src="/assets/an.js" data-sitio="portfolio"></script>
+{an}
 <style>
 :root{{--bg:{t["bg"]};--bg2:{t["bg2"]};--fg:{t["fg"]};--muted:{t["muted"]};--accent:{t["accent"]};--glow:{t["glow"]};
 --card:{"rgba(255,255,255,.55)" if t.get("claro") else "rgba(255,255,255,.06)"};
@@ -360,7 +382,7 @@ footer a{{color:inherit;text-underline-offset:3px}}
 <h2 data-t="capturas">Así es por dentro</h2>
 <div class="capturas">{capturas}</div>
 {bloque_info}
-<footer>{web}{privacidad}<a href="/" data-t="hecha">Hecha por Lanchas Dev</a></footer>
+<footer>{web}{privacidad}<a href="{porta}/" data-t="hecha">Hecha por Lanchas Dev</a></footer>
 </main>
 <script>
 (function(){{
@@ -433,8 +455,26 @@ def main():
                 datos = textos(app, datos)
                 f.write_text(json.dumps(datos, ensure_ascii=False, indent=1))
         (RAIZ / app["slug"] / "index.html").write_text(pagina(app, datos))
+        if app["slug"] in DOMINIOS:
+            dominio(app, datos, DOMINIOS[app["slug"]])
         print(f"{app['slug']:9} {datos['nombre']['es']} · {len(datos['capturas']['es'])} capturas")
     mapa()
+
+
+def dominio(app, datos, dom):
+    """Escribe /get/ en la web de la app con su icono y sus capturas al lado."""
+    origen = RAIZ / app["slug"]
+    fotos = ["icono.jpg", *dict.fromkeys(c for cs in datos["capturas"].values() for c in cs)]
+    for d in dom["dirs"]:
+        dest = PROYECTOS / d / "get"
+        if not dest.parent.exists():
+            continue
+        if dest.exists():
+            shutil.rmtree(dest)
+        dest.mkdir()
+        for f in fotos:
+            shutil.copy(origen / f, dest / f)
+        (dest / "index.html").write_text(pagina(app, datos, dom))
 
 
 def mapa():
