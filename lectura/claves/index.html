@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="es"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Las claves de los libros</title>
+<meta name="description" content="Las claves de cada libro aplicadas a tus apps: ideas, aciertos, errores y qué cambiar.">
+<meta name="author" content="Claude">
+<meta property="article:published_time" content="2026-10-29">
+<style>
+:root{--bg:#fbfaf7;--fg:#1f2933;--muted:#6b7280;--line:#e5e7eb;--accent:#9a3412;--ok:#166534;--bad:#b91c1c;--card:#f3f0e8}
+@media(prefers-color-scheme:dark){:root{--bg:#12100e;--fg:#ede7d4;--muted:#9a9384;--line:#2c2823;--accent:#e8a33d;--ok:#86efac;--bad:#fca5a5;--card:#1c1915}}
+body{margin:0;background:var(--bg);color:var(--fg);font:18px/1.7 Georgia,"Times New Roman",serif}
+main{max-width:40em;margin:0 auto;padding:1.5rem 1rem 4rem}
+h1{font-size:1.8rem;line-height:1.25;margin:.2rem 0 1rem}
+h2{font-size:1.45rem;line-height:1.3;margin:3rem 0 .4rem;padding-top:1.2rem;border-top:2px solid var(--accent)}
+h3{font:700 15px/1.4 -apple-system,sans-serif;text-transform:uppercase;letter-spacing:.06em;margin:1.8rem 0 .4rem;color:var(--accent)}
+h3.ok{color:var(--ok)} h3.bad{color:var(--bad)}
+a{color:var(--accent)}
+em{color:var(--muted)}
+hr{border:0;border-top:1px solid var(--line);margin:2rem 0}
+nav,footer{font:14px/1.5 -apple-system,sans-serif;color:var(--muted)}
+nav a,footer a{margin-right:1rem}
+li{margin:.45rem 0}
+code{overflow-wrap:anywhere;font-size:.85em}
+.ficha{background:var(--card);border-radius:.5rem;padding:.8rem 1rem;font:15px/1.55 -apple-system,sans-serif}
+.ficha p{margin:.25rem 0}
+.frase{border-left:3px solid var(--accent);padding-left:1rem;font-style:italic}
+</style></head><body><main>
+<nav><a href="../">← Guía completa</a></nav>
+<article>
+<h1 id="index">Las claves de los libros</h1>
+<p><em>Los 47 libros de la guía, sin tener que leerlos: qué dice cada autor, qué haces bien según él, qué errores estás cometiendo, qué cambiar y dónde no hacerle caso. Todo apoyado en los datos y el código de tus apps, a 29 de octubre de 2026.</em></p>
+
+<!-- solo-web -->
+<h2>Cómo leerlo</h2>
+<ul>
+<li><strong>En el Kobo:</strong> <a href="claves-de-los-libros.epub">descarga el EPUB</a> (todo, con índice).</li>
+<li><strong>En Instapaper:</strong> <a href="https://www.instapaper.com/hello2?url=https%3A%2F%2Flanchasdev.github.io%2Flectura%2Fclaves%2Ftodo.html&amp;title=Las%20claves%20de%20los%20libros">guarda todo en una página</a> (<a href="todo.html">leer</a>), en dos mitades (<a href="https://www.instapaper.com/hello2?url=https%3A%2F%2Flanchasdev.github.io%2Flectura%2Fclaves%2Ftodo-1-de-2.html&amp;title=Las%20claves%20de%20los%20libros%20(1%20de%202)">1 de 2</a> y <a href="https://www.instapaper.com/hello2?url=https%3A%2F%2Flanchasdev.github.io%2Flectura%2Fclaves%2Ftodo-2-de-2.html&amp;title=Las%20claves%20de%20los%20libros%20(2%20de%202)">2 de 2</a>, unas 50.000 y 38.000 palabras), o <a href="https://www.instapaper.com/hello2?url=https%3A%2F%2Flanchasdev.github.io%2Flectura%2Fclaves%2Ftodo-copia.html&amp;title=Las%20claves%20de%20los%20libros%20(copia)">una copia aparte</a>. Si se corta, guarda las partes de abajo una a una.</li>
+<li><strong>Cada libro sigue el mismo orden:</strong> ficha (en una frase, cuánto te importa, si solo haces una cosa) → ideas clave → conceptos → <span style="color:var(--ok)">lo que haces bien</span> → <span style="color:var(--bad)">tus errores</span> → qué cambiar → dónde no hacerle caso.</li>
+</ul>
+<!-- /solo-web -->
+
+<h2>Tu diagnóstico en una página</h2>
+<p>Ocho partes, 47 libros y una revisión del código y de la analítica. Casi todos los autores, cada uno con sus palabras, llegan a las mismas conclusiones.</p>
+
+<h3 class="ok">Lo que haces bien (casi todos los autores lo aplaudirían)</h3>
+<ol>
+<li><strong>Mides cada cambio y aprendes de los fallos.</strong> Ediciones de ficha medidas una a una (TCM iOS ×4,4, Looksmax Play ×3,4) y el ×0,31 de Anime Food tratado como aprendizaje. Separas tus dispositivos y desconfías de muestras pequeñas. Ries, Croll, Taleb y Duke lo llamarían aprendizaje validado.</li>
+<li><strong>El muro de TCM funciona.</strong> Anual con prueba preseleccionado (12 de 87 frente a 1 de 9 del mensual) y cobro después de ver valor: el muro tras un diagnóstico vendía 1 de 11, el del onboarding 1 de 88. Es lo que piden Ramanujam, Tzuo y Ariely.</li>
+<li><strong>Casa de marcas con mascotas.</strong> Leo, Mei y Lin, Kai: activos distintivos (Sharp) y riesgo que no se contagia entre apps (Taleb).</li>
+<li><strong>Leo Glow tiene una diferencia de verdad.</strong> «No puntúa caras» es contraposicionamiento real (Dunford, Neumeier, Godin, Helmer): el líder no puede copiarlo sin hacerse daño.</li>
+<li><strong>Zodiaco cobra con anuncios que la gente elige.</strong> El rewarded es la mayor parte del ingreso (30,1 de 37,1 USD en 30 días), que es lo que defienden Eyal y Chou: premio voluntario, no interrupción.</li>
+</ol>
+
+<h3 class="bad">Los errores que repiten casi todos los autores</h3>
+<ol>
+<li><strong>Empujar tráfico donde no hay retención ni cobro.</strong> Leo Glow: d7 del 1,2 %, cero pruebas en Android y 16 de cada 17 que abren la hoja de Google la cierran. Mientras tanto se toca nombre y keywords. Ellis, Croll, Ries y Walling: primero que se queden y paguen, después que lleguen.</li>
+<li><strong>Fallos silenciosos que se comen el negocio.</strong> El «not allowed» de TCM ya afecta a 44 personas y 120 intentos en 30 días (antes 29 y 74). En Zodiaco, 105. Los avisos de Zodiaco se rompieron con R8 y el d1 cayó del 26 % al 14-15 %, sin recuperar. En Anime Food, cada arranque estrena identificador. Taleb y Duke: el riesgo grande no es el que ves, es el que no avisa.</li>
+<li><strong>No hablar con usuarios.</strong> No consta ninguna entrevista a suscriptores ni a quien cancela. Las decisiones grandes (estudiante o curioso en TCM, qué compra la gente en Leo Glow) se toman por intuición. Fitzpatrick, Torres, Christensen y Cagan coinciden: es el error más barato de arreglar.</li>
+<li><strong>Medir sin cohortes en la app que cobra.</strong> TCM sigue sin days_since_install. Pero ojo: PostHog ya recibe instalaciones y aperturas, así que la curva por cohortes se puede montar hoy en el panel sin hacer una build.</li>
+<li><strong>Un mensaje para dos públicos.</strong> El código de TCM ya eligió al estudiante (las cinco metas del onboarding son de estudio), pero la marca, las fichas y los vídeos siguen hablando también al curioso. Ries y Trout, Moore y Dunford: elige la cabeza de playa.</li>
+<li><strong>Dispersión.</strong> Once apps, siete sin analítica ni decisión, y Zodiaco estrenando muro de suscripción, diamantes y chat con IA en la misma temporada. McKeown, Jarvis y Rumelt: decide qué empujar, qué mantener y qué archivar, por escrito.</li>
+<li><strong>Todo en suelo ajeno.</strong> Ningún canal propio (ni correo ni comunidad). Dependes de Google (la web de Zodiaco perdió casi todas sus impresiones desde el 12-10) y de Apple (Zodiaco rechazado por la 4.3(b), Anime Food rechazada, ninguna app iOS en la UE). Kelly, Lavingia, Jarvis y Godin piden un canal que sea tuyo.</li>
+</ol>
+
+<h3>Lo que la revisión del código y de PostHog añade a la guía</h3>
+<ul>
+<li><strong>Zodiaco ya no es solo anuncios.</strong> La 1.1.6 trae el Club Zodiac (semanal con 3 días gratis o anual) como paso 7 del alta, diamantes, «sin anuncios» de pago y un chat con IA que cuesta tokens. El plan de noviembre decía «ni muro ni suscripción»: hay que decidirlo con un experimento, no por defecto. Y la compatibilidad, lo que más se comparte, cobra dos veces (intersticial y rewarded).</li>
+<li><strong>En Leo Glow, la app sí recibe la oferta con prueba</strong> (las compras en Android llevan trial_days: 3), pero RevenueCat no registra ninguna prueba en Play. O la llamada de compra no usa la opción con prueba, o la hoja la enseña y la gente se echa atrás. Además, la app no emite premium_trial_started: el «primer pago real» de iOS era una prueba gratis. Y hay un aviso de racha en peligro que contradice «nunca amenazar».</li>
+<li><strong>Anime Food en iOS pide seguimiento (ATT) y sirve anuncios</strong> en una app que Apple sigue revisando con reglas de Niños: causa probable del rechazo. El identificador se rompe porque la analítica se reinicia antes de que conteste el consentimiento. En el repo no hay ninguna compra, así que el «vitalicio» hay que comprobarlo.</li>
+<li><strong>TCM tiene 363 puntos, no 110.</strong> El aviso del día 5 de la prueba ya existe, pero solo sale con permiso de notificaciones, que viene apagado. La analítica arranca activada sin aviso, algo discutible con el RGPD.</li>
+</ul>
+
+<h3>Las diez cosas que hacer, en orden</h3>
+<ol>
+<li><strong>TCM: pantalla para el «not allowed».</strong> Mide personas con fallo que compran en 7 días.</li>
+<li><strong>TCM: monta en PostHog la retención por cohortes</strong> con instalaciones y aperturas (horas, no una build), y añade days_since_install en la siguiente.</li>
+<li><strong>Leo Glow: arregla la medición del muro y comprueba la hoja de Google</strong> con una cuenta nueva (premium_trial_started, offer_id, trial_eligible). Después, copia el muro de TCM con «no se cobra nada hoy».</li>
+<li><strong>Zodiaco: arregla el reloj de instalación</strong> (days_since_install al volver de segundo plano) y prueba los avisos en la build de release antes de cada subida.</li>
+<li><strong>Zodiaco: decide el Club con un experimento</strong>: muro en el alta frente a día 3, por d7 e ingreso por instalación. Quita uno de los dos peajes de la compatibilidad.</li>
+<li><strong>Anime Food: quita el seguimiento en iOS y arregla el distinct_id</strong> en la misma build. Sube al repo la 1.4.0.</li>
+<li><strong>Ocho conversaciones con usuarios de TCM y cinco de Leo Glow</strong> antes del 6 de diciembre, con el guion del Mom Test.</li>
+<li><strong>Una frase de posicionamiento por app</strong> con un token de marca fijo en todos los idiomas, la misma en ficha, bio y cierre de vídeo.</li>
+<li><strong>Clasifica las once apps</strong> en empujar, mantener o archivar, con plazo y umbral escritos para Leo Glow.</li>
+<li><strong>Escribe tu «suficiente» y tu colchón</strong>, y abre un canal propio pequeño (correo o comunidad) con su consentimiento.</li>
+</ol>
+
+<h2>Las partes</h2>
+<ol>
+<li><a href="apps.html"><strong>Tus apps por dentro</strong></a>: las cifras de hoy y cómo son TCM, Leo Glow, Zodiaco y Anime Food en el código.</li>
+<li><a href="parte-iii.html"><strong>Parte III: Posicionamiento y marca</strong></a>: Obviously Awesome, Positioning, Las 22 leyes, StoryBrand, Brand Gap y Zag, How Brands Grow.</li>
+<li><a href="parte-iv.html"><strong>Parte IV: Precio y monetización</strong></a>: Monetizing Innovation, Subscribed, The Automatic Customer, Predictably Irrational, Influence, Alchemy.</li>
+<li><a href="parte-v.html"><strong>Parte V: Crecimiento y hábito</strong></a>: Hacking Growth, Traction, Hooked, Atomic Habits, Lean Analytics, Actionable Gamification.</li>
+<li><a href="parte-vi.html"><strong>Parte VI: Clientes y producto</strong></a>: The Mom Test, Competing Against Luck, Continuous Discovery Habits, The Lean Startup, Inspired, Don't Make Me Think.</li>
+<li><a href="parte-vii.html"><strong>Parte VII: Contenido y vídeo</strong></a>: Contagious, Made to Stick, Breakthrough Advertising, Ogilvy on Advertising, Hook Point, Show Your Work!, Everybody Writes.</li>
+<li><a href="parte-viii.html"><strong>Parte VIII: Emprender solo</strong></a>: This Is Marketing, Purple Cow, 1,000 True Fans, The Minimalist Entrepreneur, Start Small Stay Small, Company of One, Essentialism.</li>
+<li><a href="parte-ix.html"><strong>Parte IX: Mercado y honey pot</strong></a>: Blue Ocean Strategy, Play Bigger, Crossing the Chasm, Good Strategy Bad Strategy, 7 Powers y tu método honey pot.</li>
+<li><a href="parte-xi.html"><strong>Parte XI: Riesgos</strong></a>: Antifragile, Fooled by Randomness, Thinking in Bets, The Psychology of Money y tu mapa de riesgos.</li>
+</ol>
+<p><em>Los ejemplos de los libros están parafraseados; no hay citas literales inventadas. Donde un dato tuyo es una hipótesis, la página lo dice. Las partes I, II, X y XII de la guía larga no son libros: su contenido está repartido aquí en «Tus apps por dentro» y en los «qué cambiar» de cada libro.</em></p>
+</article>
+<footer><a href="../">← Guía completa</a><a href="apps.html">Tus apps por dentro →</a></footer>
+</main></body></html>
