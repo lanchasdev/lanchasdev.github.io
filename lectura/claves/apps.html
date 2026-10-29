@@ -1,0 +1,531 @@
+<!doctype html>
+<html lang="es"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Claves · Tus apps por dentro</title>
+<meta name="description" content="Cómo son por dentro TCM, Leo Glow, Zodiaco y Anime Food, y sus cifras de los últimos 30 días.">
+<meta name="author" content="Claude">
+<meta property="article:published_time" content="2026-10-29">
+<style>
+:root{--bg:#fbfaf7;--fg:#1f2933;--muted:#6b7280;--line:#e5e7eb;--accent:#9a3412;--ok:#166534;--bad:#b91c1c;--card:#f3f0e8}
+@media(prefers-color-scheme:dark){:root{--bg:#12100e;--fg:#ede7d4;--muted:#9a9384;--line:#2c2823;--accent:#e8a33d;--ok:#86efac;--bad:#fca5a5;--card:#1c1915}}
+body{margin:0;background:var(--bg);color:var(--fg);font:18px/1.7 Georgia,"Times New Roman",serif}
+main{max-width:40em;margin:0 auto;padding:1.5rem 1rem 4rem}
+h1{font-size:1.8rem;line-height:1.25;margin:.2rem 0 1rem}
+h2{font-size:1.45rem;line-height:1.3;margin:3rem 0 .4rem;padding-top:1.2rem;border-top:2px solid var(--accent)}
+h3{font:700 15px/1.4 -apple-system,sans-serif;text-transform:uppercase;letter-spacing:.06em;margin:1.8rem 0 .4rem;color:var(--accent)}
+h3.ok{color:var(--ok)} h3.bad{color:var(--bad)}
+a{color:var(--accent)}
+em{color:var(--muted)}
+hr{border:0;border-top:1px solid var(--line);margin:2rem 0}
+nav,footer{font:14px/1.5 -apple-system,sans-serif;color:var(--muted)}
+nav a,footer a{margin-right:1rem}
+li{margin:.45rem 0}
+code{overflow-wrap:anywhere;font-size:.85em}
+.ficha{background:var(--card);border-radius:.5rem;padding:.8rem 1rem;font:15px/1.55 -apple-system,sans-serif}
+.ficha p{margin:.25rem 0}
+.frase{border-left:3px solid var(--accent);padding-left:1rem;font-style:italic}
+</style></head><body><main>
+<nav><a href="./">← Claves</a><a href="../">Guía completa</a></nav>
+<article>
+<h1>Tus apps por dentro</h1>
+<p><em>Lo que hay de verdad en el código y en la analítica de las cuatro apps principales, el 29 de octubre de 2026. Es la base sobre la que se apoyan los «errores» y «aciertos» de cada libro.</em></p>
+<p>Fuentes: el código de TCM (<code>mtc-app</code>), Zodiaco (<code>zodiac</code>) y Anime Food (<code>recipes-1</code>), leído sin tocarlo; PostHog en modo lectura (30 días, del 29-09 al 28-10); y <code>aso-kit-nube</code>. El código de Leo Glow no está en ningún repo accesible: su ficha sale de la analítica y lo dice.</p>
+<p><a href="#cifras">Las cifras de hoy</a> · <a href="#app-tcm">TCM</a> · <a href="#app-leo-glow">Leo Glow</a> · <a href="#app-zodiaco">Zodiaco</a> · <a href="#app-anime-food">Anime Food</a></p>
+<h2 id="cifras">Las cifras de hoy</h2>
+<p><em>Fuente: PostHog, consultado en modo lectura el 29 de octubre de 2026. Ventana: los 30 días completos del 29 de septiembre al 28 de octubre (hora UTC), solo producción. «Personas» son personas distintas; «nuevas» son las que aparecen por primera vez en la ventana. La vuelta al día 1 y al día 7 está calculada a mano por día de primera aparición, no con days_since_install, así que es orientativa. Las compras y pruebas de TCM vienen de los eventos de RevenueCat.</em></p>
+
+<h3>TCM / Medicina China</h3>
+<ul>
+  <li><strong>Personas activas:</strong> 2.034 (1.541 Android, 296 iOS, el resto sin sistema). Nuevas: unas 1.970, unas 65 al día. La guía hablaba de unas 54 descargas diarias entre las dos tiendas: <strong>mejor</strong>.</li>
+  <li><strong>Tendencia semanal:</strong> 429, 529, 605 y 612 activas por semana; la última semana completa (desde el 19-10) es la mejor del mes.</li>
+  <li><strong>Muro:</strong> 1.187 personas lo ven en 30 días (913 en Android) y 254 pulsan pagar (21 %). En la última semana completa, 346 lo ven y 91 pulsan pagar, frente a 234 y 64 de la semana de la guía: <strong>mejor</strong> en volumen, con una proporción parecida (26 % frente a 27 %).</li>
+  <li><strong>Pruebas y pagos:</strong> 38 pruebas empezadas (22 en Play, 16 en App Store), 14 compras sin prueba y 9 renovaciones. 21 pruebas canceladas. Es el mismo orden de magnitud que la guía (unas 10 altas por semana): <strong>igual</strong>.</li>
+  <li><strong>Fallos de compra:</strong> 44 personas y 120 intentos fallidos, frente a 29 personas y 74 intentos de la guía: <strong>peor</strong>, o más tráfico con el mismo problema. La pantalla para «not allowed» sigue siendo prioritaria.</li>
+  <li><strong>Vuelta:</strong> día 1, 11 %; día 7, 5 %. No había cifra en la guía.</li>
+  <li><strong>days_since_install:</strong> todavía no llega. Ningún evento lo trae.</li>
+  <li><strong>Eventos con más personas:</strong> apertura de la app, pantallas, banner premium, módulos abiertos, instalación y onboarding (1.554 lo empiezan, 887 lo completan).</li>
+</ul>
+
+<h3>Leo Glow</h3>
+<ul>
+  <li><strong>Personas activas:</strong> 742: 300 en Android, 160 en iOS y 212 que el SDK marca como Mac OS. Estas últimas generan muy pocos eventos y conviene revisarlas antes de contarlas como gente real (pueden ser la app de iPhone ejecutada en un Mac o revisiones de tienda). Casi todas son nuevas.</li>
+  <li><strong>Muro en Android:</strong> 243 personas lo ven (la guía decía 181), 20 eligen plan, 28 pulsan pagar y 25 cancelan la compra. <strong>Pruebas en Android: cero.</strong> En total solo aparecen 2 pruebas en RevenueCat y 2 compras completadas en iOS: <strong>igual</strong> que en la guía. El patrón de «empezar y cancelar» sigue.</li>
+  <li><strong>Rewarded:</strong> unas 170 cargas y 12 anuncios enseñados (la guía: 66 cargas y 1 enseñado). Algo <strong>mejor</strong>, pero sigue siendo muy poco. Los anuncios suman 0,27 USD en 30 días.</li>
+  <li><strong>Vuelta:</strong> día 1, 10,4 %; día 7, 1,2 %, frente a 11,6 % y 1,1 % de la guía: <strong>igual</strong>.</li>
+  <li><strong>Día 1 del plan:</strong> 230 personas abren el primer día del plan, 187 marcan alguna acción y 181 giran la ruleta. Ya hay muestra para la tarea de medir el día 1.</li>
+  <li><strong>days_since_install:</strong> sí llega en la mayoría de los eventos.</li>
+</ul>
+
+<h3>Zodiaco Chino</h3>
+<ul>
+  <li><strong>Personas activas:</strong> unas 1.050 abren la app (la guía decía 795): <strong>mejor</strong>. Hay 937 instalaciones registradas, unas 31 al día, frente a las 13,3 descargas diarias de la guía.</li>
+  <li><strong>El salto es reciente:</strong> unas 100 instalaciones por semana hasta el 18-10 y 329 y 275 en las dos semanas siguientes.</li>
+  <li><strong>Anuncios:</strong> 37,1 USD en 30 días (30,1 del rewarded, 4,2 de intersticiales y 2,9 de banners), frente a unos 10,6 USD de la guía: <strong>mejor</strong>, sobre todo por el rewarded (1.097 impresiones a 143 personas).</li>
+  <li><strong>Novedad que la guía no recoge: un muro de «club».</strong> Desde la semana del 19-10, 296 personas lo ven, 15 empiezan la compra semanal y 2 la pagan. Hay también 2 compras de «sin anuncios» y 1 paquete de inicio. Además, 105 personas reciben «not allowed» al intentar pagar.</li>
+  <li><strong>Vuelta:</strong> día 1, 14,3 %; día 7, 6,6 %. Sigue cerca del 15 % que dejó el fallo de los avisos, lejos del 26 % de antes: <strong>igual</strong>.</li>
+  <li><strong>days_since_install:</strong> llega en los anuncios y en unas tres de cada cuatro aperturas.</li>
+  <li><strong>Eventos con más personas:</strong> apertura, pantallas, instalación, onboarding (878 lo empiezan, 623 lo completan), Oráculo visto (764) y revelado (373), compatibilidad (425) y mascota (318).</li>
+</ul>
+
+<h3>Anime Food</h3>
+<ul>
+  <li><strong>Personas activas:</strong> 131 (129 Android, 2 iOS), frente a 142 en Android de la guía: <strong>algo peor</strong>. Son unas 4 personas nuevas al día.</li>
+  <li><strong>Uso:</strong> 88 personas abren una receta (dos de cada tres) y 28 entran en el modo cocina; solo 9 lo terminan.</li>
+  <li><strong>Pagos:</strong> 9 personas ven el muro, 2 pulsan pagar y hay 1 compra completada. La guía hablaba de 1 vitalicio en 30 días: <strong>igual</strong>.</li>
+  <li><strong>Anuncios:</strong> 789 impresiones (banner, intersticial y apertura) y 1,84 USD. No hay rewarded.</li>
+  <li><strong>Vuelta:</strong> día 1, 6,9 %; día 7, 1,8 %. Con el distinct_id roto, esta cifra no es fiable.</li>
+  <li><strong>days_since_install:</strong> sí llega en casi todos los eventos.</li>
+</ul>
+
+<h3>Qué cambia respecto a la guía</h3>
+<ul>
+  <li><strong>Zodiaco ya no es solo anuncios.</strong> Tiene un muro de club con suscripción semanal y compras sueltas desde hace unos diez días. El plan de noviembre dice «ni muro, ni suscripción»: hay que decidir si se mantiene, se mide aparte de los rewarded o se retira. Ingresos por anuncios y tráfico han subido mucho; la vuelta no.</li>
+  <li><strong>TCM crece en tráfico y en vistas del muro</strong> sin perder proporción de pulsaciones, pero los fallos de compra también crecen. La pantalla para «not allowed» y days_since_install (que aún no llega) siguen siendo las dos primeras tareas.</li>
+  <li><strong>Leo Glow no ha cambiado lo esencial:</strong> más gente ve el muro, cero pruebas en Android y la misma vuelta del 1 % al día 7. La comprobación de la oferta con prueba sigue siendo la tarea número uno. Antes de leer cifras, conviene aclarar qué son las 212 personas en «Mac OS».</li>
+  <li><strong>Anime Food sigue plano</strong> y con datos de persona poco fiables. Nada contradice el modo mantenimiento.</li>
+  <li><strong>days_since_install</strong> ya llega en Leo Glow, Zodiaco y Anime Food. Solo falta en TCM.</li>
+</ul>
+
+<h2 id="app-tcm">TCM / Medicina China, por dentro</h2>
+<div class="ficha">
+<p><strong>Qué es:</strong> una referencia y un curso de medicina tradicional china en el bolsillo: atlas de puntos (también en 3D), meridianos, hierbas, fórmulas, patrones, diagnóstico, dietética, qigong y un simulador de consulta. En las tiendas se llama «Chinese Medicine».</p>
+<p><strong>Hecha con:</strong> Expo SDK 57 con expo-router, React Native 0.86, React 19, three.js para el cuerpo 3D, Supabase (cuenta opcional y funciones de servidor), RevenueCat. Versión 1.0.10 en iOS y Android. Once idiomas de interfaz.</p>
+<p><strong>Cómo cobra:</strong> freemium con suscripción mensual, anual con 7 días de prueba y pago único. Sin anuncios.</p>
+<p><strong>Qué mide:</strong> PostHog (servidores de la UE), 99 eventos propios declarados en <code>services/analytics.ts</code>, más los de ciclo de vida del SDK y los errores.</p>
+<p><strong>Estado:</strong> la única app del portfolio que cobra; producto muy profundo y bien probado (115 ficheros de tests), con el embudo instrumentado pero poco leído.</p>
+</div>
+
+<h3>Qué tiene dentro</h3>
+<p>Cinco pestañas: <strong>Inicio</strong>, <strong>Práctica</strong>, <strong>Aprender</strong>, <strong>Consulta</strong> y <strong>Perfil</strong>. Debajo hay unas 70 rutas. Las cantidades salen de <code>PREMIUM_LIBRARY_TOTALS</code> en <code>services/premium.ts</code>, que un test compara con los datos reales:</p>
+<ul>
+<li><strong>Puntos de acupuntura: 363</strong>, cada uno con su lámina ilustrada. La guía todavía habla de 110: ese era el catálogo de agosto.</li>
+<li><strong>Atlas 3D</strong> (<code>app/body3d.tsx</code>) sobre un único maniquí neutro, con 1.196 posiciones calibradas a mano contra la OMS, y un quiz 3D (<code>app/body3d-quiz.tsx</code>).</li>
+<li>12 meridianos, 86 hierbas, 30 fórmulas, 35 patrones (síndromes), 6 métodos de diagnóstico, 12 técnicas, 4 terapias externas, 5 microsistemas, 8 clásicos, 5 prácticas de qigong con vídeo y 18 rituales de bienestar y meditación con voz.</li>
+<li><strong>Dietética:</strong> 70 alimentos, 30 recetas, 10 temas, glosario y un «lector de plato».</li>
+<li><strong>Práctica:</strong> un curso guiado de 14 unidades con lecciones, ejercicios y evaluación. Cada sesión empieza con 5 vidas, al estilo Duolingo (<code>services/journey/session-model.ts</code>).</li>
+<li><strong>Consulta:</strong> 18 casos clínicos y 20 consultas jugables en el simulador. En algunas lo correcto es derivar al paciente.</li>
+<li><strong>Herramientas de estudio:</strong> tarjetas con repaso espaciado (mazos de puntos, hierbas, fórmulas, patrones y clásicos), cuaderno de notas, planes de tratamiento, examen de prueba y exportación a documento.</li>
+<li>Extras: constituciones, historia por épocas, longevidad, tradición, fuentes médicas y favoritos.</li>
+</ul>
+
+<h3>El recorrido del usuario</h3>
+<ol>
+<li><strong>Arranque.</strong> El idioma se toma del teléfono, con el inglés de reserva (<code>contexts/LanguageContext.tsx</code>). Si no ha terminado la bienvenida, se abre <code>screens/onboarding/OnboardingFlow.tsx</code>.</li>
+<li><strong>Bienvenida y tour</strong> (<code>WelcomeStep</code>, <code>ProductTourStep</code>): diapositivas del producto con atlas, caso clínico y ruta. Se pueden saltar.</li>
+<li><strong>Tres preguntas.</strong> Objetivo: recordar, examen, razonamiento clínico, aprender desde cero o afinar lo que sé. Después se eligen módulos (<code>ModuleSelectionStep</code>). Luego qué cuesta más: olvido, relacionar, localizar puntos, aplicar a casos, puntos ciegos o constancia. Al final, minutos al día: 5, 10, 15 o 30.</li>
+<li><strong>Calibración opcional</strong> (<code>CalibrationIntro</code>): unas preguntas de nivel para colocar al usuario en el curso.</li>
+<li><strong>Permiso de notificaciones</strong> (<code>NotificationPermissionStep</code>). Los avisos vienen apagados de fábrica y se ofrecen aquí.</li>
+<li><strong>Generación del plan</strong> (<code>PlanGenerationStep</code>): una pausa deliberada de 3,4 s. Después llega el <strong>hito</strong> (<code>ImmersiveMilestoneStep</code>) con el objetivo, los módulos y una fecha concreta a dos meses vista.</li>
+<li><strong>Muro de pago.</strong> Al terminar, la app entra directamente en <code>/premium</code> con <code>source=onboarding</code> (<code>components/app/app-providers.tsx</code>). En ese muro, cerrar es salir: no hay oferta de despedida.</li>
+<li><strong>Momento «aha».</strong> No está marcado como tal. Por cómo está construido, sería la primera sesión del Camino en Inicio (<code>components/home/journey-hero.tsx</code>), que se abre sola (evento <code>first_lesson_auto_opened</code>). Es una inferencia.</li>
+<li><strong>Notificaciones.</strong> Recordatorios locales de repaso con un horizonte de tres días. Se reprograman al abrir la app (<code>services/reminders.ts</code>). No hay servidor de avisos.</li>
+</ol>
+
+<h3>Cómo gana dinero, en detalle</h3>
+<ul>
+<li><strong>Planes y precios</strong> (<code>STORE_PRODUCTS.md</code> y <code>services/premium.ts</code>). En EE. UU.: 9,99 $ al mes, 59,99 $ al año y 119,99 $ el pago único. En España y Alemania: 9,99 €, 49,99 € y 129,99 €. Hay diez mercados y cuatro escalones. Brasil, México e India se rebajaron el 11-10-2026.</li>
+<li><strong>Prueba:</strong> 7 días, solo en el anual. El anual sale preseleccionado (<code>useState&lt;PremiumPlanId&gt;("annual")</code>). El muro dibuja una línea de tiempo con el aviso del día 5 y el cobro del día 7. Ese aviso existe de verdad: <code>services/trial-reminder.ts</code> lo programa dos días antes del cobro. Pero solo si ya hay permiso de notificaciones: no lo pide, y sin permiso ni lo programa ni lo promete en pantalla.</li>
+<li><strong>Qué es gratis.</strong> Todo es de pago por defecto y se abre una muestra elegida a mano: 30 de 363 puntos, 20 de 86 hierbas, 1 de 30 fórmulas, 6 de 35 patrones, 2 de 6 diagnósticos (ocho principios y lengua), 2 casos, 3 consultas del simulador, la primera unidad del curso, 12 alimentos y 5 recetas. El atlas 3D no se abre nunca gratis. Las herramientas de estudio dan una cuota de prueba.</li>
+<li><strong>Dónde aparece el muro.</strong> Hay unas 45 <code>source</code> distintas. La principal es <code>onboarding</code>. Luego vienen los candados de cada biblioteca y sus enlaces profundos (<code>point_detail_locked</code>, <code>herbal_library</code>, <code>formulas_library</code>, <code>clinical_cases</code>, <code>atlas</code>, <code>dietetics_*</code>, <code>qigong_video</code>, <code>*_deep_link</code>), la tarjeta de Inicio, el banner de Explorar, Perfil y <code>diagnosis_result_card</code>, una tarjeta al final del diagnóstico.</li>
+<li><strong>Muros por iniciativa propia</strong> (<code>services/premium-prompt.ts</code>): como mucho 3 por instalación y separados por 72 h. Hoy solo saltan en dos momentos: al aprobar el examen y al terminar una sesión del curso.</li>
+<li><strong>Retención en el muro.</strong> Fuera del onboarding, cerrar abre una «última oportunidad»: el mensual, o el pago único si ya se rechazó el mensual. Si se cancela la hoja de pago del anual, se propone empezar por un mes. Solo en Android hay además una campaña de rescate (<code>services/promo-offer.ts</code>): el primer año al 50 % durante 7 días, con un grupo de control y un aviso a las 48 h. El código dice que su público eran 14 personas.</li>
+<li><strong>Fallos de compra con explicación</strong> (<code>services/billing/store-signals.ts</code>): pendiente, ya comprado, red, «no permitido» (con dónde mirarlo) y sin confirmar.</li>
+<li><strong>Anuncios:</strong> ninguno. No hay SDK de anuncios en <code>package.json</code>.</li>
+</ul>
+
+<h3>Qué mide y qué no</h3>
+<p><strong>Mide bien</strong> el onboarding paso a paso (<code>onboarding_step_viewed</code>, <code>_answered</code>, <code>_left</code>, <code>_notifications_decided</code>) y el muro completo: vista, etapa, plan elegido, términos, última oportunidad, rescate, compra iniciada, completada, fallida o cancelada, prueba iniciada y restaurar. También el uso del curso, los casos, las tarjetas, el examen, la meditación, el qigong, el atlas, los avisos (<code>reminders_scheduled</code>, <code>notification_opened</code>) y los errores (PostHog en lugar de Sentry, <code>CRASH_REPORTING.md</code>).</p>
+<p>Un matiz a lo que dice la guía. Es verdad que no se manda <code>days_since_install</code>. Pero el SDK ya lleva <code>captureAppLifecycleEvents: true</code>, así que llegan <code>$app_installed</code> y <code>$app_opened</code>. Con eso, la retención por cohortes de PostHog ya se puede montar. Lo que falta es mirarla, no instrumentarla. El propio código cita un 11 % de vuelta al día siguiente (<code>services/review-prompt.ts</code>).</p>
+<p><strong>Huecos:</strong></p>
+<ul>
+<li>Falta el panel del embudo en PostHog. Es la tarea TCM-TASK-010 y sigue en «todo».</li>
+<li>La prueba que se convierte en cobro no se ve en PostHog. Hace falta RevenueCat y su webhook.</li>
+<li>No se pregunta si la persona es estudiante o curiosa. El objetivo del onboarding solo da a elegir entre opciones de estudiante.</li>
+<li>No se sabe a qué fracción de las pruebas le llega el aviso de fin de prueba. Sin permiso de notificaciones, que viene apagado de fábrica, no se programa (<code>PremiumScreen.tsx</code>, <code>reminderPromised</code>).</li>
+</ul>
+
+<h3 class="ok">Fortalezas del producto</h3>
+<ul>
+<li><strong>Profundidad difícil de copiar.</strong> 363 puntos con lámina, un atlas 3D calibrado contra la OMS y 20 consultas simuladas (<code>services/premium.ts</code>, <code>data/body3d/point-overrides.json</code>).</li>
+<li><strong>Un tramo gratis pensado, no recortado.</strong> Cada muestra gratuita lleva comentada su razón: los 30 puntos con los que empieza cualquier curso, y tres consultas para entender que «no siempre se trata» (<code>FREE_PREVIEWS</code>).</li>
+<li><strong>Muro honesto y completo.</strong> El anual sale preseleccionado, el muro explica la prueba y el cobro, el aviso del día 5 se cumple de verdad, cada fallo de compra tiene su mensaje y se puede restaurar (<code>trial-reminder.ts</code>, <code>store-signals.ts</code>).</li>
+<li><strong>Un onboarding que construye un plan.</strong> Objetivo, dificultad, minutos y calibración se convierten en una ruta con fecha. Así llega el usuario al muro con algo que perder (<code>OnboardingFlow.tsx</code>, <code>services/user-plan.ts</code>).</li>
+<li><strong>Un bucle de estudio real.</strong> Repaso espaciado, sesión del día y recordatorios que hablan de lo que toca repasar (<code>services/flashcards/scheduler.ts</code>, <code>review-plan.ts</code>, <code>reminder-copy.ts</code>).</li>
+<li><strong>Precio por país</strong> con cuatro escalones y el precio local de la tienda en cuanto RevenueCat contesta (<code>services/premium.ts</code>).</li>
+<li><strong>Calidad de ingeniería.</strong> 115 ficheros de tests, comprobación de i18n, auditoría que corta la publicación si se cuela la clave de pruebas, y una build de capturas con estados sembrados (<code>services/qa-seed.ts</code>).</li>
+</ul>
+
+<h3 class="bad">Puntos débiles y riesgos</h3>
+<ul>
+<li><strong>Un solo público en el onboarding.</strong> Las cinco metas y los seis dolores son de estudiante (<code>data/onboarding-questions.ts</code>). Pero la estrategia de marca atrae con dietética y bienestar. Al curioso que llega por TikTok se le pregunta por exámenes y razonamiento clínico.</li>
+<li><strong>El diagnóstico vende y casi no se ofrece.</strong> La guía dice que el muro tras un diagnóstico vendía 1 de 11. En el código, al final del diagnóstico solo hay una tarjeta pasiva (<code>diagnosis_result_card</code>, en <code>components/diagnosis/TreatmentRecommendations.tsx</code>). El muro por iniciativa propia solo salta tras el examen y tras una sesión del curso (<code>usePremiumMoment</code>).</li>
+<li><strong>Consentimiento de analítica discutible.</strong> La analítica nace activada sin aviso. Además, quien tenía guardado «denegado» con la versión anterior pasa a «activado» (<code>contexts/AnalyticsConsentContext.tsx</code>). El código lo justifica porque ese «denegado» lo escribía el arranque, no la persona. Aun así, en la UE es un riesgo de RGPD. Esto es una inferencia: no es una revisión legal.</li>
+<li><strong>Riesgo de política de salud.</strong> Hay diagnóstico por síntomas, recomendaciones de puntos y fórmulas, y dietética terapéutica. El aviso educativo existe (<code>SafetyNotice</code>, <code>PLAY_STORE_COMPLIANCE.md</code>), pero cada texto nuevo de anuncio o de ficha puede cruzar la línea.</li>
+<li><strong>El onboarding termina en el muro sin red.</strong> En el muro de <code>source=onboarding</code>, cerrar es salir y nada más (<code>requestClose</code>). Quien no compra ahí solo vuelve a ver un muro al chocar con un candado o en uno de los 3 momentos propios.</li>
+<li><strong>Complejidad que pesa.</strong> El muro tiene 2.290 líneas y el onboarding 2.051. Hay 24 MB de traducciones editoriales y una cadena de scripts para el 3D. Para una persona sola, cada cambio cuesta.</li>
+<li><strong>Detalles frágiles.</strong> Al nombre del derecho en RevenueCat le falta una letra y no se puede renombrar sin publicar versión. El rescate solo existe en Android. El certificado de iOS caduca el 18-11-2026 (<code>CLAUDE.md</code>).</li>
+</ul>
+
+<h3>Lo que dirían los libros</h3>
+<ul>
+<li><strong>April Dunford, <em>Obviously Awesome</em>:</strong> el producto ya eligió su categoría, la referencia de estudio. El onboarding solo habla al estudiante. La duda de marca de la guía (estudiante o curioso) está resuelta en el código, aunque no en el marketing.</li>
+<li><strong>Madhavan Ramanujam, <em>Monetizing Innovation</em>:</strong> el reparto gratis/pago es de manual. Lo que se repite gratis y lo que se usa de verdad pagando. Falta lo que pide el libro antes de fijar nada: preguntar la disposición a pagar por segmento.</li>
+<li><strong>Dan Ariely, <em>Predictably Irrational</em>:</strong> el pago único de 119,99 $ funciona como señuelo que hace razonable el anual. Que la «última oportunidad» ofrezca justo el pago único tras rechazar el mensual puede anclar o canibalizar. Mídelo por <code>offer</code>.</li>
+<li><strong>Nir Eyal, <em>Hooked</em>, y James Clear, <em>Atomic Habits</em>:</strong> el disparador externo (aviso de repaso), la acción corta (5 minutos), la recompensa variable (tarjetas) y la inversión (plan, notas) están todos. Pero los avisos vienen apagados de fábrica, y sin permiso el ciclo no arranca.</li>
+<li><strong>Croll y Yoskovitz, <em>Lean Analytics</em>:</strong> tienes 99 eventos y ningún panel. La métrica que importa es una sola: altas por persona que ve el muro, por <code>source</code>.</li>
+<li><strong>Rob Fitzpatrick, <em>The Mom Test</em>:</strong> el onboarding ya recoge objetivo y dificultad de cada usuario. Cruza eso con quién paga antes de entrevistar a nadie. Es un Mom Test silencioso a escala.</li>
+<li><strong>Hamilton Helmer, <em>7 Powers</em>:</strong> el atlas 3D calibrado y las 363 láminas son un «recurso cornered» modesto. Cuestan meses y un competidor no los clona en una tarde.</li>
+<li><strong>Greg McKeown, <em>Essentialism</em>:</strong> 20 bibliotecas, 14 unidades y 5 herramientas para una persona sola. La próxima mejora probablemente no sea otro módulo.</li>
+</ul>
+
+<h3>Qué cambiar primero</h3>
+<ol>
+<li><strong>Monta en PostHog el embudo y la retención que ya llegan.</strong> Embudo: <code>premium_paywall_viewed</code> → <code>_plan_selected</code> → <code>_purchase_started</code> → <code>_completed</code>, desglosado por <code>source</code>. Retención: cohorte semanal de <code>$app_installed</code> con vuelta en <code>$app_opened</code>. Cuesta horas, no una build. <em>Mide:</em> panel legible, con d1, d7 y d30 por versión.</li>
+<li><strong>Ofrece el muro al cerrar un diagnóstico.</strong> Añade <code>offerPremium("diagnosis_completed")</code> dentro de la política de 3 por instalación. <em>Mide:</em> altas por vista de esa <code>source</code> frente a <code>diagnosis_result_card</code> y frente a <code>onboarding</code>.</li>
+<li><strong>Añade «Quiero entender mi cuerpo / cuidarme» como sexta meta del onboarding</strong>, que lleve a dietética, constitución y bienestar. <em>Mide:</em> el reparto de <code>onboarding_answered</code> (goal) y la compra por meta. Eso responde a la pregunta de marca de estudiante frente a curioso con datos propios.</li>
+<li><strong>Revisa el consentimiento.</strong> Respeta los «denegado» antiguos o pon un aviso mínimo en la primera sesión. <em>Mide:</em> la fracción con la analítica activa. Si cae mucho, el aviso está mal colocado, no es para quitarlo.</li>
+<li><strong>Pide el permiso de notificaciones al iniciar la prueba</strong> si aún no lo hay. Hoy, sin permiso, el aviso de fin de prueba ni se programa ni se promete. Añade a <code>premium_trial_started</code> si el aviso quedó programado. <em>Mide:</em> pruebas cobradas por cohorte en RevenueCat y quejas de «me cobraron sin avisar» en las reseñas.</li>
+</ol>
+
+<h2 id="app-leo-glow">Leo Glow, por dentro</h2>
+<div class="ficha"><p><strong>Qué es:</strong> una app de hábitos de «glow up» para chicos (en tienda, «Looksmaxxing: Glow Up Coach»): plan diario, ruleta de retos, coach de IA llamado Leo, avatar que sube de nivel, retos largos y ligas. No escanea caras ni puntúa el atractivo.</p>
+<p><strong>Hecha con:</strong> React Native con <code>posthog-react-native</code> 4.68.0 (inferencia: Expo, como el resto del portfolio), RevenueCat para las suscripciones, Google UMP y AdMob para anuncios (inferencia por los eventos de consentimiento) y un servidor propio para el coach (<code>looksmax/coach-worker</code>, que el Oráculo de Zodiaco copia: DeepSeek V4 Flash y Firestore). Versión 2.0.4 en las dos tiendas (build 21 en Play, 18 en iOS). Android, iOS y una versión web 1.2.0 residual.</p>
+<p><strong>Cómo cobra:</strong> suscripción Glow+ (anual y mensual) con prueba de 3 días en el anual, más rewarded opcionales en el coach, la ruleta y el escudo de XP.</p>
+<p><strong>Qué mide:</strong> PostHog, unos 75 eventos distintos con datos en los últimos 30 días, más los eventos del webhook de RevenueCat (<code>rc_*</code>).</p>
+<p><strong>Estado:</strong> producto rico y bien instrumentado; el muro llega a casi todos y en Android no ha arrancado ni una prueba.</p></div>
+
+<p><em>Aviso de fuentes.</em> El repo que me diste, <code>/home/user/consejohombres</code>, <strong>no es el código de Leo Glow</strong>. Es la app anterior, «Consejo de Hombres» (versión 1.0.2, un juego de preguntas hecho con la plantilla de Bolt), cuyo registro de App Store se reutilizó: su <code>eas.json</code> apunta al mismo ID de App Store Connect que Leo Glow en <code>aso-kit-nube/apps.toml</code>, y los eventos de iOS de Leo Glow llegan con el identificador <code>com.lanchasdev.consejohombres</code>. El código real de Leo Glow (con RevenueCat, el coach y la ruleta) no está en ningún repo al que tenga acceso. Por eso todo lo que sigue sale de los eventos de PostHog del proyecto «looksmaxxing» (últimos 30 días, leídos el 29-10-2026, con el filtro de cuentas de prueba), de <code>aso-kit-nube</code> y de la web <code>looksmax/</code>. Donde digo «el código hace X», en realidad digo «los eventos muestran X».</p>
+
+<h3>Qué tiene dentro</h3>
+<ul>
+<li><strong>Onboarding de 14 pasos</strong> (2.0.4): welcome, tour, name, source, gender, goal, blocker, coach, areas, quiz, start, reminders, loading y paywall. Las respuestas viajan después en casi todos los eventos (<code>onboarding_goal</code>, <code>onboarding_blocker</code>, <code>onboarding_minutes</code>, <code>onboarding_tone</code>…).</li>
+<li><strong>Día</strong> (<code>/dia</code>): el plan diario. 263 personas abren el día 1 del plan y 209 marcan alguna acción (1.072 marcas).</li>
+<li><strong>Ruleta</strong> (<code>/roulette</code>): la pantalla más vista después del Inicio, con 340 personas. 188 giran (284 giros) y 129 reclaman el reto diario. Hay tiradas extra pagadas con rewarded (<code>extra_spin</code>).</li>
+<li><strong>Retos y tareas</strong> (<code>/challenges</code>, <code>/task</code>, <code>/task-done</code>, <code>/challenge</code>): 240 personas, 2.048 pasos marcados. La web habla de retos de 14 a 60 días y planes de 4 semanas; hay también «epics», rutinas, habilidades y misiones con temporizador (<code>/mission/duration-spin</code>, <code>/mission/timer</code>, <code>/mission/xp</code>).</li>
+<li><strong>Coach Leo</strong> (<code>/coach</code>): 232 personas entran, 98 escriben (308 mensajes), 90 usan respuestas rápidas. Pide consentimiento antes de enviar nada (<code>coach_consent</code>, 99 personas). Tiene cupo gratis: 18 personas lo agotaron 63 veces, y el cupo se puede ampliar con un rewarded.</li>
+<li><strong>Avatar</strong> (<code>/avatar</code>, <code>/avatar-customize</code>): 228 y 125 personas. Sube de rango con la XP.</li>
+<li><strong>Progreso, Ligas y Perfil</strong>: 165, 69 y 21 personas. Las ligas tienen niveles (<code>league_tier</code>).</li>
+<li><strong>Glow+</strong> (<code>/glow-plus</code>): la pantalla de la suscripción, 37 personas fuera del onboarding.</li>
+<li><strong>17 idiomas</strong> según la web; 45 personas cambiaron el idioma dentro de la app.</li>
+</ul>
+
+<h3>El recorrido del usuario</h3>
+<ol>
+<li><strong>Arranque.</strong> <code>app_opened</code> y, en el EEE y Reino Unido, el formulario de consentimiento de anuncios (<code>ad_consent_state</code>, 547 personas). En iOS además el permiso de seguimiento (<code>ad_tracking_status</code>).</li>
+<li><strong>Onboarding.</strong> De 325 personas en welcome (2.0.4) a 281 en paywall: pasa el 86 %. La caída es suave paso a paso; el onboarding no es el problema.</li>
+<li><strong>Permisos.</strong> En «reminders» se pide el permiso de avisos y la hora (<code>reminder_time_set</code>, 329 personas). Lo conceden 280 personas y lo niegan 76: un 79 %, muy por encima del 51 % de la 1.0.7.</li>
+<li><strong>Muro.</strong> Último paso del onboarding, antes de haber hecho nada en la app. 264 personas lo ven en Android y 138 en iOS.</li>
+<li><strong>Primer día.</strong> Tras cerrar el muro, la persona cae en el día 1 del plan (<code>plan_first_day_opened</code>, 263). El momento «aha» candidato es marcar la primera acción del plan; la guía ya tiene la pista del 53 % frente a 0 de 9.</li>
+<li><strong>Avisos.</strong> Hay cuatro tipos en los datos: <code>daily-pending</code>, <code>daily-claim</code>, <code>daily-plan</code> y <code>streak-at-risk</code>. Se abren poco: 10 personas en 30 días de 280 con permiso.</li>
+</ol>
+
+<h3>Cómo gana dinero, en detalle</h3>
+<ul>
+<li><strong>Planes.</strong> Glow+ anual (<code>glow_plus_annual</code>) y mensual. Precios que la app leyó de la tienda en 2.0.4: anual 29,99 € en España, 39,99 USD en EE. UU., 52,99 CAD, 72,99 BRL; mensual 9,99 USD en Android y 8,99 en iOS; anual en iOS de 39,99 a 44,99 USD. Glow+ abre los planes completos, el coach sin límite y quita los anuncios (web).</li>
+<li><strong>Prueba.</strong> 3 días en el anual. Desde la 2.0.4, <code>premium_purchase_started</code> lleva <code>trial_days: 3</code> en todas las compras que se empiezan (19 en Android, 6 en iOS).</li>
+<li><strong>Dónde sale el muro</strong> (<code>source</code>): <code>onboarding</code> (402 personas), <code>profile_banner</code> (23), <code>plan_day</code> (13, un día bloqueado del plan), <code>plan_locked</code> (7) y <code>areas_lock</code> (solo web). El 93 % de las vistas son del onboarding.</li>
+<li><strong>Qué pasa después.</strong> En Android, 30 días: 264 ven el muro de onboarding, 31 pulsan pagar, 0 pruebas, 0 compras. Se elige más el mensual (19 personas) que el anual (11), pero casi todas las compras empezadas son anuales: eso sugiere que el anual va preseleccionado y que quien toca el mensual se lo piensa y no compra (inferencia).</li>
+<li><strong>Anuncios.</strong> En 2.0.x solo rewarded opcionales, en tres sitios: <code>extra_spin</code> (179 peticiones, 140 cargas, 3 enseñados), <code>coach_messages</code> (37 peticiones, 11 enseñados, 9 recompensas) y <code>xp_shield</code> (17 peticiones, 1 enseñado). Los banners (perfil, habilidades, rutinas) y el intersticial de fin de misión que aún aparecen en los datos son todos de la 1.2.0 de iOS y terminan el 6 de octubre.</li>
+</ul>
+<p><strong>Lo que veo sobre la hipótesis de trial-3d.</strong> La guía (1001 y 1006) supone que la app pasa a Play el plan base y no la oferta con prueba. Los datos apuntan a otra cosa:</p>
+<ul>
+<li>En 2.0.4 la app <em>sí ve</em> la prueba de 3 días en el producto de Play: cada compra empezada en Android lleva <code>trial_days: 3</code> y <code>store_price: true</code>. Google Play Billing solo devuelve al móvil las ofertas para las que la cuenta es elegible, así que es probable que esas 17 personas fueran elegibles (inferencia: no veo si <code>trial_days</code> sale del producto o de una constante).</li>
+<li>Aun así, el webhook de RevenueCat no registra <strong>ninguna prueba de Play en 45 días</strong>. Las dos únicas pruebas (<code>rc_trial_started_event</code>) son de App Store, el 25 y el 26 de octubre.</li>
+<li>De esas 17 personas, 16 cierran la hoja (<code>premium_purchase_cancelled</code>). En Android, los fallos de compra en 30 días son pocos (8 eventos de 3 personas, sin paquete o sin red) y no explican el resto.</li>
+</ul>
+<p>Conclusión prudente: el fallo más probable ya no es «la app no ve la oferta», sino lo que pasa entre el botón y la hoja de Google. O la llamada de compra no usa la opción con prueba aunque la conozca (con RevenueCat, si se compra un <code>StoreProduct</code> o una opción concreta en vez del <code>Package</code> con su opción por defecto), o la hoja sí enseña la prueba y la gente se echa atrás al ver que pide método de pago. Sin el código no puedo distinguir entre las dos. La prueba que lo resuelve es la misma que pide la guía, pero el evento tiene que llevar el <code>offer_id</code> <em>que se envía</em>, no solo los días de prueba del producto.</p>
+
+<h3>Qué mide y qué no</h3>
+<ul>
+<li><strong>Bien medido.</strong> Cada paso del onboarding con su orden, cada pantalla (<code>screen_viewed</code> con ruta), el muro con su <code>source</code>, la elección de plan, el precio y la moneda reales, los motivos de fallo (<code>reason</code>, <code>error_code</code>), el anuncio completo por formato y sitio (<code>ad_requested</code> → <code>ad_loaded</code> → <code>ad_shown</code> → <code>ad_reward_earned</code>), el cupo del coach, los avisos abiertos por tipo y <code>days_since_install</code> en todos los eventos. Es la mejor instrumentación del portfolio.</li>
+<li><strong>Hueco 1: no existe <code>premium_trial_started</code>.</strong> <code>aso-kit-nube/producto.py</code> cuenta las pruebas con ese evento y Leo Glow no lo emite nunca. Las dos pruebas de iOS quedaron como <code>premium_purchase_completed</code> con <code>revenue</code> de 129,99 AED y 499 SEK, aunque eran gratis: una se canceló al día siguiente y caducó el 28. El «primer pago real» de iOS que cita la guía era una prueba.</li>
+<li><strong>Hueco 2: falta qué oferta se manda y si hay elegibilidad.</strong> Ni <code>offer_id</code> ni <code>trial_eligible</code>.</li>
+<li><strong>Hueco 3: ruido de plataforma.</strong> 217 personas con <code>platform: web</code> abren la app en 30 días (versión 1.2.0), y 211 de iOS no traen <code>glow_plus</code>. Antes de leer iOS, separa web, desarrollo y Mac.</li>
+<li><strong>Hueco 4: no se sabe qué compra la gente.</strong> No hay pregunta en la app ni encuesta de cancelación.</li>
+</ul>
+
+<h3 class="ok">Fortalezas del producto</h3>
+<ul>
+<li><strong>Onboarding que no pierde gente.</strong> El 86 % de quien ve welcome llega al último paso en 14 pantallas (<code>onboarding_step_viewed</code> con <code>step_order</code>).</li>
+<li><strong>Permiso de avisos bien pedido.</strong> 79 % de concesión con hora elegida (<code>notification_permission</code>, <code>reminder_time_set</code>).</li>
+<li><strong>La postura ética está en el producto, no solo en la ficha.</strong> No hay ningún evento de escaneo ni de puntuación; el coach pide consentimiento antes del primer mensaje (<code>coach_consent</code>).</li>
+<li><strong>Anuncios que no estorban.</strong> En 2.0 solo hay rewarded que la persona pide, ligados a algo que quiere (más mensajes, otra tirada, proteger la XP).</li>
+<li><strong>Precio local real.</strong> <code>store_price: true</code> en 2.0.4, en más de diez monedas (MAD, BDT, BRL, CAD…).</li>
+<li><strong>Medición que permite decidir.</strong> <code>days_since_install</code>, las respuestas del onboarding y <code>glow_plus</code> viajan en cada evento: puedes cortar cualquier cosa por objetivo, fuente o antigüedad sin otra build.</li>
+<li><strong>La IA como canal.</strong> En la pregunta de origen, «ia» es la primera respuesta (126 de unas 410 personas que terminan), por delante de «tienda» (105) y TikTok (37).</li>
+</ul>
+
+<h3 class="bad">Puntos débiles y riesgos</h3>
+<ul>
+<li><strong>Cero pruebas en Play.</strong> 31 personas pulsan pagar en 30 días y RevenueCat no registra ninguna prueba de Play en 45 días (<code>rc_trial_started_event</code> solo de APP_STORE).</li>
+<li><strong>Las pruebas se cuentan como ventas.</strong> <code>premium_purchase_completed</code> con <code>revenue</code> en una prueba gratis infla los ingresos y oculta las pruebas al kit.</li>
+<li><strong>Muro antes de cualquier logro.</strong> El paso 13 de 14 es el muro y el 93 % de las vistas salen de ahí; los muros contextuales (<code>plan_day</code>, <code>plan_locked</code>) apenas se ven.</li>
+<li><strong>Rewarded que se carga y no se enseña.</strong> <code>extra_spin</code>: 140 cargas, 3 enseñados y 33 fallos. Gasta red y batería.</li>
+<li><strong>Un aviso que amenaza.</strong> Existe <code>streak-at-risk</code>. La guía (1004) pide que el aviso nunca amenace con perder; en un público joven e inseguro con su aspecto, es justo la mecánica que contradice tu postura.</li>
+<li><strong>Ligas con poca gente.</strong> 69 personas en 30 días entre todos los niveles: una liga vacía desanima.</li>
+<li><strong>Deuda heredada.</strong> El registro de iOS sigue llamándose <code>consejohombres</code>. En el repo antiguo, la tabla <code>game_profiles</code> de Supabase deja a cualquiera con la clave anónima leer, insertar y <em>actualizar cualquier fila</em> (<code>USING (true)</code>), aunque la app ni siquiera usa ese cliente. Si ese proyecto de Supabase sigue vivo, bórralo o ciérralo.</li>
+<li><strong>El código de Leo Glow no está en GitHub, o no en una cuenta a la que tenga acceso.</strong> Es un riesgo de continuidad para un desarrollador solo y hace imposible auditar el muro desde fuera.</li>
+</ul>
+
+<h3>Lo que dirían los libros</h3>
+<ul>
+<li><strong>Ramanujam, <em>Monetizing Innovation</em>:</strong> nadie ha dicho en voz alta qué paga la gente de Glow+. El muro vende tres cosas a la vez (planes, coach, sin anuncios) sin haber preguntado cuál importa. El cupo del coach es la pista más clara de disposición a pagar: 18 personas lo agotan.</li>
+<li><strong>Croll y Yoskovitz, <em>Lean Analytics</em>:</strong> una métrica que suma pruebas gratis como ingresos es una métrica de vanidad, aunque sea sin querer. Primero, que el número sea verdad.</li>
+<li><strong>Eyal, <em>Hooked</em>:</strong> el disparador funciona (79 % de permisos) pero casi nadie abre el aviso (10 personas). La recompensa variable existe (la ruleta) y la inversión también (avatar, XP). Falla el paso del aviso a la acción, y Eyal pondría la línea ética en <code>streak-at-risk</code>.</li>
+<li><strong>Clear, <em>Atomic Habits</em>:</strong> el plan diario es el hábito y la ruleta su adorno. Haz obvio y fácil el primer paso del día 1; lo demás puede esperar.</li>
+<li><strong>Chou, <em>Actionable Gamification</em>:</strong> tienes mucho «sombrero negro» (racha en riesgo, escudo de XP, ligas) para un público que necesita «sombrero blanco» (progreso, logro, sentido). Más avatar que sube y menos miedo a perder.</li>
+<li><strong>Fitzpatrick, <em>The Mom Test</em>:</strong> la respuesta «ia» en el onboarding es un hallazgo, pero no te dice qué buscaban. Habla con cinco personas que lleguen desde ChatGPT.</li>
+<li><strong>Krug, <em>Don't Make Me Think</em>:</strong> el botón del muro tiene que decir lo mismo que la hoja de Google. Si dice «3 días gratis» y la hoja pide la tarjeta sin explicar nada, la persona se echa atrás.</li>
+<li><strong>McKeown, <em>Essentialism</em>:</strong> ligas, epics, rutinas, habilidades, misiones, retos de 60 días… La mitad de las pantallas tienen menos de 30 personas al mes. Antes de añadir nada, arregla el muro y el día 1.</li>
+</ul>
+
+<h3>Qué cambiar primero</h3>
+<ol>
+<li><strong>Arreglar la medición del muro, en la misma build.</strong> Emite <code>premium_trial_started</code> cuando la compra empieza con periodo de prueba, quita <code>revenue</code> de las pruebas y añade <code>offer_id</code> (el que se <em>envía</em>) y <code>trial_eligible</code> a <code>premium_purchase_started</code>. Mide: cada <code>rc_trial_started_event</code> tiene su <code>premium_trial_started</code> en la app.</li>
+<li><strong>Comprobar la hoja de Google con una cuenta nueva.</strong> Si no enseña los 3 días, revisa la llamada de compra: debe usar el <code>Package</code> de RevenueCat con su opción por defecto, o la opción de suscripción <code>trial-3d</code> de forma explícita. Mide: pruebas de Play en RevenueCat por cada 50 vistas del muro (objetivo de 1006: dos o más a la semana).</li>
+<li><strong>Copiar el muro de TCM</strong> como dice 1006, con «no se cobra nada hoy» bajo el botón para que la hoja no sorprenda. Mide: <code>premium_purchase_cancelled</code> / <code>premium_purchase_started</code> en Android, que hoy es 16 de 17.</li>
+<li><strong>Quitar <code>streak-at-risk</code> o cambiar su texto</strong> por una invitación ligada al plan («Hoy: 2 minutos de postura»). Mide: <code>notification_opened</code> por persona con permiso, por tipo de aviso.</li>
+<li><strong>Precargar el rewarded solo donde se ofrece.</strong> En <code>extra_spin</code>, carga al tocar el botón o enséñalo como opción clara al acabar las tiradas. Mide: <code>ad_shown</code> / <code>ad_loaded</code> por sitio, que hoy es 3 de 140.</li>
+</ol>
+
+<h2 id="app-zodiaco">Zodiaco Chino, por dentro</h2>
+<div class="ficha"><p><strong>Qué es:</strong> un horóscopo chino diario con un compañero dentro: tu animal es una mascota que cuidas, que juega contigo y con la que puedes chatear. En Play se llama «Chinese Zodiac Horoscope 2026»; en iOS la app se llama «Lucky Pet».</p>
+<p><strong>Hecha con:</strong> React Native 0.81 con Expo SDK 54 y TypeScript. Versión 1.1.6 (en Play desde el 23-10, con la nota «Resumen 2026 y Foco del día» desde el 25-10). Android publicada; iOS en revisión. Tiene un servidor propio para el chat (<code>oraculo-worker</code>, en Cloud Run) y un fichero remoto que obliga a actualizar (<code>app-config/version.json</code>).</p>
+<p><strong>Cómo cobra:</strong> ya no solo con anuncios. Tiene banner, intersticial y diez sitios de rewarded, y desde la 1.1.6 también el Club Zodiac (suscripción semanal con 3 días gratis o anual), «sin anuncios» de pago único, un pack de bienvenida y tres paquetes de diamantes, todo con RevenueCat.</p>
+<p><strong>Qué mide:</strong> PostHog (UE) por HTTP, sin SDK y en anónimo, sin perfiles de persona. Emite unos 112 eventos distintos más <code>screen_viewed</code> por pestaña y por modal.</p>
+<p><strong>Estado:</strong> producto rico y bien instrumentado, que acaba de pasar de «app de anuncios» a «app con suscripción» sin que la guía ni su propio <code>PRODUCT_PRIORITIES.toml</code> (revisado el 2-08) lo reflejen.</p></div>
+
+<h3>Qué tiene dentro</h3>
+<ul>
+<li><strong>Cinco pestañas</strong> (<code>HomeScreen.tsx</code>): Horóscopo (<code>OracleTab</code>, la lectura del día), Oráculo (<code>OraculoTab</code>, el chat con IA), Mascota, Compatibilidad y Perfil. Ojo: en el código <code>oraculo</code> es el horóscopo y <code>consulta</code> el chat, y así llega a los eventos.</li>
+<li><strong>Lectura diaria</strong> calculada con tu animal, tu elemento y el animal que gobierna el día. Incluye un vistazo por áreas, el «Foco del día», amuletos de la suerte, una racha con recompensas en un ciclo de 7 días (de 40 a 150 monedas y un diamante el día 2, en <code>oracleStorageKeys.ts</code>) y un protector de racha.</li>
+<li><strong>Chat del Oráculo:</strong> habla tu mascota. Funciona con DeepSeek V4 Flash en DeepInfra y Together como reserva. El servidor arma el prompt y no guarda conversaciones. Das 3 consultas gratis al día (<code>env.ts</code>; el README del servidor dice 5, que está desfasado), +3 por anuncio (hasta 3 anuncios) y +5 por paquete de diamantes. El Club lo tiene «ilimitado», con un tope real de 50 al día.</li>
+<li><strong>Mascota:</strong> 12 animales con esqueleto animado propio (<code>rig/*.generated.ts</code>), hambre, felicidad y salud, una ruleta, una tienda con 28 accesorios (12 del Club) y una casa con 114 objetos de decoración repartidos por salas de los cinco elementos (36 del Club).</li>
+<li><strong>12 minijuegos</strong> (<code>gamesConfig.ts</code>): atrapar, memoria, farolillos, pagoda, el diferente, tangram, dumplings, elementos, dragón, mahjong, carrera y vuelo. Gastan energía y tienen un reto semanal.</li>
+<li><strong>Compatibilidad</strong> entre dos fechas cualesquiera, con historial, estrella de relaciones y una tarjeta para compartir.</li>
+<li><strong>Sabiduría:</strong> 8 áreas de la vida, 24 misiones (3 por área) y 15 lecciones.</li>
+<li><strong>«Resumen 2026»</strong>: un repaso del año para compartir.</li>
+<li><strong>Invitaciones</strong> con código (20 diamantes para cada uno) y un <strong>programa beta</strong> tras 7 días de uso.</li>
+<li><strong>19 idiomas</strong> completos, con árabe en RTL, más un widget de iOS (<code>targets/</code>).</li>
+</ul>
+
+<h3>El recorrido del usuario</h3>
+<ol>
+<li><strong>Arranque.</strong> La splash de marca, la comprobación de versión mínima y después el consentimiento de anuncios (UMP de Google y, en iOS, ATT). El SDK de anuncios solo se enciende cuando UMP lo permite (<code>adsConsent.ts</code>).</li>
+<li><strong>Alta «living wheel»</strong>, todo dentro de la pantalla <code>Welcome</code> y medido paso a paso como <code>Welcome:&lt;paso&gt;</code>:
+ 0 <em>portada</em> (una rueda con los 12 animales), 1 <em>fecha</em> (fecha de nacimiento y nombre, con el animal y el elemento al momento), 2 <em>intenciones</em> (áreas que te importan), 3 <em>oráculo</em> (una demo del chat), 4 <em>mascota</em> (acariciar, alimentar y ver los juegos), 5 <em>aviso</em> (eliges la hora y se pide el permiso de notificaciones, que se puede saltar), 6 <em>lectura</em> (la revelación animada de tu primer día) y 7 <em>club</em>.</li>
+<li><strong>El momento «aha»</strong> está en el paso 6: tu animal, el que gobierna el día y la clave del día.</li>
+<li><strong>Muro.</strong> Justo después llega el paso 7, un paywall del Club a pantalla completa (<code>SubscriptionStep.tsx</code>) con la semanal preseleccionada y la prueba de 3 días. Si lo cierras sin pagar, sale una segunda oferta: el pack de bienvenida («sin anuncios» + 35 diamantes, pago único). Después entras en Horóscopo.</li>
+<li><strong>Primer día.</strong> Arriba del Horóscopo aparece «Tu primer día» (<code>FirstDayCard</code>), con tres gestos: revelar el oráculo, reclamar la recompensa y cuidar a la mascota. Según el comentario del código, quien los hace vuelve entre los días 1 y 3 el doble (del 31 al 41 % frente al 15-19 %). El alta la termina el 88 %, pero solo la mitad llega a revelar el oráculo.</li>
+<li><strong>Notificaciones.</strong> Se programan 14 días por adelantado, en dos series. La diaria, a la hora que eliges, dice qué animal gobierna ese día y si choca con el tuyo; la primera anuncia la recompensa de mañana. La de la mascota va a las 20:00 (o tres horas antes si coincidiría con la diaria), habla con el nombre de tu mascota, propone algo concreto y no sale si ese día ya jugaste.</li>
+</ol>
+
+<h3>Cómo gana dinero, en detalle</h3>
+<p><strong>Compras</strong> (<code>compras.ts</code>; los importes los da la tienda):</p>
+<ul>
+<li><strong>Club Zodiac</strong> (entitlement <code>premium</code>): semanal con 3 días gratis o anual. La prueba solo existe en la semanal. Incluye chat sin límite, la lectura de mañana, casi el doble de energía, 15 diamantes por semana, 3 objetos exclusivos al mes y cero anuncios.</li>
+<li><strong>«Sin anuncios»</strong> de pago único (2,49 € pensado) y el <strong>pack de bienvenida</strong>.</li>
+<li><strong>Diamantes:</strong> 10, 35 y 80, a 0,99, 2,99 y 5,99 € pensados.</li>
+<li><strong>Dónde sale el muro</strong> (cada <code>source</code>): <code>onboarding_subscription</code> y <code>onboarding_downsell</code>, <code>oraculo_limite</code> y <code>oraculo_diamantes</code> (al agotar el chat), <code>minijuegos_energia</code>, <code>tienda_vestir</code>, <code>tienda_decorar</code>, <code>tienda_pack</code>, <code>perfil</code> y <code>tras_intersticial</code>. Este último es «¿Cansado de anuncios?»: solo a partir del segundo intersticial del día y como mucho una vez cada 3 días.</li>
+</ul>
+<p><strong>Anuncios</strong> (<code>adService.ts</code>):</p>
+<ul>
+<li><strong>Banner</strong> anclado sobre la barra (<code>barra</code>) en Horóscopo, Compatibilidad y Perfil. No sale en Mascota ni en el chat.</li>
+<li><strong>Intersticial</strong>: uno de cada dos resultados de compatibilidad, uno de cada dos finales de minijuego y uno de cada dos lecciones terminadas, y siempre al acabar el Resumen. Tiene 2 minutos de espera entre uno y otro, un tope de 6 al día y nunca va en el Horóscopo.</li>
+<li><strong>Rewarded</strong>: un tope global de 14 al día y uno propio por sitio. Son estos: duplicar la recompensa diaria (1), monedas gratis en la tienda (6), duplicar el premio de un juego (3), seguir jugando (4), partidas extra (1), ración extra para la mascota (3), avance de mañana (1), desbloquear la compatibilidad completa (3), tirada de ruleta (3), consultas al chat (3) y protector de racha (sin tope propio).</li>
+<li><strong>Los tres rewarded «nuevos» ya están fuera.</strong> Ración extra, avance de mañana y compatibilidad completa están marcados en el código como «nuevos de la 1.1.5», y esa versión está en Play desde el 21-10 (según el histórico de aso-kit). El plan por app (<code>1006</code>) aún los pone como tarea de la semana 3: lo que toca es leer su resultado, no publicarlos.</li>
+<li><strong>Precargas.</strong> Se deja un rewarded cargado al entrar en Inicio y cada vez que vuelves a la app. El intersticial se pide al entrar en Compatibilidad, en una lección o en el Resumen. Esas peticiones salen con el placement <code>precarga</code>. Por eso la guía veía miles de peticiones al 0 %: las impresiones se apuntan al sitio donde se enseñan. Tras un fallo hay una pausa antes de volver a pedir.</li>
+</ul>
+
+<h3>Qué mide y qué no</h3>
+<p><strong>Lo que mide bien:</strong> el embudo de anuncios completo (<code>ad_requested</code>, <code>ad_loaded</code>, <code>ad_shown</code>, <code>ad_impression</code> con el ingreso real) y <code>ad_blocked</code> con el motivo (contador, espera, tope o falta de consentimiento). También el alta paso a paso, el muro de pago (<code>club_paywall_shown</code>, <code>_loaded</code>, <code>_plan_selected</code>, <code>_closed</code>), las compras, el chat (<code>oraculo_consulta</code>, <code>oraculo_limite</code>), los avisos (<code>notification_prompt_answered</code>, <code>notification_opened</code> con su tipo) y la economía de la mascota.</p>
+<p><strong>Los huecos:</strong></p>
+<ul>
+<li><strong>Por qué falla <code>days_since_install</code>.</strong> Solo se calcula en el arranque en frío (<code>initializeAnalytics</code>). Si la app vuelve de segundo plano días después, los eventos llevan el valor viejo, y <code>day_1_return</code> y <code>day_7_return</code> tampoco se emiten hasta un arranque en frío. Además, la fecha de instalación es la del primer arranque con este código (<code>analytics_install_at_v1</code>). Quien actualizó desde una versión sin analítica contó como <code>store_install</code> con día 0. Y hay un segundo reloj distinto en <code>invitaciones.ts</code> (<code>diasDesdePrimerUso</code>).</li>
+<li><strong>Sin personas no hay cohortes.</strong> El README lo reconoce: se pierden las cohortes y el filtro por persona. Por eso la retención depende de esos eventos sueltos.</li>
+<li><strong>No se mide la programación de avisos.</strong> No existe <code>reminders_scheduled</code>, el evento que la guía propone para vigilar que los avisos se programan. El fallo de la 1.1.2-1.1.3 se volvería a detectar tarde.</li>
+<li><strong>No se mide el coste del chat por persona.</strong> El servidor solo cuenta tokens en sus logs.</li>
+</ul>
+
+<h3 class="ok">Fortalezas del producto</h3>
+<ul>
+<li><strong>Un ángulo propio de verdad.</strong> No es otra app de lecturas: tiene una mascota con esqueleto, 12 juegos, una casa y un chat donde habla tu animal (<code>MascotaTab.tsx</code>, <code>games/</code>, <code>OraculoTab.tsx</code>). Es justo el «compañero que crece contigo» de la estrategia de marca.</li>
+<li><strong>Avisos que dicen algo del día.</strong> Son 14 días de texto distinto, con el animal que gobierna y la recompensa de mañana, separados del aviso de la mascota y sin insistir a quien ya vino (<code>avisosDiarios.ts</code>, <code>avisosMascota.ts</code>).</li>
+<li><strong>Consentimiento en el orden correcto.</strong> Primero UMP, después el SDK, con una sola puerta para todos los formatos (<code>adsConsent.ts</code>).</li>
+<li><strong>Una instrumentación que piensa.</strong> Distingue cargado de mostrado, congela la pantalla antes del intersticial, escribe en serie para no perder eventos y aparta los dispositivos de prueba con <code>environment</code> e <code>is_emulator</code> (<code>App.tsx</code>, <code>posthog.ts</code>).</li>
+<li><strong>Decisiones apoyadas en datos propios.</strong> «Tu primer día» nace de que solo la mitad revelaba el oráculo, y los topes por sitio salen de lo observado entre el 26 y el 27-09 (<code>FirstDayCard.tsx</code>, <code>adService.ts</code>).</li>
+<li><strong>Un chat con red de seguridad.</strong> El prompt prohíbe predecir muerte, enfermedad, embarazos o resultados, y deriva en una crisis. Hay topes por instalación, por IP y globales (3.000 al día), y un fallo del modelo no gasta consulta (<code>prompt.ts</code>, <code>env.ts</code>).</li>
+</ul>
+
+<h3 class="bad">Puntos débiles y riesgos</h3>
+<ul>
+<li><strong>Un muro duro en la primera sesión de una app diaria.</strong> El Club sale en el paso 7 del alta, y al cerrarlo, otra oferta. La guía (<code>1002</code>) recomendaba un «sin anuncios» solo «después de que la persona lleve varios días volviendo». Es un cambio de modelo que nadie ha decidido por escrito, y llega en una versión que sale semanas antes del pico de febrero.</li>
+<li><strong>Doble cobro en la función que más se comparte.</strong> En Compatibilidad, el intersticial salta al calcular (uno de cada dos) y además el resultado completo se desbloquea con un rewarded (<code>CompatibilidadTab.tsx</code>, <code>handleCalculate</code> y <code>desbloquearResultado</code>). Si la hipótesis de la marca es que «¿somos compatibles?» es el motor, aquí está el mayor peaje.</li>
+<li><strong>Textos del Club que chocan con la marca.</strong> Dice «Sabrás cómo te irá mañana antes que nadie», cuando la guía dice que prometas un ritual y no predicciones. Y dice «Habla con tu mascota sin límites» cuando el servidor corta a las 50 consultas con un «ocupado» (<code>app.ts</code>, <code>CLUB_PER_DAY</code>).</li>
+<li><strong>Un coste variable sin vigilar.</strong> Cada consulta paga tokens. Los anuncios del chat se creen al cliente (<code>TRUST_CLIENT_REWARDS=true</code>, sin verificación de servidor), así que el tope global es el único seguro. Además, el README dice 5 consultas gratis y el código da 3.</li>
+<li><strong>iOS vive en el filo.</strong> Apple la rechazó dos veces por la norma 4.3(b) (spam de apps de horóscopo). Por eso en iOS se presenta como «Lucky Pet», un juego de mascota. Desde octubre las dos tiendas abren en Horóscopo (<code>config/experiencia.ts</code>), y el propio comentario avisa de que es lo primero a revisar si vuelve a rechazarse.</li>
+<li><strong>Rachas que castigan.</strong> Si fallas un día y no tienes protector, la racha vuelve a 1 (<code>petLogic.ts</code>), y la mascota se pone triste o adormilada si no la cuidas. Es el «sombrero negro» del que avisa la guía.</li>
+<li><strong>Papeles viejos.</strong> <code>PRODUCT_PRIORITIES.toml</code> dice «No se detecta analítica» y <code>monetization = ["ads"]</code>. Los topes diarios de anuncios se cuentan por día UTC, no por el día local.</li>
+</ul>
+
+<h3>Lo que dirían los libros</h3>
+<ul>
+<li><strong>Nir Eyal, <em>Hooked</em>:</strong> el bucle está casi completo. Tienes el disparador (un aviso con lo de hoy), la acción (revelar), la recompensa variable (el animal del día, la ruleta) y la inversión (mascota, casa, racha). El muro en la primera sesión cobra antes de que exista la inversión.</li>
+<li><strong>Madhavan Ramanujam, <em>Monetizing Innovation</em>:</strong> el Club se diseñó antes de preguntar quién lo quiere. Hay cinco ventajas mezcladas (chat, mañana, energía, diamantes, sin anuncios). Mira <code>club_paywall_plan_selected</code> y las compras por <code>source</code> para saber cuál vende.</li>
+<li><strong>April Dunford, <em>Obviously Awesome</em>:</strong> en iOS ya te posicionaste a la fuerza como juego de mascota, y Apple te dio la razón dos veces. La tienda te está diciendo cuál es tu categoría.</li>
+<li><strong>Jonah Berger, <em>Contagious</em>:</strong> la compatibilidad es moneda social, porque el otro no necesita la app. Ponerle intersticial y rewarded es cobrar justo en el momento que podría traer a la siguiente persona.</li>
+<li><strong>Alistair Croll y Benjamin Yoskovitz, <em>Lean Analytics</em>:</strong> la métrica que manda en una app diaria es d1/d7 por cohorte, y hoy no la puedes calcular bien. Antes que otra palanca de dinero, arregla la regla.</li>
+<li><strong>Yu-kai Chou, <em>Actionable Gamification</em>:</strong> la racha que se pierde entera y la mascota triste son motivación por pérdida. Funcionan la primera semana y vacían la tercera. El protector es un parche que encima se vende.</li>
+<li><strong>Greg McKeown, <em>Essentialism</em>:</strong> en dos meses has sumado chat con IA, Club, casa, 12 juegos, beta, invitaciones, widget y Resumen. ¿Cuál mueve el d7?</li>
+</ul>
+
+<h3>Qué cambiar primero</h3>
+<ol>
+<li><strong>Arregla el reloj de la instalación esta semana.</strong> Recalcula <code>days_since_install</code> y los hitos d1/d7 también al volver de segundo plano. No marques como instalación a quien ya tenía <code>user_data</code>. Usa un solo reloj (el de analítica) para la beta y las invitaciones. Añade <code>reminders_scheduled</code>. <em>Mide:</em> que los <code>store_install</code> diarios cuadren con las descargas de Play (unas 13 al día) y que salga una primera curva d1/d7 por cohorte semanal.</li>
+<li><strong>Decide el muro del alta con un experimento, no por defecto.</strong> Compara el paso 7 actual con no mostrar el Club hasta el día 3 (o tras la tercera lectura revelada), en cohortes semanales alternas. <em>Mide:</em> el d1 y el d7 de cada grupo, las altas de prueba por 100 instalaciones y el ingreso por instalación a 30 días (anuncios + compras). Si el muro temprano baja el d7 más de lo que suben las pruebas, retrásalo.</li>
+<li><strong>Quita un peaje a la compatibilidad.</strong> Elige: o el intersticial al calcular o el rewarded de desbloqueo, no los dos. Mejor el rewarded, que es voluntario. <em>Mide:</em> <code>compatibility_shared</code> por <code>compatibility_completed</code> y las instalaciones con el enlace de compartir, dos semanas antes y después.</li>
+<li><strong>Afina los textos del Club y protege el chat.</strong> Cambia «Sabrás cómo te irá mañana» por algo sobre el ritual, y «sin límites» por una cifra honesta o súbele el tope. Activa la verificación de servidor (SSV) en el rewarded del chat. <em>Mide:</em> la conversión del paywall por <code>source</code> antes y después, y el coste en tokens por persona activa al día.</li>
+<li><strong>Actualiza <code>PRODUCT_PRIORITIES.toml</code></strong>: monetización híbrida, el objetivo del Club y la tarea de retención.</li>
+</ol>
+
+<h2 id="app-anime-food">Anime Food, por dentro</h2>
+<div class="ficha">
+<p><strong>Qué es:</strong> un recetario de platos que salen en el anime, con mascota (Kai), modo cocina y una capa de juego (XP por universo, rangos, trajes, postales). En la app los universos tienen nombres genéricos (Ninjas, Pirates, Saiyans, Slayers…), no los de las series.</p>
+<p><strong>Hecha con:</strong> Expo 54, React Native 0.81, expo-router 6, TypeScript. Repo en la versión 1.3.0 (último commit, 21-09-2026). En tienda: Play 1.4.0 (21), iOS 1.2.1. Android, iOS y una web en Astro dentro del mismo repo.</p>
+<p><strong>Cómo cobra:</strong> solo anuncios de AdMob (banner, intersticial y app-open). <code>PRODUCT_PRIORITIES.toml</code> dice <code>monetization = ["ads"]</code> y en el código no hay ninguna compra.</p>
+<p><strong>Qué mide:</strong> PostHog, con unos 25 eventos propios (cerca de 14 de producto y unos 11 del ciclo de los anuncios) en dos niveles: anónimo y con consentimiento. Además hay un panel interno en <code>/debug/ads</code>.</p>
+<p><strong>Estado:</strong> unos 1,42 USD al mes en anuncios. El repo va por detrás de lo que hay publicado en Play, y en iOS sigue la sombra de la categoría Niños.</p>
+</div>
+
+<h3>Qué tiene dentro</h3>
+<ul>
+<li><strong>42 recetas activas</strong> en <code>data/recipes/index.ts</code>, repartidas en 7 universos: Ninjas, Pirates, Saiyans, Scientists, Slayers, Spirits y Stands. Otras 3 están comentadas como «TEMP: desactivada hasta que esté lista» (dumpling, pizza margarita y strawberry romanoff).</li>
+<li>Casi todas tienen <strong>dos versiones</strong>, omnívora y vegana: hay 47 ficheros <code>vegan.md</code> y 40 <code>omnivore.md</code>. En la receta se cambia de versión con un selector.</li>
+<li><strong>15 idiomas</strong> en la interfaz (<code>contexts/LanguageContext.tsx</code>, unas 4.800 líneas) y en <code>CFBundleLocalizations</code>.</li>
+<li><strong>Catálogo de 180 ingredientes</strong> (<code>core/ingredients.ts</code>). Hay arte propio para 128; los demás salen con un emoji de reserva (<code>INGREDIENTES-SIN-ARTE.md</code>).</li>
+<li><strong>Modo Cocina</strong> (<code>components/CookingMode.tsx</code>): pasos uno a uno, ingredientes de cada paso, temporizadores, aviso por voz con <code>expo-speech</code> y pantalla siempre encendida con <code>expo-keep-awake</code>.</li>
+<li><strong>Raciones ajustables</strong> y conversión métrica/imperial (<code>utils/unitConversion.ts</code>).</li>
+<li><strong>Alergias e intolerancias</strong>: se marcan en el onboarding y la receta avisa (<code>AllergyWarning</code>, <code>docs/SISTEMA_ALERGIAS.md</code>).</li>
+<li><strong>Juego</strong> (<code>constants/gamification.ts</code>, <code>utils/gamification.ts</code>):
+<ul>
+<li>XP por universo y 5 rangos (0, 250, 650, 1.200 y 2.000 XP).</li>
+<li>Nivel global cada 500 XP.</li>
+<li>Misión semanal de 3 recetas, con 200 XP extra y racha de semanas.</li>
+<li>5 trajes de Kai que se desbloquean con XP.</li>
+<li>Postales de recetas y un «pasaporte de chef».</li>
+</ul></li>
+<li><strong>Pantallas</strong>: 4 pestañas (Inicio, Anime, Favoritos y Perfil). Además: búsqueda, receta, universo, onboarding, preferencias, trajes, rangos, postales, personalización y <code>/debug/ads</code>.</li>
+<li><strong>Web «Kai Kitchen»</strong> en <code>web/</code>. Lee las mismas recetas, tiene datos estructurados <code>Recipe</code> y AdSense opcional. Ojo: usa los nombres reales de las series («Recetas de Naruto», <code>web/src/data/seo.mjs</code>).</li>
+</ul>
+
+<h3>El recorrido del usuario</h3>
+<ol>
+<li><strong>Arranque</strong> (<code>app/_layout.tsx</code>). Pasan varias cosas a la vez:
+<ul>
+<li>Se arranca la analítica y empieza la sesión.</li>
+<li>Se lanza el formulario de consentimiento UMP de Google, que sirve a la vez para anuncios y analítica.</li>
+<li>Se guarda la fecha de la primera apertura, para pedir la valoración más adelante.</li>
+</ul>
+En el arranque en frío no sale ningún anuncio.</li>
+<li><strong><code>app/index.tsx</code></strong> mira si es la primera vez. Si lo es, te lleva a <code>/onboarding</code>; si no, a <code>/home</code>.</li>
+<li><strong>Onboarding en 3 pasos</strong> (<code>app/onboarding.tsx</code>, con un indicador «1 / 3»):
+<ul>
+<li><em>welcome</em>: marca «Kai Kitchen» y selector de idioma.</li>
+<li><em>preferences</em>: omnívoro o vegano, sistema métrico o imperial, y alergias e intolerancias en chips. Se puede saltar con «configurar más tarde».</li>
+<li><em>ready</em>: «Tu cocina está lista», con una cinta animada de recetas.</li>
+</ul>
+Al terminar te lleva a <code>/home</code>.</li>
+<li><strong>Inicio</strong>: carrusel automático, «Para ti», categorías (desayuno, postre, sopa, snack, exprés), tarjeta de misión semanal, «seguir cocinando» y un banner dentro del feed.</li>
+<li><strong>El momento «aha»</strong>, según mi lectura: abrir una receta que reconoces de una serie y entrar en el Modo Cocina. El kit lo mide como «Abren una receta» (<code>recipe_opened</code>) y «Se ponen a cocinar» (<code>cooking_mode_started</code>) en <code>apps.toml</code>.</li>
+<li><strong>Primer anuncio a pantalla completa</strong>: un intersticial en la 4.ª apertura de receta, que se dispara desde <code>RecipeCard</code>, la búsqueda y favoritos.</li>
+<li><strong>Valoración</strong>: se pide solo después de 3 días desde la primera apertura y con al menos 2 recetas terminadas (<code>utils/reviewPrompt.ts</code>).</li>
+<li><strong>Notificaciones: ninguna.</strong> <code>expo-notifications</code> no está entre las dependencias, así que no hay nada que haga volver a nadie.</li>
+<li><strong>Muro de pago: no hay.</strong></li>
+</ol>
+
+<h3>Cómo gana dinero, en detalle</h3>
+<ul>
+<li><strong>Planes y precios: ninguno en el código.</strong> No hay RevenueCat, ni compras integradas, ni prueba gratis, ni <code>source</code> de muro. La guía habla de «un vitalicio vendido» y de un <code>profile_banner</code>. No lo encuentro en este repo. Puede estar en la 1.4.0 de Play, que no está en el clon (inferencia), o puede ser un dato cruzado con otra app.</li>
+<li><strong>Intersticial</strong>:
+<ul>
+<li>Sale en la 4.ª de cada 4 aperturas de receta, y se pide en la 3.ª.</li>
+<li>Entre dos intersticiales pasan al menos 3 minutos, y entre dos anuncios a pantalla completa de cualquier tipo, al menos 2.</li>
+<li>Un anuncio cargado caduca a los 50 minutos.</li>
+<li>Existe también un intersticial «al terminar de cocinar» (<code>maybeShowCookingFinishInterstitial</code>), pero ninguna pantalla lo llama. En la práctica, no hay intersticial dentro de una receta.</li>
+</ul></li>
+<li><strong>App-open</strong>: solo al volver a la app desde segundo plano, nunca en frío, y nunca con el Modo Cocina abierto (<code>setCookingVisible</code>). Se pide al irse al fondo y caduca a las 3,5 horas.</li>
+<li><strong>Banners</strong>: 5 huecos que comparten unidad. <code>recipe_mrec</code> (un rectángulo mediano en la receta) y <code>home_feed</code> se ven. Los otros tres (<code>anime_list_end</code>, <code>favorites_list_end</code> y <code>anime_detail_list_end</code>) están al final de listas largas y casi nunca se ven.</li>
+<li><strong>Cifras</strong> (<code>PRODUCT_PRIORITIES.toml</code>, informe de AdMob del 6-09):
+<ul>
+<li>Unos 1,42 USD al mes.</li>
+<li>El intersticial se exhibe en el 24,1 % de las respuestas, pero tiene un eCPM de 12,03.</li>
+<li>El banner se exhibe en el 50,7 %, con un eCPM de 0,91.</li>
+<li>El 82,8 % de las peticiones sin anuncio viene de Rusia.</li>
+</ul></li>
+<li><strong>ATT y seguimiento en iOS</strong>: el mensaje de IDFA se activó el 8-09-2026, y la build 1.3.0 declara <code>NSPrivacyTracking = true</code> (<code>app.json</code>, <code>docs/ATT_IOS.md</code>). <code>docs/ATT_IOS.md</code> calcula que la ganancia es de 20 a 40 céntimos al mes.</li>
+</ul>
+
+<h3>Qué mide y qué no</h3>
+<ul>
+<li><strong>Bien pensado.</strong>
+<ul>
+<li><code>screen_viewed</code> lleva el tiempo que pasaste en la pantalla anterior, así que la estancia se mide aunque nadie cierre la app.</li>
+<li><code>session_ended</code> guarda la última pantalla, la duración y los anuncios vistos.</li>
+<li><code>ad_impression</code> lleva el ingreso real y la pantalla en la que salió.</li>
+<li>Los eventos de producto cubren la receta abierta (con su origen), favoritos, el Modo Cocina empezado y terminado (con la duración), la búsqueda con su número de resultados (los cero resultados son la lista de recetas que faltan), los filtros, el idioma, los pasos del onboarding y la valoración.</li>
+</ul></li>
+<li><strong>Hueco 1, el distinct_id roto, con su causa.</strong> En <code>app/_layout.tsx</code>, <code>startSession()</code> se ejecuta en el mismo <code>useEffect</code> que lanza el formulario UMP, antes de que este conteste. En ese momento <code>consentGranted</code> todavía vale <code>false</code>, y <code>startSession</code> llama a <code>client.reset()</code> (<code>utils/analytics.ts</code>). El resultado: <strong>cada arranque en frío estrena identificador, también para quien ya consintió</strong>. Retención, cohortes y usuarios únicos salen inflados o vacíos. Solo las vueltas desde segundo plano conservan el id.</li>
+<li><strong>Hueco 2.</strong> Si el mensaje de GDPR no está publicado en AdMob, el consentimiento queda en «desconocido» y en el EEE no sale ni un evento de los que lo necesitan. Es la tarea AF-TASK-010, que sigue abierta.</li>
+<li><strong>Hueco 3.</strong> No hay ningún evento de dinero propio: ni compras, ni muro.</li>
+<li><strong>Hueco 4.</strong> El README de analítica dice que el SDK captura solo el ciclo de vida, pero el código lo tiene apagado (<code>captureAppLifecycleEvents: false</code>). La documentación miente un poco.</li>
+<li><strong>Hueco 5.</strong> AdMob clasifica las 386 peticiones de iOS como Android. O no hay app iOS dada de alta, o la build usa el App ID equivocado (AF-TASK-012, pendiente).</li>
+</ul>
+
+<h3 class="ok">Fortalezas del producto</h3>
+<ul>
+<li><strong>Un Modo Cocina de verdad.</strong> Temporizadores por paso, voz, pantalla encendida y los ingredientes de cada paso (<code>components/CookingMode.tsx</code>, <code>utils/step-ingredients.ts</code>). Es lo que la marca promete («Cocina lo que ves»).</li>
+<li><strong>Doble versión, omnívora y vegana, más alergias</strong> en casi todas las recetas. Es un diferencial raro en un recetario de nicho (<code>data/recipes/*/*/vegan.md</code>, <code>AllergyWarning</code>).</li>
+<li><strong>Anuncios con respeto.</strong> Nada a pantalla completa en el arranque en frío, nada con el Modo Cocina abierto, separaciones mínimas entre anuncios y caducidad de lo cargado (<code>utils/admob.ts</code>). Además, el bug del intersticial huérfano ya está corregido (AF-TASK-007).</li>
+<li><strong>Una capa de juego coherente con el fan.</strong> Rangos por universo, trajes de Kai, misión semanal con racha y postales (<code>utils/gamification.ts</code>). Le da una razón para volver que no depende de notificaciones.</li>
+<li><strong>Analítica respetuosa y documentada</strong>: el nivel anónimo no guarda perfil, ni IP, ni el texto de las búsquedas. Hay tests en <code>__tests__/analytics.test.ts</code> y un contrato de eventos con el kit.</li>
+<li><strong>Petición de valoración en el buen momento</strong>: 3 días y 2 recetas terminadas, una sola vez (<code>utils/reviewPrompt.ts</code>).</li>
+<li><strong>Una web que reutiliza el contenido</strong> (<code>web/</code>): cada receta y su versión vegana tienen URL propia, con datos estructurados.</li>
+</ul>
+
+<h3 class="bad">Puntos débiles y riesgos</h3>
+<ul>
+<li><strong>iOS: anuncios con seguimiento en una app que Apple sigue revisando como de Niños.</strong> La marca «Apta para menores, 9-11» se quitó el 9-09, pero Apple avisó de que la app «seguirá revisándose según las directrices de la categoría Niños» (<code>docs/ATT_IOS.md</code>). Y la 1.3.0 pide ATT y declara seguimiento. Además, <code>utils/admob.ts</code> no usa <code>tagForChildDirectedTreatment</code> ni limita el contenido de los anuncios. La guía dice «nada de anuncios en Niños», pero la 1.2.1 de iOS ya sirve AdMob. Lo más probable es que el rechazo de la 1.3.0 venga de aquí (inferencia).</li>
+<li><strong>El distinct_id se reinicia en cada arranque</strong> (ver arriba). Sin arreglarlo, ningún informe de retención de PostHog vale.</li>
+<li><strong>El repo no es la fuente de verdad.</strong> En Play está la 1.4.0 (21) desde principios de octubre (<code>history.jsonl</code>), pero el repo sigue en la 1.3.0 del 21-09. Lo que se cobre o mida en la 1.4.0 no se puede auditar aquí.</li>
+<li><strong>La política de privacidad publicada se ha quedado atrás.</strong> AF-TASK-014 dice que no menciona la publicidad y bloquea la próxima publicación. El borrador existe (<code>docs/POLITICA_PRIVACIDAD.md</code>), pero la tarea sigue «todo».</li>
+<li><strong>Riesgo de propiedad intelectual en la web.</strong> La app usa universos genéricos, pero la web nombra series y personajes reales y prevé AdSense (commit c515a0b, <code>web/src/data/seo.mjs</code>). Además, <code>core/animes.ts</code> guarda 17 fichas con nombres reales (One Piece, Naruto, Pokémon…). Hoy es código muerto, pero sigue ahí.</li>
+<li><strong>Tres de cinco banners casi no se ven</strong>: están al final de listas. Son peticiones sin impresión que bajan la tasa de exhibición (AF-TASK-013).</li>
+<li><strong>Contenido a medias</strong>: 3 recetas desactivadas y 63 ingredientes sin arte, que salen con emoji (<code>INGREDIENTES-SIN-ARTE.md</code>).</li>
+<li><strong>Nada que haga volver fuera de la app</strong>: no hay notificaciones. Para una app de uso ocasional, la misión semanal solo funciona si te acuerdas de abrirla.</li>
+</ul>
+
+<h3>Lo que dirían los libros</h3>
+<ul>
+<li><strong>Essentialism (McKeown):</strong> hay 14 tareas en <code>PRODUCT_PRIORITIES.toml</code> para una app que ingresa 1,42 USD al mes. La guía ya pide declararla en mantenimiento, y el código lo confirma: casi todo el trabajo reciente ha ido a afinar anuncios cuyo techo se mide en céntimos.</li>
+<li><strong>Thinking in Bets (Duke):</strong> activar ATT para ganar de 20 a 40 céntimos al mes, en una app que Apple revisa como de Niños, fue una apuesta con la cola de riesgo mal pesada. Lo que se arriesgaba (un rechazo, o perder iOS) era desproporcionado frente a lo que se ganaba.</li>
+<li><strong>Antifragile (Taleb):</strong> la regla «nada que pueda romperte del todo» se aplica aquí a iOS. Quitar el seguimiento cuesta casi nada y elimina el peor escenario.</li>
+<li><strong>Lean Analytics (Croll y Yoskovitz):</strong> no hay una «métrica que importa» si cada arranque es un usuario nuevo. Arreglar el distinct_id va antes que cualquier panel.</li>
+<li><strong>Hooked (Eyal):</strong> el ciclo tiene acción (abrir una receta) y recompensa variable (XP, trajes), pero le falta el disparador externo. Sin notificaciones ni contenido fuera de la app, todo depende de que el fan se acuerde.</li>
+<li><strong>Actionable Gamification (Chou):</strong> rangos, trajes y racha semanal son «logro» y «posesión». Están bien hechos, pero aún no se ha medido si alguien termina una segunda receta gracias a ellos (<code>cooking_mode_completed</code> lo diría).</li>
+<li><strong>1.000 True Fans (Kelly):</strong> la web con nombres reales y la app con nombres genéricos dicen dos cosas distintas al mismo fan. Si la apuesta es la marca de contenido, el recetario ilustrado o la compra puntual sirven más que exprimir los banners.</li>
+<li><strong>Don't Make Me Think (Krug):</strong> tres banners al final de una lista son ruido para quien sí baja hasta abajo, y nada para AdMob, que no los ve. Es la peor de las dos combinaciones.</li>
+</ul>
+
+<h3>Qué cambiar primero</h3>
+<ol>
+<li><strong>Quitar el seguimiento en iOS antes de reenviar.</strong> Apaga el mensaje de IDFA, deja <code>NSPrivacyTracking</code> en <code>false</code>, sirve anuncios no personalizados con contenido limitado a público general (G) en iOS, y valora quitar los anuncios de iOS por completo. <em>Mide:</em> la versión de iOS aprobada (que pase de la 1.2.1) sin un rechazo por la 1.3. Cuesta unos céntimos al mes.</li>
+<li><strong>Arreglar el distinct_id en esa misma build.</strong> Que <code>startSession()</code> no llame a <code>reset()</code> hasta que se resuelva el consentimiento, o que guarde el último consentimiento y lo lea al arrancar. <em>Mide:</em> en PostHog, cuántos usuarios con <code>days_since_install</code> ≥ 1 vuelven con el mismo id. Hoy debería ser casi cero.</li>
+<li><strong>Subir al repo lo que hay en la 1.4.0 de Play</strong>, y aclarar si existe el vitalicio o el <code>profile_banner</code>. <em>Mide:</em> que la versión de <code>app.json</code> coincida con la de la tienda y que la compra tenga su evento.</li>
+<li><strong>Publicar la política de privacidad del borrador</strong> y revisar las etiquetas de privacidad en las dos tiendas (AF-TASK-014). <em>Mide:</em> tarea cerrada antes del próximo envío.</li>
+<li><strong>Quitar los tres banners de final de lista</strong> sin esperar más ventana. <em>Mide:</em> la tasa de exhibición global de banner en AdMob durante 30 días frente al 50,7 %. Los ingresos no deberían bajar.</li>
+</ol>
+
+</article>
+<footer><a href="modelos.html">← Modelos que funcionan</a><a href="parte-iii.html">Parte III: Posicionamiento y marca →</a></footer>
+</main></body></html>
