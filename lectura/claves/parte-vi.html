@@ -1,0 +1,461 @@
+<!doctype html>
+<html lang="es"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Claves · Parte VI: Conocer al cliente y decidir el producto</title>
+<meta name="description" content="Las claves de cada libro aplicadas a tus apps: ideas, aciertos, errores y qué cambiar.">
+<meta name="author" content="Claude">
+<meta property="article:published_time" content="2026-10-29">
+<style>
+:root{--bg:#fbfaf7;--fg:#1f2933;--muted:#6b7280;--line:#e5e7eb;--accent:#9a3412;--ok:#166534;--bad:#b91c1c;--card:#f3f0e8}
+@media(prefers-color-scheme:dark){:root{--bg:#12100e;--fg:#ede7d4;--muted:#9a9384;--line:#2c2823;--accent:#e8a33d;--ok:#86efac;--bad:#fca5a5;--card:#1c1915}}
+body{margin:0;background:var(--bg);color:var(--fg);font:18px/1.7 Georgia,"Times New Roman",serif}
+main{max-width:40em;margin:0 auto;padding:1.5rem 1rem 4rem}
+h1{font-size:1.8rem;line-height:1.25;margin:.2rem 0 1rem}
+h2{font-size:1.45rem;line-height:1.3;margin:3rem 0 .4rem;padding-top:1.2rem;border-top:2px solid var(--accent)}
+h3{font:700 15px/1.4 -apple-system,sans-serif;text-transform:uppercase;letter-spacing:.06em;margin:1.8rem 0 .4rem;color:var(--accent)}
+h3.ok{color:var(--ok)} h3.bad{color:var(--bad)}
+a{color:var(--accent)}
+em{color:var(--muted)}
+hr{border:0;border-top:1px solid var(--line);margin:2rem 0}
+nav,footer{font:14px/1.5 -apple-system,sans-serif;color:var(--muted)}
+nav a,footer a{margin-right:1rem}
+li{margin:.45rem 0}
+.ficha{background:var(--card);border-radius:.5rem;padding:.8rem 1rem;font:15px/1.55 -apple-system,sans-serif}
+.ficha p{margin:.25rem 0}
+.frase{border-left:3px solid var(--accent);padding-left:1rem;font-style:italic}
+</style></head><body><main>
+<nav><a href="./">← Claves</a><a href="../">Guía completa</a></nav>
+<article>
+<h1>Parte VI: Conocer al cliente y decidir el producto</h1>
+<p><em>Esta parte decide qué trabajo hace cada app en la vida de alguien, y con eso qué construir, qué quitar y qué app merece tu tiempo.</em></p>
+
+<h2>Lo esencial de esta parte</h2>
+<ul>
+<li><strong>Lo que la gente hizo vale más que lo que dice que hará.</strong> Los seis autores llegan a lo mismo por caminos distintos: preguntar por la última vez (Fitzpatrick, Torres), reconstruir la circunstancia de una compra (Christensen), medir cohortes y no totales (Ries), probar antes de construir (Cagan) y mirar a alguien usar la pantalla en lugar de discutirla (Krug).</li>
+<li><strong>Tienes el qué y te falta el porqué.</strong> Tu medición es muy buena: sabes que en TCM 234 personas ven el muro en una semana, 64 pulsan pagar y 10 se dan de alta. Pero las entrevistas que proponen tus propias fichas (cinco suscriptores y tres cancelados en TCM, cinco usuarios en Leo Glow) no constan como hechas. Ese hueco es el error común de toda la parte.</li>
+<li><strong>Ganas la primera contratación y pierdes la segunda.</strong> Tus fichas convierten (TCM, 36 % en Play y 44 % en iOS), pero Leo Glow retiene un 1,1 % al día 7 y TCM y Zodiaco no tienen curva. El cuello de botella ya no es atraer, es que vuelvan.</li>
+<li><strong>Decide con fecha y umbral, un cambio cada vez.</strong> Leo Glow y Anime Food necesitan una fecha de pivotar o perseverar escrita; TCM necesita no tocar lo que vende. Tu costumbre de un cambio por edición de ficha es justo lo que piden estos libros: llévala al producto.</li>
+<li><strong>El orden importa: valor antes que usabilidad.</strong> Pulir pantallas de un producto que nadie quiere solo hace que la gente se vaya antes y con las ideas más claras. Primero escuchar, luego decidir, luego pulir.</li>
+</ul>
+<p>Libros: <a href="#the-mom-test">The Mom Test</a> · <a href="#competing-against-luck">Competing Against Luck</a> · <a href="#continuous-discovery-habits">Continuous Discovery Habits</a> · <a href="#the-lean-startup">The Lean Startup</a> · <a href="#inspired">Inspired</a> · <a href="#dont-make-me-think">Don't Make Me Think</a></p>
+
+<!-- ============================================================ -->
+<h2 id="the-mom-test">The Mom Test · Rob Fitzpatrick (2013)</h2>
+<div class="ficha">
+<p><strong>En una frase:</strong> cómo hablar con usuarios de forma que ni siquiera alguien que te quiere pueda mentirte por educación: preguntando por su vida y por hechos pasados, no por tu idea ni por el futuro.</p>
+<p><strong>Cuánto te importa ahora:</strong> ★★★★★ — la decisión más grande de TCM (estudiante o curioso) y el estancamiento de Leo Glow dependen de conversaciones que todavía no has tenido.</p>
+<p><strong>Si solo haces una cosa:</strong> agenda las ocho conversaciones de TCM (cinco suscriptores, tres cancelados) antes del 6 de diciembre, con el guion de la ficha larga y sin enseñar la app hasta el final.</p>
+<p><strong>Capítulo largo:</strong> <a href="../601-the-mom-test.html">601 · The Mom Test</a></p>
+</div>
+
+<h3>Las ideas clave</h3>
+<ol>
+<li><strong>Preguntar si tu idea es buena no sirve.</strong> La gente es amable y te dirá que sí. El título viene de ahí: si le preguntas a tu madre si le gusta tu negocio, te mentirá por cariño. La solución no es buscar gente más sincera, sino hacer preguntas que no admitan una mentira piadosa.</li>
+<li><strong>Tres reglas lo resumen todo.</strong> Habla de su vida, no de tu idea. Pregunta por cosas concretas que ya pasaron, no por opiniones ni por lo que haría. Habla poco y escucha mucho. Si cumples las tres, la mayoría de los errores desaparecen solos.</li>
+<li><strong>El futuro es optimista; el pasado no se adorna tanto.</strong> «Lo pagaría» o «lo usaría cada día» casi nunca se cumplen. «La última vez que estudié para un examen hice esto» sí te dice algo. Si alguien dice que algo le preocupa mucho pero no ha buscado ninguna solución en un año, no le preocupa tanto.</li>
+<li><strong>Hay tres tipos de datos malos y cada uno tiene antídoto.</strong> Los cumplidos se ignoran y se vuelve a los hechos. Las generalidades («normalmente», «siempre») se convierten en un ejemplo concreto pidiendo la última vez. Las peticiones de funciones no se apuntan sin más: se excava detrás para saber qué intentaba hacer la persona y qué hace mientras tanto.</li>
+<li><strong>Tú también contaminas la conversación.</strong> Cuando te emocionas y empiezas a presentar el producto, cuando buscas aprobación o cuando la pregunta lleva la respuesta dentro. La alarma es salir de una charla contento y sin haber aprendido nada nuevo.</li>
+<li><strong>Busca a propósito la pregunta que da miedo.</strong> Cada tanda de conversaciones debería incluir una pregunta capaz de tumbar lo que crees. Prepara de antemano las tres preguntas más importantes para cada tipo de persona, porque en una charla real se te olvidan.</li>
+<li><strong>Lo informal da más verdad que lo formal.</strong> Una reunión solemne con agenda empuja a la gente a opinar como experta y a quedar bien. Diez o quince minutos de charla natural, o un intercambio de mensajes bien hecho, rinden más que un formulario largo.</li>
+<li><strong>Una buena conversación termina con un compromiso.</strong> No basta con que diga que le gustó. Tiene que dar un paso que le cueste algo: tiempo (otra llamada, probar una versión), reputación (presentarte a alguien, recomendarte) o dinero (pagar, reservar). Sin compromiso tienes educación, no interés.</li>
+<li><strong>Acota el segmento antes de hablar.</strong> Si hablas con todo el mundo, las respuestas se contradicen y no aprendes nada. Empieza por el grupo más concreto que puedas alcanzar y define dónde se le encuentra.</li>
+</ol>
+
+<h3>Conceptos y detalles que conviene saber</h3>
+<ul>
+<li><strong>Datos malos: cumplidos, generalidades e ideas.</strong> Las generalidades incluyen las promesas de futuro («lo usaré») y las hipótesis («si existiera…»). Las tres se reconocen y se reconducen sin discutir: un «¡qué buena idea!» se agradece y se vuelve a «¿y cómo lo resolviste la última vez?».</li>
+<li><strong>Las monedas del compromiso.</strong> Tiempo, reputación y dinero. Cuanto más cuesta el paso, más fiable es la señal. Una persona que no da ningún paso tras varias charlas amables es lo que el autor describe como un contacto que parece vivo y no lo está.</li>
+<li><strong>Las tres grandes preguntas.</strong> Antes de cada tanda, escribe las tres cosas que más necesitas aprender de ese grupo. Cambian según avanzas; si siguen siendo las mismas tras diez charlas, no estás preguntando bien.</li>
+<li><strong>Mirar antes de acercarte.</strong> El autor recomienda empezar amplio (cuál es el problema principal en su vida) antes de hacer zoom en el tuyo, para comprobar que tu problema importa de verdad y no solo porque tú lo has puesto sobre la mesa.</li>
+<li><strong>Enmarcar la petición.</strong> Para conseguir una conversación, el libro propone explicar brevemente qué intentas hacer, en qué punto estás, por qué necesitas ayuda y por qué esa persona en concreto puede dártela, y luego pedirla. Pedir ayuda funciona mejor que vender.</li>
+<li><strong>Notas con símbolos.</strong> Marcar en las notas, con signos sencillos, las emociones, los problemas, los objetivos, los obstáculos, los apaños que se monta la persona, el dinero y los compromisos. Así se releen en un minuto. Trabajando solo, reléelas a la semana, cuando ya no estás emocionado.</li>
+<li><strong>Preparar, hablar, repasar.</strong> El proceso tiene tres pasos y el tercero es el que más se salta: revisar lo aprendido y cambiar las preguntas o el plan en consecuencia.</li>
+</ul>
+
+<h3 class="ok">Lo que ya haces bien, según el autor</h3>
+<ul>
+<li><strong>Confías en el comportamiento, no en lo que la gente dice.</strong> Separas dispositivos de prueba, descartas días raros y no llamas «pico» a una muestra. Es el mismo instinto del libro: los hechos pesan más que las impresiones. Cuando el muro de TCM pasó de 0 a 12 pruebas por semana, lo leíste en eventos, no en opiniones.</li>
+<li><strong>Ya tienes compromisos reales que leer.</strong> En TCM hay gente que paga con dinero, la moneda más fiable del libro: 7 pruebas anuales cobradas entre el 14 y el 25 de octubre y un vitalicio de 119,99 $. Eso te da un grupo de personas con interés demostrado con las que hablar.</li>
+<li><strong>Tu primera pregunta estructurada pregunta por un hecho.</strong> «Cómo nos conociste» en Leo Glow, con la opción «ChatGPT u otra IA» desde la 2.0.4, es una pregunta sobre algo que ya pasó, no una opinión. Es el tipo de dato que el autor da por bueno.</li>
+<li><strong>Tus páginas de soporte prometen una persona real.</strong> Las de Leo Glow y Anime Food dicen que alguien lee el correo y contesta en dos o tres días. Es el contexto ideal para que la gente venga a ti, que es una de las formas de conseguir conversaciones que recomienda el libro.</li>
+</ul>
+
+<h3 class="bad">Errores que estás cometiendo, según el autor</h3>
+<ul>
+<li><strong>Las entrevistas propuestas no se han hecho.</strong> Las fichas de TCM y Leo Glow piden cinco suscriptores y tres cancelados, y cinco usuarios. En «Atender a tu público» consta que no hay registro de que se hicieran. El autor diría que estás tomando decisiones de categoría y de producto sin la única fuente que da el porqué.</li>
+<li><strong>Decides con la competencia, las búsquedas y la intuición.</strong> Es el diagnóstico de la introducción de esta parte. En Leo Glow has optimizado alrededor de la palabra «looksmaxxing» sin saber si quien la busca quiere un plan, gimnasio, aceptarse mejor o una nota. Una palabra clave es lo que la gente teclea, no lo que necesita.</li>
+<li><strong>No te has hecho la pregunta que da miedo en Leo Glow.</strong> Sospechas que parte del nicho quiere justo lo que tú no das: que le puntúen la cara. Mientras no lo preguntes, no sabes si tu postura es tu ventaja o tu freno. El libro insiste en buscar esa pregunta a propósito, no en evitarla.</li>
+<li><strong>Interpretas a los que no pagan sin hablar con ellos.</strong> Los 19 anuales de 22 que se cancelan en Leo Glow y los «not allowed» de TCM tienen hipótesis técnicas razonables, pero nadie ha contado cómo vivió ese momento. Ojo: aquí el dato técnico va primero (comprobar la hoja de Google); la conversación completa lo que el evento no dice, por ejemplo si un «cancelado» en realidad quería pagar y no pudo.</li>
+<li><strong>No hay sitio donde apuntar lo que oyes.</strong> No mides valoraciones ni reseñas, ni el correo de soporte por tipo. Sin notas, lo poco que escuchas se pierde o se queda en la memoria del día. El libro dedica un bloque entero a eso porque lo que no se apunta no cambia decisiones.</li>
+</ul>
+
+<h3>Qué cambiar, en orden</h3>
+<ol>
+<li><strong>TCM: ocho conversaciones antes del 6 de diciembre.</strong> Cinco suscriptores (reclútalos con una tarjeta en el Inicio y algo a cambio, como un mes gratis) y tres cancelados o pruebas no cobradas. Guion de la ficha 601: a qué te dedicas, la última vez que estudiaste algo de MTC, cómo lo resolvías antes, el día que decidiste pagar, qué harías si desapareciera. Mide: conversaciones hechas y, en cada una, para qué abrió la app la primera vez. Éxito: ocho y una respuesta provisional a estudiante frente a curioso. Si son menos de cuatro, pasa a una pregunta dentro de la app en vez de esperar.</li>
+<li><strong>Escribe tus tres preguntas de miedo antes de reclutar.</strong> TCM: ¿paga más y se queda más el estudiante? Leo Glow: ¿la gente quiere hábitos o quiere que le digan cómo es su cara? Anime Food: ¿alguien cocina de verdad las recetas? Mide: si cada ficha de entrevista responde, aunque sea en parte, a una de las tres.</li>
+<li><strong>Leo Glow: cinco conversaciones en diciembre, después de comprobar la hoja de Google.</strong> Recluta a los pocos que llegan al día 7 (con algo a cambio, por ejemplo un mes de Glow+) y a quien conteste «Otra cosa» en la encuesta de cancelación. Incluye la pregunta de las apps que puntúan la cara. Mide: cuántos mencionan la nota como algo que les enganchó.</li>
+<li><strong>Una hoja de cinco columnas y una ficha de una página por charla.</strong> Fecha, app, canal, frase literal y etiqueta (pago, fallo, idea, valor, confusión). Marca hechos, emociones, compromisos y peticiones, y relee una semana después. Mide: una decisión de producto escrita al mes que salga de la hoja.</li>
+<li><strong>Cierra cada charla con un compromiso pequeño.</strong> Otra llamada en un mes, presentarte a un compañero de clase, probar una versión nueva. Mide: cuántas conversaciones acaban con un paso concreto; si son casi ninguna, has tenido charlas amables, no aprendizaje.</li>
+<li><strong>Zodiaco y Anime Food: preguntas, no entrevistas.</strong> En Zodiaco, una pregunta en la app tras la tercera lectura sobre para qué la usan. En Anime Food, conversaciones solo con adultos que lleguen por redes; nunca reclutes desde la app de iOS, que está en la categoría Niños.</li>
+</ol>
+
+<h3>Dónde no hacerle caso</h3>
+<ul>
+<li>El libro está pensado para validar ideas antes de construir y, sobre todo, con clientes de empresa. Tus usuarios son de consumo: contestan menos, se pierden antes y necesitan algo a cambio para dedicarte quince minutos. Espera tasas de respuesta bajas.</li>
+<li>Una conversación da el porqué en muestras minúsculas. No cambies el precio de TCM porque lo diga una persona: usa la charla para formular la hipótesis y el embudo para confirmarla.</li>
+<li>Algunas preguntas tienen respuesta sin entrevistar. Si la hoja de Google de Leo Glow enseña un precio en lugar de «3 días gratis», no necesitas a nadie para saber por qué se cancela. Comprueba lo técnico primero.</li>
+<li>Límites que el libro no trata: privacidad (contacta solo a quien te haya dado un canal), menores (nada desde Anime Food en iOS) y salud (en TCM, ningún consejo médico aunque te cuenten una dolencia).</li>
+</ul>
+
+<p class="frase">Si sales de una conversación contento y sin nada nuevo apuntado, no has aprendido nada: pregunta por lo que la persona ya hizo, no por lo que opina de tu app.</p>
+
+<!-- ============================================================ -->
+<h2 id="competing-against-luck">Competing Against Luck · Clayton Christensen, Taddy Hall, Karen Dillon y David S. Duncan (2016)</h2>
+<div class="ficha">
+<p><strong>En una frase:</strong> la gente no compra productos; contrata algo para avanzar en una circunstancia concreta, y despide otra cosa para hacerlo.</p>
+<p><strong>Cuánto te importa ahora:</strong> ★★★★☆ — es la lente que ordena lo que oigas en las entrevistas y la que explica por qué Leo Glow atrae pero no retiene.</p>
+<p><strong>Si solo haces una cosa:</strong> escribe el trabajo de cada app en una frase con circunstancia («cuando…, quiero…, para…») y separa en tus métricas la gran contratación (instalar, pagar) de la pequeña (volver).</p>
+<p><strong>Capítulo largo:</strong> <a href="../602-competing-against-luck.html">602 · Competing Against Luck</a></p>
+</div>
+
+<h3>Las ideas clave</h3>
+<ol>
+<li><strong>Innovar parece cuestión de suerte porque los datos miran lo que no toca.</strong> Las empresas ordenan lo que saben por perfil de cliente (edad, ingresos) o por producto (funciones, categoría). Ninguna de las dos cosas explica por qué alguien compra. Las correlaciones entre atributos y compras no son causas.</li>
+<li><strong>Un trabajo es el progreso que alguien busca en una circunstancia.</strong> No es una necesidad genérica («quiero estar sano»), demasiado amplia para decidir nada. Lleva siempre contexto: dónde está la persona, qué le ha pasado, con quién, qué le preocupa. Sin circunstancia, no es un trabajo.</li>
+<li><strong>Lo emocional y lo social suelen pesar más que lo funcional.</strong> Quien estudia MTC no solo quiere memorizar puntos: quiere sentirse competente ante su profesor o su primer paciente. Si solo atiendes la parte funcional, compites en funciones con todo el mundo.</li>
+<li><strong>Contratar algo es despedir otra cosa.</strong> Tu competencia real no es la app parecida, sino todo lo que la persona usa hoy para ese trabajo, incluido no hacer nada. El ejemplo famoso es el del batido de una cadena de comida rápida: por la mañana competía con el plátano, la barrita y el aburrimiento del trayecto en coche, no con otros batidos.</li>
+<li><strong>Hay una gran contratación y muchas pequeñas.</strong> La grande es instalar o comprar; las pequeñas, cada vez que alguien vuelve a usarlo. Muchos productos ganan la primera y pierden las siguientes. Es exactamente un problema de retención.</li>
+<li><strong>Cambiar de solución es una lucha de fuerzas.</strong> Empujan la frustración con lo actual y el atractivo de lo nuevo; frenan los hábitos y la ansiedad ante lo desconocido. Si solo trabajas las fuerzas que empujan, mucha gente se queda a las puertas.</li>
+<li><strong>Hay trabajos escondidos en sitios concretos.</strong> En el no consumo (gente con el trabajo y sin ninguna solución), en los apaños que se monta la gente, en lo que evita hacer y en los usos inesperados de tu producto.</li>
+<li><strong>Entender el trabajo obliga a diseñar toda la experiencia.</strong> No solo el producto: también cómo se descubre, cómo se compra y cómo se usa. Cuando un producto queda tan unido a un trabajo que la gente lo piensa en cuanto surge la circunstancia, los autores lo llaman una marca con propósito.</li>
+<li><strong>Tus propios datos pueden engañarte.</strong> Con el tiempo, las empresas confunden las métricas que generan con la realidad del cliente y optimizan lo que se mide en lugar de lo que importa.</li>
+</ol>
+
+<h3>Conceptos y detalles que conviene saber</h3>
+<ul>
+<li><strong>La frase del trabajo.</strong> Cuando [situación], quiero [progreso], para [resultado emocional o social]. Si te sale sin situación, es un deseo genérico.</li>
+<li><strong>Gran y pequeña contratación.</strong> Medirlas por separado: descargas y altas por un lado; vuelta al día 2, 7 y 30 por otro.</li>
+<li><strong>Las fuerzas del cambio.</strong> Empuje de la situación, atracción de lo nuevo, inercia del hábito y ansiedad. Útil para diseñar el muro: la prueba gratis y el aviso antes del cobro atacan la ansiedad.</li>
+<li><strong>No consumo.</strong> Gente que tiene el trabajo pero no usa nada porque lo existente es caro, complicado o no encaja. Suele ser un mercado mayor de lo que parece.</li>
+<li><strong>Trabajos negativos y apaños.</strong> Lo que la gente evita y lo que improvisa delatan trabajos mal atendidos.</li>
+<li><strong>Ejemplos del libro.</strong> El batido de la mañana; la Southern New Hampshire University, que entendió que sus alumnos adultos a distancia tenían un trabajo distinto al de los jóvenes recién salidos del instituto y rediseñó desde la respuesta a las solicitudes hasta el acompañamiento. Lo que importa es el patrón: quitar los obstáculos de una circunstancia concreta.</li>
+<li><strong>Las trampas de los datos.</strong> Los autores avisan de que los datos internos tienden a describir el producto y no el trabajo, a premiar el crecimiento superficial y a acomodarse a lo que ya se mide.</li>
+</ul>
+
+<h3 class="ok">Lo que ya haces bien, según el autor</h3>
+<ul>
+<li><strong>Ya piensas en lo que se despide.</strong> Tus fichas de marca definen la «alternativa real» de cada app sin nombrar otra app: el libro de texto caro, los apuntes y YouTube en TCM; los gurús, los foros y las apps que puntúan la cara en Leo Glow; buscar «horóscopo chino hoy» en Google en Zodiaco. Es el pensamiento de los trabajos aplicado al posicionamiento.</li>
+<li><strong>Leo Glow atiende un trabajo que nadie reclama.</strong> Vender hábitos sin puntuar la cara es una respuesta distinta a la misma lucha. El autor diría que es un hueco real si el trabajo existe; tu tarea es comprobarlo.</li>
+<li><strong>El muro de TCM ya responde a un trabajo de compromiso.</strong> El anual con prueba cierra 12 de 87 y el mensual 1 de 9. Encaja con alguien que se prepara para algo largo, y tu ficha de marca ya lo lee como una señal de qué contrata tu cliente, no como un fallo del mensual.</li>
+<li><strong>Has empezado a diseñar la experiencia de uso alrededor del progreso.</strong> En Leo Glow 2.0.4 el alta lleva al día 1 del plan con la acción más corta arriba, y Hoy solo enseña el plan hasta cerrar el día 1. Es diseñar la pequeña contratación, no solo la grande.</li>
+</ul>
+
+<h3 class="bad">Errores que estás cometiendo, según el autor</h3>
+<ul>
+<li><strong>Un mensaje para dos trabajos en TCM.</strong> El estudiante («cuando tengo un examen o un paciente delante y no relaciono síntoma, patrón y puntos») y la curiosa («cuando noto algo en mi cuerpo y quiero entenderlo según la medicina china») llegan al mismo onboarding y al mismo muro. Tu ficha de marca lo describe: dos públicos mezclados en el mismo mensaje. El autor diría que así no le hablas bien a ninguno.</li>
+<li><strong>Segmentas por la palabra que se busca, no por la circunstancia.</strong> En Leo Glow, la gran contratación ocurre con «looksmaxxing», que viene cargada del trabajo «saber dónde estoy» (la nota); la pequeña exige otro trabajo («un plan que pueda seguir»). Esa grieta puede explicar parte del d1 del 11,6 % y el d7 del 1,1 %. Es una hipótesis, pero encaja con lo que el libro describe.</li>
+<li><strong>Mides la gran contratación con lupa y la pequeña casi nada.</strong> Tienes multiplicadores por edición de ficha (TCM iOS ×4,4 en visitas) y conversión de la ficha por tienda, pero TCM y Zodiaco no mandan days_since_install y no hay curva. El autor diría que optimizas la puerta y no sabes si alguien se queda dentro.</li>
+<li><strong>En Zodiaco no sabes qué se contrata.</strong> Lectura diaria, compatibilidad, mascota con misiones y club conviven sin que sepas cuál es el trabajo principal. El pico de febrero sugiere un trabajo estacional (qué me trae el año) y el rewarded que cobra sugiere otro (entretenimiento con recompensa). La web de más de 1.600 páginas compitió en volumen, no en un trabajo concreto.</li>
+<li><strong>Anime Food sigue sin decidir qué contrata la gente.</strong> Si es «entretenerme con algo bonito», el trabajo lo hace el vídeo y la app sobra; si es «cocinar algo que me conecte con lo que me gusta», la app tiene sentido. Con 1,7 descargas diarias en Play, los datos apuntan a lo primero y la decisión sigue abierta.</li>
+</ul>
+
+<h3>Qué cambiar, en orden</h3>
+<ol>
+<li><strong>TCM: cruza la pregunta del objetivo con la compra.</strong> La pregunta del onboarding ya separa estudiantes y curiosos. Sin cambiar el muro (que no se toca este mes), cruza la respuesta con altas por persona que llega al muro y, cuando tengas days_since_install, con la retención semanal. Mide: altas por vista del muro según respuesta. La decisión de categoría espera a las ocho conversaciones, como dice el plan.</li>
+<li><strong>En las entrevistas de TCM, reconstruye la historia de compra.</strong> Qué pasó el día que empezaron a buscar, qué consideraron, qué casi les frena. Mide: cuántas historias nombran un examen, un paciente o una clase frente a una molestia propia.</li>
+<li><strong>Leo Glow: busca el trabajo en los que vuelven el día 7.</strong> Son pocos. Mira en PostHog qué hacen que no hacen los demás y habla con ellos. Mide: si la acción del plan del día 0 separa la vuelta (la pista del 11 de octubre era 53 % frente a 0 de 9), con al menos unas 30 personas por grupo.</li>
+<li><strong>Leo Glow: ataca la ansiedad en el muro, no solo el deseo.</strong> «No se cobra nada hoy» debajo del botón y un aviso antes del cobro con lo que la persona ha hecho. Es parte del muro de TCM que el plan ya te pide copiar. Mide: pruebas iniciadas por persona que ve el muro.</li>
+<li><strong>Zodiaco: mide cuál de los trabajos retiene.</strong> Vuelta al día siguiente de quien hace una compatibilidad el día 0 frente a quien no. Una medida, no un cambio. Si separa, apúntalo para la marca de 2027.</li>
+<li><strong>Anime Food: cuenta recetas abiertas completas cuando el distinct_id funcione.</strong> Mientras tanto, mide descargas por 1.000 vistas por formato de vídeo. Si casi nadie llega a cocinar, el trabajo lo hace el vídeo.</li>
+</ol>
+
+<h3>Dónde no hacerle caso</h3>
+<ul>
+<li>Casi todos los casos son de grandes empresas y consultoría, con equipos de investigación y rediseños organizativos. Esa ejecución no te aplica: quédate con la pregunta, no con el aparato.</li>
+<li>«Trabajo» es un concepto fácil de usar mal. Una frase bonita sin circunstancia te deja igual que estabas.</li>
+<li>El libro no trae un método de entrevista detallado. Para eso, The Mom Test o los libros de Bob Moesta.</li>
+<li>Las historias de éxito dan la impresión de que el trabajo se descubre de golpe. En la práctica se afina con muchas conversaciones y datos, y con tus volúmenes tardará meses.</li>
+</ul>
+
+<p class="frase">Nadie quiere tu app: quiere avanzar en algo en un momento concreto. Encuentra ese momento y sabrás qué sobra, qué falta y contra qué compites de verdad.</p>
+
+<!-- ============================================================ -->
+<h2 id="continuous-discovery-habits">Continuous Discovery Habits · Teresa Torres (2021)</h2>
+<div class="ficha">
+<p><strong>En una frase:</strong> descubrir qué construir no es una fase al principio, es un hábito semanal: hablar con clientes a menudo y ordenar lo aprendido en un árbol que conecta cada idea con el resultado que quieres mover.</p>
+<p><strong>Cuánto te importa ahora:</strong> ★★★☆☆ — su árbol ataca de lleno tu dispersión, pero el ritmo semanal pensado para equipos hay que adaptarlo a una persona con cuatro apps.</p>
+<p><strong>Si solo haces una cosa:</strong> elige un resultado de producto por app para el trimestre y dibuja su árbol: resultado arriba, oportunidades en medio, al menos tres soluciones para la oportunidad elegida.</p>
+<p><strong>Capítulo largo:</strong> <a href="../603-continuous-discovery-habits.html">603 · Continuous Discovery Habits</a></p>
+</div>
+
+<h3>Las ideas clave</h3>
+<ol>
+<li><strong>El descubrimiento es continuo o no sirve.</strong> Torres lo define como contactos semanales con clientes, hechos por el mismo equipo que construye, con actividades pequeñas y orientadas a un resultado. Cada palabra importa: semanal y no trimestral; el que construye, no un departamento que entrega un informe; pequeño, no un gran estudio.</li>
+<li><strong>Se trabaja sobre resultados, no sobre funciones.</strong> Una función terminada no es un éxito; lo es un cambio en lo que hacen los clientes. Por eso el punto de partida es decidir qué resultado quieres mover.</li>
+<li><strong>Prefiere resultados de producto a resultados de negocio.</strong> Ingresos o cuota son de negocio y dependen de muchas cosas. Lo que hacen los usuarios dentro del producto (volver el día 7, llegar al cobro de la prueba) es de producto y lo puedes influir directamente. Cuidado con los objetivos que son funciones disfrazadas.</li>
+<li><strong>El árbol de oportunidades y soluciones hace visible el porqué.</strong> Arriba el resultado; debajo, las oportunidades (necesidades, problemas y deseos del cliente); debajo de cada una, varias soluciones; y debajo de cada solución, los supuestos y las pruebas. Evita saltar de idea en idea sin conexión con lo que importa.</li>
+<li><strong>Entrevistar es pedir historias.</strong> No «cómo estudias» sino «cuéntame la última vez que estudiaste para un examen», y tirar del hilo hasta que la historia esté completa. Las historias revelan oportunidades que la persona nunca te diría si se lo preguntaras directamente.</li>
+<li><strong>Las oportunidades se formulan desde el cliente.</strong> «No sé qué estudiar primero» es una oportunidad; «falta un plan de estudio» es una solución disfrazada. Si una oportunidad solo admite una solución, probablemente no es una oportunidad.</li>
+<li><strong>Compara opciones hermanas, no todo a la vez.</strong> Para elegir, compara oportunidades del mismo nivel con criterios sencillos (cuánta gente la tiene, cuánto les importa, cómo encaja con tu estrategia). Y para la elegida, genera varias soluciones: comparar tres reduce el apego a la tuya.</li>
+<li><strong>Prueba supuestos, no ideas enteras.</strong> Cada solución descansa en supuestos. Se apuntan, se eligen los más arriesgados y menos comprobados y se diseña una prueba pequeña para cada uno, antes de programar.</li>
+<li><strong>El trío de producto descubre junto.</strong> Producto, diseño e ingeniería deciden juntos. Para ti, son tres sombreros, y el riesgo es que gane siempre el de ingeniero, que es el que más disfrutas.</li>
+</ol>
+
+<h3>Conceptos y detalles que conviene saber</h3>
+<ul>
+<li><strong>Tipos de supuestos.</strong> Deseabilidad (¿lo quieren?), viabilidad (¿nos sale a cuenta?), factibilidad (¿podemos construirlo?), usabilidad (¿sabrán usarlo?) y éticos (¿hace daño a alguien?). El ético es muy tuyo en Leo Glow.</li>
+<li><strong>Mapa de supuestos.</strong> Ordenarlos por importancia y por cuánta evidencia tienes. Se prueba primero el importante del que menos sabes.</li>
+<li><strong>Ficha de entrevista.</strong> Una página por conversación: quién era, lo que más te llamó la atención, las oportunidades que aparecieron, una frase suya para recordar (para ti, no para publicar) y qué querrías aprender después.</li>
+<li><strong>Reclutamiento automatizado.</strong> Una invitación fija dentro del producto para que haya siempre alguien en la agenda sin esfuerzo.</li>
+<li><strong>Mapa del recorrido.</strong> Dibujar en papel lo que vive el cliente con tu producto para encontrar dónde están las oportunidades. Tus embudos de onboarding ya son medio mapa.</li>
+<li><strong>Pruebas pequeñas.</strong> Una prueba no moderada, una pantalla falsa, una pregunta en el onboarding, un correo. Buscan señales claras comparando varias ideas a la vez, no significación estadística.</li>
+<li><strong>Trampas que señala la autora.</strong> Buscar certeza absoluta, investigar sin decidir nunca, o dibujar el árbol y olvidarlo en un cajón.</li>
+</ul>
+
+<h3 class="ok">Lo que ya haces bien, según la autora</h3>
+<ul>
+<li><strong>Tu plan de noviembre ya tiene un resultado por app.</strong> «Que existan pruebas en Android» en Leo Glow, «saber cuánta gente vuelve» en Zodiaco, «recuperar a quien quiere pagar y no puede» en TCM. Son resultados de producto, no funciones. Es el primer paso del libro.</li>
+<li><strong>Ya trabajas con pruebas pequeñas y medidas.</strong> En el ASO mides cada edición por separado y has aprendido también de lo que salió mal (Anime Food Play, visitantes ×0,31). Es exactamente el hábito que Torres quiere para el producto.</li>
+<li><strong>Usas preguntas en la app como prueba barata.</strong> La procedencia «ChatGPT u otra IA» en Leo Glow 2.0.4 es una pregunta pequeña, automática y cruzable con lo que la persona hace después. Es una actividad de investigación del tamaño que recomienda la autora.</li>
+<li><strong>Ya tienes historias guionizadas.</strong> Los guiones de la ficha 601 piden la última vez, no opiniones. Están listos para el formato de historia que propone el libro.</li>
+</ul>
+
+<h3 class="bad">Errores que estás cometiendo, según la autora</h3>
+<ul>
+<li><strong>Ningún contacto regular con usuarios.</strong> No consta ninguna conversación, ni reseñas medidas, ni correo de soporte contado. Torres diría que el descubrimiento que no tiene ritmo no existe: se hace una vez y se olvida.</li>
+<li><strong>Soluciones sin oportunidad detrás en Leo Glow.</strong> Ruleta, avatar que sube de nivel, coach Leo, ligas y rachas conviven, y el capítulo de muros reconoce que no sabes qué compra la gente. El rewarded de la ruleta tiene 66 cargas y 1 enseñado. Son ramas de solución sin una oportunidad clara arriba.</li>
+<li><strong>El sombrero de ingeniero gana.</strong> Construiste más de treinta pantallas en la consola y luego podaste la mitad. Es el síntoma que la autora describe: construir es más cómodo que preguntar, y se nota en cuánto se tira después.</li>
+<li><strong>Las ideas pendientes no se conectan con un resultado.</strong> Con once apps, cuatro líneas de vídeo y webs en varios idiomas, cada idea compite con las demás sin un árbol que diga cuál mueve lo que importa. La dispersión que señala la lectura del portfolio es, en términos del libro, un árbol que no existe.</li>
+</ul>
+
+<h3>Qué cambiar, en orden</h3>
+<ol>
+<li><strong>Un árbol por app en una página, empezando por TCM.</strong> Resultado: más altas por persona que llega al muro. Oportunidades: no puedo pagar (el «not allowed», 1 de cada 6 que pulsa pagar), no sé si es para mí (estudiante o curiosa), miedo a comprometerme. La primera rama es la más grande y no necesita entrevistas. Mide: que cada tarea del plan de noviembre cuelgue de una rama.</li>
+<li><strong>Un bloque fijo de 45 minutos a la semana y una app por mes.</strong> Noviembre TCM, diciembre Leo Glow, enero Zodiaco, como propone «Atender a tu público». Quince minutos son para una conversación o para las invitaciones de la siguiente. Mide: conversaciones por mes y decisiones que salen de ellas.</li>
+<li><strong>Automatiza el reclutamiento.</strong> Una tarjeta fija en el Inicio de TCM para suscriptores y para quien lleva varias sesiones, con algo a cambio. En Leo Glow, una invitación a quien llega al día 7. Mide: invitaciones aceptadas por semana.</li>
+<li><strong>Leo Glow: oportunidad antes que función.</strong> Antes de tocar ruleta, ligas o coach, la pregunta del plan («¿qué compras: Leo, el plan de 30 días, las ligas?») a quien completa la primera semana. Mide: unas veinte respuestas antes del 13 de diciembre.</li>
+<li><strong>Apunta los supuestos de cada solución por tipo, incluido el ético.</strong> En Leo Glow: «una racha que castiga no hace sentir peor a un chico joven» es un supuesto ético que hay que comprobar, no dar por hecho. Mide: un supuesto probado por mes, el más arriesgado primero.</li>
+<li><strong>Revisa el árbol cada dos semanas y poda.</strong> Coincide con la revisión del 13 de diciembre del plan. Mide: ramas cerradas, no solo ramas añadidas.</li>
+</ol>
+
+<h3>Dónde no hacerle caso</h3>
+<ul>
+<li>Está escrito para equipos de producto en empresas, con un trío y alguien que decide por encima. Tú eres las tres personas y quien decide: la parte de alinear a la dirección sobra.</li>
+<li>Una entrevista por semana es razonable para un equipo con un producto. Con cuatro apps, una charla suelta por app se reparte demasiado: mejor una app por mes, en bloque.</li>
+<li>Reclutar usuarios de consumo en apps pequeñas cuesta mucho más que en productos de empresa. Ofrece algo concreto a cambio y acepta muestras pequeñas.</li>
+<li>Con tus volúmenes (Leo Glow, unas 8,6 descargas diarias en Play), muchas pruebas pequeñas darán ruido. Busca efectos grandes y no conviertas cinco respuestas en un porcentaje.</li>
+</ul>
+
+<p class="frase">Una idea sin una oportunidad del cliente encima es una apuesta a ciegas; un árbol pequeño, revisado cada dos semanas, te dice qué hacer y, sobre todo, qué dejar.</p>
+
+<!-- ============================================================ -->
+<h2 id="the-lean-startup">The Lean Startup · Eric Ries (2011)</h2>
+<div class="ficha">
+<p><strong>En una frase:</strong> en condiciones de incertidumbre no se ejecuta un plan, se gestiona el aprendizaje: construir lo mínimo, medir el comportamiento real y decidir con fecha si perseverar o pivotar.</p>
+<p><strong>Cuánto te importa ahora:</strong> ★★★★☆ — te da lo que más te falta: cohortes en lugar de totales y un criterio escrito para dejar algo (Anime Food, quizá Leo Glow).</p>
+<p><strong>Si solo haces una cosa:</strong> pon una fecha de decisión a Leo Glow (final de enero) con varios experimentos sobre el d7, cada uno con su predicción escrita antes.</p>
+<p><strong>Capítulo largo:</strong> <a href="../604-the-lean-startup.html">604 · The Lean Startup</a></p>
+</div>
+
+<h3>Las ideas clave</h3>
+<ol>
+<li><strong>Lo que hay que gestionar es el aprendizaje.</strong> Una startup crea algo nuevo con mucha incertidumbre, y ahí planificar y ejecutar falla porque no sabes qué quiere el cliente. Ries propone el aprendizaje validado: cosas ciertas sobre los clientes, demostradas con su comportamiento real.</li>
+<li><strong>Construir, medir, aprender, lo más rápido posible.</strong> El ciclo es el motor. El progreso no se mide por lo construido, sino por lo aprendido sobre qué crea valor. El trabajo que no enseña nada sobre el cliente es desperdicio, aunque esté bien hecho. Ries lo aprendió en IMVU, construyendo durante meses algo que nadie quería.</li>
+<li><strong>Todo negocio descansa en dos hipótesis de fe.</strong> La de valor (¿da valor real a quien lo usa?) y la de crecimiento (¿cómo llegan nuevos clientes?). Hay que escribirlas y probarlas primero, porque son las de más riesgo. Invertir en crecimiento sin validar el valor es llenar un cubo agujereado.</li>
+<li><strong>El producto mínimo viable es la forma más barata de aprender.</strong> No es una versión pequeña del producto final. Puede ser un vídeo, como el que usó Dropbox para medir interés antes de tener producto, o atender a mano, como hizo Zappos comprando en tiendas los zapatos que alguien pedía antes de montar inventario.</li>
+<li><strong>Las métricas de vanidad halagan; las accionables deciden.</strong> Descargas totales o usuarios acumulados suben aunque el producto no mejore. Las buenas métricas son accionables (relacionan causa y efecto), accesibles (cualquiera las entiende) y auditables (se pueden comprobar contra la realidad).</li>
+<li><strong>La cohorte es la herramienta central.</strong> Comparar grupos que llegaron en momentos distintos dice si tus cambios mejoran el comportamiento. Si la cohorte de esta semana retiene como la del mes pasado, tus cambios no han servido aunque crezcan las descargas.</li>
+<li><strong>Pivotar o perseverar, con reuniones periódicas.</strong> Si varios experimentos no mueven la métrica que importa, toca un pivote: un cambio estructurado de una parte de la estrategia, conservando lo aprendido. El mayor riesgo no es pivotar mal, sino no pivotar nunca y quedarse en tierra de nadie, donde el producto ni muere ni despega.</li>
+<li><strong>Lotes pequeños aprenden más rápido.</strong> Publicar cambios pequeños a menudo detecta errores antes que las grandes versiones.</li>
+<li><strong>Elige un motor de crecimiento.</strong> Pegajoso (retener: que entren más de los que se van), viral (que los usuarios traigan a otros) o de pago (que lo que ganas por cliente supere lo que cuesta conseguirlo). Ries recomienda centrarse en uno.</li>
+</ol>
+
+<h3>Conceptos y detalles que conviene saber</h3>
+<ul>
+<li><strong>Contabilidad de la innovación, en tres pasos.</strong> Fijar una línea base con un producto mínimo, ajustar el motor con experimentos para acercarte al ideal, y decidir si perseverar o pivotar.</li>
+<li><strong>Tipos de pivote.</strong> Ampliar una función hasta convertirla en el producto (o al revés), cambiar de segmento, cambiar la necesidad que atiendes, pasar a plataforma, cambiar la forma de captar valor, cambiar el motor de crecimiento, cambiar el canal o cambiar la tecnología.</li>
+<li><strong>Tipos de producto mínimo.</strong> El vídeo, el de conserje (atender a mano a unos pocos clientes antes de automatizar) y el del mago de Oz (parece automático y por detrás lo hace una persona).</li>
+<li><strong>Las tres A de una buena métrica.</strong> Accionable, accesible, auditable.</li>
+<li><strong>Los cinco porqués.</strong> Ante un fallo, preguntar por qué cinco veces hasta llegar a la causa raíz, y corregir en proporción al daño.</li>
+<li><strong>Experimentos A/B.</strong> La forma de saber qué cambio causa qué efecto, si tienes volumen para leerlos.</li>
+</ul>
+
+<h3 class="ok">Lo que ya haces bien, según el autor</h3>
+<ul>
+<li><strong>Trabajas en lotes pequeños.</strong> Un cambio por edición de ficha, medido con su multiplicador, y la regla del plan de un cambio por app y por semana. Es exactamente lo que defiende Ries.</li>
+<li><strong>Tus métricas son auditables.</strong> Separas tus dispositivos (los 212 «usuarios de iOS» que eran tu Mac), quitas robots y eventos de desarrollo y desconfías de diferencias menores que dos veces la raíz de la cifra esperada. Pocas personas solas tienen esa higiene.</li>
+<li><strong>Has validado la hipótesis de valor en TCM.</strong> Hay gente que paga: el anual con prueba cierra 12 de 87 y las primeras pruebas anuales se cobraron en octubre. Y lo hiciste con aprendizaje validado: el muro pasó de 0 a 12 pruebas por semana con la misma oferta de Play, cambiando el diseño.</li>
+<li><strong>Juzgas por valor por persona, no por cuántos pasan.</strong> La bienvenida de TCM deja pasar a menos gente y vende más (3-3,6 % por persona frente a 1,1-1,7 %). Es una métrica accionable, no de vanidad.</li>
+</ul>
+
+<h3 class="bad">Errores que estás cometiendo, según el autor</h3>
+<ul>
+<li><strong>Anime Food vive en tierra de nadie.</strong> Lleva meses con la duda de si es producto o canal, con 1,7 descargas diarias en Play y 3 en iOS, y la reversión de la ficha que salió mal (×0,31) sigue sin publicarse. Ries diría que es el caso típico de lo que ni muere ni despega y te consume atención.</li>
+<li><strong>Leo Glow invierte en crecimiento sin haber validado el valor.</strong> Ajustes de nombre y de keywords mientras el d7 está en el 1,1 % y no hay ninguna prueba en Android en 30 días. Tu propia lectura lo llama pulir la puerta de una casa sin suelo. Para el autor, cada usuario nuevo se pierde igual.</li>
+<li><strong>Sin cohortes en TCM y Zodiaco.</strong> No mandan days_since_install, así que no sabes si los cambios del onboarding mejoran la calidad de quien entra o solo la cantidad, ni si quien paga el anual sigue abriendo la app. Es la contabilidad de la innovación sin su herramienta central.</li>
+<li><strong>Ningún criterio escrito para dejar algo.</strong> Siete apps sin analítica y sin decisión, y ninguna fecha de pivotar o perseverar para Leo Glow ni Anime Food. Sin fecha, la decisión se aplaza indefinidamente.</li>
+<li><strong>La web de Zodiaco fue un lote enorme.</strong> Más de 1.600 páginas en siete idiomas antes de saber si Google las premiaría, y casi todas las impresiones perdidas desde el 12 de octubre. Es lo contrario de un lote pequeño. Qué causó la caída es una hipótesis: Google no explica sus caídas.</li>
+</ul>
+
+<h3>Qué cambiar, en orden</h3>
+<ol>
+<li><strong>TCM y Zodiaco: days_since_install y una línea base sin tocar nada.</strong> Cuatro cohortes semanales de la versión actual con d1, d7 y d30 (en TCM, además, «abrió al menos una vez en la semana 4»). Mide: a mediados de diciembre puedes leer el d7 de al menos dos cohortes. Si el evento llega vacío, arréglalo antes de mirar nada más.</li>
+<li><strong>Leo Glow: fecha y predicción escrita.</strong> De aquí a final de enero, varios experimentos sobre el d7, uno cada vez y empezando por el muro y el día 1 que ya pide el plan. Antes de cada uno, la frase: «si hago X, el d7 pasa de 1,1 % a Y». Si ninguno lo mueve de forma clara, toca replantear el producto, no el muro. Como el d7 de una semana son una o dos personas, junta al menos un mes de instalaciones de Play para leerlo.</li>
+<li><strong>Leo Glow: un producto mínimo de conserje para el coach.</strong> Cuando el muro esté resuelto, atiende tú a mano, como si fueras Leo, a unos diez usuarios durante dos semanas y apunta qué piden. Es más barato que afinar la IA a ciegas. Mide: qué peticiones se repiten.</li>
+<li><strong>Anime Food: escribe las dos hipótesis de valor y pon fecha.</strong> «La gente usará la app para cocinar platos del anime» frente a «la gente seguirá la cuenta para ver estos platos». Declara ya mantenimiento, como dice el plan, y fija un umbral para revisarlo en tres meses (por ejemplo, recetas guardadas por semana cuando el distinct_id funcione). Mide: descargas por 1.000 vistas por formato.</li>
+<li><strong>Las siete menores: una frase cada una antes del 29 de noviembre.</strong> Mantener sin tocar, analítica mínima o archivar. Sin decisión, quedan congeladas por defecto.</li>
+<li><strong>Los cinco porqués con cada rotura.</strong> Ya tienes dos fallos de avisos (TCM 1.0.7 y Zodiaco con R8). La causa raíz no es el fallo concreto, sino que no hay una prueba en móvil real con la build de release antes de cada subida. Mide: cada versión pasa esa prueba.</li>
+</ol>
+
+<h3>Dónde no hacerle caso</h3>
+<ul>
+<li>Está pensado para startups que buscan crecer mucho con inversión. Tus apps son negocios pequeños: una app que se mantiene sola y da algo de dinero puede ser un éxito aunque no crezca. Mantener Zodiaco o Anime Food no es fracasar.</li>
+<li>Los experimentos A/B necesitan volumen. Con unas 8,6 descargas diarias en Leo Glow, un A/B pequeño tarda semanas; busca cambios grandes y efectos grandes.</li>
+<li>«Producto mínimo» se ha usado como excusa para sacar cosas malas. En las tiendas, una mala primera impresión deja reseñas que pesan mucho tiempo, y un rechazo de Apple cuesta semanas.</li>
+<li>Toda la parte de organización (equipos, espacios de innovación dentro de grandes empresas) no te aplica.</li>
+</ul>
+
+<p class="frase">Lo que no se mide por cohortes no se sabe, y lo que no tiene fecha de decisión no se decide nunca: escribe la predicción antes del cambio y respeta el día de elegir.</p>
+
+<!-- ============================================================ -->
+<h2 id="inspired">Inspired · Marty Cagan (segunda edición, 2017)</h2>
+<div class="ficha">
+<p><strong>En una frase:</strong> los buenos equipos de producto separan descubrir qué construir de construirlo, y despejan cuatro riesgos (valor, usabilidad, factibilidad y viabilidad) con prototipos baratos antes de escribir código de producción.</p>
+<p><strong>Cuánto te importa ahora:</strong> ★★★☆☆ — la mitad del libro es organización de empresas, pero los cuatro riesgos y los tipos de prototipo son una herramienta de foco inmediata para quien construye rápido.</p>
+<p><strong>Si solo haces una cosa:</strong> antes de cualquier función nueva, escribe los cuatro riesgos y cuál es el mayor; si es de valor, prueba con el prototipo más barato posible.</p>
+<p><strong>Capítulo largo:</strong> <a href="../605-inspired.html">605 · Inspired</a></p>
+</div>
+
+<h3>Las ideas clave</h3>
+<ol>
+<li><strong>El proceso habitual es la causa del fracaso.</strong> Ideas que llegan de arriba, una hoja de ruta que las ordena como si se supiera su valor, requisitos antes de validar, diseño tarde, ingeniería más tarde y validación cuando ya es caro cambiar. Cagan estima, por experiencia, que la mitad o más de lo que se construye no da el resultado esperado.</li>
+<li><strong>Descubrir y entregar son dos trabajos distintos.</strong> Descubrir es averiguar rápido y barato qué merece construirse. Entregar es construirlo bien. Los buenos equipos dedican mucho tiempo a lo primero y solo entregan lo que ha pasado esa prueba.</li>
+<li><strong>Cuatro riesgos que despejar antes del código.</strong> Valor: ¿lo comprarán o lo usarán? Usabilidad: ¿sabrán usarlo? Factibilidad: ¿podemos construirlo con lo que tenemos? Viabilidad de negocio: ¿encaja con lo legal, lo financiero, la marca y el resto del negocio?</li>
+<li><strong>El responsable de producto responde del valor y la viabilidad.</strong> No es un gestor de proyectos ni alguien que escribe requisitos. Tiene que conocer a fondo cuatro cosas: los clientes, los datos, el negocio y el mercado.</li>
+<li><strong>Objetivos de resultado en lugar de hoja de ruta.</strong> Una lista de funciones con fechas da falsa seguridad. Cagan propone objetivos medibles (en esta edición, con OKR) y comprometer fechas solo para lo ya descubierto.</li>
+<li><strong>Visión, estrategia y principios.</strong> La visión describe el futuro que quieres crear a varios años. La estrategia es la secuencia para llegar, un tipo de cliente o mercado cada vez. Los principios son las reglas que deciden los casos difíciles.</li>
+<li><strong>Si no consigues que unos pocos lo adoren, no lo conseguirás con miles.</strong> El programa de descubrimiento con clientes trabaja de cerca con un grupo pequeño, alrededor de media docena, hasta que el producto les funciona de verdad y se convierten en referencias.</li>
+<li><strong>Usa el prototipo más barato que te enseñe lo que necesitas.</strong> Para quien programa rápido, la tentación es saltarse el prototipo porque construir parece barato. Lo caro no es programar: es mantener y medir algo que nadie quería.</li>
+</ol>
+
+<h3>Conceptos y detalles que conviene saber</h3>
+<ul>
+<li><strong>Tipos de prototipo.</strong> De factibilidad (¿es técnicamente posible?), de usuario (simulan la experiencia, del boceto a la simulación realista), con datos reales (funcionan lo justo para medir comportamiento con tráfico real) e híbridos, como el del mago de Oz, donde una persona hace a mano lo que parece automático.</li>
+<li><strong>Pruebas de valor.</strong> Pruebas de demanda (un botón o una página que mide interés antes de que exista la función), cualitativas (entender reacciones) y cuantitativas (datos reales). El valor es el riesgo más difícil de probar, porque la gente no siempre sabe si algo le vale.</li>
+<li><strong>Técnicas de enmarcado.</strong> Antes de nada, escribir qué problema se resuelve, para quién y cómo se sabrá si funcionó. Cagan describe también la carta del cliente o el comunicado de prensa escrito antes de construir, al estilo de Amazon.</li>
+<li><strong>Técnicas de ideas.</strong> Entrevistas, conserjería con clientes (hacer tú parte del trabajo del cliente para entenderlo) y observar los usos no previstos de tu producto.</li>
+<li><strong>Equipos misioneros frente a mercenarios.</strong> Los primeros tienen un problema que resolver y autonomía; los segundos ejecutan una lista. Para ti, la versión útil es: trabaja sobre un problema, no sobre una lista de pendientes.</li>
+<li><strong>Cultura de innovación y de ejecución.</strong> Hacen falta las dos: experimentar mucho y, a la vez, entregar con calidad.</li>
+</ul>
+
+<h3 class="ok">Lo que ya haces bien, según el autor</h3>
+<ul>
+<li><strong>Conoces a fondo los datos y el mercado.</strong> De las cuatro cosas que debe dominar un responsable de producto, dos las tienes: el ASO te obliga a conocer el mercado por país y PostHog te da los datos evento a evento. Pocas personas solas llegan a ese nivel.</li>
+<li><strong>Tienes principios de producto escritos.</strong> «Leo no puntúa caras» en Leo Glow, «no prometer salud» en TCM, nada de personajes ni series reales en Anime Food. Son las reglas que, según Cagan, deciden los casos difíciles cuando el nicho tira hacia otro lado.</li>
+<li><strong>Tratas la viabilidad de marca como riesgo.</strong> Tus tres líneas (sin promesas de salud, sin comparaciones de cuerpo, sin propiedad intelectual ajena) aparecen en las fichas de marca y en el mapa de riesgos. Es viabilidad de negocio pensada antes de publicar.</li>
+<li><strong>En TCM el riesgo de valor está despejado para una parte del público.</strong> Hay gente que paga y pruebas que se cobran. Puedes dedicar el trabajo a los otros riesgos.</li>
+</ul>
+
+<h3 class="bad">Errores que estás cometiendo, según el autor</h3>
+<ul>
+<li><strong>Conoces el mercado y los datos, pero no a los clientes.</strong> Es la parte que según Cagan define el trabajo de producto, y es la que falta: ninguna conversación registrada en ninguna app.</li>
+<li><strong>Construyes antes de descubrir.</strong> Más de treinta pantallas en la consola que luego podaste a la mitad, y funciones que esperan build sin saber si moverán algo. El autor diría que el tiempo de entrega se ha comido el de descubrimiento.</li>
+<li><strong>En Leo Glow añades funciones sin despejar el valor.</strong> Coach de IA, ruleta, avatar, ligas y rachas con un d7 del 1,1 % y ninguna prueba en Android en 30 días. Cagan te diría que no construyas más hasta despejar el riesgo de valor. Además, las ligas sin gente activa desaniman más que motivan.</li>
+<li><strong>La viabilidad de tienda te ha pillado tarde.</strong> Anime Food está en la categoría Niños de iOS para siempre y su 1.3.0 fue rechazada; Zodiaco iOS lleva 28 días en revisión; ninguna app iOS está en los 27 países de la UE mientras Apple revisa tu estatus de comerciante. Para el autor son riesgos de producto, no trámites, y se piensan desde el diseño.</li>
+<li><strong>El mayor riesgo de TCM no es de producto nuevo.</strong> El «not allowed» de Google Play choca con 1 de cada 6 que pulsan pagar (29 personas y 74 intentos en 30 días). Antes de pensar en más hierbas o fórmulas, el autor diría que ningún descubrimiento vale más que arreglar el cobro. No es un error tuyo de concepto (ya está primero en el plan), pero sí lo es si se retrasa por algo nuevo.</li>
+</ul>
+
+<h3>Qué cambiar, en orden</h3>
+<ol>
+<li><strong>TCM: la pantalla del «not allowed» antes que cualquier función.</strong> Dos casos: países donde Play no vende (sin precios, mensaje honesto, seguir gratis) y cuentas que no pueden pagar en un país donde sí se vende (explicación, botón a los métodos de pago, «recuérdamelo mañana»). Mide: personas con fallo que compran en los siete días siguientes (hoy, cero). Éxito: alguna compra recuperada con unas 20 personas con fallo.</li>
+<li><strong>Separa en tu semana descubrimiento y entrega.</strong> Por ejemplo, el bloque fijo de 45 minutos de «Atender a tu público» más una mañana sin código de producción para mirar datos, hablar con alguien o prototipar. Mide: horas de descubrimiento por semana, aunque sea a ojo.</li>
+<li><strong>TCM: un grupo pequeño de clientes de referencia.</strong> Con los suscriptores de las entrevistas de noviembre, invita a unos pocos estudiantes que ya pagan a seguir en contacto un mes: qué estudian, qué les falta, qué usan del simulador de casos. Mide: cuántos lo recomiendan a un compañero, que es un canal que el ASO no da.</li>
+<li><strong>Leo Glow: prueba de demanda antes de construir más.</strong> Cuando el muro esté resuelto (no el mismo mes, para no mezclar cambios), ofrece en el onboarding tres promesas como opción (plan de 30 días, coach que te habla cada mañana, reto con amigos) y mira cuál eligen, antes de construir ninguna. Mide: reparto de elecciones y d7 por elección.</li>
+<li><strong>Leo Glow: un mago de Oz para el coach.</strong> Durante dos semanas, respondes tú o un guion simple a un grupo pequeño. Despeja el valor del coach antes de pagar las APIs en serio. Mide: qué piden y si vuelven más que el resto.</li>
+<li><strong>Una línea de viabilidad en cada idea nueva.</strong> Salud en TCM, Niños en Anime Food, apariencia en Leo Glow, predicciones en Zodiaco. Y Zodiaco: planifica febrero sin contar con iOS, con una fecha límite escrita para decidir qué haces si a mediados de diciembre sigue en revisión.</li>
+</ol>
+
+<h3>Dónde no hacerle caso</h3>
+<ul>
+<li>Es un libro sobre empresas de tecnología medianas y grandes. Roles, relación con la dirección, transformación y la mayoría de la parte de personas no te aplican.</li>
+<li>La cifra de cuántas ideas fallan es una estimación del autor basada en su experiencia, no un dato medido. Tómala como orientación.</li>
+<li>Cagan da por hecho ingenieros a tiempo completo. Para ti, separar descubrir de entregar es una cuestión de calendario, no de personas.</li>
+<li>Muchas pruebas cuantitativas de valor necesitan volumen que no tienes. Con tus cifras, las cualitativas (conversaciones, mago de Oz, cinco personas mirando una pantalla) valen más.</li>
+</ul>
+
+<p class="frase">Construir rápido no es lo mismo que construir lo correcto: antes de escribir código, pregúntate qué riesgo es el mayor y cuál es la forma más barata de despejarlo.</p>
+
+<!-- ============================================================ -->
+<h2 id="dont-make-me-think">Don't Make Me Think · Steve Krug (edición revisada, 2014)</h2>
+<div class="ficha">
+<p><strong>En una frase:</strong> una pantalla buena se entiende sin pensar; como la gente escanea en lugar de leer, se diseña como una valla publicitaria y las dudas se resuelven mirando a tres personas usarla, no discutiendo.</p>
+<p><strong>Cuánto te importa ahora:</strong> ★★★★☆ — es el que antes vas a convertir en cambios: primera sesión, muros de pago y fichas. Pero va después de saber qué valor ofreces.</p>
+<p><strong>Si solo haces una cosa:</strong> una prueba de usabilidad al mes con tres personas y una tarea concreta (por ejemplo, en Leo Glow: «instala y haz lo que toque hoy»), grabando la pantalla con permiso.</p>
+<p><strong>Capítulo largo:</strong> <a href="../606-dont-make-me-think.html">606 · Don't Make Me Think</a></p>
+</div>
+
+<h3>Las ideas clave</h3>
+<ol>
+<li><strong>Una pantalla no debería obligar a pensar.</strong> Es la primera ley del libro. Quien la ve tiene que entender qué es, qué puede hacer y dónde pulsar sin esfuerzo. Si no puede ser obvia, al menos que se explique sola con muy poco.</li>
+<li><strong>Cada pequeña duda suma.</strong> «¿Esto se pulsa?», «¿qué significa esto?», «¿dónde estoy?». Ninguna echa a nadie por sí sola, pero juntas cansan, y el usuario cansado se va. En una app de suscripción, cada duda del onboarding resta gente que llega al muro.</li>
+<li><strong>No leemos: escaneamos, nos conformamos y nos apañamos.</strong> Buscamos palabras que encajen con lo que tenemos en la cabeza; elegimos la primera opción razonable, no la mejor; y usamos las cosas sin entender cómo funcionan. Diseña para alguien que mira dos segundos.</li>
+<li><strong>Diseña como una valla.</strong> Convenciones conocidas, jerarquía visual clara (lo importante, destacado; lo relacionado, junto), zonas bien definidas, lo pulsable evidente y menos ruido. Reinventar un patrón conocido tiene un coste.</li>
+<li><strong>Muchos clics sencillos ganan a pocos difíciles.</strong> No importa cuántas veces tenga que pulsar alguien si cada pulsación es una elección evidente y sin ambigüedad. Y si algo queda más claro haciéndolo distinto, la claridad gana a la coherencia.</li>
+<li><strong>Quita la mitad de las palabras, y luego la mitad de lo que queda.</strong> Sobran la palabrería de bienvenida y las instrucciones que nadie lee. Muchas frases de muros y onboardings solo sirven para que el autor sienta que lo ha explicado.</li>
+<li><strong>La buena voluntad es un depósito limitado.</strong> Cada usuario llega con una cantidad de paciencia. La gastan esconder lo que busca (precios, condiciones), castigar por no hacer las cosas a tu manera, pedir datos innecesarios o fingir interés. La recargan darle lo que quiere, ahorrarle pasos y ser sincero con lo que cuesta.</li>
+<li><strong>Las discusiones de diseño se acaban mirando a usuarios.</strong> Krug las compara con debates casi religiosos donde cada uno defiende su gusto. No hace falta laboratorio: una persona, una tarea, que piense en voz alta y tú observas sin ayudar. Con tres se encuentran los problemas más graves.</li>
+<li><strong>Arregla lo grave con el cambio más pequeño.</strong> Tras cada ronda de pruebas, no rediseñes todo: corrige primero los problemas más serios con el ajuste mínimo, y vuelve a probar el mes siguiente.</li>
+</ol>
+
+<h3>Conceptos y detalles que conviene saber</h3>
+<ul>
+<li><strong>Las tres leyes de Krug.</strong> No me hagas pensar; da igual cuántos clics si cada uno es una elección sin dudas; quita la mitad de las palabras y luego la mitad de lo que queda.</li>
+<li><strong>La prueba del tronco.</strong> Aterrizar en cualquier pantalla y comprobar si se responde a primera vista a dónde estoy, qué hay aquí y a dónde puedo ir. Aplicada a la primera pantalla tras el onboarding: qué es esto y por dónde empiezo.</li>
+<li><strong>La portada que todos quieren.</strong> Cada parte interesada quiere su hueco en la página de inicio, y eso la estropea. En una app, es querer enseñarlo todo en la primera pantalla.</li>
+<li><strong>Pruebas de usabilidad baratas.</strong> Una mañana al mes, tres participantes, tareas concretas, pensar en voz alta, grabar con permiso y revisar con calma. No importa mucho que sean exactamente tu público para encontrar problemas básicos.</li>
+<li><strong>Móvil.</strong> La edición revisada añade que la pantalla pequeña obliga a priorizar aún más y que los gestos invisibles hacen menos obvio qué se puede tocar. Lo bonito en pequeño puede ser difícil de usar.</li>
+<li><strong>Accesibilidad.</strong> Hacerlo bien también por respeto: textos legibles, contrastes, botones grandes.</li>
+<li><strong>Prueba de los cinco segundos.</strong> Técnica habitual en usabilidad para comprobar lo que se capta de un vistazo: enseñar una pantalla cinco segundos y preguntar qué ofrece, cuánto cuesta y qué pasa si no haces nada.</li>
+</ul>
+
+<h3 class="ok">Lo que ya haces bien, según el autor</h3>
+<ul>
+<li><strong>El muro de TCM 1.0.10 es diseño de valla.</strong> Anual preseleccionado, la prueba en el botón, precio por unidad de tiempo, ahorro dicho en una cifra, resto de planes visibles pero secundarios. Con la misma oferta de Play pasó de 0 a 12 pruebas por semana. Es la jerarquía visual y la sinceridad que pide Krug.</li>
+<li><strong>Tus fichas se entienden de un vistazo en TCM.</strong> Un 36 % de descargas por visita en Play y un 44 % en iOS: la ficha hace su trabajo en los segundos que alguien le dedica.</li>
+<li><strong>Leo Glow 2.0.4 quita ruido del primer día.</strong> Hoy solo enseña el plan hasta cerrar el día 1, el alta lleva a la acción más corta y el nombre es opcional. Es quitar opciones para que la primera elección sea evidente.</li>
+<li><strong>Cuidas la buena voluntad con los anuncios.</strong> TCM no tiene anuncios; Leo Glow 2.0 quitó banners e intersticiales; en Zodiaco has decidido no poner intersticiales en el Oráculo. Es proteger el depósito de paciencia en el gesto que más quieres que se repita.</li>
+</ul>
+
+<h3 class="bad">Errores que estás cometiendo, según el autor</h3>
+<ul>
+<li><strong>La primera pantalla tras el onboarding obligaba a pensar.</strong> En TCM 1.0.7, quien terminaba el onboarding encontraba una guía de 6 pasos encima del Inicio, la tercera interrupción seguida tras el plan, la cuenta y el muro; de 85 que terminaban, solo 16 volvían otro día. La pantalla de módulos tenía 12 tarjetas y tardaban 36 segundos en decidirse. Son datos de una versión antigua: comprueba si la 1.0.10 los ha corregido antes de darlo por resuelto.</li>
+<li><strong>En Leo Glow la gente no sabe qué hacer en Hoy.</strong> En la lectura del 11 de octubre, 41 de 87 se iban desde Hoy sin tocar nada y solo 41 de 84 giraban la ruleta. El 86 % llegaba al muro en unos dos minutos y medio, antes de haber hecho nada. Krug diría que la pantalla no responde a «por dónde empiezo».</li>
+<li><strong>El texto en inglés de TCM se lee peor.</strong> En la 1.0.7 terminaba el onboarding el 62 % en inglés frente al 78 % en español y el 82 % en chino, y el inglés es la mitad del tráfico. Frases traducidas que obligan a pensar son exactamente lo que el libro manda quitar. Es una hipótesis sobre la causa, pero la diferencia es grande.</li>
+<li><strong>Prometes una cosa y la siguiente pantalla dice otra.</strong> En Leo Glow, 22 anuales empezados y 19 cancelados en la hoja de Google con 0 pruebas; la hipótesis principal es que la hoja no enseña los 3 días gratis que promete el botón. Si se confirma, es el peor gasto de buena voluntad posible: la persona ya había decidido.</li>
+<li><strong>Pediste más a quien acababa de decir que no.</strong> La «última oportunidad» con el vitalicio en TCM 1.0.7 la rechazaron 106 de 112. Insistir tras un «no» vacía el depósito. Ya lo corregiste; que no vuelva en ninguna app.</li>
+</ul>
+
+<h3>Qué cambiar, en orden</h3>
+<ol>
+<li><strong>Leo Glow: tres personas, móvil recién instalado, sin explicar nada.</strong> Que piensen en voz alta mientras llegan a hacer lo que toca hoy. Mira si entienden ruleta, avatar, coach y rachas, o si sobran conceptos el primer día. Mide: cuántos de tres completan la primera acción sin ayuda y en qué punto dudan. Después, la fracción que completa la primera acción el día 0, con los eventos que ya tienes (plan_action_toggled del día 1).</li>
+<li><strong>Leo Glow: que el botón y la hoja de Google digan lo mismo.</strong> Comprueba con una cuenta nueva qué enseña la hoja y registra trial_eligible y offer_id; si la persona no es elegible, el botón dice el precio de verdad. Mide: pruebas iniciadas por persona que ve el muro. Éxito: dos o más por semana con unas 50 vistas.</li>
+<li><strong>TCM: la prueba de los cinco segundos al muro, solo como observación.</strong> El diseño del muro del onboarding no se toca este mes porque convierte. Úsala para comprobar que se entiende que la prueba es gratis y cuándo se cobra, y aplica lo aprendido a los muros contextuales (tras el diagnóstico, la tarjeta del Inicio), que sí están en el plan. Mide: altas por vista de cada muro por source.</li>
+<li><strong>TCM: el texto inglés del onboarding, leído en voz alta o por un nativo.</strong> Quita la mitad de las palabras de cada pantalla y luego la mitad de lo que queda. Mide: fin del onboarding en inglés frente a español por versión.</li>
+<li><strong>TCM: la pantalla del «not allowed» como recarga de buena voluntad.</strong> Que diga qué ha pasado y qué hacer, en lugar de dejar a ciegas a quien ya había decidido pagar. Mide: compras en los siete días siguientes al fallo.</li>
+<li><strong>Zodiaco: la fecha de nacimiento y la compatibilidad, con tres personas.</strong> Selector de fecha lo más simple posible y el resultado (animal, elemento, yin-yang) como recompensa inmediata; que dos desconocidos puedan comparar sus fechas sin instrucciones. Hazlo antes de febrero. Mide: cuántos de tres lo logran sin ayuda.</li>
+</ol>
+
+<h3>Dónde no hacerle caso</h3>
+<ul>
+<li>Nació para webs de escritorio y muchos ejemplos siguen siéndolo. Lo esencial se traslada bien al móvil; detalles como la navegación global o las migas de pan tienen otra forma en una app.</li>
+<li>La usabilidad no arregla un problema de valor. Si la gente no quiere lo que ofreces, una pantalla más clara solo hace que se vaya antes. Úsalo después de las entrevistas, no en su lugar.</li>
+<li>Tres personas encuentran los problemas graves, pero no miden cuánto sube la conversión. Para eso necesitas tus embudos.</li>
+<li>«No me hagas pensar» no es empujar a pagar sin entender. En un muro, la claridad incluye decir cuándo se cobra y cómo cancelar; las tiendas y tus usuarios castigan los patrones engañosos.</li>
+</ul>
+
+<p class="frase">Nadie lee tus pantallas: las miran dos segundos y eligen lo primero que parece razonable. Diséñalas para esos dos segundos y compruébalo mirando a tres personas, no discutiendo contigo mismo.</p>
+
+</article>
+<footer><a href="parte-v.html">← Parte V: Crecimiento y hábito</a><a href="parte-vii.html">Parte VII: Contenido y vídeo →</a></footer>
+</main></body></html>
