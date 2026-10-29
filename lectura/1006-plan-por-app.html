@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="es"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Plan por app</title>
+<meta name="description" content="Tu lista de trabajo para noviembre: dónde está cada app, qué conseguir este mes, tareas ordenadas por impacto con su medida y su umbral, lo que no toca y un calendario de cuatro semanas.">
+<meta name="author" content="Claude">
+<meta property="og:title" content="Plan por app">
+<meta property="article:published_time" content="2026-10-29">
+<style>
+:root{--bg:#fbfaf7;--fg:#1f2933;--muted:#6b7280;--line:#e5e7eb;--accent:#9a3412}
+@media(prefers-color-scheme:dark){:root{--bg:#12100e;--fg:#ede7d4;--muted:#9a9384;--line:#2c2823;--accent:#e8a33d}}
+body{margin:0;background:var(--bg);color:var(--fg);font:18px/1.7 Georgia,"Times New Roman",serif}
+main{max-width:40em;margin:0 auto;padding:1.5rem 1rem 4rem}
+h1{font-size:1.8rem;line-height:1.25;margin:.2rem 0 1rem}
+h2{font-size:1.3rem;margin:2.2rem 0 .6rem;color:var(--accent)}
+a{color:var(--accent)}
+em{color:var(--muted)}
+hr{border:0;border-top:1px solid var(--line);margin:2rem 0}
+nav,footer{font:14px/1.5 -apple-system,sans-serif;color:var(--muted)}
+nav a,footer a{margin-right:1rem}
+li{margin:.35rem 0}
+</style></head><body><main>
+<nav><a href="./">← Índice</a></nav>
+<article>
+<h1>Plan por app</h1>
+<p><em>Tu lista de trabajo para noviembre: dónde está cada app, qué conseguir este mes, tareas ordenadas por impacto con su medida y su umbral, lo que no toca y un calendario de cuatro semanas.</em></p>
+
+<h2>Cómo usar esta lista</h2>
+<p>Tu noviembre de trabajo empieza el 15, cuando vuelves. Las cuatro semanas de este plan son las mismas que las de <a href="1203-que-hacer-al-volver.html">Qué hacer al volver</a>: del 15 al 22 de noviembre, del 22 al 29, del 29 al 6 de diciembre y del 6 al 13. Ese capítulo marca las prioridades generales; este las baja a cada app. Si en algún punto parecen decir cosas distintas, manda aquel.</p>
+<p>Cuatro reglas para toda la lista:</p>
+<ul>
+<li><strong>Un cambio por app y por semana.</strong> Con muestras de 30 a 200 personas, dos cambios a la vez no se pueden leer.</li>
+<li><strong>La vara de medir es el valor por persona que empieza</strong>, no cuántos pasan una pantalla. Lo aprendiste con la bienvenida de TCM.</li>
+<li><strong>Los umbrales son míos, no datos.</strong> Son puntos de decisión orientativos, sacados de tus cifras. Con altas de un dígito, desconfía de diferencias menores que dos veces la raíz de la cifra esperada, el criterio que ya usas en las fichas.</li>
+</ul>
+
+<h2>TCM / Medicina China</h2>
+<p><strong>Situación.</strong> La única app con negocio: unas 43 descargas diarias en Play y 10,7 en iOS, y un muro (1.0.10) por el que, en Android, de 234 personas que lo ven en una semana 64 pulsan pagar y 10 se dan de alta; el anual con prueba cobra (12 de 87) y el mensual no (1 de 9). Lo que no sabes es cuánta gente sigue a los 30 días, porque la app no manda days_since_install.</p>
+<p><strong>Objetivo de noviembre.</strong> Recuperar a quien quiere pagar y no puede, y tener por primera vez una curva de retención que se pueda leer. Sin tocar lo que ya vende.</p>
+<h3>Tareas, por orden de impacto</h3>
+<ol>
+<li><strong>La pantalla para «not allowed».</strong> En 30 días, 29 personas y 74 intentos: una de cada seis que pulsa pagar. Dos casos, dos tratos: en los países donde Play no vende, sin precios y con un mensaje honesto para seguir gratis; en la cuenta que no puede pagar en un país donde sí se vende, explicación, botón a los métodos de pago de Google Play y «recuérdamelo mañana». Revisa primero si el aviso que tienes desde el 1 de octubre ya hace parte de esto, y añade país y motivo a premium_purchase_failed si no van.<br>
+Mide: personas con fallo que compran en los siete días siguientes (hoy, cero), por motivo y país.<br>
+Éxito: alguna compra recuperada con unas 20 personas con fallo (una semana). Fracaso: cero tras dos semanas; entonces lo recuperable era menos de lo que parecía y das la pantalla por terminada sin invertir más.</li>
+<li><strong>Medir la retención: days_since_install.</strong> Es lo que más condiciona el resto del año y lo que falta en tu marca (lo verás en «Retención y notificaciones»). Aprovecha la misma build para el aviso de versión nueva dentro de la app: 41 personas siguen en la 1.0.9.<br>
+Mide: vuelta a los días 1, 7 y 30 por cohorte semanal de versión, y personas que quedan en la 1.0.9.<br>
+Éxito: a mediados de diciembre puedes leer el día 7 de al menos dos cohortes semanales de la 1.0.10. Fracaso: el evento llega vacío o con huecos; arréglalo antes de mirar nada más.</li>
+<li><strong>Cinco suscriptores y tres cancelados.</strong> El guion del Mom Test de la Parte VI. La pregunta que decide la categoría: ¿el estudiante paga más y se queda más que el curioso? Cómo pedir la conversación, en «Atender a tu público».<br>
+Mide: conversaciones hechas y, en cada una, para qué abrió la app la primera vez y qué hacía antes.<br>
+Éxito: ocho conversaciones antes del 6 de diciembre y una respuesta, aunque sea provisional, a estudiante frente a curioso. Fracaso: menos de cuatro; entonces cambia de canal (pregunta dentro de la app) en lugar de esperar.</li>
+<li><strong>Los muros contextuales, medidos por su source.</strong> El diagnóstico es lo que vende (el muro tras un diagnóstico vendía 1 de 11 cuando el del onboarding vendía 1 de 88). Comprueba que cada final de diagnóstico ofrece la prueba con un resultado más completo bloqueado y que en todos los muros, no solo en el del onboarding, el anual sale preseleccionado y el mensual en pequeño.<br>
+Mide: altas por vista de cada muro, por source; plan_selected = anual.<br>
+Éxito: la fracción que elige el anual no baja y las altas por vista de home_card se mantienen o suben (7,2 % en 30 días). Con unas 150 vistas por muro ya se lee. Fracaso: baja; deshaz el cambio de ese muro y no toques los demás.</li>
+<li><strong>El aviso del día cinco de la prueba.</strong> Con lo que ha hecho la persona, la fecha del cobro y un enlace para gestionar la suscripción. Antes de escribirlo, comprueba con la 1.0.10 que reminders_scheduled y notification_opened funcionan para quien concede el permiso.<br>
+Mide: pruebas cobradas por cohorte de semana de inicio en RevenueCat. Éxito: la fracción no baja frente a octubre. Fracaso: baja en dos cohortes seguidas; revisa el texto, no quites la transparencia.</li>
+<li><strong>Leer el precio por país.</strong> Brasil, México e India están rebajados desde el 13 de octubre y no tienes lectura. Es solo lectura: compara altas por vista del muro antes y después, agrupando los tres países frente a los que no tocaste.<br>
+Éxito: suben; amplía a los siguientes países por tráfico en diciembre. Fracaso: no se mueven; el problema allí no era el precio y no rebajas más.</li>
+</ol>
+<h3>Qué no hacer este mes</h3>
+<ul>
+<li>No toques el diseño del muro del onboarding de la 1.0.10. Convierte en las dos tiendas.</li>
+<li>No cambies precio y muro a la vez, ni en el mismo país.</li>
+<li>No decidas la categoría (estudio o bienestar) antes de las ocho conversaciones.</li>
+<li>No pongas anuncios. No prometas salud. No mezcles estudiante y curioso en la misma pieza.</li>
+<li>No vuelvas a ofrecer el vitalicio como «última oportunidad»: 106 de 112 lo rechazaban.</li>
+</ul>
+
+<h2>Leo Glow</h2>
+<p><strong>Situación.</strong> El posicionamiento más diferenciado y el muro que no cobra: en Android, en 30 días, 181 personas ven el muro, 22 empiezan un anual, 19 lo cancelan y no hay ninguna prueba; d1 11,6 % y d7 1,1 %. Unas 8,6 descargas diarias en Play y 4,0 en iOS, donde llegó el primer pago real en 30 días.</p>
+<p><strong>Objetivo de noviembre.</strong> Que existan pruebas en Android. Es el arreglo de mayor retorno por esfuerzo de todo el portfolio.</p>
+<h3>Tareas, por orden de impacto</h3>
+<ol>
+<li><strong>Comprobar la hoja de Google antes de tocar el muro.</strong> Con una cuenta nueva en un móvil real, mira si la hoja enseña los 3 días gratis. Añade dos datos al evento de pago: qué oferta se envía (offer_id) y si la persona es elegible (trial_eligible). La hipótesis es que la app pasa a Play el plan base en lugar de trial-3d; es una hipótesis hasta que lo veas.<br>
+Mide: fracción de pulsaciones de pago que envían trial-3d a una cuenta elegible.<br>
+Éxito: casi todas las elegibles reciben la oferta con prueba. Fracaso: no la reciben; ese es el fallo, arréglalo antes de la tarea 2 o la tarea 2 no servirá.</li>
+<li><strong>Copiar el muro de TCM.</strong> Anual preseleccionado, «3 días gratis» en el botón, «no se cobra nada hoy» debajo, precio por semana, ahorro frente al mensual en una cifra, el resto de planes visibles y secundarios. Si la persona no es elegible, el botón dice el precio de verdad.<br>
+Mide: pruebas iniciadas por persona que ve el muro, en Android; iOS júntalo por quincenas.<br>
+Éxito: 2 o más pruebas por semana con unas 50 vistas (en TCM el mismo cambio dio 12 con 234 vistas, cerca del 5 %). Fracaso: cero pruebas dos semanas seguidas; el problema sigue después del botón y vuelves a la tarea 1.</li>
+<li><strong>Medir el día 1 del plan de la 2.0.4.</strong> plan_first_day_opened, plan_action_toggled del día 1 y notification_opened del tipo daily-plan, por cohorte. Una prueba de tres días no sirve si la persona no vuelve al día siguiente. Cómo leer la vuelta por cohorte lo tienes en «Retención y notificaciones».<br>
+Mide: fracción que completa la primera acción el día cero, y d1 de quien la completa frente a quien no.<br>
+Éxito: la acción separa la vuelta (la pista del 11 de octubre era 53 % frente a 0 de 9). Fracaso: no separa con al menos unas 30 personas por grupo; entonces no es tu momento «aha» y lo apuntas para diciembre.</li>
+<li><strong>Preguntar qué compra la gente.</strong> Una pregunta en la app a quien completa la primera semana: ¿Leo, el plan de 30 días, las ligas? Y, para quien cancela, la encuesta de cancelación de «Atender a tu público». Hasta que lo sepas, el muro nombra el plan diario.<br>
+Mide: respuestas recogidas.<br>
+Éxito: unas veinte respuestas antes del 13 de diciembre. Fracaso: menos de cinco; busca a cinco usuarios para hablar, como pide la estrategia de marca.</li>
+<li><strong>Ofrecer el rewarded de la ruleta.</strong> 66 cargas y 1 enseñado. Un botón claro con lo que da (segunda tirada, mensaje extra con Leo). Mide rewarded enseñados por persona activa; si sigue sin verse, el momento elegido no es el bueno.</li>
+</ol>
+<h3>Qué no hacer este mes</h3>
+<ul>
+<li>No bajes el precio: con cero pruebas, el problema no es el número.</li>
+<li>No muevas el muro detrás del primer logro el mismo mes que cambias su diseño. Es la siguiente prueba, no esta.</li>
+<li>No cambies otra vez el nombre sin medir, no amplíes a otros públicos y no uses el «antes y después» como gancho.</li>
+<li>No inviertas en más tráfico ni en keywords: con un d7 del 1 %, cada descarga se evapora.</li>
+</ul>
+
+<h2>Zodiaco Chino</h2>
+<p><strong>Situación.</strong> Solo Android: 795 personas en 30 días y unas 13,3 descargas diarias en Play. Unos 10,6 USD en 30 días por anuncios, de los que 7,81 vienen del rewarded de duplicar la recompensa diaria. iOS (la 1.1.3) lleva 28 días en cola de revisión y la web perdió casi todas las impresiones en Google desde el 12 de octubre. Cuando los avisos se rompieron, la vuelta al día siguiente cayó del 26 % al 15 %.</p>
+<p><strong>Objetivo de noviembre.</strong> Saber cuánta gente vuelve y llegar a diciembre con los anuncios y la temporada preparados para el pico de febrero.</p>
+<h3>Tareas, por orden de impacto</h3>
+<ol>
+<li><strong>Arreglar days_since_install y mirar la retención antes de tocar anuncios.</strong> Es la primera semana de <a href="1203-que-hacer-al-volver.html">Qué hacer al volver</a>. Prueba también un aviso programado en la build de release: el minify ya los rompió una vez.<br>
+Mide: d1 y d7 por país y por cohorte semanal.<br>
+Éxito: el d1 vuelve a la zona del 26 % que tenías antes del fallo de avisos. Fracaso: se queda cerca del 15 %; los avisos siguen sin llegar y esa es la tarea de la semana siguiente, no los anuncios.</li>
+<li><strong>Publicar la build con los tres rewarded nuevos</strong> (ración extra para la mascota, avance de la lectura de mañana, el resto de la compatibilidad), una vez tengas una semana de retención de referencia.<br>
+Mide: rewarded por persona activa y día, ingreso por persona activa, y d1 y d7 de la cohorte frente a la anterior.<br>
+Éxito: sube el ingreso por persona activa y la retención no cae más allá del ruido. Fracaso: la retención cae de forma clara; quita el rewarded que la está causando, aunque cobre.</li>
+<li><strong>Preparar febrero.</strong> Fichas, avisos y vídeos para «horóscopo chino 2027», como dice la segunda semana de <a href="1203-que-hacer-al-volver.html">Qué hacer al volver</a>. Planéalo sin contar con iOS y ten preparada la comunicación para el día que salga.<br>
+Éxito: el 13 de diciembre la lista está cerrada y los cambios de anuncios tienen fecha antes de mediados de enero. Fracaso: llega diciembre con fichas a medias; recorta a los idiomas clave.</li>
+<li><strong>Dejar de precargar donde no se enseña.</strong> 3.506 peticiones sin relleno en la precarga del Oráculo, más las de Compatibilidad y Mascota.<br>
+Mide: peticiones sin relleno y anuncios enseñados en los huecos con nombre.<br>
+Éxito: bajan las primeras sin que bajen los segundos. Fracaso: bajan los enseñados; vuelve a precargar solo ese formato.</li>
+<li><strong>Comprobar si la compatibilidad es el motor.</strong> Una medida, no un cambio: vuelta al día siguiente de quien hace una compatibilidad el día cero frente a quien no, con al menos unas 30 personas por grupo. Si separa, lo apuntas para la marca de 2027.</li>
+</ol>
+<h3>Qué no hacer este mes</h3>
+<ul>
+<li>Ningún intersticial en el Oráculo, ni en la primera sesión.</li>
+<li>No añadas mediación: primero formatos bien colocados y el volumen de la temporada.</li>
+<li>Ni muro, ni suscripción, ni más páginas en la web.</li>
+<li>No esperes a Apple para pensar febrero.</li>
+</ul>
+
+<h2>Anime Food</h2>
+<p><strong>Situación.</strong> Unas 1,7 descargas diarias en Play y 3,0 en iOS; 142 personas en 30 días en Android. La edición de ficha del 30 de septiembre salió mal (visitantes ×0,31, adquisiciones ×0,61) y su reversión sigue sin publicar. iOS 1.3.0 rechazada y en la categoría Niños para siempre. El distinct_id está roto. Un vitalicio vendido en 30 días.</p>
+<p><strong>Objetivo de noviembre.</strong> Decidir su papel (mantenimiento y contenido) y que deje de pedirte atención.</p>
+<h3>Tareas, por orden de impacto</h3>
+<ol>
+<li><strong>Declarar el papel.</strong> Mantenimiento en apps.toml, con el esfuerzo en contenido. Es una decisión de diez minutos y la que más tiempo te devuelve.<br>
+Éxito: el estado cambiado la primera semana. Fracaso: sigues haciendo ASO fino en diciembre.</li>
+<li><strong>Publicar el deshacer de nombres en Play.</strong> Ya estaba propuesto en el informe del 24 de octubre y es la única decisión con evidencia.<br>
+Mide: visitantes y adquisiciones de la ficha, frente a las semanas anteriores al 30 de septiembre.<br>
+Éxito: se acercan a lo que tenías antes de la edición en dos o tres semanas. Fracaso: no se mueven; lo dejas así y no haces más ediciones.</li>
+<li><strong>Medir el contenido por descargas, no por vistas.</strong> Descargas por 1.000 vistas de vídeo y visitas a la ficha por formato (ASMR, compilación, anime → real).<br>
+Éxito: un formato trae claramente más visitas a la ficha; ese es el que produces en diciembre. Fracaso: ninguno trae nada medible; la app es un destino secundario y el contenido se juzga por seguidores que vuelven.</li>
+<li><strong>El distinct_id, si haces una build.</strong> No abras una solo para esto, pero si la abres, que vaya dentro, con el trato del «not allowed» de TCM. Éxito: puedes seguir a una persona de la primera a la segunda sesión.</li>
+</ol>
+<h3>Qué no hacer este mes</h3>
+<ul>
+<li>No hagas ASO fino: es el retorno por hora más bajo del portfolio.</li>
+<li>Ningún intersticial en los pasos de una receta.</li>
+<li>Nada de anuncios ni de sortear la categoría Niños en iOS.</li>
+<li>No te alejes del anime hacia «cocina asiática».</li>
+</ul>
+
+<h2>Las siete apps menores</h2>
+<p><strong>Situación.</strong> Walk the World, Grandpa's Kitchen, Mythology Tower Defense, Bizarre Pose Camera, Stranger Quiz, Stranger Foods y Christmas Dinner están en las tiendas sin proyecto de analítica. Alguna descarga algo (Stranger Quiz iOS ronda las 2 descargas diarias y 11 visitas) y no sabes qué hace nadie dentro.</p>
+<p><strong>Objetivo de noviembre.</strong> Una decisión por app, escrita en una frase: dar de alta lo mínimo o declararla sin trabajar.</p>
+<h3>Tareas, por orden de impacto</h3>
+<ol>
+<li><strong>Las siete frases.</strong> Para cada una: mantener sin tocar, dar de alta analítica mínima o archivar. Es la segunda semana de <a href="1203-que-hacer-al-volver.html">Qué hacer al volver</a>, y la decisión de foco de Essentialism la cierra en las semanas siguientes.<br>
+Éxito: siete de siete decididas el 29 de noviembre y su estado cambiado en apps.toml. Fracaso: alguna sin decidir; queda congelada por defecto.</li>
+<li><strong>Solo para las que reciban analítica: un evento.</strong> Sesión y «primera partida terminada» en los juegos; «primera receta abierta» en los recetarios. Nada de muros ni de formatos de anuncio nuevos antes de tener ese evento.<br>
+Éxito: el evento llega y puedes contar personas que vuelven. Fracaso: no tienes tiempo de hacerlo este mes; entonces la app pasa a la lista de las que no se trabajan.</li>
+</ol>
+<h3>Qué no hacer este mes</h3>
+<ul>
+<li>No inviertas marca, ni ASO, ni vídeo.</li>
+<li>No pongas muros ni toques precios donde no hay uso medido.</li>
+</ul>
+
+<h2>Calendario de las cuatro semanas</h2>
+<p>Una cosa clara por app y por semana. Si una semana solo puedes con una línea, que sea la de Leo Glow en la primera y la de TCM en las demás.</p>
+
+<h3>Semana 1 (15-22 de noviembre)</h3>
+<ul>
+<li><strong>TCM:</strong> la pantalla para «not allowed», y los mensajes a los cinco suscriptores y tres cancelados.</li>
+<li><strong>Leo Glow:</strong> comprobar la hoja de Google y copiar el muro de TCM.</li>
+<li><strong>Zodiaco:</strong> arreglar days_since_install y probar un aviso en la build de release.</li>
+<li><strong>Anime Food:</strong> declarar mantenimiento y publicar el deshacer de nombres en Play.</li>
+<li><strong>Menores:</strong> nada; solo la lista de las siete.</li>
+</ul>
+
+<h3>Semana 2 (22-29 de noviembre)</h3>
+<ul>
+<li><strong>TCM:</strong> days_since_install y el aviso de versión nueva en la misma build.</li>
+<li><strong>Leo Glow:</strong> leer la primera semana del muro nuevo y medir el día 1 del plan.</li>
+<li><strong>Zodiaco:</strong> primera lectura de retención y lista de febrero.</li>
+<li><strong>Anime Food:</strong> mirar la ficha tras el deshacer; ningún cambio.</li>
+<li><strong>Menores:</strong> las siete frases.</li>
+<li><strong>Todas:</strong> la frase de posicionamiento al principio de cada ficha y la cola de cinco experimentos con ICE (<a href="1203-que-hacer-al-volver.html">Qué hacer al volver</a>).</li>
+</ul>
+
+<h3>Semana 3 (29 de noviembre - 6 de diciembre)</h3>
+<ul>
+<li><strong>TCM:</strong> los muros contextuales por source y el anual preseleccionado en todos.</li>
+<li><strong>Leo Glow:</strong> la pregunta en la app sobre qué compra la gente.</li>
+<li><strong>Zodiaco:</strong> publicar la build de los tres rewarded.</li>
+<li><strong>Anime Food:</strong> descargas por 1.000 vistas por formato de vídeo.</li>
+<li><strong>Menores:</strong> el estado en apps.toml.</li>
+</ul>
+
+<h3>Semana 4 (6-13 de diciembre)</h3>
+<ul>
+<li><strong>TCM:</strong> leer el precio por país, el primer día 7 y las conversaciones; escribir la respuesta a estudiante frente a curioso.</li>
+<li><strong>Leo Glow:</strong> con tres semanas de muro, decidir si la prueba funciona o si vuelves a la hoja de Google. El rewarded de la ruleta, solo si sobra tiempo.</li>
+<li><strong>Zodiaco:</strong> leer la cohorte del rewarded y cerrar la lista de febrero.</li>
+<li><strong>Anime Food:</strong> nada nuevo; elegir el formato de vídeo de diciembre.</li>
+<li><strong>Menores:</strong> el evento mínimo, solo en las que lo merezcan.</li>
+</ul>
+<p>El 13 de diciembre, haz la revisión que pide <a href="1203-que-hacer-al-volver.html">Qué hacer al volver</a> y escribe el plan de diciembre con lo que hayas medido, no con lo que esperabas medir.</p>
+</article>
+<footer><a href="1005-atender-a-tu-publico.html">← Atender a tu público</a><br><a href="1100-parte-xi-riesgos.html">Parte XI: Cubrirte de riesgos →</a></footer>
+</main></body></html>
