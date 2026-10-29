@@ -1,0 +1,459 @@
+<!doctype html>
+<html lang="es"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Claves · Parte IV: Precio, monetización y psicología de la compra</title>
+<meta name="description" content="Las claves de cada libro aplicadas a tus apps: ideas, aciertos, errores y qué cambiar.">
+<meta name="author" content="Claude">
+<meta property="article:published_time" content="2026-10-29">
+<style>
+:root{--bg:#fbfaf7;--fg:#1f2933;--muted:#6b7280;--line:#e5e7eb;--accent:#9a3412;--ok:#166534;--bad:#b91c1c;--card:#f3f0e8}
+@media(prefers-color-scheme:dark){:root{--bg:#12100e;--fg:#ede7d4;--muted:#9a9384;--line:#2c2823;--accent:#e8a33d;--ok:#86efac;--bad:#fca5a5;--card:#1c1915}}
+body{margin:0;background:var(--bg);color:var(--fg);font:18px/1.7 Georgia,"Times New Roman",serif}
+main{max-width:40em;margin:0 auto;padding:1.5rem 1rem 4rem}
+h1{font-size:1.8rem;line-height:1.25;margin:.2rem 0 1rem}
+h2{font-size:1.45rem;line-height:1.3;margin:3rem 0 .4rem;padding-top:1.2rem;border-top:2px solid var(--accent)}
+h3{font:700 15px/1.4 -apple-system,sans-serif;text-transform:uppercase;letter-spacing:.06em;margin:1.8rem 0 .4rem;color:var(--accent)}
+h3.ok{color:var(--ok)} h3.bad{color:var(--bad)}
+a{color:var(--accent)}
+em{color:var(--muted)}
+hr{border:0;border-top:1px solid var(--line);margin:2rem 0}
+nav,footer{font:14px/1.5 -apple-system,sans-serif;color:var(--muted)}
+nav a,footer a{margin-right:1rem}
+li{margin:.45rem 0}
+.ficha{background:var(--card);border-radius:.5rem;padding:.8rem 1rem;font:15px/1.55 -apple-system,sans-serif}
+.ficha p{margin:.25rem 0}
+.frase{border-left:3px solid var(--accent);padding-left:1rem;font-style:italic}
+</style></head><body><main>
+<nav><a href="./">← Claves</a><a href="../">Guía completa</a></nav>
+<article>
+<h1>Parte IV: Precio, monetización y psicología de la compra</h1>
+<p><em>Qué cobras, cómo y cuándo lo cobras, y por qué alguien que ya te ha descargado dice que sí (o se echa atrás en la hoja de la tienda).</em></p>
+
+<h2>Lo esencial de esta parte</h2>
+<ul>
+<li><strong>El precio es una pieza del producto, no un número que se pone al final.</strong> Los tres libros de oficio coinciden: el valor lo decide la cabeza del usuario y se averigua preguntando y midiendo. Tú tienes el embudo medido evento a evento, pero ninguna conversación hecha sobre lo que la gente pagaría. En Leo Glow eso se nota: no sabes si compran a Leo, el plan de 30 días o las ligas.</li>
+<li><strong>Se cobra cuando el valor ya se ha visto.</strong> Tu mejor prueba es de TCM: el muro que salía al terminar un diagnóstico vendía 1 de 11 cuando el del onboarding vendía 1 de 88 (1.0.7). En Leo Glow, el 86 % llega al muro en dos minutos y medio, antes de haber hecho nada.</li>
+<li><strong>Una suscripción es una relación que empieza después del pago.</strong> Sabes cuántos se dan de alta en TCM, pero no cuántos siguen a los 30 días, porque la app no manda <code>days_since_install</code>. Y la pérdida que no tiene que ver con el valor (el «not allowed», 1 de cada 6 que pulsa pagar) es la más barata de recuperar.</li>
+<li><strong>La presentación cambia la decisión, pero solo amplifica un valor verdadero.</strong> Ancla, contraste, lo gratis, el compromiso previo y quitar incertidumbre explican buena parte del salto de TCM de 0 a 12 pruebas por semana. En tus públicos (salud, autoestima de chicos jóvenes, menores en Anime Food iOS) la línea ética no es un adorno: es tu marca y tu seguro con las tiendas.</li>
+<li><strong>Con tu volumen, todo lo de estos libros es hipótesis.</strong> Un cambio por app y por semana, medido por ingreso por persona que empieza el onboarding, y nunca precio y muro a la vez.</li>
+</ul>
+<p>Libros: <a href="#monetizing-innovation">Monetizing Innovation</a> · <a href="#subscribed">Subscribed</a> · <a href="#automatic-customer">The Automatic Customer</a> · <a href="#predictably-irrational">Predictably Irrational</a> · <a href="#influence">Influence</a> · <a href="#alchemy">Alchemy</a></p>
+
+<!-- ============ 401 ============ -->
+<h2 id="monetizing-innovation">Monetizing Innovation · Madhavan Ramanujam y Georg Tacke (2016)</h2>
+<div class="ficha">
+<p><strong>En una frase:</strong> diseña el producto alrededor del precio y habla de dinero con la gente antes de construir, no después.</p>
+<p><strong>Cuánto te importa ahora:</strong> ★★★★★ — Leo Glow es su caso de manual: muchas piezas construidas sin saber cuál paga nadie.</p>
+<p><strong>Si solo haces una cosa:</strong> antes de tocar nada más en Leo Glow, averigua qué compraría la gente (una pregunta en la app y cinco conversaciones), y mientras tanto nombra en el muro el plan diario.</p>
+<p><strong>Capítulo largo:</strong> <a href="../401-monetizing-innovation.html">401 · Monetizing Innovation</a></p>
+</div>
+
+<h3>Las ideas clave</h3>
+<ol>
+<li><strong>Los productos nuevos fracasan sobre todo por dinero, no por calidad.</strong> Los autores, socios de la consultora de precios Simon-Kucher, sostienen que la mayoría de los lanzamientos que no cumplen se hicieron en el orden equivocado: primero se construye, al final se pone precio y luego se espera. El precio llega cuando ya no se puede cambiar qué se ha construido, y entonces solo queda subir o bajar un número.</li>
+<li><strong>La conversación sobre la disposición a pagar tiene que ocurrir pronto.</strong> Es la primera regla del libro. Preguntar a los clientes cuánto valorarían algo antes de construirlo es posible y menos incómodo de lo que parece. No da una cifra exacta; da un rango y, sobre todo, un orden de qué importa y qué no.</li>
+<li><strong>Segmenta por lo que la gente valora, no por quién es.</strong> Un segmento útil no es «hombres de 18 a 24», sino un grupo con necesidades y disposición a pagar parecidas. Meter a todos en un único plan deja dinero en la mesa con quien pagaría más y espanta a quien pagaría menos.</li>
+<li><strong>Empaquetar es casi una ciencia.</strong> Cada función es líder (la que justifica la compra para casi todos), relleno (suma algo, no decide) o asesina (a una parte del público le resta valor o le complica la compra). Meterlo todo en el plan principal diluye lo que de verdad se paga.</li>
+<li><strong>Cómo cobras importa más que cuánto cobras.</strong> Suscripción, pago único, pago por uso, freemium, precios dinámicos: el modelo decide si cobras en el momento en que el cliente percibe el valor. Un modelo que cobra antes de que el beneficio se vea choca con la decisión; uno que cobra cuando el beneficio es evidente fluye.</li>
+<li><strong>Elige una estrategia de precio a propósito.</strong> Maximizar ingresos, entrar barato para ganar volumen o empezar alto y bajar con el tiempo son estrategias distintas con objetivos distintos. Lo que no vale es no haber elegido ninguna.</li>
+<li><strong>La psicología de la presentación es una herramienta, no un truco.</strong> El ancla, la tendencia a elegir la opción del medio o el precio expresado por día cambian la elección. Los autores los tratan como forma de presentar un valor real, nunca como sustituto del valor.</li>
+<li><strong>Comunica beneficios y protege el precio.</strong> El valor se explica en el idioma del cliente: lo que consigue, no lo que trae la app. Y los descuentos improvisados enseñan a esperar la rebaja; si haces una concesión, que sea a cambio de algo y con motivo.</li>
+</ol>
+
+<h3>Conceptos y detalles que conviene saber</h3>
+<ul>
+<li><strong>Los cuatro tipos de fracaso.</strong> El producto sobrecargado de funciones (<em>feature shock</em>; el libro pone como ejemplo el Fire Phone de Amazon), la mejora tan pequeña que no justifica precio (<em>minivation</em>), la joya escondida que la empresa no sabe explotar (<em>hidden gem</em>) y el producto que sale aunque nadie lo quiera (<em>undead</em>). Los cuatro tienen la misma raíz: no se habló de precio a tiempo.</li>
+<li><strong>El ejemplo de cabecera.</strong> Porsche, con el Cayenne, que según los autores se diseñó partiendo de lo que los clientes estaban dispuestos a pagar y de qué funciones movían esa cifra.</li>
+<li><strong>Las preguntas de disposición a pagar.</strong> Qué precio te parecería aceptable, cuál caro, cuál tan caro que no lo comprarías, y cuál tan barato que te haría dudar. Y, función a función: cuál echarías de menos, cuál pagarías aparte.</li>
+<li><strong>Líderes, relleno y asesinas</strong> (<em>leaders, fillers, killers</em>). La clasificación para decidir qué entra en cada plan.</li>
+<li><strong>Bueno, mejor, el mejor.</strong> Tres niveles donde el central concentra la elección y el alto sirve de referencia.</li>
+<li><strong>Las nueve reglas del libro</strong>, en orden: conversación de disposición a pagar pronto; segmentar; configurar y empaquetar; elegir modelo de cobro; elegir estrategia; hacer números del caso de negocio; comunicar valor; usar la psicología del precio; mantener la integridad del precio.</li>
+<li><strong>Integridad del precio.</strong> Cada concesión se da a cambio de algo (compromiso más largo, pago por adelantado). Sin eso, el precio de lista deja de significar nada.</li>
+</ul>
+
+<h3 class="ok">Lo que ya haces bien, según el autor</h3>
+<ul>
+<li><strong>En TCM ya tienes disposición a pagar revelada, no declarada.</strong> El comportamiento real vale más que cualquier encuesta: el anual con prueba cobra 12 de 87 y el mensual 1 de 9 (Android, 19-26 de octubre). Tu propia estrategia de marca ya lo lee como el libro: el cliente quiere un compromiso de estudio, no un pago mes a mes.</li>
+<li><strong>Cobras en el momento del valor, al menos en los muros contextuales.</strong> En la 1.0.7, el muro que salía al terminar un diagnóstico vendía 1 de 11 frente a 1 de 88 del onboarding, y la tarjeta del Inicio cierra 6 de 83 en 30 días. Es la tesis del modelo de cobro: el mismo precio vende más cuando el beneficio ya se ha visto.</li>
+<li><strong>Precio por país.</strong> Rebajaste Brasil, México e India (vigente desde el 13 de octubre). Es segmentar por disposición a pagar con el único criterio que las tiendas te dejan usar de verdad.</li>
+<li><strong>Tres planes con papeles distintos.</strong> Mensual, anual con prueba y vitalicio de 119,99 $ (el primero, el 2 de octubre en iOS). Sin haberlo diseñado como «bueno, mejor, el mejor», ya tienes la estructura.</li>
+</ul>
+
+<h3 class="bad">Errores que estás cometiendo, según el autor</h3>
+<ul>
+<li><strong>Leo Glow se construyó antes de preguntar.</strong> Ruleta, coach de IA, avatar que sube de nivel, rachas, ligas, plan de 30 días. En Android, en 30 días, 181 ven el muro, 22 empiezan un anual, 19 lo cancelan en la hoja de Google y no hay ninguna prueba. Tu propio capítulo de muros lo reconoce: no sabes qué compra la gente. Para los autores es el síntoma del producto sobrecargado: muchas funciones sin una líder clara.</li>
+<li><strong>Ninguna conversación de dinero hecha.</strong> Las fichas de marca proponen cinco suscriptores y tres cancelados en TCM y cinco usuarios en Leo Glow; según «Atender a tu público», no consta que se hayan hecho. Tienes el qué (eventos) y te falta el cuánto y el porqué.</li>
+<li><strong>Dos segmentos de valor pagando lo mismo en TCM.</strong> El estudiante de MTC y el curioso del bienestar llegan al mismo muro con la misma oferta. Es probable que valoren cosas distintas (simulador de casos y fórmulas frente a constitución y dietética). Es una hipótesis: no tienes el dato de quién paga.</li>
+<li><strong>Una sexta parte de la demanda se pierde antes del precio.</strong> En TCM, el «not allowed» de Play afecta a 29 personas con 74 intentos en 30 días, y ninguna de ellas acaba comprando en los siete días siguientes. El autor diría que no hay precio bien diseñado que compense perder compradores ya convencidos en la puerta.</li>
+</ul>
+
+<h3>Qué cambiar, en orden</h3>
+<ol>
+<li><strong>TCM: la pantalla del «not allowed».</strong> Sin precios para los países donde Play no vende; explicación y botón a los métodos de pago para quien sí puede. Mide personas con fallo que compran en siete días (hoy, cero); con unas 20 personas con fallo ya se lee.</li>
+<li><strong>Leo Glow: comprobar la hoja de Google y copiar el muro de TCM antes de hablar de precio.</strong> Registra <code>offer_id</code> y <code>trial_eligible</code>. No bajes el precio: con cero pruebas, el problema no es el número. Mide pruebas iniciadas por persona que ve el muro (umbral orientativo: 2 o más por semana con unas 50 vistas).</li>
+<li><strong>Leo Glow: la pregunta de qué compra la gente.</strong> A quien completa la primera semana: ¿Leo, el plan de 30 días, las ligas? Es la versión mínima de la conversación de disposición a pagar. Objetivo: unas veinte respuestas antes del 13 de diciembre. Con eso clasificas líderes, relleno y asesinas.</li>
+<li><strong>TCM: las ocho conversaciones, con una pregunta de dinero dentro.</strong> Además del guion del Mom Test, pregunta qué precio les pareció caro y qué echarían de menos si desapareciera. No decidas categoría ni segmento de precio antes de hacerlas.</li>
+<li><strong>TCM: leer el precio por país.</strong> Altas por vista del muro en Brasil, México e India antes y después del 13 de octubre, frente a los países que no tocaste. Si suben, amplía en diciembre; si no, no rebajes más.</li>
+<li><strong>Escribe dos segmentos de valor por app en una frase cada uno.</strong> No demográficos: «quien prepara el examen de acupuntura» frente a «quien quiere saber qué comer según su constitución». Es papel, no código, y te sirve para la decisión de enero.</li>
+</ol>
+
+<h3>Dónde no hacerle caso</h3>
+<ul>
+<li>El libro sale de una consultora que trabaja con grandes empresas, mucho B2B, industria y precios altos con ciclos largos. Sus técnicas cuantitativas (encuestas grandes, análisis conjunto) no caben en una app con unas 12 descargas diarias en Leo Glow.</li>
+<li>Lo que la gente dice que pagaría tiene mucho ruido. Usa las conversaciones para ordenar prioridades, nunca para fijar la cifra; la cifra la valida el muro.</li>
+<li>Tú no puedes cambiar el modelo de cobro con libertad: Apple y Google controlan pruebas, renovaciones y cancelación. Y en Anime Food iOS, en la categoría Niños, cualquier compra va detrás de la puerta parental. Eso es un dato del modelo, no un detalle.</li>
+<li>No traslades su segmentación a planes nuevos ya: un plan barato para el curioso de TCM sería cambiar precio y muro a la vez, justo lo que tu plan de noviembre prohíbe.</li>
+</ul>
+
+<p class="frase">El precio no se le pone al producto cuando está hecho: se pregunta al principio, y su respuesta decide qué merece la pena construir.</p>
+
+<!-- ============ 402 ============ -->
+<h2 id="subscribed">Subscribed · Tien Tzuo y Gabe Weisert (2018)</h2>
+<div class="ficha">
+<p><strong>En una frase:</strong> una suscripción no es una venta que se repite sola, es una relación que hay que ganarse cada mes y que se mide con sus propias cifras.</p>
+<p><strong>Cuánto te importa ahora:</strong> ★★★★☆ — TCM ya cobra suscripciones y no sabes cuánta gente sigue usándola a los 30 días.</p>
+<p><strong>Si solo haces una cosa:</strong> manda <code>days_since_install</code> en TCM y separa la curva de quien paga de la de quien no.</p>
+<p><strong>Capítulo largo:</strong> <a href="../402-subscribed.html">402 · Subscribed</a></p>
+</div>
+
+<h3>Las ideas clave</h3>
+<ol>
+<li><strong>Se acaba la era del producto.</strong> Tzuo, fundador de Zuora (software de facturación de suscripciones), sostiene que la economía pasa de vender cosas a clientes anónimos a servir a clientes conocidos de forma continua: de la propiedad al acceso. La relación ya no termina en la caja; empieza ahí.</li>
+<li><strong>El cliente tiene identidad, y eso es el activo.</strong> En una suscripción sabes quién es cada cliente, cuándo entró, qué usa y cuándo dejó de usarlo. Si no aprovechas ese conocimiento, pagas el coste del modelo (cobrar poco a poco, depender de la renovación) sin su ventaja.</li>
+<li><strong>Las métricas son otras.</strong> No cuentas unidades vendidas. Partes de los ingresos recurrentes que tienes, restas lo que pierdes por cancelaciones, sumas altas nuevas y subidas de plan, y miras el neto. El ingreso de este mes es, sobre todo, consecuencia de lo que hiciste en los anteriores.</li>
+<li><strong>La pérdida de clientes es la variable que más pesa.</strong> Un negocio que capta mucho y pierde mucho es un cubo agujereado. Mejorar lo que conservas suele rendir más que traer más gente.</li>
+<li><strong>El producto nunca está terminado.</strong> En un servicio continuo, el valor tiene que seguir apareciendo el mes tres y el mes doce. Diseñar pensando en el lanzamiento es el error de partida.</li>
+<li><strong>El precio se itera.</strong> Pocos planes claros, con un camino para subir cuando el cliente obtiene más valor (niveles, extras, uso). Se ajusta con lo que aprendes del comportamiento, no una vez para siempre.</li>
+<li><strong>La empresa se organiza alrededor del suscriptor.</strong> Para una compañía grande eso son departamentos; para ti es tu calendario: una parte fija de la semana para quien ya paga, no todo para captar.</li>
+</ol>
+
+<h3>Conceptos y detalles que conviene saber</h3>
+<ul>
+<li><strong>La cuenta de resultados de la suscripción.</strong> Ingreso recurrente al inicio, menos cancelaciones, más altas y subidas, igual a ingreso recurrente al final. Luego se separan los costes de mantener a los clientes de los de conseguir nuevos, para saber cuánto crecimiento estás comprando.</li>
+<li><strong>Pérdida voluntaria e involuntaria.</strong> No es el término central del libro, pero se sigue de su lógica: no es lo mismo quien se va porque no ve valor que quien se cae por un pago fallido. La segunda se arregla con herramientas, no con producto.</li>
+<li><strong>Casos por sectores.</strong> Prensa (el paso de vender ejemplares a lectores que pagan por un hábito, con el New York Times como ejemplo), ocio (Netflix frente al videoclub), software (Adobe pasando de licencias a Creative Cloud), transporte e industria. El patrón: gana quien convierte el uso en información y la información en mejoras visibles.</li>
+<li><strong>Crecer con el cliente.</strong> Empezar barato y subir de plan cuando el valor crece; que el suscriptor contento tenga a dónde ir.</li>
+<li><strong>Pocos planes.</strong> Muchos planes confunden; el equilibrio es pocas opciones claras con margen para subir.</li>
+</ul>
+
+<h3 class="ok">Lo que ya haces bien, según el autor</h3>
+<ul>
+<li><strong>Tienes la infraestructura de identidad.</strong> PostHog para el uso y RevenueCat para el dinero son exactamente el conocimiento del cliente que el libro considera el activo. Y separas dispositivos de prueba y descartas días raros: la base de cualquier lectura de cohortes.</li>
+<li><strong>Proteges la pérdida involuntaria.</strong> El periodo de gracia está activo en las dos apps de suscripción, y funcionó: la prueba anual de España se cobró tras un error de facturación gracias a él.</li>
+<li><strong>Separas altas de cobros.</strong> Tu regla de hablar de pruebas hasta el día ocho y de dinero solo con RevenueCat es el corazón del libro: lo que cuenta es lo que se queda. Entre el 14 y el 25 de octubre se cobraron 7 pruebas anuales y las tienes identificadas por país.</li>
+<li><strong>Cobras por adelantado.</strong> El anual con prueba es lo que vende en TCM; te da caja y compromiso desde el primer día.</li>
+</ul>
+
+<h3 class="bad">Errores que estás cometiendo, según el autor</h3>
+<ul>
+<li><strong>Vendes suscripciones sin mirar la relación.</strong> TCM no manda <code>days_since_install</code>: no hay curva a 7 ni a 30 días. La única pista de vuelta es de septiembre (1.0.7): de 85 que terminaban el onboarding, 16 volvían otro día. No sabes si el anual que cobra lo cobra a estudiantes que vuelven cada semana o a gente que se olvidó de la app el segundo día. Para Tzuo es mirar el negocio a medias.</li>
+<li><strong>Leo Glow pide una relación anual a quien no vuelve en una semana.</strong> d1 11,6 %, d3 5,5 %, d7 1,1 % en Android. La promesa (un proceso largo de glow up) encaja con una suscripción; la primera semana no la sostiene. El autor diría que el valor continuo va antes que el muro.</li>
+<li><strong>La pérdida involuntaria de entrada sigue abierta.</strong> En TCM, el «not allowed» (29 personas en 30 días) y el «Error performing request» (18 personas, 52 intentos). Es dinero que no tiene nada que ver con el valor de la app.</li>
+<li><strong>Tu semana es casi toda captación.</strong> Fichas por mercado, cuatro líneas de vídeo, publicación automática, webs en varios idiomas. No hay un bloque fijo para quien ya paga: ni aviso del día cinco de la prueba, ni página de soporte en TCM (la app que cobra), ni conversaciones con suscriptores.</li>
+</ul>
+
+<h3>Qué cambiar, en orden</h3>
+<ol>
+<li><strong>TCM: <code>days_since_install</code> y una línea base sin tocar nada más.</strong> Cuatro cohortes semanales de la 1.0.10 con d1, d7, d30 y «abrió al menos una vez en la semana 4». Éxito: a mediados de diciembre puedes leer el día 7 de al menos dos cohortes.</li>
+<li><strong>TCM: separa la curva de quien paga.</strong> Personas en prueba o pagando con al menos una sesión en la semana 4, entre personas que pagan. Junta un mes de altas (unas 10 por semana en Android). Si los suscriptores no vuelven, el trabajo de los próximos meses es el mes dos, no el muro.</li>
+<li><strong>TCM: el aviso del día cinco de la prueba.</strong> Con lo que ha hecho la persona, la fecha del cobro y un enlace para gestionar la suscripción. Mide pruebas cobradas por cohorte de semana de inicio en RevenueCat; éxito si no baja frente a octubre.</li>
+<li><strong>Tu hoja mensual de suscripción.</strong> Una vez al mes, desde RevenueCat: ingreso recurrente al inicio, altas, cancelaciones, cambios de plan, neto. Separa pérdida voluntaria e involuntaria (fallos de pago por motivo y país).</li>
+<li><strong>Leo Glow: la relación antes que el precio.</strong> Mide la 2.0.4 (acción del día 1 completada el día cero, aviso <code>daily-plan</code> abierto, d1 de quien completa frente a quien no) antes de añadir nada. Con menos de unas 30 personas por grupo, diez puntos de diferencia son ruido.</li>
+<li><strong>Un bloque semanal para quien ya está dentro.</strong> Los 45 minutos de «Atender a tu público», que la máquina de vídeo no se pueda comer.</li>
+</ol>
+
+<h3>Dónde no hacerle caso</h3>
+<ul>
+<li>Su autor vende software de suscripción y presenta la suscripción como el destino de casi todo. No lo es: el vitalicio de TCM vende, y eso dice que parte de tu público prefiere pagar una vez. Mantenlo como tercera opción tranquila.</li>
+<li>La crítica de que el vitalicio «rompe la relación» tiene sentido para una empresa grande. Para un desarrollador solo que se va 17 días, caja por adelantado es también margen de seguridad. Vigila si canibaliza el anual; no lo quites por principio.</li>
+<li>Los capítulos de organización (ventas, finanzas, departamentos) no te aplican. Quédate con las métricas y con la idea de relación.</li>
+<li>Zodiaco no necesita suscripción para aprovechar el libro: su ingreso (el rewarded de duplicar la recompensa diaria) también depende de quién vuelve cada día. Tu plan dice «ni muro ni suscripción» este mes; hazle caso al plan.</li>
+</ul>
+
+<p class="frase">Un suscriptor no se gana el día que paga: se gana cada día que vuelve hasta la renovación.</p>
+
+<!-- ============ 403 ============ -->
+<h2 id="automatic-customer">The Automatic Customer · John Warrillow (2015)</h2>
+<div class="ficha">
+<p><strong>En una frase:</strong> hay nueve maneras de vender una suscripción, cada una con su lógica de valor; elige cuál vendes antes de ponerle precio.</p>
+<p><strong>Cuánto te importa ahora:</strong> ★★★☆☆ — corto y útil para nombrar qué vende Leo Glow, pero sus métricas y su etapa difícil apenas te tocan.</p>
+<p><strong>Si solo haces una cosa:</strong> escribe en una frase qué modelo de los nueve vende cada una de tus cuatro apps; si una necesita tres modelos, no tiene ninguno.</p>
+<p><strong>Capítulo largo:</strong> <a href="../403-automatic-customer.html">403 · The Automatic Customer</a></p>
+</div>
+
+<h3>Las ideas clave</h3>
+<ol>
+<li><strong>Lo recurrente vale más que lo puntual.</strong> Un negocio que empieza cada mes desde cero vive en la incertidumbre; uno con clientes recurrentes empieza el mes con una base. Esa previsibilidad deja planificar y, según el autor, hace que un comprador pague más por cada euro de ingreso recurrente que por uno puntual.</li>
+<li><strong>Todo negocio pequeño debería buscar su parte automática.</strong> Warrillow escribe para dueños de negocios pequeños, no para grandes empresas. Su pregunta: qué parte de lo que vendes podría comprarse sin que el cliente tenga que decidir cada vez.</li>
+<li><strong>No hay una suscripción, hay nueve.</strong> Cada modelo vende algo distinto: acceso a conocimiento, amplitud de catálogo, pertenencia, prioridad, reposición, sorpresa, ahorro de esfuerzo, conexiones o tranquilidad. Cada uno tiene su promesa, su precio y su trampa.</li>
+<li><strong>El modelo decide el mensaje.</strong> Si vendes una biblioteca, prometes amplitud y novedades; si vendes un simplificador, prometes no tener que pensar. Mezclar modelos en el mismo muro confunde, porque el cliente no sabe qué está comprando.</li>
+<li><strong>Cuatro números gobiernan el negocio.</strong> Cuánta gente se va cada mes, cuánto cuesta conseguir un cliente, cuánto deja a lo largo de su vida y la relación entre estos dos últimos. Si un cliente vale menos de lo que cuesta captarlo, crecer te arruina.</li>
+<li><strong>La suscripción se mantiene viva.</strong> Dar razones para quedarse, avisar antes de renovar, facilitar la baja (ponerla imposible da mala fama) y preguntar por qué se va la gente.</li>
+<li><strong>El paso a recurrente tiene una etapa incómoda.</strong> Cobrar poco a poco lo que antes cobrabas de golpe hunde la caja al principio. Se suaviza cobrando por adelantado (el anual) o combinando pago único y recurrente.</li>
+</ol>
+
+<h3>Conceptos y detalles que conviene saber</h3>
+<ul>
+<li><strong>Los nueve modelos.</strong>
+<ul>
+<li><strong>Web de miembros:</strong> conocimiento que no está en otra parte. Trampa: que se agote o se copie.</li>
+<li><strong>Biblioteca «todo lo que quieras»:</strong> acceso ilimitado a un catálogo amplio (el ejemplo clásico es Netflix). Trampa: que el cliente sienta que no lo usa lo bastante.</li>
+<li><strong>Club privado:</strong> pertenencia exclusiva y limitada. Solo funciona si el acceso es escaso de verdad.</li>
+<li><strong>Acceso preferente:</strong> ser atendido antes o mejor.</li>
+<li><strong>Consumibles:</strong> reponer lo que se gasta (cuchillas, café). El cliente ya lo iba a comprar.</li>
+<li><strong>Caja sorpresa:</strong> una selección que el cliente no elige; vende ilusión y descubrimiento.</li>
+<li><strong>Simplificador:</strong> quitarle al cliente una tarea pesada y recurrente.</li>
+<li><strong>Red:</strong> cobrar por conectar personas. Su valor crece con cada miembro; su problema es el arranque.</li>
+<li><strong>Tranquilidad:</strong> un seguro que el cliente espera no usar.</li>
+</ul></li>
+<li><strong>Pérdida mensual, coste de captación y valor de vida del cliente.</strong> El trío de métricas del libro. El valor de vida debe superar con holgura el coste de captarlo.</li>
+<li><strong>Retención activa.</strong> Aviso antes de renovar, baja fácil, pregunta de salida con opciones cerradas y un campo libre.</li>
+</ul>
+
+<h3 class="ok">Lo que ya haces bien, según el autor</h3>
+<ul>
+<li><strong>TCM es una biblioteca bien surtida.</strong> 110 puntos ilustrados, 12 meridianos, 86 hierbas, 30 fórmulas, seis métodos de diagnóstico, nueve constituciones y un simulador de casos. Para el estudiante, el modelo se justifica solo durante el curso.</li>
+<li><strong>Cobras por adelantado.</strong> El anual con prueba es lo que vende (12 de 87 frente a 1 de 9 del mensual) y el vitalicio te ha dado caja de golpe. Es la receta del autor para atravesar la etapa difícil.</li>
+<li><strong>No fuerzas suscripción donde el uso es estacional.</strong> Zodiaco vive de un rewarded que la gente acepta (duplicar la recompensa diaria: 7,81 de los unos 10,6 USD de 30 días) y tu plan dice explícitamente que no le pongas muro. Warrillow aplaudiría no meter una suscripción en un negocio con el pico en febrero.</li>
+<li><strong>Tu captación cuesta horas, no euros.</strong> ASO y vídeo orgánico. Eso hace que la regla de «valor de vida mayor que coste de captación» juegue a tu favor, siempre que cuentes tus horas.</li>
+</ul>
+
+<h3 class="bad">Errores que estás cometiendo, según el autor</h3>
+<ul>
+<li><strong>Leo Glow vende cuatro modelos a la vez.</strong> Un simplificador (la ruleta y el plan diario), una web de miembros (el coach), una red (las ligas) y un juego (avatar y rachas). El dato de que 22 personas empiezan un anual y 19 se echan atrás en la hoja de Google, con 0 pruebas, cuadra con un cliente que no sabe qué compra. Ojo: tu capítulo de muros apunta primero a una causa técnica (que la hoja no enseñe la prueba); las dos cosas pueden ser ciertas a la vez.</li>
+<li><strong>Una red sin masa.</strong> Las ligas de Leo Glow dependen de que haya gente activa, y con un d7 del 1,1 % y unas 8,6 descargas diarias en Play es probable que estén casi vacías. El autor avisa: una red sin miembros resta. Es una hipótesis; no tienes medido el uso de las ligas.</li>
+<li><strong>No sabes cuánto vale un suscriptor de TCM.</strong> Sin curva de retención ni renovaciones todavía (la primera renovación anual llegará dentro de un año), no puedes estimar el valor de vida, y por tanto no sabes cuánto tiempo merece la pena gastar en captar.</li>
+<li><strong>No preguntas por qué se van.</strong> No hay pregunta de salida en ninguna app. En Leo Glow, donde el problema está tan delimitado, es la omisión más cara.</li>
+</ul>
+
+<h3>Qué cambiar, en orden</h3>
+<ol>
+<li><strong>Una frase por app con su modelo.</strong> Propuesta para contrastar: TCM, biblioteca para el estudiante; Leo Glow, simplificador («sabrás qué hacer hoy»); Zodiaco, sin suscripción, ritual diario con anuncios; Anime Food, ninguno por ahora (motor de contenido). Hazlo la semana 2, junto a la frase de posicionamiento de cada ficha.</li>
+<li><strong>Leo Glow: el muro habla del simplificador.</strong> Al copiar el muro de TCM, el titular nombra el plan diario (es también lo que pide tu capítulo de muros mientras no sepas qué compran). Mide pruebas por persona que ve el muro. No es un segundo cambio: es el texto del mismo muro.</li>
+<li><strong>Leo Glow: la encuesta de salida.</strong> Al volver de la hoja sin comprar, una vez por persona: «No vi que tuviera días gratis», «Es caro para mí», «Solo estaba mirando», «Otra cosa». Con unas 52 vistas por semana, júntala varias semanas.</li>
+<li><strong>TCM: haz visible que la biblioteca crece.</strong> Una novedad al mes anunciada dentro de la app (un caso, una fórmula). Mide la apertura de la novedad entre suscriptores. Es una hipótesis para diciembre, no para noviembre.</li>
+<li><strong>TCM: una estimación honesta del valor de un suscriptor</strong> cuando tengas la curva de la semana 4. Aunque sea tosca, te dice cuántas horas de vídeo y ASO justifica cada alta.</li>
+<li><strong>Ligas: mide antes de decidir.</strong> Personas activas por liga y vuelta de quien entra en una. Si casi todas están vacías, escóndelas hasta que haya gente.</li>
+</ol>
+
+<h3>Dónde no hacerle caso</h3>
+<ul>
+<li>El libro piensa en negocios físicos y de servicios. En las tiendas de apps no diseñas la baja ni el aviso de renovación con libertad: los controlan Apple y Google. Lo que sí controlas es tu aviso antes del cobro y tu página de soporte.</li>
+<li>Su obsesión por lo recurrente pasa por alto que una parte del público rechaza suscribirse. El vitalicio de TCM lo demuestra.</li>
+<li>La «caja sorpresa» tienta para Anime Food (recetas nuevas de anime cada semana), pero con 142 personas al mes en Android y iOS en la categoría Niños, tu plan pide decidir su papel y no invertir. No le pongas modelo de pago ahora.</li>
+<li>La parte de vender la empresa no es tu objetivo. Tradúcela a tranquilidad: cuánto de tu mes depende de lo que ya tienes y no del próximo vídeo.</li>
+</ul>
+
+<p class="frase">Antes de ponerle precio a una suscripción, di qué vendes en una sola frase; si no te sale, el cliente tampoco sabrá qué compra.</p>
+
+<!-- ============ 404 ============ -->
+<h2 id="predictably-irrational">Predictably Irrational · Dan Ariely (2008)</h2>
+<div class="ficha">
+<p><strong>En una frase:</strong> nos equivocamos al decidir, pero siempre de las mismas maneras, y quien diseña un muro de pago ya está usando esos errores, lo sepa o no.</p>
+<p><strong>Cuánto te importa ahora:</strong> ★★★☆☆ — da buenas hipótesis para el muro y la prueba, pero parte de su ciencia se ha revisado y hay que leerlo con lupa.</p>
+<p><strong>Si solo haces una cosa:</strong> en Leo Glow, asegúrate de que la palabra «gratis» llega de verdad a la hoja de Google; el efecto de lo gratis no funciona si el usuario ve un precio.</p>
+<p><strong>Capítulo largo:</strong> <a href="../404-predictably-irrational.html">404 · Predictably Irrational</a></p>
+</div>
+
+<h3>Las ideas clave</h3>
+<ol>
+<li><strong>Somos irracionales, pero de forma previsible.</strong> La economía clásica supone que sopesamos costes y beneficios. Ariely sostiene que no, y que nuestros errores no son aleatorios: se repiten. Si se repiten, se pueden prever y diseñar alrededor de ellos.</li>
+<li><strong>Todo es relativo.</strong> No sabemos cuánto vale algo en abstracto, así que lo juzgamos comparándolo con lo que tiene al lado. Añadir una opción que casi nadie elige puede cambiar cuál de las otras se elige más: es el efecto señuelo.</li>
+<li><strong>El primer número manda.</strong> Una cifra que vemos al principio, aunque sea arbitraria, se convierte en el ancla de lo que estamos dispuestos a pagar después. Y luego somos coherentes con ella: lo que pagamos una vez pasa a ser la referencia.</li>
+<li><strong>Cero no es un precio más.</strong> Lo gratis provoca un salto emocional: desaparece el miedo a perder y elegimos lo gratuito aunque una alternativa muy barata sea mejor. Las pruebas gratuitas viven de esto, con su cara y su cruz: atraen también a quien no piensa pagar.</li>
+<li><strong>Normas sociales y normas de mercado no se mezclan bien.</strong> Cuando una relación de tono social (favores, simpatía) pasa a ser de dinero, la de mercado expulsa a la social y la conducta puede empeorar. Cómo y cuándo pides dinero cambia la relación.</li>
+<li><strong>Decidimos distinto en caliente y en frío.</strong> En plena emoción hacemos cosas que en frío no haríamos, y no sabemos prever ese cambio. Y lo que nos conviene a largo plazo lo dejamos para mañana; ayudan los compromisos y los plazos.</li>
+<li><strong>Lo que es nuestro vale más, y nos cuesta cerrar puertas.</strong> Sobrevaloramos lo que ya poseemos y nos cuesta renunciar a opciones aunque mantenerlas abiertas nos salga caro. Muchas opciones pueden paralizar.</li>
+<li><strong>La expectativa forma parte de la experiencia.</strong> Lo que esperamos de algo cambia cómo lo vivimos; el libro lo ilustra con el placebo, que parece funcionar mejor cuando es más caro.</li>
+</ol>
+
+<h3>Conceptos y detalles que conviene saber</h3>
+<ul>
+<li><strong>El señuelo de The Economist.</strong> El ejemplo más citado del libro: una suscripción solo web, una solo en papel y una de papel más web al mismo precio que la de papel. Casi nadie elige la de solo papel, pero su presencia empuja hacia el paquete completo. Sin ella, la elección cambia.</li>
+<li><strong>Coherencia arbitraria.</strong> En un experimento con estudiantes, las dos últimas cifras de un número que no tenía nada que ver con el producto influían en cuánto pujaban por él.</li>
+<li><strong>Lo gratis.</strong> En un experimento con bombones, bajar el precio de ambos en la misma cantidad, de forma que el barato pasaba a costar cero, daba la vuelta a la preferencia.</li>
+<li><strong>La guardería y la multa.</strong> El caso, tomado de otros investigadores, de una guardería que multó los retrasos al recoger a los niños y los retrasos aumentaron: la multa convirtió una obligación social en un precio.</li>
+<li><strong>Plazos.</strong> Estudiantes con plazos impuestos rendían mejor que los que podían fijar los suyos o no tenían ninguno.</li>
+<li><strong>Efecto dotación y puertas abiertas.</strong> Valorar más lo que ya es tuyo; pagar por no cerrar opciones.</li>
+<li><strong>Revisión del campo.</strong> Desde 2008, varios efectos de la psicología social se han reproducido con menos fuerza de la que se publicó. Además, un estudio sobre honestidad del que Ariely era coautor, posterior a este libro, se retiró en 2021 por problemas en los datos; él niega haber manipulado nada. Comparación, lo gratis y la procrastinación tienen apoyo amplio fuera de su obra; los experimentos concretos, tómalos como ilustraciones.</li>
+</ul>
+
+<h3 class="ok">Lo que ya haces bien, según el autor</h3>
+<ul>
+<li><strong>Tu muro de TCM ya trabaja con la comparación.</strong> Anual preseleccionado, precio por unidad de tiempo y ahorro dicho frente al mensual: el mensual hace de referencia, el anual parece razonable. Con la misma oferta de Play pasaste de 0 a 12 pruebas por semana.</li>
+<li><strong>Usas lo gratis donde ayuda.</strong> El anual con prueba trae casi todas las altas: 87 empezados y 12 pruebas, frente a 9 y 1 en el mensual sin prueba. Es tu propio experimento del precio cero.</li>
+<li><strong>Zodiaco cobra con el efecto dotación.</strong> El rewarded de duplicar la recompensa diaria ofrece no dejar pasar el doble de algo que ya es tuyo, y es el formato que más cobra con mucha diferencia (336 enseñados, 7,81 USD en 30 días).</li>
+<li><strong>Separas caliente y frío en la medida.</strong> No juzgas el muro por una semana buena y desconfías de diferencias pequeñas. Es justo la cautela que pide un libro cuya ciencia se ha revisado.</li>
+</ul>
+
+<h3 class="bad">Errores que estás cometiendo, según el autor</h3>
+<ul>
+<li><strong>En Leo Glow, el «gratis» quizá no llega a verse.</strong> 22 anuales empezados, 19 cancelados en la hoja y 0 pruebas, aunque la prueba de 3 días existe en las dos tiendas desde el 11 de octubre. Si la hoja enseña un precio en lugar de «3 días gratis», el efecto más potente del libro desaparece en el último paso. Es una hipótesis hasta comprobarlo con una cuenta nueva.</li>
+<li><strong>Pides el dinero en caliente y antes de que haya nada que poseer.</strong> En Leo Glow el 86 % llega al muro en unos dos minutos y medio, antes de completar ninguna acción, y 41 de 87 se iban desde Hoy sin tocar nada. No hay avatar subido, ni racha, ni plan empezado que perder.</li>
+<li><strong>El tono cambia de golpe.</strong> Leo habla como un amigo mayor; si el muro aparece a los dos minutos y medio con planes y precios, pasa de norma social a norma de mercado sin transición. Es una lectura del libro, no un dato medido.</li>
+<li><strong>Un compromiso a largo plazo sin plazos ni metas.</strong> Un glow up es autocontrol a largo plazo. La curva de Leo Glow (11,6 % el día 1, 1,1 % el día 7) es el retrato de alguien que se descarga la app motivado y la abandona cuando se le pasa. Ariely diría que faltan compromisos externos que ayuden al usuario contra su propia procrastinación.</li>
+</ul>
+
+<h3>Qué cambiar, en orden</h3>
+<ol>
+<li><strong>Leo Glow: comprobar la hoja y copiar el muro de TCM.</strong> «3 días gratis» en el botón, «no se cobra nada hoy» debajo, precio por semana. Si la persona no es elegible, el botón dice el precio real. Mide pruebas por persona que ve el muro.</li>
+<li><strong>Leo Glow: después, el muro tras el primer logro.</strong> Que la persona posea algo (la primera acción hecha, el avatar que reacciona) antes de ver precios. Tu plan lo deja para después del cambio de diseño, no el mismo mes. Mídelo por ingreso por persona que empieza, porque bajarán las vistas del muro.</li>
+<li><strong>Leo Glow: la hora de mañana como compromiso.</strong> Al cerrar la acción del día, que la persona elija a qué hora quiere la siguiente. Es un plazo que se pone ella misma. Mide apertura del aviso <code>daily-plan</code> y d1.</li>
+<li><strong>TCM: el orden de los planes, solo en los muros contextuales.</strong> No toques el muro del onboarding de la 1.0.10. En el del diagnóstico y la tarjeta del Inicio, comprueba que el anual sale preseleccionado y el mensual en pequeño. Mide <code>plan_selected</code> = anual y altas por vista, por <code>source</code>.</li>
+<li><strong>Zodiaco: más rewarded con el mismo marco.</strong> La build con los tres rewarded nuevos (ración extra para la mascota, avance de la lectura de mañana, el resto de la compatibilidad) usa la misma lógica de no dejar pasar algo casi tuyo. Mide rewarded por persona activa y d1/d7 de la cohorte.</li>
+</ol>
+
+<h3>Dónde no hacerle caso</h3>
+<ul>
+<li>No tomes ningún experimento del libro como prueba de que algo funcionará en tu muro. Son hipótesis; con tu volumen, una a una y con paciencia.</li>
+<li>La idea de «quitar el mensual» o «poner el vitalicio arriba como ancla» en TCM choca con tu plan: el muro del onboarding de la 1.0.10 convierte en las dos tiendas y no se toca este mes.</li>
+<li>Los experimentos se hicieron con estudiantes y poco dinero en juego. Suscribirse en el móvil, con la hoja de la tienda por medio, es otro contexto.</li>
+<li>El bloque de deshonestidad no te aplica, y es justo la parte más afectada por la retirada del estudio.</li>
+<li>Usar estos sesgos contra el usuario (señuelos engañosos, pruebas que cobran sin avisar) se paga en reseñas y reembolsos, y en Leo Glow traiciona tu postura.</li>
+</ul>
+
+<p class="frase">Nadie decide en el vacío: la gente elige comparando, y tú decides con qué compara aunque no lo pretendas.</p>
+
+<!-- ============ 405 ============ -->
+<h2 id="influence">Influence · Robert Cialdini (1984; edición ampliada 2021)</h2>
+<div class="ficha">
+<p><strong>En una frase:</strong> decimos que sí por atajos mentales previsibles, y la diferencia entre persuadir y engañar está en si la señal que activas es verdad.</p>
+<p><strong>Cuánto te importa ahora:</strong> ★★★★☆ — tu onboarding y tu muro son una cadena de peticiones, y tus públicos (salud, autoestima, menores) exigen la línea ética del autor.</p>
+<p><strong>Si solo haces una cosa:</strong> da antes de pedir: que en Leo Glow la persona reciba algo suyo (su plan, su primera acción hecha) antes de ver el muro.</p>
+<p><strong>Capítulo largo:</strong> <a href="../405-influence.html">405 · Influence</a></p>
+</div>
+
+<h3>Las ideas clave</h3>
+<ol>
+<li><strong>Usamos atajos para decidir.</strong> No podemos analizar cada decisión, así que respondemos a ciertas señales casi en automático. Los atajos casi siempre aciertan; por eso funcionan, y por eso quien los conoce puede activarlos a propósito.</li>
+<li><strong>Reciprocidad.</strong> Sentimos la obligación de devolver lo que recibimos, aunque no lo pidiéramos. Una concesión también cuenta: si alguien rebaja su petición tras un no, sentimos que debemos rebajar nuestra negativa.</li>
+<li><strong>Compromiso y coherencia.</strong> Tras tomar una postura, sobre todo si es activa, pública y costosa, queremos ser coherentes con ella. Los compromisos pequeños llevan a otros mayores. Es el principio del onboarding.</li>
+<li><strong>Prueba social.</strong> Cuando dudamos, miramos qué hacen otros, sobre todo otros parecidos a nosotros. No influye cualquiera: influye alguien como yo.</li>
+<li><strong>Simpatía.</strong> Decimos sí a quien nos cae bien: a quien se nos parece, nos elogia, colabora con nosotros o asociamos con algo bueno.</li>
+<li><strong>Autoridad.</strong> Seguimos a quien parece saber, a veces solo por sus símbolos (títulos, uniforme). Por eso es el principio más fácil de falsificar.</li>
+<li><strong>Escasez.</strong> Valoramos más lo que puede faltar y reaccionamos con fuerza cuando sentimos que nos quitan una libertad. Es el principio que más se abusa en apps.</li>
+<li><strong>Unidad.</strong> Añadido en la edición ampliada: decimos sí a quien sentimos como «de los nuestros», con quien compartimos identidad. No es parecerse; es pertenecer.</li>
+</ol>
+
+<h3>Conceptos y detalles que conviene saber</h3>
+<ul>
+<li><strong>Clic, zum.</strong> La imagen del autor para la respuesta automática: una señal dispara una conducta fija, como en ciertos animales.</li>
+<li><strong>El «porque».</strong> Un estudio que cita: dar una razón, aunque sea floja, aumentaba la aceptación de una petición para colarse en una fotocopiadora.</li>
+<li><strong>Contraste.</strong> Lo que vemos primero cambia cómo percibimos lo que viene después: tras algo caro, lo siguiente parece barato.</li>
+<li><strong>Rechazo y retirada</strong> (la puerta en las narices). Pedir algo grande, aceptar el no y retirarse a algo más pequeño. Funciona porque la retirada se vive como concesión.</li>
+<li><strong>El pie en la puerta.</strong> Un compromiso pequeño (un cartel pequeño en la ventana) facilita aceptar después uno grande.</li>
+<li><strong>Bola baja.</strong> Conseguir el sí con una oferta y luego empeorarla, apoyándose en que el cliente ya decidió. El autor lo describe como técnica de explotación.</li>
+<li><strong>Prueba social y semejanza.</strong> Risas enlatadas, testimonios, contadores; pesan mucho más cuando quien aparece se parece al que decide.</li>
+<li><strong>Autoridad.</strong> Los experimentos de obediencia de Milgram como ejemplo extremo de su fuerza.</li>
+<li><strong>Escasez y reactancia.</strong> Lo limitado parece mejor, y lo que antes había y ahora falta, más todavía.</li>
+<li><strong>La defensa.</strong> Cada capítulo cierra con cómo resistir el uso abusivo. La pregunta ética del autor: ¿estoy señalando algo verdadero o fabricando la señal?</li>
+</ul>
+
+<h3 class="ok">Lo que ya haces bien, según el autor</h3>
+<ul>
+<li><strong>Aprendiste el rechazo y retirada a la fuerza.</strong> En la 1.0.7 de TCM, la «última oportunidad» ofrecía el vitalicio (más caro) a quien acababa de rechazar el anual, y lo rechazaban 106 de 112. Era la técnica al revés. Lo corregiste y tu regla ahora es la del libro: a quien se va, algo más fácil o dejarle ir.</li>
+<li><strong>Tu onboarding de TCM pide compromisos y filtra.</strong> Preguntas de objetivo, calibración y «Qué te cuesta» antes del muro. Las versiones 1.0.9 y 1.0.10, con una bienvenida que deja pasar a menos gente, compran entre el 3 y el 3,6 % por persona, frente al 1,1-1,7 % de las anteriores.</li>
+<li><strong>La simpatía tiene cara.</strong> Cada app tiene a alguien (Leo, Lin y Mei, Kai, el avatar de TCM), y tu arquitectura de marca pide una mascota, un aspecto, una voz.</li>
+<li><strong>Autoridad sin disfraz.</strong> En TCM la regla es maestra paciente, no gurú: rigor de contenido, sin promesas de curación. Es la autoridad legítima que el autor defiende y, de paso, tu protección con las tiendas.</li>
+<li><strong>Escasez solo si es verdad.</strong> El rewarded de Zodiaco («o lo ves o renuncias al doble») es una pérdida real, no fabricada. Y tus guías prohíben descuentos inventados y contadores falsos.</li>
+</ul>
+
+<h3 class="bad">Errores que estás cometiendo, según el autor</h3>
+<ul>
+<li><strong>Pides sin haber dado en Leo Glow.</strong> El muro llega a los dos minutos y medio para el 86 %, antes de completar ninguna acción. No hay reciprocidad que activar. En TCM, en cambio, el muro que llegaba tras un diagnóstico (algo recibido) vendía 1 de 11 frente a 1 de 88.</li>
+<li><strong>Preguntas y no devuelves.</strong> El capítulo de onboarding te pide devolver la calibración y la respuesta de «Qué te cuesta» en el plan y en el muro, lo que indica que hoy no se hace del todo. Un compromiso que no se usa no genera coherencia, y el usuario siente que ha pagado un peaje.</li>
+<li><strong>Prueba social de nadie.</strong> No hay testimonios por público en ningún muro, y en TCM el estudiante y el curioso llegan al mismo. Además, la valoración media y el número de reseñas no están en tus informes: no sabes qué prueba social te dan las fichas.</li>
+<li><strong>Ligas sin gente en Leo Glow.</strong> La prueba social funciona al revés si lo que ves es que nadie más avanza. Es una hipótesis, no tienes medido el uso de las ligas.</li>
+<li><strong>Unidad sin cultivar.</strong> Tu comunidad está en los comentarios de los vídeos y nadie la atiende con regularidad: no hay ritual de lectura ni canal propio. Es el principio más potente para nichos como los tuyos.</li>
+</ul>
+
+<h3>Qué cambiar, en orden</h3>
+<ol>
+<li><strong>TCM: devuelve las respuestas del onboarding en los muros contextuales y en el plan.</strong> La calibración como punto de partida («hoy: 1 de 3»), «Qué te cuesta» en el titular del muro del diagnóstico. No toques el del onboarding de la 1.0.10. Mide altas por vista de cada muro por <code>source</code>.</li>
+<li><strong>Leo Glow: da antes de pedir, en dos tiempos.</strong> Primero, el muro de TCM con la prueba bien comunicada. Después (otro mes), el muro tras la primera acción completada, con el permiso de avisos pedido en ese mismo momento («¿te aviso mañana a esta hora?»). Mide por ingreso por persona que empieza.</li>
+<li><strong>TCM: la pregunta del día cinco como compromiso.</strong> Junto al aviso con lo que ha hecho: «¿Para qué estás usando TCM?». Recoge el segmento y refuerza la coherencia antes del cobro.</li>
+<li><strong>Testimonios por público, honestos.</strong> Cuando hagas las conversaciones de TCM, pide permiso para citar una frase (sin datos personales y sin hablar de curación). Uno de estudiante para estudiantes; nada genérico. Úsalo primero en la ficha, no en el muro de la 1.0.10.</li>
+<li><strong>Revisa cada pantalla con la pregunta del autor.</strong> Una pasada por muro, onboarding y avisos de las cuatro apps: ¿señalo algo verdadero o fabrico la señal? Presta atención especial a rachas que amenazan con perder (Leo Glow) y a cualquier presión en Anime Food iOS, que es categoría Niños.</li>
+</ol>
+
+<h3>Dónde no hacerle caso</h3>
+<ul>
+<li>Muchas técnicas que describe (bola baja, escasez inventada, popularidad simulada) son ejemplos de lo que no debes hacer. En tiendas de apps acaban en reseñas de una estrella, reembolsos y problemas con las normas de Apple y Google.</li>
+<li>Algunos estudios citados son antiguos y, como en toda la psicología social, el tamaño de ciertos efectos se ha revisado a la baja. Mide; no des nada por hecho porque está en el libro.</li>
+<li>Con públicos sensibles, lo legítimo en un adulto puede ser presión indebida. Leo Glow habla a chicos jóvenes inseguros; Anime Food iOS, a niños de 9 a 11 años. Ahí, la defensa que enseña el libro la aplicas contra ti mismo.</li>
+<li>Pedir reseñas también es una petición, y tiene reglas propias: nada de recompensas ni de filtrar a los contentos. Las tiendas mandan sobre Cialdini.</li>
+</ul>
+
+<p class="frase">Persuadir bien es hacer visible algo que ya es verdad; en cuanto fabricas la señal, has dejado de convencer y has empezado a engañar.</p>
+
+<!-- ============ 406 ============ -->
+<h2 id="alchemy">Alchemy · Rory Sutherland (2019)</h2>
+<div class="ficha">
+<p><strong>En una frase:</strong> la gente no decide con lógica sino con lo que el autor llama «psicológica», y muchas veces lo más barato y eficaz es cambiar cómo se percibe algo, no lo que es.</p>
+<p><strong>Cuánto te importa ahora:</strong> ★★★☆☆ — te da permiso para probar ideas que tu lado de ingeniero descartaría y una pregunta útil: dónde está la incertidumbre del usuario.</p>
+<p><strong>Si solo haces una cosa:</strong> quita la incertidumbre del momento de pagar: qué pasa hoy, cuándo se cobra, cómo se cancela y qué hacer si Play dice que no.</p>
+<p><strong>Capítulo largo:</strong> <a href="../406-alchemy.html">406 · Alchemy</a></p>
+</div>
+
+<h3>Las ideas clave</h3>
+<ol>
+<li><strong>Lógica no es lo mismo que psicológica.</strong> Sutherland, vicepresidente de Ogilvy en Reino Unido, distingue la lógica, con la que justificamos decisiones, de la «psicológica», con la que las tomamos. Buscamos sentirnos seguros, evitar el arrepentimiento, enviar señales y reducir la incertidumbre. Lo que parece irracional suele tener una razón más profunda.</li>
+<li><strong>Cambiar la percepción suele ser más barato que cambiar la realidad.</strong> Muchos problemas se atacan con grandes inversiones racionales cuando bastaba un cambio de cómo se vive la experiencia. No es mentir: la experiencia forma parte del valor.</li>
+<li><strong>Las señales cuestan, y por eso comunican.</strong> Gastos que parecen desperdicio (un envoltorio caro, una publicidad que no dice nada concreto) señalan compromiso y fiabilidad precisamente porque son costosos. Un precio también es una señal: demasiado bajo puede decir «poca calidad».</li>
+<li><strong>Reducir la incertidumbre vale más que acelerar.</strong> Mucho de lo que valoramos es dejar de estar inquietos. La espera que se ve es más llevadera que la espera a ciegas.</li>
+<li><strong>Buscamos lo suficientemente bueno, no lo óptimo.</strong> La gente quiere una opción que no le haga arrepentirse. Por eso gana lo conocido aunque no sea lo mejor: elegirlo protege del error.</li>
+<li><strong>La forma de presentar es parte del producto.</strong> Ganancia o pérdida, precio por día o por año, regla o costumbre: el marco cambia la respuesta. Es legítimo cuando la experiencia resultante es mejor para la persona.</li>
+<li><strong>No diseñes para la media ni solo para lo que se mide.</strong> La media no describe a nadie, y optimizar lo fácil de medir hace perder lo que importa y no se mide.</li>
+<li><strong>Prueba lo que parece absurdo.</strong> Lo contrario de una buena idea puede ser otra buena idea. Las ideas que la lógica descarta son baratas de probar y, si funcionan, nadie más las tendrá.</li>
+</ol>
+
+<h3>Conceptos y detalles que conviene saber</h3>
+<ul>
+<li><strong>Las cuatro eses.</strong> El libro organiza su «alquimia» en cuatro razones por las que funciona lo que parece ilógico: señalización (<em>signalling</em>), atajos del subconsciente (<em>subconscious hacking</em>), conformarse con lo suficiente (<em>satisficing</em>) y psicofísica (<em>psychophysics</em>: cómo percibimos las magnitudes, que no es como las mide un instrumento).</li>
+<li><strong>El tren rápido.</strong> Su ejemplo más conocido: en lugar de gastar una fortuna en acortar unos minutos un trayecto en tren, se podría hacer el viaje tan agradable que nadie quisiera que terminase.</li>
+<li><strong>El mapa del coche que viene.</strong> Las apps de transporte que enseñan el coche acercándose no lo traen antes, pero quitan la angustia de la espera, y eso cambia toda la experiencia.</li>
+<li><strong>Red Bull.</strong> Lata pequeña, sabor raro y precio alto: según Sutherland, rasgos que lógicamente restarían y que, como señal, dicen «esto hace efecto».</li>
+<li><strong>Nadie fue despedido por comprar IBM.</strong> La versión empresarial del <em>satisficing</em>: elegir lo seguro protege más que acertar.</li>
+<li><strong>Psicológica.</strong> Su palabra para la lógica real de la conducta, la que una hoja de cálculo no ve.</li>
+</ul>
+
+<h3 class="ok">Lo que ya haces bien, según el autor</h3>
+<ul>
+<li><strong>El nombre de Leo Glow conserva el término que se busca.</strong> Al pasar de «Looksmaxxing: Glow Up Coach» a «Leo Glow: Looksmaxxing Coach» (7 de octubre) subieron impresiones y visitas, pero las descargas desde búsqueda cayeron a ×0,64. Lo mediste y lo leíste como dato de marca. Tu estrategia (entrar por «looksmaxxing» en la búsqueda, quedarte en «hábitos» en el mensaje) es puro <em>satisficing</em>: la palabra conocida dice «estás en el sitio correcto».</li>
+<li><strong>El anual vende como señal.</strong> En TCM el anual con prueba cobra 12 de 87 y el mensual, que es menos riesgo, 1 de 9. Tu ficha de marca ya lo lee como Sutherland: el cliente compra un compromiso de estudio, no un acceso mes a mes.</li>
+<li><strong>Tu postura es una señal cara.</strong> «Sin puntuar tu cara» te cuesta el gancho fácil del nicho, y precisamente por eso comunica. Igual que la regla de no prometer salud en TCM.</li>
+<li><strong>Trabajas la percepción a bajo coste.</strong> El formato «anime → real» de Anime Food no cambia la receta, cambia cómo se vive. El ASMR como firma, la ruleta con sonido propio, el «subir de nivel» como cierre: activos que son pura psicofísica.</li>
+</ul>
+
+<h3 class="bad">Errores que estás cometiendo, según el autor</h3>
+<ul>
+<li><strong>Incertidumbre en el momento de pagar.</strong> En TCM, una de cada seis personas que pulsa pagar choca con el «not allowed»: no sabe qué ha pasado ni si se le ha cobrado. En Leo Glow, 19 de 22 se echan atrás en la hoja, y la hipótesis principal es que la hoja no dice lo que promete el botón. Es la espera a ciegas del libro, en el peor sitio posible.</li>
+<li><strong>Nadie explica qué pasa después de pagar.</strong> La página de soporte de Leo Glow solo menciona iOS y no dice nada de Glow+ (restaurar, cancelar, reembolsos). TCM y Zodiaco no tienen página de soporte. El aviso del día cinco de la prueba aún no existe. Cada hueco es miedo a que te cobren sin enterarte, y ese miedo hace quitar la renovación «por si acaso».</li>
+<li><strong>Resolver con funciones lo que es de percepción.</strong> Leo Glow acumula mecánicas (ruleta, coach, avatar, rachas, ligas) y tiene un d7 del 1,1 %. El rewarded de la ruleta tiene 66 cargas y 1 enseñado: está, pero nadie lo ve porque no se ofrece. Sutherland preguntaría cómo se siente el día 2 antes de añadir nada.</li>
+<li><strong>La escala como señal equivocada.</strong> La web de Zodiaco creció a más de 1.600 páginas en siete idiomas y perdió casi todas las impresiones en Google desde el 12 de octubre. Leído con el libro, el volumen pudo señalar lo contrario de lo que querías. Es una hipótesis: Google no explica sus caídas.</li>
+</ul>
+
+<h3>Qué cambiar, en orden</h3>
+<ol>
+<li><strong>TCM: la pantalla del «not allowed» como quitamiedos.</strong> Decir qué ha pasado, que no se ha cobrado nada y qué hacer (métodos de pago de Play o «recuérdamelo mañana»); sin precios donde Play no vende. Mide compras de personas con fallo en siete días.</li>
+<li><strong>Leo Glow: la frase que quita la duda.</strong> En el muro copiado de TCM, «no se cobra nada hoy; te avisamos antes del cobro» bajo el botón, y que la hoja lo confirme. Con tres días, el aviso antes del cobro es casi el segundo aviso: que diga lo que la persona ha hecho, la fecha y cómo cancelar.</li>
+<li><strong>Páginas de soporte que respondan al miedo.</strong> Crear la de TCM (restaurar, cancelar, reembolsos, el error de Play, que es educativa) y actualizar la de Leo Glow con Glow+ y Android. Es trabajo sin build. Mide correos etiquetados «pago» por semana.</li>
+<li><strong>Leo Glow: ofrece lo que ya está cargado.</strong> El rewarded de la ruleta, como botón claro con lo que da (segunda tirada, mensaje extra con Leo). Mide rewarded enseñados por persona activa. Solo si sobra tiempo, como dice tu plan.</li>
+<li><strong>Una idea «absurda» al mes, barata y medible.</strong> Por ejemplo, en TCM, un aviso que nombra la sesión de hoy con los minutos exactos que la persona eligió, en lugar de uno genérico; o en Zodiaco, pedir a qué hora quiere su lectura. Una por app y por mes, sin pisar el cambio de la semana.</li>
+</ol>
+
+<h3>Dónde no hacerle caso</h3>
+<ul>
+<li>Es un libro de ejemplos y argumentos, no de investigación sistemática. Varias historias son ilustraciones, y algunas se apoyan en economía conductual revisada después. Úsalo como forma de mirar, no como manual.</li>
+<li>Está escrito desde la publicidad de grandes marcas, con presupuestos para cambiar percepciones a lo grande. Tu versión es modesta: microcopy, orden de pantallas, nombres, momentos.</li>
+<li>Su desdén por la medición no es para ti. Tu ventaja es medir cada edición; la alquimia la pones en las hipótesis, no en la forma de evaluarlas.</li>
+<li>Cambiar la percepción para mejorar una experiencia real es legítimo; para tapar que el producto no cumple, no. En Leo Glow, nada de «antes y después» como gancho: tu plan lo prohíbe y tu marca también.</li>
+<li>No le hagas caso para renombrar otra vez Leo Glow porque «la palabra conocida gana». Tu plan es claro: no cambies el nombre sin medir.</li>
+</ul>
+
+<p class="frase">A veces no hace falta que el producto sea mejor, sino que el usuario deje de sentir miedo: quitar una duda puede valer más que añadir una función.</p>
+
+</article>
+<footer><a href="parte-iii.html">← Parte III: Posicionamiento y marca</a><a href="parte-v.html">Parte V: Crecimiento y hábito →</a></footer>
+</main></body></html>
