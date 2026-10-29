@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="es"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Método para encontrar tu honey pot</title>
+<meta name="description" content="Un procedimiento paso a paso, con tus herramientas, para decidir dónde hay demanda, poca competencia buena y gente que paga: aplicado a tus cuatro apps y a cómo evaluar, lanzar o matar un nicho nuevo.">
+<meta name="author" content="Claude">
+<meta property="og:title" content="Método para encontrar tu honey pot">
+<meta property="article:published_time" content="2026-10-29">
+<style>
+:root{--bg:#fbfaf7;--fg:#1f2933;--muted:#6b7280;--line:#e5e7eb;--accent:#9a3412}
+@media(prefers-color-scheme:dark){:root{--bg:#12100e;--fg:#ede7d4;--muted:#9a9384;--line:#2c2823;--accent:#e8a33d}}
+body{margin:0;background:var(--bg);color:var(--fg);font:18px/1.7 Georgia,"Times New Roman",serif}
+main{max-width:40em;margin:0 auto;padding:1.5rem 1rem 4rem}
+h1{font-size:1.8rem;line-height:1.25;margin:.2rem 0 1rem}
+h2{font-size:1.3rem;margin:2.2rem 0 .6rem;color:var(--accent)}
+a{color:var(--accent)}
+em{color:var(--muted)}
+hr{border:0;border-top:1px solid var(--line);margin:2rem 0}
+nav,footer{font:14px/1.5 -apple-system,sans-serif;color:var(--muted)}
+nav a,footer a{margin-right:1rem}
+li{margin:.35rem 0}
+</style></head><body><main>
+<nav><a href="./">← Índice</a></nav>
+<article>
+<h1>Método para encontrar tu honey pot</h1>
+<p><em>Un procedimiento paso a paso, con tus herramientas, para decidir dónde hay demanda, poca competencia buena y gente que paga: aplicado a tus cuatro apps y a cómo evaluar, lanzar o matar un nicho nuevo.</em></p>
+
+<h2>Para qué sirve este capítulo</h2>
+<p>Ya encontraste un honey pot: TCM. Búsqueda estable en muchos idiomas, rivales que en su mayoría son listas de puntos sin estructura, y estudiantes que aceptan un anual con prueba (12 cobros de 87 empezados con el muro de la 1.0.10). Lo encontraste con intuición y oficio de ASO. Este capítulo intenta que la próxima vez no dependa de la suerte.</p>
+<p>No hay libro detrás. Hay cinco: Rumelt te da el esqueleto (diagnóstico, política, acciones), Kim y Mauborgne la forma de ver dónde no compite nadie, Moore la cabeza de playa, Play Bigger el nombre del problema y Helmer la pregunta de qué te queda cuando te copien. Aquí se juntan en un orden de trabajo, se cruzan con lo que ya usas cada día (Sonar, <code>competencia.py</code>, ingresos estimados de rivales, curvas de dinero por categoría, la máquina de vídeo, PostHog, RevenueCat) y se aplican a lo que tienes y a lo que podrías tener.</p>
+<p>La idea que lo ordena todo ya está en la introducción de esta parte: cambia el orden de las preguntas. Hasta ahora empezabas por la popularidad de la keyword y el gap. A partir de aquí empiezas por quién paga ya por algo parecido, qué hacen mal los que cobran y qué sabes hacer tú que ellos no. La keyword llega al final, como forma de capturar una demanda que ya has decidido servir.</p>
+<p>Un aviso antes de empezar. Este capítulo no te pide que lances nada. La decisión de Essentialism (Parte VIII) sigue en pie: ninguna app ni nicho nuevo recibe horas de construcción hasta que TCM tenga resuelta su restricción. Lo que sí puedes hacer desde ya es evaluar con lápiz y validar barato. Es lo que proponen el plan de 17 días (anotar dos candidatos) y el plan de vuelta (validarlos en la tercera y cuarta semana, antes de construir nada).</p>
+
+<h2>Las tres condiciones y cómo medir cada una</h2>
+<p>Un honey pot tiene tres cosas a la vez. Si falta una, no lo es, por bonito que sea el nicho. A esas tres les añado dos que vienen de los libros: una cabeza de playa alcanzable y una barrera posible. La tabla resume qué preguntas responde cada una y con qué lo mides.</p>
+<table>
+<tr><th>Condición</th><th>Pregunta</th><th>Con qué lo mides</th></tr>
+<tr><td>Demanda</td><td>¿La gente busca esto de verdad, en qué países y en qué época?</td><td>Popularidad en Sonar por país, Trends para la estacionalidad, un vídeo de prueba en TikTok, Search Console si hay web.</td></tr>
+<tr><td>Competencia floja</td><td>¿Los que están arriba lo hacen mal, o solo hay muchos?</td><td>Dificultad y gap en Sonar, la lista de rivales de <code>competencia.py</code>, el lienzo estratégico.</td></tr>
+<tr><td>Disposición a pagar</td><td>¿Alguien cobra ya en este nicho o en su alternativa fuera de las apps?</td><td>Ingresos estimados de los rivales, curvas de dinero por categoría, el pasillo de precios de libros, cursos y consultas.</td></tr>
+<tr><td>Cabeza de playa</td><td>¿Puedo describir a un grupo concreto, en un país, con un problema urgente, que se recomienda entre sí?</td><td>Escenarios de Moore, datos de país en las consolas, cinco conversaciones del Mom Test.</td></tr>
+<tr><td>Barrera</td><td>Si me copian, ¿qué me queda?</td><td>Los poderes de Helmer que te tocan: contraposicionamiento, costes de cambio, marca, recurso exclusivo.</td></tr>
+</table>
+<p>Fíjate en la palabra «floja» de la segunda fila. No buscas un nicho sin competidores: buscas uno donde los competidores dejan sin hacer algo que el cliente valora. Un nicho sin nadie suele estar vacío porque no hay nadie que pague, y Anime Food te lo recuerda cada día. Un nicho lleno de apps mediocres que cobran es mucho mejor noticia.</p>
+
+<h2>El procedimiento, paso a paso</h2>
+<p>Nueve pasos. Los cinco primeros se hacen en una tarde con el portátil; los cuatro últimos piden hablar con gente o publicar algo. Sirve igual para una app que ya tienes (buscando un honey pot dentro de ella: un país, un público, un caso de uso) y para un nicho nuevo.</p>
+
+<h3>Paso 1. Escribe el diagnóstico y lo que descartas (Rumelt)</h3>
+<p>Antes de mirar una sola keyword, escribe en un párrafo cuál es el desafío. No vale «quiero otra app que cobre». Vale algo como: «tengo una máquina de captación que funciona y un solo producto que cobra; mi restricción es la conversión y la retención, no la visibilidad». Con ese diagnóstico, un nicho nuevo solo tiene sentido si ataca la restricción (cobra desde el principio, retiene por su naturaleza) y no si solo añade tráfico.</p>
+<p>Después, la política guía: qué no vas a hacer. Por ejemplo, «nada que monetice solo con anuncios», «nada que dependa de personajes de terceros», «nada que prometa salud». Esa lista es la barandilla que evita que la emoción de una keyword nueva decida por ti.</p>
+
+<h3>Paso 2. Empieza por quién paga ya (Blue Ocean, industrias alternativas)</h3>
+<p>Lista lo que la gente hace hoy en lugar de usar una app así. Con TCM es el libro de texto, los apuntes y los cursos. Con Leo Glow, los vídeos de gurús, los foros y las apps que puntúan la cara. Con Anime Food, el blog de recetas japonesas y el vídeo largo de YouTube.</p>
+<p>Después, la pregunta clave: ¿en cuál de esas alternativas la gente ya paga? Los estudiantes de MTC pagan libros y cursos caros, y por eso TCM tiene un pasillo de precios que aguanta un vitalicio de 119,99 $. En el horóscopo casi nadie paga por la alternativa, y por eso Zodiaco vive de un rewarded. Si no encuentras a nadie que pague por ninguna alternativa, apúntalo en rojo: es casi un veto.</p>
+
+<h3>Paso 3. Mide la demanda con Sonar y con el calendario</h3>
+<p>Ahora sí, la keyword. Saca de Sonar la popularidad por país de los términos con los que la gente nombraría su problema, no tu solución. Mira tres cosas: en qué países está el volumen, si existe en varios idiomas (TCM se sostiene porque la búsqueda existe en muchos) y si es estacional (Trends te dice si es un febrero eterno como el de Zodiaco).</p>
+<p>Desconfía de los datos de terceros por defecto. Ya te pasó con el salto falso de Sonar del 22 de septiembre: una cifra rara no es una tendencia hasta que la ves repetida. Y recuerda la cautela de Play Bigger: si la palabra con la que quieres que te recuerden no tiene búsqueda, sirve para el mensaje, no para el título de la ficha.</p>
+
+<h3>Paso 4. Lee la calidad de la competencia, no solo la cantidad</h3>
+<p>Dificultad y gap te dicen cuánta sangre hay en el agua. No te dicen si los que sangran son buenos. Para eso, toma los rivales del top que te da <code>competencia.py</code> en las tres o cuatro keywords principales y dibuja el lienzo estratégico de Kim y Mauborgne: seis a ocho factores con los que compiten (profundidad de contenido, ilustración, precio, frecuencia de actualización, calidad de las reseñas, idiomas, lo que toque) y una puntuación para cinco rivales y para lo que tú harías.</p>
+<p>Las señales de competencia floja son cualitativas, y las ves en una tarde: curvas que se parecen todas entre sí, reseñas que se quejan siempre de lo mismo, fichas sin traducir en idiomas con búsqueda, apps que no se actualizan, productos que son listas sin estructura. Las señales de competencia fuerte también: un líder con efecto red (tu producto mejor no le quita usuarios, avisa Helmer) o un rival que ya ha hecho el movimiento que tú pensabas hacer.</p>
+<p>Termina el paso con la rejilla de las cuatro acciones: qué eliminarías, qué reducirías, qué aumentarías y qué crearías respecto a esa curva media. Ninguna casilla vacía. Si solo te sale «eliminar», como le pasó a Leo Glow con el escáner, todavía no tienes un producto distinto: tienes uno recortado.</p>
+
+<h3>Paso 5. Comprueba la disposición a pagar con dinero de otros</h3>
+<p>Aquí entran dos herramientas que pocos estudios pequeños tienen: los ingresos estimados de los rivales y las curvas de dinero por categoría. La pregunta es sencilla: ¿los que están arriba ganan dinero, y cómo? Si los primeros del nicho tienen ingresos estimados apreciables con suscripción, hay disposición a pagar y la competencia, aunque exista, te está enseñando el precio. Si los primeros solo tienen descargas y ningún ingreso visible, el nicho es de anuncios o de nada.</p>
+<p>Trátalo como orden de magnitud, no como cifra. Las estimaciones de terceros tienen el mismo problema que el salto de Sonar: sirven para comparar nichos entre sí, no para hacer cuentas de cuánto vas a ganar tú. Y aplica la regla de la secuencia de Blue Ocean: si una idea falla en precio, no la arregles con anuncios, reconsidérala. Tu propio dato manda aquí: el rewarded de Zodiaco da unos ocho dólares al mes con unas 800 personas al mes en Android; eso es el techo de un nicho que no paga.</p>
+
+<h3>Paso 6. Elige la cabeza de playa (Moore)</h3>
+<p>Escribe tres escenarios de cliente con nombre, país, edad y qué le pasa un martes. Nada de «personas interesadas en el bienestar». Luego puntúalos con los criterios de Moore adaptados: ¿paga?, ¿le resuelvo el problema entero?, ¿llego a él con ficha y vídeo?, ¿se recomiendan entre ellos?, ¿abre otro nicho vecino si lo gano? Te quedas con uno.</p>
+<p>Si no consigues escribir un escenario creíble, la demanda que viste en Sonar es de curiosos, no de clientes. Esa es una de las razones más comunes por las que un nicho con búsqueda no cobra.</p>
+
+<h3>Paso 7. Separa la palabra de captación de la palabra de categoría (Play Bigger)</h3>
+<p>Escribe el punto de vista en una página: cómo resuelve hoy la gente el problema, por qué falla, cómo es con tu app. De ahí salen dos palabras. La de captación es la keyword que ya existe (acupuntura, looksmaxxing, horóscopo chino) y va al título de la ficha. La de categoría es la idea con la que quieres que te recuerden y va al subtítulo, a la primera captura y al primer segundo del vídeo.</p>
+<p>No las confundas. El cambio de nombre de Leo Glow del 7 de octubre te enseñó lo que cuesta: subieron impresiones y visitas, pero las descargas desde búsqueda de iOS cayeron a ×0,64.</p>
+
+<h3>Paso 8. Busca la barrera antes de entrar (Helmer)</h3>
+<p>Escribe el beneficio y la barrera. De los siete poderes, solo cuatro están a tu alcance, y conviene preguntarlos uno por uno:</p>
+<ul>
+<li><strong>Contraposicionamiento.</strong> ¿Haces algo que el líder del nicho no puede copiar sin dañar su propio negocio? Es el poder de Leo Glow frente a los escáneres.</li>
+<li><strong>Costes de cambio.</strong> ¿El usuario acumula algo (progreso, historial, notas, rachas) que perdería al irse? Es el poder más práctico para una suscripción.</li>
+<li><strong>Marca.</strong> ¿Hay espacio para que con los años te paguen más por confianza? En temas serios, como el estudio de MTC, sí.</li>
+<li><strong>Recurso exclusivo.</strong> ¿Tienes personajes, formatos o contenido propios que nadie puede reproducir igual? Leo, Lin y Mei, Kai, el formato «anime → real».</li>
+</ul>
+<p>Si no hay ninguno, no es un veto, pero apúntalo: es un honey pot que se puede vaciar. Helmer no contempla una salida que a ti sí te sirve: un nicho demasiado pequeño para interesar a nadie grande puede durar años sin barrera. Decide cuál de los dos casos es el tuyo.</p>
+
+<h3>Paso 9. Valida barato antes de construir</h3>
+<p>Solo ahora publicas algo. Tres pruebas, de más barata a más cara, y todas con el criterio de éxito escrito antes de mirar el resultado:</p>
+<ol>
+<li><strong>Vídeo de prueba.</strong> Tu máquina de vídeo puede medir interés en TikTok antes de escribir una línea de código. Haz dos o tres piezas sobre el problema (no sobre la app) y compáralas con tus propios vídeos recientes de la misma cuenta. No te fijes solo en las vistas: mira comentarios que describen el problema y preguntas de «¿dónde se consigue?».</li>
+<li><strong>Página con preaviso.</strong> Una página sencilla con la promesa, un precio y un botón de «avísame» o una lista de espera, como proponen Walling y Ries. El precio tiene que estar ahí: un correo que se apunta sabiendo cuánto cuesta vale más que diez que no lo saben.</li>
+<li><strong>Cinco conversaciones del Mom Test.</strong> Con gente del escenario de la cabeza de playa. No preguntas si usarían tu app; preguntas qué hicieron la última vez que tuvieron el problema y cuánto gastaron en resolverlo.</li>
+</ol>
+
+<h2>La hoja de puntuación</h2>
+<p>Para comparar candidatos entre sí sin que gane el que más te ilusiona, puntúa cada uno de 0 a 3 en siete criterios. Es una regla mía, no de los libros, pensada para que la uses igual en todos los casos y la calibres con el tiempo.</p>
+<table>
+<tr><th>Criterio</th><th>0</th><th>3</th></tr>
+<tr><td>Demanda (Sonar, Trends)</td><td>Sin búsqueda medible en ningún mercado tuyo</td><td>Búsqueda estable en varios idiomas, sin depender de un mes</td></tr>
+<tr><td>Competencia floja (lienzo, <code>competencia.py</code>)</td><td>Un líder fuerte o con efecto red</td><td>Rivales con curvas iguales y quejas repetidas en reseñas</td></tr>
+<tr><td>Disposición a pagar (ingresos estimados, alternativas)</td><td>Nadie cobra, ni en apps ni fuera</td><td>Los rivales cobran suscripción y la alternativa fuera de apps es cara</td></tr>
+<tr><td>Cabeza de playa (Moore)</td><td>No consigues escribir un escenario creíble</td><td>Grupo concreto, conectado, con problema urgente, en un país donde ya conviertes</td></tr>
+<tr><td>Encaje contigo</td><td>Pide algo que no sabes o no quieres hacer</td><td>Lo captas con tu ASO y tu vídeo, y lo puedes producir solo</td></tr>
+<tr><td>Barrera (Helmer)</td><td>Nada que no se copie en un mes</td><td>Un poder claro: contraposicionamiento o costes de cambio</td></tr>
+<tr><td>Riesgo de plataforma y políticas (invertido)</td><td>Salud, menores, propiedad intelectual de terceros o un canal único</td><td>Sin temas sensibles y con varios canales posibles</td></tr>
+</table>
+<p>Total máximo: 21. Mi propuesta de reglas, que puedes cambiar antes de empezar pero no después de ver el resultado:</p>
+<ul>
+<li><strong>Vetos.</strong> Un 0 en disposición a pagar o en riesgo de políticas descarta el candidato, salvo que elijas de forma consciente un modelo de anuncios sabiendo que tiene el techo de Zodiaco.</li>
+<li><strong>A validar (paso 9):</strong> 15 o más, sin ningún 0 y con al menos un 2 en disposición a pagar.</li>
+<li><strong>A la cola:</strong> entre 11 y 14. Lo apuntas y lo vuelves a puntuar dentro de seis meses, que es cuando Blue Ocean te pide revisar el lienzo.</li>
+<li><strong>Descartado:</strong> 10 o menos.</li>
+</ul>
+<p>Calibra la hoja con lo que ya conoces. Puntúa primero TCM, de la que sabes que cobra: si no te sale por encima del umbral, la hoja está mal hecha y hay que corregirla antes de usarla con nada nuevo. Las puntuaciones son juicios, no datos; lo que las hace útiles es que las pones igual a todos y las guardas con fecha para revisarlas, como pide Rumelt con su diario de juicios.</p>
+
+<h2>Aplicado a tus cuatro apps</h2>
+<p>En las apps que ya tienes, el método no pregunta si lanzar. Pregunta dos cosas: si la app está en un honey pot y, si no, si hay uno dentro de ella (un país, un público, un caso de uso) que merezca el trabajo. Las puntuaciones que doy son mi lectura con los datos del 26 y 27 de octubre; tómalas como hipótesis para discutir.</p>
+
+<h3>TCM: honey pot confirmado, falta defenderlo</h3>
+<p><strong>Demanda:</strong> sí, la más alta del portfolio (unas 43 descargas diarias en Play y 10,7 en iOS) y en muchos idiomas. <strong>Competencia:</strong> floja en lo que importa; tu curva sube donde las apps de puntos no llegan (conexión entre síntoma, patrón, fórmula y punto, y casos clínicos). <strong>Pago:</strong> demostrado, con el anual con prueba como producto que cobra. <strong>Cabeza de playa:</strong> casi evidente y sin declarar: estudiantes de acupuntura y MTC. <strong>Barrera:</strong> débil hoy. El contenido se copia con tiempo; el candidato es el coste de cambio (progreso, repasos, casos resueltos) y, a largo plazo, la marca de «maestra paciente».</p>
+<p><strong>Veredicto: explotar y defender.</strong> Es la única app que debe recibir horas de construcción. El honey pot interno a buscar es el país: el mercado donde ya conviertes mejor y donde hay escuelas. Ese dato no está desagregado por país en los informes, así que es lo primero que sacas de las consolas. Lo que no debes hacer es buscar un nicho nuevo antes de arreglar los dos agujeros del cubo que ya tienes: el error «not allowed» de Play (una de cada seis personas que pulsa pagar) y la falta de curva de retención por no mandar <code>days_since_install</code>.</p>
+
+<h3>Leo Glow: demanda de sobra, honey pot sin demostrar</h3>
+<p><strong>Demanda:</strong> enorme pero con dueño. «Looksmaxxing» se busca muchísimo y en EE. UU. el gap es negativo. <strong>Competencia:</strong> abundante, pero con una curva distinta a la tuya (escáner y nota); eso es un problema de expectativas y una oportunidad de contraposicionamiento a la vez. <strong>Pago:</strong> sin demostrar. En Android llegan 52 personas al muro en una semana y 4 eligen plan; en 30 días, cero pruebas del anual y 19 cancelados de 22 anuales empezados. <strong>Cabeza de playa:</strong> sin elegir; los candidatos (Japón con 垢抜け, Brasil con glow up masculino, Alemania con looksmaxxing, o un caso de uso como volver a entrenar) son hipótesis. <strong>Barrera:</strong> la más clara del portfolio en teoría (el líder no puede dejar de puntuar caras sin destruirse) y nula en la práctica mientras el beneficio no exista: d1 11,6 %, d7 1,1 %.</p>
+<p><strong>Veredicto: honey pot por demostrar, con plazo.</strong> El método te dice que el problema no es de mercado sino de las condiciones tres y cuatro: pago y cabeza de playa. Por eso no tiene sentido buscarle más keywords. El orden es el que ya proponen la Parte X y el plan de vuelta: primero copiar el muro de TCM; después, el plazo de Essentialism (unas ocho semanas para mover el d7 por encima de un umbral que fijes tú, con un cambio cada vez). Si lo supera, la barrera de contraposicionamiento empieza a valer. Si no, pasa a mantener. La prueba de demanda propia que sugiere Walling (una página sobre «glow up sin escaneo» o «hábitos para mejorar el físico») te dice si tu postura tiene mercado propio o si tendrás que vivir siempre dentro de «looksmaxxing» contando tu diferencia.</p>
+
+<h3>Zodiaco: mercado con búsqueda, pero no un honey pot de pago</h3>
+<p><strong>Demanda:</strong> sí, muy estacional (febrero). <strong>Competencia:</strong> fuerte y homogénea; es un océano rojo de manual, con un factor propio tuyo (el compañero con misiones). <strong>Pago:</strong> no. La gente no paga por horóscopos y tu dato lo confirma: un rewarded que da unos ocho dólares al mes. <strong>Cabeza de playa:</strong> temporal (Año Nuevo chino) y cultural (comunidades donde el zodiaco es parte de la vida familiar), sin medir. <strong>Barrera:</strong> el recurso exclusivo de Mei, Lin y la mascota, y los costes de cambio del progreso; la lectura diaria nunca lo será. Riesgo alto: iOS 28 días en revisión y la caída de la web desde el 12-10.</p>
+<p><strong>Veredicto: no es un honey pot; es un negocio de anuncios con techo conocido.</strong> Mantener por temporadas, con la ventana de esfuerzo antes de febrero. El método solo te pide una prueba: si hay un honey pot pequeño dentro, estará en algo que alguien pague una vez, en el momento en que más le importa. La hipótesis de la Parte VIII (una lectura anual de pago para febrero) y la de la compatibilidad como motor son los dos candidatos. Valídalos con el paso 9 en enero, no construyas nada antes.</p>
+
+<h3>Anime Food: un charco azul</h3>
+<p><strong>Demanda:</strong> pequeña (1,7 descargas diarias en Play y 3 en iOS). <strong>Competencia:</strong> casi ausente en el nicho exacto, fuerte en el vecino (apps y webs de recetas generales). <strong>Pago:</strong> dudoso; existe una compra puntual (el <code>profile_banner</code> que ya vendió), y la categoría Niños en iOS limita lo demás. <strong>Cabeza de playa:</strong> dos candidatas incompatibles, el fan adulto que cocina y el padre que cocina con su hijo. <strong>Barrera:</strong> el recurso exclusivo de Kai y el formato «anime → real», que vive en el contenido más que en la app.</p>
+<p><strong>Veredicto: laboratorio de contenido, no honey pot.</strong> Es el caso que la cautela de Blue Ocean describe: un océano azul que es azul porque está casi vacío. El método no le encuentra un nicho de pago con los datos de hoy. La única prueba que merece la pena es la de Lavingia y Walling: una página con un recetario y un botón de preaviso, enlazada desde los vídeos. Si nadie se apunta, la decisión de Essentialism se aplica sola: tres meses sin mejora y pasa a archivar, con el contenido siguiendo por su cuenta.</p>
+
+<h3>Las siete apps menores</h3>
+<p>Sin analítica no se pueden puntuar, y eso ya contesta a la hoja: el criterio de pago y el de cabeza de playa salen a 0 por falta de información. No les dediques el método. Pásales el filtro rápido de Walling (búsqueda, pago, competencia y canal) con Sonar y los ingresos estimados de su nicho, en diez minutos cada una. Si alguna sale con algo, merece analítica básica antes que cualquier otra cosa; las demás, al estado de archivo que ya propone la Parte VIII.</p>
+
+<h2>Nichos nuevos: dónde buscar candidatos</h2>
+<p>El mejor sitio para buscar no es una lista de keywords con mucho volumen. Son los sitios donde tu ventaja ya existe. Cuatro fuentes, en orden de cuánto aprovechan lo que tienes:</p>
+<ol>
+<li><strong>Los bolos vecinos de TCM.</strong> Moore te pide decidir qué nicho se abre si ganas el primero. El patrón de TCM es muy concreto: una materia de estudio con escuelas y exámenes, que la gente aprende con libros caros y apuntes, y donde las apps existentes son listas sin estructura. Cualquier materia que cumpla ese patrón es un candidato a evaluar. También lo es el producto distinto que deja abierta la estrategia de TCM: algo más sencillo y diario para el curioso, si las entrevistas dicen que el curioso no paga por la referencia de estudio.</li>
+<li><strong>Los no clientes de tus apps.</strong> Blue Ocean te pide mirar a quien rechaza el nicho. El chico que no usa apps de looksmaxxing porque le hacen sentir peor es un candidato. El estudiante que solo usa papel porque las apps de acupuntura le parecen de juguete, también.</li>
+<li><strong>Momentos de cambio.</strong> Helmer dice que las ventanas se abren cuando algo cambia. Tienes una delante: el tráfico que llega desde asistentes de IA. Las preguntas que la gente hace a ChatGPT y que acaban en una ficha tuya son una forma nueva de demanda que casi nadie está midiendo.</li>
+<li><strong>Lo que tus vídeos ya prueban.</strong> Los comentarios de tus cuentas son una lista de problemas sin resolver. Un formato que funciona en Anime Food, o una pregunta que se repite en los vídeos de dietética de TCM, puede ser el principio de un candidato.</li>
+</ol>
+<p>Ninguno de estos es una recomendación de lanzar. Son sitios donde buscar candidatos para pasarlos por la hoja. No he puesto cifras de demanda ni de ingresos de ninguno porque no las tienes medidas: el paso 3 y el paso 5 son precisamente para sacarlas.</p>
+
+<h2>El umbral para lanzar</h2>
+<p>Lanzar no es una decisión, son cuatro puertas seguidas. Cada una tiene su criterio escrito antes de abrirla.</p>
+<ol>
+<li><strong>Puerta de papel.</strong> La hoja de puntuación supera el umbral (15 o más, sin ceros, al menos un 2 en pago). Coste: una tarde.</li>
+<li><strong>Puerta de interés.</strong> El vídeo de prueba y la página con preaviso superan lo que fijaste. Como referencia, compáralo con tus propias cuentas: el vídeo tiene que rendir al menos como tus piezas normales, y la página tiene que recibir apuntes de gente que ha visto el precio. Coste: una o dos semanas, casi todo automático.</li>
+<li><strong>Puerta de conversación.</strong> En las cinco conversaciones, la mayoría describe el problema sin que se lo sugieras y cuenta algo que ya ha pagado o hecho para resolverlo. Si solo dicen que les parece buena idea, no cuenta.</li>
+<li><strong>Puerta de cobro.</strong> La primera versión sale con muro desde el primer día, con el formato que ya sabes que funciona en TCM (anual preseleccionado, prueba como oferta principal). Lavingia y la Parte X coinciden: si no cobras desde el principio, no sabes si tienes un negocio. La lectura se hace con la primera cohorte que vea el muro, sabiendo que tus muestras son de 30 a 200 personas.</li>
+</ol>
+<p>Sobre la ficha: tus propias apps te dan la vara para la descarga por visita. TCM está en 36 % en Play y 44 % en iOS, Zodiaco en 27 % en Play. Si una app nueva queda muy por debajo de esa zona con tráfico suficiente para leerla, el problema está en la promesa o en la palabra de captación, y se arregla antes de juzgar el producto.</p>
+
+<h2>Cuándo matar</h2>
+<p>La parte más difícil del método es la última, porque lo que has construido pesa. La regla es la misma que ya usas con las ediciones de ficha: el criterio se escribe antes de ver el dato, con fecha de revisión.</p>
+<p>Antes de lanzar, haz el premortem de Annie Duke (Parte XI): imagina que dentro de tres meses has cerrado la app y escribe por qué. Las razones que salgan son tus señales de muerte. Como punto de partida, estas cuatro:</p>
+<ul>
+<li><strong>La cohorte llega al muro y no cobra.</strong> Si ves el patrón de Leo Glow (gente que llega, elige plan y no inicia la prueba, o la inicia y la cancela casi toda), no es un problema de ficha. Una sola corrección del muro, medida; si no se mueve, fuera.</li>
+<li><strong>La retención no se mueve en el plazo fijado.</strong> El modelo de Essentialism para Leo Glow vale para cualquier app nueva: un plazo, un umbral de d7 que eliges tú y un cambio cada vez. Si al final del plazo no se ha movido, deja de construir.</li>
+<li><strong>Aparece un veto de plataforma.</strong> Una política de la tienda, una categoría que limita la monetización o un rechazo que no puedes resolver sin cambiar la promesa.</li>
+<li><strong>La pregunta del coste hundido sale que no.</strong> Si hoy no la tuvieras, ¿la construirías? Si la respuesta es no, lo que has hecho hasta ahora no es motivo para seguir.</li>
+</ul>
+<p>Matar no es borrar. Es cambiar el estado en <code>apps.toml</code>, quitar la app del panel diario, dejarla publicada si no cuesta nada, sin más actualizaciones que las obligatorias, y revisarla una vez al año. Lo que hayas aprendido (un formato de vídeo, una palabra de captación, una pantalla de muro) vuelve a la máquina y lo usan las demás.</p>
+
+<h2>Errores comunes</h2>
+<ol>
+<li><strong>Empezar por la keyword.</strong> El volumen dice dónde hay gente, no dónde hay clientes. Primero quién paga; la keyword al final.</li>
+<li><strong>Confundir poca competencia con buena oportunidad.</strong> Un nicho vacío suele estar vacío por algo. Busca competidores flojos que cobran, no ausencia de competidores.</li>
+<li><strong>Arreglar con anuncios un nicho que no paga.</strong> Si falla en precio, reconsidéralo. Zodiaco ya te enseña el techo.</li>
+<li><strong>Puntuar después de enamorarte.</strong> La hoja se rellena antes de los vídeos de prueba, y el umbral se fija antes de la hoja.</li>
+<li><strong>Tratar las estimaciones de terceros como datos tuyos.</strong> Ingresos estimados, popularidad y curvas de categoría sirven para comparar, no para prever.</li>
+<li><strong>Repartir la cabeza de playa.</strong> Veintiún locales a la vez no es una playa. Un país, un público, un caso de uso.</li>
+<li><strong>Quitar sin crear.</strong> Eliminar el escáner no basta: el cliente tiene que ver en el primer minuto qué recibe a cambio.</li>
+<li><strong>Confundir tu excelencia en ASO con una barrera.</strong> Es valiosa y se aprende. La barrera es lo que el rival no puede copiar aunque quiera.</li>
+<li><strong>Lanzar antes de cerrar el cubo.</strong> Mientras TCM pierda a una de cada seis personas que pulsan pagar, el mejor honey pot nuevo que puedes encontrar está dentro de TCM.</li>
+</ol>
+
+<h2>Qué anotar en el viaje</h2>
+<p>El plan de 17 días te pide dos honey pots candidatos. Para cada uno, una página con esto:</p>
+<ul>
+<li>El diagnóstico en una frase y lo que descartas.</li>
+<li>Quién paga ya por la alternativa y cuánto, aproximadamente, según lo que sepas (libros, cursos, apps).</li>
+<li>Las tres keywords que mirarás en Sonar al volver, y en qué países.</li>
+<li>El escenario de la cabeza de playa: nombre, país, edad, un martes.</li>
+<li>La rejilla de las cuatro acciones, sin casillas vacías.</li>
+<li>El poder de Helmer que podrías construir, o «ninguno».</li>
+<li>La puntuación provisional y el criterio de éxito de las tres pruebas del paso 9.</li>
+</ul>
+<p>Uno de los dos puede, y probablemente debería, estar dentro de una app que ya tienes. Al volver, en la tercera y cuarta semana, los validas barato. Si ninguno pasa las puertas, también es una respuesta valiosa: significa que tus horas rinden más en TCM, y el método te habrá ahorrado meses.</p>
+</article>
+<footer><a href="905-7-powers.html">← 7 Powers (Hamilton Helmer, 2016)</a><br><a href="1000-parte-x-manual-practico.html">Parte X: Monetizar, mejorar las apps y atender a tu público →</a></footer>
+</main></body></html>

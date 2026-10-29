@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="es"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Retención y notificaciones</title>
+<meta name="description" content="Cómo leer una curva de retención, qué te falta medir en cada app, cómo hacer que los avisos lleguen y digan algo, rachas que no castigan y qué hacer con los anuales que se cancelan.">
+<meta name="author" content="Claude">
+<meta property="og:title" content="Retención y notificaciones">
+<meta property="article:published_time" content="2026-10-29">
+<style>
+:root{--bg:#fbfaf7;--fg:#1f2933;--muted:#6b7280;--line:#e5e7eb;--accent:#9a3412}
+@media(prefers-color-scheme:dark){:root{--bg:#12100e;--fg:#ede7d4;--muted:#9a9384;--line:#2c2823;--accent:#e8a33d}}
+body{margin:0;background:var(--bg);color:var(--fg);font:18px/1.7 Georgia,"Times New Roman",serif}
+main{max-width:40em;margin:0 auto;padding:1.5rem 1rem 4rem}
+h1{font-size:1.8rem;line-height:1.25;margin:.2rem 0 1rem}
+h2{font-size:1.3rem;margin:2.2rem 0 .6rem;color:var(--accent)}
+a{color:var(--accent)}
+em{color:var(--muted)}
+hr{border:0;border-top:1px solid var(--line);margin:2rem 0}
+nav,footer{font:14px/1.5 -apple-system,sans-serif;color:var(--muted)}
+nav a,footer a{margin-right:1rem}
+li{margin:.35rem 0}
+</style></head><body><main>
+<nav><a href="./">← Índice</a></nav>
+<article>
+<h1>Retención y notificaciones</h1>
+<p><em>Cómo leer una curva de retención, qué te falta medir en cada app, cómo hacer que los avisos lleguen y digan algo, rachas que no castigan y qué hacer con los anuales que se cancelan.</em></p>
+
+<h2>Principios</h2>
+
+<h3>La retención es la cifra que da sentido a todas las demás</h3>
+<p>Una descarga vale lo que vale la gente que vuelve. En una app de suscripción, quien no vuelve no llega al día del cobro, y si llega, cancela en la renovación. En una app de anuncios, quien no vuelve no ve el rewarded de mañana. Por eso este capítulo va después de los muros y del onboarding y antes del plan por app: el muro de <a href="1001-muros-de-pago-y-pruebas.html">Muros de pago y pruebas</a> solo cobra si hay alguien al otro lado el día del cobro, y el momento «aha» de <a href="1003-onboarding-y-activacion.html">Onboarding y activación</a> solo sirve si se convierte en una segunda, una tercera y una décima visita.</p>
+<p>La forma honesta de mirar la retención es la <strong>curva por cohorte</strong>: agrupas a la gente por la semana en que instaló y miras qué fracción de cada grupo vuelve el día 1, el día 7 y el día 30 después de instalar. Croll y Yoskovitz, Ries y Ellis coinciden en esto aunque lo cuenten distinto: las cifras totales de usuarios activos esconden lo que pasa, porque la gente nueva tapa a la que se va. La cohorte no.</p>
+
+<h3>Cómo se lee una curva</h3>
+<p>Tres preguntas, en este orden:</p>
+<ol>
+<li><strong>¿Dónde cae más?</strong> Casi todas las apps pierden la mayor parte de la gente entre el día 0 y el día 1. Esa caída es la de la activación: la resuelve el capítulo anterior, no los avisos.</li>
+<li><strong>¿Se aplana?</strong> Una curva que baja y luego se queda plana, aunque sea en una cifra baja, dice que hay un grupo para el que la app funciona. Una curva que sigue bajando hasta cero dice que no lo hay todavía. Ellis y Brown lo plantean así: una curva que se aplana, aunque sea baja, es mejor señal que una que sigue cayendo.</li>
+<li><strong>¿Las cohortes nuevas están por encima de las viejas?</strong> Si cambias el onboarding y la cohorte de la semana siguiente tiene la misma curva, el cambio no ha servido, por mucho que hayan subido las descargas.</li>
+</ol>
+<p>Mide la retención como «volvió ese día» (abrió la app el día 7) y no como «sigue instalada». Y decide una vez qué cuenta como volver: una apertura cualquiera o una acción con valor (una lección, un reto, una lectura). La segunda es más exigente y más útil; la primera es más fácil de tener mañana. Empieza por la primera y añade la segunda.</p>
+
+<h3>El hábito tiene la frecuencia de la necesidad</h3>
+<p>No todas tus apps tienen que retener a diario. Eyal habla de una zona de hábito: lo que se usa poco solo se vuelve costumbre si es muy útil cada vez. Clear lo dice desde dentro de la persona: el hábito se ata a un momento que ya existe en su día. Aplicado a ti:</p>
+<ul>
+<li><strong>Leo Glow y Zodiaco</strong> prometen algo diario. Su d1 y su d7 son su verdad.</li>
+<li><strong>TCM</strong> es una referencia de estudio. El estudiante vuelve cuando estudia o tiene una duda, y más en época de exámenes. Mírala también por semanas: ¿abrió la app al menos una vez en la semana 4?</li>
+<li><strong>Anime Food</strong> se usa cuando cocinas, de vez en cuando. Su retención diaria será baja siempre, y eso por sí solo no es un fallo.</li>
+</ul>
+<p>Juzgar a TCM o a Anime Food por el d1 de una app de hábitos te haría tomar malas decisiones. Elige para cada app el intervalo que corresponde a su uso natural.</p>
+
+<h3>Una notificación es una promesa que tiene que llegar</h3>
+<p>El aviso es el disparador externo del modelo de Eyal: lo que recuerda a la persona que existes hasta que la costumbre haga ese trabajo sola. Tiene tres partes y cada una puede fallar por separado:</p>
+<ul>
+<li><strong>El permiso.</strong> Cuándo y cómo se pide. Está desarrollado en <a href="1003-onboarding-y-activacion.html">Onboarding y activación</a>: pre-pantalla propia, después de que la persona entienda qué le vas a recordar, nunca en la tercera pantalla.</li>
+<li><strong>La entrega.</strong> Que el aviso se programe y llegue. Parece trivial y es donde más te ha fallado: dos veces en dos apps, con el permiso concedido y sin aviso detrás.</li>
+<li><strong>El contenido y la frecuencia.</strong> Qué dice, a qué hora, cuántas veces. Es lo que decide si la persona lo abre o desactiva tus avisos para siempre.</li>
+</ul>
+
+<h3>El contenido: algo concreto de hoy, que abra donde promete</h3>
+<p>Un buen aviso nombra lo que la persona va a encontrar («Hoy: 2 minutos de postura con Leo»), está ligado a algo que ella eligió o hizo (su plan, su animal, su mascota, sus módulos) y, al pulsarlo, abre exactamente esa pantalla, no el Inicio. Un aviso genérico («¡Te echamos de menos!») gasta la atención sin dar un motivo. Krug lo diría con la buena voluntad: cada aviso inútil saca algo del depósito, y el usuario no avisa cuando se vacía; simplemente silencia la app.</p>
+<p>La mejor fuente de contenido para el aviso de mañana es lo que la persona deja hoy. Eyal lo llama la inversión que carga el siguiente disparador: si al cerrar el reto eliges la hora del de mañana, el aviso de mañana llega a tu hora y habla de lo que hiciste. Clear llega a lo mismo por otro camino, la intención de implementación: decir a qué hora y después de qué cosa harás el hábito.</p>
+
+<h3>La frecuencia: uno al día como techo, y saber callarse</h3>
+<p>Para una app diaria, un aviso al día a la hora elegida es el máximo razonable; para TCM, menos. Respeta las horas de descanso en la zona horaria de la persona. Y deja de insistir cuando la persona no responde: si ignora tus avisos varios días seguidos, espacia (elige tú el número de días y mídelo). Un aviso que nadie abre durante una semana no está recuperando a nadie; está enseñando a ignorarte. Ofrece en ajustes cambiar la hora y elegir qué avisos quiere: es mejor que alguien apague uno a que los apague todos.</p>
+
+<h3>Rachas: que sumen sin castigar</h3>
+<p>La racha es una de las mecánicas más fuertes para volver mañana y una de las más peligrosas. Chou la coloca en la motivación por miedo a perder, la que llama de sombrero negro: funciona rápido y quema. Clear propone la regla de no fallar dos veces: perder un día es un accidente; perder dos es empezar a dejarlo. Llévalo al diseño:</p>
+<ul>
+<li>Un día perdido no rompe la racha si recuperas al siguiente, o la persona tiene un comodín que se gana usando la app.</li>
+<li>Lo que se acumula no se pierde: el avatar no baja de nivel, los puntos dominados no se borran. La racha es un contador, el progreso es patrimonio.</li>
+<li>El aviso de racha habla de lo que llevas, no de lo que vas a perder. «Llevas 4 días» frente a «¡Vas a perder tu racha!».</li>
+<li>La racha empieza a mostrarse cuando ya hay algo que proteger, no el día 0.</li>
+</ul>
+<p>Y recuerda lo que dice el capítulo de Hooked sobre la ética: Leo Glow habla a chicos jóvenes con inseguridades sobre su aspecto. Una mecánica que funciona por ansiedad ahí no es solo un riesgo de abandono; es lo contrario de tu postura.</p>
+
+<h3>Retención de suscriptores: otra curva</h3>
+<p>En una app de pago hay dos retenciones. La de uso (¿vuelve?) y la de dinero (¿la prueba se cobra?, ¿el anual renueva?). Tzuo pone en el centro la segunda: un negocio de suscripción vale lo que conserva, no lo que vende. Las dos están conectadas: un suscriptor que no abre la app en el mes dos es una cancelación que todavía no ha ocurrido. La pregunta que <a href="505-lean-analytics.html">Lean Analytics</a> te deja para TCM es exactamente esta: qué fracción de quien paga sigue activo cuatro semanas después.</p>
+
+<h2>Qué dicen tus datos</h2>
+
+<h3>TCM</h3>
+<ul>
+<li><strong>No hay curva.</strong> La app no manda <code>days_since_install</code> y no tienes retención a 7 ni a 30 días. No sabes si el anual que cobra lo cobra a estudiantes que vuelven cada semana o a gente que se olvidó de la app el segundo día.</li>
+<li><strong>La única pista de vuelta es de septiembre (1.0.7).</strong> De 85 personas que terminaban el onboarding, 16 volvían otro día (19 %). Es una muestra pequeña, de una versión vieja, con la guía de 6 pasos encima del Inicio que ya conoces. No la uses como línea base de hoy.</li>
+<li><strong>Permiso (1.0.7).</strong> El 51 % lo concedía (52 conceden, 22 deniegan, 27 «ahora no»), y quien terminaba el onboarding no tenía ningún aviso programado. Se arregló el 29 de septiembre con un aviso diario del plan y los eventos <code>reminders_scheduled</code> y <code>notification_opened</code>. Todavía no has leído si esos avisos se programan y se abren en la 1.0.10.</li>
+<li><strong>Las pruebas se cobran.</strong> Entre el 14 y el 25 de octubre se cobraron 7 pruebas anuales en las dos tiendas. Es retención de dinero en su primera etapa, el paso del día 7 al día 8. La siguiente, la renovación del anual, no la verás hasta dentro de un año; lo que sí puedes ver antes es si esos suscriptores siguen abriendo la app.</li>
+</ul>
+
+<h3>Leo Glow</h3>
+<ul>
+<li><strong>La curva de Android.</strong> d1 11,6 %, d3 5,5 %, d7 1,1 %, en la ventana del 26 de octubre, sin cambio claro frente a la del 19 de octubre. De cada cien personas que instalan, unas doce vuelven al día siguiente y una al séptimo día. El informe no da el tamaño de la cohorte en esa ventana; con unas 8,6 descargas diarias en Play, cualquier semana son pocas decenas de personas, así que el 1,1 % puede ser una persona más o una menos. Lo que no es ruido es la forma: la curva no se aplana en la primera semana.</li>
+<li><strong>La pista de qué retiene.</strong> En la lectura del 11 de octubre (98 altas reales del 2 al 11), quien hacía una acción del plan el día cero volvía en un 53 %; quien solo giraba la ruleta, 0 de 9. Muestras pequeñas, pero apuntan a que el plan retiene y la ruleta sola no.</li>
+<li><strong>iOS no tiene curva fiable.</strong> Ya viste que 212 supuestos usuarios de iOS eran tu Mac. Hasta que la separes, no leas retención de iOS.</li>
+<li><strong>Los avisos, cambiados pero sin leer.</strong> Desde la 2.0.4 el aviso de la mañana nombra la acción del plan y abre ese día. Los eventos para leerlo existen (<code>notification_opened</code> del tipo daily-plan, <code>plan_first_day_opened</code>); la lectura aún no.</li>
+<li><strong>Los anuales «cancelados».</strong> En Android, en 30 días, 22 personas empiezan un anual y 19 lo cancelan, con 0 pruebas. Ojo con la palabra: no son suscriptores que se van tras pagar, son personas que abren la compra en la hoja de Google y no la terminan. La hipótesis principal, desarrollada en <a href="1001-muros-de-pago-y-pruebas.html">Muros de pago y pruebas</a>, es que la hoja no enseña la prueba de 3 días. Pero aunque la enseñara, con un d1 del 11,6 % la mayoría de esos tres días se usarían poco, y la prueba se cancelaría por desuso. El muro y la retención son el mismo problema visto desde dos lados.</li>
+</ul>
+
+<h3>Zodiaco</h3>
+<ul>
+<li><strong>El experimento que no querías hacer.</strong> Entre el 26 de septiembre y el 1 de octubre no se programaba ningún aviso (R8 rompió la programación en la 1.1.2 y la 1.1.3) y la vuelta al día siguiente cayó del 26 % al 15 %. Es la prueba más clara que tienes de cuánto pesa el aviso en una app diaria: cuatro de cada diez vueltas del día siguiente dependían de él.</li>
+<li><strong>El arreglo.</strong> La 1.1.4 lo corrigió: permiso concedido y aviso programado en 14 de 14 casos comprobados.</li>
+<li><strong>Falta la curva larga.</strong> Igual que en TCM, la medición de días desde la instalación hay que arreglarla; sin ella no tienes d7 ni d30 utilizables. Con unas 800 personas al mes (795 en los 30 días hasta el 26 de octubre) es la app con más volumen para leer cohortes en cuanto la tengas.</li>
+<li><strong>Por qué importa el dinero.</strong> El rewarded de duplicar la recompensa diaria, 336 enseñados y 7,81 USD en 30 días, es lo que más cobra, y solo lo ve quien vuelve. Lo tienes en <a href="1002-anuncios-bien-hechos.html">Anuncios bien hechos</a>.</li>
+</ul>
+
+<h3>Anime Food</h3>
+<ul>
+<li>El <code>distinct_id</code> está roto: no puedes saber si quien abre hoy es el mismo que abrió ayer. Cualquier cifra de retención aquí sería inventada. 142 personas en 30 días en Android, 17 nuevas en la última semana. En iOS (categoría Niños) no hay analítica.</li>
+</ul>
+
+<h3>Las apps menores</h3>
+<ul>
+<li>Las siete no tienen analítica. No sabes si alguien vuelve a ninguna.</li>
+</ul>
+
+<h2>Qué hacer en cada app</h2>
+
+<h3>TCM: dibuja la curva antes de tocar nada más</h3>
+<ol>
+<li><strong>Manda <code>days_since_install</code>.</strong> Un evento diario de uso (o una propiedad en el evento de apertura) con los días desde la instalación, calculados a partir de una fecha que guardes la primera vez que se abre la app. Mientras sale la build, puedes aproximar la cohorte en PostHog por la fecha de primera apertura; sirve para empezar, pero se ensucia con reinstalaciones y cambios de dispositivo.</li>
+<li><strong>Fija una línea base sin cambiar nada.</strong> Cuatro cohortes semanales de la 1.0.10 con d1, d7 y d30, y además «abrió al menos una vez en la semana 4». Con unas 43 descargas diarias en Play tienes casi 300 personas por cohorte semanal: suficiente para una curva estable en Android. iOS, júntalo por quincenas.</li>
+<li><strong>Separa la curva de quien paga.</strong> Qué fracción de quien empieza la prueba, de quien la paga y de quien no paga sigue activa en la semana 4. Si los suscriptores no vuelven, tienes un riesgo de cancelación masiva en la renovación y el trabajo de los próximos meses es el mes dos, no el muro.</li>
+<li><strong>Separa estudiantes y curiosos.</strong> La pregunta del objetivo del onboarding ya los distingue. Dos curvas, no una. Es la hipótesis más importante de <a href="201-marca-tcm.html">su estrategia de marca</a>: ¿el estudiante paga más y se queda más?</li>
+<li><strong>Comprueba los avisos de la 1.0.10.</strong> <code>reminders_scheduled</code> por persona que concede el permiso y <code>notification_opened</code> por aviso programado. Si se programan y no se abren, cambia el texto; si no se programan, es un fallo.</li>
+<li><strong>Avisos al ritmo del estudio, no diarios por defecto.</strong> El aviso del plan, a la hora y con los minutos que la persona eligió, nombrando la sesión de hoy («10 min · Meridiano del Estómago»). Si algún día pruebas avisos de calendario (antes de un examen, por estación para el curioso), que sean una opción que la persona activa. Es una hipótesis.</li>
+<li><strong>Un registro de lo dominado.</strong> Lo que proponen Clear y Chou para TCM: puntos, meridianos y fórmulas que ya sabes, visibles. Es la inversión que hace difícil irse y el contenido natural del repaso de mañana. Sin rachas: TCM es seria y su hábito es semanal.</li>
+<li><strong>El aviso del día cinco de la prueba</strong>, con lo que la persona ha hecho, ya está en <a href="1001-muros-de-pago-y-pruebas.html">Muros de pago y pruebas</a>. Es también un aviso de retención: recordarle lo que ha conseguido es la mejor razón para volver el día seis.</li>
+</ol>
+
+<h3>Leo Glow: mover el d7 con un cambio cada vez</h3>
+<ol>
+<li><strong>Lee la 2.0.4 antes de añadir nada.</strong> Por cohorte semanal: fracción que completa la acción del día 1 el día cero, fracción que abre el aviso daily-plan del día siguiente y d1/d7 de quien completa frente a quien no. Es lo que pide <a href="1003-onboarding-y-activacion.html">Onboarding y activación</a>; aquí lo importante es cruzarlo con la curva.</li>
+<li><strong>Escribe la predicción y pon fecha.</strong> Lo que te propone <a href="604-the-lean-startup.html">The Lean Startup</a>: varios experimentos sobre el d7 de aquí a final de enero, cada uno con una predicción escrita antes («si hago X, d7 pasa de 1,1 % a 3 %»). Si ninguno lo mueve de forma clara, toca replantear el producto, no el muro.</li>
+<li><strong>La hora la elige la persona.</strong> Al cerrar la acción del día, que elija a qué hora quiere la de mañana, y que el aviso llegue a esa hora con una frase de Leo ligada a lo que hizo hoy. Es la inversión que carga el disparador de Eyal y la intención de implementación de Clear en un solo gesto.</li>
+<li><strong>Rachas con red.</strong> Revisa cómo se rompe hoy la racha. Que un día perdido no la rompa si recuperas al siguiente, que el avatar no baje nunca y que el aviso nunca amenace con perder. Las ligas, solo si tienen gente activa: con estas cifras, una liga vacía desanima más que motiva.</li>
+<li><strong>Busca a los que vuelven el día 7.</strong> Son pocos. Mira en PostHog qué hacen que no hacen los demás: ¿completan el plan, hablan con Leo, giran la ruleta, entran en ligas? Y habla con ellos (lo verás en el capítulo siguiente). Lo que tengan en común es tu candidato a momento «aha» de la segunda semana, la fase de andamiaje de Chou.</li>
+<li><strong>Una métrica adelantada.</strong> Esperar siete días a cada lectura es lento. Mide la fracción que completa un segundo reto en las primeras 48 horas y comprueba si predice el d7. Si lo hace, úsala para decidir antes.</li>
+<li><strong>Los anuales que no se terminan.</strong> Primero lo de <a href="1001-muros-de-pago-y-pruebas.html">Muros de pago y pruebas</a>: comprobar con una cuenta nueva qué enseña la hoja de Google y registrar <code>trial_eligible</code> y <code>offer_id</code>. Después, que la prueba de 3 días tenga uso: aviso al día siguiente de empezarla con la acción del plan y aviso antes del cobro con lo que la persona ha hecho, la fecha y cómo gestionar la suscripción. Con tres días, el aviso antes del cobro es casi el segundo aviso.</li>
+<li><strong>Separa tu Mac.</strong> Excluye tus dispositivos de prueba de la retención de iOS antes de leerla.</li>
+</ol>
+
+<h3>Zodiaco: proteger el aviso y medir la semana</h3>
+<ol>
+<li><strong>Arregla la medición de días desde la instalación</strong> antes de añadir anuncios, como dice <a href="203-marca-zodiaco.html">su estrategia de marca</a>. Con unas 800 personas al mes, en cuanto la tengas puedes leer d1, d7 y d30 por cohorte semanal y por país.</li>
+<li><strong>Prueba el aviso en cada build de release.</strong> La caída del 26 % al 15 % la provocó una herramienta de compilación que en desarrollo no actuaba. Antes de cada subida: instala la build de release, concede el permiso, adelanta la hora y comprueba que el aviso llega y abre la lectura. Diez minutos que protegen cuatro de cada diez vueltas del día siguiente.</li>
+<li><strong>Una alarma propia.</strong> Mira cada día los avisos programados por persona con permiso. Si baja a cero en una versión, lo sabrás en un día y no en una semana.</li>
+<li><strong>La hora del café.</strong> Pide en el onboarding o tras la primera lectura a qué hora quiere su lectura; apílala sobre un momento que ya existe. Que el aviso diga algo de hoy y de su animal, no «tu horóscopo está listo».</li>
+<li><strong>La mascota como motivo, sin castigo.</strong> Un aviso cuando la mascota tiene hambre es un buen disparador si es amable y opcional. Si la mascota sufre o pierde lo ganado cuando no entras, pasas al sombrero negro.</li>
+<li><strong>Febrero.</strong> El pico del Año Nuevo chino traerá gente nueva. Ten los avisos probados y la curva medida antes, para poder comparar la cohorte de febrero con las de noviembre y diciembre. No leas el pico como un éxito de nada que hayas cambiado.</li>
+</ol>
+
+<h3>Anime Food: primero el identificador</h3>
+<ol>
+<li><strong>Arregla el <code>distinct_id</code></strong> en la próxima build. Sin él no hay retención que medir.</li>
+<li><strong>Mide por semanas o por meses, no por días.</strong> Su uso natural es ocasional. La pregunta útil es si quien guarda una receta vuelve en el mes siguiente.</li>
+<li><strong>Avisos, pocos y opcionales en Android.</strong> Una receta nueva de un «mundo» que la persona eligió, como mucho de vez en cuando. En iOS, categoría Niños: nada de rachas ni de urgencias.</li>
+<li><strong>Recuerda la pregunta de fondo.</strong> Si la retención resulta muy baja, refuerza la idea de que es un motor de contenido y no un producto, como plantea <a href="204-marca-anime-food.html">su estrategia de marca</a>.</li>
+</ol>
+
+<h3>Las apps menores</h3>
+<p>No pongas avisos ni rachas en apps donde no sabes qué hace nadie. Si decides invertir en alguna, el primer evento es una apertura con la fecha de instalación; con eso ya tienes d1 y d7. Las que no vayan a recibir ese evento, decídelas en una frase: se mantienen sin tocar o se archivan.</p>
+
+<h2>Qué medir</h2>
+<ul>
+<li><strong>Curva por cohorte semanal.</strong> Evento: apertura diaria con <code>days_since_install</code>. Fracción: personas de la cohorte que abren el día 1, el día 7 y el día 30 / personas que instalan esa semana. Tamaño: para que el d7 de una semana no sea pura casualidad necesitas que la cifra esperada de personas que vuelven no sea de una o dos. Con el criterio que ya usas (desconfía de diferencias menores que dos veces la raíz de la cifra esperada), con 300 instalaciones y un d7 del 1 % esperas 3 personas, y solo un salto a más de 6 o 7 sería una señal: por eso en Leo Glow tendrás que juntar al menos un mes de instalaciones de Play para leer el d7, mientras que en TCM, con unas 300 instalaciones por semana en Play, bastan una o dos semanas. Es un cálculo sobre tus cifras, no una regla estadística fina.</li>
+<li><strong>Retención semanal de TCM.</strong> Fracción de cada cohorte con al menos una sesión en la semana 1, 2, 3 y 4. Mejor que el d7 diario para una app de estudio.</li>
+<li><strong>Suscriptores activos a las cuatro semanas.</strong> Personas que pagan (o están en prueba) con al menos una sesión en la semana 4 / personas que pagan. Con 10 altas a la semana en TCM Android, junta un mes antes de leerla.</li>
+<li><strong>Pruebas que se cobran.</strong> Desde RevenueCat, por semana de inicio, con ocho días de retraso en TCM y cuatro en Leo Glow. Ya está en <a href="1001-muros-de-pago-y-pruebas.html">Muros de pago y pruebas</a>.</li>
+<li><strong>Salud de los avisos.</strong> Evento: <code>reminders_scheduled</code>. Fracción: personas con aviso programado / personas con permiso concedido, por versión. Tiene que estar cerca del total; si baja, es un fallo, no una preferencia. Con 14 casos comprobados ya detectaste el arreglo de Zodiaco: para esto no hacen falta muestras grandes, hace falta mirarlo cada día.</li>
+<li><strong>Apertura de avisos.</strong> Evento: <code>notification_opened</code> con el tipo de aviso. Fracción: avisos abiertos / avisos programados para ese día. Por tipo y por versión. Con un par de cientos de avisos enviados ya puedes comparar dos textos de forma orientativa.</li>
+<li><strong>Vuelta con y sin aviso.</strong> d1 de quien tiene el permiso concedido frente a quien no. No es una comparación limpia (quien concede ya venía con más ganas), pero si cambias el aviso y la diferencia crece, tienes una señal. Zodiaco te dio la versión limpia sin querer: misma app, avisos rotos, 26 % frente a 15 %.</li>
+<li><strong>Bajas de permiso.</strong> En cada apertura, si el permiso sigue concedido. Si muchos lo quitan tras un cambio de frecuencia o de texto, te has pasado.</li>
+<li><strong>Rachas.</strong> Fracción de personas activas con racha de 3 días o más, y qué fracción vuelve el día después de romperla. Si casi nadie vuelve tras romperla, la racha castiga demasiado.</li>
+<li><strong>Métrica adelantada en Leo Glow.</strong> Fracción que completa un segundo reto en 48 horas, y si quien lo hace tiene mejor d7. Como en <a href="1003-onboarding-y-activacion.html">Onboarding y activación</a>: con menos de unas 30 personas por grupo, diez puntos de diferencia son fácilmente ruido.</li>
+</ul>
+
+<h2>Errores comunes</h2>
+<ol>
+<li><strong>Leer usuarios activos en lugar de cohortes.</strong> La gente nueva tapa a la que se va. Una cohorte por semana, siempre.</li>
+<li><strong>Medir retención sin <code>days_since_install</code> y llamarlo curva.</strong> En TCM y Zodiaco aún no la tienes. Dilo así hasta que la tengas.</li>
+<li><strong>Medir todas las apps con la vara de una app diaria.</strong> TCM se mide por semanas; Anime Food, por meses.</li>
+<li><strong>Conceder el permiso y no avisar.</strong> Te ha pasado en TCM 1.0.7 y en Zodiaco 1.1.2 y 1.1.3. Prueba el aviso en una build de release antes de cada subida y vigila los avisos programados cada día.</li>
+<li><strong>Avisos genéricos.</strong> «Te echamos de menos» no da motivo. Nombra lo de hoy y abre esa pantalla.</li>
+<li><strong>Más avisos cuando la gente no vuelve.</strong> Si nadie abre el de hoy, mandar dos mañana acelera que te silencien. Espacia.</li>
+<li><strong>Rachas que castigan.</strong> Funcionan la primera semana y vacían la tercera. Un día perdido no debe borrar lo ganado.</li>
+<li><strong>Confundir los anuales cancelados con bajas de suscriptores.</strong> Los 19 de 22 de Leo Glow son compras que no se terminan en la hoja de Google. Se arreglan en el muro y en la retención de los tres días, no con ofertas de recuperación.</li>
+<li><strong>Creer que la prueba arregla la retención.</strong> Solo da tiempo. Si la persona no vuelve al día siguiente, una prueba de 3 días se cancela sola.</li>
+<li><strong>Leer el 1,1 % como una cifra exacta.</strong> Con pocas decenas de instalaciones por semana es una o dos personas. La forma de la curva dice más que el decimal.</li>
+<li><strong>Contar tus dispositivos.</strong> 212 «usuarios de iOS» eran tu Mac. Excluye las pruebas antes de cualquier curva.</li>
+<li><strong>Cambiar varias cosas a la vez.</strong> Aviso, racha y muro en la misma versión hacen imposible saber qué movió el d7. Un cambio por app y por semana.</li>
+</ol>
+</article>
+<footer><a href="1003-onboarding-y-activacion.html">← Onboarding y activación</a><br><a href="1005-atender-a-tu-publico.html">Atender a tu público →</a></footer>
+</main></body></html>
