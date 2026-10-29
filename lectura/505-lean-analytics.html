@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="es"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Lean Analytics (Alistair Croll y Benjamin Yoskovitz, 2013)</title>
+<meta name="description" content="Medir lo justo: una sola métrica por etapa, según el modelo de negocio, para decidir qué hacer después.">
+<meta name="author" content="Claude">
+<meta property="og:title" content="Lean Analytics (Alistair Croll y Benjamin Yoskovitz, 2013)">
+<meta property="article:published_time" content="2026-10-29">
+<style>
+:root{--bg:#fbfaf7;--fg:#1f2933;--muted:#6b7280;--line:#e5e7eb;--accent:#9a3412}
+@media(prefers-color-scheme:dark){:root{--bg:#12100e;--fg:#ede7d4;--muted:#9a9384;--line:#2c2823;--accent:#e8a33d}}
+body{margin:0;background:var(--bg);color:var(--fg);font:18px/1.7 Georgia,"Times New Roman",serif}
+main{max-width:40em;margin:0 auto;padding:1.5rem 1rem 4rem}
+h1{font-size:1.8rem;line-height:1.25;margin:.2rem 0 1rem}
+h2{font-size:1.3rem;margin:2.2rem 0 .6rem;color:var(--accent)}
+a{color:var(--accent)}
+em{color:var(--muted)}
+hr{border:0;border-top:1px solid var(--line);margin:2rem 0}
+nav,footer{font:14px/1.5 -apple-system,sans-serif;color:var(--muted)}
+nav a,footer a{margin-right:1rem}
+li{margin:.35rem 0}
+</style></head><body><main>
+<nav><a href="./">← Índice</a></nav>
+<article>
+<h1>Lean Analytics (Alistair Croll y Benjamin Yoskovitz, 2013)</h1>
+<p><em>Medir lo justo: una sola métrica por etapa, según el modelo de negocio, para decidir qué hacer después.</em></p>
+<h2>Por qué este libro, para ti</h2>
+<p>Tienes muchísimos datos y pocas decisiones tomadas con ellos. PostHog, App Store Connect, Play Console, AdMob, RevenueCat, Sonar, Search Console: cada día llega una revisión con cifras de cuatro apps y dos tiendas. Pero TCM, tu único negocio de pago que funciona, no tiene curva de retención medida. Leo Glow tiene d1 y d7, pero nadie ha decidido qué cifra tiene que cambiar para que merezca seguir invirtiendo en ella. Anime Food arrastra la pregunta de si es producto o motor de contenido sin un criterio para responderla. Lean Analytics es el libro que te obliga a decir, para cada app, en qué etapa está y qué única métrica importa ahora. Lo coloco el primero de la parte porque, sin eso, las ideas de los demás libros no se pueden juzgar.</p>
+<h2>La tesis en dos minutos</h2>
+<p>Croll y Yoskovitz llevan el método de la startup ágil (construir, medir, aprender) al terreno de los números. Su punto de partida es que los emprendedores se engañan con facilidad, y que los datos sirven para no engañarse si se eligen bien. Una buena métrica es comparativa (se mira frente a otro periodo o grupo), comprensible, casi siempre una proporción o tasa, y sobre todo cambia lo que haces. Si una cifra sube o baja y no cambia ninguna decisión, es una métrica de vanidad.</p>
+<p>Su herramienta central es la métrica que más importa: en cada momento, una sola cifra concentra la atención porque refleja el mayor riesgo del negocio. Cuál sea depende de dos cosas. Del modelo de negocio (no se mide igual una app gratuita con anuncios que una suscripción) y de la etapa: primero entender el problema, después conseguir que el producto se use de forma repetida, luego que se difunda, luego que genere ingresos sostenibles y por último escalar. No se salta de etapa sin superar la anterior.</p>
+<p>El libro añade referencias de qué es una cifra normal en distintos tipos de negocio, como líneas en la arena para saber si vas bien, con la advertencia de que cada caso es distinto.</p>
+<h2>El recorrido del libro</h2>
+<h3>Bloque 1: Cómo distinguir una buena métrica</h3>
+<p>La primera parte enseña a pensar en métricas. Separa las métricas cualitativas (lo que dice la gente) de las cuantitativas (lo que hace), las de vanidad de las accionables, las exploratorias (buscar algo que no sabías) de las de informe (seguir algo que ya sabes), las adelantadas (predicen) de las retrasadas (confirman), y la correlación de la causalidad. Insiste en que los datos cualitativos de hablar con usuarios no son un complemento, sino el arranque: sin ellos no sabes qué medir.</p>
+<p>También introduce la idea de segmentar y de mirar por cohortes: agrupar a los usuarios por la fecha en que llegaron y comparar cómo se comportan, para saber si los cambios mejoran las cosas o si los números totales esconden un deterioro.</p>
+<h3>Bloque 2: La métrica que más importa</h3>
+<p>Los autores argumentan que intentar mejorar todo a la vez es no mejorar nada. Proponen elegir una sola métrica que refleje el riesgo más grande en este momento, fijarle un objetivo y dedicar el trabajo a moverla. Cuando se alcanza, la métrica cambia. Reconocen que seguirás mirando otras, pero solo una manda en las prioridades.</p>
+<p>Explican también que conviene fijar el objetivo antes de mirar los datos, para no ajustar la meta a lo que salga. Y que una métrica bien elegida tiene que poder moverse con acciones a tu alcance.</p>
+<h3>Bloque 3: Los modelos de negocio</h3>
+<p>El libro describe varios modelos y las métricas clave de cada uno: comercio electrónico, software por suscripción, apps móviles gratuitas, sitios de medios que viven de la publicidad, sitios de contenido generado por usuarios y mercados con dos lados. Para cada uno explica qué cifras importan: en suscripción, la captación, la activación, la retención y la cancelación, y el ingreso por cliente frente a lo que cuesta captarlo; en apps gratuitas, la descarga, la activación, el porcentaje que paga y el ingreso medio por usuario; en medios, el tráfico, el tiempo de atención y el ingreso por visita.</p>
+<p>La lección práctica es que un mismo portfolio puede tener varios modelos a la vez, y que mezclar sus métricas lleva a conclusiones erróneas.</p>
+<h3>Bloque 4: Las etapas</h3>
+<p>El núcleo del libro. Proponen cinco etapas. Empatía: entender un problema real hablando con gente, antes de construir. Pegajosidad: tener un producto que la gente usa repetidamente. Viralidad: que los usuarios traigan a otros. Ingresos: que el negocio sea rentable por cliente. Escala: crecer en mercados y canales.</p>
+<p>Cada etapa tiene su puerta: no pasas a la siguiente hasta superarla. Su advertencia más repetida es que mucha gente salta a buscar crecimiento o ingresos sin haber superado la pegajosidad, y entonces gasta en traer usuarios que se van.</p>
+<h3>Bloque 5: Líneas en la arena</h3>
+<p>Los autores recopilan referencias de qué valores son razonables en cada modelo y etapa: tasas de conversión, de cancelación, de participación. Su propósito es dar un punto de comparación cuando no tienes historial propio. Insisten en que son orientativas, que cada sector y cada producto es distinto, y que la mejor referencia acaba siendo tu propio histórico. No te las reproduzco porque no las tengo seguras y porque, además, son de hace más de una década.</p>
+<h3>Bloque 6: Llevarlo a la práctica</h3>
+<p>La última parte trata de cómo implantar una cultura de datos: elegir pocas cifras, hacerlas visibles para todos, fijar objetivos, no pedir datos para justificar decisiones ya tomadas. También aplica el enfoque a empresas establecidas y a proyectos dentro de organizaciones grandes. Para ti la parte útil es la disciplina personal: decidir antes de mirar y mirar con regularidad.</p>
+<h2>Los consejos del autor, convertidos en acciones</h2>
+<ol>
+<li><strong>Asigna una etapa a cada app</strong>, por escrito. Una palabra: empatía, pegajosidad, viralidad, ingresos o escala.</li>
+<li><strong>Elige una métrica que más importa por app</strong> según esa etapa, con su objetivo y su fecha.</li>
+<li><strong>Separa los modelos de negocio</strong>: TCM es suscripción, Zodiaco es app gratuita con anuncios, Anime Food quizá es medio. No las compares con la misma cifra.</li>
+<li><strong>Monta la curva de retención por cohortes semanales</strong> en TCM, empezando por los suscriptores.</li>
+<li><strong>Elimina de la revisión diaria una métrica de vanidad</strong> por app, la que mires sin que cambie nada.</li>
+<li><strong>Fija el objetivo antes de mirar</strong>: escribe qué cifra esperas antes de abrir el panel.</li>
+<li><strong>Arranca cada métrica nueva con una conversación</strong>: cinco usuarios antes de decidir qué medir.</li>
+<li><strong>Usa tu propio histórico como línea en la arena</strong>, sobre todo en estacionalidad (Zodiaco).</li>
+</ol>
+<h2>Aplicado a tus apps</h2>
+<h3>TCM</h3>
+<p>Modelo: suscripción. Etapa probable: ingresos, porque ya cobra. Pero el libro te haría una pregunta incómoda: ¿superaste de verdad la pegajosidad? Sin curva de retención no lo sabes. Es posible que el anual con prueba cobre a gente que no vuelve y que cancelará en la renovación; o que cobre a estudiantes fieles. Las dos situaciones piden estrategias opuestas.</p>
+<p>Propuesta de métrica que más importa para el próximo trimestre: proporción de suscriptores que siguen activos (al menos una sesión semanal) cuatro semanas después de pagar. Hasta tenerla, la siguiente candidata es la compra efectiva por persona que pulsa pagar, que hoy pierde 1 de cada 6 por el error «not allowed». Y el libro te pediría segmentar: estudiantes frente a curiosos. Si el onboarding pregunta quién eres, cada cohorte se mide por separado.</p>
+<h3>Leo Glow</h3>
+<p>Etapa: pegajosidad, sin superar. Un 1,1 % a siete días lo dice todo. Según el libro, cualquier trabajo en monetización o adquisición es prematuro: las 19 cancelaciones de 22 anuales son un síntoma de la misma etapa, no un problema de precio. La métrica que más importa: retención a siete días, con un objetivo concreto que fijes tú antes de cambiar nada. Y una métrica adelantada para no esperar una semana a cada lectura: porcentaje de usuarios que completan un segundo reto en las primeras 48 horas, si demuestras que predice el d7.</p>
+<p>La etapa de empatía tampoco está cerrada: no sabes de verdad quién llega a Leo Glow ni qué busca, más allá de la palabra «looksmaxxing». El libro te mandaría a hablar con usuarios antes que a tocar la ruleta.</p>
+<h3>Zodiaco</h3>
+<p>Modelo: app gratuita con anuncios. Sus métricas clave son usuarios activos, frecuencia de uso e ingreso por usuario. La métrica que más importa probablemente sea la frecuencia: aperturas semanales por usuario activo, porque cada apertura es una oportunidad de rewarded. Con unas 800 personas al mes, puedes medir cohortes mensuales sin problema. La estacionalidad obliga a comparar con el mismo periodo del año anterior, no con el mes previo; el pico de febrero no es un éxito de nada que hayas cambiado.</p>
+<h3>Anime Food</h3>
+<p>El libro te da el criterio que te falta para la duda abierta. Si es un producto, está en empatía y su métrica es cualitativa: ¿alguien la necesita? Si es un medio, su modelo es el de sitio de contenido, y sus métricas son atención y tráfico que envía a otras apps. Elige uno durante un trimestre y mide solo esas cifras. Con 1,7 y 3 descargas diarias, la app sola no te dará señal estadística; el contenido sí.</p>
+<h2>Preguntas para leerlo</h2>
+<ol>
+<li>¿Qué métrica miras cada mañana que no ha cambiado ninguna decisión en un mes?</li>
+<li>¿En qué etapa está cada app, y cuál estás tratando como si estuviera en otra?</li>
+<li>¿Qué modelo de negocio es de verdad Anime Food?</li>
+<li>¿Qué cifra de TCM, si la conocieras mañana, cambiaría tu plan para el próximo trimestre?</li>
+<li>¿Qué métrica adelantada predice la retención a siete días en Leo Glow?</li>
+<li>¿Qué datos cualitativos te faltan para saber qué medir?</li>
+</ol>
+<h2>Si solo lees una parte</h2>
+<p>El bloque de las etapas, con la idea de no saltar la pegajosidad. Resume en una página tu situación en Leo Glow y te obliga a preguntarte lo mismo sobre TCM.</p>
+<h2>Cautelas</h2>
+<p>El libro es de hace más de una década: las herramientas han cambiado y las referencias numéricas que da probablemente también. Algunos modelos de negocio que describe no encajan con apps de suscripción móvil actuales, con pruebas gratuitas y periodos de gracia. Está escrito para startups que buscan financiación y con volúmenes de datos mayores que los tuyos; con 4 descargas diarias en iOS, muchas cohortes serán demasiado pequeñas para conclusiones firmes, y tendrás que juntar semanas o apoyarte más en lo cualitativo. La métrica única es una disciplina, no una ley: en un portfolio de varias apps, tendrás varias a la vez, una por app, y eso ya es más de lo que el libro imagina para una persona.</p>
+<h2>Para seguir</h2>
+<ul>
+<li>Eric Ries, <em>The Lean Startup</em>, el marco del que nace este libro.</li>
+<li>Rob Fitzpatrick, <em>The Mom Test</em>, para la etapa de empatía.</li>
+<li>Sean Ellis y Morgan Brown, <em>Hacking Growth</em>, para convertir la métrica en experimentos.</li>
+</ul>
+</article>
+<footer><a href="504-atomic-habits.html">← Atomic Habits (James Clear, 2018)</a><br><a href="506-actionable-gamification.html">Actionable Gamification (Yu-kai Chou) →</a></footer>
+</main></body></html>
