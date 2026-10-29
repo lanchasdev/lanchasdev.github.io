@@ -1,0 +1,539 @@
+<!doctype html>
+<html lang="es"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Parte VI: Conocer al cliente y decidir el producto</title>
+<meta name="description" content="Todo el documento en una sola página, ordenado por partes.">
+<meta name="author" content="Claude">
+<meta property="og:title" content="Parte VI: Conocer al cliente y decidir el producto">
+<meta property="article:published_time" content="2026-10-29">
+<style>
+:root{--bg:#fbfaf7;--fg:#1f2933;--muted:#6b7280;--line:#e5e7eb;--accent:#9a3412}
+@media(prefers-color-scheme:dark){:root{--bg:#12100e;--fg:#ede7d4;--muted:#9a9384;--line:#2c2823;--accent:#e8a33d}}
+body{margin:0;background:var(--bg);color:var(--fg);font:18px/1.7 Georgia,"Times New Roman",serif}
+main{max-width:40em;margin:0 auto;padding:1.5rem 1rem 4rem}
+h1{font-size:1.8rem;line-height:1.25;margin:.2rem 0 1rem}
+h2{font-size:1.3rem;margin:2.2rem 0 .6rem;color:var(--accent)}
+a{color:var(--accent)}
+em{color:var(--muted)}
+hr{border:0;border-top:1px solid var(--line);margin:2rem 0}
+nav,footer{font:14px/1.5 -apple-system,sans-serif;color:var(--muted)}
+nav a,footer a{margin-right:1rem}
+li{margin:.35rem 0}
+</style></head><body><main>
+<nav><a href="./">← Índice</a></nav>
+<article>
+<section id="600-parte-vi-clientes-y-producto"><h1>Parte VI: Conocer al cliente y decidir el producto</h1>
+<p><em>Seis libros para dejar de adivinar qué quiere tu usuario y empezar a decidir con lo que hace, no con lo que dice.</em></p>
+<h2>El problema que resuelve esta parte</h2>
+<p>Sabes atraer gente. Tus fichas convierten bien por mercado, mides cada edición en visitas y tienes una máquina de vídeo que publica sola en tres redes. Lo que no tienes es una idea fiable de quién está al otro lado. Lo dicen tus propios datos: en TCM conviven estudiantes de MTC y curiosos del bienestar, y no sabes cuál de los dos paga ni cuál se queda; en Leo Glow, de cada cien personas que instalan, unas once vuelven al día siguiente y una a la semana; en Anime Food no has decidido si haces un producto o un canal de contenido; en Zodiaco la mascota, las misiones y el club existen, pero no sabes qué parte de eso es lo que la gente vino a buscar.</p>
+<p>Hasta ahora has decidido el producto con la competencia, las búsquedas y tu intuición. Sirven para atraer tráfico, pero no te dicen por qué alguien abre tu app un martes por la noche ni qué tendría que pasar para que pagara. Esta parte va de eso: hablar con personas sin que te mientan, entender qué progreso buscan, convertirlo en un hábito, decidir con experimentos pequeños y diseñar pantallas que no obliguen a pensar.</p>
+<p>Retención, monetización de Leo Glow y foco, tus tres carencias, son la misma pregunta: ¿qué trabajo hace tu app en la vida de alguien? Si lo sabes, sabes qué pantalla sobra, qué vender en el muro y qué app merece tu tiempo.</p>
+<h2>Orden de lectura recomendado</h2>
+<ol>
+<li><strong>The Mom Test (Rob Fitzpatrick).</strong> Es corto y es la base de todo lo demás: cómo preguntar sin recibir cumplidos. Incluye un guion de entrevista listo para usar con suscriptores y cancelados de TCM y con usuarios de Leo Glow. Si solo lees un libro de esta parte en el viaje, que sea este, y vuelve con las entrevistas preparadas.</li>
+<li><strong>Competing Against Luck (Clayton Christensen y otros).</strong> Te da el marco para interpretar lo que te cuenten: la gente no compra apps, contrata algo para avanzar en una circunstancia concreta. Es la lente para resolver la duda de los dos públicos de TCM y el estancamiento de Leo Glow.</li>
+<li><strong>Continuous Discovery Habits (Teresa Torres).</strong> Convierte las entrevistas en una rutina semanal y te enseña a ordenar lo aprendido en un árbol de oportunidades. Está pensado para equipos, pero lo adaptaremos a uno solo.</li>
+<li><strong>The Lean Startup (Eric Ries).</strong> Te da el método para probar ideas con el mínimo coste y para decidir cuándo pivotar. Es el libro que responde a «¿Anime Food sigue o no?».</li>
+<li><strong>Inspired (Marty Cagan).</strong> Explica cómo trabajan los buenos equipos de producto y por qué separan el descubrimiento de la entrega. Lo leerás quitándole la parte de organización y quedándote con los cuatro riesgos.</li>
+<li><strong>Don't Make Me Think (Steve Krug).</strong> El más práctico y el que antes vas a aplicar: usabilidad del onboarding, de los muros de pago y de las fichas, y pruebas baratas con tres personas.</li>
+</ol>
+<p>El orden va de escuchar a pulir la pantalla. Si lees a Krug antes que a Fitzpatrick, acabarás arreglando botones de un producto que quizá no responde a la pregunta correcta.</p>
+<h2>La idea que los une</h2>
+<p><strong>El comportamiento pasado de una persona concreta vale más que cualquier opinión sobre el futuro, incluida la tuya.</strong> Fitzpatrick lo aplica a las preguntas: pregunta por lo que hicieron, no por lo que harían. Christensen lo aplica a la demanda: busca el momento real de lucha, no el perfil demográfico. Torres lo aplica a la entrevista: pide la historia de la última vez. Ries lo aplica a las métricas: mide lo que hacen las cohortes, no los totales que halagan. Cagan lo aplica al riesgo: prueba antes de construir. Krug lo aplica a la usabilidad: mira a alguien usar la pantalla en lugar de discutir si es clara.</p>
+<p>Ya tienes mucho comportamiento registrado en PostHog y en las tiendas; te falta el porqué, y eso solo sale de hablar con gente. El dato te dice dónde mirar (los 64 que pulsan pagar en TCM, los 19 anuales cancelados de Leo Glow) y la conversación te dice qué está pasando ahí. Cuando vuelvas el 15 de noviembre, el objetivo no es haber leído seis libros, sino tener diez conversaciones agendadas y una decisión de producto por app tomada con lo que oigas.</p></section>
+
+<hr>
+
+<section id="601-the-mom-test"><h1>The Mom Test (Rob Fitzpatrick, 2013)</h1>
+<p><em>Cómo hablar con usuarios sin que te mientan, y un guion listo para TCM y Leo Glow.</em></p>
+<h2>Por qué este libro, para ti</h2>
+<p>Tienes datos de sobra sobre qué hacen tus usuarios y casi ninguno sobre por qué. En TCM sabes que en una semana 234 personas ven el muro, 64 pulsan pagar y 10 se dan de alta, que el anual con prueba cobra a 12 de 87 y el mensual a 1 de 9; no sabes si quien paga es el estudiante que prepara un examen o la curiosa que quiere entender su constitución. En Leo Glow sabes que d7 está en el 1,1 % y que, en 30 días en Android, se empezaron 22 anuales y se cancelaron 19; no sabes qué esperaban encontrar los que se fueron. Este libro es el manual más corto y útil que existe para sacar esas respuestas hablando con personas, y es la base de todos los demás de esta parte.</p>
+<h2>La tesis en dos minutos</h2>
+<p>Preguntar a alguien si tu idea es buena es inútil, porque la gente es amable y te dirá que sí. El título viene de ahí: incluso tu madre, que te quiere, te mentiría si le preguntas si le gusta tu negocio. La solución no es buscar gente más sincera, sino hacer preguntas que ni siquiera tu madre podría responder con una mentira piadosa. Eso se consigue con tres reglas: habla de su vida y no de tu idea; pregunta por cosas concretas que ya pasaron, no por opiniones ni por lo que harían en el futuro; y habla menos y escucha más.</p>
+<p>A partir de ahí el libro te enseña a reconocer los datos malos (cumplidos, generalidades, ideas sueltas), a reconducir la conversación cuando aparecen, a hacer las preguntas que te dan miedo, a mantener las charlas informales y breves, a distinguir el interés real del educado pidiendo un compromiso, y a organizar el proceso para que lo aprendido no se pierda. Es un libro pensado para fundadores antes de construir, pero funciona igual de bien con un producto ya en la calle y usuarios reales a los que puedes escribir.</p>
+<h2>El recorrido del libro</h2>
+<h3>Bloque 1: las tres reglas y la pregunta mal hecha</h3>
+<p>El arranque compara conversaciones malas con buenas sobre la misma idea. En la mala, el fundador explica su producto y pregunta si lo usarían; recibe entusiasmo y sale convencido. En la buena, pregunta cómo resuelve hoy el problema esa persona, cuándo fue la última vez que le pasó, cuánto le costó, qué ha probado. Si el problema no aparece en su vida real, no existe para ella, por mucho que diga que tu idea le encanta.</p>
+<p>La lección clave es que las opiniones sobre el futuro («lo pagaría», «lo usaría cada día») son casi siempre demasiado optimistas, mientras que los hechos del pasado no se pueden adornar tanto. Si alguien dice que le preocupa estudiar los puntos de acupuntura pero no ha buscado ninguna solución en un año, la preocupación no es tan grande.</p>
+<h3>Bloque 2: los datos malos y cómo desactivarlos</h3>
+<p>Fitzpatrick clasifica la basura que contamina las conversaciones. Los cumplidos no informan de nada y hay que ignorarlos y volver a los hechos. Las generalidades («normalmente», «siempre», «yo nunca») se convierten en hechos pidiendo un ejemplo concreto: la última vez. Las ideas y peticiones de funciones no se apuntan sin más: se excava detrás para entender qué motivación tienen, qué intentaba hacer la persona cuando lo echó en falta y qué hace mientras tanto.</p>
+<p>También advierte de los momentos en que tú contaminas: cuando te emocionas y empiezas a presentar tu producto, cuando buscas aprobación, cuando haces preguntas que llevan la respuesta dentro. La señal de alarma es salir de una charla contento y sin haber aprendido nada nuevo.</p>
+<h3>Bloque 3: las preguntas que importan y las que dan miedo</h3>
+<p>Muchas conversaciones fallan porque evitamos la pregunta que podría hundir nuestra idea. El libro insiste en buscarla a propósito: qué tendría que ser verdad para que esto funcione, y qué respuesta me obligaría a cambiar de plan. Para un producto en marcha esas preguntas son cosas como si pagarían, por qué dejaron de usarlo o qué usan en lugar de tu app.</p>
+<p>Propone además preparar de antemano las tres preguntas más importantes para cada tipo de persona, porque en una charla real se te olvidan. Y recuerda que una buena entrevista puede desmentir tus creencias: hay que estar dispuesto a oír que el problema que resuelves no importa tanto.</p>
+<h3>Bloque 4: mantenerlo informal</h3>
+<p>Las reuniones formales con agenda empujan a la gente a actuar, a dar opiniones de experto y a ser complaciente. Fitzpatrick defiende quitarle solemnidad: conversaciones cortas, a veces de pocos minutos, sin presentar el producto al principio y sin que parezca una entrevista. Cuanto más natural, más honesta.</p>
+<p>Para ti eso significa que no necesitas sesiones de una hora con guion rígido. Diez o quince minutos por videollamada o incluso un intercambio de mensajes bien hecho pueden darte más verdad que un formulario.</p>
+<h3>Bloque 5: compromiso y avance</h3>
+<p>Una conversación no termina bien porque la persona diga que le gustó. Termina bien si da un paso que le cueste algo: tiempo (otra llamada, probar una versión), reputación (presentarte a alguien, dejar una reseña, recomendarte) o dinero (pagar, reservar, adelantar). Si no hay compromiso, lo que tienes es educación, no interés.</p>
+<p>Este bloque es especialmente útil cuando el producto ya existe. En tu caso el compromiso más claro es pagar, pero hay otros más baratos de pedir: aceptar una segunda llamada dentro de un mes, probar una versión de prueba del muro, invitar a un compañero de clase.</p>
+<h3>Bloque 6: encontrar con quién hablar y a quién</h3>
+<p>El libro dedica espacio a conseguir conversaciones: aprovechar contactos, crear contextos donde la gente venga a ti, ser claro sobre lo que buscas y pedir ayuda en lugar de vender. También a elegir bien el segmento: si hablas con todo el mundo, las respuestas se contradicen y no aprendes nada. Hay que acotar quién exactamente y dónde se le encuentra, y empezar por el grupo más concreto que puedas alcanzar.</p>
+<h3>Bloque 7: después de la conversación</h3>
+<p>Cierra con el proceso: preparar antes de hablar, tomar notas con símbolos sencillos para distinguir emociones, problemas, compromisos y datos del entorno, y repasar lo aprendido. Si trabajas en equipo, compartir las notas en crudo para que no dependa de la memoria de quien habló. Si trabajas solo, revisarlas tú mismo a la semana, cuando ya no estás emocionado.</p>
+<h2>Los consejos del autor, convertidos en acciones</h2>
+<ol>
+<li><strong>Antes de cada tanda de entrevistas, escribe las tres preguntas que más miedo te dan</strong> para cada grupo. Para TCM: si el estudiante paga más que el curioso. Para Leo Glow: si la gente quiere hábitos o quiere que le digan lo guapo que es.</li>
+<li><strong>Nunca enseñes el muro ni la app al principio de la charla.</strong> Si hace falta, al final, y ya no cuenta como dato.</li>
+<li><strong>Cambia cada «¿usarías…?» por «cuéntame la última vez que…».</strong> Escribe esa frase en el guion para no olvidarla.</li>
+<li><strong>Cuando oigas una petición de función, pregunta qué intentaba hacer cuando la echó en falta</strong> y qué hizo en su lugar.</li>
+<li><strong>Ignora los cumplidos y apúntalos aparte</strong>, para no contarlos como señal positiva.</li>
+<li><strong>Termina cada conversación pidiendo un compromiso pequeño</strong>: otra llamada en un mes, presentarte a un compañero, probar una versión nueva.</li>
+<li><strong>Acota el segmento antes de reclutar</strong>: suscriptores anuales de TCM en España, no «usuarios de TCM».</li>
+<li><strong>Toma notas el mismo día y reléelas una semana después</strong> con una marca para hechos, emociones, compromisos y peticiones.</li>
+<li><strong>Haz conversaciones cortas y frecuentes</strong> en lugar de un gran estudio: cinco charlas de quince minutos valen más que un formulario de cien respuestas.</li>
+</ol>
+<h2>Aplicado a tus apps</h2>
+<h3>TCM</h3>
+<p>El objetivo es resolver la gran duda: quién paga y por qué. Recluta dos grupos. Suscriptores (anuales, mensuales y el vitalicio), con un mensaje dentro de la app o por correo si lo tienes de RevenueCat, ofreciendo a cambio algo que les importe, como un mes gratis o acceso a una sección nueva antes que nadie. Y cancelados o gente que empezó la prueba y no pagó. Con cinco suscriptores y tres cancelados ya verás patrones.</p>
+<p><strong>Guion para suscriptores de TCM</strong> (unos 15 minutos):</p>
+<ol>
+<li>Cuéntame un poco a qué te dedicas y qué relación tienes con la medicina china.</li>
+<li>¿Cuándo fue la última vez que tuviste que estudiar o consultar algo de MTC? ¿Qué estabas haciendo y qué necesitabas saber?</li>
+<li>Antes de tener una app para esto, ¿cómo lo resolvías? ¿Libros, apuntes, vídeos, preguntar a alguien? ¿Qué te molestaba de eso?</li>
+<li>¿Recuerdas el día que decidiste pagar? ¿Qué pasó ese día o esa semana?</li>
+<li>¿Qué otras cosas pagas para estudiar o para cuidarte? ¿Cuánto te gastas en eso al año, más o menos?</li>
+<li>Cuéntame la última vez que la abriste. ¿Qué buscabas? ¿Lo encontraste?</li>
+<li>Si mañana desapareciera, ¿qué harías en su lugar?</li>
+<li>¿Hay alguien de tu entorno que tenga el mismo problema? ¿Te importaría que hablara con esa persona?</li>
+</ol>
+<p><strong>Guion para cancelados o pruebas no cobradas de TCM</strong>:</p>
+<ol>
+<li>¿Qué te llevó a buscar algo de medicina china aquella vez? ¿Qué estaba pasando en tu vida?</li>
+<li>¿Qué esperabas encontrar cuando la instalaste?</li>
+<li>¿Qué hiciste los primeros días con ella? Si te acuerdas de algo concreto, mejor.</li>
+<li>¿En qué momento decidiste que no ibas a seguir? ¿Qué estabas haciendo cuando lo decidiste?</li>
+<li>¿Qué usas ahora para eso, si usas algo?</li>
+<li>¿Pagas por alguna otra cosa parecida? ¿Por qué esa sí?</li>
+</ol>
+<p>Fíjate en una pregunta oculta: si en el pago aparece el error de Google Play que sufre uno de cada seis, puede que algún «cancelado» en realidad quisiera pagar y no pudo. Pregunta cómo fue el momento de pagar sin sugerir la respuesta.</p>
+<h3>Leo Glow</h3>
+<p>Aquí el riesgo es mayor porque sospechas que el público del nicho busca justo lo que tú no ofreces: que le puntúen la cara. Si no lo preguntas, nunca sabrás si tu postura es una ventaja o un freno. Recluta gente que haya completado al menos un reto de la ruleta y gente que haya empezado el anual y lo haya cancelado.</p>
+<p><strong>Guion para usuarios de Leo Glow</strong> (preguntas sobre su vida, no sobre la app):</p>
+<ol>
+<li>¿Qué te hizo empezar a buscar cosas de mejorar tu aspecto? ¿Pasó algo concreto?</li>
+<li>Cuéntame la última vez que hiciste algo para verte mejor. ¿Qué fue y cómo te enteraste de hacerlo?</li>
+<li>¿Dónde aprendes sobre esto? ¿Qué cuentas sigues, qué vídeos ves, a quién le preguntas? Si mencionan ChatGPT, pregunta qué le preguntaron exactamente.</li>
+<li>¿Has probado apps que te puntúan la cara? ¿Qué pasó después de ver tu nota?</li>
+<li>¿Has intentado alguna vez mantener una rutina (gimnasio, piel, dieta)? ¿Cuánto duró y por qué la dejaste?</li>
+<li>¿En qué te gastas dinero para esto? ¿Productos, ropa, gimnasio, barbería?</li>
+<li>Para los que cancelaron: ¿qué estaba pasando la semana que cancelaste?</li>
+<li>Si pudieras cambiar una cosa de cómo te ves o te sientes en tres meses, ¿cuál sería y cómo sabrías que lo has conseguido?</li>
+</ol>
+<p>La pregunta que da miedo aquí es la cuarta. Si muchos dicen que la nota les enganchó aunque les sentara mal, tienes un problema de posicionamiento, no de onboarding.</p>
+<h3>Zodiaco</h3>
+<p>Con 800 personas al mes y monetización por anuncios, entrevistar es menos urgente, pero hay una pregunta que vale oro antes del pico de febrero: para qué la abren. Pregunta por la última vez que miraron su horóscopo o una compatibilidad, con quién lo compartieron y qué hicieron después. Si la respuesta es «lo mandé a mi pareja», la compatibilidad es el producto y la mascota es accesoria; si es «miro mi día cada mañana», el producto es la lectura diaria. Hipótesis, hasta oírlo.</p>
+<h3>Anime Food</h3>
+<p>La duda de si es producto o canal se resuelve en parte hablando con quien cocina. Pregunta a quien la usa: cuándo fue la última vez que cocinaste algo que viste en un anime, cómo encontraste la receta, si la hiciste, con quién. Si casi nadie ha cocinado nunca nada, tu público consume el contenido pero no el producto, y eso apunta a canal. Como en iOS la app está en Niños, no recluyes desde ahí ni contactes con menores: haz estas conversaciones con adultos que te lleguen por redes.</p>
+<h2>Preguntas para leerlo</h2>
+<ol>
+<li>¿Cuántas de tus decisiones de producto de los últimos tres meses se apoyaron en algo que un usuario dijo que haría, en lugar de en algo que hizo?</li>
+<li>¿Cuál es la pregunta sobre Leo Glow que más te asusta oír respondida?</li>
+<li>¿Qué compromiso concreto podrías pedir a un suscriptor de TCM que te dijera la verdad sobre su interés?</li>
+<li>¿Qué segmento de TCM es el más estrecho y alcanzable para empezar?</li>
+<li>¿Qué cumplidos sobre tus apps has tomado como datos?</li>
+</ol>
+<h2>Si solo lees una parte</h2>
+<p>Los bloques 1 y 2: las tres reglas y los datos malos. Con eso ya puedes hacer el guion y no estropear las primeras entrevistas. Lo demás lo irás entendiendo al hacerlas.</p>
+<h2>Cautelas</h2>
+<ul>
+<li>El libro está pensado sobre todo para validar ideas antes de construir y con clientes de empresa. Tú ya tienes producto y usuarios de consumo, que contestan menos y se pierden antes. Espera una tasa de respuesta baja y ofrece algo a cambio.</li>
+<li>Las conversaciones dan el porqué, pero en muestras pequeñas. No cambies el precio de TCM porque lo diga una persona; usa la entrevista para formular una hipótesis y el dato para confirmarla.</li>
+<li>Ojo con la privacidad: solo contacta a quien haya dado un canal y avise de que puede recibir mensajes, guarda las notas sin datos personales innecesarios y nunca con menores (Anime Food en Niños).</li>
+<li>En salud, como en TCM, la gente puede contarte dolencias. No des consejo médico en la charla.</li>
+</ul>
+<h2>Para seguir</h2>
+<ul>
+<li>Steve Portigal, <em>Interviewing Users</em>: técnica de entrevista más profunda y con más matices.</li>
+<li>Teresa Torres, <em>Continuous Discovery Habits</em>: cómo hacer entrevistas cada semana (en esta misma parte).</li>
+<li>Clayton Christensen y otros, <em>Competing Against Luck</em>: cómo interpretar lo que te cuentan (en esta misma parte).</li>
+<li>Bob Moesta, <em>Demand-Side Sales 101</em>: entrevistas centradas en el momento de cambio de una solución a otra.</li>
+</ul></section>
+
+<hr>
+
+<section id="602-competing-against-luck"><h1>Competing Against Luck (Clayton Christensen, Taddy Hall, Karen Dillon y David S. Duncan, 2016)</h1>
+<p><em>La teoría de los trabajos por hacer: la gente no compra productos, los contrata para avanzar en una circunstancia concreta.</em></p>
+<h2>Por qué este libro, para ti</h2>
+<p>Tus cuatro apps tienen el mismo síntoma con distinta cara. TCM atrae a dos públicos que probablemente contratan la app para cosas distintas, y por eso no sabes a quién hablarle. Leo Glow compite en un nicho donde el resto vende una nota de atractivo y tú vendes hábitos; con d7 en el 1,1 %, parece que el trabajo que la gente trae no es el que tu app hace. Zodiaco tiene lectura diaria, compatibilidad y mascota con club, y no sabes cuál de esas cosas es la que se contrata. Anime Food no sabe si es producto o canal. Este libro te da la pregunta que ordena todo eso: ¿qué progreso intenta hacer esta persona, en qué circunstancia, y qué está despidiendo para contratarte?</p>
+<h2>La tesis en dos minutos</h2>
+<p>La mayoría de empresas innova a ciegas porque organiza su conocimiento alrededor del cliente (edad, sexo, ingresos) o del producto (funciones, categoría). Ninguna de las dos cosas explica por qué alguien compra. Lo que lo explica es la circunstancia: en un momento concreto, una persona quiere avanzar en algo, y busca algo que contratar para ese trabajo. Si entiendes el trabajo con todas sus dimensiones, dejas de depender de la suerte para innovar.</p>
+<p>Un trabajo tiene dimensiones funcionales, pero también sociales y emocionales, y estas últimas suelen pesar más. Además, contratar algo implica despedir otra cosa, aunque esa otra cosa sea no hacer nada. Por eso la competencia real no es la app parecida, sino todo lo que la persona usa hoy para ese trabajo. Y cuando lo entiendes, no basta con el producto: hay que diseñar las experiencias de compra y de uso alrededor del trabajo, y organizar la empresa para no perderlo de vista.</p>
+<h2>El recorrido del libro</h2>
+<h3>Bloque 1: por qué innovar parece cuestión de suerte</h3>
+<p>Los autores parten de una constatación: con todos los datos que manejan las empresas, la mayoría de lanzamientos fracasan. Su diagnóstico es que los datos se recogen sobre las cosas equivocadas. Saber que tu usuario típico es un hombre de 18 a 24 años no te dice por qué abre la app. Las correlaciones entre atributos del cliente y compras no son causas. La causa está en la circunstancia de la persona y en el progreso que busca.</p>
+<p>El ejemplo más conocido del libro es el de los batidos de una cadena de comida rápida. Al estudiar quién los compraba y cuándo, descubrieron que muchos se vendían por la mañana a gente que iba sola en coche a trabajar y quería algo que durara el trayecto y le quitara el hambre hasta media mañana. El competidor no era otro batido, sino el plátano, la barrita o el aburrimiento del atasco. Mejorar el batido según lo que pedían los clientes en general no servía; mejorarlo para ese trabajo sí.</p>
+<h3>Bloque 2: qué es un trabajo y qué no lo es</h3>
+<p>Un trabajo es el progreso que alguien intenta hacer en una circunstancia concreta. No es una necesidad genérica («quiero estar sano»), que es demasiado amplia y estable para guiar decisiones. Tampoco es una tarea funcional aislada. Lleva siempre contexto: dónde está la persona, qué le ha pasado, con quién, qué le preocupa.</p>
+<p>Los autores insisten en las dimensiones sociales y emocionales. Alguien que estudia MTC no solo quiere memorizar puntos; quiere sentirse competente delante de su profesor o de su primer paciente. Un chico que busca «looksmaxxing» no solo quiere una rutina; quiere dejar de sentirse invisible. Si tu producto atiende solo la parte funcional, competirás en funciones con todo el mundo.</p>
+<h3>Bloque 3: dónde se encuentran los trabajos</h3>
+<p>El libro propone varios sitios donde buscar trabajos. En tu propia vida, observando qué te frustra. En el no consumo: gente que no usa ninguna solución porque las existentes son caras, complicadas o no encajan, y que es un mercado mayor de lo que parece. En los apaños que la gente se monta, que delatan un trabajo mal atendido. En las cosas que la gente evita hacer, que también son trabajos (trabajos negativos). Y en los usos inesperados de tu producto, que te dicen que alguien lo está contratando para algo que no previste.</p>
+<p>Distingue además entre la gran contratación, el momento de comprar o instalar, y la pequeña contratación, cada vez que alguien vuelve a usarlo. Muchos productos ganan la primera y pierden la segunda. Es exactamente tu problema de retención.</p>
+<h3>Bloque 4: cómo descubrir el trabajo en la práctica</h3>
+<p>Para sacar a la luz un trabajo hay que reconstruir la historia de una compra real: qué estaba pasando cuando la persona empezó a pensar en cambiar, qué consideró, qué la empujaba a cambiar y qué la frenaba. Fuerzas a favor (la frustración con lo actual, el atractivo de lo nuevo) y en contra (los hábitos, la ansiedad ante lo desconocido). Si solo trabajas las fuerzas a favor, mucha gente se queda a las puertas.</p>
+<p>Es un método de entrevista muy compatible con el de Fitzpatrick: hechos del pasado, momentos concretos, nada de opiniones. La diferencia es la lente: aquí buscas la circunstancia y la lucha, no solo validar un problema.</p>
+<h3>Bloque 5: de entender el trabajo a diseñar la experiencia</h3>
+<p>Conocer el trabajo no basta: hay que diseñar todo lo que rodea al producto para resolverlo, incluidas las experiencias de compra y de uso. El ejemplo que más desarrollan es el de una universidad a distancia estadounidense, la Southern New Hampshire University, que entendió que sus alumnos adultos tenían un trabajo muy distinto al de los jóvenes recién salidos del instituto y rediseñó desde la respuesta a las solicitudes hasta el acompañamiento para atenderlo. Lo importante no es la universidad sino el patrón: quitar los obstáculos que la persona encuentra en su circunstancia concreta.</p>
+<p>Aquí aparece también la idea de la marca con propósito: cuando un producto queda tan asociado a un trabajo que la gente piensa en él en cuanto surge la circunstancia. Es la posición que quieres para cualquiera de tus apps.</p>
+<h3>Bloque 6: los trabajos y la organización</h3>
+<p>La última parte trata de cómo las empresas pierden de vista el trabajo con el tiempo. Una de las causas es que empiezan a confundir los datos que generan con la realidad: las métricas internas sustituyen a la comprensión del cliente y se optimiza lo que se mide en lugar de lo que importa. Otra es que se organizan por producto o por función, y nadie es responsable del trabajo entero. Los autores proponen que el trabajo sea el eje que alinee decisiones.</p>
+<p>Para un desarrollador solo esta parte se traduce en algo simple: tus paneles pueden engañarte. Que suba la conversión del muro no significa que estés resolviendo mejor el trabajo; puede significar solo que has presionado más.</p>
+<h2>Los consejos del autor, convertidos en acciones</h2>
+<ol>
+<li><strong>Escribe el trabajo de cada app en una frase con circunstancia</strong>: «Cuando [situación], quiero [progreso], para [resultado emocional o social]». Sin circunstancia no vale.</li>
+<li><strong>Lista lo que despide quien te contrata</strong>: el libro de texto, los apuntes, YouTube, ChatGPT, una app que puntúa caras, no hacer nada.</li>
+<li><strong>Busca el no consumo</strong>: gente que tiene el trabajo pero no usa ninguna solución. Ahí suele estar el mercado más grande.</li>
+<li><strong>Separa gran contratación y pequeña contratación</strong> en tus métricas: instalar y pagar por un lado; volver el día 2, 7 y 30 por otro.</li>
+<li><strong>Reconstruye la historia de compra de cinco suscriptores</strong>: qué pasó el día que empezaron a buscar, qué consideraron, qué casi les frena.</li>
+<li><strong>Identifica las fuerzas que frenan</strong> (ansiedad, hábito) y diseña algo para cada una en el onboarding y en el muro.</li>
+<li><strong>Revisa tus usos inesperados</strong> en PostHog: pantallas que se usan mucho sin que las promociones son pistas de otro trabajo.</li>
+<li><strong>Desconfía de las métricas que suben sin que entiendas por qué</strong>: pregúntate qué trabajo resuelven.</li>
+</ol>
+<h2>Aplicado a tus apps</h2>
+<h3>TCM</h3>
+<p>Hipótesis de dos trabajos distintos. El del estudiante: «cuando tengo un examen o un paciente delante y no recuerdo cómo se relacionan síntoma, patrón y puntos, quiero encontrarlo rápido y entenderlo, para sentirme competente». El de la curiosa: «cuando noto que algo de mi cuerpo no va bien y he oído que la medicina china lo explica distinto, quiero entender qué me pasa según ella, para sentir que tengo algo de control». Son trabajos con circunstancias, frecuencias y disposición a pagar diferentes.</p>
+<p>Tus datos encajan con la hipótesis de que el estudiante es quien hace la gran contratación cara: el anual con prueba cobra a 12 de 87 y el mensual a 1 de 9, lo que sugiere un compromiso de estudio largo. Pero es una hipótesis. Para confirmarla, en el onboarding ya puedes preguntar «¿para qué la quieres?» con dos o tres opciones y cruzar la respuesta con la compra por persona que llega al muro. Si el estudiante paga mucho más, el muro, el texto de la ficha y el simulador de casos deberían hablarle a él, y el contenido de redes se queda como captación de la curiosa. La pequeña contratación también es distinta: el estudiante vuelve en época de exámenes y la curiosa vuelve si cada día tiene algo para ella. Sin curva de retención no sabes cuál de las dos se rompe.</p>
+<h3>Leo Glow</h3>
+<p>Aquí el libro es incómodo. El nicho vende la nota de atractivo porque atiende una dimensión emocional fuerte: saber dónde estoy. Tú vendes hábitos, que atienden un trabajo distinto: «cuando me siento estancado con mi aspecto, quiero un plan que pueda seguir sin pensar, para ver que avanzo». El problema es que la gran contratación ocurre con la búsqueda «looksmaxxing», que viene cargada del primer trabajo, y la pequeña contratación exige el segundo. De ahí, quizá, un d1 del 11,6 % y un d7 del 1,1 %.</p>
+<p>Dos caminos para investigar. Uno: dar al usuario algo que cumpla la parte emocional de «saber dónde estoy» sin puntuar la cara, como un nivel de avatar que refleje su progreso real o un diagnóstico de hábitos al inicio. Otro: buscar el trabajo en la gente que sí vuelve el día 7, aunque sean pocos, y reconstruir su historia. Las fuerzas que frenan también cuentan: la ansiedad ante un compromiso anual puede explicar parte de los 19 cancelados de 22. Y el tráfico de ChatGPT es una pista de circunstancia: alguien que pregunta a un asistente cómo mejorar su aspecto ya está en modo plan, no en modo nota.</p>
+<h3>Zodiaco</h3>
+<p>Hipótesis de trabajos: curiosidad sobre uno mismo, un tema de conversación con la pareja o amigos (compatibilidad), y un pequeño ritual diario (lectura). El pico de febrero dice que la circunstancia más fuerte es el Año Nuevo chino, cuando la gente quiere saber qué le trae el año y qué animal es. Eso es una gran contratación estacional. La pequeña contratación, la mascota con misiones, es otro trabajo: entretenimiento con recompensa, que encaja con que el rewarded de duplicar recompensa sea lo que cobra. Saber cuál pesa más te dice qué preparar antes de febrero.</p>
+<h3>Anime Food</h3>
+<p>La pregunta «¿producto o motor de contenido?» se reformula: ¿qué contrata la gente? Si contrata «entretenerme con algo bonito y relajante» (los ASMR, las compilaciones, el anime → real), el trabajo lo cumple el vídeo y la app sobra. Si contrata «cocinar algo especial para mí o para otros que me conecte con lo que me gusta», el trabajo lo cumple la receta y la app tiene sentido. Con 1,7 descargas al día en Play y 3 en iOS, todo apunta de momento a lo primero. Hipótesis que comprobar contando cuántos usuarios llegan a abrir una receta completa.</p>
+<h2>Preguntas para leerlo</h2>
+<ol>
+<li>¿Qué despide la persona que contrata TCM? ¿Y la que contrata Leo Glow?</li>
+<li>¿Qué dimensión emocional atiende la nota de atractivo que tu app no atiende?</li>
+<li>¿Dónde está el no consumo en tus nichos: quién tiene el trabajo y no usa nada?</li>
+<li>¿Cuál de tus métricas actuales puede estar sustituyendo a la comprensión del trabajo?</li>
+<li>¿Qué uso inesperado de tus apps has visto y no has investigado?</li>
+</ol>
+<h2>Si solo lees una parte</h2>
+<p>Los bloques 2 y 3: qué es un trabajo y dónde se encuentra, incluida la distinción entre gran y pequeña contratación. Es lo que más te sirve para la retención.</p>
+<h2>Cautelas</h2>
+<ul>
+<li>El libro está lleno de casos de grandes empresas y consultoría. La teoría es potente, pero la ejecución que describen (equipos de investigación, rediseños organizativos) no te aplica.</li>
+<li>«Trabajo» es un concepto fácil de usar mal. Si tu frase no tiene circunstancia concreta, es un deseo genérico y no te ayuda a decidir nada.</li>
+<li>No hay un método único y detallado de entrevista en el libro; para eso combínalo con <em>The Mom Test</em> o con los libros de Bob Moesta.</li>
+<li>Los ejemplos de historias de éxito pueden dar la impresión de que el trabajo se descubre de golpe. En la práctica se afina con muchas conversaciones y datos.</li>
+</ul>
+<h2>Para seguir</h2>
+<ul>
+<li>Bob Moesta, <em>Demand-Side Sales 101</em>: el método de entrevista por fuerzas aplicado a la compra.</li>
+<li>Alan Klement, <em>When Coffee and Kale Compete</em>: otra versión de los trabajos por hacer, más centrada en el cambio que busca la persona.</li>
+<li>Anthony Ulwick, <em>Jobs to Be Done: Theory to Practice</em>: un enfoque más cuantitativo, con resultados deseados medibles.</li>
+<li>Clayton Christensen, <em>The Innovator's Dilemma</em>: el libro que dio origen al pensamiento del autor sobre innovación.</li>
+</ul></section>
+
+<hr>
+
+<section id="603-continuous-discovery-habits"><h1>Continuous Discovery Habits (Teresa Torres, 2021)</h1>
+<p><em>Hablar con usuarios cada semana y ordenar lo aprendido en un árbol que te dice qué construir y qué no.</em></p>
+<h2>Por qué este libro, para ti</h2>
+<p><em>The Mom Test</em> te enseña a hacer una buena entrevista; este libro te enseña a no dejar de hacerlas. Tu riesgo no es hacer mal la primera tanda de conversaciones al volver, sino hacerla, sacar tres ideas, pasarte dos meses construyéndolas y no volver a hablar con nadie hasta el año siguiente. Torres propone un sistema pequeño y constante: una conversación por semana, un objetivo claro por app, un mapa de oportunidades y experimentos baratos antes de programar. Tú ya tienes un hábito parecido con el ASO, donde mides cada edición; este libro te propone lo mismo para el producto. Y te da una herramienta, el árbol de oportunidades y soluciones, que encaja de lleno con tu falta de foco: con cuatro apps y mil ideas, necesitas algo que te diga cuál de ellas está conectada con lo que quieres mover.</p>
+<h2>La tesis en dos minutos</h2>
+<p>El descubrimiento de producto no es una fase al principio del proyecto, es un hábito continuo. Torres lo define como contactos semanales con clientes, hechos por el mismo equipo que construye el producto, mediante actividades de investigación pequeñas, en busca de un resultado concreto. Cada parte de esa definición importa: semanal (no trimestral), el mismo equipo (no un departamento de investigación que entrega un informe), pequeñas (no grandes estudios), y orientadas a un resultado (no a curiosear).</p>
+<p>El método se organiza alrededor de un árbol. Arriba, el resultado que quieres mover. Debajo, las oportunidades: necesidades, problemas y deseos de los clientes que, si se resuelven, moverían ese resultado. Debajo de cada oportunidad, varias soluciones posibles. Y debajo de cada solución, los supuestos que tendrían que ser ciertos y los experimentos para comprobarlos. El árbol hace visible por qué trabajas en lo que trabajas y evita saltar de una idea a otra sin conexión.</p>
+<h2>El recorrido del libro</h2>
+<h3>Bloque 1: qué significa descubrir de forma continua</h3>
+<p>La autora empieza contrastando el modo tradicional, en el que alguien decide qué construir, se construye y luego se mira si funcionó, con un modo en el que las decisiones se toman con información fresca cada semana. El cambio clave es pasar de entregar funciones a buscar resultados. Una función terminada no es un éxito; lo es un cambio en lo que hacen los clientes.</p>
+<p>Presenta también el trío de producto: una persona de producto, una de diseño y una de ingeniería que descubren juntas. Para ti, ese trío eres tú con tres sombreros, y el riesgo es que el de ingeniero, que es el que más disfrutas, gane siempre. La disciplina del libro sirve precisamente para que eso no pase.</p>
+<h3>Bloque 2: empezar por el resultado</h3>
+<p>Antes de hablar con nadie hay que saber qué quieres mover. Torres distingue resultados de negocio (ingresos, cuota de mercado) de resultados de producto (lo que hacen los usuarios dentro del producto y que se puede influir directamente), y prefiere que el equipo trabaje sobre estos últimos, porque los controla. También advierte contra objetivos que son en realidad funciones disfrazadas.</p>
+<p>Para ti es una decisión de foco. «Ganar más con TCM» es un resultado de negocio. «Que más gente que empieza el anual con prueba llegue al cobro» o «que más gente vuelva el día 7» son resultados de producto. Elige uno por app y trabaja solo en él durante un trimestre.</p>
+<h3>Bloque 3: entrevistar para sacar historias</h3>
+<p>Las entrevistas de Torres se parecen mucho a las de Fitzpatrick, pero con un foco más estrecho: pedir la historia concreta de una vez reciente. No «cómo estudias MTC» sino «cuéntame la última vez que estudiaste para un examen». Y luego ir tirando del hilo: qué pasó antes, qué pasó después, qué fue difícil. Las historias revelan oportunidades que la persona nunca te diría si le preguntaras directamente.</p>
+<p>Propone resumir cada entrevista en una ficha de una página: quién era, lo que más te llamó la atención, las oportunidades que aparecieron, una cita de recuerdo con sus palabras (para ti, no para publicar) y lo que querrías aprender después. Y propone automatizar el reclutamiento para que haya siempre una persona en la agenda sin esfuerzo, por ejemplo con una invitación fija dentro del producto.</p>
+<h3>Bloque 4: mapear el espacio de oportunidades</h3>
+<p>Con varias entrevistas, empiezas a construir la parte media del árbol. Las oportunidades se agrupan: unas son grandes y vagas, otras pequeñas y concretas, y las pequeñas cuelgan de las grandes. Torres recomienda formularlas desde el cliente («no sé qué estudiar primero»), no desde la solución («falta un plan de estudio»). Si una oportunidad solo admite una solución, probablemente es una solución disfrazada.</p>
+<p>También sugiere dibujar el recorrido del cliente con el producto, en papel, para encontrar dónde están las oportunidades. Es un ejercicio que puedes hacer sobre tus pantallas de Producto ▸ Recorrido, donde ya tienes el embudo del onboarding.</p>
+<h3>Bloque 5: elegir oportunidad y generar varias soluciones</h3>
+<p>No hay que priorizar todo a la vez. Torres propone comparar oportunidades hermanas entre sí, del mismo nivel, y elegir una con criterios sencillos: cuánta gente la tiene, cuánto les importa, cómo encaja con tu estrategia. Sin buscar la decisión perfecta; es mejor decidir y aprender.</p>
+<p>Luego, para la oportunidad elegida, generar varias soluciones y no quedarse con la primera. Comparar tres ideas a la vez reduce el apego a la tuya y mejora la calidad de la decisión. La autora es insistente en esto: quien se enamora de una sola idea deja de ver alternativas mejores.</p>
+<h3>Bloque 6: supuestos y pruebas pequeñas</h3>
+<p>Cada solución descansa en supuestos. Torres los clasifica en tipos: de deseabilidad (¿lo quieren?), de viabilidad (¿nos sale a cuenta?), de factibilidad (¿podemos construirlo?), de usabilidad (¿sabrán usarlo?) y éticos (¿hace daño a alguien?). Para cada solución, apuntar los supuestos, quedarse con los más arriesgados y menos comprobados, y diseñar una prueba pequeña para cada uno.</p>
+<p>Las pruebas no son experimentos grandes con significación estadística. Son cosas rápidas que comparan varias ideas a la vez y que buscan una señal clara: una prueba no moderada, una pantalla falsa, una pregunta en el onboarding, un correo. El objetivo es descartar rápido las ideas débiles antes de programar.</p>
+<h3>Bloque 7: medir, mostrar el trabajo y sostener el hábito</h3>
+<p>El cierre habla de medir el impacto real, de mostrar el árbol a las personas que deciden para que vean el razonamiento y no solo la conclusión, y de cómo empezar sin esperar a que todo esté listo. La autora advierte de varias trampas: buscar la certeza absoluta, investigar sin decidir nunca, o construir el árbol y olvidarlo en un cajón.</p>
+<h2>Los consejos del autor, convertidos en acciones</h2>
+<ol>
+<li><strong>Elige un resultado de producto por app</strong> para el próximo trimestre y escríbelo en la consola, arriba de todo.</li>
+<li><strong>Programa una conversación a la semana</strong>, siempre el mismo día, aunque sea de quince minutos.</li>
+<li><strong>Automatiza el reclutamiento</strong>: una invitación fija dentro de TCM y Leo Glow que ofrezca algo a cambio de una charla.</li>
+<li><strong>Pide historias concretas</strong>: «cuéntame la última vez que…» y nada más hasta que la historia esté completa.</li>
+<li><strong>Haz una ficha de una página por entrevista</strong> y guárdala en <code>analisis/</code> junto al resto de lecturas de producto.</li>
+<li><strong>Dibuja un árbol por app</strong>: resultado arriba, oportunidades en medio, al menos tres soluciones por oportunidad elegida.</li>
+<li><strong>Apunta los supuestos de cada solución por tipo</strong> y prueba primero el más arriesgado.</li>
+<li><strong>Prueba antes de programar</strong>: una pantalla falsa, una pregunta o una versión en Figma antes de una función entera.</li>
+<li><strong>Revisa el árbol cada dos semanas</strong> y poda las ramas muertas.</li>
+</ol>
+<h2>Aplicado a tus apps</h2>
+<h3>TCM</h3>
+<p>Resultado propuesto: «más compras por cada persona que llega al muro». Tienes la base: 234 lo ven, 64 pulsan pagar y 10 se dan de alta en una semana en Android. Oportunidades candidatas: no poder pagar (el error «not allowed», uno de cada seis), no entender qué me llevo con la suscripción, no saber si es para mí (estudiante o curiosa), miedo a comprometerme (de ahí que el mensual cierre 1 de 9 y el anual con prueba 12 de 87). La primera ni siquiera necesita entrevistas: es un problema técnico con impacto medido, y la rama del árbol te recuerda que es la más grande.</p>
+<p>Para la oportunidad «no saber si es para mí», genera tres soluciones: una pregunta en el onboarding que adapte el muro a estudiante o curiosa, dos muros distintos según la respuesta, o un texto de beneficios por perfil. Supuesto más arriesgado: que los dos públicos responden distinto al mismo muro. Prueba barata: añadir solo la pregunta y mirar la compra por respuesta antes de cambiar nada más.</p>
+<h3>Leo Glow</h3>
+<p>Resultado propuesto: «más gente que vuelve el día 7», que hoy está en el 1,1 %. Mientras no se retenga, monetizar es empujar agua cuesta arriba. Oportunidades a buscar en entrevistas: no sé qué hacer cada día, los retos no me parecen relevantes para mi caso, no veo progreso, me aburro de la ruleta, me da vergüenza. Ojo, son hipótesis; tienen que salir de historias reales.</p>
+<p>Recluta con una invitación en la app a los pocos que llegan al día 7: son los que mejor te explican qué funciona. Y, en paralelo, una tanda de conversaciones con los que se fueron el día 1, si puedes contactarlos. Cuando tengas el árbol, verás si la oportunidad dominante es de progreso visible (y entonces el avatar que sube de nivel es la palanca) o de relevancia (y entonces el coach Leo debería personalizar desde el primer día).</p>
+<h3>Zodiaco</h3>
+<p>Resultado propuesto para antes de febrero: «más gente que vuelve una segunda vez en la primera semana», porque un pico estacional solo rinde si deja usuarios recurrentes. Haz pocas entrevistas aquí; usa más pruebas pequeñas. Por ejemplo, probar dos versiones del primer día (lectura diaria primero o compatibilidad primero) y mirar la vuelta.</p>
+<h3>Anime Food</h3>
+<p>El árbol te ayuda a decidir. Pon como resultado algo de producto («gente que cocina una receta») y busca oportunidades. Si tras unas pocas conversaciones y datos no aparece ninguna que puedas atender con la app mejor que con un vídeo, la conclusión es que Anime Food es un canal de contenido, y el árbol lo deja por escrito en lugar de quedarse en una duda eterna.</p>
+<h2>Preguntas para leerlo</h2>
+<ol>
+<li>¿Qué resultado de producto elegirías para cada app si solo pudieras mover uno en tres meses?</li>
+<li>¿Qué día de la semana y a qué hora puedes reservar una conversación fija sin que la máquina de vídeo te la coma?</li>
+<li>¿Cuántas de tus ideas pendientes son soluciones sin oportunidad detrás?</li>
+<li>¿Cuál es el supuesto más arriesgado de la monetización de Leo Glow?</li>
+<li>¿Qué parte de tus pantallas de Producto podría convertirse en el árbol de cada app?</li>
+</ol>
+<h2>Si solo lees una parte</h2>
+<p>Los bloques 4 y 5: el árbol de oportunidades y la generación de varias soluciones. Es lo que más directamente ataca tu falta de foco.</p>
+<h2>Cautelas</h2>
+<ul>
+<li>El libro está escrito para equipos de producto en empresas, con un trío y alguien que decide por encima. Tú eres las tres personas y quien decide; la parte de alinear a la dirección no te aplica.</li>
+<li>Una entrevista semanal es razonable para un equipo; para ti, con cuatro apps, puede ser demasiado repartida. Mejor una app por mes, en bloques, que una charla suelta por app.</li>
+<li>Con usuarios de consumo y apps de bajo volumen, reclutar cuesta más que en productos de empresa. Ofrece algo concreto a cambio y acepta muestras pequeñas.</li>
+<li>Las pruebas pequeñas dan señales, no certezas. Con tus volúmenes (Leo Glow con 8,6 descargas al día en Play) muchas diferencias serán ruido; busca efectos grandes.</li>
+</ul>
+<h2>Para seguir</h2>
+<ul>
+<li>Rob Fitzpatrick, <em>The Mom Test</em>: la técnica de la entrevista (en esta misma parte).</li>
+<li>Marty Cagan, <em>Inspired</em>: el marco de descubrimiento del que bebe Torres (en esta misma parte).</li>
+<li>Melissa Perri, <em>The Build Trap</em>: por qué los equipos acaban construyendo funciones en lugar de buscar resultados.</li>
+<li>Teresa Torres mantiene un blog, Product Talk, con ejemplos de árboles y entrevistas.</li>
+</ul></section>
+
+<hr>
+
+<section id="604-the-lean-startup"><h1>The Lean Startup (Eric Ries, 2011)</h1>
+<p><em>Construir, medir y aprender: probar cada idea con el mínimo coste y decidir con datos cuándo seguir y cuándo cambiar de rumbo.</em></p>
+<h2>Por qué este libro, para ti</h2>
+<p>Tienes cuatro apps con analítica y siete sin ella, y no tienes un criterio escrito para decidir cuál merece tu tiempo. Anime Food lleva meses con la duda de si es producto o canal, con 1,7 descargas al día en Play y 3 en iOS. Leo Glow tiene una retención a siete días del 1,1 % y un anual que se cancela casi siempre. Zodiaco tiene una web de más de 1.600 páginas que perdió casi todo su tráfico de Google desde el 12-10. En todos los casos la pregunta es la misma: ¿esto está funcionando, hay que cambiar algo o hay que dejarlo? Ries escribió este libro para responder a eso con método, y aunque lo pensó para startups con inversores, su núcleo es perfecto para un desarrollador solo con poco tiempo: aprende lo máximo con el mínimo esfuerzo antes de comprometerte.</p>
+<h2>La tesis en dos minutos</h2>
+<p>Una startup es una organización que crea algo nuevo en condiciones de mucha incertidumbre. En esas condiciones, los métodos clásicos de planificar y ejecutar fallan, porque no sabes qué quiere el cliente. Lo que hay que gestionar no es la ejecución de un plan, sino el aprendizaje. Ries lo llama aprendizaje validado: aprender cosas ciertas sobre los clientes demostradas con datos reales de su comportamiento.</p>
+<p>El motor es un ciclo: construir algo pequeño, medir cómo responden los clientes y aprender si la hipótesis era correcta. La meta es recorrer ese ciclo lo más rápido posible. Para eso hace falta identificar las hipótesis de fe de las que depende el negocio, construir un producto mínimo viable que las ponga a prueba, medir con métricas que de verdad informen (no las que halagan) y, cada cierto tiempo, decidir si perseverar o pivotar, es decir, cambiar una parte de la estrategia manteniendo lo aprendido.</p>
+<h2>El recorrido del libro</h2>
+<h3>Bloque 1: la startup como experimento</h3>
+<p>Ries arranca con su propia historia en IMVU, una empresa de avatares y mensajería en la que pasaron meses construyendo una integración con otros servicios de mensajería que los usuarios no querían. Lo aprendido de ese fracaso es el punto de partida: el trabajo que no aporta aprendizaje sobre el cliente es desperdicio, por bien hecho que esté.</p>
+<p>De ahí la idea de que la startup es un experimento. Cada producto, cada función y cada campaña es una prueba de una hipótesis. Y el progreso no se mide por cuánto has construido, sino por cuánto has aprendido sobre lo que crea valor.</p>
+<h3>Bloque 2: las hipótesis de fe</h3>
+<p>Todo negocio descansa en dos grandes hipótesis. La de valor: ¿el producto da valor real a quien lo usa una vez lo tiene? Y la de crecimiento: ¿cómo descubren el producto nuevos clientes? Ries propone escribirlas de forma explícita y probarlas primero, porque son las que más riesgo tienen.</p>
+<p>Para ti, la hipótesis de crecimiento está bastante resuelta: ASO y vídeo traen gente. La de valor es la que está en duda en Leo Glow y en Anime Food. Lo que dice el libro es que no tiene sentido invertir más en crecimiento mientras la de valor no esté validada, porque cada nuevo usuario se pierde igual.</p>
+<h3>Bloque 3: el producto mínimo viable</h3>
+<p>El producto mínimo viable no es una versión pequeña del producto final; es la forma más barata de aprender lo que necesitas aprender. Ries da ejemplos conocidos: el vídeo con el que Dropbox mostró su funcionamiento antes de que el producto estuviera listo y midió el interés con la lista de espera, y la tienda de zapatos que empezó fotografiando zapatos en tiendas físicas y comprándolos a mano cuando alguien pedía uno, antes de montar inventario o logística, el origen de Zappos.</p>
+<p>Defiende también el producto mínimo «de conserje»: atender a mano a unos pocos clientes antes de automatizar nada. Y avisa de los miedos que frenan a lanzar algo mínimo: miedo a la calidad, a la marca, a que te copien. Su respuesta es que, si no sabes quién es tu cliente, no sabes qué es calidad para él.</p>
+<h3>Bloque 4: la contabilidad de la innovación</h3>
+<p>El problema de medir una startup es que los números totales suelen subir aunque el producto no mejore. Ries llama métricas de vanidad a las que hacen sentir bien pero no ayudan a decidir: descargas totales, usuarios registrados acumulados. Frente a ellas, métricas accionables, que permiten relacionar causa y efecto, accesibles, que cualquiera entiende, y auditables, que se pueden comprobar contra la realidad.</p>
+<p>La herramienta central es el análisis por cohortes: comparar grupos de usuarios que llegaron en distintos momentos para ver si los cambios mejoran su comportamiento. Si la cohorte de esta semana retiene igual que la del mes pasado, tus cambios no han servido aunque las descargas hayan crecido. El libro propone también los experimentos A/B como forma de saber qué cambio causa qué efecto.</p>
+<h3>Bloque 5: pivotar o perseverar</h3>
+<p>Llega un momento en que hay que decidir. Ries propone reuniones periódicas para preguntarse si los experimentos están moviendo las métricas que importan. Si no lo hacen tras varios intentos, toca pivotar: un cambio estructurado de una parte de la estrategia. Describe varios tipos: ampliar una función hasta convertirla en el producto entero, o al revés; cambiar de segmento de clientes; cambiar la necesidad que atiendes; cambiar la forma de cobrar; cambiar el motor de crecimiento o el canal; pasar de aplicación a plataforma.</p>
+<p>Insiste en que el mayor riesgo no es pivotar mal, sino no pivotar nunca: quedarse en una tierra de nadie donde el producto no muere pero tampoco despega, consumiendo tiempo.</p>
+<h3>Bloque 6: acelerar con lotes pequeños y motores de crecimiento</h3>
+<p>La tercera parte va de velocidad. Trabajar en lotes pequeños (publicar cambios pequeños con frecuencia) permite detectar errores antes y aprender más rápido que con grandes versiones. Ries describe tres motores de crecimiento: el pegajoso, basado en retener a los usuarios, donde lo que importa es que entren más de los que se van; el viral, basado en que los usuarios traigan a otros; y el de pago, donde lo que importa es que lo que ganas por cliente supere lo que te cuesta conseguirlo. Recomienda centrarse en uno.</p>
+<h3>Bloque 7: aprender de los fallos y proteger lo nuevo</h3>
+<p>Cierra con prácticas para organizaciones: los cinco porqués para encontrar la causa raíz de un problema y corregir proporcionalmente, y la idea de proteger los proyectos nuevos dentro de empresas grandes con un espacio acotado donde experimentar. La parte organizativa te aplica poco, pero los cinco porqués son útiles para cualquier fallo de tus automatizaciones.</p>
+<h2>Los consejos del autor, convertidos en acciones</h2>
+<ol>
+<li><strong>Escribe la hipótesis de valor y la de crecimiento de cada app</strong> en dos frases. Si no puedes, no sabes qué estás probando.</li>
+<li><strong>Antes de construir una función, pregúntate cuál es la forma más barata de aprender lo mismo</strong>: una pantalla falsa, un vídeo, un botón que mida interés.</li>
+<li><strong>Sustituye las descargas totales por cohortes semanales</strong> en la revisión diaria: retención d1, d7 y d30 de quienes llegaron cada semana.</li>
+<li><strong>Haz cada cambio de producto como experimento</strong> con una predicción escrita antes («si hago X, d7 pasa de 1,1 % a 3 %»).</li>
+<li><strong>Fija una fecha de decisión por app</strong> (pivotar o perseverar) y respétala.</li>
+<li><strong>Elige un motor de crecimiento por app</strong> y no los mezcles.</li>
+<li><strong>Trabaja en lotes pequeños</strong>: una OTA o una edición de ficha por cambio, no cinco a la vez, como ya haces con el ASO.</li>
+<li><strong>Usa los cinco porqués con cada fallo serio</strong> (una subida rota, una caída de tráfico) y arregla la causa, no solo el síntoma.</li>
+</ol>
+<h2>Aplicado a tus apps</h2>
+<h3>TCM</h3>
+<p>Es tu única app con la hipótesis de valor validada: hay gente que paga, y el anual con prueba cobra 12 de 87. Lo que falta es contabilidad de la innovación: no hay curva de retención. Sin cohortes no sabes si los cambios del onboarding mejoran la calidad de quien entra o solo la cantidad. Primer experimento recomendado: enviar <code>days_since_install</code> (o calcular la cohorte en PostHog por fecha de primera apertura) y fijar una línea base antes de tocar el muro. Motor: pegajoso más pago (la suscripción); el viral apenas aplica. Hipótesis para probar: que reducir el error «not allowed», que sufre uno de cada seis que pulsan pagar, sube las altas más que cualquier rediseño del muro.</p>
+<h3>Leo Glow</h3>
+<p>Es el caso de libro para la reunión de pivotar o perseverar. La hipótesis de crecimiento funciona a medias (la gente te encuentra por «looksmaxxing» y por ChatGPT), pero la de valor no está demostrada: d1 del 11,6 %, d7 del 1,1 %, y 19 de 22 anuales cancelados en 30 días en Android. Antes de añadir más funciones, pon fecha. Por ejemplo, de aquí a final de enero haces tres experimentos sobre la retención del día 7 con predicción escrita. Si ninguno la mueve de forma clara, toca pivotar.</p>
+<p>Tipos de pivote que encajan, como hipótesis: de segmento (otro público dentro del glow up, por ejemplo hombres que empiezan a cuidarse por una situación vital concreta), de necesidad (de hábitos a algo más inmediato que no sea puntuar la cara) o de función a producto (si la ruleta o el coach Leo es lo único que la gente usa, que sea el producto entero). El producto mínimo «de conserje» también vale: atiende tú a mano, con mensajes, a diez usuarios durante dos semanas como si fueras Leo, y mira qué piden.</p>
+<h3>Zodiaco</h3>
+<p>La caída de la web de SEO masivo desde el 12-10 es un buen ejercicio de cinco porqués: ¿por qué cayó? Porque Google la hundió. ¿Por qué? Probablemente por la calidad o la escala del contenido generado. ¿Por qué se hizo así? Porque el objetivo era volumen de páginas. Y así hasta encontrar la decisión que corregir. En producto, el motor es pegajoso (vuelta diaria) con algo de viral (compatibilidad entre dos personas, que invita a compartir). Experimento barato antes de febrero: hacer que la compatibilidad genere algo compartible y medir cuántas instalaciones llegan por esa vía.</p>
+<h3>Anime Food</h3>
+<p>Aquí el libro te obliga a cerrar la duda. Escribe la hipótesis de valor de la app («la gente quiere cocinar platos del anime y usará la app para hacerlo») y la del contenido («la gente quiere ver estos platos y seguirá la cuenta»). Los datos de descargas sugieren que la primera no se está cumpliendo. Un pivote de canal o de captura de valor sería quedarte con el motor de contenido y monetizarlo de otra forma, dejando la app en mantenimiento. Pon una fecha y un umbral: si en tres meses la app no supera cierto número de recetas cocinadas por semana, la decisión está tomada.</p>
+<h2>Preguntas para leerlo</h2>
+<ol>
+<li>¿Qué métricas de vanidad aparecen todavía en tu revisión diaria?</li>
+<li>¿Cuál es la hipótesis de valor de Leo Glow escrita en una frase, y qué dato la desmentiría?</li>
+<li>¿Qué función de tus apps construiste sin un experimento previo y nadie usa?</li>
+<li>¿Cuál es el motor de crecimiento de cada app y estás invirtiendo en el correcto?</li>
+<li>¿Qué fecha te pones para decidir sobre Anime Food?</li>
+</ol>
+<h2>Si solo lees una parte</h2>
+<p>Los bloques 4 y 5: contabilidad de la innovación y pivotar o perseverar. Es donde está lo que más te falta: medir por cohortes y tener un criterio para dejar algo.</p>
+<h2>Cautelas</h2>
+<ul>
+<li>El libro está pensado para startups que buscan crecer mucho con inversión. Tus apps son negocios pequeños; un producto que se mantiene solo y da algo de dinero puede ser un éxito aunque no crezca.</li>
+<li>Los experimentos A/B necesitan volumen. Con 8,6 descargas al día en Leo Glow, un A/B pequeño tardará semanas en dar señal; busca cambios grandes y fíjate en efectos grandes.</li>
+<li>«Producto mínimo viable» se ha usado como excusa para sacar cosas malas. En tiendas de apps, una mala primera impresión puede dejar reseñas que pesan mucho tiempo.</li>
+<li>La parte de organización (equipos, espacios de innovación en grandes empresas) no te aplica.</li>
+</ul>
+<h2>Para seguir</h2>
+<ul>
+<li>Ash Maurya, <em>Running Lean</em>: la versión práctica, con el lienzo del modelo de negocio en una página.</li>
+<li>Steve Blank, <em>The Four Steps to the Epiphany</em>: el origen del desarrollo de clientes del que parte Ries.</li>
+<li>Alistair Croll y Benjamin Yoskovitz, <em>Lean Analytics</em>: qué medir en cada etapa y por tipo de negocio.</li>
+<li>Rob Fitzpatrick, <em>The Mom Test</em>: cómo sacar aprendizaje de conversaciones antes de experimentar (en esta misma parte).</li>
+</ul></section>
+
+<hr>
+
+<section id="605-inspired"><h1>Inspired (Marty Cagan, segunda edición de 2017)</h1>
+<p><em>Cómo deciden los buenos equipos qué construir: descubrir antes de entregar y atacar cuatro riesgos antes de escribir código.</em></p>
+<h2>Por qué este libro, para ti</h2>
+<p>Eres un ingeniero que hace de jefe de producto, diseñador, analista y equipo de marketing a la vez. La consecuencia habitual de eso es que lo que se te da bien (construir) se come lo que se te da peor (decidir qué construir). Tus memorias lo cuentan: más de treinta pantallas en la consola que luego podaste a la mitad, funciones de apps que esperan build sin saber si moverán algo, y cuatro apps donde solo una cobra. Cagan es probablemente el autor que mejor explica qué hace un buen responsable de producto y por qué la mayoría de lo que se construye no sirve. Te interesa sobre todo su separación entre descubrir y entregar, y su lista de cuatro riesgos, que es una herramienta de foco inmediata para un desarrollador solo.</p>
+<h2>La tesis en dos minutos</h2>
+<p>La mayoría de las empresas trabajan así: alguien tiene ideas, se priorizan en una hoja de ruta, se diseñan, se construyen y se lanzan, y solo al final se descubre si funcionaban. Cagan sostiene que ese proceso es la causa de que la mayoría de ideas fallen, y que la mitad o más de lo que se construye no da el resultado esperado. Los buenos equipos hacen otra cosa: dedican una parte importante de su tiempo al descubrimiento, que consiste en averiguar rápido y barato qué merece construirse, y solo entregan lo que ha superado esa prueba.</p>
+<p>En el descubrimiento hay que despejar cuatro riesgos antes de escribir código de producción: el riesgo de valor (¿lo comprarán o lo usarán?), el de usabilidad (¿sabrán usarlo?), el de factibilidad (¿podemos construirlo con lo que tenemos?) y el de viabilidad de negocio (¿funciona para el resto del negocio: legal, ventas, finanzas, marca?). Para despejarlos se usan prototipos de muchos tipos, que cuestan una fracción de lo que cuesta construir. Y todo eso lo hace un equipo de producto pequeño, con responsabilidad sobre un resultado y no sobre una lista de funciones.</p>
+<h2>El recorrido del libro</h2>
+<h3>Bloque 1: por qué fallan los productos</h3>
+<p>La primera parte describe la forma en que muchas empresas siguen trabajando y la desmonta pieza a pieza. Las ideas vienen de arriba o de ventas, se ordenan en una hoja de ruta como si se supiera su valor, los requisitos se escriben antes de validarlos, el diseño llega tarde, los ingenieros llegan aún más tarde y la validación con clientes se hace cuando ya es caro cambiar. El resultado es tiempo y dinero gastados en cosas que no funcionan.</p>
+<p>Cagan resume las lecciones de las empresas que lo hacen bien: los riesgos se atacan al principio, el producto se define y se diseña de forma colaborativa y no en cadena, y el foco está en resolver problemas, no en entregar funciones.</p>
+<h3>Bloque 2: las personas</h3>
+<p>La segunda parte trata del equipo de producto: pequeño, estable, con un responsable de producto, un diseñador y varios ingenieros, con autonomía y con un problema que resolver. Dedica mucho espacio a qué hace un buen responsable de producto: conocer profundamente a los clientes, los datos, el negocio y el mercado. No es un gestor de proyectos ni un escriba de requisitos; es quien responde del valor y la viabilidad.</p>
+<p>Para ti, lo útil de este bloque es la lista de lo que deberías conocer en profundidad. De tus cuatro apps conoces el mercado (el ASO te obliga) y los datos (PostHog), pero no a los clientes, y el libro te dice que eso es justo lo que define el trabajo de producto.</p>
+<h3>Bloque 3: el producto correcto</h3>
+<p>Aquí Cagan habla de visión, estrategia y principios. La visión describe el futuro que quieres crear a varios años vista y sirve para inspirar y orientar. La estrategia es la secuencia de pasos para llegar a ella, centrada en un tipo de cliente o un mercado cada vez. Los principios son las reglas que guían decisiones difíciles. Y los objetivos, que en la edición de 2017 se plantean con OKR, deben ser resultados medibles, no funciones.</p>
+<p>También aborda la hoja de ruta tradicional y propone sustituirla por objetivos de resultado. Si comprometes fechas, que sean pocas y solo para cosas ya descubiertas.</p>
+<h3>Bloque 4: el proceso de descubrimiento</h3>
+<p>Es el núcleo del libro. Cagan define el descubrimiento como el trabajo de averiguar qué construir, y presenta una caja de técnicas organizadas por propósito: técnicas para enmarcar el problema (escribir qué problema se resuelve, para quién y cómo se sabrá si funcionó), para planificar, para generar ideas (entrevistas, conserjería con clientes, observar), para prototipar y para probar.</p>
+<p>Una de las técnicas que más desarrolla es un programa de descubrimiento con clientes: trabajar de cerca con un grupo pequeño de clientes reales, alrededor de media docena, hasta que el producto les resuelva el problema de verdad y se conviertan en referencias. La idea es que si no consigues que un puñado de clientes concretos lo adore, no vas a conseguirlo con miles.</p>
+<h3>Bloque 5: los prototipos</h3>
+<p>Cagan distingue varios tipos de prototipo según el riesgo que atacan. Prototipos de factibilidad, para comprobar si algo técnico es posible. Prototipos de usuario, que simulan la experiencia sin funcionar de verdad, desde bocetos hasta simulaciones muy realistas. Prototipos con datos reales, que funcionan lo justo para medir comportamiento real con tráfico real. Y prototipos híbridos, como el de «mago de Oz», donde una persona hace a mano por detrás lo que parece automático.</p>
+<p>La regla es usar el prototipo más barato que te permita aprender lo que necesitas. Para ti, que construyes rápido, el riesgo es saltarte el prototipo y construir directamente: si se tarda poco en programar, parece más barato que preguntar. Pero lo caro no es programar, es mantener y medir algo que nadie quería.</p>
+<h3>Bloque 6: probar valor, usabilidad, factibilidad y viabilidad</h3>
+<p>Para cada riesgo, técnicas de prueba. La usabilidad se prueba con pocas personas mirando cómo usan el prototipo. El valor es más difícil: la gente no siempre sabe si algo le vale. Cagan propone pruebas de demanda (un botón o página que mide interés antes de que exista la función), pruebas cualitativas para entender reacciones y pruebas cuantitativas con datos reales. La factibilidad se aborda con los ingenieros, y la viabilidad repasando con cada parte del negocio: legal, finanzas, marca.</p>
+<p>Para ti, la viabilidad tiene una cara concreta: políticas de las tiendas (salud en TCM, Niños en Anime Food, el criterio de Apple que tiene Zodiaco en revisión desde hace 28 días) y reglas fiscales. Son riesgos de producto, no trámites.</p>
+<h3>Bloque 7: la cultura</h3>
+<p>El cierre trata de la cultura de los buenos equipos: experimentan mucho, aceptan que la mayoría de ideas no funcionarán, se centran en el cliente, confían en los ingenieros y miden por resultados. Cagan contrapone la cultura de innovación con la de ejecución y defiende que hacen falta las dos.</p>
+<h2>Los consejos del autor, convertidos en acciones</h2>
+<ol>
+<li><strong>Separa en tu semana tiempo de descubrimiento y tiempo de entrega.</strong> Por ejemplo, las mañanas de los lunes y jueves para hablar con usuarios, mirar datos y prototipar, sin código de producción.</li>
+<li><strong>Antes de cada función, escribe los cuatro riesgos</strong> (valor, usabilidad, factibilidad, viabilidad) y cuál es el mayor.</li>
+<li><strong>Usa el prototipo más barato</strong>: una pantalla falsa en la app, un botón que mide interés, un formulario, antes de un módulo entero.</li>
+<li><strong>Monta un pequeño grupo de clientes de referencia por app</strong>: unos pocos usuarios con los que hablas de forma continua hasta que el producto les funcione.</li>
+<li><strong>Sustituye tu lista de pendientes por objetivos de resultado</strong> por app y trimestre.</li>
+<li><strong>Escribe la visión de cada app en un párrafo</strong> y los principios que la guían (en Leo Glow, por ejemplo, «nunca puntuamos la cara»).</li>
+<li><strong>Trata las políticas de tienda como riesgo de viabilidad</strong> desde el diseño, no al enviar la build.</li>
+<li><strong>Prueba la usabilidad con pocas personas</strong> antes de cada cambio grande del onboarding.</li>
+</ol>
+<h2>Aplicado a tus apps</h2>
+<h3>TCM</h3>
+<p>El riesgo de valor está despejado para una parte del público: hay gente que paga. El mayor riesgo ahora es de viabilidad y de usabilidad del pago. El error «not allowed», que sufre uno de cada seis que pulsan pagar, es un riesgo de factibilidad o de integración con Google Play, y es el que más dinero cuesta. Antes de diseñar nuevas secciones (más hierbas, más fórmulas), el libro te diría que no hay descubrimiento que valga más que arreglar el cobro.</p>
+<p>Para el siguiente paso de producto, monta un programa de descubrimiento con unos pocos estudiantes de MTC que ya paguen. Trabaja con ellos un mes: qué estudian, qué les falta, qué sección del simulador de casos usan. Si consigues que unos pocos lo adoren y lo recomienden a compañeros, tienes un canal que el ASO no da. Riesgo de viabilidad que no olvidar: la línea entre educar y prometer salud, que afecta a las políticas de las tiendas y a la marca.</p>
+<h3>Leo Glow</h3>
+<p>El riesgo dominante es de valor: la gente no vuelve (d7 del 1,1 %) ni paga (19 de 22 anuales cancelados en Android en 30 días). Cagan te diría que no construyas más funciones hasta despejarlo. Prueba de demanda posible: en el onboarding, ofrece tres promesas distintas (plan de 30 días, coach que te habla cada mañana, reto con amigos) como opciones, y mira cuál elige la gente, antes de construir ninguna.</p>
+<p>Un prototipo de mago de Oz encaja muy bien con el coach Leo: durante dos semanas, respondes tú o un guion simple a los mensajes de un grupo pequeño de usuarios y ves qué piden de verdad. Es más barato que afinar la IA a ciegas, y despeja el riesgo de valor del coach antes de que pagues las APIs en serio. Principio de producto escrito: no escanear caras ni dar puntuaciones de atractivo. Es una decisión de visión, y el libro te ayuda a defenderla con coherencia en vez de dudar cada vez que el nicho tira hacia otro lado.</p>
+<h3>Zodiaco</h3>
+<p>El riesgo de viabilidad está a la vista: iOS lleva 28 días en revisión de Apple. Eso no se resuelve con producto, pero sí te dice que no debes planear el pico de febrero contando con iOS. En producto, el riesgo es de valor de la mascota: ¿la gente la quiere o solo la tolera? Una prueba con datos reales: comparar la vuelta a los siete días de quien completa una misión de la mascota el primer día con quien no.</p>
+<h3>Anime Food</h3>
+<p>Aquí el libro aporta la pregunta de visión: ¿qué futuro quieres crear con esto? Si la visión es «la referencia de recetas del anime», la app es necesaria. Si es «el canal de contenido de cocina y anime», la app es un accesorio. Escribe las dos y mira cuál te inspira y cuál tiene un riesgo de viabilidad asumible, recordando que vas sin personajes ni marcas de terceros y que en iOS estás en Niños.</p>
+<h2>Preguntas para leerlo</h2>
+<ol>
+<li>¿Qué parte de tu semana es descubrimiento y qué parte entrega? ¿Cómo lo sabrías?</li>
+<li>¿Qué función reciente se habría descartado con un prototipo de una tarde?</li>
+<li>¿Cuál es el riesgo dominante de cada app ahora mismo: valor, usabilidad, factibilidad o viabilidad?</li>
+<li>¿Quiénes serían tus primeros clientes de referencia de TCM?</li>
+<li>¿Qué principio de producto de Leo Glow mantendrías aunque los datos del nicho tiren en contra?</li>
+</ol>
+<h2>Si solo lees una parte</h2>
+<p>Los bloques 4 y 5: el proceso de descubrimiento y los tipos de prototipo. Es lo que más te cambia la forma de trabajar como desarrollador solo.</p>
+<h2>Cautelas</h2>
+<ul>
+<li>Es un libro sobre empresas de tecnología medianas y grandes. Casi todo lo de organización, roles, relación con la dirección y transformación de empresas no te aplica.</li>
+<li>La cifra de cuántas ideas fallan es una estimación del autor basada en su experiencia, no un dato medido; tómala como orientación.</li>
+<li>Cagan da por hecho un equipo con ingenieros a tiempo completo. Para ti, la separación entre descubrir y entregar es una cuestión de calendario, no de personas.</li>
+<li>Muchas técnicas de prueba de valor necesitan volumen. Con tus cifras, las pruebas cualitativas valen más que las cuantitativas.</li>
+</ul>
+<h2>Para seguir</h2>
+<ul>
+<li>Marty Cagan, <em>Empowered</em>: la continuación, centrada en equipos con autonomía.</li>
+<li>Teresa Torres, <em>Continuous Discovery Habits</em>: el descubrimiento llevado a hábito semanal (en esta misma parte).</li>
+<li>Jake Knapp y otros, <em>Sprint</em>: un método de cinco días para prototipar y probar una idea.</li>
+<li>Melissa Perri, <em>The Build Trap</em>: por qué las empresas se atascan construyendo funciones.</li>
+</ul></section>
+
+<hr>
+
+<section id="606-dont-make-me-think"><h1>Don't Make Me Think (Steve Krug, edición revisada de 2014)</h1>
+<p><em>Usabilidad con sentido común, aplicada a tu onboarding, a tus muros de pago y a tus fichas de tienda.</em></p>
+<h2>Por qué este libro, para ti</h2>
+<p>Cada usuario que llega a tus apps pasa por tres pantallas que deciden casi todo: la ficha de la tienda, el onboarding y el muro de pago. En TCM la ficha convierte bien (36 % en Play y 44 % en iOS) y el muro también, pero de los 234 que ven el muro en una semana solo 64 pulsan pagar, y de esos solo 10 terminan dados de alta; parte de la caída es el error de Google Play, y parte puede ser simple confusión. En Leo Glow, el 88 % no vuelve al día siguiente, y algo de eso puede estar en que el primer contacto no deja claro qué hacer. Krug escribió el libro de usabilidad más leído y más corto que existe, pensado para webs pero aplicable a cualquier pantalla. Es el libro de esta parte que más rápido vas a convertir en cambios, y además te enseña a hacer pruebas con usuarios por casi nada.</p>
+<h2>La tesis en dos minutos</h2>
+<p>La primera ley de la usabilidad es que una pantalla no debería obligar a pensar. Cuando alguien la ve, tiene que entender qué es, qué puede hacer y dónde pulsar sin esfuerzo. Cada pregunta que se hace («¿esto se pulsa?», «¿qué significa esto?», «¿dónde estoy?») gasta atención y paciencia, y la paciencia se agota.</p>
+<p>Krug explica cómo usamos de verdad las pantallas: no leemos, escaneamos; no elegimos la mejor opción, sino la primera razonable; y no entendemos cómo funcionan las cosas, nos apañamos. A partir de ahí propone diseñar como una valla publicitaria: convenciones conocidas, jerarquía visual clara, lo pulsable evidente, menos ruido y la mitad de palabras. Y defiende que las discusiones sobre diseño no se resuelven opinando, sino mirando a unas pocas personas usar la pantalla. Las pruebas de usabilidad baratas, con tres usuarios una vez al mes, encuentran los problemas más graves.</p>
+<h2>El recorrido del libro</h2>
+<h3>Bloque 1: no me hagas pensar</h3>
+<p>El libro arranca con la regla que le da título. Una pantalla obvia es la que se entiende sin esfuerzo; si no puede ser obvia, al menos que se explique sola con poco esfuerzo. Krug compara las pantallas que obligan a pensar con las que no, con ejemplos de nombres ingeniosos frente a nombres claros y de botones que no parecen botones.</p>
+<p>Lo importante es que cada pequeña duda suma. Ninguna por sí sola echa a nadie, pero juntas cansan, y el usuario cansado se va. En una app de suscripción, eso significa que cada duda en el onboarding resta personas que llegan al muro.</p>
+<h3>Bloque 2: cómo usamos realmente las pantallas</h3>
+<p>Krug describe tres hechos. Escaneamos en lugar de leer, buscando palabras que encajen con lo que tenemos en la cabeza. Nos conformamos con la primera opción razonable en lugar de comparar todas, porque tenemos prisa y equivocarnos cuesta poco. Y nos apañamos sin entender cómo funcionan las cosas: si algo funciona, seguimos usándolo aunque haya una forma mejor.</p>
+<p>La consecuencia de diseño es clara: escribe y coloca las cosas para alguien que solo va a mirar dos segundos. Un texto de muro de pago que solo se entiende leyéndolo entero no funciona, porque nadie lo lee entero.</p>
+<h3>Bloque 3: diseñar para escanear</h3>
+<p>Aquí vienen las recomendaciones prácticas. Usa convenciones: la gente ya sabe cómo funcionan los patrones habituales, y reinventarlos tiene un coste. Crea una jerarquía visual clara: lo más importante, más destacado; lo relacionado, junto; lo que va dentro de otra cosa, visualmente dentro. Divide la pantalla en zonas bien definidas. Haz evidente lo que se puede pulsar. Y reduce el ruido: todo lo que compite por la atención resta a lo importante.</p>
+<p>Krug insiste en que la claridad gana a la coherencia: si algo es más claro haciéndolo distinto, hazlo distinto. Y a que las opciones sin ambigüedad, aunque haya más pasos, son mejores que menos pasos que obligan a pensar.</p>
+<h3>Bloque 4: omite palabras innecesarias</h3>
+<p>Un bloque corto y muy útil. Krug propone quitar la mitad de las palabras de cada pantalla, y luego la mitad de lo que queda. Apunta contra dos tipos de texto: la palabrería de bienvenida que no dice nada y las instrucciones que nadie lee. Lo ideal es que la pantalla se explique sola; si hace falta instrucción, que sea mínima.</p>
+<p>Para tus muros de pago y tus pantallas de onboarding este bloque es oro: muchas de esas pantallas tienen frases que solo sirven para que tú sientas que lo has explicado.</p>
+<h3>Bloque 5: navegación y página de inicio</h3>
+<p>La navegación debe responder siempre a dónde estoy, qué hay aquí y a dónde puedo ir. Krug propone una prueba sencilla: aterrizar en cualquier pantalla y comprobar si se puede responder a esas preguntas a primera vista. La página de inicio, o en tu caso la primera pantalla tras el onboarding, tiene que decir de un vistazo qué es el producto, qué puedo hacer aquí y por dónde empiezo, y esa primera impresión es difícil de corregir después.</p>
+<p>También describe cómo cada parte interesada quiere su sitio en la portada, y cómo eso la estropea. En tus apps, el equivalente es querer enseñar las 110 fichas de puntos, los 12 meridianos, las 86 hierbas y las 30 fórmulas en la primera pantalla.</p>
+<h3>Bloque 6: las pruebas de usabilidad baratas</h3>
+<p>El bloque que más vas a usar. Krug defiende que las discusiones sobre diseño (las que él llama casi religiosas, donde cada uno defiende su gusto) se acaban mirando a usuarios reales. Y que no hace falta un laboratorio: basta con sentar a alguien, darle una tarea, pedirle que piense en voz alta y observar sin ayudarle. Con tres personas se encuentran los problemas más graves. Recomienda hacerlo con frecuencia, una mañana al mes, y arreglar primero los problemas más graves con el cambio más pequeño posible.</p>
+<p>Insiste en que no importa mucho que los participantes sean exactamente tu público para encontrar problemas de uso básicos, y en que conviene grabar la sesión (con permiso) para verla después con calma.</p>
+<h3>Bloque 7: móvil, buena voluntad y accesibilidad</h3>
+<p>La edición revisada añade un capítulo sobre móvil: pantallas pequeñas, que obligan a priorizar aún más, y gestos que no se ven, que hacen menos obvio qué se puede tocar. Advierte también de que lo que se ve bonito en una pantalla pequeña puede ser difícil de usar.</p>
+<p>Krug habla de la reserva de buena voluntad: cada usuario llega con una cantidad limitada de paciencia, y cada obstáculo la gasta. Lo que la gasta: ocultar información que se busca (precios, condiciones), castigar por no hacer las cosas a tu manera, pedir datos innecesarios o fingir un interés falso. Lo que la recarga: saber qué quiere la gente y dárselo, ahorrar pasos, ser sincero con lo que cuesta. Cierra con la accesibilidad, como algo que hacer bien también por respeto.</p>
+<h2>Los consejos del autor, convertidos en acciones</h2>
+<ol>
+<li><strong>Haz la prueba de los cinco segundos con cada muro de pago</strong>: enséñalo a alguien cinco segundos y pregúntale qué ofrece, cuánto cuesta y qué pasa si no hace nada.</li>
+<li><strong>Quita la mitad de las palabras de cada pantalla del onboarding</strong>, y luego la mitad de lo que queda.</li>
+<li><strong>Deja un solo botón principal por pantalla</strong> y que no haya dudas de que se pulsa.</li>
+<li><strong>Muestra el precio y las condiciones de la prueba sin esconderlos</strong>: cuándo se cobra, cuánto, cómo cancelar. Recarga buena voluntad y reduce cancelaciones.</li>
+<li><strong>Haz una prueba de usabilidad al mes con tres personas</strong> y una tarea concreta («empieza a usar la app y llega a tu primera lección»).</li>
+<li><strong>Graba la pantalla del móvil de cada prueba</strong>, con permiso, y revísala después.</li>
+<li><strong>Arregla primero el problema más grave</strong> con el cambio más pequeño posible.</li>
+<li><strong>Aplica la prueba de dónde estoy a la primera pantalla tras el onboarding</strong>: ¿se entiende qué es y por dónde empezar?</li>
+<li><strong>Revisa la ficha de la tienda como una valla</strong>: las dos primeras capturas deben decir qué es la app sin leer la descripción.</li>
+</ol>
+<h2>Aplicado a tus apps</h2>
+<h3>TCM</h3>
+<p>El muro del onboarding es el sitio donde más rinde el libro. De 234 que lo ven, 64 pulsan pagar: es una tasa buena, pero conviene comprobar con la prueba de los cinco segundos si se entiende que hay tres planes, qué incluye cada uno y que el anual tiene siete días gratis. El dato de que el mensual cierre 1 de 9 y el anual con prueba 12 de 87 sugiere que la gente responde a la prueba gratuita; asegúrate de que se vea antes que el precio. Hipótesis a probar: dejar el anual con prueba como única opción destacada y los otros en pequeño.</p>
+<p>Tras el muro, el error «not allowed» de Google Play rompe la reserva de buena voluntad de uno de cada seis que ya habían decidido pagar. Aunque el arreglo técnico tarde, la pantalla que ven al fallar puede decirles qué ha pasado y qué hacer (reintentar, comprobar la cuenta de Google, escribirte), en lugar de dejarles a ciegas. En la primera pantalla tras el onboarding, con tanto contenido, el riesgo es enseñarlo todo. Dale al usuario una sola puerta de entrada según lo que dijo que buscaba.</p>
+<h3>Leo Glow</h3>
+<p>Con un d1 del 11,6 %, la primera sesión tiene que dejar muy claro qué hacer hoy. Prueba con tres chicos del público objetivo: dales el móvil con la app recién instalada, sin explicar nada, y pídeles que piensen en voz alta. Mira si entienden la ruleta, el avatar, el coach Leo y las rachas, o si son demasiadas cosas a la vez. Lo más probable, como hipótesis, es que sobren elementos en el primer día: una ruleta y un reto completado valen más que cuatro conceptos presentados.</p>
+<p>En el muro, la transparencia es clave. Que de 22 anuales empezados en Android en 30 días se hayan cancelado 19 puede tener relación con que la gente no entienda bien qué está empezando o tema que se le cobre sin aviso. Muestra con claridad cuándo se cobra y cómo cancelar; puede parecer que reduce compras, pero según Krug recarga la confianza. Y en la ficha: si la gente busca «looksmaxxing», la primera captura debe decir looksmaxxing y explicar en dos segundos que aquí no te puntúan la cara, sino que te dan un plan.</p>
+<h3>Zodiaco</h3>
+<p>El primer paso es la fecha de nacimiento, y es una pantalla donde la gente se equivoca o se cansa. Asegúrate de que el selector de fecha es el más simple posible y de que el resultado (animal, elemento y yin-yang) aparece de inmediato, como recompensa visible. El rewarded de duplicar recompensa es el que cobra: comprueba con usuarios que se entiende qué ganan al verlo, sin texto de más. Antes de febrero, prueba la compatibilidad con tres personas: que dos desconocidos puedan comparar sus fechas sin instrucciones.</p>
+<h3>Anime Food</h3>
+<p>Como en iOS está en la categoría Niños, la claridad es aún más importante: menos texto, botones grandes y evidentes, nada de patrones que confundan. Haz la prueba de dónde estoy en la pantalla de una receta: ¿se ve de qué anime viene el plato (sin nombrar personajes ni marcas de terceros), qué hace falta y cuál es el primer paso? Si la receta no se puede seguir con el móvil en la encimera, la app no hace su trabajo y gana la tesis de que es un canal de contenido.</p>
+<h2>Preguntas para leerlo</h2>
+<ol>
+<li>¿Qué pantalla de tus apps obliga más a pensar? ¿Cómo lo sabes sin haber visto a nadie usarla?</li>
+<li>¿Cuántas palabras tiene tu muro de pago de TCM? ¿Cuántas sobran?</li>
+<li>¿Qué gasta la buena voluntad de un usuario de Leo Glow en los primeros dos minutos?</li>
+<li>¿Quiénes podrían ser tus tres probadores mensuales, y dónde los encuentras?</li>
+<li>¿Qué dice tu primera captura de cada ficha a alguien que la mira dos segundos?</li>
+</ol>
+<h2>Si solo lees una parte</h2>
+<p>El bloque 6, las pruebas de usabilidad baratas. Todo lo demás lo descubrirás tú mismo viendo a tres personas usar tus apps; esto te dice cómo hacerlo bien.</p>
+<h2>Cautelas</h2>
+<ul>
+<li>El libro nació para webs de escritorio y la mayoría de ejemplos siguen siéndolo. Lo esencial se traslada bien al móvil, pero hay detalles (navegación global, migas de pan) que en una app tienen otra forma.</li>
+<li>La usabilidad no arregla un problema de valor. Si la gente no quiere lo que ofreces, una pantalla más clara solo hace que se vaya antes y con las ideas más claras. Úsalo después de <em>The Mom Test</em> y de <em>Competing Against Luck</em>, no en su lugar.</li>
+<li>Tres personas encuentran los problemas graves, no miden cuánto mejora la conversión. Para eso necesitas datos.</li>
+<li>En un muro de pago, «no me hagas pensar» no debe confundirse con empujar a pagar sin entender. Las tiendas y tus usuarios castigan los patrones engañosos.</li>
+</ul>
+<h2>Para seguir</h2>
+<ul>
+<li>Steve Krug, <em>Rocket Surgery Made Easy</em>: la guía práctica de las pruebas de usabilidad que hace uno mismo.</li>
+<li>Don Norman, <em>The Design of Everyday Things</em>: los principios de fondo de por qué las cosas se entienden o no.</li>
+<li>Jeff Gothelf y Josh Seiden, <em>Lean UX</em>: cómo encajar el diseño en un ciclo de experimentos.</li>
+<li>Nielsen Norman Group publica artículos de usabilidad basados en investigación, incluido el de por qué basta con pocos usuarios por prueba.</li>
+</ul></section>
+</article>
+<footer></footer>
+</main></body></html>

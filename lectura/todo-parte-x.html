@@ -1,0 +1,885 @@
+<!doctype html>
+<html lang="es"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Parte X: Monetizar, mejorar las apps y atender a tu público</title>
+<meta name="description" content="Todo el documento en una sola página, ordenado por partes.">
+<meta name="author" content="Claude">
+<meta property="og:title" content="Parte X: Monetizar, mejorar las apps y atender a tu público">
+<meta property="article:published_time" content="2026-10-29">
+<style>
+:root{--bg:#fbfaf7;--fg:#1f2933;--muted:#6b7280;--line:#e5e7eb;--accent:#9a3412}
+@media(prefers-color-scheme:dark){:root{--bg:#12100e;--fg:#ede7d4;--muted:#9a9384;--line:#2c2823;--accent:#e8a33d}}
+body{margin:0;background:var(--bg);color:var(--fg);font:18px/1.7 Georgia,"Times New Roman",serif}
+main{max-width:40em;margin:0 auto;padding:1.5rem 1rem 4rem}
+h1{font-size:1.8rem;line-height:1.25;margin:.2rem 0 1rem}
+h2{font-size:1.3rem;margin:2.2rem 0 .6rem;color:var(--accent)}
+a{color:var(--accent)}
+em{color:var(--muted)}
+hr{border:0;border-top:1px solid var(--line);margin:2rem 0}
+nav,footer{font:14px/1.5 -apple-system,sans-serif;color:var(--muted)}
+nav a,footer a{margin-right:1rem}
+li{margin:.35rem 0}
+</style></head><body><main>
+<nav><a href="./">← Índice</a></nav>
+<article>
+<section id="1000-parte-x-manual-practico"><h1>Parte X: Monetizar, mejorar las apps y atender a tu público</h1>
+<p><em>Un manual práctico, sin libros por medio: qué hacer con tus muros, tus anuncios, tu onboarding, tu retención y tu gente, app por app.</em></p>
+<h2>El problema que resuelve esta parte</h2>
+<p>Las partes anteriores te han dado marcos: cómo piensa Ramanujam el precio, cómo explica Eyal el hábito, cómo busca Ellis el encaje, cómo pregunta Fitzpatrick sin engañarse, cómo se ve una pantalla con los ojos de Krug, qué palancas describe Cialdini y dónde está su límite. Esta parte baja todo eso al suelo. No hay fichas de libros: hay seis capítulos de taller, escritos sobre tus datos del 26 y 27 de octubre de 2026, que puedes leer en el Kobo y convertir en tareas en cuanto vuelvas.</p>
+<p>El diagnóstico de partida es sencillo y algo incómodo. Sabes traer gente: TCM recibe unas 43 descargas al día en Play y casi 11 en iOS, la ficha convierte bien en las dos tiendas, y produces y publicas vídeo a una escala que pocos desarrolladores solos alcanzan. Lo que no tienes resuelto es lo que pasa después de la descarga. TCM cobra, pero no sabes cuánta gente sigue usándola a los treinta días porque la app no manda <code>days_since_install</code>. Leo Glow tiene 22 anuales empezados y 19 cancelados en un mes, y de cada cien personas que la instalan en Android vuelve una al séptimo día. Zodiaco vive de un único anuncio con recompensa que da unos ocho dólares al mes. Anime Food no sabe todavía si es un producto o un escaparate. Y siete apps más están en las tiendas sin que sepas qué hace nadie dentro.</p>
+<p>Monetizar, mejorar y atender son tres caras de la misma cosa: la relación con la persona que ya te ha elegido. Un muro de pago mal colocado estropea la retención; un intersticial en mal momento estropea las reseñas; un onboarding que no lleva al primer logro deja sin sentido el permiso de notificaciones; y sin hablar con tu gente no sabes qué valor estás vendiendo. Por eso los capítulos se apoyan unos en otros.</p>
+<h2>Cómo está organizada</h2>
+<p>Cada capítulo tiene la misma estructura: <strong>principios</strong> (lo que conviene entender antes de tocar nada), <strong>qué dicen tus datos</strong> (solo cifras que tienes medidas, con su fecha y su tamaño de muestra), <strong>qué hacer en cada app</strong>, <strong>qué medir</strong> (el evento, la fracción y cuánta gente hace falta para leerla) y <strong>errores comunes</strong>.</p>
+<h2>Orden de lectura recomendado</h2>
+<ol>
+<li><strong>Muros de pago y pruebas.</strong> Empieza por el dinero porque ahí está la diferencia entre TCM y Leo Glow, y porque el arreglo de Leo Glow es el de mayor impacto de todo el portfolio.</li>
+<li><strong>Onboarding y activación.</strong> El muro vive dentro del onboarding; no se entiende uno sin el otro.</li>
+<li><strong>Retención y notificaciones.</strong> Lo que te falta medir y lo que más condiciona el resto.</li>
+<li><strong>Anuncios bien hechos.</strong> Para Zodiaco, Anime Food y las apps menores; corto de aplicar, fácil de estropear.</li>
+<li><strong>Atender a tu público.</strong> Reseñas, soporte, comunidad, encuestas: cómo conocer de verdad a tus usuarios con poco tiempo.</li>
+<li><strong>Plan por app.</strong> Léelo el último y úsalo como lista de trabajo para noviembre.</li>
+</ol>
+<p>Si solo tienes una tarde, lee el primero y el último.</p>
+<h2>La idea que los une</h2>
+<p><strong>Primero el valor, después el cobro, y siempre medido sobre la misma persona.</strong> Cada propuesta de estos capítulos se juzga por lo que deja por persona que empieza, no por cuántos pasan una pantalla. Ya lo aprendiste con TCM el 25 de octubre: la bienvenida «peor» de la 1.0.9 y la 1.0.10 deja pasar a menos gente y vende el triple por persona. Esa es la vara de medir de toda esta parte. Un paso que filtra puede ser bueno; un anuncio que cobra puede ser malo si vacía el día siete; una reseña de una estrella puede ser la mejor idea de producto del mes.</p>
+<p>Una advertencia de escala: trabajas solo y tus muestras son pequeñas. Muchas de las decisiones de aquí se toman con 30 a 200 personas. Por eso cada capítulo dice cuánta gente hace falta para leer cada medida, y por eso vale más un cambio claro por app y por semana que cinco experimentos a medias.</p></section>
+
+<hr>
+
+<section id="1001-muros-de-pago-y-pruebas"><h1>Muros de pago y pruebas gratis</h1>
+<p><em>Dónde poner el muro, qué plan enseñar primero, cuánto cobrar en cada país y qué hacer con quien no puede o no quiere pagar: TCM como modelo y Leo Glow como taller.</em></p>
+<h2>Principios</h2>
+<h3>El muro no es una pantalla, es una conversación con tres momentos</h3>
+<p>Un muro de pago tiene un antes, un durante y un después. El antes es todo lo que la persona ha vivido hasta llegar a él: si ha visto el valor, si ha dicho en voz alta qué le duele, si ha hecho algo con sus manos dentro de la app. El durante es lo que lee en esos diez segundos: qué plan está marcado, qué dice el botón, qué pasa hoy y qué pasa dentro de siete días. El después es la hoja de Google o de Apple, la confirmación, el primer día de prueba y el aviso antes del cobro. La mayoría de los fallos que vas a ver en este capítulo no están en el muro en sí, sino en el antes (no hay valor percibido) o en el después (la hoja de la tienda dice algo distinto de lo que prometía tu botón).</p>
+<p>Ramanujam lo plantea desde el diseño del producto: el precio se decide hablando de disposición a pagar con la gente antes de construir, y los planes se diseñan alrededor de segmentos que valoran cosas distintas. Tú no tienes un equipo de precios, pero sí tienes algo que él recomienda y que muchas empresas no tienen: un embudo medido evento a evento. Úsalo como sustituto de las entrevistas mientras no las hagas, y hazlas en cuanto puedas (lo verás en el capítulo de atender a tu público).</p>
+<h3>Colocación: el muro va donde el valor ya se ha visto</h3>
+<p>Hay dos escuelas. Una pone el muro al final del onboarding, cuando la persona acaba de invertir unos minutos en contar quién es y qué quiere; la otra lo pone después del primer resultado útil, cuando la persona ya sabe lo que la app hace por ella. Las dos funcionan en apps distintas y no hay una respuesta universal. Lo que sí es universal es que el muro debe aparecer <strong>justo después de un momento de valor</strong>, ya sea un valor prometido con precisión (tu plan, tu meta con fecha) o un valor vivido (tu primer diagnóstico, tu primera receta hecha).</p>
+<p>En la práctica, una app con suscripción suele tener varios muros: el del onboarding, el de una función bloqueada, el de una tarjeta en el Inicio, el de un límite de uso. Cada uno se mide por separado, con su propia tasa. El del onboarding ve mucha gente con poca intención; los muros contextuales ven poca gente con mucha. Juzgarlos juntos esconde lo que funciona.</p>
+<h3>La prueba gratis cambia la pregunta</h3>
+<p>Sin prueba, la pregunta que el muro le hace a la persona es «¿pagas ahora por algo que aún no has usado?». Con prueba, la pregunta es «¿quieres probarlo siete días sin pagar nada hoy?». Son decisiones de tamaño muy distinto. Por eso, en apps de suscripción, el plan con prueba suele ser el que más altas trae, y el que no tiene prueba suele quedarse en una fracción muy pequeña. No te doy una cifra del sector porque no la tengo contrastada; tu propio dato de TCM (abajo) es mejor que cualquier promedio que pudiera darte.</p>
+<p>Pero la prueba tiene dos condiciones. La primera es que la persona entienda que hoy no paga: el botón tiene que decirlo («Empieza tus 7 días gratis»), la línea de debajo también («No se cobra nada hoy; te avisamos antes del cobro») y la hoja de la tienda tiene que confirmarlo. Si tu muro dice «se te cobrará al confirmar» y la hoja enseña un precio, la gente cancela en segundos. La segunda condición es que la prueba sea <strong>utilizable</strong>: siete días en los que la persona hace cosas, recibe un aviso al día siguiente y llega al día del cobro sabiendo qué ha conseguido. Una prueba que nadie usa es un cobro aplazado que se cancela.</p>
+<h3>Anual, mensual y vitalicio: cada uno es un mensaje</h3>
+<ul>
+<li><strong>El anual</strong> dice «esto es un compromiso». Encaja con un objetivo largo: estudiar una carrera de MTC, prepararse un examen, cambiar de hábitos durante meses. Es el que mejor combina con una prueba.</li>
+<li><strong>El mensual</strong> dice «pruébalo sin atarte». En la práctica, cuando conviven los dos y el anual tiene prueba, el mensual suele servir sobre todo de ancla: hace que el anual parezca razonable. Si tu mensual casi no se vende, no es un fracaso; es su papel.</li>
+<li><strong>El vitalicio</strong> dice «no quiero suscripciones». Hay un público real que rechaza pagar cada mes por principio, y para él el vitalicio es la única puerta. Funciona como tercera opción discreta, no como oferta agresiva, y no como «última oportunidad» para quien acaba de rechazar algo más barato.</li>
+</ul>
+<p>Presenta los planes con un orden claro: el recomendado marcado y arriba, el precio traducido a la unidad que la persona entiende (por mes o por semana), el ahorro frente al mensual dicho en una cifra, y el resto debajo, visibles pero sin competir. Cialdini te daría aquí el contraste y el ancla; úsalos con honradez, sin descuentos inventados ni contadores falsos.</p>
+<h3>Precio por país: la misma app no vale lo mismo en todas partes</h3>
+<p>Apple y Google te dejan fijar precios por territorio, y los dos proponen equivalencias automáticas desde tu precio base que no tienen en cuenta el poder adquisitivo de cada país. Un anual que es razonable en Estados Unidos o Alemania puede ser prohibitivo en Brasil, México, India, Indonesia o Turquía. Bajar el precio en esos mercados no es caridad: es pasar de cero altas a algunas. La regla práctica es empezar por los países donde ya tienes tráfico, ajustar el precio con un criterio que puedas explicar (por ejemplo, un índice de paridad de poder adquisitivo o lo que cobra tu competencia allí, que puedes ver en las tiendas) y medir altas por vista del muro en ese país antes y después. Cambia pocos países a la vez para poder leer el efecto.</p>
+<h3>Recuperar a quien se va</h3>
+<p>Hay tres momentos de recuperación, y cada uno tiene su herramienta:</p>
+<ol>
+<li><strong>Quien dice que no al muro.</strong> No le enseñes enseguida algo más caro ni le bombardees. Deja seguir gratis con dignidad y vuelve a ofrecer en un momento de valor (después de un diagnóstico, al completar una semana). Si quieres una segunda pantalla, que sea más fácil, no más difícil: el plan con prueba explicado de otra forma, o el recordatorio de que te avisarás antes del cobro.</li>
+<li><strong>Quien empieza la prueba y quita la renovación.</strong> Es muy habitual quitarla al minuto de empezar, por prudencia, y no significa que no vaya a pagar: significa que no se fía de acordarse. Tu trabajo es que los siete días le sirvan, y avisarle el día cinco con lo que ha hecho, no solo con la fecha.</li>
+<li><strong>Quien deja de pagar.</strong> Apple tiene ofertas de recuperación para antiguos suscriptores y códigos de oferta; Google Play tiene ofertas para recuperar clientes y ofertas que decide el desarrollador. Comprueba en cada consola qué tienes disponible, porque las dos tiendas han ido ampliando estas herramientas. Y activa siempre el periodo de gracia, que recupera cobros fallidos sin que la persona pierda el acceso.</li>
+</ol>
+<h3>Errores de pago: no todos los «no» son un no</h3>
+<p>Una parte de la gente que pulsa pagar no puede. En Google Play aparecen sobre todo dos: «The device or user is not allowed to make the purchase» (la cuenta o el país no puede comprar: Play no vende en algunos países, hay cuentas familiares con control parental, cuentas sin método de pago o con restricciones) y «Error performing request» (fallos de red o del servicio). El primero no se arregla reintentando y el segundo a veces sí. Tratarlos igual es un error: a quien no puede pagar no tiene sentido enseñarle precios; a quien tuvo un fallo de red hay que ofrecerle reintentar.</p>
+<h2>Qué dicen tus datos</h2>
+<h3>TCM: el muro que funciona</h3>
+<ul>
+<li><strong>Android, semana del 19 al 26 de octubre, versión 1.0.10.</strong> 234 personas ven el muro del onboarding, 219 eligen plan, 64 pulsan pagar (27 %) y 10 se dan de alta. La semana anterior, con la misma versión, fueron 117 → 23 → 4; con la 1.0.9, 127 → 27 → 7.</li>
+<li><strong>Por plan, misma semana.</strong> El anual con prueba: 87 empezados, 12 entran en prueba. El mensual: 9 empezados, 1 alta. Es la diferencia entre un plan con prueba y uno sin ella, en tu propia app y con tu propio público.</li>
+<li><strong>iOS 1.0.10.</strong> 31 ven el muro, 7 pulsan pagar (23 %) y 4 empiezan la prueba del anual de 9 que lo empiezan. Con la 1.0.9 eran 23 → 1 → 0. Son pocas personas, pero el sentido se ha invertido.</li>
+<li><strong>En 30 días.</strong> El muro del onboarding de Android: 960 lo ven, 31 compran (3,2 %). El de iOS: 151 → 13 (8,6 %). La tarjeta del Inicio (<code>home_card</code>): 83 → 6 (7,2 %). En septiembre, con la 1.0.7, el muro del onboarding vendía 1 de 88 y el que salía al terminar un diagnóstico, 1 de 11. El muro contextual, el que aparece después del valor, convierte mucho mejor por vista.</li>
+<li><strong>Las pruebas cobran.</strong> Entre el 14 y el 25 de octubre se cobraron 7 pruebas anuales en iOS (Reino Unido, Estados Unidos, Francia, España) y en Play (México, Francia, Bermudas). La de España se cobró tras un error de facturación gracias al periodo de gracia. Las pruebas no son dinero hasta el día ocho: separa siempre altas de cobros.</li>
+<li><strong>El vitalicio.</strong> El primero, 119,99 $ en iOS desde Estados Unidos, llegó el 2 de octubre. En la 1.0.7, la «última oportunidad» ofrecía el pago único a quien acababa de rechazar el anual y lo rechazaban 106 de 112. La lección: el vitalicio vende como opción tranquila, no como insistencia.</li>
+<li><strong>Precio por país.</strong> Ya rebajaste Brasil, México e India; están vigentes desde la revisión de pagos del 13 de octubre. Aún no hay una lectura de su efecto por país.</li>
+<li><strong>El «not allowed».</strong> En 30 días, 29 personas y 74 intentos en Android (eran 23 el 19 de octubre); «Error performing request», 18 personas y 52 intentos. Con unas 64 personas pulsando pagar a la semana, aproximadamente 1 de cada 6 choca con «not allowed». Desde el 1 de octubre la app tiene un aviso propio para ese error. La mayoría de esos casos son de países donde Play no vende (Irán, Cuba) y de unas pocas cuentas de Estados Unidos que reintentan; una parte es irrecuperable y otra quizá no.</li>
+</ul>
+<h3>Leo Glow: el muro que no cobra</h3>
+<ul>
+<li><strong>Android, 30 días.</strong> 181 ven el muro del onboarding, 11 eligen plan (6 %), <strong>22 empiezan un anual y 19 lo cancelan; 0 pruebas.</strong> Semana del 19 al 26: 52 → 4 → 4 → 0.</li>
+<li><strong>iOS, misma semana.</strong> 25 ven el muro, 0 eligen plan, 2 empiezan, 1 compra completada: el primer pago real en 30 días.</li>
+<li><strong>La prueba existe.</strong> Desde el 11 de octubre hay una prueba de 3 días en el anual en las dos tiendas: en Play, la oferta <code>trial-3d</code> sobre <code>glow_plus_annual</code>, solo para clientes nuevos y en 174 regiones; en Apple, una oferta introductoria gratuita de tres días en 175 territorios. La 2.0.4 lee la prueba del producto en los dos muros.</li>
+<li><strong>El patrón es el de TCM 1.0.8.</strong> Muchos anuales empezados y cancelados en la hoja de Google, ninguna prueba. TCM salió de ahí cambiando el muro (anual preseleccionado con la prueba en el botón, precio por unidad de tiempo, ahorro dicho, eventos con la elegibilidad) y pasó de 0 a 12 pruebas por semana con la misma oferta de Play.</li>
+<li><strong>Retención que no sostiene una prueba.</strong> Día 1 al 11,6 % y día 7 al 1,1 % en Android. Aunque la prueba se activara, con esa retención la mayoría de los tres días se usarían poco.</li>
+</ul>
+<h2>Qué hacer en cada app</h2>
+<h3>TCM: proteger lo que funciona y abrir dos puertas</h3>
+<ol>
+<li><strong>No toques el muro del onboarding de la 1.0.10.</strong> Convierte, y en iOS por fin también. Lo que falta es que desaparezca la 1.0.9: 41 personas siguen en ella. Empuja la actualización (aviso de versión nueva dentro de la app, si no lo tienes) en lugar de rediseñar.</li>
+<li><strong>Anual preseleccionado y mensual en pequeño.</strong> El mensual cierra 1 de 9 y el anual 12 de 87. No quites el mensual (sirve de ancla y hay quien lo quiere), pero que no sea nunca la opción visible por defecto. Mide <code>plan_selected</code> = anual y altas por vista del muro; con unas 150 vistas lo puedes leer.</li>
+<li><strong>Trata el «not allowed» como dos públicos.</strong> Para el país donde Play no vende, no enseñes precios y deja seguir gratis con un mensaje honesto. Para la cuenta que no puede pagar en un país donde sí se vende, una pantalla que explique qué pasa, con un botón a los métodos de pago de Google Play y un «recuérdamelo mañana». Revisa que el aviso que ya tienes desde el 1 de octubre haga estas dos cosas, y añade el país y el motivo al evento de fallo si no van ya.</li>
+<li><strong>Más muros contextuales, mejor medidos.</strong> El diagnóstico es lo que vende: los primeros que pagaron venían de pulso, lengua o del Camino. Asegúrate de que cada final de diagnóstico ofrece la prueba con un resultado más completo bloqueado, y mide cada muro por su <code>source</code>.</li>
+<li><strong>El día cinco de la prueba.</strong> Un aviso con lo que ha hecho la persona («has repasado 40 puntos y hecho 2 casos»), la fecha del cobro y un enlace para gestionar la suscripción. La transparencia aquí cuesta alguna cancelación y gana confianza, reseñas y renovaciones.</li>
+<li><strong>Revisa el precio por país con datos.</strong> Para Brasil, México e India, compara altas por vista del muro antes y después del 13 de octubre. Si suben, amplía a los siguientes países por tráfico (mira cuáles en tu panel de Play). Si no, el problema no era el precio.</li>
+<li><strong>Coloca el vitalicio como tercera opción.</strong> Visible en el muro, sin «última oportunidad». Mide cuántos lo eligen desde la lista normal.</li>
+</ol>
+<h3>Leo Glow: trasladar el muro de TCM y comprobar la hoja de Google</h3>
+<ol>
+<li><strong>Antes de cambiar nada, comprueba qué ve la persona en la hoja de Google.</strong> Si el 86 % cancela en la hoja, la hipótesis más probable es que la hoja no enseña la prueba. Puede ser porque la app pasa a Play el plan base en lugar de la oferta con prueba, porque la cuenta no es elegible (ya tuvo una prueba en esa app) o porque el texto del muro dice algo distinto. Es una hipótesis: compruébalo con una cuenta nueva en un móvil real y con un evento que registre qué oferta se envía y si la persona es elegible (<code>trial_eligible</code>, <code>offer_id</code>).</li>
+<li><strong>El muro de TCM, adaptado.</strong> Anual preseleccionado, «3 días gratis» en el botón, «no se cobra nada hoy» debajo, precio por semana, ahorro frente al mensual en una cifra, el resto de planes visibles pero secundarios. Si la persona no es elegible para la prueba, el botón tiene que decir el precio de verdad.</li>
+<li><strong>Que la prueba tenga sentido.</strong> Tres días son muy pocos si la persona no vuelve al día siguiente. El arreglo del 11 de octubre (el alta lleva al día 1 del plan con la acción más corta arriba y el aviso de la mañana dice qué toca) es la otra mitad del muro. Sin esa mitad, la prueba se cancela por desuso.</li>
+<li><strong>Piensa qué compra la gente.</strong> Hoy no lo sabes. ¿Compra a Leo, el coach de IA? ¿El plan de 30 días? ¿Las ligas? La única forma de saberlo es preguntar (una pregunta en la app a quien completa la primera semana) y mirar qué función usa quien llega al muro. Hasta que lo sepas, nombra en el muro el beneficio que mejor se mide hoy, que es el plan diario.</li>
+<li><strong>No bajes el precio todavía.</strong> Con 0 pruebas, el problema no es el número. Si cambias precio y muro a la vez, no sabrás qué funcionó.</li>
+<li><strong>Recuerda que iOS ya cobra.</strong> Las suscripciones están dentro de la 2.0.4 y el periodo de gracia activo desde el 10 de octubre. Con 25 vistas por semana, iOS se lee despacio: júntalo por quincenas.</li>
+</ol>
+<h3>Zodiaco y Anime Food</h3>
+<p>Zodiaco no tiene suscripción; vive de anuncios y de una tienda de diamantes para la mascota en iOS (Lucky Pet). No le pongas un muro: lo verás en el capítulo de anuncios. Si algún día pruebas una suscripción, que sea «sin anuncios y con lecturas ampliadas», y solo cuando tengas iOS publicado y una base de usuarios recurrentes que la justifique.</p>
+<p>Anime Food vende un vitalicio (<code>premium</code>, una compra en 30 días desde el banner del perfil, y un fallo «not allowed»). Con 142 personas al mes no es un negocio de muro; aplícale lo básico: el vitalicio explicado en una frase, el muro al bloquear una receta y no antes, y el mismo trato del «not allowed» que en TCM. En iOS, al estar en la categoría Niños, cualquier compra tiene que ir detrás de la puerta parental.</p>
+<h3>Las apps menores</h3>
+<p>No pongas muros donde no hay uso medido. Si alguna (Grandpa's Kitchen, Mythology Tower Defense) tiene compras, el primer paso es la analítica, no el precio.</p>
+<h2>Qué medir</h2>
+<ul>
+<li><strong>Altas por vista del muro, por muro y por versión.</strong> La fracción que manda. Junto a ella, cuántas son pruebas y cuántas cobros.</li>
+<li><strong>Pulsan pagar / ven el muro</strong> y <strong>altas / pulsan pagar.</strong> La primera mide el muro; la segunda mide la hoja de la tienda y los errores. Si la primera es buena y la segunda mala (Leo Glow), el problema está después del botón.</li>
+<li><strong>Plan elegido.</strong> Qué fracción elige el anual. En TCM es la palanca de la propuesta 3.</li>
+<li><strong>Pruebas que se cobran.</strong> Desde RevenueCat, por cohorte de semana de inicio. Es la única medida de dinero real de la prueba. Para leerla necesitas que las pruebas de una semana venzan, así que va siempre con ocho días de retraso.</li>
+<li><strong>Renovación quitada durante la prueba.</strong> Cuántos la quitan y cuántos de esos acaban pagando igualmente (con el periodo de gracia y los avisos, algunos vuelven).</li>
+<li><strong>Fallos de pago por motivo y país.</strong> <code>premium_purchase_failed</code> con <code>reason</code> y país. Para «not allowed», cuántas personas con fallo acaban comprando en siete días (hoy, cero en TCM). Con unas 20 personas con fallo (una semana) ya ves si la pantalla nueva sirve.</li>
+<li><strong>Altas por país tras un cambio de precio.</strong> Con pocas altas por país, agrupa los países que cambiaste y compáralos con los que no tocaste en las mismas semanas.</li>
+<li><strong>Ingreso por persona que empieza el onboarding.</strong> La vara de medir de toda esta parte: un cambio que deja pasar a menos gente pero cobra más por persona es una mejora.</li>
+</ul>
+<p>Sobre los tamaños: con altas de un dígito por semana, cualquier diferencia pequeña es ruido. Como regla orientativa, desconfía de diferencias de altas menores que dos veces la raíz de la cifra esperada, que es el criterio que ya usas en las fichas; y no compares semanas con cambios de versión o de precio por medio.</p>
+<h2>Errores comunes</h2>
+<ol>
+<li><strong>Juzgar el onboarding por lo que pasa y no por lo que vende.</strong> Ya te pasó con la bienvenida de TCM. Un paso que filtra puede subir la venta por persona.</li>
+<li><strong>Confundir pruebas con ingresos.</strong> Doce pruebas no son doce cobros. Habla de pruebas hasta el día ocho y de dinero solo con RevenueCat.</li>
+<li><strong>Cambiar precio y muro a la vez.</strong> Pierdes la capacidad de saber qué funcionó. Un cambio por app y por semana.</li>
+<li><strong>Ofrecer algo más caro a quien acaba de decir que no.</strong> La «última oportunidad» con el vitalicio lo demostró: 106 de 112 la rechazaron. A quien se va, ofrécele algo más fácil o déjale ir.</li>
+<li><strong>Prometer en tu pantalla lo que la tienda no confirma.</strong> Si tu botón dice «gratis» y la hoja de Google enseña un cargo, pierdes a la persona y su confianza. Comprueba la hoja con una cuenta nueva cada vez que cambies ofertas.</li>
+<li><strong>Enseñar precios a quien no puede pagar.</strong> Es frustrante para él y te ensucia la medida. Detecta el caso y adapta el muro.</li>
+<li><strong>Olvidar el periodo de gracia.</strong> Ya lo tienes activo en las dos apps de suscripción; comprueba que cualquier app nueva con suscripción lo lleve antes de enviarla.</li>
+<li><strong>Leer una semana de iOS como si fuera verdad.</strong> Con 25 o 31 vistas, un cambio de 2 personas mueve la tasa diez puntos. Junta semanas o espera.</li>
+<li><strong>Creer que la prueba arregla la retención.</strong> La prueba solo da tiempo. Si en ese tiempo la persona no vuelve, la prueba se cancela. Por eso el siguiente capítulo es el onboarding.</li>
+</ol></section>
+
+<hr>
+
+<section id="1002-anuncios-bien-hechos"><h1>Anuncios bien hechos</h1>
+<p><em>Rewarded, banners, intersticiales, mediación y el modelo híbrido: cómo cobrar con anuncios sin vaciar el día siete, con Zodiaco y Anime Food como casos.</em></p>
+<h2>Principios</h2>
+<h3>Un anuncio es un intercambio, y la persona lo sabe</h3>
+<p>Toda impresión le cuesta algo a quien la ve: tiempo, atención, la sensación de que la app le respeta. A cambio, tú cobras una fracción de céntimo. Ese intercambio solo es sostenible si la persona recibe algo o, como mínimo, si el anuncio no le quita lo que vino a buscar. La retención es el capital de una app de anuncios: cada persona que vuelve mañana es otra ronda de impresiones, y cada persona que se va por un intersticial mal puesto es una fuente cerrada para siempre. Por eso, en una app gratuita, la pregunta nunca es «cuántos anuncios caben», sino «cuántos anuncios aguanta la persona sin dejar de volver».</p>
+<p>Eyal te diría que el hábito se construye con recompensas variables y con inversión; los anuncios mal colocados son exactamente lo contrario: una fricción que no aporta y que rompe el bucle justo cuando la persona iba a recibir su recompensa. Krug te diría que cada interrupción gasta la buena voluntad del usuario, que es un depósito limitado. Las dos ideas apuntan a lo mismo.</p>
+<h3>Los formatos, de más amable a más agresivo</h3>
+<ul>
+<li><strong>Rewarded (con recompensa).</strong> La persona elige ver un vídeo a cambio de algo: duplicar una recompensa, desbloquear una lectura, una vida extra. Es el formato que mejor convive con la retención, porque es voluntario y da valor. Suele pagar mucho más por impresión que el banner. Su límite es que solo se ve cuando la recompensa importa, así que su volumen depende de que el diseño de la app cree deseos que el anuncio pueda satisfacer.</li>
+<li><strong>Rewarded interstitial.</strong> Un vídeo con recompensa que aparece en una pausa natural y se puede rechazar. Es un punto medio útil al final de una sesión o de una partida.</li>
+<li><strong>Banner.</strong> Una tira fija. Paga poco por impresión pero acumula muchas. Molesta poco si está en una zona que no tapa la acción principal, y molesta mucho si empuja el contenido o se confunde con un botón. Los banners adaptativos se ajustan al ancho de pantalla; los plegables ocupan más al principio y se recogen. Ten cuidado con estos últimos en apps de lectura.</li>
+<li><strong>Intersticial.</strong> Una pantalla completa entre dos acciones. Paga bien, pero interrumpe. Solo tiene sentido en pausas naturales (al terminar algo, nunca al empezar) y con un tope de frecuencia. En apps de consulta corta, como un horóscopo diario, un intersticial al abrir la lectura es la forma más rápida de que la persona no vuelva.</li>
+<li><strong>App open.</strong> Un anuncio al abrir o volver a la app. Es tentador porque se ve mucho, y peligroso por la misma razón: castiga el gesto que más quieres que repitan.</li>
+</ul>
+<h3>La mediación: más compradores para la misma impresión</h3>
+<p>Cuando pides un anuncio a AdMob, solo puja la red de Google y lo que tengas conectado. La mediación añade otras redes que compiten por tu impresión, sea por pujas en tiempo real o por una cascada ordenada. Más compradores suelen significar más relleno y mejor precio, pero también más SDK en la app, más configuración, más políticas y más cosas que se rompen. A tu escala, la mediación tiene sentido cuando hay muchas peticiones sin relleno en un formato que cobra; no tiene sentido como primer paso. Qué redes añadir depende de tus países y de tus formatos; la consola de AdMob te dice cuáles están disponibles por puja, y la decisión se toma comparando ingresos por mil peticiones antes y después durante varias semanas.</p>
+<h3>El modelo híbrido: anuncios para todos, sin anuncios para quien paga</h3>
+<p>Combinar anuncios con una compra o suscripción «sin anuncios» es habitual y razonable. Funciona cuando se cumplen dos cosas: que los anuncios sean tolerables (si son insoportables, la gente se va antes de pagar) y que «sin anuncios» venga acompañado de algo más (contenido ampliado, funciones). Pagar solo por quitar molestias convierte a poca gente y deja la sensación de que la app chantajea. Como regla de diseño, el plan de pago debe ser atractivo por lo que añade, y la ausencia de anuncios, un regalo.</p>
+<h3>Lo que no se negocia</h3>
+<ul>
+<li><strong>Políticas de familias y de niños.</strong> Si tu app se dirige a menores, solo puedes usar redes certificadas para esos públicos, y en la categoría Niños de Apple no puedes tener publicidad de terceros con seguimiento. Infringir esto no es un riesgo de ingresos: es un riesgo de expulsión.</li>
+<li><strong>El consentimiento en Europa.</strong> En el Espacio Económico Europeo y el Reino Unido necesitas una plataforma de gestión de consentimiento certificada para servir anuncios personalizados. Sin consentimiento, los anuncios siguen pudiendo servirse, normalmente con menos valor.</li>
+<li><strong>No engañar.</strong> Botones de cierre escondidos, anuncios que parecen contenido, recompensas que no se entregan. Además de ser deshonesto, es lo que más reseñas de una estrella genera.</li>
+</ul>
+<h2>Qué dicen tus datos</h2>
+<h3>Zodiaco (Android, 30 días hasta el 26 de octubre)</h3>
+<ul>
+<li><strong>795 personas</strong> en 30 días (636 en el informe anterior). La semana del 19 de octubre vieron un anuncio 184 personas (139 la semana anterior).</li>
+<li><strong>Lo que cobra:</strong></li>
+<li><code>rewarded/daily_reward_double</code> en el Oráculo: 336 enseñados, <strong>7,81 USD</strong>. Es el que más cobra, con mucha diferencia.</li>
+<li><code>banner/barra</code> en el Oráculo: 2.925 enseñados, 2,37 USD.</li>
+<li><code>banner/barra</code> en Compatibilidad: 0,28 USD; en Perfil: 0,15 USD.</li>
+<li>En total, unos 10,6 USD en 30 días. Con 795 personas, alrededor de 1,3 céntimos por persona al mes. Es un cálculo sobre tus cifras, no un dato del sector.</li>
+<li><strong>Lo que no rellena:</strong> <code>rewarded/precarga</code> en el Oráculo (3.506 peticiones, 0 %), <code>interstitial/precarga</code> en Compatibilidad (1.195) y Mascota (806), <code>rewarded/precarga</code> en Mascota (692), la tienda (196) y Compatibilidad (162). Son precargas: lo que miden son peticiones sin respuesta, no ingreso perdido, porque las impresiones reales van por los huecos con nombre. Además, el banner tiene 2.261 «no fill» de la red.</li>
+<li><strong>El «233 % de relleno»</strong> del rewarded diario es un artefacto: se enseña más de lo que se pide porque hay precargas previas. No lo leas como una tasa.</li>
+<li><strong>Dónde acaban las sesiones:</strong> 2.787 en el Oráculo (33 segundos de media, 0,69 anuncios por sesión) y 1.598 en la Mascota (80 segundos, 0,34 anuncios).</li>
+<li><strong>Lo que espera build:</strong> tres rewarded nuevos (ración extra para la mascota, avance de la lectura de mañana y el resto de la compatibilidad), preparados el 17 de octubre; el ingreso de anuncios hacia RevenueCat (salió por OTA el 14 de octubre); y la limpieza de analítica del 24 de octubre (sin <code>ad_shown</code> en el banner, sin eventos desde desarrollo).</li>
+<li><strong>La retención importa también aquí.</strong> Cuando los avisos se rompieron entre el 26 de septiembre y el 1 de octubre, la vuelta al día siguiente cayó del 26 % al 15 %. Menos vuelta es menos rewarded diario, que es justo el anuncio que cobra.</li>
+</ul>
+<h3>Anime Food</h3>
+<ul>
+<li>En Android hay AdMob y el ingreso por impresión va a RevenueCat desde el 14 de octubre (espera build). Con 142 personas en 30 días y 17 nuevas en la última semana, el volumen de anuncios es muy pequeño.</li>
+<li>En iOS la app está en la categoría Niños (9-11 años). No lleva anuncios ni analítica, y Apple no deja sacarla de esa categoría porque ya tiene descargas.</li>
+<li>Hay un vitalicio que se compró una vez en 30 días desde el banner del perfil.</li>
+</ul>
+<h3>Leo Glow</h3>
+<ul>
+<li>La 2.0 quitó las pantallas con banner e intersticial; solo quedan rewarded opcionales (ruleta, coach). En 14 días se vieron 6 anuncios en la 2.0. El rewarded de la ruleta tiene 66 cargas y 1 enseñado: está cargado y casi nadie lo ve porque no se ofrece en el momento adecuado.</li>
+</ul>
+<h2>Qué hacer en cada app</h2>
+<h3>Zodiaco: más rewarded con sentido, banner discreto, intersticial fuera de la lectura</h3>
+<ol>
+<li><strong>Publica la build con los tres rewarded nuevos.</strong> Es la palanca más clara: el rewarded diario ya demuestra que la gente acepta ver un vídeo cuando la recompensa importa. Cada uno de los nuevos responde a un deseo que la app ya crea: la mascota tiene hambre, la persona quiere saber qué le depara mañana, la compatibilidad deja una parte sin leer. Mide <code>ad_impression</code> rewarded por persona activa y por día, antes y después.</li>
+<li><strong>No pongas intersticiales en el Oráculo.</strong> Es la pantalla donde acaba la mayor parte de las sesiones, con 33 segundos de media. Es una consulta corta: si la interrumpes, rompes el hábito diario, que es lo que sostiene el rewarded. Si quieres un intersticial, que vaya en la Mascota o en los juegos, al terminar una partida, con un tope (por ejemplo, uno cada varios minutos de uso; elige el número tú y mídelo) y nunca en la primera sesión.</li>
+<li><strong>Revisa las precargas que no rellenan.</strong> Miles de peticiones sin relleno no te cuestan dinero directo, pero sí batería, datos y una métrica sucia. Si un formato no se enseña nunca en una pantalla, deja de precargarlo allí. Si se enseña, carga solo cuando haya una probabilidad razonable de mostrarlo.</li>
+<li><strong>El banner, donde no estorbe.</strong> Ya cobra algo en el Oráculo. Asegúrate de que no tapa la lectura ni el botón del rewarded, y no lo pongas en la pantalla de la mascota mientras se juega. Los 2.261 «no fill» son el único argumento claro para probar mediación más adelante.</li>
+<li><strong>Mediación, después y con medida.</strong> Cuando tengas iOS publicado y el volumen de diciembre a febrero (el Año Nuevo chino es tu pico), prueba una o dos redes por puja en el banner y en el rewarded. Mide ingreso por mil peticiones durante unas semanas antes y después. Si el aumento no paga el tiempo de mantenerlas, quítalas.</li>
+<li><strong>Prepara la temporada.</strong> El pico de febrero multiplicará tráfico. Es el momento de tener los rewarded afinados, no de experimentar. Deja los cambios de anuncios cerrados antes de mediados de enero.</li>
+<li><strong>Un «sin anuncios» solo cuando tenga sentido.</strong> Si en algún momento pruebas un pago, que sea «Club sin anuncios» con lecturas o compatibilidades ampliadas, y que llegue después de que la persona lleve varios días volviendo.</li>
+</ol>
+<h3>Anime Food: ni un anuncio que estorbe la receta</h3>
+<ol>
+<li><strong>iOS sigue sin anuncios.</strong> Es la categoría Niños y no hay vuelta atrás. No intentes sortearlo: la monetización de iOS es el vitalicio detrás de la puerta parental o nada.</li>
+<li><strong>Android, solo rewarded y banner discreto.</strong> Una receta es una tarea con las manos ocupadas; un intersticial en mitad de los pasos es la peor experiencia posible. Si quieres un rewarded, que sea para algo concreto: desbloquear una receta premium un día, ver la versión «anime → real» de un plato. El banner, si lo hay, en la lista de recetas y no en los pasos.</li>
+<li><strong>Público y redes compatibles.</strong> Desde el cambio a 13+ en Play, revisa que la configuración de público objetivo, la sección de seguridad de datos y las redes de anuncios coincidan con ese público. Si en algún momento la app vuelve a dirigirse a menores en Android, solo redes certificadas para familias.</li>
+<li><strong>No esperes dinero de anuncios aquí.</strong> Con 142 personas al mes, los anuncios de Anime Food son ruido en tus cuentas. El trabajo de esta app está en decidir qué es (producto o motor de contenido), no en optimizar AdMob.</li>
+</ol>
+<h3>Leo Glow: el rewarded ya cargado</h3>
+<p>El rewarded de la ruleta tiene 66 cargas y 1 enseñado. Ofrécelo donde la persona quiere algo más: una segunda tirada, un reto alternativo, un mensaje extra con Leo cuando se acabe el cupo gratis. Que sea un botón claro con lo que da, no un anuncio que aparece solo. Ten presente que, en una app de suscripción, el rewarded también sirve de puente: quien ve tres vídeos al día para hablar con Leo es un candidato evidente a la prueba del anual. Ese es el modelo híbrido bien hecho: los anuncios son el camino gratuito, y la suscripción, el atajo.</p>
+<h3>TCM</h3>
+<p>No tiene anuncios y no debería tenerlos. Es una herramienta de estudio con un público que paga; los anuncios le restarían seriedad y no compensarían ni de lejos lo que cobra la suscripción.</p>
+<h3>Las apps menores</h3>
+<p>Para los juegos (Grandpa's Kitchen, Mythology Tower Defense, Stranger Games) los anuncios pueden ser el modelo natural: rewarded por vidas o pistas e intersticial entre partidas con tope. Pero sin analítica no puedes saber si espantas a nadie. El orden es: primero un evento de sesión y de partida, después un formato, después medir.</p>
+<h2>Qué medir</h2>
+<ul>
+<li><strong>Ingreso por persona activa y día (ARPDAU), por formato.</strong> Mejor que el ingreso total, porque no depende de cuánta gente entra.</li>
+<li><strong>Impresiones rewarded por persona activa.</strong> La palanca de Zodiaco. Junto a ella, la fracción de personas activas que ven al menos un rewarded al día.</li>
+<li><strong>Ingreso por mil peticiones y tasa de relleno, por hueco.</strong> Separa precargas de huecos reales, o leerás artefactos como el «233 %».</li>
+<li><strong>Retención d1 y d7 de quien ve anuncios frente a quien no.</strong> No es una comparación limpia (quien ve más anuncios suele usar más la app), pero si añades un intersticial y la retención de quien lo ve cae respecto a la cohorte anterior, tienes una señal clara.</li>
+<li><strong>Retención por cohorte antes y después de cada cambio de anuncios.</strong> La medida que manda. Un cambio que sube el ingreso del día y baja el d7 suele perder dinero en el mes.</li>
+<li><strong>Ingreso total por persona en 30 días, anuncios y compras juntos.</strong> Es lo que pretende enseñarte RevenueCat con el ingreso de anuncios. Cuando salgan las builds, compruébalo con un móvil real antes de fiarte del panel.</li>
+<li><strong>Duración de la sesión y pantalla de salida.</strong> Si una pantalla con anuncios se convierte de repente en la pantalla donde acaban más sesiones, el anuncio está expulsando gente.</li>
+</ul>
+<h2>Errores comunes</h2>
+<ol>
+<li><strong>Medir solo el ingreso del día.</strong> El intersticial siempre gana el primer día. La cuenta se hace a 30 días, con retención incluida.</li>
+<li><strong>Poner el anuncio al empezar en lugar de al terminar.</strong> Interrumpir el gesto que trae a la persona (abrir la lectura, empezar la receta) es la forma más rápida de que no vuelva.</li>
+<li><strong>Leer las precargas como ingreso perdido.</strong> Miles de peticiones sin relleno en una precarga no son dinero que se escapa; son peticiones mal hechas.</li>
+<li><strong>Añadir mediación antes de tener volumen.</strong> Más SDK, más mantenimiento y más fallos para unos céntimos. Primero formatos bien colocados, luego más compradores.</li>
+<li><strong>Rewarded que nadie ve porque no se ofrecen.</strong> Cargar un vídeo y no ofrecerlo es como tener la tienda abierta con la persiana bajada. El caso de la ruleta de Leo Glow.</li>
+<li><strong>Recompensas que no compensan.</strong> Si lo que se gana viendo el vídeo no importa, nadie lo ve; si importa demasiado, el juego se rompe para quien no lo ve. Prueba y ajusta.</li>
+<li><strong>Olvidar las políticas de menores y de consentimiento.</strong> En Anime Food es una cuestión de supervivencia de la app.</li>
+<li><strong>Confiar en el panel nuevo sin probarlo.</strong> El ingreso de anuncios hacia RevenueCat no se ha comprobado en un móvil. Hasta entonces, el ingreso de referencia es el de AdMob.</li>
+<li><strong>Pensar que el «sin anuncios» se vende solo.</strong> Pagar por quitar molestias convierte poco. Añade valor al plan de pago y deja que la ausencia de anuncios sea un extra.</li>
+</ol></section>
+
+<hr>
+
+<section id="1003-onboarding-y-activacion"><h1>Onboarding y activación</h1>
+<p><em>El momento «aha» de cada app, cómo diseñar la primera sesión para llegar a él y cuándo pedir el permiso de notificaciones para que sirva de algo.</em></p>
+<h2>Principios</h2>
+<h3>El onboarding no termina en la última pantalla del onboarding</h3>
+<p>Llamas onboarding a la secuencia de bienvenida, preguntas, plan y muro. Pero lo que de verdad decide si una persona se queda es lo que pasa justo después: si en esa primera sesión hace algo que le demuestre que la app le sirve. A eso se le llama <strong>activación</strong>, y al instante en que la persona lo nota se le suele llamar el <strong>momento «aha»</strong>. Ellis lo pone en el centro de su método de crecimiento: antes de pensar en traer más gente, hay que saber qué experiencia hace que los que llegan se queden, y llevar a todos hacia ella lo antes posible.</p>
+<p>Un onboarding bien hecho tiene, por tanto, dos trabajos: preparar a la persona para el valor (entender qué quiere, prometérselo con precisión) y llevarla hasta el valor (que lo viva hoy). Las preguntas y el plan hacen lo primero; la primera sesión hace lo segundo. Muchos onboardings hacen muy bien lo primero y dejan a la persona en una pantalla de inicio llena de opciones, con un tutorial encima, justo cuando debería estar haciendo su primera tarea.</p>
+<h3>Cómo encontrar el momento «aha»</h3>
+<p>No se decide en una pizarra; se descubre en los datos y se confirma hablando con la gente. El método es sencillo:</p>
+<ol>
+<li>Haz una lista de acciones que una persona puede hacer en su primera sesión (abrir un punto, terminar un diagnóstico, completar una tarea, girar la ruleta, leer la compatibilidad, guardar una receta).</li>
+<li>Para cada acción, compara la vuelta al día siguiente (o la compra) de quien la hizo el día cero con la de quien no la hizo.</li>
+<li>Quédate con las que separan mucho y que la mayoría puede alcanzar en pocos minutos.</li>
+<li>Comprueba la causalidad con un cambio: lleva a más gente a esa acción y mira si la vuelta sube. Si sube, es tu momento «aha». Si no, solo era una señal de que esa gente ya venía con ganas.</li>
+</ol>
+<p>Este último paso importa: quien hace más cosas el primer día también es quien venía más motivado. La correlación te dice dónde mirar; el experimento te dice si empujar ahí sirve.</p>
+<h3>Las preguntas del onboarding tienen que devolver algo</h3>
+<p>Cada pregunta cuesta tiempo y atención. Se justifica si cambia algo que la persona ve después: el plan, el orden de los módulos, el titular del muro, el texto del primer aviso. Una pregunta cuya respuesta no se usa es puro peaje, y la persona lo nota cuando el plan le dice «empiezas por Fundamentos» justo después de haber elegido Acupuntura. Al revés, una pregunta bien devuelta es una de las mejores herramientas de venta que tienes: quien dijo «se me olvida lo que estudio» y lee en el muro «repaso espaciado para no olvidar» siente que la app le ha escuchado.</p>
+<p>Esto conecta con lo que aprendiste el 25 de octubre: una pregunta que hace salir a alguna gente puede ser buena si los que se quedan compran más. Juzga el onboarding por lo que deja por persona que empieza, no por lo que pasa cada paso.</p>
+<h3>La primera sesión: una tarea, cerrada, en pocos minutos</h3>
+<p>Krug diría que en la primera visita nadie lee: la gente escanea, elige lo primero que parece razonable y sigue. Diseña la primera sesión para ese comportamiento. Al terminar el onboarding, la persona debería aterrizar en <strong>una sola cosa que hacer</strong>, con un botón claro, que se pueda completar en el tiempo que dijo tener (si eligió cinco minutos, cinco minutos) y que termine con un cierre visible: «hecho», un resultado, un progreso que sube. Los tutoriales de varios pasos sobre la pantalla de inicio rara vez cumplen esto: enseñan dónde están las cosas, pero no hacen que la persona haga ninguna.</p>
+<h3>El permiso de notificaciones: pedirlo cuando tenga sentido y usarlo</h3>
+<p>Desde Android 13 el permiso de notificaciones se pide en tiempo de ejecución, como en iOS. En los dos sistemas, si la persona lo rechaza, recuperarlo es difícil: en iOS no puedes volver a enseñar el diálogo y tendría que ir a Ajustes; en Android, después de rechazarlo dos veces el sistema deja de mostrarlo. Por eso casi todas las apps usan una <strong>pre-pantalla</strong> propia que explica para qué es el aviso antes de lanzar el diálogo del sistema. Si la persona dice «ahora no» en tu pantalla, no has gastado el diálogo y puedes volver a pedirlo más adelante, en un momento mejor.</p>
+<p>El mejor momento es justo después de que la persona entienda qué le vas a recordar: tras ver su plan («te avisaré cada mañana con la sesión de hoy»), tras completar su primera tarea («¿te aviso mañana para la siguiente?») o tras configurar algo que caduca (la mascota que tendrá hambre). En iOS existe además la autorización provisional, que entrega los avisos en silencio al centro de notificaciones sin preguntar; puede servir para mostrar el valor antes de pedir el permiso completo.</p>
+<p>Pero pedir el permiso es la mitad del trabajo. La otra mitad es que el aviso exista, llegue y diga algo útil. Ya te ha pasado dos veces: en TCM 1.0.7 el permiso se concedía y la app no programaba nada para quien acababa de terminar el onboarding; en Zodiaco 1.1.2 y 1.1.3, R8 rompió la programación de todos los avisos. Un permiso sin aviso es peor que no pedirlo.</p>
+<h2>Qué dicen tus datos</h2>
+<h3>TCM</h3>
+<ul>
+<li><strong>1.0.10, 30 días.</strong> En Android entran 1.219 y llegan a <code>plan_horizon</code> 822 (67 %); en iOS, 238 → 154 (65 %). Las caídas por paso están entre 1 y 10 puntos. La calibración baja un 10 % en las dos tiendas, pero es opcional.</li>
+<li><strong>Lo que vende.</strong> Las versiones 1.0.9 y 1.0.10, con una bienvenida que deja pasar a menos gente, compran entre el 3 y el 3,6 % por persona, frente al 1,1-1,7 % de las anteriores. Es tu mejor ejemplo de que un paso que filtra puede ser una mejora.</li>
+<li><strong>La lectura del onboarding de la 1.0.7</strong> (29 de septiembre, 136 personas, todavía útil para entender el diseño): la calibración era la mayor caída (114 → 101), y fallar las preguntas no quitaba las ganas de pagar (abría el pago el 24 % de quien acertaba 0 de 3 y el 33 % de quien acertaba 3). En inglés terminaba el onboarding el 62 %, frente al 78 % en español y el 82 % en chino. La pantalla de módulos era la más lenta (36 segundos para decidirse, 12 tarjetas). En «Qué te cuesta», el 41 % cambiaba de respuesta.</li>
+<li><strong>Notificaciones (1.0.7).</strong> El 51 % concedía el permiso (52 conceden, 22 deniegan, 27 «ahora no»). Pero quien terminaba el onboarding no tenía nada que le generase un aviso. Se arregló el 29 de septiembre con un aviso diario del plan y los eventos <code>reminders_scheduled</code> y <code>notification_opened</code>.</li>
+<li><strong>Después del onboarding (1.0.7).</strong> De 85 que terminaban, solo 16 volvían otro día (19 %). Lo primero que veían era una guía de 6 pasos encima del Inicio: la tercera interrupción seguida tras el plan, la cuenta y el muro.</li>
+<li><strong>El diagnóstico es lo que vende.</strong> Los primeros que pagaron venían de pulso, lengua o el Camino; el muro que sale al terminar un diagnóstico convertía 1 de 11 cuando el del onboarding convertía 1 de 88.</li>
+</ul>
+<h3>Leo Glow</h3>
+<ul>
+<li><strong>Android, 30 días.</strong> welcome 248 → tour 234 → nombre 226 → fuente 208 (−8 %) → género 203 → … → quiz 189. Pasa casi todo el mundo.</li>
+<li><strong>La lectura del 11 de octubre</strong> (98 altas reales del 2 al 11): el 86 % llega al muro en unos dos minutos y medio. Solo 41 de 84 giraban la ruleta. 41 de 87 se iban desde Hoy sin tocar nada. <strong>Con una acción del plan hecha el día cero volvía el 53 %; solo girando la ruleta, 0 de 9.</strong> Es la mejor pista de momento «aha» que tienes en todo el portfolio, con muestras pequeñas.</li>
+<li><strong>Lo que ya está cambiado</strong> (2.0.4): el alta lleva al día 1 del plan con la acción más corta arriba, Hoy enseña solo el plan hasta cerrar el día 1, el aviso de la mañana nombra la acción del plan y abre ese día, el nombre es opcional y hay una fuente «ChatGPT u otra IA» en la pregunta de cómo nos conociste.</li>
+<li><strong>El resultado aún no se ve.</strong> Android d1 11,6 % y d7 1,1 % en la ventana del 26 de octubre, sin cambio claro frente al 19 de octubre.</li>
+</ul>
+<h3>Zodiaco</h3>
+<ul>
+<li><strong>Recorrido:</strong> welcome → fecha → intenciones → oráculo → mascota → aviso → lectura: 157 → 172 → 151 → 139 → 126 → 117 → 107. (Que entren más en «fecha» que en «welcome» indica que hay gente que llega a la fecha sin pasar por la bienvenida, por versión o por evento perdido; no lo leas como una subida.)</li>
+<li><strong>Pantallas más usadas:</strong> <code>Home:oraculo</code> 600 personas (11 segundos), <code>Selection</code> 411 (25 segundos), <code>Home:mascota</code> 394.</li>
+<li><strong>Avisos:</strong> entre el 26 de septiembre y el 1 de octubre no se programaba ninguno y la vuelta al día siguiente cayó del 26 % al 15 %. La 1.1.4 lo arregló (permiso concedido y programado en 14 de 14 casos comprobados).</li>
+</ul>
+<h3>Anime Food</h3>
+<ul>
+<li><strong>Recorrido en Android:</strong> welcome 88 → worlds 50 → preferences 83 → terminan 75. El salto de 50 a 83 dice que «worlds» es una rama o que su evento falla, no que la gente vuelva.</li>
+<li>El <code>distinct_id</code> está roto, así que no puedes seguir a una persona de la primera sesión a la segunda. Mientras no se arregle (necesita build), cualquier lectura de activación aquí es dudosa.</li>
+</ul>
+<h2>Qué hacer en cada app</h2>
+<h3>TCM: llevar a la persona a su primer diagnóstico o su primera lección cerrada</h3>
+<ol>
+<li><strong>Define el momento «aha» con datos.</strong> Con la cohorte de la 1.0.10, compara la vuelta al día siguiente y la compra de quien, el día cero, termina un diagnóstico, cierra la primera sesión del plan o abre un punto en 3D, frente a quien no. Hipótesis de partida: el diagnóstico para «clínico» y «examen», la sesión del plan para «desde cero» y «recordar».</li>
+<li><strong>Después del muro, a una sola tarea.</strong> Que la persona aterrice en «Tu práctica de hoy · 10 min» (o los minutos que eligió) en lugar de en el Inicio con una guía de 6 pasos. Si la guía se queda, que sean 3 pasos o que aparezca cada uno cuando toque.</li>
+<li><strong>Devuelve las respuestas.</strong> La calibración funciona como punto de dolor: devuélvela en el plan y en el muro («Hoy: 1 de 3. En cuatro semanas: localizar ST36»). La respuesta de «Qué te cuesta», en el titular del muro. Los módulos elegidos, nombrados en la tarjeta del plan.</li>
+<li><strong>Arregla el inglés.</strong> Es la mitad del tráfico y el idioma con peor cierre. Revisa el texto de todo el recorrido con alguien nativo o, al menos, léelo en voz alta tú mismo buscando frases traducidas.</li>
+<li><strong>Comprueba que el aviso llega.</strong> Con la 1.0.10, mira <code>reminders_scheduled</code> y <code>notification_opened</code> por persona que concede el permiso. Si se programa y no se abre, el problema es el texto; si no se programa, es un fallo.</li>
+<li><strong>Separa los dos públicos en la primera sesión.</strong> El estudiante de MTC y el curioso del bienestar llegan al mismo onboarding. La pregunta del objetivo ya los separa; úsala para que el curioso vea primero algo de su vida diaria (constitución, dietética por estación) y el estudiante, el plan de estudio.</li>
+</ol>
+<h3>Leo Glow: que el día 1 se cierre siempre</h3>
+<ol>
+<li><strong>Mide lo que ya publicaste.</strong> <code>plan_first_day_opened</code>, <code>plan_action_toggled</code> del día 1 y <code>notification_opened</code> del tipo <code>daily-plan</code>, por cohorte de la 2.0.4. La pregunta es: ¿qué fracción completa la primera acción el día cero, y vuelve más quien la completa?</li>
+<li><strong>Si la fracción es baja, simplifica aún más.</strong> Una sola acción visible, de menos de dos minutos, con un cierre que se celebre (Leo reacciona, el avatar sube un poco de nivel). Todo lo demás de la app, oculto hasta cerrarla.</li>
+<li><strong>El muro después del primer logro, no antes.</strong> Hoy el 86 % llega al muro en dos minutos y medio, antes de haber hecho nada. Prueba a enseñar el muro del onboarding después de la primera acción completada. Es un cambio con riesgo (puede bajar las vistas del muro), así que mídelo por ingreso por persona que empieza, no por vistas.</li>
+<li><strong>Pide el permiso al cerrar la primera acción.</strong> «¿Te aviso mañana a esta hora con la siguiente?» es mucho más convincente que pedirlo en el onboarding.</li>
+<li><strong>Usa la fuente.</strong> Quien llega desde ChatGPT u otra IA probablemente viene buscando algo concreto («cómo empezar un glow up sin escanear mi cara»). Comprueba si se activa distinto que quien llega de TikTok o de la búsqueda, y si es así, adapta el primer mensaje de Leo.</li>
+</ol>
+<h3>Zodiaco: el primer «esto soy yo»</h3>
+<ol>
+<li><strong>Hipótesis de momento «aha»:</strong> ver tu animal, tu elemento y una lectura de hoy que suene a ti; o leer la compatibilidad con una persona concreta. Mide la vuelta al día siguiente de quien hace una compatibilidad el día cero frente a quien no.</li>
+<li><strong>Pide el permiso tras la primera lectura</strong>, con una promesa concreta («tu lectura de mañana a las 9») y, para quien adopta la mascota, con el cuidado de la mascota.</li>
+<li><strong>Comprueba los avisos en cada release.</strong> Ya sabes que el minify los rompe sin que lo notes en desarrollo. Prueba un aviso programado en una build de release antes de cada subida.</li>
+</ol>
+<h3>Anime Food: primero arregla la medida</h3>
+<p>Sin un identificador estable no puedes saber quién vuelve. La build con el <code>distinct_id</code> arreglado es lo primero. Después, hipótesis de momento «aha»: ver un plato de un anime que te gusta convertido en receta real y guardarla o cocinarla. Lleva a la persona del onboarding a una receta de los «mundos» que eligió, no a una lista general.</p>
+<h3>Las apps menores</h3>
+<p>Para los juegos, el momento «aha» suele ser terminar la primera partida o el primer nivel con éxito. Para los recetarios (Stranger Foods, Christmas Dinner Menu), abrir una receta concreta. Sin analítica no puedes comprobarlo; si decides invertir en alguna, empieza por un evento de «primera partida terminada» o «primera receta abierta».</p>
+<h2>Qué medir</h2>
+<ul>
+<li><strong>Activación por cohorte de versión:</strong> la fracción de personas que completan la acción clave el día cero. Una por app: diagnóstico o primera sesión del plan (TCM), acción del día 1 (Leo Glow), primera lectura o compatibilidad (Zodiaco), receta abierta o guardada (Anime Food).</li>
+<li><strong>Vuelta al día siguiente de activados frente a no activados.</strong> Si no separa, la acción no es el momento «aha».</li>
+<li><strong>Tiempo hasta la activación.</strong> En minutos desde la instalación. Si la mayoría tarda más de una sesión, la primera sesión no lleva al valor.</li>
+<li><strong>Ingreso por persona que empieza el onboarding, por versión.</strong> La vara de medir de toda la parte. Con cinco a diez compradores por versión, junta varias semanas antes de concluir.</li>
+<li><strong>Permiso de notificaciones:</strong> concedido, denegado y «ahora no» en tu pre-pantalla; avisos programados por persona con permiso; avisos abiertos por aviso enviado.</li>
+<li><strong>Fin del onboarding por idioma.</strong> En TCM, el inglés es el que peor cierra; mide si los cambios de texto lo mejoran.</li>
+<li><strong>Tamaño de muestra.</strong> Para comparar la vuelta al día siguiente entre dos grupos, como orientación, con menos de unas 30 personas por grupo las diferencias de diez puntos son fácilmente ruido. Dilo siempre al lado de la cifra.</li>
+</ul>
+<h2>Errores comunes</h2>
+<ol>
+<li><strong>Juzgar cada paso por cuántos pasan.</strong> Un paso que filtra puede vender más. Mira el valor por persona.</li>
+<li><strong>Preguntar sin devolver.</strong> Cada respuesta tiene que cambiar algo visible. Si no, quítala.</li>
+<li><strong>Terminar el onboarding en el Inicio con un tutorial.</strong> La persona necesita una tarea, no un mapa.</li>
+<li><strong>Confundir correlación con momento «aha».</strong> Quien hace más cosas el día cero ya venía motivado. Confirma empujando y midiendo.</li>
+<li><strong>Pedir el permiso antes de que tenga sentido.</strong> El permiso gastado en la tercera pantalla no vuelve.</li>
+<li><strong>Conceder el permiso y no avisar.</strong> Te ha pasado en TCM y en Zodiaco. Prueba los avisos en una build de release cada vez.</li>
+<li><strong>El muro antes del primer logro, por inercia.</strong> Puede ser lo correcto (en TCM lo es), pero no lo des por hecho en Leo Glow: compruébalo.</li>
+<li><strong>Leer muestras pequeñas como hechos.</strong> El 53 % de Leo Glow sale de muy poca gente. Es una pista excelente, no una ley.</li>
+<li><strong>Olvidar que hay dos públicos.</strong> En TCM, estudiantes y curiosos; en Leo Glow, quien viene de ChatGPT y quien viene de TikTok. Un único camino para todos es un camino a medias para cada uno.</li>
+</ol></section>
+
+<hr>
+
+<section id="1004-retencion-y-notificaciones"><h1>Retención y notificaciones</h1>
+<p><em>Cómo leer una curva de retención, qué te falta medir en cada app, cómo hacer que los avisos lleguen y digan algo, rachas que no castigan y qué hacer con los anuales que se cancelan.</em></p>
+
+<h2>Principios</h2>
+
+<h3>La retención es la cifra que da sentido a todas las demás</h3>
+<p>Una descarga vale lo que vale la gente que vuelve. En una app de suscripción, quien no vuelve no llega al día del cobro, y si llega, cancela en la renovación. En una app de anuncios, quien no vuelve no ve el rewarded de mañana. Por eso este capítulo va después de los muros y del onboarding y antes del plan por app: el muro de <a href="#1001-muros-de-pago-y-pruebas">Muros de pago y pruebas</a> solo cobra si hay alguien al otro lado el día del cobro, y el momento «aha» de <a href="#1003-onboarding-y-activacion">Onboarding y activación</a> solo sirve si se convierte en una segunda, una tercera y una décima visita.</p>
+<p>La forma honesta de mirar la retención es la <strong>curva por cohorte</strong>: agrupas a la gente por la semana en que instaló y miras qué fracción de cada grupo vuelve el día 1, el día 7 y el día 30 después de instalar. Croll y Yoskovitz, Ries y Ellis coinciden en esto aunque lo cuenten distinto: las cifras totales de usuarios activos esconden lo que pasa, porque la gente nueva tapa a la que se va. La cohorte no.</p>
+
+<h3>Cómo se lee una curva</h3>
+<p>Tres preguntas, en este orden:</p>
+<ol>
+<li><strong>¿Dónde cae más?</strong> Casi todas las apps pierden la mayor parte de la gente entre el día 0 y el día 1. Esa caída es la de la activación: la resuelve el capítulo anterior, no los avisos.</li>
+<li><strong>¿Se aplana?</strong> Una curva que baja y luego se queda plana, aunque sea en una cifra baja, dice que hay un grupo para el que la app funciona. Una curva que sigue bajando hasta cero dice que no lo hay todavía. Ellis y Brown lo plantean así: una curva que se aplana, aunque sea baja, es mejor señal que una que sigue cayendo.</li>
+<li><strong>¿Las cohortes nuevas están por encima de las viejas?</strong> Si cambias el onboarding y la cohorte de la semana siguiente tiene la misma curva, el cambio no ha servido, por mucho que hayan subido las descargas.</li>
+</ol>
+<p>Mide la retención como «volvió ese día» (abrió la app el día 7) y no como «sigue instalada». Y decide una vez qué cuenta como volver: una apertura cualquiera o una acción con valor (una lección, un reto, una lectura). La segunda es más exigente y más útil; la primera es más fácil de tener mañana. Empieza por la primera y añade la segunda.</p>
+
+<h3>El hábito tiene la frecuencia de la necesidad</h3>
+<p>No todas tus apps tienen que retener a diario. Eyal habla de una zona de hábito: lo que se usa poco solo se vuelve costumbre si es muy útil cada vez. Clear lo dice desde dentro de la persona: el hábito se ata a un momento que ya existe en su día. Aplicado a ti:</p>
+<ul>
+<li><strong>Leo Glow y Zodiaco</strong> prometen algo diario. Su d1 y su d7 son su verdad.</li>
+<li><strong>TCM</strong> es una referencia de estudio. El estudiante vuelve cuando estudia o tiene una duda, y más en época de exámenes. Mírala también por semanas: ¿abrió la app al menos una vez en la semana 4?</li>
+<li><strong>Anime Food</strong> se usa cuando cocinas, de vez en cuando. Su retención diaria será baja siempre, y eso por sí solo no es un fallo.</li>
+</ul>
+<p>Juzgar a TCM o a Anime Food por el d1 de una app de hábitos te haría tomar malas decisiones. Elige para cada app el intervalo que corresponde a su uso natural.</p>
+
+<h3>Una notificación es una promesa que tiene que llegar</h3>
+<p>El aviso es el disparador externo del modelo de Eyal: lo que recuerda a la persona que existes hasta que la costumbre haga ese trabajo sola. Tiene tres partes y cada una puede fallar por separado:</p>
+<ul>
+<li><strong>El permiso.</strong> Cuándo y cómo se pide. Está desarrollado en <a href="#1003-onboarding-y-activacion">Onboarding y activación</a>: pre-pantalla propia, después de que la persona entienda qué le vas a recordar, nunca en la tercera pantalla.</li>
+<li><strong>La entrega.</strong> Que el aviso se programe y llegue. Parece trivial y es donde más te ha fallado: dos veces en dos apps, con el permiso concedido y sin aviso detrás.</li>
+<li><strong>El contenido y la frecuencia.</strong> Qué dice, a qué hora, cuántas veces. Es lo que decide si la persona lo abre o desactiva tus avisos para siempre.</li>
+</ul>
+
+<h3>El contenido: algo concreto de hoy, que abra donde promete</h3>
+<p>Un buen aviso nombra lo que la persona va a encontrar («Hoy: 2 minutos de postura con Leo»), está ligado a algo que ella eligió o hizo (su plan, su animal, su mascota, sus módulos) y, al pulsarlo, abre exactamente esa pantalla, no el Inicio. Un aviso genérico («¡Te echamos de menos!») gasta la atención sin dar un motivo. Krug lo diría con la buena voluntad: cada aviso inútil saca algo del depósito, y el usuario no avisa cuando se vacía; simplemente silencia la app.</p>
+<p>La mejor fuente de contenido para el aviso de mañana es lo que la persona deja hoy. Eyal lo llama la inversión que carga el siguiente disparador: si al cerrar el reto eliges la hora del de mañana, el aviso de mañana llega a tu hora y habla de lo que hiciste. Clear llega a lo mismo por otro camino, la intención de implementación: decir a qué hora y después de qué cosa harás el hábito.</p>
+
+<h3>La frecuencia: uno al día como techo, y saber callarse</h3>
+<p>Para una app diaria, un aviso al día a la hora elegida es el máximo razonable; para TCM, menos. Respeta las horas de descanso en la zona horaria de la persona. Y deja de insistir cuando la persona no responde: si ignora tus avisos varios días seguidos, espacia (elige tú el número de días y mídelo). Un aviso que nadie abre durante una semana no está recuperando a nadie; está enseñando a ignorarte. Ofrece en ajustes cambiar la hora y elegir qué avisos quiere: es mejor que alguien apague uno a que los apague todos.</p>
+
+<h3>Rachas: que sumen sin castigar</h3>
+<p>La racha es una de las mecánicas más fuertes para volver mañana y una de las más peligrosas. Chou la coloca en la motivación por miedo a perder, la que llama de sombrero negro: funciona rápido y quema. Clear propone la regla de no fallar dos veces: perder un día es un accidente; perder dos es empezar a dejarlo. Llévalo al diseño:</p>
+<ul>
+<li>Un día perdido no rompe la racha si recuperas al siguiente, o la persona tiene un comodín que se gana usando la app.</li>
+<li>Lo que se acumula no se pierde: el avatar no baja de nivel, los puntos dominados no se borran. La racha es un contador, el progreso es patrimonio.</li>
+<li>El aviso de racha habla de lo que llevas, no de lo que vas a perder. «Llevas 4 días» frente a «¡Vas a perder tu racha!».</li>
+<li>La racha empieza a mostrarse cuando ya hay algo que proteger, no el día 0.</li>
+</ul>
+<p>Y recuerda lo que dice el capítulo de Hooked sobre la ética: Leo Glow habla a chicos jóvenes con inseguridades sobre su aspecto. Una mecánica que funciona por ansiedad ahí no es solo un riesgo de abandono; es lo contrario de tu postura.</p>
+
+<h3>Retención de suscriptores: otra curva</h3>
+<p>En una app de pago hay dos retenciones. La de uso (¿vuelve?) y la de dinero (¿la prueba se cobra?, ¿el anual renueva?). Tzuo pone en el centro la segunda: un negocio de suscripción vale lo que conserva, no lo que vende. Las dos están conectadas: un suscriptor que no abre la app en el mes dos es una cancelación que todavía no ha ocurrido. La pregunta que <a href="505-lean-analytics.html">Lean Analytics</a> te deja para TCM es exactamente esta: qué fracción de quien paga sigue activo cuatro semanas después.</p>
+
+<h2>Qué dicen tus datos</h2>
+
+<h3>TCM</h3>
+<ul>
+<li><strong>No hay curva.</strong> La app no manda <code>days_since_install</code> y no tienes retención a 7 ni a 30 días. No sabes si el anual que cobra lo cobra a estudiantes que vuelven cada semana o a gente que se olvidó de la app el segundo día.</li>
+<li><strong>La única pista de vuelta es de septiembre (1.0.7).</strong> De 85 personas que terminaban el onboarding, 16 volvían otro día (19 %). Es una muestra pequeña, de una versión vieja, con la guía de 6 pasos encima del Inicio que ya conoces. No la uses como línea base de hoy.</li>
+<li><strong>Permiso (1.0.7).</strong> El 51 % lo concedía (52 conceden, 22 deniegan, 27 «ahora no»), y quien terminaba el onboarding no tenía ningún aviso programado. Se arregló el 29 de septiembre con un aviso diario del plan y los eventos <code>reminders_scheduled</code> y <code>notification_opened</code>. Todavía no has leído si esos avisos se programan y se abren en la 1.0.10.</li>
+<li><strong>Las pruebas se cobran.</strong> Entre el 14 y el 25 de octubre se cobraron 7 pruebas anuales en las dos tiendas. Es retención de dinero en su primera etapa, el paso del día 7 al día 8. La siguiente, la renovación del anual, no la verás hasta dentro de un año; lo que sí puedes ver antes es si esos suscriptores siguen abriendo la app.</li>
+</ul>
+
+<h3>Leo Glow</h3>
+<ul>
+<li><strong>La curva de Android.</strong> d1 11,6 %, d3 5,5 %, d7 1,1 %, en la ventana del 26 de octubre, sin cambio claro frente a la del 19 de octubre. De cada cien personas que instalan, unas doce vuelven al día siguiente y una al séptimo día. El informe no da el tamaño de la cohorte en esa ventana; con unas 8,6 descargas diarias en Play, cualquier semana son pocas decenas de personas, así que el 1,1 % puede ser una persona más o una menos. Lo que no es ruido es la forma: la curva no se aplana en la primera semana.</li>
+<li><strong>La pista de qué retiene.</strong> En la lectura del 11 de octubre (98 altas reales del 2 al 11), quien hacía una acción del plan el día cero volvía en un 53 %; quien solo giraba la ruleta, 0 de 9. Muestras pequeñas, pero apuntan a que el plan retiene y la ruleta sola no.</li>
+<li><strong>iOS no tiene curva fiable.</strong> Ya viste que 212 supuestos usuarios de iOS eran tu Mac. Hasta que la separes, no leas retención de iOS.</li>
+<li><strong>Los avisos, cambiados pero sin leer.</strong> Desde la 2.0.4 el aviso de la mañana nombra la acción del plan y abre ese día. Los eventos para leerlo existen (<code>notification_opened</code> del tipo daily-plan, <code>plan_first_day_opened</code>); la lectura aún no.</li>
+<li><strong>Los anuales «cancelados».</strong> En Android, en 30 días, 22 personas empiezan un anual y 19 lo cancelan, con 0 pruebas. Ojo con la palabra: no son suscriptores que se van tras pagar, son personas que abren la compra en la hoja de Google y no la terminan. La hipótesis principal, desarrollada en <a href="#1001-muros-de-pago-y-pruebas">Muros de pago y pruebas</a>, es que la hoja no enseña la prueba de 3 días. Pero aunque la enseñara, con un d1 del 11,6 % la mayoría de esos tres días se usarían poco, y la prueba se cancelaría por desuso. El muro y la retención son el mismo problema visto desde dos lados.</li>
+</ul>
+
+<h3>Zodiaco</h3>
+<ul>
+<li><strong>El experimento que no querías hacer.</strong> Entre el 26 de septiembre y el 1 de octubre no se programaba ningún aviso (R8 rompió la programación en la 1.1.2 y la 1.1.3) y la vuelta al día siguiente cayó del 26 % al 15 %. Es la prueba más clara que tienes de cuánto pesa el aviso en una app diaria: cuatro de cada diez vueltas del día siguiente dependían de él.</li>
+<li><strong>El arreglo.</strong> La 1.1.4 lo corrigió: permiso concedido y aviso programado en 14 de 14 casos comprobados.</li>
+<li><strong>Falta la curva larga.</strong> Igual que en TCM, la medición de días desde la instalación hay que arreglarla; sin ella no tienes d7 ni d30 utilizables. Con unas 800 personas al mes (795 en los 30 días hasta el 26 de octubre) es la app con más volumen para leer cohortes en cuanto la tengas.</li>
+<li><strong>Por qué importa el dinero.</strong> El rewarded de duplicar la recompensa diaria, 336 enseñados y 7,81 USD en 30 días, es lo que más cobra, y solo lo ve quien vuelve. Lo tienes en <a href="#1002-anuncios-bien-hechos">Anuncios bien hechos</a>.</li>
+</ul>
+
+<h3>Anime Food</h3>
+<ul>
+<li>El <code>distinct_id</code> está roto: no puedes saber si quien abre hoy es el mismo que abrió ayer. Cualquier cifra de retención aquí sería inventada. 142 personas en 30 días en Android, 17 nuevas en la última semana. En iOS (categoría Niños) no hay analítica.</li>
+</ul>
+
+<h3>Las apps menores</h3>
+<ul>
+<li>Las siete no tienen analítica. No sabes si alguien vuelve a ninguna.</li>
+</ul>
+
+<h2>Qué hacer en cada app</h2>
+
+<h3>TCM: dibuja la curva antes de tocar nada más</h3>
+<ol>
+<li><strong>Manda <code>days_since_install</code>.</strong> Un evento diario de uso (o una propiedad en el evento de apertura) con los días desde la instalación, calculados a partir de una fecha que guardes la primera vez que se abre la app. Mientras sale la build, puedes aproximar la cohorte en PostHog por la fecha de primera apertura; sirve para empezar, pero se ensucia con reinstalaciones y cambios de dispositivo.</li>
+<li><strong>Fija una línea base sin cambiar nada.</strong> Cuatro cohortes semanales de la 1.0.10 con d1, d7 y d30, y además «abrió al menos una vez en la semana 4». Con unas 43 descargas diarias en Play tienes casi 300 personas por cohorte semanal: suficiente para una curva estable en Android. iOS, júntalo por quincenas.</li>
+<li><strong>Separa la curva de quien paga.</strong> Qué fracción de quien empieza la prueba, de quien la paga y de quien no paga sigue activa en la semana 4. Si los suscriptores no vuelven, tienes un riesgo de cancelación masiva en la renovación y el trabajo de los próximos meses es el mes dos, no el muro.</li>
+<li><strong>Separa estudiantes y curiosos.</strong> La pregunta del objetivo del onboarding ya los distingue. Dos curvas, no una. Es la hipótesis más importante de <a href="201-marca-tcm.html">su estrategia de marca</a>: ¿el estudiante paga más y se queda más?</li>
+<li><strong>Comprueba los avisos de la 1.0.10.</strong> <code>reminders_scheduled</code> por persona que concede el permiso y <code>notification_opened</code> por aviso programado. Si se programan y no se abren, cambia el texto; si no se programan, es un fallo.</li>
+<li><strong>Avisos al ritmo del estudio, no diarios por defecto.</strong> El aviso del plan, a la hora y con los minutos que la persona eligió, nombrando la sesión de hoy («10 min · Meridiano del Estómago»). Si algún día pruebas avisos de calendario (antes de un examen, por estación para el curioso), que sean una opción que la persona activa. Es una hipótesis.</li>
+<li><strong>Un registro de lo dominado.</strong> Lo que proponen Clear y Chou para TCM: puntos, meridianos y fórmulas que ya sabes, visibles. Es la inversión que hace difícil irse y el contenido natural del repaso de mañana. Sin rachas: TCM es seria y su hábito es semanal.</li>
+<li><strong>El aviso del día cinco de la prueba</strong>, con lo que la persona ha hecho, ya está en <a href="#1001-muros-de-pago-y-pruebas">Muros de pago y pruebas</a>. Es también un aviso de retención: recordarle lo que ha conseguido es la mejor razón para volver el día seis.</li>
+</ol>
+
+<h3>Leo Glow: mover el d7 con un cambio cada vez</h3>
+<ol>
+<li><strong>Lee la 2.0.4 antes de añadir nada.</strong> Por cohorte semanal: fracción que completa la acción del día 1 el día cero, fracción que abre el aviso daily-plan del día siguiente y d1/d7 de quien completa frente a quien no. Es lo que pide <a href="#1003-onboarding-y-activacion">Onboarding y activación</a>; aquí lo importante es cruzarlo con la curva.</li>
+<li><strong>Escribe la predicción y pon fecha.</strong> Lo que te propone <a href="604-the-lean-startup.html">The Lean Startup</a>: varios experimentos sobre el d7 de aquí a final de enero, cada uno con una predicción escrita antes («si hago X, d7 pasa de 1,1 % a 3 %»). Si ninguno lo mueve de forma clara, toca replantear el producto, no el muro.</li>
+<li><strong>La hora la elige la persona.</strong> Al cerrar la acción del día, que elija a qué hora quiere la de mañana, y que el aviso llegue a esa hora con una frase de Leo ligada a lo que hizo hoy. Es la inversión que carga el disparador de Eyal y la intención de implementación de Clear en un solo gesto.</li>
+<li><strong>Rachas con red.</strong> Revisa cómo se rompe hoy la racha. Que un día perdido no la rompa si recuperas al siguiente, que el avatar no baje nunca y que el aviso nunca amenace con perder. Las ligas, solo si tienen gente activa: con estas cifras, una liga vacía desanima más que motiva.</li>
+<li><strong>Busca a los que vuelven el día 7.</strong> Son pocos. Mira en PostHog qué hacen que no hacen los demás: ¿completan el plan, hablan con Leo, giran la ruleta, entran en ligas? Y habla con ellos (lo verás en el capítulo siguiente). Lo que tengan en común es tu candidato a momento «aha» de la segunda semana, la fase de andamiaje de Chou.</li>
+<li><strong>Una métrica adelantada.</strong> Esperar siete días a cada lectura es lento. Mide la fracción que completa un segundo reto en las primeras 48 horas y comprueba si predice el d7. Si lo hace, úsala para decidir antes.</li>
+<li><strong>Los anuales que no se terminan.</strong> Primero lo de <a href="#1001-muros-de-pago-y-pruebas">Muros de pago y pruebas</a>: comprobar con una cuenta nueva qué enseña la hoja de Google y registrar <code>trial_eligible</code> y <code>offer_id</code>. Después, que la prueba de 3 días tenga uso: aviso al día siguiente de empezarla con la acción del plan y aviso antes del cobro con lo que la persona ha hecho, la fecha y cómo gestionar la suscripción. Con tres días, el aviso antes del cobro es casi el segundo aviso.</li>
+<li><strong>Separa tu Mac.</strong> Excluye tus dispositivos de prueba de la retención de iOS antes de leerla.</li>
+</ol>
+
+<h3>Zodiaco: proteger el aviso y medir la semana</h3>
+<ol>
+<li><strong>Arregla la medición de días desde la instalación</strong> antes de añadir anuncios, como dice <a href="203-marca-zodiaco.html">su estrategia de marca</a>. Con unas 800 personas al mes, en cuanto la tengas puedes leer d1, d7 y d30 por cohorte semanal y por país.</li>
+<li><strong>Prueba el aviso en cada build de release.</strong> La caída del 26 % al 15 % la provocó una herramienta de compilación que en desarrollo no actuaba. Antes de cada subida: instala la build de release, concede el permiso, adelanta la hora y comprueba que el aviso llega y abre la lectura. Diez minutos que protegen cuatro de cada diez vueltas del día siguiente.</li>
+<li><strong>Una alarma propia.</strong> Mira cada día los avisos programados por persona con permiso. Si baja a cero en una versión, lo sabrás en un día y no en una semana.</li>
+<li><strong>La hora del café.</strong> Pide en el onboarding o tras la primera lectura a qué hora quiere su lectura; apílala sobre un momento que ya existe. Que el aviso diga algo de hoy y de su animal, no «tu horóscopo está listo».</li>
+<li><strong>La mascota como motivo, sin castigo.</strong> Un aviso cuando la mascota tiene hambre es un buen disparador si es amable y opcional. Si la mascota sufre o pierde lo ganado cuando no entras, pasas al sombrero negro.</li>
+<li><strong>Febrero.</strong> El pico del Año Nuevo chino traerá gente nueva. Ten los avisos probados y la curva medida antes, para poder comparar la cohorte de febrero con las de noviembre y diciembre. No leas el pico como un éxito de nada que hayas cambiado.</li>
+</ol>
+
+<h3>Anime Food: primero el identificador</h3>
+<ol>
+<li><strong>Arregla el <code>distinct_id</code></strong> en la próxima build. Sin él no hay retención que medir.</li>
+<li><strong>Mide por semanas o por meses, no por días.</strong> Su uso natural es ocasional. La pregunta útil es si quien guarda una receta vuelve en el mes siguiente.</li>
+<li><strong>Avisos, pocos y opcionales en Android.</strong> Una receta nueva de un «mundo» que la persona eligió, como mucho de vez en cuando. En iOS, categoría Niños: nada de rachas ni de urgencias.</li>
+<li><strong>Recuerda la pregunta de fondo.</strong> Si la retención resulta muy baja, refuerza la idea de que es un motor de contenido y no un producto, como plantea <a href="204-marca-anime-food.html">su estrategia de marca</a>.</li>
+</ol>
+
+<h3>Las apps menores</h3>
+<p>No pongas avisos ni rachas en apps donde no sabes qué hace nadie. Si decides invertir en alguna, el primer evento es una apertura con la fecha de instalación; con eso ya tienes d1 y d7. Las que no vayan a recibir ese evento, decídelas en una frase: se mantienen sin tocar o se archivan.</p>
+
+<h2>Qué medir</h2>
+<ul>
+<li><strong>Curva por cohorte semanal.</strong> Evento: apertura diaria con <code>days_since_install</code>. Fracción: personas de la cohorte que abren el día 1, el día 7 y el día 30 / personas que instalan esa semana. Tamaño: para que el d7 de una semana no sea pura casualidad necesitas que la cifra esperada de personas que vuelven no sea de una o dos. Con el criterio que ya usas (desconfía de diferencias menores que dos veces la raíz de la cifra esperada), con 300 instalaciones y un d7 del 1 % esperas 3 personas, y solo un salto a más de 6 o 7 sería una señal: por eso en Leo Glow tendrás que juntar al menos un mes de instalaciones de Play para leer el d7, mientras que en TCM, con unas 300 instalaciones por semana en Play, bastan una o dos semanas. Es un cálculo sobre tus cifras, no una regla estadística fina.</li>
+<li><strong>Retención semanal de TCM.</strong> Fracción de cada cohorte con al menos una sesión en la semana 1, 2, 3 y 4. Mejor que el d7 diario para una app de estudio.</li>
+<li><strong>Suscriptores activos a las cuatro semanas.</strong> Personas que pagan (o están en prueba) con al menos una sesión en la semana 4 / personas que pagan. Con 10 altas a la semana en TCM Android, junta un mes antes de leerla.</li>
+<li><strong>Pruebas que se cobran.</strong> Desde RevenueCat, por semana de inicio, con ocho días de retraso en TCM y cuatro en Leo Glow. Ya está en <a href="#1001-muros-de-pago-y-pruebas">Muros de pago y pruebas</a>.</li>
+<li><strong>Salud de los avisos.</strong> Evento: <code>reminders_scheduled</code>. Fracción: personas con aviso programado / personas con permiso concedido, por versión. Tiene que estar cerca del total; si baja, es un fallo, no una preferencia. Con 14 casos comprobados ya detectaste el arreglo de Zodiaco: para esto no hacen falta muestras grandes, hace falta mirarlo cada día.</li>
+<li><strong>Apertura de avisos.</strong> Evento: <code>notification_opened</code> con el tipo de aviso. Fracción: avisos abiertos / avisos programados para ese día. Por tipo y por versión. Con un par de cientos de avisos enviados ya puedes comparar dos textos de forma orientativa.</li>
+<li><strong>Vuelta con y sin aviso.</strong> d1 de quien tiene el permiso concedido frente a quien no. No es una comparación limpia (quien concede ya venía con más ganas), pero si cambias el aviso y la diferencia crece, tienes una señal. Zodiaco te dio la versión limpia sin querer: misma app, avisos rotos, 26 % frente a 15 %.</li>
+<li><strong>Bajas de permiso.</strong> En cada apertura, si el permiso sigue concedido. Si muchos lo quitan tras un cambio de frecuencia o de texto, te has pasado.</li>
+<li><strong>Rachas.</strong> Fracción de personas activas con racha de 3 días o más, y qué fracción vuelve el día después de romperla. Si casi nadie vuelve tras romperla, la racha castiga demasiado.</li>
+<li><strong>Métrica adelantada en Leo Glow.</strong> Fracción que completa un segundo reto en 48 horas, y si quien lo hace tiene mejor d7. Como en <a href="#1003-onboarding-y-activacion">Onboarding y activación</a>: con menos de unas 30 personas por grupo, diez puntos de diferencia son fácilmente ruido.</li>
+</ul>
+
+<h2>Errores comunes</h2>
+<ol>
+<li><strong>Leer usuarios activos en lugar de cohortes.</strong> La gente nueva tapa a la que se va. Una cohorte por semana, siempre.</li>
+<li><strong>Medir retención sin <code>days_since_install</code> y llamarlo curva.</strong> En TCM y Zodiaco aún no la tienes. Dilo así hasta que la tengas.</li>
+<li><strong>Medir todas las apps con la vara de una app diaria.</strong> TCM se mide por semanas; Anime Food, por meses.</li>
+<li><strong>Conceder el permiso y no avisar.</strong> Te ha pasado en TCM 1.0.7 y en Zodiaco 1.1.2 y 1.1.3. Prueba el aviso en una build de release antes de cada subida y vigila los avisos programados cada día.</li>
+<li><strong>Avisos genéricos.</strong> «Te echamos de menos» no da motivo. Nombra lo de hoy y abre esa pantalla.</li>
+<li><strong>Más avisos cuando la gente no vuelve.</strong> Si nadie abre el de hoy, mandar dos mañana acelera que te silencien. Espacia.</li>
+<li><strong>Rachas que castigan.</strong> Funcionan la primera semana y vacían la tercera. Un día perdido no debe borrar lo ganado.</li>
+<li><strong>Confundir los anuales cancelados con bajas de suscriptores.</strong> Los 19 de 22 de Leo Glow son compras que no se terminan en la hoja de Google. Se arreglan en el muro y en la retención de los tres días, no con ofertas de recuperación.</li>
+<li><strong>Creer que la prueba arregla la retención.</strong> Solo da tiempo. Si la persona no vuelve al día siguiente, una prueba de 3 días se cancela sola.</li>
+<li><strong>Leer el 1,1 % como una cifra exacta.</strong> Con pocas decenas de instalaciones por semana es una o dos personas. La forma de la curva dice más que el decimal.</li>
+<li><strong>Contar tus dispositivos.</strong> 212 «usuarios de iOS» eran tu Mac. Excluye las pruebas antes de cualquier curva.</li>
+<li><strong>Cambiar varias cosas a la vez.</strong> Aviso, racha y muro en la misma versión hacen imposible saber qué movió el d7. Un cambio por app y por semana.</li>
+</ol></section>
+
+<hr>
+
+<section id="1005-atender-a-tu-publico"><h1>Atender a tu público</h1>
+<p><em>Reseñas, soporte, encuestas, entrevistas y comunidad: cómo conocer de verdad a tus usuarios con 45 minutos a la semana, app por app.</em></p>
+
+<h2>Principios</h2>
+
+<h3>Sabes qué hace tu gente; no sabes por qué</h3>
+<p>Tu medición es mejor que la de muchos equipos de diez personas. Sabes que en TCM, del 19 al 26 de octubre, 234 personas vieron el muro en Android, 64 pulsaron pagar y 10 se dieron de alta; que en Leo Glow se empezaron 22 anuales y se cancelaron 19 en 30 días. No sabes quién es esa gente, qué esperaba al instalar ni qué pensó al irse. Los eventos te dan el qué; el porqué solo lo da hablar con personas o leer lo que escriben.</p>
+<p>Este capítulo trata de cinco formas baratas de conseguir ese porqué: reseñas, correo de soporte, encuestas cortas, entrevistas y comentarios de tus vídeos. Ninguna sustituye a los datos: sirven para formular la hipótesis que el embudo luego confirma o desmiente.</p>
+
+<h3>Cada canal te enseña a un público distinto</h3>
+<p>Quien escribe una reseña está muy contento o muy enfadado. Quien escribe al soporte tiene un problema y a menudo ya ha pagado. Quien contesta una encuesta dentro de la app sigue usándola: te habla el que se queda, no el que se fue. Quien comenta un vídeo quizá ni tiene la app. Lee cada canal sabiendo a quién representa y no sumes sus voces como si fueran una muestra.</p>
+
+<h3>Responder también es marketing</h3>
+<p>Tu respuesta a una reseña la leen, sobre todo, los que llegan después a la ficha. Un desarrollador que contesta con calma y arregla transmite que detrás hay alguien, y para una casa de marcas sin reputación común, como la tuya, esa confianza es de las pocas que se construyen sin dinero. En las dos tiendas la persona puede cambiar su reseña tras leer tu respuesta: una estrella que se convierte en cuatro cuenta una historia de arreglo.</p>
+
+<h3>Las tiendas ponen reglas para pedir reseñas, y no son negociables</h3>
+<p>Pedir una valoración está permitido; manipularla, no. Lo que conviene tener claro antes de tocar nada:</p>
+<ul>
+<li><strong>Usa el diálogo del sistema.</strong> Apple pide que la valoración dentro de la app se solicite con su interfaz nativa y no permite pantallas propias que la sustituyan; Google ofrece su API In-App Review con la misma lógica. En los dos casos el sistema decide si el diálogo aparece y limita cuántas veces lo hace al año: tu llamada es una petición, no una garantía.</li>
+<li><strong>Nada de filtrar.</strong> Google pide expresamente no hacer preguntas antes de la tarjeta (del tipo «¿te gusta la app?») para mandar solo a los contentos a la tienda, y Apple, al no permitir pantallas propias, deja fuera el mismo truco.</li>
+<li><strong>Nada de recompensas.</strong> Ni diamantes en Zodiaco, ni XP en Leo Glow, ni recetas en Anime Food a cambio de una valoración. Las dos tiendas prohíben incentivar reseñas.</li>
+<li><strong>Un enlace fijo sí vale.</strong> Un botón discreto en Ajustes («Valorar la app») que abra la ficha lo pulsa quien quiere; complementa al diálogo, no lo sustituye.</li>
+</ul>
+<p>Revisa las guías vigentes de Apple y Google antes de implementar: lo que vale es lo que digan cuando subas la build.</p>
+
+<h3>El momento de pedir es justo después de un logro, nunca después de un «no»</h3>
+<p>Es la misma regla que para el muro y el permiso de notificaciones: se pide cuando la persona acaba de recibir valor (un diagnóstico cerrado, un día del plan completo, una receta terminada). Nunca en la primera sesión, tras rechazar el muro, tras un error de pago ni encima de un anuncio. Como el sistema limita las veces, cada petición gastada en mal momento falta en el bueno.</p>
+
+<h3>Entrevistar no es un proyecto: es un hábito pequeño</h3>
+<p>The Mom Test (ficha 601) te da la técnica: habla de su vida y no de tu app, pregunta por la última vez que pasó algo y no por lo que haría, habla poco. Continuous Discovery Habits (ficha 603) te da el ritmo: contactos cortos y frecuentes, orientados a un resultado de producto, con el reclutamiento automatizado. Y su cautela vale aquí: con cuatro apps, mejor una app por mes, en bloque, que una charla suelta por app.</p>
+
+<h3>Una comunidad no se abre: se encuentra</h3>
+<p>Ya tienes una comunidad potencial y no está en tus apps: está en los comentarios de tus vídeos en TikTok, Instagram y YouTube. Kevin Kelly (ficha 803) pone dos condiciones para que unos pocos cientos de personas sostengan un trabajo: relación directa y algo nuevo con regularidad. Lo segundo te sobra; lo primero te falta, porque tu relación con la gente pasa por plataformas. Antes de abrir un Discord o un foro, que trabajando solo es moderación diaria, atiende el sitio donde ya te hablan.</p>
+
+<h2>Qué dicen tus datos</h2>
+<p>Hay pocas cifras porque casi nada de lo que importa aquí está medido. Decirlo es parte del diagnóstico.</p>
+
+<h3>Lo que sí tienes</h3>
+<ul>
+<li><strong>Páginas de soporte para dos apps.</strong> En la web están <code>/soporte/looksmax/</code> (Leo Glow, actualizada el 9 de septiembre de 2026) y <code>/soporte/anime-food/</code> (6 de octubre de 2026). Prometen que una persona real lee el correo y contesta en dos o tres días, y explican que no hay cuenta, que los datos viven en el dispositivo y cómo cambiar la elección de anuncios. La de Anime Food explica además cómo restaurar Premium y pedir reembolsos a Apple o Google.</li>
+<li><strong>La de Leo Glow se ha quedado atrás.</strong> Solo menciona iOS y no dice nada de Glow+: ni restaurar la compra, ni cancelar la suscripción, ni reembolsos. Es justo lo que más te van a preguntar.</li>
+<li><strong>TCM y Zodiaco no tienen página de soporte</strong>, aunque tienen su página de privacidad. TCM, la app que cobra, es la que más la necesita.</li>
+<li><strong>Una pregunta de procedencia en Leo Glow.</strong> Desde la 2.0.4, «cómo nos conociste» incluye «ChatGPT u otra IA». Es tu primera encuesta estructurada dentro de una app.</li>
+<li><strong>Una señal del onboarding de TCM.</strong> En la lectura de la 1.0.7 (136 personas), el 41 % cambiaba de respuesta en «Qué te cuesta»: la pregunta hace pensar, pero las opciones no son evidentes para todos.</li>
+<li><strong>El dato que más pide una conversación.</strong> En Leo Glow Android, 22 anuales empezados y 19 cancelados en 30 días, con 0 pruebas. Según el capítulo de muros, se cancelan en la hoja de Google: no son bajas de clientes, son personas que llegaron al último paso y se echaron atrás. Es la pregunta mejor delimitada del portfolio.</li>
+</ul>
+
+<h3>Lo que no tienes medido</h3>
+<ul>
+<li><strong>Valoración media y número de reseñas</strong> por app y tienda: no están en tus informes del 26 y 27 de octubre. Tampoco cuántas contestas ni cuánto tardas.</li>
+<li><strong>Correo de soporte:</strong> cuántos mensajes, de qué app, sobre qué, y si cumples los dos o tres días prometidos.</li>
+<li><strong>Peticiones de valoración:</strong> ninguna app registra un evento.</li>
+<li><strong>Entrevistas:</strong> las fichas 201, 202 y 601 proponen cinco suscriptores y tres cancelados en TCM y cinco usuarios en Leo Glow. No consta que se hayan hecho.</li>
+<li><strong>Vídeo a ficha:</strong> las descargas por 1.000 vistas que la ficha de Anime Food plantea como medida clave.</li>
+</ul>
+<p>Nada de esto necesita una build para empezar: las reseñas están en las consolas, el correo en tu bandeja y los comentarios en TikTok Studio. Falta un sitio donde apuntarlo y un rato fijo.</p>
+
+<h2>Qué hacer en todas las apps: el sistema común</h2>
+
+<h3>Plantillas para responder reseñas</h3>
+<p>Escríbelas una vez y personaliza siempre la primera frase con algo que dice la persona. Contesta en el idioma de la reseña (en TCM, el inglés es la mitad del tráfico) y sin datos personales. La base, en español:</p>
+<ol>
+<li><strong>Una estrella por un fallo.</strong> «Gracias por avisar, y siento que [el fallo] te haya estropeado [lo que intentabas]. Lo estoy mirando; si me escribes al correo de soporte con tu modelo de móvil y versión del sistema, lo encuentro antes.» Cuando salga el arreglo, edita la respuesta: «Arreglado en la versión X».</li>
+<li><strong>«No es gratis».</strong> «Entiendo que esperabas [lo que pensaba]. La app es gratuita en [lo que lo es] y la suscripción añade [lo que añade]. Con la prueba no se cobra nada hasta el día [N] y puedes cancelarla desde la tienda.» Sin discutir ni pedir perdón por cobrar. Si varias reseñas dicen lo mismo, el problema es lo que promete la ficha.</li>
+<li><strong>Cobro inesperado o reembolso.</strong> «Siento el susto. Los pagos los gestiona [Apple / Google] y no puedo devolver dinero yo, pero puedes pedirlo en [reportaproblem.apple.com / el historial de pedidos de Google Play]. Para que no se repita: [cómo cancelar].» Aquí importa ser rápido.</li>
+<li><strong>Petición de función.</strong> «Gracias por la idea. ¿Me cuentas por correo qué intentabas hacer cuando la echaste en falta?» Sin fechas: lo que importa es lo que la persona intentaba hacer.</li>
+<li><strong>Crítica de enfoque.</strong> En Leo Glow, «no escanea la cara»: «Es a propósito: Leo no puntúa caras. Trabaja con lo que puedes cambiar con hábitos: piel, sueño, postura, estilo, entrenamiento.» Tu postura es tu marca: defiéndela con calma.</li>
+<li><strong>Cinco estrellas.</strong> Contesta las que dicen algo concreto, recogiéndolo en una frase, y apunta sus palabras: son vocabulario de cliente para tu ficha.</li>
+<li><strong>Insultos o reseñas vacías.</strong> No contestes; si incumplen las normas, márcalas.</li>
+</ol>
+<p>Dos reglas fijas. En TCM, nunca consejo médico en una respuesta, aunque describan una dolencia: la app es educativa. Y nunca pidas que cambien una reseña mala: arregla, avisa y deja que decidan.</p>
+
+<h3>El correo de soporte: una sola bandeja, tres etiquetas</h3>
+<p>Todas tus apps llevan al mismo correo. Basta con etiquetar: una etiqueta por app y tres por tipo, <strong>pago</strong> (restaurar, cobros, reembolsos, el «not allowed»), <strong>fallo</strong> e <strong>idea</strong>. Contarlas a fin de mes es tu primera medida de soporte.</p>
+<p>Tres plantillas de correo te cubren casi todo:</p>
+<ul>
+<li><strong>Restaurar compra.</strong> Los pasos con el nombre real de los botones y la misma cuenta de la tienda con la que se compró. Nunca pidas datos de tarjeta.</li>
+<li><strong>No puedo pagar.</strong> Para el «not allowed» de Google Play, que en TCM sufre una de cada seis personas que pulsan pagar: qué significa (cuenta, país o control parental), qué revisar en los métodos de pago de Google Play y, si su país no está entre los que Play atiende, decirlo con honestidad.</li>
+<li><strong>Fallo.</strong> Agradecer, pedir modelo, versión y lo que hizo justo antes, y decir cuándo volverás a escribir.</li>
+</ul>
+<p>Cuando resuelves el problema de alguien, hazle una pregunta de entrevista por escrito: «Por cierto, ¿qué buscabas cuando instalaste la app?». Contestada por alguien agradecido, vale más que una encuesta. Y cumple lo que prometen tus páginas: si alguien pide que borres su correo, bórralo; guarda tus notas sin nombres ni direcciones.</p>
+
+<h3>Encuestas dentro de la app: una pregunta, en el momento justo</h3>
+<p>Funciona cuando cabe en un toque y llega en un momento con sentido: una sola pregunta, respuestas cerradas con un «otra» abierto, y nunca en la primera sesión ni encima del muro. PostHog tiene encuestas; comprueba si tu SDK móvil las soporta. Si no, una pantalla propia con un evento <code>survey_answered</code> (pregunta y respuesta como propiedades) te deja cruzar la respuesta con lo que la persona hizo después.</p>
+<p>Las tres que más valen:</p>
+<ol>
+<li><strong>Procedencia</strong>, que ya tienes en Leo Glow. Su valor está en cruzarla: ¿se activa y paga distinto quien viene de ChatGPT que quien viene de TikTok?</li>
+<li><strong>«Muy decepcionado»</strong>, la de la ficha de Hacking Growth: a quien lleva al menos tres sesiones, cómo se sentiría si la app dejara de existir. Si pocos dicen «muy», el trabajo es de producto, no de crecimiento.</li>
+<li><strong>Cancelación</strong>, en Leo Glow (más abajo).</li>
+</ol>
+<p>Lee las respuestas como frases, no como porcentajes, hasta tener unas 30 por grupo: el mismo umbral orientativo que usas para la vuelta al día siguiente.</p>
+
+<p><strong>Medir la petición de valoración.</strong> En todas las apps, registra <code>review_prompt_requested</code> con la condición que lo disparó y la versión. No sabrás si el diálogo se mostró, pero podrás comparar reseñas nuevas por semana antes y después de cada condición.</p>
+
+<h2>Qué hacer en cada app</h2>
+
+<h3>TCM: escuchar a quien paga y a quien estuvo a punto</h3>
+<ul>
+<li><strong>Crea la página de soporte</strong> en <code>/soporte/medicina-china/</code>, con la plantilla de las otras: restaurar y cancelar en cada tienda, reembolsos, el error de pago de Google Play y el aviso de que la app es educativa. Comprueba que la URL de soporte de las dos fichas apunta a una página que existe.</li>
+<li><strong>Pide la valoración al terminar un diagnóstico</strong>, en la segunda o tercera sesión: es donde la app demuestra lo que vale y donde convierte el muro contextual. No la pidas el día del aviso de cobro de la prueba.</li>
+<li><strong>Haz las entrevistas pendientes.</strong> Cinco suscriptores y tres cancelados, con los guiones de la ficha 601. Aquí reclutar es más fácil: entre el 14 y el 25 de octubre se cobraron 7 pruebas anuales. Resuelven la pregunta de toda su estrategia de marca: si paga y se queda más el estudiante o el curioso.</li>
+<li><strong>Recluta dentro de la app.</strong> Una tarjeta fija en el Inicio para suscriptores y para quien lleva varias sesiones: «¿Me cuentas en quince minutos cómo estudias? Te regalo [un mes / acceso anticipado].» Es la invitación automatizada de Torres.</li>
+<li><strong>Una pregunta el día cinco de la prueba</strong>, junto al aviso con lo que ha hecho la persona: «¿Para qué estás usando TCM?», con las opciones del objetivo del onboarding más «otra». Si cambia respecto al primer día, has aprendido algo que el onboarding no ve.</li>
+<li><strong>Mira las reseñas en inglés.</strong> Es el idioma con peor cierre del onboarding en la lectura de la 1.0.7 (62 % frente al 78 % en español). Si se quejan de textos raros, ya tienes la causa.</li>
+</ul>
+
+<h3>Leo Glow: la encuesta de cancelación y cinco conversaciones</h3>
+<p>Es la app donde preguntar rinde más, porque el problema está delimitado: la gente empieza el anual y se va en la hoja de Google. Antes, haz lo que pide el capítulo de muros: comprobar con una cuenta nueva y un evento con <code>trial_eligible</code> y <code>offer_id</code> si la hoja enseña la prueba. Si enseña un precio en lugar de «3 días gratis», no necesitas encuesta para saber qué pasa.</p>
+<p><strong>La encuesta de cancelación, en dos momentos.</strong></p>
+<ol>
+<li><strong>Al volver de la hoja sin comprar.</strong> Una pregunta, una vez por persona, sin bloquear nada: «¿Qué ha pasado?» con «No vi que tuviera días gratis», «Es caro para mí», «Solo estaba mirando» y «Otra cosa» (con texto), y debajo un botón para seguir gratis. Con unas 52 vistas del muro por semana en Android, júntala varias semanas.</li>
+<li><strong>Cuando alguien quite la renovación de la prueba.</strong> Ni Apple ni Google te dejan entrar en su flujo de cancelación. Puedes detectar con RevenueCat que la renovación está desactivada y preguntar una vez al abrir la app: «¿Nos dices por qué?», con «Por si se me olvida cancelar», «No lo estoy usando», «No es lo que esperaba», «Es caro», «Otra». La primera es prudencia, no rechazo (lo recuerda el capítulo de muros): esa persona necesita un aviso antes del cobro con lo que ha hecho, no una oferta. Google Play enseña además su propia encuesta de motivos; mira en la consola qué puedes ver de ella.</li>
+</ol>
+<p><strong>Las cinco conversaciones.</strong> Su ficha de marca termina con la pregunta de quién descarga y por qué, y la 601 te da el guion. Recluta a los pocos que llegan al día 7 (con d7 al 1,1 % serán muy pocos: invitación fija y algo a cambio, como un mes de Glow+) y a quien contestó «Otra cosa». La pregunta que da miedo es la de las apps que puntúan la cara: si la nota enganchó aunque sentara mal, tu problema es de posicionamiento.</p>
+<ul>
+<li><strong>Actualiza la página de soporte</strong>: Glow+ (restaurar, cancelar, reembolsos), Android además de iOS, y una línea con la postura («Leo no puntúa caras»).</li>
+<li><strong>Pide la valoración al cerrar el día 3 del plan</strong>: quien llega ahí ha demostrado que vuelve. Nunca a cambio de XP, tiradas de la ruleta o mensajes con Leo.</li>
+<li><strong>Apunta las palabras de los comentarios</strong> en los vídeos de Leo, sin adoptar el vocabulario de la parte más tóxica del nicho, como advierte su ficha de marca.</li>
+</ul>
+
+<h3>Zodiaco: preguntar antes del pico</h3>
+<ul>
+<li><strong>Crea la página de soporte</strong> en <code>/soporte/zodiaco-chino/</code>: datos en el dispositivo, anuncios y consentimiento, qué hacer si no llegan los avisos, la mascota y la tienda de diamantes. Tenla lista antes de que salga iOS, que lleva 28 días en cola de revisión.</li>
+<li><strong>Una pregunta, no una entrevista.</strong> La ficha 601 dice que aquí lo que vale oro antes de febrero es saber para qué abren la app. Tras la tercera lectura: «¿Para qué usas sobre todo la app?» con «Mi lectura del día», «Compatibilidad con alguien», «Cuidar a mi mascota», «Otra». Con unas 800 personas al mes tendrás respuestas antes del pico; si gana la compatibilidad, se confirma la hipótesis de su ficha de marca.</li>
+<li><strong>Pide la valoración tras la tercera vuelta</strong>, al cerrar una lectura, nunca tras un rewarded ni a cambio de diamantes o comida para la mascota.</li>
+<li><strong>Lee las reseñas por idioma.</strong> Una queja repetida en un idioma suele ser un texto mal traducido o una lectura que suena rara en esa cultura.</li>
+<li><strong>Mei y Lin como voz.</strong> Que contesten los comentarios de los vídeos con la voz cálida de la app, y que firmen el canal directo si algún día lo abres (ficha 803).</li>
+</ul>
+
+<h3>Anime Food: la comunidad está en los vídeos, y con cuidado</h3>
+<ul>
+<li><strong>iOS está en la categoría Niños (9-11).</strong> Sin analítica ni anuncios, y sin encuestas ni invitaciones desde ahí. Cualquier enlace que saque de la app, incluido el del correo, va detrás de la puerta parental. Como dice la ficha 601: no recluyas desde la app ni contactes con menores.</li>
+<li><strong>Tu investigación son los comentarios.</strong> Cada semana, tres cosas: qué platos pide la gente, quién dice haberlo cocinado y quién pregunta por la app. Si casi nadie cocina, tu público consume el contenido y no el producto: apunta a motor de contenido, la decisión que su ficha de marca te pide tomar.</li>
+<li><strong>Cuenta fans, no vistas.</strong> Define al fan (ficha 803), por ejemplo «comenta en tres vídeos distintos» o «dice haber hecho una receta». Solo si hay un núcleo tiene sentido preguntar si comprarían un recetario o un pack de temporada.</li>
+<li><strong>En Android, una pregunta al guardar la primera receta</strong>, cuando el <code>distinct_id</code> esté arreglado: «¿La vas a cocinar?» (sí, quizá, solo la quería ver). Con 142 personas al mes, júntala durante semanas.</li>
+</ul>
+
+<h3>Las apps menores</h3>
+<p>Sin analítica, las reseñas y el correo siguen funcionando. Una vez al mes, lee lo nuevo en las consolas de Walk the World, Grandpa's Kitchen, Mythology Tower Defense, Bizarre Pose Camera, Stranger Quiz, Stranger Foods y Christmas Dinner, y contesta con las plantillas. No pidas valoraciones ni pongas encuestas. Si alguna recibe peticiones concretas (Stranger Quiz, con unas 2 descargas diarias en iOS, es la candidata), es una señal para decidir si merece analítica; si solo recibe quejas de fallos que no vas a arreglar, es un argumento para archivarla.</p>
+
+<h2>El ritual de 45 minutos a la semana</h2>
+<p>Todo cabe en un bloque fijo semanal, el mismo día y a la misma hora, que la máquina de vídeo no te pueda comer. Una hoja de cálculo con cinco columnas basta: fecha, app, canal, frase literal y etiqueta (pago, fallo, idea, valor, confusión).</p>
+<table>
+<tr><th>Minutos</th><th>Qué haces</th></tr>
+<tr><td>10</td><td>Reseñas nuevas de las cuatro apps principales en las dos tiendas: contestas las de una a tres estrellas y apuntas una frase por reseña útil.</td></tr>
+<tr><td>10</td><td>Correo de soporte: contestas con las plantillas y etiquetas.</td></tr>
+<tr><td>5</td><td>Respuestas de las encuestas de la semana, copiadas como frases.</td></tr>
+<tr><td>5</td><td>Comentarios de los vídeos: tres frases que se repitan.</td></tr>
+<tr><td>15</td><td>Una conversación con un usuario de la app del mes o, si no hay nadie en la agenda, las invitaciones para la siguiente. Ficha de una página el mismo día.</td></tr>
+</table>
+<p>Una vez al mes, quince minutos más: releer la hoja entera buscando lo que se repite (en frío, como recomienda Fitzpatrick) y escribir una sola decisión de producto que salga de ahí. Si no sale ninguna, hay que preguntar mejor.</p>
+<p><strong>La app del mes.</strong> Una propuesta: noviembre para TCM (entrevistas pendientes, reclutamiento más fácil), diciembre para Leo Glow (con el muro nuevo ya unas semanas y la encuesta de cancelación con respuestas), enero para Zodiaco (antes del pico de febrero). Si el muro de Leo Glow sale antes, intercambia las dos primeras.</p>
+<p>La semana que no tengas 45 minutos, haz la versión mínima de la ficha de Atomic Habits: cinco reseñas o respuestas y una frase anotada. Lo que no vale es saltarse tres semanas: el correo pendiente se convierte en una tarde y deja de ser hábito.</p>
+
+<h2>Qué medir</h2>
+<ul>
+<li><strong>Valoración media y reseñas nuevas por semana</strong>, por app y tienda, incluida la valoración de la versión actual. Hoy no lo tienes: apúntalo en el ritual.</li>
+<li><strong>Reseñas de una a tres estrellas contestadas</strong> (objetivo: todas, en menos de una semana) y cuántas cambian de nota tras tu respuesta.</li>
+<li><strong>Correos por semana, app y etiqueta</strong>, y si cumples los dos o tres días prometidos. Más «pago» tras una release es una alarma temprana.</li>
+<li><strong>Peticiones de valoración</strong> (<code>review_prompt_requested</code>) frente a reseñas nuevas por semana, sin esperar precisión.</li>
+<li><strong>Tasa de respuesta por encuesta</strong> (<code>survey_answered</code> entre <code>survey_shown</code>). Si cae, la pregunta llega en mal momento.</li>
+<li><strong>Respuesta cruzada con lo que hace después.</strong> Quien dijo «no vi los días gratis», ¿vuelve a intentar comprar? Quien vino de ChatGPT, ¿se activa más? Ahí la encuesta deja de ser opinión y se vuelve segmento.</li>
+<li><strong>Entrevistas por mes y decisiones que salen de ellas.</strong> Lo que cuenta, para Torres, es si cambian lo que construyes.</li>
+<li><strong>Fans por app</strong>, con la definición de cada una (ficha 803): te dirá si Zodiaco y Anime Food tienen núcleo o solo audiencia.</li>
+</ul>
+<p>Casi todo serán números de un dígito por semana: no conviertas cinco respuestas en un porcentaje.</p>
+
+<h2>Errores comunes</h2>
+<ol>
+<li><strong>Leer las reseñas como si fueran tus usuarios.</strong> Escriben los extremos. Una reseña repetida es una pista; una reseña sola es una persona.</li>
+<li><strong>Contestar en caliente.</strong> La respuesta seca la leen todos los que llegan a la ficha. Usa la plantilla y relee.</li>
+<li><strong>Filtrar a los contentos hacia la tienda</strong> con un «¿te gusta la app?» previo. Google lo prohíbe y Apple no deja construirlo.</li>
+<li><strong>Recompensar la valoración</strong> con diamantes, XP, recetas o días de suscripción. Prohibido en las dos tiendas.</li>
+<li><strong>Pedirla en el peor momento:</strong> primera sesión, tras un «no» al muro, tras un error de pago, encima de un anuncio.</li>
+<li><strong>Preguntar «¿usarías…?».</strong> Cámbialo por «cuéntame la última vez que…», y no enseñes la app hasta el final de la charla.</li>
+<li><strong>Una gran encuesta en lugar de una pregunta en el momento justo.</strong> Diez preguntas las contesta quien se aburre.</li>
+<li><strong>Abrir una comunidad que no puedes atender.</strong> Un Discord vacío es peor que ninguno.</li>
+<li><strong>Olvidar a los menores y la salud.</strong> Nada de contacto desde Anime Food en Niños, nada de consejo médico en TCM.</li>
+<li><strong>Escuchar y no decidir.</strong> Una hoja llena de frases sin una decisión al mes es curiosidad, no descubrimiento.</li>
+</ol></section>
+
+<hr>
+
+<section id="1006-plan-por-app"><h1>Plan por app</h1>
+<p><em>Tu lista de trabajo para noviembre: dónde está cada app, qué conseguir este mes, tareas ordenadas por impacto con su medida y su umbral, lo que no toca y un calendario de cuatro semanas.</em></p>
+
+<h2>Cómo usar esta lista</h2>
+<p>Tu noviembre de trabajo empieza el 15, cuando vuelves. Las cuatro semanas de este plan son las mismas que las de <a href="1203-que-hacer-al-volver.html">Qué hacer al volver</a>: del 15 al 22 de noviembre, del 22 al 29, del 29 al 6 de diciembre y del 6 al 13. Ese capítulo marca las prioridades generales; este las baja a cada app. Si en algún punto parecen decir cosas distintas, manda aquel.</p>
+<p>Cuatro reglas para toda la lista:</p>
+<ul>
+<li><strong>Un cambio por app y por semana.</strong> Con muestras de 30 a 200 personas, dos cambios a la vez no se pueden leer.</li>
+<li><strong>La vara de medir es el valor por persona que empieza</strong>, no cuántos pasan una pantalla. Lo aprendiste con la bienvenida de TCM.</li>
+<li><strong>Los umbrales son míos, no datos.</strong> Son puntos de decisión orientativos, sacados de tus cifras. Con altas de un dígito, desconfía de diferencias menores que dos veces la raíz de la cifra esperada, el criterio que ya usas en las fichas.</li>
+</ul>
+
+<h2>TCM / Medicina China</h2>
+<p><strong>Situación.</strong> La única app con negocio: unas 43 descargas diarias en Play y 10,7 en iOS, y un muro (1.0.10) por el que, en Android, de 234 personas que lo ven en una semana 64 pulsan pagar y 10 se dan de alta; el anual con prueba cobra (12 de 87) y el mensual no (1 de 9). Lo que no sabes es cuánta gente sigue a los 30 días, porque la app no manda days_since_install.</p>
+<p><strong>Objetivo de noviembre.</strong> Recuperar a quien quiere pagar y no puede, y tener por primera vez una curva de retención que se pueda leer. Sin tocar lo que ya vende.</p>
+<h3>Tareas, por orden de impacto</h3>
+<ol>
+<li><strong>La pantalla para «not allowed».</strong> En 30 días, 29 personas y 74 intentos: una de cada seis que pulsa pagar. Dos casos, dos tratos: en los países donde Play no vende, sin precios y con un mensaje honesto para seguir gratis; en la cuenta que no puede pagar en un país donde sí se vende, explicación, botón a los métodos de pago de Google Play y «recuérdamelo mañana». Revisa primero si el aviso que tienes desde el 1 de octubre ya hace parte de esto, y añade país y motivo a premium_purchase_failed si no van.<br>
+Mide: personas con fallo que compran en los siete días siguientes (hoy, cero), por motivo y país.<br>
+Éxito: alguna compra recuperada con unas 20 personas con fallo (una semana). Fracaso: cero tras dos semanas; entonces lo recuperable era menos de lo que parecía y das la pantalla por terminada sin invertir más.</li>
+<li><strong>Medir la retención: days_since_install.</strong> Es lo que más condiciona el resto del año y lo que falta en tu marca (lo verás en «Retención y notificaciones»). Aprovecha la misma build para el aviso de versión nueva dentro de la app: 41 personas siguen en la 1.0.9.<br>
+Mide: vuelta a los días 1, 7 y 30 por cohorte semanal de versión, y personas que quedan en la 1.0.9.<br>
+Éxito: a mediados de diciembre puedes leer el día 7 de al menos dos cohortes semanales de la 1.0.10. Fracaso: el evento llega vacío o con huecos; arréglalo antes de mirar nada más.</li>
+<li><strong>Cinco suscriptores y tres cancelados.</strong> El guion del Mom Test de la Parte VI. La pregunta que decide la categoría: ¿el estudiante paga más y se queda más que el curioso? Cómo pedir la conversación, en «Atender a tu público».<br>
+Mide: conversaciones hechas y, en cada una, para qué abrió la app la primera vez y qué hacía antes.<br>
+Éxito: ocho conversaciones antes del 6 de diciembre y una respuesta, aunque sea provisional, a estudiante frente a curioso. Fracaso: menos de cuatro; entonces cambia de canal (pregunta dentro de la app) en lugar de esperar.</li>
+<li><strong>Los muros contextuales, medidos por su source.</strong> El diagnóstico es lo que vende (el muro tras un diagnóstico vendía 1 de 11 cuando el del onboarding vendía 1 de 88). Comprueba que cada final de diagnóstico ofrece la prueba con un resultado más completo bloqueado y que en todos los muros, no solo en el del onboarding, el anual sale preseleccionado y el mensual en pequeño.<br>
+Mide: altas por vista de cada muro, por source; plan_selected = anual.<br>
+Éxito: la fracción que elige el anual no baja y las altas por vista de home_card se mantienen o suben (7,2 % en 30 días). Con unas 150 vistas por muro ya se lee. Fracaso: baja; deshaz el cambio de ese muro y no toques los demás.</li>
+<li><strong>El aviso del día cinco de la prueba.</strong> Con lo que ha hecho la persona, la fecha del cobro y un enlace para gestionar la suscripción. Antes de escribirlo, comprueba con la 1.0.10 que reminders_scheduled y notification_opened funcionan para quien concede el permiso.<br>
+Mide: pruebas cobradas por cohorte de semana de inicio en RevenueCat. Éxito: la fracción no baja frente a octubre. Fracaso: baja en dos cohortes seguidas; revisa el texto, no quites la transparencia.</li>
+<li><strong>Leer el precio por país.</strong> Brasil, México e India están rebajados desde el 13 de octubre y no tienes lectura. Es solo lectura: compara altas por vista del muro antes y después, agrupando los tres países frente a los que no tocaste.<br>
+Éxito: suben; amplía a los siguientes países por tráfico en diciembre. Fracaso: no se mueven; el problema allí no era el precio y no rebajas más.</li>
+</ol>
+<h3>Qué no hacer este mes</h3>
+<ul>
+<li>No toques el diseño del muro del onboarding de la 1.0.10. Convierte en las dos tiendas.</li>
+<li>No cambies precio y muro a la vez, ni en el mismo país.</li>
+<li>No decidas la categoría (estudio o bienestar) antes de las ocho conversaciones.</li>
+<li>No pongas anuncios. No prometas salud. No mezcles estudiante y curioso en la misma pieza.</li>
+<li>No vuelvas a ofrecer el vitalicio como «última oportunidad»: 106 de 112 lo rechazaban.</li>
+</ul>
+
+<h2>Leo Glow</h2>
+<p><strong>Situación.</strong> El posicionamiento más diferenciado y el muro que no cobra: en Android, en 30 días, 181 personas ven el muro, 22 empiezan un anual, 19 lo cancelan y no hay ninguna prueba; d1 11,6 % y d7 1,1 %. Unas 8,6 descargas diarias en Play y 4,0 en iOS, donde llegó el primer pago real en 30 días.</p>
+<p><strong>Objetivo de noviembre.</strong> Que existan pruebas en Android. Es el arreglo de mayor retorno por esfuerzo de todo el portfolio.</p>
+<h3>Tareas, por orden de impacto</h3>
+<ol>
+<li><strong>Comprobar la hoja de Google antes de tocar el muro.</strong> Con una cuenta nueva en un móvil real, mira si la hoja enseña los 3 días gratis. Añade dos datos al evento de pago: qué oferta se envía (offer_id) y si la persona es elegible (trial_eligible). La hipótesis es que la app pasa a Play el plan base en lugar de trial-3d; es una hipótesis hasta que lo veas.<br>
+Mide: fracción de pulsaciones de pago que envían trial-3d a una cuenta elegible.<br>
+Éxito: casi todas las elegibles reciben la oferta con prueba. Fracaso: no la reciben; ese es el fallo, arréglalo antes de la tarea 2 o la tarea 2 no servirá.</li>
+<li><strong>Copiar el muro de TCM.</strong> Anual preseleccionado, «3 días gratis» en el botón, «no se cobra nada hoy» debajo, precio por semana, ahorro frente al mensual en una cifra, el resto de planes visibles y secundarios. Si la persona no es elegible, el botón dice el precio de verdad.<br>
+Mide: pruebas iniciadas por persona que ve el muro, en Android; iOS júntalo por quincenas.<br>
+Éxito: 2 o más pruebas por semana con unas 50 vistas (en TCM el mismo cambio dio 12 con 234 vistas, cerca del 5 %). Fracaso: cero pruebas dos semanas seguidas; el problema sigue después del botón y vuelves a la tarea 1.</li>
+<li><strong>Medir el día 1 del plan de la 2.0.4.</strong> plan_first_day_opened, plan_action_toggled del día 1 y notification_opened del tipo daily-plan, por cohorte. Una prueba de tres días no sirve si la persona no vuelve al día siguiente. Cómo leer la vuelta por cohorte lo tienes en «Retención y notificaciones».<br>
+Mide: fracción que completa la primera acción el día cero, y d1 de quien la completa frente a quien no.<br>
+Éxito: la acción separa la vuelta (la pista del 11 de octubre era 53 % frente a 0 de 9). Fracaso: no separa con al menos unas 30 personas por grupo; entonces no es tu momento «aha» y lo apuntas para diciembre.</li>
+<li><strong>Preguntar qué compra la gente.</strong> Una pregunta en la app a quien completa la primera semana: ¿Leo, el plan de 30 días, las ligas? Y, para quien cancela, la encuesta de cancelación de «Atender a tu público». Hasta que lo sepas, el muro nombra el plan diario.<br>
+Mide: respuestas recogidas.<br>
+Éxito: unas veinte respuestas antes del 13 de diciembre. Fracaso: menos de cinco; busca a cinco usuarios para hablar, como pide la estrategia de marca.</li>
+<li><strong>Ofrecer el rewarded de la ruleta.</strong> 66 cargas y 1 enseñado. Un botón claro con lo que da (segunda tirada, mensaje extra con Leo). Mide rewarded enseñados por persona activa; si sigue sin verse, el momento elegido no es el bueno.</li>
+</ol>
+<h3>Qué no hacer este mes</h3>
+<ul>
+<li>No bajes el precio: con cero pruebas, el problema no es el número.</li>
+<li>No muevas el muro detrás del primer logro el mismo mes que cambias su diseño. Es la siguiente prueba, no esta.</li>
+<li>No cambies otra vez el nombre sin medir, no amplíes a otros públicos y no uses el «antes y después» como gancho.</li>
+<li>No inviertas en más tráfico ni en keywords: con un d7 del 1 %, cada descarga se evapora.</li>
+</ul>
+
+<h2>Zodiaco Chino</h2>
+<p><strong>Situación.</strong> Solo Android: 795 personas en 30 días y unas 13,3 descargas diarias en Play. Unos 10,6 USD en 30 días por anuncios, de los que 7,81 vienen del rewarded de duplicar la recompensa diaria. iOS (la 1.1.3) lleva 28 días en cola de revisión y la web perdió casi todas las impresiones en Google desde el 12 de octubre. Cuando los avisos se rompieron, la vuelta al día siguiente cayó del 26 % al 15 %.</p>
+<p><strong>Objetivo de noviembre.</strong> Saber cuánta gente vuelve y llegar a diciembre con los anuncios y la temporada preparados para el pico de febrero.</p>
+<h3>Tareas, por orden de impacto</h3>
+<ol>
+<li><strong>Arreglar days_since_install y mirar la retención antes de tocar anuncios.</strong> Es la primera semana de <a href="1203-que-hacer-al-volver.html">Qué hacer al volver</a>. Prueba también un aviso programado en la build de release: el minify ya los rompió una vez.<br>
+Mide: d1 y d7 por país y por cohorte semanal.<br>
+Éxito: el d1 vuelve a la zona del 26 % que tenías antes del fallo de avisos. Fracaso: se queda cerca del 15 %; los avisos siguen sin llegar y esa es la tarea de la semana siguiente, no los anuncios.</li>
+<li><strong>Publicar la build con los tres rewarded nuevos</strong> (ración extra para la mascota, avance de la lectura de mañana, el resto de la compatibilidad), una vez tengas una semana de retención de referencia.<br>
+Mide: rewarded por persona activa y día, ingreso por persona activa, y d1 y d7 de la cohorte frente a la anterior.<br>
+Éxito: sube el ingreso por persona activa y la retención no cae más allá del ruido. Fracaso: la retención cae de forma clara; quita el rewarded que la está causando, aunque cobre.</li>
+<li><strong>Preparar febrero.</strong> Fichas, avisos y vídeos para «horóscopo chino 2027», como dice la segunda semana de <a href="1203-que-hacer-al-volver.html">Qué hacer al volver</a>. Planéalo sin contar con iOS y ten preparada la comunicación para el día que salga.<br>
+Éxito: el 13 de diciembre la lista está cerrada y los cambios de anuncios tienen fecha antes de mediados de enero. Fracaso: llega diciembre con fichas a medias; recorta a los idiomas clave.</li>
+<li><strong>Dejar de precargar donde no se enseña.</strong> 3.506 peticiones sin relleno en la precarga del Oráculo, más las de Compatibilidad y Mascota.<br>
+Mide: peticiones sin relleno y anuncios enseñados en los huecos con nombre.<br>
+Éxito: bajan las primeras sin que bajen los segundos. Fracaso: bajan los enseñados; vuelve a precargar solo ese formato.</li>
+<li><strong>Comprobar si la compatibilidad es el motor.</strong> Una medida, no un cambio: vuelta al día siguiente de quien hace una compatibilidad el día cero frente a quien no, con al menos unas 30 personas por grupo. Si separa, lo apuntas para la marca de 2027.</li>
+</ol>
+<h3>Qué no hacer este mes</h3>
+<ul>
+<li>Ningún intersticial en el Oráculo, ni en la primera sesión.</li>
+<li>No añadas mediación: primero formatos bien colocados y el volumen de la temporada.</li>
+<li>Ni muro, ni suscripción, ni más páginas en la web.</li>
+<li>No esperes a Apple para pensar febrero.</li>
+</ul>
+
+<h2>Anime Food</h2>
+<p><strong>Situación.</strong> Unas 1,7 descargas diarias en Play y 3,0 en iOS; 142 personas en 30 días en Android. La edición de ficha del 30 de septiembre salió mal (visitantes ×0,31, adquisiciones ×0,61) y su reversión sigue sin publicar. iOS 1.3.0 rechazada y en la categoría Niños para siempre. El distinct_id está roto. Un vitalicio vendido en 30 días.</p>
+<p><strong>Objetivo de noviembre.</strong> Decidir su papel (mantenimiento y contenido) y que deje de pedirte atención.</p>
+<h3>Tareas, por orden de impacto</h3>
+<ol>
+<li><strong>Declarar el papel.</strong> Mantenimiento en apps.toml, con el esfuerzo en contenido. Es una decisión de diez minutos y la que más tiempo te devuelve.<br>
+Éxito: el estado cambiado la primera semana. Fracaso: sigues haciendo ASO fino en diciembre.</li>
+<li><strong>Publicar el deshacer de nombres en Play.</strong> Ya estaba propuesto en el informe del 24 de octubre y es la única decisión con evidencia.<br>
+Mide: visitantes y adquisiciones de la ficha, frente a las semanas anteriores al 30 de septiembre.<br>
+Éxito: se acercan a lo que tenías antes de la edición en dos o tres semanas. Fracaso: no se mueven; lo dejas así y no haces más ediciones.</li>
+<li><strong>Medir el contenido por descargas, no por vistas.</strong> Descargas por 1.000 vistas de vídeo y visitas a la ficha por formato (ASMR, compilación, anime → real).<br>
+Éxito: un formato trae claramente más visitas a la ficha; ese es el que produces en diciembre. Fracaso: ninguno trae nada medible; la app es un destino secundario y el contenido se juzga por seguidores que vuelven.</li>
+<li><strong>El distinct_id, si haces una build.</strong> No abras una solo para esto, pero si la abres, que vaya dentro, con el trato del «not allowed» de TCM. Éxito: puedes seguir a una persona de la primera a la segunda sesión.</li>
+</ol>
+<h3>Qué no hacer este mes</h3>
+<ul>
+<li>No hagas ASO fino: es el retorno por hora más bajo del portfolio.</li>
+<li>Ningún intersticial en los pasos de una receta.</li>
+<li>Nada de anuncios ni de sortear la categoría Niños en iOS.</li>
+<li>No te alejes del anime hacia «cocina asiática».</li>
+</ul>
+
+<h2>Las siete apps menores</h2>
+<p><strong>Situación.</strong> Walk the World, Grandpa's Kitchen, Mythology Tower Defense, Bizarre Pose Camera, Stranger Quiz, Stranger Foods y Christmas Dinner están en las tiendas sin proyecto de analítica. Alguna descarga algo (Stranger Quiz iOS ronda las 2 descargas diarias y 11 visitas) y no sabes qué hace nadie dentro.</p>
+<p><strong>Objetivo de noviembre.</strong> Una decisión por app, escrita en una frase: dar de alta lo mínimo o declararla sin trabajar.</p>
+<h3>Tareas, por orden de impacto</h3>
+<ol>
+<li><strong>Las siete frases.</strong> Para cada una: mantener sin tocar, dar de alta analítica mínima o archivar. Es la segunda semana de <a href="1203-que-hacer-al-volver.html">Qué hacer al volver</a>, y la decisión de foco de Essentialism la cierra en las semanas siguientes.<br>
+Éxito: siete de siete decididas el 29 de noviembre y su estado cambiado en apps.toml. Fracaso: alguna sin decidir; queda congelada por defecto.</li>
+<li><strong>Solo para las que reciban analítica: un evento.</strong> Sesión y «primera partida terminada» en los juegos; «primera receta abierta» en los recetarios. Nada de muros ni de formatos de anuncio nuevos antes de tener ese evento.<br>
+Éxito: el evento llega y puedes contar personas que vuelven. Fracaso: no tienes tiempo de hacerlo este mes; entonces la app pasa a la lista de las que no se trabajan.</li>
+</ol>
+<h3>Qué no hacer este mes</h3>
+<ul>
+<li>No inviertas marca, ni ASO, ni vídeo.</li>
+<li>No pongas muros ni toques precios donde no hay uso medido.</li>
+</ul>
+
+<h2>Calendario de las cuatro semanas</h2>
+<p>Una cosa clara por app y por semana. Si una semana solo puedes con una línea, que sea la de Leo Glow en la primera y la de TCM en las demás.</p>
+
+<h3>Semana 1 (15-22 de noviembre)</h3>
+<ul>
+<li><strong>TCM:</strong> la pantalla para «not allowed», y los mensajes a los cinco suscriptores y tres cancelados.</li>
+<li><strong>Leo Glow:</strong> comprobar la hoja de Google y copiar el muro de TCM.</li>
+<li><strong>Zodiaco:</strong> arreglar days_since_install y probar un aviso en la build de release.</li>
+<li><strong>Anime Food:</strong> declarar mantenimiento y publicar el deshacer de nombres en Play.</li>
+<li><strong>Menores:</strong> nada; solo la lista de las siete.</li>
+</ul>
+
+<h3>Semana 2 (22-29 de noviembre)</h3>
+<ul>
+<li><strong>TCM:</strong> days_since_install y el aviso de versión nueva en la misma build.</li>
+<li><strong>Leo Glow:</strong> leer la primera semana del muro nuevo y medir el día 1 del plan.</li>
+<li><strong>Zodiaco:</strong> primera lectura de retención y lista de febrero.</li>
+<li><strong>Anime Food:</strong> mirar la ficha tras el deshacer; ningún cambio.</li>
+<li><strong>Menores:</strong> las siete frases.</li>
+<li><strong>Todas:</strong> la frase de posicionamiento al principio de cada ficha y la cola de cinco experimentos con ICE (<a href="1203-que-hacer-al-volver.html">Qué hacer al volver</a>).</li>
+</ul>
+
+<h3>Semana 3 (29 de noviembre - 6 de diciembre)</h3>
+<ul>
+<li><strong>TCM:</strong> los muros contextuales por source y el anual preseleccionado en todos.</li>
+<li><strong>Leo Glow:</strong> la pregunta en la app sobre qué compra la gente.</li>
+<li><strong>Zodiaco:</strong> publicar la build de los tres rewarded.</li>
+<li><strong>Anime Food:</strong> descargas por 1.000 vistas por formato de vídeo.</li>
+<li><strong>Menores:</strong> el estado en apps.toml.</li>
+</ul>
+
+<h3>Semana 4 (6-13 de diciembre)</h3>
+<ul>
+<li><strong>TCM:</strong> leer el precio por país, el primer día 7 y las conversaciones; escribir la respuesta a estudiante frente a curioso.</li>
+<li><strong>Leo Glow:</strong> con tres semanas de muro, decidir si la prueba funciona o si vuelves a la hoja de Google. El rewarded de la ruleta, solo si sobra tiempo.</li>
+<li><strong>Zodiaco:</strong> leer la cohorte del rewarded y cerrar la lista de febrero.</li>
+<li><strong>Anime Food:</strong> nada nuevo; elegir el formato de vídeo de diciembre.</li>
+<li><strong>Menores:</strong> el evento mínimo, solo en las que lo merezcan.</li>
+</ul>
+<p>El 13 de diciembre, haz la revisión que pide <a href="1203-que-hacer-al-volver.html">Qué hacer al volver</a> y escribe el plan de diciembre con lo que hayas medido, no con lo que esperabas medir.</p></section>
+</article>
+<footer></footer>
+</main></body></html>

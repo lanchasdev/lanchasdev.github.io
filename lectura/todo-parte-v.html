@@ -1,0 +1,496 @@
+<!doctype html>
+<html lang="es"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Parte V: Crecimiento, retención y hábito</title>
+<meta name="description" content="Todo el documento en una sola página, ordenado por partes.">
+<meta name="author" content="Claude">
+<meta property="og:title" content="Parte V: Crecimiento, retención y hábito">
+<meta property="article:published_time" content="2026-10-29">
+<style>
+:root{--bg:#fbfaf7;--fg:#1f2933;--muted:#6b7280;--line:#e5e7eb;--accent:#9a3412}
+@media(prefers-color-scheme:dark){:root{--bg:#12100e;--fg:#ede7d4;--muted:#9a9384;--line:#2c2823;--accent:#e8a33d}}
+body{margin:0;background:var(--bg);color:var(--fg);font:18px/1.7 Georgia,"Times New Roman",serif}
+main{max-width:40em;margin:0 auto;padding:1.5rem 1rem 4rem}
+h1{font-size:1.8rem;line-height:1.25;margin:.2rem 0 1rem}
+h2{font-size:1.3rem;margin:2.2rem 0 .6rem;color:var(--accent)}
+a{color:var(--accent)}
+em{color:var(--muted)}
+hr{border:0;border-top:1px solid var(--line);margin:2rem 0}
+nav,footer{font:14px/1.5 -apple-system,sans-serif;color:var(--muted)}
+nav a,footer a{margin-right:1rem}
+li{margin:.35rem 0}
+</style></head><body><main>
+<nav><a href="./">← Índice</a></nav>
+<article>
+<section id="500-parte-v-crecimiento-y-habito"><h1>Parte V: Crecimiento, retención y hábito</h1>
+<p><em>Seis libros para pasar de conseguir descargas a conseguir gente que vuelve, que paga y que se queda.</em></p>
+<h2>El problema que resuelve esta parte</h2>
+<p>Sabes traer gente. El ASO por mercado, medido edición a edición, y la máquina de vídeo con avatares que publica sola en tres redes te dan un caudal diario de descargas que muchos desarrolladores solos no tienen. Lo que se te escapa está después de la descarga. Leo Glow retiene al 11,6 % el primer día y al 1,1 % a la semana: de cada cien personas que la instalan, una sigue ahí siete días después. En TCM no tienes curva de retención medida, así que no sabes si el anual que cobra lo cobra a gente que estudia cada semana o a gente que se olvidó de cancelar. Zodiaco vive de un rewarded que solo ve quien vuelve, y su pico real es un mes al año. Anime Food no sabe todavía si es un producto o un escaparate para el contenido.</p>
+<p>Todo eso es la misma pregunta: qué pasa con una persona después de que tu ficha la ha convencido. Dos libros hablan de crecimiento como sistema (cómo elegir canales y cómo experimentar sin equipo), dos hablan de hábito (cómo se forma una conducta repetida, en un producto y en una persona), uno habla de medir lo justo y uno habla de motivación y juego, que es exactamente lo que Leo Glow y el compañero de Zodiaco ya llevan dentro sin un marco detrás.</p>
+<h2>Orden de lectura recomendado</h2>
+<ol>
+<li><strong>Lean Analytics.</strong> Empieza por medir. Te obliga a decidir en qué etapa está cada app y cuál es la única cifra que importa ahora mismo en cada una. Sin eso, el resto de libros te dará ideas que no sabrás si funcionan.</li>
+<li><strong>Hooked.</strong> El modelo más corto y más útil para diagnosticar por qué Leo Glow no se usa al día siguiente. Léelo con la app abierta.</li>
+<li><strong>Atomic Habits.</strong> Lo mismo desde dentro de la persona. Sirve para diseñar las rachas y la ruleta de Leo Glow, la lectura diaria de Zodiaco y, de paso, tu propia rutina durante y después del viaje.</li>
+<li><strong>Actionable Gamification.</strong> Ahora que entiendes el hábito, este libro te da el vocabulario para revisar mecánicas concretas: ligas, niveles, mascota, recompensas. Y te avisa de cuándo esas mecánicas queman al usuario.</li>
+<li><strong>Hacking Growth.</strong> Con métricas y mecánicas claras, este libro te enseña a montar un ritmo de experimentos. Está pensado para equipos; tendrás que adaptarlo a uno solo.</li>
+<li><strong>Traction.</strong> Cierra la parte mirando hacia fuera: qué canales de adquisición no estás probando. Lo dejo al final a propósito, porque traer más gente a un cubo con agujeros es lo último que necesitas ahora.</li>
+</ol>
+<p>Si solo tienes tiempo para tres en el viaje, lee Lean Analytics, Hooked y Atomic Habits. Son los que atacan directamente tus dos carencias más caras: retención y conocer a tus usuarios.</p>
+<h2>La idea que los une</h2>
+<p>Los seis libros, cada uno con su lenguaje, dicen lo mismo: <strong>el crecimiento sano empieza en el momento en que el usuario obtiene valor por primera vez y se sostiene si ese valor se repite</strong>. Ellis y Brown lo llaman el momento «ajá» y lo ponen antes que cualquier táctica de adquisición. Eyal lo llama recompensa variable seguida de inversión. Clear lo llama hacer que el hábito sea satisfactorio para que vuelva. Croll y Yoskovitz lo convierten en una métrica de «pegajosidad» que hay que superar antes de pasar a la viralidad. Chou lo describe como la fase de andamiaje, cuando el jugador ya no necesita que le enseñen y vuelve por motivos propios. Y Weinberg y Mares, que hablan casi solo de adquisición, advierten que ningún canal salva un producto que la gente abandona.</p>
+<p>Para ti eso se traduce en una regla práctica para el próximo trimestre: <strong>antes de añadir un canal, una red o una app, mide si la gente vuelve, y descubre qué hace distinta la que vuelve</strong>. Cada libro de esta parte te da una herramienta para hacer esa pregunta mejor. Ninguno te la responde: la respuesta está en PostHog y en cinco conversaciones con usuarios reales, no en las páginas.</p>
+<p>Una advertencia: casi todos están pensados para empresas con equipo y millones de usuarios. Busca en cada uno el principio, no el procedimiento.</p></section>
+
+<hr>
+
+<section id="501-hacking-growth"><h1>Hacking Growth (Sean Ellis y Morgan Brown, 2017)</h1>
+<p><em>Un método para crecer a base de experimentos rápidos sobre todo el embudo, no solo sobre la adquisición.</em></p>
+<h2>Por qué este libro, para ti</h2>
+<p>Tu forma de trabajar ya se parece a lo que propone el libro: cambias una ficha, la mides por edición en visitas y decides. Pero solo lo haces en la parte de arriba del embudo, la tienda. Por debajo, donde está tu verdadero problema, no hay ritmo de experimentos. En Leo Glow 22 personas empezaron el anual en Android en 30 días y 19 lo cancelaron; la retención a siete días es del 1,1 %. En TCM el muro del onboarding convierte, pero 1 de cada 6 que pulsa pagar choca con el error «not allowed» de Google Play, y nadie ha medido si los que se suscriben siguen abriendo la app. Hacking Growth es el libro que te enseña a llevar tu disciplina de ASO (hipótesis, cambio, medición) a la activación, la retención y la monetización. Y empieza con una pregunta incómoda que tienes que hacerle a Leo Glow antes que nada: ¿es imprescindible para alguien?</p>
+<h2>La tesis en dos minutos</h2>
+<p>Ellis acuñó el término <em>growth hacking</em> y en este libro, junto a Brown, intenta rescatarlo de la caricatura de trucos y atajos. Su idea central es que el crecimiento no sale de una genialidad aislada sino de un proceso: un equipo que mezcla producto, datos y marketing, que comparte una métrica principal y que lanza experimentos pequeños a un ritmo alto, aprendiendo de cada uno.</p>
+<p>El proceso tiene una condición previa innegociable. Antes de acelerar, el producto tiene que ser imprescindible para un grupo de usuarios. Si no lo es, todo lo que hagas para crecer solo acelera la fuga. Ellis propone medirlo preguntando a los usuarios cómo se sentirían si el producto desapareciera, y considera buena señal cuando una parte importante responde que lo echaría mucho de menos.</p>
+<p>Con esa base, el libro recorre el embudo por etapas (adquirir, activar, retener, monetizar) y en cada una muestra cómo buscar palancas con datos, idear cambios, priorizarlos con un criterio simple y probarlos. La virtud del método no es ningún experimento concreto, sino la cadencia: muchos intentos pequeños acumulan más aprendizaje que pocos proyectos grandes.</p>
+<h2>El recorrido del libro</h2>
+<h3>Bloque 1: El origen del método y el equipo de crecimiento</h3>
+<p>El libro arranca contando de dónde sale la idea: empresas tecnológicas que crecieron no por un gran lanzamiento sino porque juntaron a ingenieros, analistas y gente de marketing alrededor de una sola meta y les dieron licencia para tocar cualquier parte del producto. Los autores defienden que el crecimiento no puede ser cosa del departamento de marketing, porque las palancas más potentes están dentro del producto: el registro, la primera sesión, las notificaciones, el precio.</p>
+<p>Describen la composición de ese equipo y su papel: alguien que lo dirige y decide qué se prueba, alguien que entiende los datos, alguien que puede cambiar el producto y alguien que conoce los canales. Para ti, todos esos papeles son el mismo. Eso no invalida el método; obliga a reducirlo a una reunión semanal contigo mismo con una agenda fija.</p>
+<h3>Bloque 2: Antes de crecer, un producto imprescindible</h3>
+<p>Aquí está la parte más valiosa para Leo Glow. Los autores insisten en que el error más común es intentar crecer antes de tener un producto que la gente necesite de verdad. Proponen identificar el «momento ajá»: la experiencia concreta en la que el usuario entiende el valor del producto. Una vez identificado, el trabajo es que el mayor número posible de personas llegue a ese momento cuanto antes.</p>
+<p>Para encontrarlo recomiendan mirar qué hacen distinto los usuarios que se quedan frente a los que se van, y preguntarles directamente. También hablan de la encuesta de «muy decepcionado» como termómetro. Si pocos lo echarían de menos, el trabajo no es de crecimiento sino de producto: cambiar el mensaje, el público o la propia función central.</p>
+<h3>Bloque 3: La métrica principal y la ecuación del crecimiento</h3>
+<p>El libro pide elegir una métrica estrella, la que mejor refleja el valor que el producto da a sus usuarios, y descomponer el crecimiento en una ecuación de factores que la mueven. Por ejemplo, para un servicio de suscripción: gente que llega, por proporción que se activa, por proporción que paga, por tiempo que se queda. Cada factor es un sitio donde experimentar.</p>
+<p>La métrica estrella no tiene que ser ingresos. De hecho, los autores prefieren que sea una medida de uso valioso, porque los ingresos son consecuencia y van con retraso. Para una app de hábitos sería algo cercano a «personas que completan su reto varios días por semana», no descargas.</p>
+<h3>Bloque 4: El ciclo de experimentación</h3>
+<p>El corazón operativo del libro es un ciclo de cuatro pasos: analizar los datos para encontrar dónde hay oportunidad, generar ideas, priorizarlas y probarlas. Para priorizar proponen puntuar cada idea por su impacto esperado, la confianza que tienes en que funcione y la facilidad de hacerla, y empezar por las que más suman.</p>
+<p>Insisten en mantener una lista de ideas abierta, documentar cada prueba con su hipótesis y su resultado, y revisar en una reunión fija qué se aprendió. La velocidad importa porque la mayoría de los experimentos fallan; la única forma de encontrar los que funcionan es lanzar muchos.</p>
+<h3>Bloque 5: Adquisición</h3>
+<p>En la etapa de arriba, el libro recomienda dos cosas: encontrar el encaje entre el mensaje y el mercado (que lo que dices resuene con el público que lo lee) y el encaje entre el canal y el producto (que el canal sea natural para lo que vendes). Prefiere concentrarse en pocos canales que funcionan antes que estar en todos. También trata los bucles virales y de referidos como algo que se diseña dentro del producto, no como un añadido.</p>
+<h3>Bloque 6: Activación</h3>
+<p>La activación es llevar al usuario nuevo hasta el momento ajá. Los autores proponen mapear cada paso entre la descarga y ese momento, medir dónde se cae la gente y eliminar fricción. Pero también hablan de fricción positiva: a veces añadir un paso que hace al usuario comprometerse (elegir objetivos, personalizar) mejora la activación porque le da algo invertido. Tratan los disparadores, como notificaciones o correos, como una herramienta de activación que hay que usar con criterio para no quemar al usuario.</p>
+<h3>Bloque 7: Retención</h3>
+<p>Los autores dividen la retención en fases: la inicial, en la que se decide si el usuario se queda; la intermedia, en la que hay que convertir el uso en costumbre; y la larga, en la que el producto tiene que seguir aportando novedad. Recomiendan el análisis por cohortes para ver si los cambios mejoran la curva y señalan que una curva que se aplana, aunque sea baja, es mejor señal que una que sigue cayendo. Para la fase larga hablan de añadir funciones que mantengan el valor fresco y de recompensas que crezcan con el uso.</p>
+<h3>Bloque 8: Monetización y el ciclo virtuoso</h3>
+<p>En la última etapa se trata el precio como algo que también se experimenta: planes, anclas, momento en que se pide el pago. Los autores defienden que hay que entender qué valoran más los distintos segmentos y ofrecerles el plan correspondiente. Cierran con la idea de que todas las etapas se alimentan: mejor retención da más ingresos por usuario, lo que permite pagar más por adquirir, lo que trae más usuarios.</p>
+<h2>Los consejos del autor, convertidos en acciones</h2>
+<ol>
+<li><strong>Haz la prueba de «muy decepcionado» en Leo Glow y TCM.</strong> Una pregunta dentro de la app a usuarios con al menos tres sesiones: cómo te sentirías si la app dejara de existir. Separa respuestas por plan y por público.</li>
+<li><strong>Define una métrica estrella por app</strong>, de uso valioso, no de descargas. Escríbela en <code>apps.toml</code> o donde la vea la revisión diaria.</li>
+<li><strong>Escribe la ecuación de crecimiento de TCM</strong>: visitas de ficha, descarga por visita, llegan al muro, pulsan pagar, compra efectiva, renovación. Marca el factor más roto.</li>
+<li><strong>Abre una lista de ideas con puntuación</strong> de impacto, confianza y facilidad. Una línea por idea. Revísala una vez por semana.</li>
+<li><strong>Documenta cada experimento</strong> con hipótesis, fecha, cifra antes y después, igual que haces con las ediciones de ficha.</li>
+<li><strong>Mapea el camino al momento ajá</strong> en Leo Glow: de la descarga al primer reto completado. Cuenta pasos y mide caída en cada uno.</li>
+<li><strong>Busca fricción positiva</strong>: un paso de compromiso en el onboarding que haga al usuario elegir algo propio.</li>
+<li><strong>Mide retención por cohortes semanales</strong> en todas las apps con analítica, no solo d1 y d7 sueltos.</li>
+<li><strong>Prioriza el agujero conocido antes que la idea nueva</strong>: el error «not allowed» de Play es una fuga cuantificada.</li>
+</ol>
+<h2>Aplicado a tus apps</h2>
+<h3>TCM</h3>
+<p>La ecuación de TCM tiene un factor claramente roto que no requiere creatividad: 1 de cada 6 personas que pulsa pagar en Android se encuentra con el error de Google Play. Con 64 que pulsan pagar a la semana, eso son unos diez intentos de compra perdidos semanales, en una semana en la que se dan de alta diez. Por puntuación de impacto, confianza y facilidad, es el primer experimento del trimestre, aunque no sea un experimento sino una reparación.</p>
+<p>El segundo es medir retención de suscriptores. El anual con prueba cobra 12 de 87; el mensual 1 de 9. La hipótesis del libro sería que el anual atrae a un segmento que valora el compromiso de estudio. Para comprobarlo necesitas saber si esos 12 abren la app semanas después. Si no la abren, tienes un riesgo de cancelación masiva en la renovación.</p>
+<p>Momento ajá probable (hipótesis): para el estudiante, encontrar un punto o una fórmula y ver cómo se conecta con el resto. Para el curioso, descubrir su constitución. Son dos momentos distintos para dos públicos; el onboarding podría preguntar cuál eres y llevarte al tuyo.</p>
+<h3>Leo Glow</h3>
+<p>Leo Glow está en la situación que el libro describe como peligrosa: intentar crecer sin un producto imprescindible. Con un 1,1 % a siete días, más tráfico no ayuda. Antes de tocar adquisición, haz la encuesta de «muy decepcionado» a quien haya completado varios retos, y mira qué hacen los pocos que siguen al día siete: ¿hablan con Leo, giran la ruleta, entran en ligas? Lo que tengan en común es tu candidato a momento ajá.</p>
+<p>Las 19 cancelaciones de 22 anuales en Android son otra señal: la gente prueba y decide que no vale la pena antes de pagar. La pregunta de monetización del libro (qué valora cada segmento) aquí aún no tiene respuesta porque no sabes qué valora nadie. La métrica estrella que propondría: personas que completan al menos tres retos en su primera semana.</p>
+<h3>Zodiaco</h3>
+<p>Su ecuación de ingresos es distinta: usuarios activos, por veces que abren, por veces que ven el rewarded de duplicar. La métrica estrella natural es «personas que abren la lectura diaria al menos cuatro días por semana», porque cada apertura es una oportunidad de rewarded. La estacionalidad obliga a planificar experimentos en otoño para tener la máquina lista antes del Año Nuevo chino de febrero. Tras la caída de la web por Google el 12-10, el bloque de adquisición del libro sugiere no rehacer el mismo canal sin entender por qué cayó.</p>
+<h3>Anime Food</h3>
+<p>Con 1,7 descargas diarias en Play y 3 en iOS, no tienes volumen para experimentar dentro de la app. La pregunta del libro aplicable es previa: ¿hay alguien para quien sea imprescindible? Si la respuesta honesta es no, Anime Food es un motor de contenido y su métrica estrella está fuera de la app (visualizaciones, seguidores, clics a otras apps de tu portfolio).</p>
+<h2>Preguntas para leerlo</h2>
+<ol>
+<li>¿Cuál es el momento ajá de cada una de tus apps, y cuántos pasos hay desde la descarga hasta él?</li>
+<li>¿Qué parte de este método es de equipo y qué parte puedes hacer tú solo en una hora semanal?</li>
+<li>¿Cuál de tus apps no pasaría la prueba de «muy decepcionado», y qué harías entonces?</li>
+<li>¿Qué métrica estrella elegirías para TCM sabiendo que tiene dos públicos?</li>
+<li>¿Qué experimento te da más aprendizaje por hora de trabajo ahora mismo?</li>
+</ol>
+<h2>Si solo lees una parte</h2>
+<p>Los bloques sobre el producto imprescindible y la retención. Tu problema está en el centro y el final del embudo, no en la entrada; la parte de adquisición ya la dominas por otro camino.</p>
+<h2>Cautelas</h2>
+<p>El libro está escrito para empresas con equipos dedicados y tráfico de millones. A tu volumen, la mayoría de pruebas A/B no alcanzan significación: con 4 descargas diarias en iOS de Leo Glow, un test tardaría meses. Sustituye muchas de esas pruebas por cambios secuenciales medidos en cohortes y por conversaciones con usuarios. Los casos de éxito que cuenta tienen sesgo de superviviente: no sabes cuántas empresas aplicaron lo mismo y no crecieron. Y la reunión semanal de crecimiento, sin nadie que te lleve la contraria, puede convertirse en confirmar lo que ya pensabas; escribir la hipótesis antes de mirar los datos es tu única defensa.</p>
+<h2>Para seguir</h2>
+<ul>
+<li>Alistair Croll y Benjamin Yoskovitz, <em>Lean Analytics</em>, para elegir bien la métrica estrella.</li>
+<li>Rob Fitzpatrick, <em>The Mom Test</em>, para hacer la encuesta y las entrevistas sin sesgar las respuestas.</li>
+<li>Nir Eyal, <em>Hooked</em>, para el bloque de retención visto desde la psicología del hábito.</li>
+<li>Eric Ries, <em>The Lean Startup</em>, el marco de experimentación del que este libro es heredero.</li>
+</ul></section>
+
+<hr>
+
+<section id="502-traction"><h1>Traction (Gabriel Weinberg y Justin Mares, 2015)</h1>
+<p><em>Diecinueve canales para conseguir usuarios y un método para elegir en cuál concentrarte.</em></p>
+<h2>Por qué este libro, para ti</h2>
+<p>Tienes dos canales que dominas: la tienda (ASO por mercado) y el vídeo corto con avatares publicado solo en TikTok, Instagram y YouTube. Probaste un tercero, el SEO masivo, con la web de Zodiaco de más de 1.600 páginas en 7 idiomas, y Google le retiró casi todo el tráfico desde el 12-10. Y hay uno que llegó sin buscarlo: parte del tráfico de Leo Glow viene de ChatGPT. Traction es el libro que te obliga a mirar la lista completa de canales posibles, no solo los que ya sabes usar, y a elegir con un procedimiento en lugar de con costumbre. Te sirve sobre todo para TCM, que tiene un público profesional (estudiantes y terapeutas de MTC) al que probablemente no llegues bien con vídeos virales, y para decidir si Zodiaco necesita otro canal antes de febrero.</p>
+<h2>La tesis en dos minutos</h2>
+<p>Weinberg, fundador de DuckDuckGo, y Mares parten de una observación: casi todas las empresas que fracasan no lo hacen por falta de producto sino por falta de distribución. Los fundadores tienden a construir primero y pensar en conseguir clientes después, y cuando llegan a ese punto solo prueban los canales que conocen o que están de moda.</p>
+<p>Su propuesta tiene dos piezas. La primera, que dediques a la tracción una parte grande de tu tiempo desde el principio, en paralelo al producto, no al final. La segunda, un método para elegir canal que llaman diana: haz una lista de todos los canales posibles, piensa una idea concreta para cada uno, elige los más prometedores, pruébalos de forma barata y concéntrate solo en el que funcione. Cuando ese canal se agote, repite el proceso.</p>
+<p>El libro dedica la mayor parte de sus páginas a describir diecinueve canales, cada uno con ejemplos de empresas que lo usaron y consejos de quien lo conoce. La lección de fondo es que el canal ganador suele ser uno que tus competidores ignoran, porque ahí la atención es barata.</p>
+<h2>El recorrido del libro</h2>
+<h3>Bloque 1: La tracción como la mitad del trabajo</h3>
+<p>Los autores abren defendiendo que la tracción, es decir, el crecimiento demostrable de clientes, es lo que realmente valida una empresa. Proponen una regla de reparto: aproximadamente la mitad del tiempo en producto y la otra mitad en conseguir usuarios. Construir primero y distribuir después lleva a descubrir tarde que el producto no tiene camino de llegada, y a veces que hay que cambiar el producto para que encaje con un canal.</p>
+<p>También señalan que los canales que funcionan cambian con la fase de la empresa: lo que te da los primeros cien usuarios no es lo que te da los diez mil siguientes. Por eso el ejercicio de elegir canal no se hace una vez, se repite.</p>
+<h3>Bloque 2: El método de la diana</h3>
+<p>Es el centro práctico del libro. El método tiene cinco pasos. Primero, pensar al menos una idea razonable para cada uno de los diecinueve canales, sin descartar ninguno por prejuicio. Segundo, clasificarlos en tres grupos según lo prometedores que parezcan. Tercero, elegir los tres mejores. Cuarto, probarlos con experimentos baratos y rápidos que respondan preguntas concretas: cuánto cuesta un usuario por ahí, cuántos hay disponibles, si son el tipo de usuario que quieres. Quinto, centrarte en el que funcione y exprimirlo.</p>
+<p>La clave está en el primer paso. La gente suele saltarse canales porque le parecen aburridos o ajenos. Los autores insisten en que esos canales olvidados son justo donde está la oportunidad.</p>
+<h3>Bloque 3: El camino crítico</h3>
+<p>Los autores proponen fijar una meta de tracción concreta y trazar el camino crítico hacia ella: solo las tareas imprescindibles para llegar. Todo lo que no esté en ese camino se aparca. Es una herramienta de foco: te protege de dispersarte en optimizaciones que no mueven la meta. Para ti, que tienes once apps y un abanico de canales, es probablemente la idea más útil del libro, más que la lista de canales.</p>
+<h3>Bloque 4: Canales de atención pagada y de prensa</h3>
+<p>Los primeros capítulos de canales cubren la publicidad en buscadores, en redes y en display, la publicidad fuera de internet, las relaciones con prensa y la prensa no convencional (acciones llamativas que generan cobertura). Para la publicidad, los autores insisten en medir el coste por cliente frente a lo que ese cliente vale, y en empezar con presupuestos pequeños. Para la prensa, en que los periodistas buscan historias, no productos, y en que la cobertura en medios pequeños suele ser la puerta a los grandes.</p>
+<h3>Bloque 5: Canales de contenido y búsqueda</h3>
+<p>Aquí entran el SEO, el marketing de contenidos, el correo electrónico y lo que llaman ingeniería como marketing: construir herramientas gratuitas útiles (calculadoras, widgets, pequeñas utilidades) que atraen a tu público y lo llevan al producto. Sobre SEO distinguen entre apostar por pocas búsquedas con mucho volumen o por muchas búsquedas de nicho, y subrayan que ambos caminos dependen de que el buscador valore lo que publicas. El contenido, dicen, tarda en dar fruto y requiere constancia antes de ver resultados.</p>
+<h3>Bloque 6: Canales de relación</h3>
+<p>Agrupo aquí los canales que dependen de personas: dirigirse a blogs y creadores que ya tienen a tu público, el desarrollo de negocio (acuerdos con otras empresas que comparten audiencia), la venta directa, los programas de afiliados, las ferias, los eventos presenciales, dar charlas y construir comunidad. Son canales lentos y que no escalan con un clic, pero que traen usuarios de más calidad y relaciones que se acumulan.</p>
+<h3>Bloque 7: Plataformas existentes y viralidad</h3>
+<p>Por último, el libro trata dos canales que conoces bien. Las plataformas existentes son las tiendas de apps, las redes sociales o cualquier plataforma grande donde ya está tu público: aprovechar sus mecanismos de descubrimiento, sobre todo cuando una plataforma es nueva y la competencia todavía es escasa. La viralidad es el crecimiento que generan los propios usuarios al invitar o compartir, y los autores la tratan como algo medible (cuántos usuarios nuevos trae cada usuario y en cuánto tiempo) y diseñable dentro del producto.</p>
+<h2>Los consejos del autor, convertidos en acciones</h2>
+<ol>
+<li><strong>Haz el ejercicio de los diecinueve canales por app</strong>, una línea por canal con una idea concreta, aunque te parezca absurda. Empieza por TCM.</li>
+<li><strong>Elige tres canales por app para probar este trimestre</strong>, como mucho, y uno de ellos tiene que ser uno que nunca hayas tocado.</li>
+<li><strong>Diseña cada prueba como una pregunta</strong>: cuánto cuesta un usuario, cuántos hay disponibles, si pagan. Con presupuesto y fecha de corte.</li>
+<li><strong>Fija una meta de tracción y su camino crítico</strong> para cada app viva. Tacha lo que no esté en ese camino.</li>
+<li><strong>Reparte tu semana</strong>: bloquea tiempo para tracción igual que para producto, y comprueba si de verdad lo respetas.</li>
+<li><strong>Busca canales que tu competencia ignora</strong>: si todo el nicho de looksmaxxing está en TikTok, la oportunidad puede estar en otra parte.</li>
+<li><strong>Prueba la ingeniería como marketing</strong>: una herramienta gratuita pequeña que capte a tu público y enlace a la app.</li>
+<li><strong>Mide la viralidad real</strong>: cuántas instalaciones llegan por compartir desde dentro de cada app.</li>
+</ol>
+<h2>Aplicado a tus apps</h2>
+<h3>TCM</h3>
+<p>TCM es la app donde más canales sin tocar hay. Su público profesional vive en sitios concretos: escuelas de MTC y acupuntura, asociaciones profesionales, foros de estudiantes, profesores con canal propio. El bloque de relación sugiere probar desarrollo de negocio con escuelas (licencias para alumnos, un código de descuento por curso) y afiliación con profesores que ya recomiendan libros. Es una hipótesis, pero encaja con que el anual con prueba cobre mejor que el mensual: quien estudia un curso completo piensa en años, no en meses.</p>
+<p>La ingeniería como marketing también encaja: una pequeña herramienta web gratuita (por ejemplo, un test de constitución o un buscador de puntos por síntoma) que lleve a la app. Ya tienes medicinatradicionalchina.com; la pregunta es si alberga una herramienta útil o solo páginas.</p>
+<h3>Leo Glow</h3>
+<p>El dato del tráfico desde ChatGPT es, en el lenguaje del libro, un canal emergente en una plataforma nueva, donde la competencia todavía es escasa. Conviene tratarlo como canal propio: mantener en la ficha y en glowupformen.com los conceptos que los asistentes citan, y medir cuántas instalaciones llegan por ahí cada mes. Pero recuerda el orden: con un 1,1 % de retención a siete días, cualquier canal nuevo que funcione solo acelera la fuga. Aquí la tracción va después del producto.</p>
+<p>Un canal ignorado por el nicho podría ser la comunidad: el resto de apps puntúan caras; tu postura de no hacerlo atrae a un público que quizá se reúna en foros de hábitos y mejora personal, no de estética. Es una hipótesis que puedes comprobar buscando dónde se habla de glow up sin puntuaciones.</p>
+<h3>Zodiaco</h3>
+<p>La web de SEO masivo es un caso de libro de dependencia de una plataforma: cuando el buscador cambia de criterio, el canal desaparece. La lección no es abandonar el SEO sino no tener uno solo. Para el pico de febrero, el método de la diana sugiere probar antes de enero canales que no dependan de Google: creadores de astrología en vídeo, prensa sobre el Año Nuevo chino (el bloque de prensa dice que los periodistas buscan historias, y cada febrero hay un animal nuevo que es noticia), y la compatibilidad entre dos personas como mecanismo viral dentro de la app: compartir el resultado con la otra persona.</p>
+<h3>Anime Food</h3>
+<p>Si Anime Food es un motor de contenido, su canal es justo el que ya dominas, y el libro te pide que midas qué trae: ¿los vídeos de Kai llevan a instalar Anime Food o a otras apps? Si es un producto, el canal ignorado podría ser la comunidad de cocina de anime (blogs de recetas, creadores que ya hacen el formato), siempre sin personajes ni marcas de terceros.</p>
+<h2>Preguntas para leerlo</h2>
+<ol>
+<li>¿Qué canales descartas por prejuicio y no por datos?</li>
+<li>¿Cuál es la meta de tracción de cada app para el próximo trimestre, y qué tareas están de verdad en su camino crítico?</li>
+<li>¿Qué parte de tu semana dedicas a tracción frente a producto, y cuál debería ser en cada app?</li>
+<li>¿Qué canal te haría menos dependiente de una sola plataforma?</li>
+<li>¿Qué canal funciona para el estudiante de MTC y no para el curioso, y al revés?</li>
+</ol>
+<h2>Si solo lees una parte</h2>
+<p>El método de la diana y el camino crítico. Los capítulos de canales concretos se pueden consultar cuando decidas probar uno; el método es lo que cambia tu forma de decidir.</p>
+<h2>Cautelas</h2>
+<p>El libro es de mediados de la década pasada: varios canales han cambiado mucho (la publicidad en redes, el SEO, el correo) y no habla de vídeo corto ni de asistentes de IA, que hoy son centrales para ti. Usa la lista como recordatorio de categorías, no como manual actualizado. Está pensado para startups que buscan inversión y escala, y algunos canales (venta directa, ferias) solo tienen sentido con un ticket alto; aunque para TCM, con escuelas, quizá sí lo tengan. La regla de la mitad del tiempo para tracción supone un solo producto; con once apps, el reparto tiene que ser entre apps antes que entre producto y tracción. Y el mayor riesgo para ti es usar el libro como excusa para abrir más frentes cuando tu carencia declarada es foco.</p>
+<h2>Para seguir</h2>
+<ul>
+<li>Sean Ellis y Morgan Brown, <em>Hacking Growth</em>, para lo que pasa después de que el canal trae al usuario.</li>
+<li>April Dunford, <em>Obviously Awesome</em>, porque el canal correcto depende de a quién le hablas.</li>
+<li>Rob Walling, <em>Start Small, Stay Small</em>, sobre crecer siendo un desarrollador solo.</li>
+</ul></section>
+
+<hr>
+
+<section id="503-hooked"><h1>Hooked (Nir Eyal, 2014)</h1>
+<p><em>Cómo se construyen los productos que la gente usa por costumbre: disparador, acción, recompensa variable e inversión.</em></p>
+<h2>Por qué este libro, para ti</h2>
+<p>Leo Glow es una app de hábitos que no crea hábito: un 11,6 % vuelve al día siguiente y un 1,1 % a la semana. Tiene todas las piezas que Eyal describe (una ruleta que da algo distinto cada día, un coach que responde, un avatar que sube de nivel, rachas, ligas) y aun así casi nadie da la segunda vuelta. Zodiaco depende por completo de que la gente abra la lectura diaria, porque solo así ve el rewarded que cobra. Y en TCM no sabes si quien paga el anual vuelve. Hooked es el libro más corto y directo para diagnosticar dónde se rompe el ciclo. No te dará la solución, pero te dará un mapa en cuatro casillas donde poner cada pantalla de tus apps y ver cuál está vacía.</p>
+<h2>La tesis en dos minutos</h2>
+<p>Eyal sostiene que los productos que forman hábitos lo consiguen haciendo pasar al usuario, una y otra vez, por un ciclo de cuatro fases que él llama gancho. Primero un disparador que impulsa a actuar. Después una acción sencilla que se hace esperando una recompensa. Luego una recompensa que no es siempre igual, y esa variabilidad es la que mantiene el interés. Por último, una inversión: el usuario pone algo de sí mismo en el producto (datos, trabajo, contenido, reputación), lo que lo hace más valioso para él y, a la vez, prepara el siguiente disparador.</p>
+<p>Al principio los disparadores son externos: una notificación, un correo, un icono. Con las repeticiones, el producto se asocia a un disparador interno, normalmente una emoción o un estado (aburrimiento, inseguridad, curiosidad), y el usuario lo abre sin que nadie se lo recuerde. Ese es el hábito.</p>
+<p>El libro dedica también un espacio a la ética: diferencia entre productos que ayudan a la gente a hacer lo que ya quiere hacer y productos que la explotan, y propone que el diseñador se pregunte si él mismo lo usaría y si mejora la vida de quien lo usa.</p>
+<h2>El recorrido del libro</h2>
+<h3>Bloque 1: Por qué importan los hábitos</h3>
+<p>Eyal empieza argumentando que los productos de uso habitual tienen ventajas económicas: los usuarios vuelven sin coste de adquisición, toleran mejor subidas de precio, recomiendan más y son difíciles de arrebatar a la competencia. Introduce la idea de una zona de hábito definida por dos ejes: con qué frecuencia se usa el producto y cuánta utilidad percibe el usuario. Un producto que se usa a menudo puede formar hábito aunque su utilidad sea moderada; uno que se usa poco necesita una utilidad enorme para que la gente lo recuerde.</p>
+<p>También plantea la distinción entre vitaminas y analgésicos: productos que son agradables de tener frente a productos que alivian un dolor. Y sugiere que los productos que forman hábito empiezan como vitaminas y acaban comportándose como analgésicos, porque calman un picor interno que ellos mismos han ayudado a crear.</p>
+<h3>Bloque 2: El disparador</h3>
+<p>Los disparadores externos los clasifica por su origen: los que pagas (anuncios), los que te ganas (prensa, recomendaciones), los relacionales (alguien te invita) y los propios (los que el usuario acepta recibir, como una notificación que ha permitido). Los internos son emociones, casi siempre negativas o incómodas, que el producto aprende a resolver.</p>
+<p>La tarea de diseño, según Eyal, es identificar la emoción concreta que precede al uso. Para ello propone preguntar repetidamente por qué alguien usaría el producto hasta llegar a un sentimiento, y describir con detalle el momento en que ocurre: dónde está la persona, qué estaba haciendo, qué siente.</p>
+<h3>Bloque 3: La acción</h3>
+<p>Para que la acción ocurra, Eyal se apoya en el modelo de conducta de BJ Fogg: una conducta sucede cuando coinciden motivación, capacidad y un disparador. Si falta alguno, no hay acción. De los tres, la palanca más barata suele ser la capacidad: hacer la acción más fácil. Repasa los factores que hacen algo difícil (tiempo, dinero, esfuerzo físico, esfuerzo mental, rareza social, ruptura de la rutina) y recomienda atacar el que más pese.</p>
+<p>También dedica espacio a los atajos mentales que facilitan actuar: la sensación de escasez, el efecto del contexto, el anclaje de precios, la sensación de progreso ya empezado.</p>
+<h3>Bloque 4: La recompensa variable</h3>
+<p>El núcleo psicológico del libro. Eyal explica que lo que mantiene el interés no es la recompensa en sí sino la anticipación de una recompensa que no se sabe cómo será. Distingue tres tipos: recompensas de la tribu (aprobación, pertenencia, reconocimiento de otros), de la caza (búsqueda de recursos o información, como el desplazamiento infinito) y del yo (sensación de dominio, de completar, de competencia).</p>
+<p>Advierte de dos cosas. Una, que la recompensa tiene que encajar con el motivo por el que el usuario llegó; si se queda en mera sorpresa, aburre. Dos, que la variabilidad finita se agota: un producto cuya novedad se acaba pierde el gancho. Y subraya que el usuario debe sentir que conserva su autonomía; si se siente manipulado, se resiste.</p>
+<h3>Bloque 5: La inversión</h3>
+<p>La última fase pide al usuario un pequeño esfuerzo después de la recompensa, no antes. Ese esfuerzo crea valor acumulado: preferencias guardadas, historial, seguidores, contenido creado, reputación, habilidad aprendida. Cuanto más ha invertido alguien, más le cuesta abandonar y más valioso le resulta el producto, en parte por el sesgo de dar más valor a lo que uno mismo ha construido.</p>
+<p>Además, la inversión carga el siguiente disparador: un mensaje enviado espera respuesta, una tarea programada genera un aviso, un progreso a medias invita a volver.</p>
+<h3>Bloque 6: Ética y prueba del hábito</h3>
+<p>Eyal propone una matriz de manipulación con dos preguntas: ¿mejora este producto la vida del usuario?, ¿lo usarías tú? Si las dos respuestas son sí, eres un facilitador. Si solo usas tú el producto pero no mejora vidas, eres un entretenedor; si mejora vidas pero no lo usarías, eres un vendedor que debe tener cuidado; si ninguna de las dos, estás explotando a la gente. Cierra con un proceso para comprobar si un producto genera hábito: identificar a los usuarios habituales, entender qué hacen distinto y modificar el producto para que más gente recorra ese camino.</p>
+<h2>Los consejos del autor, convertidos en acciones</h2>
+<ol>
+<li><strong>Escribe la emoción que precede al uso de cada app</strong>, con el método de preguntar «por qué» varias veces. Una frase por app.</li>
+<li><strong>Describe el momento exacto</strong>: dónde está la persona, a qué hora, qué siente. Programa los disparadores externos para ese momento.</li>
+<li><strong>Mide cuántos pasos hay entre abrir la app y la recompensa</strong> en Leo Glow y Zodiaco. Quita uno.</li>
+<li><strong>Clasifica tus recompensas</strong> en tribu, caza y yo. Busca el tipo que falta en cada app.</li>
+<li><strong>Revisa si la variabilidad se agota</strong>: cuántos retos distintos tiene la ruleta, cuántas lecturas diarias distintas genera Zodiaco antes de repetirse.</li>
+<li><strong>Pide la inversión después de la recompensa</strong>, nunca antes: primero el reto cumplido, luego elegir el de mañana.</li>
+<li><strong>Haz que la inversión cargue el siguiente disparador</strong>: lo que el usuario deja hoy debe generar el aviso de mañana.</li>
+<li><strong>Busca a tus usuarios habituales en PostHog</strong> y describe su recorrido. Ese es tu modelo de gancho real.</li>
+<li><strong>Pasa cada app por la matriz de manipulación</strong>, sobre todo Leo Glow, con un público joven y con inseguridades.</li>
+</ol>
+<h2>Aplicado a tus apps</h2>
+<h3>TCM</h3>
+<p>TCM no es un producto de uso diario por naturaleza: es una referencia. En la zona de hábito de Eyal, se usa con frecuencia baja o media y con utilidad alta. Eso no es malo; significa que su hábito no será abrirla cada mañana sino abrirla cada vez que estudias o tienes una duda. El disparador interno del estudiante es probablemente la inseguridad ante un examen o un caso; el del curioso, la curiosidad por su propio cuerpo.</p>
+<p>Hipótesis de gancho para el estudiante: disparador (repaso programado antes del examen), acción (abrir una tarjeta de punto o un caso del simulador), recompensa del yo (acertar y sentir dominio) e inversión (marcar lo que ya sabes, que alimenta el repaso siguiente). Sin medir retención no sabrás si ya ocurre. Primer paso: identifica a los suscriptores anuales que abren la app tras la prueba y mira qué pantallas usan.</p>
+<h3>Leo Glow</h3>
+<p>El diagnóstico con el modelo es claro: hay muchas recompensas pero falta un disparador interno bien elegido y una inversión que cargue el día siguiente. La emoción que lleva a alguien a descargar una app de looksmaxxing es casi seguro la inseguridad con su aspecto. El resto del nicho la explota con un escáner que puntúa la cara; tú renunciaste a eso. Bien. Pero entonces tu gancho tiene que resolver esa misma inseguridad de otra forma: con la sensación de estar haciendo algo hoy que te mejora.</p>
+<p>Revisa el orden. Si la ruleta da el reto pero completarlo no deja nada guardado, no hay inversión. Propuesta concreta: tras completar el reto, que el usuario elija la hora del reto de mañana (inversión que carga el disparador) y que Leo le mande la notificación a esa hora con una frase ligada a lo que hizo hoy. Y revisa la matriz ética: tu público incluye chicos jóvenes con inseguridades; diseñar recompensas sobre esa emoción exige ser facilitador, no explotador.</p>
+<h3>Zodiaco</h3>
+<p>La lectura diaria es un gancho clásico de caza: cada día trae información nueva sobre ti. La compatibilidad añade recompensa de tribu (descubrir algo sobre otra persona y compartirlo). El compañero con misiones y niveles añade inversión. Sobre el papel está completo. Lo que el libro te pide comprobar es la variabilidad finita: si las lecturas se perciben repetitivas, el gancho se apaga. Y el rewarded de duplicar recompensa encaja muy bien con el modelo: es una acción voluntaria tras una recompensa, por lo que no rompe la autonomía.</p>
+<h3>Anime Food</h3>
+<p>Una app de recetas tiene una frecuencia natural baja: cocinas un plato de anime de vez en cuando. Según la zona de hábito, necesitaría una utilidad enorme para formar hábito, y probablemente no la tiene. Esto apoya la idea de que Anime Food sea un motor de contenido: el gancho vive en TikTok (recompensa de caza en el feed), no en la app. Es una hipótesis que puedes comprobar con su retención si la mides en Android.</p>
+<h2>Preguntas para leerlo</h2>
+<ol>
+<li>¿Qué emoción concreta lleva a alguien a abrir cada una de tus apps?</li>
+<li>¿En qué casilla del gancho falla Leo Glow: disparador, acción, recompensa o inversión?</li>
+<li>¿Qué recompensa de tus apps es variable de verdad y cuál es siempre la misma?</li>
+<li>¿Qué inversión pide cada app después de la recompensa, y qué disparador carga?</li>
+<li>¿Dónde está cada app en la matriz de manipulación, y estás cómodo con la respuesta?</li>
+</ol>
+<h2>Si solo lees una parte</h2>
+<p>El bloque de la inversión. Es la fase que más productos olvidan y la que, por lo que se ve en tus datos, más le falta a Leo Glow. Las otras tres te sonarán; esta te dará ideas nuevas.</p>
+<h2>Cautelas</h2>
+<p>El modelo es muy convincente porque es sencillo, y por eso se puede aplicar a cualquier cosa después del hecho; cuesta más usarlo para predecir. Los ejemplos del libro son grandes redes sociales y servicios con efectos de red que tú no tienes. La parte psicológica se apoya en investigación sobre recompensas variables que se ha divulgado de forma simplificada; no la tomes como ley. El propio autor escribió después un libro sobre cómo resistirse a estas técnicas, lo que dice algo sobre sus riesgos. Para un público joven e inseguro, como el de Leo Glow, la línea ética es más fina que en una app de recetas, y en una app de salud como TCM las políticas de las tiendas también limitan qué notificaciones puedes mandar.</p>
+<h2>Para seguir</h2>
+<ul>
+<li>BJ Fogg, <em>Tiny Habits</em>, el modelo de conducta en el que se apoya Eyal, contado por su autor.</li>
+<li>James Clear, <em>Atomic Habits</em>, el hábito visto desde la persona y no desde el producto.</li>
+<li>Yu-kai Chou, <em>Actionable Gamification</em>, para clasificar las recompensas con más detalle.</li>
+<li>Nir Eyal, <em>Indistractable</em>, la otra cara del mismo autor.</li>
+</ul></section>
+
+<hr>
+
+<section id="504-atomic-habits"><h1>Atomic Habits (James Clear, 2018)</h1>
+<p><em>Los hábitos como sistema: pequeños cambios, identidad y cuatro leyes para diseñar conducta, en tus usuarios y en ti.</em></p>
+<h2>Por qué este libro, para ti</h2>
+<p>Este libro te sirve dos veces. La primera, como diseñador: Leo Glow es literalmente una app de hábitos para chicos que quieren mejorar, y su retención a siete días es del 1,1 %; Zodiaco necesita que la lectura diaria se convierta en costumbre para que el rewarded cobre. Clear explica, desde dentro de la persona, por qué un hábito arranca o se cae, y sus cuatro leyes son una lista de revisión directa para cada pantalla. La segunda, como persona: trabajas solo, con once apps, y tu carencia declarada es el foco. Vuelves de Japón el 15 de noviembre, y la vuelta es el mejor momento para decidir cómo será tu semana de trabajo. El libro te da herramientas para diseñar tu propia semana igual que diseñarías la de un usuario. Lo he escrito pensando en las dos cosas.</p>
+<h2>La tesis en dos minutos</h2>
+<p>Clear sostiene que los resultados no dependen tanto de las metas como de los sistemas: los procesos diarios que repites. Dos personas pueden tener la misma meta; la que tiene un sistema mejor es la que llega. Y los sistemas se construyen con hábitos pequeños que, mejorando un poco cada día, se acumulan como el interés compuesto. Al principio no se nota nada; los resultados aparecen tarde y de golpe, después de una fase en la que parece que no sirve.</p>
+<p>El cambio más duradero, según Clear, no es el de resultados ni el de procesos sino el de identidad: dejar de intentar hacer algo y empezar a verte como el tipo de persona que lo hace. Cada vez que repites un hábito, das un voto a esa identidad.</p>
+<p>Para construir un hábito propone cuatro leyes que siguen las cuatro fases del ciclo del hábito (señal, deseo, respuesta y recompensa): hacerlo obvio, hacerlo atractivo, hacerlo fácil y hacerlo satisfactorio. Para romper un mal hábito, se invierten: hacerlo invisible, poco atractivo, difícil e insatisfactorio.</p>
+<h2>El recorrido del libro</h2>
+<h3>Bloque 1: Lo pequeño se acumula, y los sistemas ganan a las metas</h3>
+<p>Clear abre con la idea de las mejoras marginales: un cambio mínimo, repetido durante mucho tiempo, produce una diferencia enorme. Describe una meseta de potencial latente, el periodo en el que trabajas sin ver resultados, y explica que mucha gente abandona justo ahí, antes de que lo acumulado se haga visible.</p>
+<p>Luego desmonta las metas como motor: los ganadores y los perdedores suelen tener las mismas metas, alcanzar una meta solo cambia un momento, y las metas pueden impedirte disfrutar del proceso. Lo que propone es enamorarse del sistema. Y añade la capa de identidad: los hábitos más estables son los que expresan quién crees que eres.</p>
+<h3>Bloque 2: Primera ley, hacerlo obvio</h3>
+<p>Todo hábito empieza con una señal. Clear recomienda primero tomar conciencia de los hábitos actuales, repasándolos uno a uno. Después ofrece dos herramientas. La intención de implementación: decidir de antemano cuándo y dónde harás algo, con una frase del tipo «haré X a tal hora en tal sitio». Y el apilamiento de hábitos: enganchar el hábito nuevo a uno que ya existe, del tipo «después de hacer A, haré B».</p>
+<p>Dedica mucho espacio al entorno: la conducta depende más del contexto que de la voluntad. Hacer visibles las señales de los buenos hábitos y esconder las de los malos es más eficaz que resistir a fuerza de autocontrol. Y sugiere asociar espacios a usos concretos.</p>
+<h3>Bloque 3: Segunda ley, hacerlo atractivo</h3>
+<p>El deseo es lo que mueve la conducta, y lo que nos atrae es la anticipación de la recompensa más que la recompensa misma. Clear propone el agrupamiento de tentaciones: unir algo que tienes que hacer con algo que te apetece. También habla del peso del grupo: adoptamos los hábitos de la gente con la que nos identificamos, de modo que unirse a una cultura donde el comportamiento deseado es lo normal es una de las palancas más potentes. Y propone reformular las tareas en términos de lo que ganas, no de lo que te cuestan.</p>
+<h3>Bloque 4: Tercera ley, hacerlo fácil</h3>
+<p>Aquí Clear insiste en que la repetición importa más que el tiempo: un hábito se forma por número de veces, no por días. Por eso lo esencial es reducir la fricción. Propone preparar el entorno para que la acción correcta sea la más fácil, y la regla de los dos minutos: cuando empiezas un hábito, redúcelo a una versión que se haga en dos minutos, porque lo que importa al principio es aparecer, no rendir. También recomienda automatizar lo que se pueda y usar compromisos que bloqueen la opción mala de antemano.</p>
+<h3>Bloque 5: Cuarta ley, hacerlo satisfactorio</h3>
+<p>Repetimos lo que nos produce satisfacción inmediata, y muchos buenos hábitos solo recompensan a largo plazo. La solución es añadir una satisfacción inmediata. Clear propone el registro de hábitos (marcar cada día cumplido) porque hace visible el progreso, y la regla de no fallar dos veces seguidas: fallar un día es un accidente, fallar dos es el comienzo de otro hábito. Para los malos hábitos, sugiere un compañero ante el que rendir cuentas o un contrato con consecuencias.</p>
+<h3>Bloque 6: Talento, motivación y el riesgo de los hábitos</h3>
+<p>En la parte final, Clear habla de elegir hábitos que encajen con tus inclinaciones naturales, y de la zona de dificultad justa: la motivación se mantiene cuando la tarea está en el límite de lo que puedes hacer, ni demasiado fácil ni demasiado difícil. También reconoce que el mayor enemigo del progreso a largo plazo es el aburrimiento, y que los profesionales se distinguen por seguir cuando ya no es emocionante. Cierra advirtiendo que los hábitos tienen un coste: al automatizar algo dejas de prestarle atención, y hay que revisarlos de vez en cuando para que no te estanquen.</p>
+<h2>Los consejos del autor, convertidos en acciones</h2>
+<ol>
+<li><strong>Formula la identidad de cada usuario</strong>, no su meta: en Leo Glow, «soy alguien que se cuida cada día», no «quiero ser más atractivo».</li>
+<li><strong>Pide una intención de implementación en el onboarding</strong>: a qué hora y en qué momento hará el reto o leerá su horóscopo.</li>
+<li><strong>Usa el apilamiento</strong>: sugiere enganchar el hábito a algo que ya hace («después de cepillarte los dientes…»).</li>
+<li><strong>Aplica la regla de los dos minutos al primer reto</strong>: el reto del día uno debe poder completarse casi sin esfuerzo.</li>
+<li><strong>Diseña el «no fallar dos veces»</strong> en las rachas: un día perdido no rompe la racha si recuperas al siguiente.</li>
+<li><strong>Haz visible el progreso inmediato</strong>: cada reto deja una marca que se ve, no solo un número que sube.</li>
+<li><strong>Ajusta la dificultad a la zona justa</strong>: los retos deben crecer con el usuario, no ser iguales el día 1 y el día 30.</li>
+<li><strong>Para ti: decide tu sistema semanal antes de volver</strong>, con hora y lugar para cada tipo de trabajo.</li>
+</ol>
+<h2>Aplicado a tus apps</h2>
+<h3>TCM</h3>
+<p>En TCM el hábito que importa es estudiar. El estudiante de MTC ya tiene una identidad («me estoy formando como terapeuta»), y la app puede reforzarla en lugar de inventar una: un registro visible de puntos y fórmulas dominados es un voto diario a esa identidad. La regla de los dos minutos sugiere una sesión mínima, por ejemplo tres tarjetas de repaso, para los días sin ganas. Hipótesis medible: si los suscriptores anuales que usan un repaso diario renuevan más que los que no, has encontrado tu sistema. Para el curioso del bienestar, el hábito puede ser más ligero: una recomendación de dietética según la estación.</p>
+<h3>Leo Glow</h3>
+<p>Es la app donde este libro pesa más. Con las cuatro leyes como lista de revisión:</p>
+<ul>
+<li><strong>Obvio.</strong> ¿El onboarding pide hora y lugar del reto? Si la notificación llega a una hora genérica, la señal no está atada a ningún momento de su día. Pide la intención de implementación y manda el aviso a esa hora.</li>
+<li><strong>Atractivo.</strong> El peso del grupo es la palanca de las ligas: ver que otros como tú cumplen. Pero solo funciona si las ligas tienen gente activa; con 8,6 descargas diarias y un 1,1 % a siete días, una liga puede estar vacía y producir el efecto contrario. Comprueba cuánta gente real hay en cada liga.</li>
+<li><strong>Fácil.</strong> El primer reto de la ruleta tiene que ser de dos minutos. Si la ruleta puede sacar un reto exigente el primer día, estás pidiendo rendimiento antes de que exista el hábito.</li>
+<li><strong>Satisfactorio.</strong> El avatar que sube de nivel es un registro de hábito visual muy bueno. Revisa que suba algo visible desde el primer reto, no al cabo de varios días.</li>
+</ul>
+<p>Y la identidad: renunciar a puntuar caras te deja en una posición coherente con Clear. El resto del nicho vende un resultado (una nota); tú puedes vender una identidad (alguien que se cuida). Ese mensaje puede ir en el onboarding y en Leo. Que funcione mejor es una hipótesis; mídelo en d7.</p>
+<h3>Zodiaco</h3>
+<p>La lectura diaria es un hábito pequeño y fácil por diseño: ya cumple la tercera ley. Donde puedes mejorar es en la primera: apilar la lectura sobre un momento que ya existe (el café de la mañana) pidiendo en el onboarding cuándo quiere recibirla. Y en la cuarta: el compañero con misiones y niveles es el registro visible del hábito, y el rewarded de duplicar recompensa es la satisfacción inmediata añadida. Comprueba si quien ve el rewarded vuelve más al día siguiente; si es así, es una pieza del hábito, no solo un ingreso.</p>
+<h3>Anime Food</h3>
+<p>Cocinar un plato de anime no es un hábito diario y forzarlo sería artificial. Si quieres una ley aplicable, es la segunda: el agrupamiento de tentaciones (ver anime y cocinar lo que sale) puede ser el mensaje del contenido. Para la app, el libro sugiere no perseguir el uso diario.</p>
+<h3>Y tú</h3>
+<p>Escribo esta parte porque tu carencia declarada es el foco, y el libro dice que no se arregla con fuerza de voluntad sino con sistema y entorno.</p>
+<ul>
+<li><strong>Identidad.</strong> Llevas meses siendo «el que produce y publica». El libro te invita a elegir una identidad para noviembre: quizá «el que conoce a sus usuarios». Cada entrevista, cada lectura de retención, es un voto.</li>
+<li><strong>Intención de implementación.</strong> Antes de volver, decide un bloque fijo semanal (día y hora) para mirar retención y otro para hablar con usuarios. Escrito, no pensado.</li>
+<li><strong>Entorno.</strong> La consola de aso-kit es tu entorno. Si lo primero que ves al abrirla son publicaciones y vídeos, te empujará a producir. Que la primera pantalla de la mañana muestre retención y compras por persona hace obvio lo que ahora es invisible.</li>
+<li><strong>Dos minutos.</strong> Hablar con usuarios suena grande. La versión mínima: leer cinco reseñas o respuestas al día y anotar una frase.</li>
+<li><strong>No fallar dos veces.</strong> Al volver del viaje vas a fallar días. La regla te protege: un día sin mirar datos es un accidente; dos es el principio de volver a no mirarlos.</li>
+<li><strong>Invertir los malos hábitos.</strong> Si abrir otra app nueva es tu mal hábito, hazlo difícil: una regla escrita de no empezar ninguna hasta que TCM tenga curva de retención y Leo Glow pase del 1,1 %.</li>
+</ul>
+<h2>Preguntas para leerlo</h2>
+<ol>
+<li>¿Qué identidad vende cada una de tus apps, y cuál dice el usuario que quiere?</li>
+<li>¿Cuál de las cuatro leyes falla más en Leo Glow en el primer día?</li>
+<li>¿Qué hábito tuyo te ha alejado de conocer a tus usuarios, y cómo lo harías difícil?</li>
+<li>¿En qué meseta estás ahora, y en qué app estás a punto de abandonar justo antes de que se note?</li>
+<li>¿Qué parte de tu sistema de trabajo funcionará sin ti durante el viaje, y cuál debería?</li>
+</ol>
+<h2>Si solo lees una parte</h2>
+<p>El bloque de la tercera ley, hacerlo fácil, con la regla de los dos minutos. Es el que más directamente cambia el primer día de Leo Glow y el que más se aplica a tus propios propósitos de vuelta.</p>
+<h2>Cautelas</h2>
+<p>Es un libro de autoayuda muy bien escrito, no un tratado científico: ordena ideas conocidas de la psicología de la conducta y les pone un nombre memorable, pero las anécdotas y ejemplos son ilustrativos, no prueba. Está escrito para quien quiere cambiar sus propios hábitos; aplicarlo a usuarios exige traducirlo, porque tú no controlas su entorno ni su identidad, solo los sugieres. Las rachas y los registros pueden volverse ansiedad si castigan demasiado; el propio Clear recomienda no fallar dos veces, no no fallar nunca. Y la idea de mejoras pequeñas y constantes puede servirte de excusa para no tomar decisiones grandes (cerrar apps, elegir foco) que ningún hábito sustituye.</p>
+<h2>Para seguir</h2>
+<ul>
+<li>BJ Fogg, <em>Tiny Habits</em>, más riguroso en la parte de hacer la conducta fácil.</li>
+<li>Nir Eyal, <em>Hooked</em>, el mismo ciclo visto desde el producto.</li>
+<li>Charles Duhigg, <em>The Power of Habit</em>, el libro que popularizó el bucle de señal, rutina y recompensa.</li>
+<li>Cal Newport, <em>Deep Work</em>, para el foco en el trabajo, que es tu carencia declarada.</li>
+</ul></section>
+
+<hr>
+
+<section id="505-lean-analytics"><h1>Lean Analytics (Alistair Croll y Benjamin Yoskovitz, 2013)</h1>
+<p><em>Medir lo justo: una sola métrica por etapa, según el modelo de negocio, para decidir qué hacer después.</em></p>
+<h2>Por qué este libro, para ti</h2>
+<p>Tienes muchísimos datos y pocas decisiones tomadas con ellos. PostHog, App Store Connect, Play Console, AdMob, RevenueCat, Sonar, Search Console: cada día llega una revisión con cifras de cuatro apps y dos tiendas. Pero TCM, tu único negocio de pago que funciona, no tiene curva de retención medida. Leo Glow tiene d1 y d7, pero nadie ha decidido qué cifra tiene que cambiar para que merezca seguir invirtiendo en ella. Anime Food arrastra la pregunta de si es producto o motor de contenido sin un criterio para responderla. Lean Analytics es el libro que te obliga a decir, para cada app, en qué etapa está y qué única métrica importa ahora. Lo coloco el primero de la parte porque, sin eso, las ideas de los demás libros no se pueden juzgar.</p>
+<h2>La tesis en dos minutos</h2>
+<p>Croll y Yoskovitz llevan el método de la startup ágil (construir, medir, aprender) al terreno de los números. Su punto de partida es que los emprendedores se engañan con facilidad, y que los datos sirven para no engañarse si se eligen bien. Una buena métrica es comparativa (se mira frente a otro periodo o grupo), comprensible, casi siempre una proporción o tasa, y sobre todo cambia lo que haces. Si una cifra sube o baja y no cambia ninguna decisión, es una métrica de vanidad.</p>
+<p>Su herramienta central es la métrica que más importa: en cada momento, una sola cifra concentra la atención porque refleja el mayor riesgo del negocio. Cuál sea depende de dos cosas. Del modelo de negocio (no se mide igual una app gratuita con anuncios que una suscripción) y de la etapa: primero entender el problema, después conseguir que el producto se use de forma repetida, luego que se difunda, luego que genere ingresos sostenibles y por último escalar. No se salta de etapa sin superar la anterior.</p>
+<p>El libro añade referencias de qué es una cifra normal en distintos tipos de negocio, como líneas en la arena para saber si vas bien, con la advertencia de que cada caso es distinto.</p>
+<h2>El recorrido del libro</h2>
+<h3>Bloque 1: Cómo distinguir una buena métrica</h3>
+<p>La primera parte enseña a pensar en métricas. Separa las métricas cualitativas (lo que dice la gente) de las cuantitativas (lo que hace), las de vanidad de las accionables, las exploratorias (buscar algo que no sabías) de las de informe (seguir algo que ya sabes), las adelantadas (predicen) de las retrasadas (confirman), y la correlación de la causalidad. Insiste en que los datos cualitativos de hablar con usuarios no son un complemento, sino el arranque: sin ellos no sabes qué medir.</p>
+<p>También introduce la idea de segmentar y de mirar por cohortes: agrupar a los usuarios por la fecha en que llegaron y comparar cómo se comportan, para saber si los cambios mejoran las cosas o si los números totales esconden un deterioro.</p>
+<h3>Bloque 2: La métrica que más importa</h3>
+<p>Los autores argumentan que intentar mejorar todo a la vez es no mejorar nada. Proponen elegir una sola métrica que refleje el riesgo más grande en este momento, fijarle un objetivo y dedicar el trabajo a moverla. Cuando se alcanza, la métrica cambia. Reconocen que seguirás mirando otras, pero solo una manda en las prioridades.</p>
+<p>Explican también que conviene fijar el objetivo antes de mirar los datos, para no ajustar la meta a lo que salga. Y que una métrica bien elegida tiene que poder moverse con acciones a tu alcance.</p>
+<h3>Bloque 3: Los modelos de negocio</h3>
+<p>El libro describe varios modelos y las métricas clave de cada uno: comercio electrónico, software por suscripción, apps móviles gratuitas, sitios de medios que viven de la publicidad, sitios de contenido generado por usuarios y mercados con dos lados. Para cada uno explica qué cifras importan: en suscripción, la captación, la activación, la retención y la cancelación, y el ingreso por cliente frente a lo que cuesta captarlo; en apps gratuitas, la descarga, la activación, el porcentaje que paga y el ingreso medio por usuario; en medios, el tráfico, el tiempo de atención y el ingreso por visita.</p>
+<p>La lección práctica es que un mismo portfolio puede tener varios modelos a la vez, y que mezclar sus métricas lleva a conclusiones erróneas.</p>
+<h3>Bloque 4: Las etapas</h3>
+<p>El núcleo del libro. Proponen cinco etapas. Empatía: entender un problema real hablando con gente, antes de construir. Pegajosidad: tener un producto que la gente usa repetidamente. Viralidad: que los usuarios traigan a otros. Ingresos: que el negocio sea rentable por cliente. Escala: crecer en mercados y canales.</p>
+<p>Cada etapa tiene su puerta: no pasas a la siguiente hasta superarla. Su advertencia más repetida es que mucha gente salta a buscar crecimiento o ingresos sin haber superado la pegajosidad, y entonces gasta en traer usuarios que se van.</p>
+<h3>Bloque 5: Líneas en la arena</h3>
+<p>Los autores recopilan referencias de qué valores son razonables en cada modelo y etapa: tasas de conversión, de cancelación, de participación. Su propósito es dar un punto de comparación cuando no tienes historial propio. Insisten en que son orientativas, que cada sector y cada producto es distinto, y que la mejor referencia acaba siendo tu propio histórico. No te las reproduzco porque no las tengo seguras y porque, además, son de hace más de una década.</p>
+<h3>Bloque 6: Llevarlo a la práctica</h3>
+<p>La última parte trata de cómo implantar una cultura de datos: elegir pocas cifras, hacerlas visibles para todos, fijar objetivos, no pedir datos para justificar decisiones ya tomadas. También aplica el enfoque a empresas establecidas y a proyectos dentro de organizaciones grandes. Para ti la parte útil es la disciplina personal: decidir antes de mirar y mirar con regularidad.</p>
+<h2>Los consejos del autor, convertidos en acciones</h2>
+<ol>
+<li><strong>Asigna una etapa a cada app</strong>, por escrito. Una palabra: empatía, pegajosidad, viralidad, ingresos o escala.</li>
+<li><strong>Elige una métrica que más importa por app</strong> según esa etapa, con su objetivo y su fecha.</li>
+<li><strong>Separa los modelos de negocio</strong>: TCM es suscripción, Zodiaco es app gratuita con anuncios, Anime Food quizá es medio. No las compares con la misma cifra.</li>
+<li><strong>Monta la curva de retención por cohortes semanales</strong> en TCM, empezando por los suscriptores.</li>
+<li><strong>Elimina de la revisión diaria una métrica de vanidad</strong> por app, la que mires sin que cambie nada.</li>
+<li><strong>Fija el objetivo antes de mirar</strong>: escribe qué cifra esperas antes de abrir el panel.</li>
+<li><strong>Arranca cada métrica nueva con una conversación</strong>: cinco usuarios antes de decidir qué medir.</li>
+<li><strong>Usa tu propio histórico como línea en la arena</strong>, sobre todo en estacionalidad (Zodiaco).</li>
+</ol>
+<h2>Aplicado a tus apps</h2>
+<h3>TCM</h3>
+<p>Modelo: suscripción. Etapa probable: ingresos, porque ya cobra. Pero el libro te haría una pregunta incómoda: ¿superaste de verdad la pegajosidad? Sin curva de retención no lo sabes. Es posible que el anual con prueba cobre a gente que no vuelve y que cancelará en la renovación; o que cobre a estudiantes fieles. Las dos situaciones piden estrategias opuestas.</p>
+<p>Propuesta de métrica que más importa para el próximo trimestre: proporción de suscriptores que siguen activos (al menos una sesión semanal) cuatro semanas después de pagar. Hasta tenerla, la siguiente candidata es la compra efectiva por persona que pulsa pagar, que hoy pierde 1 de cada 6 por el error «not allowed». Y el libro te pediría segmentar: estudiantes frente a curiosos. Si el onboarding pregunta quién eres, cada cohorte se mide por separado.</p>
+<h3>Leo Glow</h3>
+<p>Etapa: pegajosidad, sin superar. Un 1,1 % a siete días lo dice todo. Según el libro, cualquier trabajo en monetización o adquisición es prematuro: las 19 cancelaciones de 22 anuales son un síntoma de la misma etapa, no un problema de precio. La métrica que más importa: retención a siete días, con un objetivo concreto que fijes tú antes de cambiar nada. Y una métrica adelantada para no esperar una semana a cada lectura: porcentaje de usuarios que completan un segundo reto en las primeras 48 horas, si demuestras que predice el d7.</p>
+<p>La etapa de empatía tampoco está cerrada: no sabes de verdad quién llega a Leo Glow ni qué busca, más allá de la palabra «looksmaxxing». El libro te mandaría a hablar con usuarios antes que a tocar la ruleta.</p>
+<h3>Zodiaco</h3>
+<p>Modelo: app gratuita con anuncios. Sus métricas clave son usuarios activos, frecuencia de uso e ingreso por usuario. La métrica que más importa probablemente sea la frecuencia: aperturas semanales por usuario activo, porque cada apertura es una oportunidad de rewarded. Con unas 800 personas al mes, puedes medir cohortes mensuales sin problema. La estacionalidad obliga a comparar con el mismo periodo del año anterior, no con el mes previo; el pico de febrero no es un éxito de nada que hayas cambiado.</p>
+<h3>Anime Food</h3>
+<p>El libro te da el criterio que te falta para la duda abierta. Si es un producto, está en empatía y su métrica es cualitativa: ¿alguien la necesita? Si es un medio, su modelo es el de sitio de contenido, y sus métricas son atención y tráfico que envía a otras apps. Elige uno durante un trimestre y mide solo esas cifras. Con 1,7 y 3 descargas diarias, la app sola no te dará señal estadística; el contenido sí.</p>
+<h2>Preguntas para leerlo</h2>
+<ol>
+<li>¿Qué métrica miras cada mañana que no ha cambiado ninguna decisión en un mes?</li>
+<li>¿En qué etapa está cada app, y cuál estás tratando como si estuviera en otra?</li>
+<li>¿Qué modelo de negocio es de verdad Anime Food?</li>
+<li>¿Qué cifra de TCM, si la conocieras mañana, cambiaría tu plan para el próximo trimestre?</li>
+<li>¿Qué métrica adelantada predice la retención a siete días en Leo Glow?</li>
+<li>¿Qué datos cualitativos te faltan para saber qué medir?</li>
+</ol>
+<h2>Si solo lees una parte</h2>
+<p>El bloque de las etapas, con la idea de no saltar la pegajosidad. Resume en una página tu situación en Leo Glow y te obliga a preguntarte lo mismo sobre TCM.</p>
+<h2>Cautelas</h2>
+<p>El libro es de hace más de una década: las herramientas han cambiado y las referencias numéricas que da probablemente también. Algunos modelos de negocio que describe no encajan con apps de suscripción móvil actuales, con pruebas gratuitas y periodos de gracia. Está escrito para startups que buscan financiación y con volúmenes de datos mayores que los tuyos; con 4 descargas diarias en iOS, muchas cohortes serán demasiado pequeñas para conclusiones firmes, y tendrás que juntar semanas o apoyarte más en lo cualitativo. La métrica única es una disciplina, no una ley: en un portfolio de varias apps, tendrás varias a la vez, una por app, y eso ya es más de lo que el libro imagina para una persona.</p>
+<h2>Para seguir</h2>
+<ul>
+<li>Eric Ries, <em>The Lean Startup</em>, el marco del que nace este libro.</li>
+<li>Rob Fitzpatrick, <em>The Mom Test</em>, para la etapa de empatía.</li>
+<li>Sean Ellis y Morgan Brown, <em>Hacking Growth</em>, para convertir la métrica en experimentos.</li>
+</ul></section>
+
+<hr>
+
+<section id="506-actionable-gamification"><h1>Actionable Gamification (Yu-kai Chou)</h1>
+<p><em>Ocho motivaciones humanas para diseñar mecánicas de juego que enganchen sin quemar al usuario.</em></p>
+<h2>Por qué este libro, para ti</h2>
+<p>Dos de tus apps son, en el fondo, juegos. Leo Glow tiene ruleta de retos, avatar que sube de nivel, rachas y ligas. Zodiaco tiene un compañero con misiones, niveles y club, y un rewarded que duplica recompensas. Las dos usan mecánicas de juego que se han puesto porque «funcionan en otras apps», sin un marco que diga qué motivación activa cada una ni si se compensan. El resultado en Leo Glow es claro: con todas esas piezas, solo el 1,1 % sigue a los siete días. Chou ofrece un mapa de ocho motivaciones que permite revisar cada mecánica y preguntarse a qué impulso apela, cuál falta y cuál puede estar haciendo daño. Y distingue entre la motivación que hace sentir bien al usuario y la que lo hace volver por miedo o ansiedad, una distinción que te importa en una app para chicos inseguros.</p>
+<h2>La tesis en dos minutos</h2>
+<p>Chou critica la gamificación entendida como poner puntos, insignias y clasificaciones encima de un producto. Eso, dice, es copiar la superficie de los juegos sin entender por qué enganchan. Lo que los juegos hacen bien es activar motivaciones humanas profundas. Él propone diseñar centrado en las personas y no en las funciones, y lo resume en un marco llamado Octalysis, con ocho impulsos centrales que mueven toda conducta.</p>
+<p>Esos ocho impulsos se agrupan de dos formas. Por un lado, los impulsos que hacen sentir al usuario poderoso, con sentido y en control (lo que llama motivación de sombrero blanco) frente a los que lo mueven por urgencia, incertidumbre o miedo a perder (sombrero negro). Los segundos funcionan rápido, pero dejan mal sabor y acaban quemando. Por otro lado, los impulsos más ligados a la lógica y a las recompensas externas frente a los más ligados a la creatividad, la sociabilidad y la satisfacción interna. Un buen diseño equilibra todos según el momento del recorrido del usuario.</p>
+<h2>El recorrido del libro</h2>
+<h3>Bloque 1: Contra la gamificación superficial</h3>
+<p>Chou empieza explicando por qué tantos proyectos de gamificación fracasan: añaden mecánicas visibles (puntos, insignias, clasificaciones) sin conexión con la motivación de quien las usa. Defiende que los juegos no enganchan por esas piezas, sino porque hacen sentir cosas concretas: progreso, pertenencia, curiosidad, control. Propone hablar de diseño centrado en las personas: partir de cómo quieres que se sienta el usuario y elegir después la mecánica.</p>
+<h3>Bloque 2: Los ocho impulsos centrales</h3>
+<p>El grueso del libro dedica un capítulo a cada impulso. Resumo cada uno con mis palabras:</p>
+<ul>
+<li><strong>Sentido épico y vocación</strong>: sentir que formas parte de algo mayor que tú, o que has sido elegido para ello.</li>
+<li><strong>Desarrollo y logro</strong>: progresar, superar retos, dominar una habilidad. Aquí viven los puntos y los niveles, pero Chou insiste en que solo funcionan si el reto es real.</li>
+<li><strong>Creatividad y retroalimentación</strong>: poder probar combinaciones, expresarte y ver el resultado. Es el impulso que más dura, porque genera su propia novedad.</li>
+<li><strong>Propiedad y posesión</strong>: sentir que algo es tuyo, coleccionarlo, mejorarlo. Incluye avatares, colecciones y bienes virtuales.</li>
+<li><strong>Influencia social y pertenencia</strong>: compañía, competencia, mentoría, envidia, reconocimiento.</li>
+<li><strong>Escasez e impaciencia</strong>: querer algo porque no puedes tenerlo ya. Esperas, límites, cosas que solo se consiguen en un momento.</li>
+<li><strong>Imprevisibilidad y curiosidad</strong>: no saber qué viene. Recompensas aleatorias, sorpresas, historias.</li>
+<li><strong>Pérdida y evitación</strong>: actuar para no perder lo que ya tienes, o para no perderte algo. Las rachas viven aquí.</li>
+</ul>
+<h3>Bloque 3: Sombrero blanco y sombrero negro</h3>
+<p>Los tres primeros impulsos son de sombrero blanco: hacen sentir bien y el usuario los recuerda con gusto, pero no crean urgencia. Los tres últimos son de sombrero negro: crean urgencia y obsesión, y el usuario puede sentirse manipulado o atrapado. Los dos del medio son mixtos. Chou no condena el sombrero negro; explica que es muy eficaz para provocar una acción concreta, pero que si el producto depende solo de él, los usuarios acaban marchándose en cuanto pueden. Su recomendación es usar el negro para empujar y el blanco para que el usuario se quede a gusto.</p>
+<h3>Bloque 4: Cerebro izquierdo y cerebro derecho</h3>
+<p>Chou usa la metáfora de los dos hemisferios (aclarando que es una simplificación, no neurociencia) para separar los impulsos ligados a la lógica, la posesión y las recompensas externas (logro, propiedad, escasez) de los ligados a la creatividad, la sociabilidad y la curiosidad. Advierte de que las recompensas externas pueden desplazar a la motivación interna: si pagas a alguien por algo que hacía por gusto, puede dejar de hacerlo cuando dejes de pagar. Por eso recomienda que las recompensas apunten a reforzar el placer propio de la actividad, no a sustituirlo.</p>
+<h3>Bloque 5: Las cuatro fases del recorrido</h3>
+<p>Una de las ideas más prácticas del libro es que la motivación cambia según la fase del usuario. En el descubrimiento, la persona decide si prueba el producto. En la incorporación, aprende las reglas y consigue sus primeras victorias. En el andamiaje, ya conoce el producto y vuelve de forma repetida. En el final del juego, es veterano y necesita razones para seguir. Cada fase pide impulsos distintos: curiosidad y sentido al principio, logro claro en la incorporación, pertenencia y creatividad en el andamiaje, estatus y propiedad al final. Muchos productos diseñan solo para una fase y descuidan las otras.</p>
+<h3>Bloque 6: Del marco al diseño</h3>
+<p>En la parte final, Chou explica cómo usar el marco: puntuar un producto según cuánto activa cada impulso, detectar los que faltan, y diseñar mecánicas concretas para cada fase. También propone pensar en tipos de jugador, y en el primer minuto del usuario como el momento crítico en el que se decide todo. Da muchos ejemplos de productos y juegos analizados con el marco; no te los repito porque no los tengo seguros uno por uno.</p>
+<h2>Los consejos del autor, convertidos en acciones</h2>
+<ol>
+<li><strong>Haz un Octalysis de Leo Glow y de Zodiaco</strong>: para cada impulso, qué mecánica lo activa hoy y con qué fuerza.</li>
+<li><strong>Cuenta cuántas mecánicas son de sombrero negro</strong>: rachas, ligas con descenso, recompensas que caducan. Si dominan, espera abandono por agotamiento.</li>
+<li><strong>Diseña por fases</strong>: una lista de qué siente el usuario en el descubrimiento, la incorporación, el andamiaje y el final, por app.</li>
+<li><strong>Asegura una victoria en el primer minuto</strong>: el usuario tiene que conseguir algo antes de que le pidas nada.</li>
+<li><strong>Añade creatividad</strong>: algo que el usuario pueda elegir o combinar, porque es el impulso que más dura.</li>
+<li><strong>Revisa que las recompensas externas no maten la interna</strong>: que la moneda virtual refuerce el hábito, no lo sustituya.</li>
+<li><strong>Dale sentido épico</strong>: una razón mayor que el propio usuario, contada en la app.</li>
+<li><strong>Diseña el final del juego</strong>: qué hace en Leo Glow alguien que ya lleva tres meses.</li>
+</ol>
+<h2>Aplicado a tus apps</h2>
+<h3>TCM</h3>
+<p>TCM no es un juego, y el libro te advertiría de no gamificarla de forma superficial. Pero el simulador de casos activa desarrollo y logro (resolver un caso), y la estructura de 110 puntos, 12 meridianos, 86 hierbas y 30 fórmulas se presta a la propiedad: una colección que el estudiante completa. Un registro de lo que ya dominas activaría logro y propiedad sin infantilizar la app. Para el estudiante, el sentido épico existe de forma natural: formarse para ayudar a otros. Hipótesis: si la app lo hace visible, el anual se percibe como un compromiso de formación y no como un gasto.</p>
+<h3>Leo Glow</h3>
+<p>Aquí el marco es una lente de diagnóstico muy útil. Una lectura de lo que tienes:</p>
+<ul>
+<li><strong>Logro</strong>: el avatar que sube de nivel. Fuerte, si sube desde el primer día.</li>
+<li><strong>Imprevisibilidad</strong>: la ruleta. Fuerte.</li>
+<li><strong>Pérdida</strong>: las rachas. Fuerte, sombrero negro.</li>
+<li><strong>Influencia social</strong>: las ligas. Depende de que haya gente; con pocos usuarios activos, pueden estar vacías.</li>
+<li><strong>Propiedad</strong>: el avatar es tuyo. Medio.</li>
+<li><strong>Sentido épico</strong>: posiblemente débil.</li>
+<li><strong>Creatividad</strong>: débil, si el usuario no elige nada.</li>
+<li><strong>Escasez</strong>: no está claro.</li>
+</ul>
+<p>El patrón probable (es una hipótesis hasta que lo midas) es que Leo Glow apoya mucho en la ruleta y las rachas, que enganchan rápido pero queman, y poco en creatividad y sentido, que son los que hacen quedarse. Además, por fases: la ruleta funciona en el descubrimiento, pero el andamiaje (volver la segunda semana) necesita otra cosa. Tus datos (11,6 % a un día, 1,1 % a siete) encajan con un producto que tiene descubrimiento y pierde en el andamiaje.</p>
+<p>Dos ideas concretas. Sentido épico: tu postura de no puntuar caras es una causa. «Mejorar sin que una máquina te diga cuánto vales» puede ser el relato que haga sentir al usuario parte de algo distinto. Creatividad: deja que el usuario construya su propio plan combinando retos, en lugar de recibirlos todos de la ruleta.</p>
+<h3>Zodiaco</h3>
+<p>Zodiaco tiene un buen equilibrio sobre el papel. La lectura diaria activa curiosidad; la compatibilidad, influencia social; el compañero con misiones y niveles, logro y propiedad; el club, pertenencia. El rewarded de duplicar recompensa es interesante desde el marco: es una elección voluntaria que aumenta la propiedad, lo que lo coloca más cerca del sombrero blanco que un anuncio impuesto. Comprueba el final del juego: ¿qué hace alguien que ya ha subido al compañero al máximo? Con un pico anual en febrero, el sentido épico de cada Año Nuevo (empezar un ciclo con un animal nuevo) es un evento natural para relanzar el juego cada año.</p>
+<h3>Anime Food</h3>
+<p>Kai, la mascota, podría activar propiedad (coleccionar recetas cocinadas) y logro (completar platos de una serie, sin nombrar obras de terceros). En la categoría Niños de iOS, el sombrero negro está fuera de lugar: nada de rachas que castiguen ni de urgencias. Antes de gastar tiempo en esto, resuelve si es producto o motor de contenido; gamificar un producto que no se usa no lo salva.</p>
+<h2>Preguntas para leerlo</h2>
+<ol>
+<li>¿Qué impulso domina en cada una de tus apps, y es de sombrero blanco o negro?</li>
+<li>¿En qué fase del recorrido pierde Leo Glow a la mayoría?</li>
+<li>¿Qué mecánica pusiste porque la tenía otra app, y a qué impulso apela de verdad?</li>
+<li>¿Qué puede crear o elegir el usuario en Leo Glow?</li>
+<li>¿Qué hace el veterano en cada app, si es que existe?</li>
+</ol>
+<h2>Si solo lees una parte</h2>
+<p>El bloque de las cuatro fases del recorrido. Explica por qué una app puede enganchar el primer día y vaciarse la primera semana, que es exactamente la forma de la curva de Leo Glow.</p>
+<h2>Cautelas</h2>
+<p>El marco es descriptivo y muy flexible, y eso es a la vez su fuerza y su debilidad: casi cualquier mecánica cabe en algún impulso, y es fácil usarlo para justificar lo que ya tenías. Las ocho categorías son una propuesta del autor, no un resultado de investigación validada; trátalas como una lista de revisión, no como ciencia. La metáfora de los hemisferios no es neurociencia, como él mismo reconoce. Muchos ejemplos son de grandes juegos y empresas con presupuesto para economías virtuales complejas; tú no puedes mantener un sistema de bienes, tiendas y eventos para cuatro apps solo. Escoge pocas mecánicas y hazlas bien. Y en apps con público joven o con salud de por medio, las mecánicas de pérdida y escasez merecen más cuidado que el que el libro les da por defecto.</p>
+<h2>Para seguir</h2>
+<ul>
+<li>Nir Eyal, <em>Hooked</em>, para el ciclo de uso que estas mecánicas alimentan.</li>
+<li>Daniel Pink, <em>Drive</em>, sobre la motivación interna frente a las recompensas externas.</li>
+<li>Jane McGonigal, <em>Reality Is Broken</em>, una mirada más optimista sobre lo que los juegos pueden aportar.</li>
+<li>James Clear, <em>Atomic Habits</em>, para las rachas vistas desde quien las tiene que cumplir.</li>
+</ul></section>
+</article>
+<footer></footer>
+</main></body></html>
