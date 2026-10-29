@@ -60,7 +60,7 @@ li{margin:.35rem 0}
 <li><a href="#603-continuous-discovery-habits">Continuous Discovery Habits (Teresa Torres, 2021)</a></li>
 <li><a href="#604-the-lean-startup">The Lean Startup (Eric Ries, 2011)</a></li>
 <li><a href="#605-inspired">Inspired (Marty Cagan, segunda edición de 2017)</a></li>
-<li><a href="#606-dont-make-me-think">Don&#x27;t Make Me Think (Steve Krug, edición revisada de 2014)</a></li>
+<li><a href="#606-dont-make-me-think">Don't Make Me Think (Steve Krug, edición revisada de 2014)</a></li>
 </ul><h3><a href="#700-parte-vii-contenido-y-video">Parte VII: Contenido, ganchos y vídeo corto</a></h3><ul>
 <li><a href="#701-contagious">Contagious (Jonah Berger, 2013)</a></li>
 <li><a href="#702-made-to-stick">Made to Stick (Chip Heath y Dan Heath, 2007)</a></li>
@@ -83,19 +83,25 @@ li{margin:.35rem 0}
 <li><a href="#903-crossing-the-chasm">Crossing the Chasm (Geoffrey Moore, 1991)</a></li>
 <li><a href="#904-good-strategy-bad-strategy">Good Strategy Bad Strategy (Richard Rumelt, 2011)</a></li>
 <li><a href="#905-7-powers">7 Powers (Hamilton Helmer, 2016)</a></li>
+<li><a href="#906-metodo-honey-pot">Método para encontrar tu honey pot</a></li>
 </ul><h3><a href="#1000-parte-x-manual-practico">Parte X: Monetizar, mejorar las apps y atender a tu público</a></h3><ul>
 <li><a href="#1001-muros-de-pago-y-pruebas">Muros de pago y pruebas gratis</a></li>
 <li><a href="#1002-anuncios-bien-hechos">Anuncios bien hechos</a></li>
 <li><a href="#1003-onboarding-y-activacion">Onboarding y activación</a></li>
+<li><a href="#1004-retencion-y-notificaciones">Retención y notificaciones</a></li>
+<li><a href="#1005-atender-a-tu-publico">Atender a tu público</a></li>
+<li><a href="#1006-plan-por-app">Plan por app</a></li>
 </ul><h3><a href="#1100-parte-xi-riesgos">Parte XI: Cubrirte de riesgos</a></h3><ul>
 <li><a href="#1101-antifragile">Antifragile (Nassim Nicholas Taleb, 2012)</a></li>
 <li><a href="#1102-fooled-by-randomness">Fooled by Randomness (Nassim Nicholas Taleb, 2001)</a></li>
 <li><a href="#1103-thinking-in-bets">Thinking in Bets (Annie Duke, 2018)</a></li>
 <li><a href="#1104-psychology-of-money">The Psychology of Money (Morgan Housel, 2020)</a></li>
+<li><a href="#1105-mapa-de-riesgos">Mapa de riesgos del portfolio y cómo cubrirte</a></li>
 </ul><h3><a href="#1200-parte-xii-cierre">Parte XII: Cierre</a></h3><ul>
 <li><a href="#1201-mapa-de-lecturas">Mapa de lecturas: qué leer según el problema</a></li>
 <li><a href="#1202-plan-de-17-dias">Plan de lectura para 17 días</a></li>
 <li><a href="#1203-que-hacer-al-volver">Qué hacer al volver (15 de noviembre)</a></li>
+<li><a href="#1204-referencias">Referencias</a></li>
 <li><a href="#1205-glosario">Glosario</a></li></ul>
 
 <hr>
@@ -3751,10 +3757,183 @@ li{margin:.35rem 0}
 
 <hr>
 
+<section id="906-metodo-honey-pot"><h1>Método para encontrar tu honey pot</h1>
+<p><em>Un procedimiento paso a paso, con tus herramientas, para decidir dónde hay demanda, poca competencia buena y gente que paga: aplicado a tus cuatro apps y a cómo evaluar, lanzar o matar un nicho nuevo.</em></p>
+
+<h2>Para qué sirve este capítulo</h2>
+<p>Ya encontraste un honey pot: TCM. Búsqueda estable en muchos idiomas, rivales que en su mayoría son listas de puntos sin estructura, y estudiantes que aceptan un anual con prueba (12 cobros de 87 empezados con el muro de la 1.0.10). Lo encontraste con intuición y oficio de ASO. Este capítulo intenta que la próxima vez no dependa de la suerte.</p>
+<p>No hay libro detrás. Hay cinco: Rumelt te da el esqueleto (diagnóstico, política, acciones), Kim y Mauborgne la forma de ver dónde no compite nadie, Moore la cabeza de playa, Play Bigger el nombre del problema y Helmer la pregunta de qué te queda cuando te copien. Aquí se juntan en un orden de trabajo, se cruzan con lo que ya usas cada día (Sonar, <code>competencia.py</code>, ingresos estimados de rivales, curvas de dinero por categoría, la máquina de vídeo, PostHog, RevenueCat) y se aplican a lo que tienes y a lo que podrías tener.</p>
+<p>La idea que lo ordena todo ya está en la introducción de esta parte: cambia el orden de las preguntas. Hasta ahora empezabas por la popularidad de la keyword y el gap. A partir de aquí empiezas por quién paga ya por algo parecido, qué hacen mal los que cobran y qué sabes hacer tú que ellos no. La keyword llega al final, como forma de capturar una demanda que ya has decidido servir.</p>
+<p>Un aviso antes de empezar. Este capítulo no te pide que lances nada. La decisión de Essentialism (Parte VIII) sigue en pie: ninguna app ni nicho nuevo recibe horas de construcción hasta que TCM tenga resuelta su restricción. Lo que sí puedes hacer desde ya es evaluar con lápiz y validar barato. Es lo que proponen el plan de 17 días (anotar dos candidatos) y el plan de vuelta (validarlos en la tercera y cuarta semana, antes de construir nada).</p>
+
+<h2>Las tres condiciones y cómo medir cada una</h2>
+<p>Un honey pot tiene tres cosas a la vez. Si falta una, no lo es, por bonito que sea el nicho. A esas tres les añado dos que vienen de los libros: una cabeza de playa alcanzable y una barrera posible. La tabla resume qué preguntas responde cada una y con qué lo mides.</p>
+<table>
+<tr><th>Condición</th><th>Pregunta</th><th>Con qué lo mides</th></tr>
+<tr><td>Demanda</td><td>¿La gente busca esto de verdad, en qué países y en qué época?</td><td>Popularidad en Sonar por país, Trends para la estacionalidad, un vídeo de prueba en TikTok, Search Console si hay web.</td></tr>
+<tr><td>Competencia floja</td><td>¿Los que están arriba lo hacen mal, o solo hay muchos?</td><td>Dificultad y gap en Sonar, la lista de rivales de <code>competencia.py</code>, el lienzo estratégico.</td></tr>
+<tr><td>Disposición a pagar</td><td>¿Alguien cobra ya en este nicho o en su alternativa fuera de las apps?</td><td>Ingresos estimados de los rivales, curvas de dinero por categoría, el pasillo de precios de libros, cursos y consultas.</td></tr>
+<tr><td>Cabeza de playa</td><td>¿Puedo describir a un grupo concreto, en un país, con un problema urgente, que se recomienda entre sí?</td><td>Escenarios de Moore, datos de país en las consolas, cinco conversaciones del Mom Test.</td></tr>
+<tr><td>Barrera</td><td>Si me copian, ¿qué me queda?</td><td>Los poderes de Helmer que te tocan: contraposicionamiento, costes de cambio, marca, recurso exclusivo.</td></tr>
+</table>
+<p>Fíjate en la palabra «floja» de la segunda fila. No buscas un nicho sin competidores: buscas uno donde los competidores dejan sin hacer algo que el cliente valora. Un nicho sin nadie suele estar vacío porque no hay nadie que pague, y Anime Food te lo recuerda cada día. Un nicho lleno de apps mediocres que cobran es mucho mejor noticia.</p>
+
+<h2>El procedimiento, paso a paso</h2>
+<p>Nueve pasos. Los cinco primeros se hacen en una tarde con el portátil; los cuatro últimos piden hablar con gente o publicar algo. Sirve igual para una app que ya tienes (buscando un honey pot dentro de ella: un país, un público, un caso de uso) y para un nicho nuevo.</p>
+
+<h3>Paso 1. Escribe el diagnóstico y lo que descartas (Rumelt)</h3>
+<p>Antes de mirar una sola keyword, escribe en un párrafo cuál es el desafío. No vale «quiero otra app que cobre». Vale algo como: «tengo una máquina de captación que funciona y un solo producto que cobra; mi restricción es la conversión y la retención, no la visibilidad». Con ese diagnóstico, un nicho nuevo solo tiene sentido si ataca la restricción (cobra desde el principio, retiene por su naturaleza) y no si solo añade tráfico.</p>
+<p>Después, la política guía: qué no vas a hacer. Por ejemplo, «nada que monetice solo con anuncios», «nada que dependa de personajes de terceros», «nada que prometa salud». Esa lista es la barandilla que evita que la emoción de una keyword nueva decida por ti.</p>
+
+<h3>Paso 2. Empieza por quién paga ya (Blue Ocean, industrias alternativas)</h3>
+<p>Lista lo que la gente hace hoy en lugar de usar una app así. Con TCM es el libro de texto, los apuntes y los cursos. Con Leo Glow, los vídeos de gurús, los foros y las apps que puntúan la cara. Con Anime Food, el blog de recetas japonesas y el vídeo largo de YouTube.</p>
+<p>Después, la pregunta clave: ¿en cuál de esas alternativas la gente ya paga? Los estudiantes de MTC pagan libros y cursos caros, y por eso TCM tiene un pasillo de precios que aguanta un vitalicio de 119,99 $. En el horóscopo casi nadie paga por la alternativa, y por eso Zodiaco vive de un rewarded. Si no encuentras a nadie que pague por ninguna alternativa, apúntalo en rojo: es casi un veto.</p>
+
+<h3>Paso 3. Mide la demanda con Sonar y con el calendario</h3>
+<p>Ahora sí, la keyword. Saca de Sonar la popularidad por país de los términos con los que la gente nombraría su problema, no tu solución. Mira tres cosas: en qué países está el volumen, si existe en varios idiomas (TCM se sostiene porque la búsqueda existe en muchos) y si es estacional (Trends te dice si es un febrero eterno como el de Zodiaco).</p>
+<p>Desconfía de los datos de terceros por defecto. Ya te pasó con el salto falso de Sonar del 22 de septiembre: una cifra rara no es una tendencia hasta que la ves repetida. Y recuerda la cautela de Play Bigger: si la palabra con la que quieres que te recuerden no tiene búsqueda, sirve para el mensaje, no para el título de la ficha.</p>
+
+<h3>Paso 4. Lee la calidad de la competencia, no solo la cantidad</h3>
+<p>Dificultad y gap te dicen cuánta sangre hay en el agua. No te dicen si los que sangran son buenos. Para eso, toma los rivales del top que te da <code>competencia.py</code> en las tres o cuatro keywords principales y dibuja el lienzo estratégico de Kim y Mauborgne: seis a ocho factores con los que compiten (profundidad de contenido, ilustración, precio, frecuencia de actualización, calidad de las reseñas, idiomas, lo que toque) y una puntuación para cinco rivales y para lo que tú harías.</p>
+<p>Las señales de competencia floja son cualitativas, y las ves en una tarde: curvas que se parecen todas entre sí, reseñas que se quejan siempre de lo mismo, fichas sin traducir en idiomas con búsqueda, apps que no se actualizan, productos que son listas sin estructura. Las señales de competencia fuerte también: un líder con efecto red (tu producto mejor no le quita usuarios, avisa Helmer) o un rival que ya ha hecho el movimiento que tú pensabas hacer.</p>
+<p>Termina el paso con la rejilla de las cuatro acciones: qué eliminarías, qué reducirías, qué aumentarías y qué crearías respecto a esa curva media. Ninguna casilla vacía. Si solo te sale «eliminar», como le pasó a Leo Glow con el escáner, todavía no tienes un producto distinto: tienes uno recortado.</p>
+
+<h3>Paso 5. Comprueba la disposición a pagar con dinero de otros</h3>
+<p>Aquí entran dos herramientas que pocos estudios pequeños tienen: los ingresos estimados de los rivales y las curvas de dinero por categoría. La pregunta es sencilla: ¿los que están arriba ganan dinero, y cómo? Si los primeros del nicho tienen ingresos estimados apreciables con suscripción, hay disposición a pagar y la competencia, aunque exista, te está enseñando el precio. Si los primeros solo tienen descargas y ningún ingreso visible, el nicho es de anuncios o de nada.</p>
+<p>Trátalo como orden de magnitud, no como cifra. Las estimaciones de terceros tienen el mismo problema que el salto de Sonar: sirven para comparar nichos entre sí, no para hacer cuentas de cuánto vas a ganar tú. Y aplica la regla de la secuencia de Blue Ocean: si una idea falla en precio, no la arregles con anuncios, reconsidérala. Tu propio dato manda aquí: el rewarded de Zodiaco da unos ocho dólares al mes con unas 800 personas al mes en Android; eso es el techo de un nicho que no paga.</p>
+
+<h3>Paso 6. Elige la cabeza de playa (Moore)</h3>
+<p>Escribe tres escenarios de cliente con nombre, país, edad y qué le pasa un martes. Nada de «personas interesadas en el bienestar». Luego puntúalos con los criterios de Moore adaptados: ¿paga?, ¿le resuelvo el problema entero?, ¿llego a él con ficha y vídeo?, ¿se recomiendan entre ellos?, ¿abre otro nicho vecino si lo gano? Te quedas con uno.</p>
+<p>Si no consigues escribir un escenario creíble, la demanda que viste en Sonar es de curiosos, no de clientes. Esa es una de las razones más comunes por las que un nicho con búsqueda no cobra.</p>
+
+<h3>Paso 7. Separa la palabra de captación de la palabra de categoría (Play Bigger)</h3>
+<p>Escribe el punto de vista en una página: cómo resuelve hoy la gente el problema, por qué falla, cómo es con tu app. De ahí salen dos palabras. La de captación es la keyword que ya existe (acupuntura, looksmaxxing, horóscopo chino) y va al título de la ficha. La de categoría es la idea con la que quieres que te recuerden y va al subtítulo, a la primera captura y al primer segundo del vídeo.</p>
+<p>No las confundas. El cambio de nombre de Leo Glow del 7 de octubre te enseñó lo que cuesta: subieron impresiones y visitas, pero las descargas desde búsqueda de iOS cayeron a ×0,64.</p>
+
+<h3>Paso 8. Busca la barrera antes de entrar (Helmer)</h3>
+<p>Escribe el beneficio y la barrera. De los siete poderes, solo cuatro están a tu alcance, y conviene preguntarlos uno por uno:</p>
+<ul>
+<li><strong>Contraposicionamiento.</strong> ¿Haces algo que el líder del nicho no puede copiar sin dañar su propio negocio? Es el poder de Leo Glow frente a los escáneres.</li>
+<li><strong>Costes de cambio.</strong> ¿El usuario acumula algo (progreso, historial, notas, rachas) que perdería al irse? Es el poder más práctico para una suscripción.</li>
+<li><strong>Marca.</strong> ¿Hay espacio para que con los años te paguen más por confianza? En temas serios, como el estudio de MTC, sí.</li>
+<li><strong>Recurso exclusivo.</strong> ¿Tienes personajes, formatos o contenido propios que nadie puede reproducir igual? Leo, Lin y Mei, Kai, el formato «anime → real».</li>
+</ul>
+<p>Si no hay ninguno, no es un veto, pero apúntalo: es un honey pot que se puede vaciar. Helmer no contempla una salida que a ti sí te sirve: un nicho demasiado pequeño para interesar a nadie grande puede durar años sin barrera. Decide cuál de los dos casos es el tuyo.</p>
+
+<h3>Paso 9. Valida barato antes de construir</h3>
+<p>Solo ahora publicas algo. Tres pruebas, de más barata a más cara, y todas con el criterio de éxito escrito antes de mirar el resultado:</p>
+<ol>
+<li><strong>Vídeo de prueba.</strong> Tu máquina de vídeo puede medir interés en TikTok antes de escribir una línea de código. Haz dos o tres piezas sobre el problema (no sobre la app) y compáralas con tus propios vídeos recientes de la misma cuenta. No te fijes solo en las vistas: mira comentarios que describen el problema y preguntas de «¿dónde se consigue?».</li>
+<li><strong>Página con preaviso.</strong> Una página sencilla con la promesa, un precio y un botón de «avísame» o una lista de espera, como proponen Walling y Ries. El precio tiene que estar ahí: un correo que se apunta sabiendo cuánto cuesta vale más que diez que no lo saben.</li>
+<li><strong>Cinco conversaciones del Mom Test.</strong> Con gente del escenario de la cabeza de playa. No preguntas si usarían tu app; preguntas qué hicieron la última vez que tuvieron el problema y cuánto gastaron en resolverlo.</li>
+</ol>
+
+<h2>La hoja de puntuación</h2>
+<p>Para comparar candidatos entre sí sin que gane el que más te ilusiona, puntúa cada uno de 0 a 3 en siete criterios. Es una regla mía, no de los libros, pensada para que la uses igual en todos los casos y la calibres con el tiempo.</p>
+<table>
+<tr><th>Criterio</th><th>0</th><th>3</th></tr>
+<tr><td>Demanda (Sonar, Trends)</td><td>Sin búsqueda medible en ningún mercado tuyo</td><td>Búsqueda estable en varios idiomas, sin depender de un mes</td></tr>
+<tr><td>Competencia floja (lienzo, <code>competencia.py</code>)</td><td>Un líder fuerte o con efecto red</td><td>Rivales con curvas iguales y quejas repetidas en reseñas</td></tr>
+<tr><td>Disposición a pagar (ingresos estimados, alternativas)</td><td>Nadie cobra, ni en apps ni fuera</td><td>Los rivales cobran suscripción y la alternativa fuera de apps es cara</td></tr>
+<tr><td>Cabeza de playa (Moore)</td><td>No consigues escribir un escenario creíble</td><td>Grupo concreto, conectado, con problema urgente, en un país donde ya conviertes</td></tr>
+<tr><td>Encaje contigo</td><td>Pide algo que no sabes o no quieres hacer</td><td>Lo captas con tu ASO y tu vídeo, y lo puedes producir solo</td></tr>
+<tr><td>Barrera (Helmer)</td><td>Nada que no se copie en un mes</td><td>Un poder claro: contraposicionamiento o costes de cambio</td></tr>
+<tr><td>Riesgo de plataforma y políticas (invertido)</td><td>Salud, menores, propiedad intelectual de terceros o un canal único</td><td>Sin temas sensibles y con varios canales posibles</td></tr>
+</table>
+<p>Total máximo: 21. Mi propuesta de reglas, que puedes cambiar antes de empezar pero no después de ver el resultado:</p>
+<ul>
+<li><strong>Vetos.</strong> Un 0 en disposición a pagar o en riesgo de políticas descarta el candidato, salvo que elijas de forma consciente un modelo de anuncios sabiendo que tiene el techo de Zodiaco.</li>
+<li><strong>A validar (paso 9):</strong> 15 o más, sin ningún 0 y con al menos un 2 en disposición a pagar.</li>
+<li><strong>A la cola:</strong> entre 11 y 14. Lo apuntas y lo vuelves a puntuar dentro de seis meses, que es cuando Blue Ocean te pide revisar el lienzo.</li>
+<li><strong>Descartado:</strong> 10 o menos.</li>
+</ul>
+<p>Calibra la hoja con lo que ya conoces. Puntúa primero TCM, de la que sabes que cobra: si no te sale por encima del umbral, la hoja está mal hecha y hay que corregirla antes de usarla con nada nuevo. Las puntuaciones son juicios, no datos; lo que las hace útiles es que las pones igual a todos y las guardas con fecha para revisarlas, como pide Rumelt con su diario de juicios.</p>
+
+<h2>Aplicado a tus cuatro apps</h2>
+<p>En las apps que ya tienes, el método no pregunta si lanzar. Pregunta dos cosas: si la app está en un honey pot y, si no, si hay uno dentro de ella (un país, un público, un caso de uso) que merezca el trabajo. Las puntuaciones que doy son mi lectura con los datos del 26 y 27 de octubre; tómalas como hipótesis para discutir.</p>
+
+<h3>TCM: honey pot confirmado, falta defenderlo</h3>
+<p><strong>Demanda:</strong> sí, la más alta del portfolio (unas 43 descargas diarias en Play y 10,7 en iOS) y en muchos idiomas. <strong>Competencia:</strong> floja en lo que importa; tu curva sube donde las apps de puntos no llegan (conexión entre síntoma, patrón, fórmula y punto, y casos clínicos). <strong>Pago:</strong> demostrado, con el anual con prueba como producto que cobra. <strong>Cabeza de playa:</strong> casi evidente y sin declarar: estudiantes de acupuntura y MTC. <strong>Barrera:</strong> débil hoy. El contenido se copia con tiempo; el candidato es el coste de cambio (progreso, repasos, casos resueltos) y, a largo plazo, la marca de «maestra paciente».</p>
+<p><strong>Veredicto: explotar y defender.</strong> Es la única app que debe recibir horas de construcción. El honey pot interno a buscar es el país: el mercado donde ya conviertes mejor y donde hay escuelas. Ese dato no está desagregado por país en los informes, así que es lo primero que sacas de las consolas. Lo que no debes hacer es buscar un nicho nuevo antes de arreglar los dos agujeros del cubo que ya tienes: el error «not allowed» de Play (una de cada seis personas que pulsa pagar) y la falta de curva de retención por no mandar <code>days_since_install</code>.</p>
+
+<h3>Leo Glow: demanda de sobra, honey pot sin demostrar</h3>
+<p><strong>Demanda:</strong> enorme pero con dueño. «Looksmaxxing» se busca muchísimo y en EE. UU. el gap es negativo. <strong>Competencia:</strong> abundante, pero con una curva distinta a la tuya (escáner y nota); eso es un problema de expectativas y una oportunidad de contraposicionamiento a la vez. <strong>Pago:</strong> sin demostrar. En Android llegan 52 personas al muro en una semana y 4 eligen plan; en 30 días, cero pruebas del anual y 19 cancelados de 22 anuales empezados. <strong>Cabeza de playa:</strong> sin elegir; los candidatos (Japón con 垢抜け, Brasil con glow up masculino, Alemania con looksmaxxing, o un caso de uso como volver a entrenar) son hipótesis. <strong>Barrera:</strong> la más clara del portfolio en teoría (el líder no puede dejar de puntuar caras sin destruirse) y nula en la práctica mientras el beneficio no exista: d1 11,6 %, d7 1,1 %.</p>
+<p><strong>Veredicto: honey pot por demostrar, con plazo.</strong> El método te dice que el problema no es de mercado sino de las condiciones tres y cuatro: pago y cabeza de playa. Por eso no tiene sentido buscarle más keywords. El orden es el que ya proponen la Parte X y el plan de vuelta: primero copiar el muro de TCM; después, el plazo de Essentialism (unas ocho semanas para mover el d7 por encima de un umbral que fijes tú, con un cambio cada vez). Si lo supera, la barrera de contraposicionamiento empieza a valer. Si no, pasa a mantener. La prueba de demanda propia que sugiere Walling (una página sobre «glow up sin escaneo» o «hábitos para mejorar el físico») te dice si tu postura tiene mercado propio o si tendrás que vivir siempre dentro de «looksmaxxing» contando tu diferencia.</p>
+
+<h3>Zodiaco: mercado con búsqueda, pero no un honey pot de pago</h3>
+<p><strong>Demanda:</strong> sí, muy estacional (febrero). <strong>Competencia:</strong> fuerte y homogénea; es un océano rojo de manual, con un factor propio tuyo (el compañero con misiones). <strong>Pago:</strong> no. La gente no paga por horóscopos y tu dato lo confirma: un rewarded que da unos ocho dólares al mes. <strong>Cabeza de playa:</strong> temporal (Año Nuevo chino) y cultural (comunidades donde el zodiaco es parte de la vida familiar), sin medir. <strong>Barrera:</strong> el recurso exclusivo de Mei, Lin y la mascota, y los costes de cambio del progreso; la lectura diaria nunca lo será. Riesgo alto: iOS 28 días en revisión y la caída de la web desde el 12-10.</p>
+<p><strong>Veredicto: no es un honey pot; es un negocio de anuncios con techo conocido.</strong> Mantener por temporadas, con la ventana de esfuerzo antes de febrero. El método solo te pide una prueba: si hay un honey pot pequeño dentro, estará en algo que alguien pague una vez, en el momento en que más le importa. La hipótesis de la Parte VIII (una lectura anual de pago para febrero) y la de la compatibilidad como motor son los dos candidatos. Valídalos con el paso 9 en enero, no construyas nada antes.</p>
+
+<h3>Anime Food: un charco azul</h3>
+<p><strong>Demanda:</strong> pequeña (1,7 descargas diarias en Play y 3 en iOS). <strong>Competencia:</strong> casi ausente en el nicho exacto, fuerte en el vecino (apps y webs de recetas generales). <strong>Pago:</strong> dudoso; existe una compra puntual (el <code>profile_banner</code> que ya vendió), y la categoría Niños en iOS limita lo demás. <strong>Cabeza de playa:</strong> dos candidatas incompatibles, el fan adulto que cocina y el padre que cocina con su hijo. <strong>Barrera:</strong> el recurso exclusivo de Kai y el formato «anime → real», que vive en el contenido más que en la app.</p>
+<p><strong>Veredicto: laboratorio de contenido, no honey pot.</strong> Es el caso que la cautela de Blue Ocean describe: un océano azul que es azul porque está casi vacío. El método no le encuentra un nicho de pago con los datos de hoy. La única prueba que merece la pena es la de Lavingia y Walling: una página con un recetario y un botón de preaviso, enlazada desde los vídeos. Si nadie se apunta, la decisión de Essentialism se aplica sola: tres meses sin mejora y pasa a archivar, con el contenido siguiendo por su cuenta.</p>
+
+<h3>Las siete apps menores</h3>
+<p>Sin analítica no se pueden puntuar, y eso ya contesta a la hoja: el criterio de pago y el de cabeza de playa salen a 0 por falta de información. No les dediques el método. Pásales el filtro rápido de Walling (búsqueda, pago, competencia y canal) con Sonar y los ingresos estimados de su nicho, en diez minutos cada una. Si alguna sale con algo, merece analítica básica antes que cualquier otra cosa; las demás, al estado de archivo que ya propone la Parte VIII.</p>
+
+<h2>Nichos nuevos: dónde buscar candidatos</h2>
+<p>El mejor sitio para buscar no es una lista de keywords con mucho volumen. Son los sitios donde tu ventaja ya existe. Cuatro fuentes, en orden de cuánto aprovechan lo que tienes:</p>
+<ol>
+<li><strong>Los bolos vecinos de TCM.</strong> Moore te pide decidir qué nicho se abre si ganas el primero. El patrón de TCM es muy concreto: una materia de estudio con escuelas y exámenes, que la gente aprende con libros caros y apuntes, y donde las apps existentes son listas sin estructura. Cualquier materia que cumpla ese patrón es un candidato a evaluar. También lo es el producto distinto que deja abierta la estrategia de TCM: algo más sencillo y diario para el curioso, si las entrevistas dicen que el curioso no paga por la referencia de estudio.</li>
+<li><strong>Los no clientes de tus apps.</strong> Blue Ocean te pide mirar a quien rechaza el nicho. El chico que no usa apps de looksmaxxing porque le hacen sentir peor es un candidato. El estudiante que solo usa papel porque las apps de acupuntura le parecen de juguete, también.</li>
+<li><strong>Momentos de cambio.</strong> Helmer dice que las ventanas se abren cuando algo cambia. Tienes una delante: el tráfico que llega desde asistentes de IA. Las preguntas que la gente hace a ChatGPT y que acaban en una ficha tuya son una forma nueva de demanda que casi nadie está midiendo.</li>
+<li><strong>Lo que tus vídeos ya prueban.</strong> Los comentarios de tus cuentas son una lista de problemas sin resolver. Un formato que funciona en Anime Food, o una pregunta que se repite en los vídeos de dietética de TCM, puede ser el principio de un candidato.</li>
+</ol>
+<p>Ninguno de estos es una recomendación de lanzar. Son sitios donde buscar candidatos para pasarlos por la hoja. No he puesto cifras de demanda ni de ingresos de ninguno porque no las tienes medidas: el paso 3 y el paso 5 son precisamente para sacarlas.</p>
+
+<h2>El umbral para lanzar</h2>
+<p>Lanzar no es una decisión, son cuatro puertas seguidas. Cada una tiene su criterio escrito antes de abrirla.</p>
+<ol>
+<li><strong>Puerta de papel.</strong> La hoja de puntuación supera el umbral (15 o más, sin ceros, al menos un 2 en pago). Coste: una tarde.</li>
+<li><strong>Puerta de interés.</strong> El vídeo de prueba y la página con preaviso superan lo que fijaste. Como referencia, compáralo con tus propias cuentas: el vídeo tiene que rendir al menos como tus piezas normales, y la página tiene que recibir apuntes de gente que ha visto el precio. Coste: una o dos semanas, casi todo automático.</li>
+<li><strong>Puerta de conversación.</strong> En las cinco conversaciones, la mayoría describe el problema sin que se lo sugieras y cuenta algo que ya ha pagado o hecho para resolverlo. Si solo dicen que les parece buena idea, no cuenta.</li>
+<li><strong>Puerta de cobro.</strong> La primera versión sale con muro desde el primer día, con el formato que ya sabes que funciona en TCM (anual preseleccionado, prueba como oferta principal). Lavingia y la Parte X coinciden: si no cobras desde el principio, no sabes si tienes un negocio. La lectura se hace con la primera cohorte que vea el muro, sabiendo que tus muestras son de 30 a 200 personas.</li>
+</ol>
+<p>Sobre la ficha: tus propias apps te dan la vara para la descarga por visita. TCM está en 36 % en Play y 44 % en iOS, Zodiaco en 27 % en Play. Si una app nueva queda muy por debajo de esa zona con tráfico suficiente para leerla, el problema está en la promesa o en la palabra de captación, y se arregla antes de juzgar el producto.</p>
+
+<h2>Cuándo matar</h2>
+<p>La parte más difícil del método es la última, porque lo que has construido pesa. La regla es la misma que ya usas con las ediciones de ficha: el criterio se escribe antes de ver el dato, con fecha de revisión.</p>
+<p>Antes de lanzar, haz el premortem de Annie Duke (Parte XI): imagina que dentro de tres meses has cerrado la app y escribe por qué. Las razones que salgan son tus señales de muerte. Como punto de partida, estas cuatro:</p>
+<ul>
+<li><strong>La cohorte llega al muro y no cobra.</strong> Si ves el patrón de Leo Glow (gente que llega, elige plan y no inicia la prueba, o la inicia y la cancela casi toda), no es un problema de ficha. Una sola corrección del muro, medida; si no se mueve, fuera.</li>
+<li><strong>La retención no se mueve en el plazo fijado.</strong> El modelo de Essentialism para Leo Glow vale para cualquier app nueva: un plazo, un umbral de d7 que eliges tú y un cambio cada vez. Si al final del plazo no se ha movido, deja de construir.</li>
+<li><strong>Aparece un veto de plataforma.</strong> Una política de la tienda, una categoría que limita la monetización o un rechazo que no puedes resolver sin cambiar la promesa.</li>
+<li><strong>La pregunta del coste hundido sale que no.</strong> Si hoy no la tuvieras, ¿la construirías? Si la respuesta es no, lo que has hecho hasta ahora no es motivo para seguir.</li>
+</ul>
+<p>Matar no es borrar. Es cambiar el estado en <code>apps.toml</code>, quitar la app del panel diario, dejarla publicada si no cuesta nada, sin más actualizaciones que las obligatorias, y revisarla una vez al año. Lo que hayas aprendido (un formato de vídeo, una palabra de captación, una pantalla de muro) vuelve a la máquina y lo usan las demás.</p>
+
+<h2>Errores comunes</h2>
+<ol>
+<li><strong>Empezar por la keyword.</strong> El volumen dice dónde hay gente, no dónde hay clientes. Primero quién paga; la keyword al final.</li>
+<li><strong>Confundir poca competencia con buena oportunidad.</strong> Un nicho vacío suele estar vacío por algo. Busca competidores flojos que cobran, no ausencia de competidores.</li>
+<li><strong>Arreglar con anuncios un nicho que no paga.</strong> Si falla en precio, reconsidéralo. Zodiaco ya te enseña el techo.</li>
+<li><strong>Puntuar después de enamorarte.</strong> La hoja se rellena antes de los vídeos de prueba, y el umbral se fija antes de la hoja.</li>
+<li><strong>Tratar las estimaciones de terceros como datos tuyos.</strong> Ingresos estimados, popularidad y curvas de categoría sirven para comparar, no para prever.</li>
+<li><strong>Repartir la cabeza de playa.</strong> Veintiún locales a la vez no es una playa. Un país, un público, un caso de uso.</li>
+<li><strong>Quitar sin crear.</strong> Eliminar el escáner no basta: el cliente tiene que ver en el primer minuto qué recibe a cambio.</li>
+<li><strong>Confundir tu excelencia en ASO con una barrera.</strong> Es valiosa y se aprende. La barrera es lo que el rival no puede copiar aunque quiera.</li>
+<li><strong>Lanzar antes de cerrar el cubo.</strong> Mientras TCM pierda a una de cada seis personas que pulsan pagar, el mejor honey pot nuevo que puedes encontrar está dentro de TCM.</li>
+</ol>
+
+<h2>Qué anotar en el viaje</h2>
+<p>El plan de 17 días te pide dos honey pots candidatos. Para cada uno, una página con esto:</p>
+<ul>
+<li>El diagnóstico en una frase y lo que descartas.</li>
+<li>Quién paga ya por la alternativa y cuánto, aproximadamente, según lo que sepas (libros, cursos, apps).</li>
+<li>Las tres keywords que mirarás en Sonar al volver, y en qué países.</li>
+<li>El escenario de la cabeza de playa: nombre, país, edad, un martes.</li>
+<li>La rejilla de las cuatro acciones, sin casillas vacías.</li>
+<li>El poder de Helmer que podrías construir, o «ninguno».</li>
+<li>La puntuación provisional y el criterio de éxito de las tres pruebas del paso 9.</li>
+</ul>
+<p>Uno de los dos puede, y probablemente debería, estar dentro de una app que ya tienes. Al volver, en la tercera y cuarta semana, los validas barato. Si ninguno pasa las puertas, también es una respuesta valiosa: significa que tus horas rinden más en TCM, y el método te habrá ahorrado meses.</p></section>
+
+<hr>
+
 <section id="1000-parte-x-manual-practico"><h1>Parte X: Monetizar, mejorar las apps y atender a tu público</h1>
 <p><em>Un manual práctico, sin libros por medio: qué hacer con tus muros, tus anuncios, tu onboarding, tu retención y tu gente, app por app.</em></p>
 <h2>El problema que resuelve esta parte</h2>
-<p>Las partes anteriores te han dado marcos: cómo piensa Ramanujam el precio, cómo explica Eyal el hábito, cómo busca Ellis el encaje, cómo pregunta Fitzpatrick sin engañarse, cómo se ve una pantalla con los ojos de Krug, qué palancas describe Cialdini y dónde está su límite. Esta parte baja todo eso al suelo. No hay fichas de libros: hay siete capítulos de taller, escritos sobre tus datos del 26 y 27 de octubre de 2026, que puedes leer en el Kobo y convertir en tareas en cuanto vuelvas.</p>
+<p>Las partes anteriores te han dado marcos: cómo piensa Ramanujam el precio, cómo explica Eyal el hábito, cómo busca Ellis el encaje, cómo pregunta Fitzpatrick sin engañarse, cómo se ve una pantalla con los ojos de Krug, qué palancas describe Cialdini y dónde está su límite. Esta parte baja todo eso al suelo. No hay fichas de libros: hay seis capítulos de taller, escritos sobre tus datos del 26 y 27 de octubre de 2026, que puedes leer en el Kobo y convertir en tareas en cuanto vuelvas.</p>
 <p>El diagnóstico de partida es sencillo y algo incómodo. Sabes traer gente: TCM recibe unas 43 descargas al día en Play y casi 11 en iOS, la ficha convierte bien en las dos tiendas, y produces y publicas vídeo a una escala que pocos desarrolladores solos alcanzan. Lo que no tienes resuelto es lo que pasa después de la descarga. TCM cobra, pero no sabes cuánta gente sigue usándola a los treinta días porque la app no manda <code>days_since_install</code>. Leo Glow tiene 22 anuales empezados y 19 cancelados en un mes, y de cada cien personas que la instalan en Android vuelve una al séptimo día. Zodiaco vive de un único anuncio con recompensa que da unos ocho dólares al mes. Anime Food no sabe todavía si es un producto o un escaparate. Y siete apps más están en las tiendas sin que sepas qué hace nadie dentro.</p>
 <p>Monetizar, mejorar y atender son tres caras de la misma cosa: la relación con la persona que ya te ha elegido. Un muro de pago mal colocado estropea la retención; un intersticial en mal momento estropea las reseñas; un onboarding que no lleva al primer logro deja sin sentido el permiso de notificaciones; y sin hablar con tu gente no sabes qué valor estás vendiendo. Por eso los capítulos se apoyan unos en otros.</p>
 <h2>Cómo está organizada</h2>
@@ -4077,6 +4256,541 @@ li{margin:.35rem 0}
 <li><strong>Leer muestras pequeñas como hechos.</strong> El 53 % de Leo Glow sale de muy poca gente. Es una pista excelente, no una ley.</li>
 <li><strong>Olvidar que hay dos públicos.</strong> En TCM, estudiantes y curiosos; en Leo Glow, quien viene de ChatGPT y quien viene de TikTok. Un único camino para todos es un camino a medias para cada uno.</li>
 </ol></section>
+
+<hr>
+
+<section id="1004-retencion-y-notificaciones"><h1>Retención y notificaciones</h1>
+<p><em>Cómo leer una curva de retención, qué te falta medir en cada app, cómo hacer que los avisos lleguen y digan algo, rachas que no castigan y qué hacer con los anuales que se cancelan.</em></p>
+
+<h2>Principios</h2>
+
+<h3>La retención es la cifra que da sentido a todas las demás</h3>
+<p>Una descarga vale lo que vale la gente que vuelve. En una app de suscripción, quien no vuelve no llega al día del cobro, y si llega, cancela en la renovación. En una app de anuncios, quien no vuelve no ve el rewarded de mañana. Por eso este capítulo va después de los muros y del onboarding y antes del plan por app: el muro de <a href="#1001-muros-de-pago-y-pruebas">Muros de pago y pruebas</a> solo cobra si hay alguien al otro lado el día del cobro, y el momento «aha» de <a href="#1003-onboarding-y-activacion">Onboarding y activación</a> solo sirve si se convierte en una segunda, una tercera y una décima visita.</p>
+<p>La forma honesta de mirar la retención es la <strong>curva por cohorte</strong>: agrupas a la gente por la semana en que instaló y miras qué fracción de cada grupo vuelve el día 1, el día 7 y el día 30 después de instalar. Croll y Yoskovitz, Ries y Ellis coinciden en esto aunque lo cuenten distinto: las cifras totales de usuarios activos esconden lo que pasa, porque la gente nueva tapa a la que se va. La cohorte no.</p>
+
+<h3>Cómo se lee una curva</h3>
+<p>Tres preguntas, en este orden:</p>
+<ol>
+<li><strong>¿Dónde cae más?</strong> Casi todas las apps pierden la mayor parte de la gente entre el día 0 y el día 1. Esa caída es la de la activación: la resuelve el capítulo anterior, no los avisos.</li>
+<li><strong>¿Se aplana?</strong> Una curva que baja y luego se queda plana, aunque sea en una cifra baja, dice que hay un grupo para el que la app funciona. Una curva que sigue bajando hasta cero dice que no lo hay todavía. Ellis y Brown lo plantean así: una curva que se aplana, aunque sea baja, es mejor señal que una que sigue cayendo.</li>
+<li><strong>¿Las cohortes nuevas están por encima de las viejas?</strong> Si cambias el onboarding y la cohorte de la semana siguiente tiene la misma curva, el cambio no ha servido, por mucho que hayan subido las descargas.</li>
+</ol>
+<p>Mide la retención como «volvió ese día» (abrió la app el día 7) y no como «sigue instalada». Y decide una vez qué cuenta como volver: una apertura cualquiera o una acción con valor (una lección, un reto, una lectura). La segunda es más exigente y más útil; la primera es más fácil de tener mañana. Empieza por la primera y añade la segunda.</p>
+
+<h3>El hábito tiene la frecuencia de la necesidad</h3>
+<p>No todas tus apps tienen que retener a diario. Eyal habla de una zona de hábito: lo que se usa poco solo se vuelve costumbre si es muy útil cada vez. Clear lo dice desde dentro de la persona: el hábito se ata a un momento que ya existe en su día. Aplicado a ti:</p>
+<ul>
+<li><strong>Leo Glow y Zodiaco</strong> prometen algo diario. Su d1 y su d7 son su verdad.</li>
+<li><strong>TCM</strong> es una referencia de estudio. El estudiante vuelve cuando estudia o tiene una duda, y más en época de exámenes. Mírala también por semanas: ¿abrió la app al menos una vez en la semana 4?</li>
+<li><strong>Anime Food</strong> se usa cuando cocinas, de vez en cuando. Su retención diaria será baja siempre, y eso por sí solo no es un fallo.</li>
+</ul>
+<p>Juzgar a TCM o a Anime Food por el d1 de una app de hábitos te haría tomar malas decisiones. Elige para cada app el intervalo que corresponde a su uso natural.</p>
+
+<h3>Una notificación es una promesa que tiene que llegar</h3>
+<p>El aviso es el disparador externo del modelo de Eyal: lo que recuerda a la persona que existes hasta que la costumbre haga ese trabajo sola. Tiene tres partes y cada una puede fallar por separado:</p>
+<ul>
+<li><strong>El permiso.</strong> Cuándo y cómo se pide. Está desarrollado en <a href="#1003-onboarding-y-activacion">Onboarding y activación</a>: pre-pantalla propia, después de que la persona entienda qué le vas a recordar, nunca en la tercera pantalla.</li>
+<li><strong>La entrega.</strong> Que el aviso se programe y llegue. Parece trivial y es donde más te ha fallado: dos veces en dos apps, con el permiso concedido y sin aviso detrás.</li>
+<li><strong>El contenido y la frecuencia.</strong> Qué dice, a qué hora, cuántas veces. Es lo que decide si la persona lo abre o desactiva tus avisos para siempre.</li>
+</ul>
+
+<h3>El contenido: algo concreto de hoy, que abra donde promete</h3>
+<p>Un buen aviso nombra lo que la persona va a encontrar («Hoy: 2 minutos de postura con Leo»), está ligado a algo que ella eligió o hizo (su plan, su animal, su mascota, sus módulos) y, al pulsarlo, abre exactamente esa pantalla, no el Inicio. Un aviso genérico («¡Te echamos de menos!») gasta la atención sin dar un motivo. Krug lo diría con la buena voluntad: cada aviso inútil saca algo del depósito, y el usuario no avisa cuando se vacía; simplemente silencia la app.</p>
+<p>La mejor fuente de contenido para el aviso de mañana es lo que la persona deja hoy. Eyal lo llama la inversión que carga el siguiente disparador: si al cerrar el reto eliges la hora del de mañana, el aviso de mañana llega a tu hora y habla de lo que hiciste. Clear llega a lo mismo por otro camino, la intención de implementación: decir a qué hora y después de qué cosa harás el hábito.</p>
+
+<h3>La frecuencia: uno al día como techo, y saber callarse</h3>
+<p>Para una app diaria, un aviso al día a la hora elegida es el máximo razonable; para TCM, menos. Respeta las horas de descanso en la zona horaria de la persona. Y deja de insistir cuando la persona no responde: si ignora tus avisos varios días seguidos, espacia (elige tú el número de días y mídelo). Un aviso que nadie abre durante una semana no está recuperando a nadie; está enseñando a ignorarte. Ofrece en ajustes cambiar la hora y elegir qué avisos quiere: es mejor que alguien apague uno a que los apague todos.</p>
+
+<h3>Rachas: que sumen sin castigar</h3>
+<p>La racha es una de las mecánicas más fuertes para volver mañana y una de las más peligrosas. Chou la coloca en la motivación por miedo a perder, la que llama de sombrero negro: funciona rápido y quema. Clear propone la regla de no fallar dos veces: perder un día es un accidente; perder dos es empezar a dejarlo. Llévalo al diseño:</p>
+<ul>
+<li>Un día perdido no rompe la racha si recuperas al siguiente, o la persona tiene un comodín que se gana usando la app.</li>
+<li>Lo que se acumula no se pierde: el avatar no baja de nivel, los puntos dominados no se borran. La racha es un contador, el progreso es patrimonio.</li>
+<li>El aviso de racha habla de lo que llevas, no de lo que vas a perder. «Llevas 4 días» frente a «¡Vas a perder tu racha!».</li>
+<li>La racha empieza a mostrarse cuando ya hay algo que proteger, no el día 0.</li>
+</ul>
+<p>Y recuerda lo que dice el capítulo de Hooked sobre la ética: Leo Glow habla a chicos jóvenes con inseguridades sobre su aspecto. Una mecánica que funciona por ansiedad ahí no es solo un riesgo de abandono; es lo contrario de tu postura.</p>
+
+<h3>Retención de suscriptores: otra curva</h3>
+<p>En una app de pago hay dos retenciones. La de uso (¿vuelve?) y la de dinero (¿la prueba se cobra?, ¿el anual renueva?). Tzuo pone en el centro la segunda: un negocio de suscripción vale lo que conserva, no lo que vende. Las dos están conectadas: un suscriptor que no abre la app en el mes dos es una cancelación que todavía no ha ocurrido. La pregunta que <a href="#505-lean-analytics">Lean Analytics</a> te deja para TCM es exactamente esta: qué fracción de quien paga sigue activo cuatro semanas después.</p>
+
+<h2>Qué dicen tus datos</h2>
+
+<h3>TCM</h3>
+<ul>
+<li><strong>No hay curva.</strong> La app no manda <code>days_since_install</code> y no tienes retención a 7 ni a 30 días. No sabes si el anual que cobra lo cobra a estudiantes que vuelven cada semana o a gente que se olvidó de la app el segundo día.</li>
+<li><strong>La única pista de vuelta es de septiembre (1.0.7).</strong> De 85 personas que terminaban el onboarding, 16 volvían otro día (19 %). Es una muestra pequeña, de una versión vieja, con la guía de 6 pasos encima del Inicio que ya conoces. No la uses como línea base de hoy.</li>
+<li><strong>Permiso (1.0.7).</strong> El 51 % lo concedía (52 conceden, 22 deniegan, 27 «ahora no»), y quien terminaba el onboarding no tenía ningún aviso programado. Se arregló el 29 de septiembre con un aviso diario del plan y los eventos <code>reminders_scheduled</code> y <code>notification_opened</code>. Todavía no has leído si esos avisos se programan y se abren en la 1.0.10.</li>
+<li><strong>Las pruebas se cobran.</strong> Entre el 14 y el 25 de octubre se cobraron 7 pruebas anuales en las dos tiendas. Es retención de dinero en su primera etapa, el paso del día 7 al día 8. La siguiente, la renovación del anual, no la verás hasta dentro de un año; lo que sí puedes ver antes es si esos suscriptores siguen abriendo la app.</li>
+</ul>
+
+<h3>Leo Glow</h3>
+<ul>
+<li><strong>La curva de Android.</strong> d1 11,6 %, d3 5,5 %, d7 1,1 %, en la ventana del 26 de octubre, sin cambio claro frente a la del 19 de octubre. De cada cien personas que instalan, unas doce vuelven al día siguiente y una al séptimo día. El informe no da el tamaño de la cohorte en esa ventana; con unas 8,6 descargas diarias en Play, cualquier semana son pocas decenas de personas, así que el 1,1 % puede ser una persona más o una menos. Lo que no es ruido es la forma: la curva no se aplana en la primera semana.</li>
+<li><strong>La pista de qué retiene.</strong> En la lectura del 11 de octubre (98 altas reales del 2 al 11), quien hacía una acción del plan el día cero volvía en un 53 %; quien solo giraba la ruleta, 0 de 9. Muestras pequeñas, pero apuntan a que el plan retiene y la ruleta sola no.</li>
+<li><strong>iOS no tiene curva fiable.</strong> Ya viste que 212 supuestos usuarios de iOS eran tu Mac. Hasta que la separes, no leas retención de iOS.</li>
+<li><strong>Los avisos, cambiados pero sin leer.</strong> Desde la 2.0.4 el aviso de la mañana nombra la acción del plan y abre ese día. Los eventos para leerlo existen (<code>notification_opened</code> del tipo daily-plan, <code>plan_first_day_opened</code>); la lectura aún no.</li>
+<li><strong>Los anuales «cancelados».</strong> En Android, en 30 días, 22 personas empiezan un anual y 19 lo cancelan, con 0 pruebas. Ojo con la palabra: no son suscriptores que se van tras pagar, son personas que abren la compra en la hoja de Google y no la terminan. La hipótesis principal, desarrollada en <a href="#1001-muros-de-pago-y-pruebas">Muros de pago y pruebas</a>, es que la hoja no enseña la prueba de 3 días. Pero aunque la enseñara, con un d1 del 11,6 % la mayoría de esos tres días se usarían poco, y la prueba se cancelaría por desuso. El muro y la retención son el mismo problema visto desde dos lados.</li>
+</ul>
+
+<h3>Zodiaco</h3>
+<ul>
+<li><strong>El experimento que no querías hacer.</strong> Entre el 26 de septiembre y el 1 de octubre no se programaba ningún aviso (R8 rompió la programación en la 1.1.2 y la 1.1.3) y la vuelta al día siguiente cayó del 26 % al 15 %. Es la prueba más clara que tienes de cuánto pesa el aviso en una app diaria: cuatro de cada diez vueltas del día siguiente dependían de él.</li>
+<li><strong>El arreglo.</strong> La 1.1.4 lo corrigió: permiso concedido y aviso programado en 14 de 14 casos comprobados.</li>
+<li><strong>Falta la curva larga.</strong> Igual que en TCM, la medición de días desde la instalación hay que arreglarla; sin ella no tienes d7 ni d30 utilizables. Con unas 800 personas al mes (795 en los 30 días hasta el 26 de octubre) es la app con más volumen para leer cohortes en cuanto la tengas.</li>
+<li><strong>Por qué importa el dinero.</strong> El rewarded de duplicar la recompensa diaria, 336 enseñados y 7,81 USD en 30 días, es lo que más cobra, y solo lo ve quien vuelve. Lo tienes en <a href="#1002-anuncios-bien-hechos">Anuncios bien hechos</a>.</li>
+</ul>
+
+<h3>Anime Food</h3>
+<ul>
+<li>El <code>distinct_id</code> está roto: no puedes saber si quien abre hoy es el mismo que abrió ayer. Cualquier cifra de retención aquí sería inventada. 142 personas en 30 días en Android, 17 nuevas en la última semana. En iOS (categoría Niños) no hay analítica.</li>
+</ul>
+
+<h3>Las apps menores</h3>
+<ul>
+<li>Las siete no tienen analítica. No sabes si alguien vuelve a ninguna.</li>
+</ul>
+
+<h2>Qué hacer en cada app</h2>
+
+<h3>TCM: dibuja la curva antes de tocar nada más</h3>
+<ol>
+<li><strong>Manda <code>days_since_install</code>.</strong> Un evento diario de uso (o una propiedad en el evento de apertura) con los días desde la instalación, calculados a partir de una fecha que guardes la primera vez que se abre la app. Mientras sale la build, puedes aproximar la cohorte en PostHog por la fecha de primera apertura; sirve para empezar, pero se ensucia con reinstalaciones y cambios de dispositivo.</li>
+<li><strong>Fija una línea base sin cambiar nada.</strong> Cuatro cohortes semanales de la 1.0.10 con d1, d7 y d30, y además «abrió al menos una vez en la semana 4». Con unas 43 descargas diarias en Play tienes casi 300 personas por cohorte semanal: suficiente para una curva estable en Android. iOS, júntalo por quincenas.</li>
+<li><strong>Separa la curva de quien paga.</strong> Qué fracción de quien empieza la prueba, de quien la paga y de quien no paga sigue activa en la semana 4. Si los suscriptores no vuelven, tienes un riesgo de cancelación masiva en la renovación y el trabajo de los próximos meses es el mes dos, no el muro.</li>
+<li><strong>Separa estudiantes y curiosos.</strong> La pregunta del objetivo del onboarding ya los distingue. Dos curvas, no una. Es la hipótesis más importante de <a href="#201-marca-tcm">su estrategia de marca</a>: ¿el estudiante paga más y se queda más?</li>
+<li><strong>Comprueba los avisos de la 1.0.10.</strong> <code>reminders_scheduled</code> por persona que concede el permiso y <code>notification_opened</code> por aviso programado. Si se programan y no se abren, cambia el texto; si no se programan, es un fallo.</li>
+<li><strong>Avisos al ritmo del estudio, no diarios por defecto.</strong> El aviso del plan, a la hora y con los minutos que la persona eligió, nombrando la sesión de hoy («10 min · Meridiano del Estómago»). Si algún día pruebas avisos de calendario (antes de un examen, por estación para el curioso), que sean una opción que la persona activa. Es una hipótesis.</li>
+<li><strong>Un registro de lo dominado.</strong> Lo que proponen Clear y Chou para TCM: puntos, meridianos y fórmulas que ya sabes, visibles. Es la inversión que hace difícil irse y el contenido natural del repaso de mañana. Sin rachas: TCM es seria y su hábito es semanal.</li>
+<li><strong>El aviso del día cinco de la prueba</strong>, con lo que la persona ha hecho, ya está en <a href="#1001-muros-de-pago-y-pruebas">Muros de pago y pruebas</a>. Es también un aviso de retención: recordarle lo que ha conseguido es la mejor razón para volver el día seis.</li>
+</ol>
+
+<h3>Leo Glow: mover el d7 con un cambio cada vez</h3>
+<ol>
+<li><strong>Lee la 2.0.4 antes de añadir nada.</strong> Por cohorte semanal: fracción que completa la acción del día 1 el día cero, fracción que abre el aviso daily-plan del día siguiente y d1/d7 de quien completa frente a quien no. Es lo que pide <a href="#1003-onboarding-y-activacion">Onboarding y activación</a>; aquí lo importante es cruzarlo con la curva.</li>
+<li><strong>Escribe la predicción y pon fecha.</strong> Lo que te propone <a href="#604-the-lean-startup">The Lean Startup</a>: varios experimentos sobre el d7 de aquí a final de enero, cada uno con una predicción escrita antes («si hago X, d7 pasa de 1,1 % a 3 %»). Si ninguno lo mueve de forma clara, toca replantear el producto, no el muro.</li>
+<li><strong>La hora la elige la persona.</strong> Al cerrar la acción del día, que elija a qué hora quiere la de mañana, y que el aviso llegue a esa hora con una frase de Leo ligada a lo que hizo hoy. Es la inversión que carga el disparador de Eyal y la intención de implementación de Clear en un solo gesto.</li>
+<li><strong>Rachas con red.</strong> Revisa cómo se rompe hoy la racha. Que un día perdido no la rompa si recuperas al siguiente, que el avatar no baje nunca y que el aviso nunca amenace con perder. Las ligas, solo si tienen gente activa: con estas cifras, una liga vacía desanima más que motiva.</li>
+<li><strong>Busca a los que vuelven el día 7.</strong> Son pocos. Mira en PostHog qué hacen que no hacen los demás: ¿completan el plan, hablan con Leo, giran la ruleta, entran en ligas? Y habla con ellos (lo verás en el capítulo siguiente). Lo que tengan en común es tu candidato a momento «aha» de la segunda semana, la fase de andamiaje de Chou.</li>
+<li><strong>Una métrica adelantada.</strong> Esperar siete días a cada lectura es lento. Mide la fracción que completa un segundo reto en las primeras 48 horas y comprueba si predice el d7. Si lo hace, úsala para decidir antes.</li>
+<li><strong>Los anuales que no se terminan.</strong> Primero lo de <a href="#1001-muros-de-pago-y-pruebas">Muros de pago y pruebas</a>: comprobar con una cuenta nueva qué enseña la hoja de Google y registrar <code>trial_eligible</code> y <code>offer_id</code>. Después, que la prueba de 3 días tenga uso: aviso al día siguiente de empezarla con la acción del plan y aviso antes del cobro con lo que la persona ha hecho, la fecha y cómo gestionar la suscripción. Con tres días, el aviso antes del cobro es casi el segundo aviso.</li>
+<li><strong>Separa tu Mac.</strong> Excluye tus dispositivos de prueba de la retención de iOS antes de leerla.</li>
+</ol>
+
+<h3>Zodiaco: proteger el aviso y medir la semana</h3>
+<ol>
+<li><strong>Arregla la medición de días desde la instalación</strong> antes de añadir anuncios, como dice <a href="#203-marca-zodiaco">su estrategia de marca</a>. Con unas 800 personas al mes, en cuanto la tengas puedes leer d1, d7 y d30 por cohorte semanal y por país.</li>
+<li><strong>Prueba el aviso en cada build de release.</strong> La caída del 26 % al 15 % la provocó una herramienta de compilación que en desarrollo no actuaba. Antes de cada subida: instala la build de release, concede el permiso, adelanta la hora y comprueba que el aviso llega y abre la lectura. Diez minutos que protegen cuatro de cada diez vueltas del día siguiente.</li>
+<li><strong>Una alarma propia.</strong> Mira cada día los avisos programados por persona con permiso. Si baja a cero en una versión, lo sabrás en un día y no en una semana.</li>
+<li><strong>La hora del café.</strong> Pide en el onboarding o tras la primera lectura a qué hora quiere su lectura; apílala sobre un momento que ya existe. Que el aviso diga algo de hoy y de su animal, no «tu horóscopo está listo».</li>
+<li><strong>La mascota como motivo, sin castigo.</strong> Un aviso cuando la mascota tiene hambre es un buen disparador si es amable y opcional. Si la mascota sufre o pierde lo ganado cuando no entras, pasas al sombrero negro.</li>
+<li><strong>Febrero.</strong> El pico del Año Nuevo chino traerá gente nueva. Ten los avisos probados y la curva medida antes, para poder comparar la cohorte de febrero con las de noviembre y diciembre. No leas el pico como un éxito de nada que hayas cambiado.</li>
+</ol>
+
+<h3>Anime Food: primero el identificador</h3>
+<ol>
+<li><strong>Arregla el <code>distinct_id</code></strong> en la próxima build. Sin él no hay retención que medir.</li>
+<li><strong>Mide por semanas o por meses, no por días.</strong> Su uso natural es ocasional. La pregunta útil es si quien guarda una receta vuelve en el mes siguiente.</li>
+<li><strong>Avisos, pocos y opcionales en Android.</strong> Una receta nueva de un «mundo» que la persona eligió, como mucho de vez en cuando. En iOS, categoría Niños: nada de rachas ni de urgencias.</li>
+<li><strong>Recuerda la pregunta de fondo.</strong> Si la retención resulta muy baja, refuerza la idea de que es un motor de contenido y no un producto, como plantea <a href="#204-marca-anime-food">su estrategia de marca</a>.</li>
+</ol>
+
+<h3>Las apps menores</h3>
+<p>No pongas avisos ni rachas en apps donde no sabes qué hace nadie. Si decides invertir en alguna, el primer evento es una apertura con la fecha de instalación; con eso ya tienes d1 y d7. Las que no vayan a recibir ese evento, decídelas en una frase: se mantienen sin tocar o se archivan.</p>
+
+<h2>Qué medir</h2>
+<ul>
+<li><strong>Curva por cohorte semanal.</strong> Evento: apertura diaria con <code>days_since_install</code>. Fracción: personas de la cohorte que abren el día 1, el día 7 y el día 30 / personas que instalan esa semana. Tamaño: para que el d7 de una semana no sea pura casualidad necesitas que la cifra esperada de personas que vuelven no sea de una o dos. Con el criterio que ya usas (desconfía de diferencias menores que dos veces la raíz de la cifra esperada), con 300 instalaciones y un d7 del 1 % esperas 3 personas, y solo un salto a más de 6 o 7 sería una señal: por eso en Leo Glow tendrás que juntar al menos un mes de instalaciones de Play para leer el d7, mientras que en TCM, con unas 300 instalaciones por semana en Play, bastan una o dos semanas. Es un cálculo sobre tus cifras, no una regla estadística fina.</li>
+<li><strong>Retención semanal de TCM.</strong> Fracción de cada cohorte con al menos una sesión en la semana 1, 2, 3 y 4. Mejor que el d7 diario para una app de estudio.</li>
+<li><strong>Suscriptores activos a las cuatro semanas.</strong> Personas que pagan (o están en prueba) con al menos una sesión en la semana 4 / personas que pagan. Con 10 altas a la semana en TCM Android, junta un mes antes de leerla.</li>
+<li><strong>Pruebas que se cobran.</strong> Desde RevenueCat, por semana de inicio, con ocho días de retraso en TCM y cuatro en Leo Glow. Ya está en <a href="#1001-muros-de-pago-y-pruebas">Muros de pago y pruebas</a>.</li>
+<li><strong>Salud de los avisos.</strong> Evento: <code>reminders_scheduled</code>. Fracción: personas con aviso programado / personas con permiso concedido, por versión. Tiene que estar cerca del total; si baja, es un fallo, no una preferencia. Con 14 casos comprobados ya detectaste el arreglo de Zodiaco: para esto no hacen falta muestras grandes, hace falta mirarlo cada día.</li>
+<li><strong>Apertura de avisos.</strong> Evento: <code>notification_opened</code> con el tipo de aviso. Fracción: avisos abiertos / avisos programados para ese día. Por tipo y por versión. Con un par de cientos de avisos enviados ya puedes comparar dos textos de forma orientativa.</li>
+<li><strong>Vuelta con y sin aviso.</strong> d1 de quien tiene el permiso concedido frente a quien no. No es una comparación limpia (quien concede ya venía con más ganas), pero si cambias el aviso y la diferencia crece, tienes una señal. Zodiaco te dio la versión limpia sin querer: misma app, avisos rotos, 26 % frente a 15 %.</li>
+<li><strong>Bajas de permiso.</strong> En cada apertura, si el permiso sigue concedido. Si muchos lo quitan tras un cambio de frecuencia o de texto, te has pasado.</li>
+<li><strong>Rachas.</strong> Fracción de personas activas con racha de 3 días o más, y qué fracción vuelve el día después de romperla. Si casi nadie vuelve tras romperla, la racha castiga demasiado.</li>
+<li><strong>Métrica adelantada en Leo Glow.</strong> Fracción que completa un segundo reto en 48 horas, y si quien lo hace tiene mejor d7. Como en <a href="#1003-onboarding-y-activacion">Onboarding y activación</a>: con menos de unas 30 personas por grupo, diez puntos de diferencia son fácilmente ruido.</li>
+</ul>
+
+<h2>Errores comunes</h2>
+<ol>
+<li><strong>Leer usuarios activos en lugar de cohortes.</strong> La gente nueva tapa a la que se va. Una cohorte por semana, siempre.</li>
+<li><strong>Medir retención sin <code>days_since_install</code> y llamarlo curva.</strong> En TCM y Zodiaco aún no la tienes. Dilo así hasta que la tengas.</li>
+<li><strong>Medir todas las apps con la vara de una app diaria.</strong> TCM se mide por semanas; Anime Food, por meses.</li>
+<li><strong>Conceder el permiso y no avisar.</strong> Te ha pasado en TCM 1.0.7 y en Zodiaco 1.1.2 y 1.1.3. Prueba el aviso en una build de release antes de cada subida y vigila los avisos programados cada día.</li>
+<li><strong>Avisos genéricos.</strong> «Te echamos de menos» no da motivo. Nombra lo de hoy y abre esa pantalla.</li>
+<li><strong>Más avisos cuando la gente no vuelve.</strong> Si nadie abre el de hoy, mandar dos mañana acelera que te silencien. Espacia.</li>
+<li><strong>Rachas que castigan.</strong> Funcionan la primera semana y vacían la tercera. Un día perdido no debe borrar lo ganado.</li>
+<li><strong>Confundir los anuales cancelados con bajas de suscriptores.</strong> Los 19 de 22 de Leo Glow son compras que no se terminan en la hoja de Google. Se arreglan en el muro y en la retención de los tres días, no con ofertas de recuperación.</li>
+<li><strong>Creer que la prueba arregla la retención.</strong> Solo da tiempo. Si la persona no vuelve al día siguiente, una prueba de 3 días se cancela sola.</li>
+<li><strong>Leer el 1,1 % como una cifra exacta.</strong> Con pocas decenas de instalaciones por semana es una o dos personas. La forma de la curva dice más que el decimal.</li>
+<li><strong>Contar tus dispositivos.</strong> 212 «usuarios de iOS» eran tu Mac. Excluye las pruebas antes de cualquier curva.</li>
+<li><strong>Cambiar varias cosas a la vez.</strong> Aviso, racha y muro en la misma versión hacen imposible saber qué movió el d7. Un cambio por app y por semana.</li>
+</ol></section>
+
+<hr>
+
+<section id="1005-atender-a-tu-publico"><h1>Atender a tu público</h1>
+<p><em>Reseñas, soporte, encuestas, entrevistas y comunidad: cómo conocer de verdad a tus usuarios con 45 minutos a la semana, app por app.</em></p>
+
+<h2>Principios</h2>
+
+<h3>Sabes qué hace tu gente; no sabes por qué</h3>
+<p>Tu sistema de medición es mejor que el de muchos equipos con diez personas. Sabes que en TCM, en la semana del 19 al 26 de octubre, 234 personas vieron el muro en Android, 64 pulsaron pagar y 10 se dieron de alta. Sabes que en Leo Glow se empezaron 22 anuales y se cancelaron 19 en 30 días. Sabes cuántos segundos pasa la gente en el Oráculo de Zodiaco. Lo que no sabes es quién es esa gente, qué esperaba al instalar y qué pensó en el momento de irse. Los eventos te dan el qué; el porqué solo lo da hablar con personas o leer lo que escriben.</p>
+<p>Este capítulo trata de las cinco formas baratas de conseguir ese porqué: las reseñas, el correo de soporte, las encuestas cortas dentro de la app, las entrevistas y los comentarios de tus vídeos. Ninguna sustituye a los datos. Todas sirven para formular la hipótesis que los datos luego confirman o desmienten. Es la misma idea con la que cierra la ficha de The Mom Test: la conversación da la pregunta; el embudo da la respuesta.</p>
+
+<h3>Cada canal te enseña a un público distinto</h3>
+<p>Quien escribe una reseña está muy contento o muy enfadado. Quien escribe al soporte tiene un problema concreto y, a menudo, ya ha pagado. Quien contesta una encuesta dentro de la app sigue usándola, así que te habla el que se queda, no el que se fue. Quien comenta un vídeo de TikTok quizá ni siquiera tiene la app. Y quien acepta una entrevista es, casi siempre, alguien más implicado que la media. Ninguno de esos grupos es «tu usuario». Lee cada canal sabiendo a quién representa y no sumes sus voces como si fueran una muestra.</p>
+
+<h3>Responder también es marketing</h3>
+<p>Una respuesta a una reseña la lee la persona que la escribió y, sobre todo, la leen los que llegan después a la ficha. Una ficha donde el desarrollador contesta con calma, explica y arregla transmite que detrás hay alguien. Para una casa de marcas sin reputación común, como la tuya, esa sensación de «aquí hay una persona» es uno de los pocos activos de confianza que puedes construir sin dinero. En ambas tiendas la persona puede cambiar su reseña después de leer tu respuesta, y una estrella que se convierte en cuatro vale más que diez cinco estrellas nuevas, porque además cuenta una historia de arreglo.</p>
+
+<h3>Las tiendas ponen reglas para pedir reseñas, y no son negociables</h3>
+<p>Pedir una valoración está permitido; manipularla, no. Lo que conviene tener claro antes de tocar nada:</p>
+<ul>
+<li><strong>Usa el diálogo del sistema.</strong> Apple pide que las valoraciones dentro de la app se soliciten con su interfaz nativa, y no permite pantallas propias de «valóranos» que la sustituyan. Google ofrece su API de valoraciones dentro de la app (In-App Review) con la misma lógica. En los dos casos el sistema decide si el diálogo aparece y limita cuántas veces lo hace al año; tu llamada es una petición, no una garantía. Por eso no puedes saber si se mostró: solo que lo pediste.</li>
+<li><strong>Nada de filtrar.</strong> Google pide expresamente que no hagas preguntas antes de enseñar la tarjeta (del tipo «¿te gusta la app?») para mandar solo a los contentos a la tienda. Apple, al no permitir pantallas propias, deja fuera el mismo truco. Es la técnica que muchos manuales viejos recomiendan, y hoy es motivo de problemas.</li>
+<li><strong>Nada de recompensas.</strong> Ni diamantes en Zodiaco, ni XP en Leo Glow, ni recetas desbloqueadas en Anime Food a cambio de una valoración. Las dos tiendas prohíben incentivar reseñas. Tampoco pidas a amigos o a cuentas propias que valoren.</li>
+<li><strong>Un enlace fijo sí está permitido.</strong> Un botón discreto en Ajustes o Perfil («Valorar la app») que abra la ficha en la tienda no tiene límites, porque lo pulsa quien quiere. Es complementario al diálogo, no un sustituto.</li>
+</ul>
+<p>Revisa las condiciones actuales en las guías de Apple y de Google antes de implementar: cambian con los años, y lo que vale es lo que digan cuando subas la build, no lo que diga este capítulo.</p>
+
+<h3>El momento de pedir es justo después de un logro, nunca después de un «no»</h3>
+<p>La regla es la misma que para el muro y para el permiso de notificaciones: se pide cuando la persona acaba de recibir valor. Después de cerrar un diagnóstico, de completar el primer día del plan, de volver por tercera vez, de terminar una receta en modo cocina. Nunca en la primera sesión, nunca justo después de rechazar el muro, nunca tras un error de pago, nunca encima de un anuncio. Como el sistema limita cuántas veces lo enseña, cada petición desperdiciada en un mal momento es una petición que no tendrás en el bueno.</p>
+
+<h3>Entrevistar no es un proyecto: es un hábito pequeño</h3>
+<p>The Mom Test (ficha 601) te da la técnica: habla de su vida, no de tu app; pregunta por la última vez que pasó algo, no por lo que haría; habla poco. Continuous Discovery Habits (ficha 603) te da el ritmo: contactos frecuentes y cortos, orientados a un resultado de producto concreto, con el reclutamiento automatizado para que siempre haya alguien en la agenda. La cautela de esa ficha vale aquí: con cuatro apps, una charla suelta por app se reparte demasiado. Mejor una app por mes, en bloque.</p>
+
+<h3>Una comunidad no se abre: se encuentra</h3>
+<p>Ya tienes una comunidad potencial y no está en tus apps: está en los comentarios de tus vídeos en TikTok, Instagram y YouTube. Kevin Kelly (ficha 803) insiste en dos condiciones para que unos pocos cientos de personas sostengan un trabajo: la relación directa y algo nuevo con regularidad. Lo segundo ya lo tienes de sobra con tu máquina de vídeo. Lo primero, no: hoy tu relación con la gente pasa por plataformas que la controlan. Antes de pensar en abrir un Discord o un foro, que trabajando solo es una tarea de moderación diaria, aprovecha el sitio donde ya te hablan.</p>
+
+<h2>Qué dicen tus datos</h2>
+<p>Este capítulo tiene menos cifras que los anteriores porque la mayoría de lo que importa aquí no lo tienes medido. Decirlo es parte del diagnóstico.</p>
+
+<h3>Lo que sí tienes</h3>
+<ul>
+<li><strong>Páginas de soporte para dos apps.</strong> En la web existen <code>/soporte/looksmax/</code> (Leo Glow, actualizada el 9 de septiembre de 2026) y <code>/soporte/anime-food/</code> (actualizada el 6 de octubre de 2026). Las dos prometen que una persona real lee el correo y contesta en dos o tres días, explican que no hay cuenta y que los datos viven en el dispositivo, y cómo cambiar la elección de anuncios y borrar todo. La de Anime Food explica además cómo restaurar Premium y cómo pedir reembolsos a Apple o Google, en inglés y con un resumen en español.</li>
+<li><strong>La de Leo Glow se ha quedado atrás.</strong> Es anterior a la 2.0: habla de misiones y rachas, solo menciona iOS y no dice nada de Glow+, de cómo restaurar la compra, de cómo cancelar la suscripción ni de reembolsos. Con suscripción en las dos tiendas desde octubre, es justo lo que más te van a preguntar.</li>
+<li><strong>TCM y Zodiaco no tienen página de soporte</strong> en la web, aunque las dos (como el resto de las apps) tienen su página de privacidad. TCM es la app que más cobra y la que tiene más pruebas a punto de convertirse en cobros: es la que más necesita una.</li>
+<li><strong>Una pregunta de procedencia en Leo Glow.</strong> Desde la 2.0.4 la pregunta de cómo nos conociste incluye «ChatGPT u otra IA». Es, en la práctica, tu primera encuesta dentro de la app con respuesta estructurada.</li>
+<li><strong>Señales de las preguntas del onboarding de TCM.</strong> En la lectura de la 1.0.7 (136 personas), en «Qué te cuesta» el 41 % cambiaba de respuesta antes de seguir: la pregunta hace pensar, que es lo que se le pide a una buena pregunta, pero también indica que las opciones no son evidentes para todos.</li>
+<li><strong>El dato que más pide una conversación.</strong> En Leo Glow Android, 22 anuales empezados y 19 cancelados en 30 días, con 0 pruebas. Según la lectura del capítulo de muros, esas cancelaciones ocurren en la hoja de Google, antes de que la persona sea suscriptora. No son bajas de clientes: son personas que llegaron al último paso y se echaron atrás. Es la pregunta mejor delimitada de todo el portfolio.</li>
+</ul>
+
+<h3>Lo que no tienes medido</h3>
+<ul>
+<li><strong>La valoración media y el número de reseñas por app y tienda.</strong> No aparecen en tus informes del 26 y del 27 de octubre. Tampoco cuántas has contestado ni cuánto tardas.</li>
+<li><strong>El volumen de correo de soporte.</strong> No sabes cuántos mensajes recibes por semana, de qué app, sobre qué tema ni si cumples los dos o tres días que prometen las páginas.</li>
+<li><strong>Cuántas veces pides una valoración.</strong> Ninguna app registra un evento de petición de reseña.</li>
+<li><strong>Entrevistas hechas.</strong> Las fichas 201, 202 y 601 proponen cinco suscriptores y tres cancelados en TCM y cinco usuarios en Leo Glow. No consta que se hayan hecho.</li>
+<li><strong>Qué parte de las visitas de tus vídeos acaba en la ficha.</strong> La ficha de Anime Food lo plantea como la medida clave (descargas por 1.000 vistas) y no la tienes.</li>
+</ul>
+<p>Nada de esto requiere una build para empezar. Las reseñas están en las consolas, el correo está en tu bandeja y los comentarios están en TikTok Studio. Lo que falta es un sitio donde apuntarlo y un rato fijo para hacerlo.</p>
+
+<h2>Qué hacer en todas las apps: el sistema común</h2>
+
+<h3>Plantillas para responder reseñas</h3>
+<p>Escribe las plantillas una vez y personaliza siempre la primera frase con algo de lo que dice la persona. Una respuesta que se nota copiada es casi peor que ninguna. Contesta en el idioma de la reseña (en TCM, el inglés es la mitad del tráfico), firma con tu nombre o con el de la app, y no pongas nunca datos personales. Estas son la base, en español:</p>
+<ol>
+<li><strong>Una estrella por un fallo.</strong> «Gracias por avisar, y siento que [lo que falló] te haya estropeado [lo que intentaba hacer]. Lo estoy mirando. Si me escribes al correo de soporte con tu modelo de móvil y la versión del sistema, lo encuentro antes. Cuando salga el arreglo te lo diré aquí.» Y cumple: cuando salga, edita la respuesta con «Arreglado en la versión X».</li>
+<li><strong>«No es gratis» o «todo está detrás del muro».</strong> «Entiendo que esperabas [lo que pensaba]. La app es gratuita en [lo que lo es] y la suscripción añade [lo que añade]. Si empiezas la prueba, no se cobra nada hasta el día [N] y puedes cancelarla en cualquier momento desde la tienda.» Sin discutir y sin pedir perdón por cobrar. Si varias reseñas dicen lo mismo, el problema no es la reseña: es lo que promete la ficha.</li>
+<li><strong>Cobro inesperado o petición de reembolso.</strong> «Siento el susto. Los pagos los gestiona [Apple / Google] y yo no puedo devolver dinero directamente, pero puedes pedir el reembolso en [reportaproblem.apple.com / el historial de pedidos de Google Play]. Para que no vuelva a pasar: [cómo se cancela]. Si quieres, escríbeme y te ayudo con los pasos.» Es la reseña en la que más importa ser rápido y claro.</li>
+<li><strong>Petición de función.</strong> «Gracias por la idea. ¿Me cuentas en el correo de soporte qué intentabas hacer cuando la echaste en falta?» No prometas fechas. La pregunta es la de Fitzpatrick: lo que importa no es la función, sino lo que la persona intentaba hacer.</li>
+<li><strong>Crítica de contenido o de enfoque.</strong> Por ejemplo, en Leo Glow, «no escanea la cara». «Es a propósito: Leo no puntúa caras. Trabaja con lo que sí puedes cambiar con hábitos: piel, sueño, postura, estilo, entrenamiento. Entiendo que buscaras otra cosa.» Tu postura es tu marca: defiéndela con calma, sin convencer a nadie.</li>
+<li><strong>Cinco estrellas.</strong> No hace falta contestar todas. Contesta las que dicen algo concreto, con una frase que lo recoja («me alegra que el modo cocina te salvara el ramen»). Y apunta esa frase: es vocabulario de cliente para tu ficha.</li>
+<li><strong>Insultos o reseñas sin contenido.</strong> No contestes. Si incumplen las normas de la tienda, márcalas. La ficha de Show Your Work lo resume bien: separa la crítica útil del ataque y no alimentes al que solo busca pelea.</li>
+</ol>
+<p>Dos reglas que no se rompen. En TCM, no des consejo médico en una respuesta, aunque la persona describa una dolencia: recuerda que la app es educativa y que para un problema de salud hay que ir a un profesional. Y en ninguna app pidas a quien escribió una reseña mala que la cambie: arregla lo que dijo, avísale y deja que decida.</p>
+
+<h3>El correo de soporte: una sola bandeja, tres etiquetas</h3>
+<p>Todas tus apps llevan al mismo correo. Está bien así, siempre que puedas separar. Crea una etiqueta por app y tres por tipo: <strong>pago</strong> (restaurar, cobros, reembolsos, el «not allowed»), <strong>fallo</strong> y <strong>idea</strong>. Al final de cada mes, cuenta cuántos hay de cada. Es tu primera medida de soporte y te costará cinco minutos.</p>
+<p>Tres plantillas de correo te cubren casi todo:</p>
+<ul>
+<li><strong>Restaurar compra.</strong> Los pasos exactos de cada app, con el nombre real de los botones, y el recordatorio de que hay que usar la misma cuenta de la tienda con la que se compró. Nunca pidas datos de tarjeta; si necesitas algo, la fecha de la compra.</li>
+<li><strong>No puedo pagar.</strong> Para el «not allowed» de Google Play, que en TCM afecta a una de cada seis personas que pulsan pagar: qué significa (la cuenta, el país o un control parental no permiten la compra), qué puede revisar en los métodos de pago de Google Play y, si su país no está entre los que Play atiende, decirlo con honestidad. Es un correo que ya puedes escribir con lo que sabes por el capítulo de muros.</li>
+<li><strong>Fallo.</strong> Agradecer, pedir modelo, versión del sistema y lo que hizo justo antes (las páginas de soporte ya lo piden), y decir cuándo volverás a escribir.</li>
+</ul>
+<p>Cuando contestes a alguien que ha tenido un problema y lo resuelves, ese es el mejor momento para hacerle una pregunta de entrevista por escrito: «Por cierto, ¿qué buscabas cuando instalaste la app?». Una frase así, contestada por alguien agradecido, vale más que una encuesta.</p>
+<p>Y una cuestión de privacidad que ya prometes en tus páginas: si alguien pide que borres su correo, bórralo. Guarda las notas de lo que aprendes sin nombres ni direcciones.</p>
+
+<h3>Encuestas dentro de la app: una pregunta, en el momento justo</h3>
+<p>Una encuesta en una app de consumo funciona cuando cabe en un toque y llega en un momento con sentido. Tres reglas: una sola pregunta (dos como mucho), respuestas cerradas con una opción «otra» abierta, y nunca durante la primera sesión ni encima del muro. PostHog tiene encuestas propias; comprueba si tu SDK móvil las soporta. Si no, una pantalla tuya con un evento <code>survey_answered</code> que lleve la pregunta y la respuesta como propiedades te sirve igual, y te deja cruzar la respuesta con lo que la persona hizo después.</p>
+<p>Las tres encuestas que más valen en tu portfolio:</p>
+<ol>
+<li><strong>La de procedencia</strong>, que ya tienes en Leo Glow. Su valor está en cruzarla: ¿se activa y paga distinto quien viene de ChatGPT que quien viene de TikTok?</li>
+<li><strong>La de «muy decepcionado»</strong>, que propone la ficha de Hacking Growth: a quien lleva al menos tres sesiones, cómo se sentiría si la app dejara de existir (muy decepcionado, algo decepcionado, nada). Si pocos dicen «muy», el trabajo es de producto, no de crecimiento.</li>
+<li><strong>La del momento de irse atrás</strong>, que es la de cancelación (más abajo, en Leo Glow).</li>
+</ol>
+<p>Con tus volúmenes, lee las encuestas como frases, no como porcentajes, hasta tener unas 30 respuestas por grupo. Es el mismo umbral orientativo que ya usas para comparar la vuelta al día siguiente: por debajo, una diferencia de diez puntos es fácilmente ruido.</p>
+
+<h3>Pedir la valoración: un evento y una condición por app</h3>
+<p>En todas las apps, registra un evento <code>review_prompt_requested</code> con la condición que lo disparó y la versión. No sabrás si el sistema enseñó el diálogo, pero podrás comparar las reseñas nuevas por semana en la consola antes y después de activar cada condición. La condición concreta de cada app va en su apartado.</p>
+
+<h2>Qué hacer en cada app</h2>
+
+<h3>TCM: escuchar a quien paga y a quien estuvo a punto</h3>
+<ul>
+<li><strong>Crea la página de soporte.</strong> Con la plantilla de las otras dos, en <code>/soporte/medicina-china/</code>: cómo restaurar la suscripción, cómo cancelarla en cada tienda, cómo pedir reembolsos, qué hacer con el error de pago de Google Play y la advertencia de que la app es educativa y no da consejo médico. Comprueba después que la URL de soporte de las fichas de las dos tiendas apunta a una página que existe.</li>
+<li><strong>Pide la valoración después de un diagnóstico terminado</strong>, en la segunda o tercera sesión, no en la primera. Es el momento en que la app demuestra lo que vale, y es también donde convierte el muro contextual. Si la persona está en prueba, no la pidas el mismo día del aviso de cobro: que no parezca un trato.</li>
+<li><strong>Haz las entrevistas que llevan semanas pendientes.</strong> Cinco suscriptores y tres cancelados, con los guiones de la ficha 601. Es la app donde reclutar es más fácil: hay gente que ha pagado, y entre el 14 y el 25 de octubre se cobraron 7 pruebas anuales, entre ellas en Reino Unido, Estados Unidos, Francia, España y México. La pregunta que resuelven es la de toda su estrategia de marca: si paga más y se queda más el estudiante o el curioso.</li>
+<li><strong>Recluta dentro de la app.</strong> Una tarjeta fija en el Inicio, visible solo para suscriptores y para quien lleva varias sesiones: «¿Me cuentas en quince minutos cómo estudias? Te regalo [un mes / acceso anticipado a lo próximo].» Es la invitación automatizada que propone Torres. Mide cuántos la ven y cuántos responden.</li>
+<li><strong>Una pregunta al terminar la primera semana de prueba</strong>, el día cinco, junto al aviso con lo que ha hecho la persona: «¿Para qué estás usando TCM?» con las mismas opciones del objetivo del onboarding más «otra». Si la respuesta cambia respecto a lo que dijo el primer día, has aprendido algo que el onboarding no ve.</li>
+<li><strong>Contesta las reseñas en inglés con especial cuidado.</strong> Es el idioma con peor cierre del onboarding en la lectura de la 1.0.7 (62 % frente al 78 % en español). Si las reseñas en inglés se quejan de textos raros o de traducciones, ya tienes la causa.</li>
+</ul>
+
+<h3>Leo Glow: la encuesta de cancelación y cinco conversaciones</h3>
+<p>Leo Glow es la app donde preguntar tiene más retorno, porque el problema está muy delimitado: la gente llega al muro, empieza el anual y se va en la hoja de Google. El capítulo de muros te pide comprobar primero, con una cuenta nueva y un evento con <code>trial_eligible</code> y <code>offer_id</code>, si la hoja enseña la prueba. Hazlo antes que nada de lo que sigue: si la hoja enseña un precio en lugar de «3 días gratis», la encuesta solo te confirmará lo que la cuenta nueva te habría dicho en diez minutos.</p>
+<p><strong>La encuesta de cancelación, en dos momentos.</strong></p>
+<ol>
+<li><strong>Al volver de la hoja sin comprar.</strong> Cuando la compra vuelve cancelada, una sola pregunta, una vez por persona y sin bloquear nada: «¿Qué ha pasado?» con cuatro respuestas: «No vi que tuviera días gratis», «Es caro para mí», «Solo estaba mirando», «Otra cosa» (con campo de texto). Debajo, un botón para seguir gratis. Con unas 52 personas que ven el muro por semana en Android y pocas que llegan a la hoja, tardarás varias semanas en juntar respuestas: júntalas y léelas como frases.</li>
+<li><strong>Cuando la prueba exista y alguien quite la renovación.</strong> Ni Apple ni Google te dejan meterte en el flujo de cancelación, que ocurre en la tienda. Lo que sí puedes es detectar, con RevenueCat, que la renovación está desactivada y, la siguiente vez que la persona abra la app, preguntar una vez: «Has desactivado la renovación. ¿Nos dices por qué?» con respuestas como «Por si se me olvida cancelar», «No lo estoy usando», «No es lo que esperaba», «Es caro», «Otra». La primera respuesta es importante: el capítulo de muros recuerda que quitar la renovación al minuto de empezar suele ser prudencia, no rechazo, y esa persona necesita un aviso antes del cobro con lo que ha hecho, no una oferta. Google Play muestra además su propia encuesta de motivos a quien cancela; comprueba en tu consola qué parte de esas respuestas puedes ver.</li>
+</ol>
+<p><strong>Las cinco conversaciones.</strong> La ficha de marca de Leo Glow termina con la pregunta de quién descarga de verdad y por qué, y la 601 te da el guion. Recluta a los pocos que llegan al día 7 (con d7 al 1,1 % en Android serán muy pocos, así que la invitación tiene que estar fija en la app y ofrecer algo: un mes de Glow+, por ejemplo) y a quien contestó «Otra cosa» en la encuesta de cancelación. La pregunta que da miedo es la de las apps que puntúan la cara: si a la gente le enganchó la nota aunque le sentara mal, tu problema es de posicionamiento.</p>
+<ul>
+<li><strong>Actualiza la página de soporte</strong> con Glow+: restaurar, cancelar en cada tienda, reembolsos, Android además de iOS, y una línea de la postura («Leo no puntúa caras»). Es la pregunta que más vas a recibir por correo y en reseñas de una estrella.</li>
+<li><strong>Pide la valoración al cerrar el día 3 del plan</strong>, no el día 1: quien llega al día 3 ha demostrado que vuelve. Nunca a cambio de XP, de una tirada extra de la ruleta ni de mensajes con Leo.</li>
+<li><strong>Escucha a la comunidad del nicho sin hablar su idioma.</strong> Los comentarios en tus vídeos de Leo te dirán qué palabras usa tu público. Apúntalas, pero no adoptes el vocabulario de la parte más tóxica del nicho, como advierte su ficha de marca.</li>
+</ul>
+
+<h3>Zodiaco: preguntar antes del pico</h3>
+<ul>
+<li><strong>Crea la página de soporte</strong> en <code>/soporte/zodiaco-chino/</code>, con la misma plantilla: datos en el dispositivo, anuncios y consentimiento, avisos que no llegan (te ha pasado con R8: que la página explique cómo comprobar el permiso), la tienda de diamantes de iOS y la mascota. Tenla lista antes de que salga iOS, que lleva 28 días en cola de revisión: el primer día en la App Store traerá preguntas nuevas.</li>
+<li><strong>Una pregunta, no una entrevista.</strong> La ficha 601 dice que aquí entrevistar es menos urgente, pero que hay una pregunta que vale oro antes de febrero: para qué abren la app. Ponla como encuesta de un toque tras la tercera lectura: «¿Para qué usas sobre todo la app?» con «Mi lectura del día», «Compatibilidad con alguien», «Cuidar a mi mascota», «Otra». Con unas 800 personas al mes juntarás respuestas antes del pico. Si gana la compatibilidad, se confirma la hipótesis de su ficha de marca.</li>
+<li><strong>Pide la valoración tras la tercera vuelta</strong>, al cerrar una lectura, nunca justo después de un rewarded ni a cambio de diamantes o de comida para la mascota.</li>
+<li><strong>Revisa las reseñas por idioma.</strong> Tu público está muy repartido. Un traductor basta para leerlas; contesta en su idioma con una plantilla traducida y revisada. Una queja repetida en un idioma suele ser un texto mal traducido o una lectura que suena rara en esa cultura.</li>
+<li><strong>Mei y Lin como voz del canal directo.</strong> Es la idea de la ficha 803: si algún día construyes una lista de correo o una comunidad, que la firmen ellas. Por ahora, que contesten los comentarios de los vídeos con la misma voz cálida de la app.</li>
+</ul>
+
+<h3>Anime Food: la comunidad está en los vídeos, y con cuidado</h3>
+<ul>
+<li><strong>La app de iOS está en la categoría Niños (9-11).</strong> No hay analítica, no hay anuncios y no debe haber encuestas ni invitaciones a entrevistas desde ahí. Cualquier enlace que saque de la app, incluido el del correo de soporte, tiene que ir detrás de la puerta parental. La ficha 601 lo dice claro: no recluyes desde la app ni contactes con menores.</li>
+<li><strong>Tu investigación aquí son los comentarios.</strong> En TikTok, Instagram y YouTube, apunta cada semana tres cosas: qué platos pide la gente, quién dice que lo ha cocinado de verdad y quién pregunta por la app. Si casi nadie dice haber cocinado, tu público consume el contenido y no el producto, y eso apunta a que Anime Food es un motor de contenido. Es la decisión que su ficha de marca te pide tomar.</li>
+<li><strong>Cuenta tus fans, no tus vistas.</strong> La ficha 803 propone definir un comportamiento que identifique al fan. Aquí puede ser «comenta en tres vídeos distintos» o «dice haber hecho una receta». Si con el tiempo hay unos pocos cientos, la pregunta de si comprarían un recetario o un pack de temporada tiene sentido; si no, no.</li>
+<li><strong>En Android, una pregunta al guardar la primera receta</strong>, cuando el <code>distinct_id</code> esté arreglado: «¿La vas a cocinar?» Sí, quizá, solo la quería ver. Es la versión de un toque de la pregunta de la ficha 601 y te dice, con datos, si es producto o canal. Con 142 personas al mes y 17 nuevas en la última semana, júntala durante semanas.</li>
+<li><strong>Las reseñas, con la plantilla y poco más.</strong> No le dediques más tiempo que a contestar lo que llegue.</li>
+</ul>
+
+<h3>Las apps menores</h3>
+<p>Siete apps sin analítica no significa siete apps sin información: las reseñas y el correo funcionan igual. Una vez al mes, abre las consolas de Walk the World, Grandpa's Kitchen, Mythology Tower Defense, Bizarre Pose Camera, Stranger Quiz, Stranger Foods y Christmas Dinner y lee lo nuevo. Contesta con las plantillas. No pidas valoraciones ni pongas encuestas: no vas a invertir en ellas, y una reseña nueva no cambia nada si nadie la mira. Si una de ellas empieza a recibir reseñas con peticiones concretas (Stranger Quiz, que ronda las 2 descargas diarias en iOS, es la candidata), eso es una señal para decidir si merece analítica. Si una app recibe solo quejas de fallos que no vas a arreglar, es un argumento para la decisión de archivarla.</p>
+
+<h2>El ritual de 45 minutos a la semana</h2>
+<p>Todo lo anterior cabe en un bloque fijo semanal si lo haces siempre igual. Elige un día y una hora que la máquina de vídeo no te coma (la ficha 603 te hace esa pregunta) y no lo muevas. Una hoja de cálculo con cinco columnas es suficiente: fecha, app, canal, frase literal y etiqueta (pago, fallo, idea, valor, confusión).</p>
+<table>
+<tr><th>Minutos</th><th>Qué haces</th></tr>
+<tr><td>10</td><td>Reseñas nuevas de las cuatro apps principales en las dos tiendas. Contestas las de una a tres estrellas y las de cinco con algo concreto. Apuntas una frase por reseña útil.</td></tr>
+<tr><td>10</td><td>Correo de soporte. Contestas lo pendiente con las plantillas, etiquetas y, si alguien te ha ayudado a encontrar un fallo, le haces una pregunta de entrevista.</td></tr>
+<tr><td>5</td><td>Respuestas de las encuestas de la semana (procedencia y cancelación en Leo Glow, para qué usas en Zodiaco). Las copias a la hoja como frases.</td></tr>
+<tr><td>5</td><td>Comentarios de los vídeos de la semana: tres frases que se repitan, sobre todo en Anime Food.</td></tr>
+<tr><td>15</td><td>Una conversación con un usuario de la app del mes, o, si esa semana no hay nadie en la agenda, enviar las invitaciones para la siguiente. Ficha de una página el mismo día.</td></tr>
+</table>
+<p>Y una vez al mes, otros quince minutos para dos cosas: leer la hoja entera buscando lo que se repite (cuando ya no estás emocionado por cada respuesta, como recomienda Fitzpatrick) y escribir una sola decisión de producto que salga de ahí. Si en un mes no sale ninguna, el ritual se ha convertido en lectura y hay que preguntar mejor.</p>
+<p><strong>La app del mes.</strong> Siguiendo la cautela de la ficha 603, una app por mes en bloque. Una propuesta: noviembre para TCM (las entrevistas pendientes, con el reclutamiento más fácil), diciembre para Leo Glow (cuando el muro nuevo lleve unas semanas y la encuesta de cancelación tenga respuestas), enero para Zodiaco (con la respuesta de para qué usan la app, antes del pico de febrero). Si el arreglo del muro de Leo Glow sale antes, cambia el orden de las dos primeras.</p>
+<p>Si una semana no tienes 45 minutos, haz la versión mínima que propone la ficha de Atomic Habits: leer cinco reseñas o respuestas y anotar una frase. Lo que no se puede es saltarse tres semanas seguidas, porque entonces el correo pendiente se convierte en una tarea de una tarde y deja de ser un hábito.</p>
+
+<h2>Qué medir</h2>
+<ul>
+<li><strong>Valoración media y reseñas nuevas por semana, por app y tienda.</strong> Hoy no lo tienes. Apúntalo cada semana en el ritual; con un mes ya ves la tendencia. Mira también la valoración de la versión actual, no solo la histórica: es la que refleja tus cambios.</li>
+<li><strong>Reseñas de una a tres estrellas contestadas y tiempo de respuesta.</strong> Objetivo razonable: todas, en menos de una semana. Y cuántas cambian de nota después de tu respuesta.</li>
+<li><strong>Correos por semana, por app y por etiqueta.</strong> Y si cumples los dos o tres días de respuesta que prometen tus páginas. Un aumento de la etiqueta «pago» tras una release es una alarma temprana.</li>
+<li><strong>Peticiones de valoración.</strong> El evento <code>review_prompt_requested</code> con la condición. Compara reseñas nuevas por semana antes y después de activar cada condición, sin esperar precisión: el sistema decide cuándo enseña el diálogo.</li>
+<li><strong>Tasa de respuesta de cada encuesta.</strong> Respuestas por encuesta enseñada (<code>survey_shown</code> y <code>survey_answered</code>). Si baja de forma clara, la pregunta llega en mal momento o es demasiado larga.</li>
+<li><strong>Respuesta de la encuesta cruzada con lo que hace después.</strong> Quien dijo «no vi los días gratis» en Leo Glow, ¿vuelve a intentar comprar? Quien vino de ChatGPT, ¿se activa más? Es donde la encuesta deja de ser una opinión y se convierte en un segmento.</li>
+<li><strong>Entrevistas por mes y decisiones que salen de ellas.</strong> La medida de Torres no es cuántas charlas haces, sino si cambian lo que construyes. Apunta al lado de cada decisión de producto si tiene detrás una frase de un usuario.</li>
+<li><strong>Fans por app.</strong> Con la definición que elijas para cada una (abrir casi a diario, comprar, comentar varias veces), cuántos hay. Es la cuenta de la ficha 803, y te dirá si Zodiaco y Anime Food tienen núcleo o solo audiencia.</li>
+</ul>
+<p>Sobre los tamaños: casi todo aquí son números de un dígito por semana. No conviertas cinco respuestas en un porcentaje. Las frases te dicen dónde mirar; los eventos, cuando haya volumen, si lo que viste es general.</p>
+
+<h2>Errores comunes</h2>
+<ol>
+<li><strong>Leer las reseñas como si fueran tus usuarios.</strong> Escriben los extremos. Una reseña repetida es una pista; una reseña sola es una persona.</li>
+<li><strong>Contestar en caliente.</strong> Una respuesta seca a una crítica injusta la leen todos los que llegan a la ficha. Escribe con la plantilla y relee antes de publicar.</li>
+<li><strong>Filtrar a los contentos hacia la tienda.</strong> El «¿te gusta la app?» antes del diálogo es lo que Google prohíbe y lo que Apple no permite construir. Pide a todos, en el buen momento, con el diálogo del sistema.</li>
+<li><strong>Recompensar la valoración.</strong> Diamantes, XP, recetas o días de suscripción a cambio de estrellas. Está prohibido en las dos tiendas y pone en riesgo la app entera.</li>
+<li><strong>Pedir la valoración en el peor momento.</strong> En la primera sesión, tras un «no» al muro, tras un error de pago o encima de un anuncio. Gastas una petición limitada en alguien que no está contento.</li>
+<li><strong>Preguntar «¿te gustaría que la app tuviera…?».</strong> Es la pregunta que The Mom Test enseña a no hacer. Cambia cada «¿usarías?» por «cuéntame la última vez que…».</li>
+<li><strong>Enseñar la app en la entrevista.</strong> En cuanto la enseñas, la persona opina sobre tu pantalla y deja de contarte su vida. Si hace falta, al final, y ya no cuenta como dato.</li>
+<li><strong>Una gran encuesta en lugar de muchas preguntas pequeñas.</strong> Diez preguntas en una app de consumo las contesta quien se aburre. Una pregunta en el momento justo la contesta casi cualquiera.</li>
+<li><strong>Abrir una comunidad que no puedes atender.</strong> Un Discord vacío o lleno de spam es peor que no tenerlo. Primero, los comentarios donde ya te hablan.</li>
+<li><strong>Olvidar a los menores y la salud.</strong> Nada de contacto ni encuestas desde la versión de Anime Food en Niños, nada de consejo médico en TCM. Son los dos sitios donde un buen hábito de escucha puede convertirse en un problema.</li>
+<li><strong>Escuchar y no decidir.</strong> La hoja llena de frases sin una decisión al mes es curiosidad, no descubrimiento. El ritual termina siempre con una línea: qué cambias por lo que has oído.</li>
+</ol></section>
+
+<hr>
+
+<section id="1006-plan-por-app"><h1>Plan por app</h1>
+<p><em>Tu lista de trabajo para noviembre: dónde está cada app, qué conseguir este mes, tareas ordenadas por impacto con su medida y su umbral, lo que no toca y un calendario de cuatro semanas.</em></p>
+
+<h2>Cómo usar esta lista</h2>
+<p>Tu noviembre de trabajo empieza el 15, cuando vuelves. Las cuatro semanas de este plan son las mismas que las de <a href="#1203-que-hacer-al-volver">Qué hacer al volver</a>: del 15 al 22 de noviembre, del 22 al 29, del 29 al 6 de diciembre y del 6 al 13. Ese capítulo marca las prioridades generales; este las baja a cada app. Si en algún punto parecen decir cosas distintas, manda aquel.</p>
+<p>Cuatro reglas para toda la lista:</p>
+<ul>
+<li><strong>Un cambio por app y por semana.</strong> Con muestras de 30 a 200 personas, dos cambios a la vez no se pueden leer.</li>
+<li><strong>La vara de medir es el valor por persona que empieza</strong>, no cuántos pasan una pantalla. Lo aprendiste con la bienvenida de TCM.</li>
+<li><strong>Los umbrales son míos, no datos.</strong> Son puntos de decisión orientativos, sacados de tus cifras. Con altas de un dígito, desconfía de diferencias menores que dos veces la raíz de la cifra esperada, el criterio que ya usas en las fichas.</li>
+</ul>
+
+<h2>TCM / Medicina China</h2>
+<p><strong>Situación.</strong> La única app con negocio: unas 43 descargas diarias en Play y 10,7 en iOS, y un muro (1.0.10) por el que, en Android, de 234 personas que lo ven en una semana 64 pulsan pagar y 10 se dan de alta; el anual con prueba cobra (12 de 87) y el mensual no (1 de 9). Lo que no sabes es cuánta gente sigue a los 30 días, porque la app no manda days_since_install.</p>
+<p><strong>Objetivo de noviembre.</strong> Recuperar a quien quiere pagar y no puede, y tener por primera vez una curva de retención que se pueda leer. Sin tocar lo que ya vende.</p>
+<h3>Tareas, por orden de impacto</h3>
+<ol>
+<li><strong>La pantalla para «not allowed».</strong> En 30 días, 29 personas y 74 intentos: una de cada seis que pulsa pagar. Dos casos, dos tratos: en los países donde Play no vende, sin precios y con un mensaje honesto para seguir gratis; en la cuenta que no puede pagar en un país donde sí se vende, explicación, botón a los métodos de pago de Google Play y «recuérdamelo mañana». Revisa primero si el aviso que tienes desde el 1 de octubre ya hace parte de esto, y añade país y motivo a premium_purchase_failed si no van.<br>
+Mide: personas con fallo que compran en los siete días siguientes (hoy, cero), por motivo y país.<br>
+Éxito: alguna compra recuperada con unas 20 personas con fallo (una semana). Fracaso: cero tras dos semanas; entonces lo recuperable era menos de lo que parecía y das la pantalla por terminada sin invertir más.</li>
+<li><strong>Medir la retención: days_since_install.</strong> Es lo que más condiciona el resto del año y lo que falta en tu marca (lo verás en «Retención y notificaciones»). Aprovecha la misma build para el aviso de versión nueva dentro de la app: 41 personas siguen en la 1.0.9.<br>
+Mide: vuelta a los días 1, 7 y 30 por cohorte semanal de versión, y personas que quedan en la 1.0.9.<br>
+Éxito: a mediados de diciembre puedes leer el día 7 de al menos dos cohortes semanales de la 1.0.10. Fracaso: el evento llega vacío o con huecos; arréglalo antes de mirar nada más.</li>
+<li><strong>Cinco suscriptores y tres cancelados.</strong> El guion del Mom Test de la Parte VI. La pregunta que decide la categoría: ¿el estudiante paga más y se queda más que el curioso? Cómo pedir la conversación, en «Atender a tu público».<br>
+Mide: conversaciones hechas y, en cada una, para qué abrió la app la primera vez y qué hacía antes.<br>
+Éxito: ocho conversaciones antes del 6 de diciembre y una respuesta, aunque sea provisional, a estudiante frente a curioso. Fracaso: menos de cuatro; entonces cambia de canal (pregunta dentro de la app) en lugar de esperar.</li>
+<li><strong>Los muros contextuales, medidos por su source.</strong> El diagnóstico es lo que vende (el muro tras un diagnóstico vendía 1 de 11 cuando el del onboarding vendía 1 de 88). Comprueba que cada final de diagnóstico ofrece la prueba con un resultado más completo bloqueado y que en todos los muros, no solo en el del onboarding, el anual sale preseleccionado y el mensual en pequeño.<br>
+Mide: altas por vista de cada muro, por source; plan_selected = anual.<br>
+Éxito: la fracción que elige el anual no baja y las altas por vista de home_card se mantienen o suben (7,2 % en 30 días). Con unas 150 vistas por muro ya se lee. Fracaso: baja; deshaz el cambio de ese muro y no toques los demás.</li>
+<li><strong>El aviso del día cinco de la prueba.</strong> Con lo que ha hecho la persona, la fecha del cobro y un enlace para gestionar la suscripción. Antes de escribirlo, comprueba con la 1.0.10 que reminders_scheduled y notification_opened funcionan para quien concede el permiso.<br>
+Mide: pruebas cobradas por cohorte de semana de inicio en RevenueCat. Éxito: la fracción no baja frente a octubre. Fracaso: baja en dos cohortes seguidas; revisa el texto, no quites la transparencia.</li>
+<li><strong>Leer el precio por país.</strong> Brasil, México e India están rebajados desde el 13 de octubre y no tienes lectura. Es solo lectura: compara altas por vista del muro antes y después, agrupando los tres países frente a los que no tocaste.<br>
+Éxito: suben; amplía a los siguientes países por tráfico en diciembre. Fracaso: no se mueven; el problema allí no era el precio y no rebajas más.</li>
+</ol>
+<h3>Qué no hacer este mes</h3>
+<ul>
+<li>No toques el diseño del muro del onboarding de la 1.0.10. Convierte en las dos tiendas.</li>
+<li>No cambies precio y muro a la vez, ni en el mismo país.</li>
+<li>No decidas la categoría (estudio o bienestar) antes de las ocho conversaciones.</li>
+<li>No pongas anuncios. No prometas salud. No mezcles estudiante y curioso en la misma pieza.</li>
+<li>No vuelvas a ofrecer el vitalicio como «última oportunidad»: 106 de 112 lo rechazaban.</li>
+</ul>
+
+<h2>Leo Glow</h2>
+<p><strong>Situación.</strong> El posicionamiento más diferenciado y el muro que no cobra: en Android, en 30 días, 181 personas ven el muro, 22 empiezan un anual, 19 lo cancelan y no hay ninguna prueba; d1 11,6 % y d7 1,1 %. Unas 8,6 descargas diarias en Play y 4,0 en iOS, donde llegó el primer pago real en 30 días.</p>
+<p><strong>Objetivo de noviembre.</strong> Que existan pruebas en Android. Es el arreglo de mayor retorno por esfuerzo de todo el portfolio.</p>
+<h3>Tareas, por orden de impacto</h3>
+<ol>
+<li><strong>Comprobar la hoja de Google antes de tocar el muro.</strong> Con una cuenta nueva en un móvil real, mira si la hoja enseña los 3 días gratis. Añade dos datos al evento de pago: qué oferta se envía (offer_id) y si la persona es elegible (trial_eligible). La hipótesis es que la app pasa a Play el plan base en lugar de trial-3d; es una hipótesis hasta que lo veas.<br>
+Mide: fracción de pulsaciones de pago que envían trial-3d a una cuenta elegible.<br>
+Éxito: casi todas las elegibles reciben la oferta con prueba. Fracaso: no la reciben; ese es el fallo, arréglalo antes de la tarea 2 o la tarea 2 no servirá.</li>
+<li><strong>Copiar el muro de TCM.</strong> Anual preseleccionado, «3 días gratis» en el botón, «no se cobra nada hoy» debajo, precio por semana, ahorro frente al mensual en una cifra, el resto de planes visibles y secundarios. Si la persona no es elegible, el botón dice el precio de verdad.<br>
+Mide: pruebas iniciadas por persona que ve el muro, en Android; iOS júntalo por quincenas.<br>
+Éxito: 2 o más pruebas por semana con unas 50 vistas (en TCM el mismo cambio dio 12 con 234 vistas, cerca del 5 %). Fracaso: cero pruebas dos semanas seguidas; el problema sigue después del botón y vuelves a la tarea 1.</li>
+<li><strong>Medir el día 1 del plan de la 2.0.4.</strong> plan_first_day_opened, plan_action_toggled del día 1 y notification_opened del tipo daily-plan, por cohorte. Una prueba de tres días no sirve si la persona no vuelve al día siguiente. Cómo leer la vuelta por cohorte lo tienes en «Retención y notificaciones».<br>
+Mide: fracción que completa la primera acción el día cero, y d1 de quien la completa frente a quien no.<br>
+Éxito: la acción separa la vuelta (la pista del 11 de octubre era 53 % frente a 0 de 9). Fracaso: no separa con al menos unas 30 personas por grupo; entonces no es tu momento «aha» y lo apuntas para diciembre.</li>
+<li><strong>Preguntar qué compra la gente.</strong> Una pregunta en la app a quien completa la primera semana: ¿Leo, el plan de 30 días, las ligas? Y, para quien cancela, la encuesta de cancelación de «Atender a tu público». Hasta que lo sepas, el muro nombra el plan diario.<br>
+Mide: respuestas recogidas.<br>
+Éxito: unas veinte respuestas antes del 13 de diciembre. Fracaso: menos de cinco; busca a cinco usuarios para hablar, como pide la estrategia de marca.</li>
+<li><strong>Ofrecer el rewarded de la ruleta.</strong> 66 cargas y 1 enseñado. Un botón claro con lo que da (segunda tirada, mensaje extra con Leo). Mide rewarded enseñados por persona activa; si sigue sin verse, el momento elegido no es el bueno.</li>
+</ol>
+<h3>Qué no hacer este mes</h3>
+<ul>
+<li>No bajes el precio: con cero pruebas, el problema no es el número.</li>
+<li>No muevas el muro detrás del primer logro el mismo mes que cambias su diseño. Es la siguiente prueba, no esta.</li>
+<li>No cambies otra vez el nombre sin medir, no amplíes a otros públicos y no uses el «antes y después» como gancho.</li>
+<li>No inviertas en más tráfico ni en keywords: con un d7 del 1 %, cada descarga se evapora.</li>
+</ul>
+
+<h2>Zodiaco Chino</h2>
+<p><strong>Situación.</strong> Solo Android: 795 personas en 30 días y unas 13,3 descargas diarias en Play. Unos 10,6 USD en 30 días por anuncios, de los que 7,81 vienen del rewarded de duplicar la recompensa diaria. iOS (la 1.1.3) lleva 28 días en cola de revisión y la web perdió casi todas las impresiones en Google desde el 12 de octubre. Cuando los avisos se rompieron, la vuelta al día siguiente cayó del 26 % al 15 %.</p>
+<p><strong>Objetivo de noviembre.</strong> Saber cuánta gente vuelve y llegar a diciembre con los anuncios y la temporada preparados para el pico de febrero.</p>
+<h3>Tareas, por orden de impacto</h3>
+<ol>
+<li><strong>Arreglar days_since_install y mirar la retención antes de tocar anuncios.</strong> Es la primera semana de <a href="#1203-que-hacer-al-volver">Qué hacer al volver</a>. Prueba también un aviso programado en la build de release: el minify ya los rompió una vez.<br>
+Mide: d1 y d7 por país y por cohorte semanal.<br>
+Éxito: el d1 vuelve a la zona del 26 % que tenías antes del fallo de avisos. Fracaso: se queda cerca del 15 %; los avisos siguen sin llegar y esa es la tarea de la semana siguiente, no los anuncios.</li>
+<li><strong>Publicar la build con los tres rewarded nuevos</strong> (ración extra para la mascota, avance de la lectura de mañana, el resto de la compatibilidad), una vez tengas una semana de retención de referencia.<br>
+Mide: rewarded por persona activa y día, ingreso por persona activa, y d1 y d7 de la cohorte frente a la anterior.<br>
+Éxito: sube el ingreso por persona activa y la retención no cae más allá del ruido. Fracaso: la retención cae de forma clara; quita el rewarded que la está causando, aunque cobre.</li>
+<li><strong>Preparar febrero.</strong> Fichas, avisos y vídeos para «horóscopo chino 2027», como dice la segunda semana de <a href="#1203-que-hacer-al-volver">Qué hacer al volver</a>. Planéalo sin contar con iOS y ten preparada la comunicación para el día que salga.<br>
+Éxito: el 13 de diciembre la lista está cerrada y los cambios de anuncios tienen fecha antes de mediados de enero. Fracaso: llega diciembre con fichas a medias; recorta a los idiomas clave.</li>
+<li><strong>Dejar de precargar donde no se enseña.</strong> 3.506 peticiones sin relleno en la precarga del Oráculo, más las de Compatibilidad y Mascota.<br>
+Mide: peticiones sin relleno y anuncios enseñados en los huecos con nombre.<br>
+Éxito: bajan las primeras sin que bajen los segundos. Fracaso: bajan los enseñados; vuelve a precargar solo ese formato.</li>
+<li><strong>Comprobar si la compatibilidad es el motor.</strong> Una medida, no un cambio: vuelta al día siguiente de quien hace una compatibilidad el día cero frente a quien no, con al menos unas 30 personas por grupo. Si separa, lo apuntas para la marca de 2027.</li>
+</ol>
+<h3>Qué no hacer este mes</h3>
+<ul>
+<li>Ningún intersticial en el Oráculo, ni en la primera sesión.</li>
+<li>No añadas mediación: primero formatos bien colocados y el volumen de la temporada.</li>
+<li>Ni muro, ni suscripción, ni más páginas en la web.</li>
+<li>No esperes a Apple para pensar febrero.</li>
+</ul>
+
+<h2>Anime Food</h2>
+<p><strong>Situación.</strong> Unas 1,7 descargas diarias en Play y 3,0 en iOS; 142 personas en 30 días en Android. La edición de ficha del 30 de septiembre salió mal (visitantes ×0,31, adquisiciones ×0,61) y su reversión sigue sin publicar. iOS 1.3.0 rechazada y en la categoría Niños para siempre. El distinct_id está roto. Un vitalicio vendido en 30 días.</p>
+<p><strong>Objetivo de noviembre.</strong> Decidir su papel (mantenimiento y contenido) y que deje de pedirte atención.</p>
+<h3>Tareas, por orden de impacto</h3>
+<ol>
+<li><strong>Declarar el papel.</strong> Mantenimiento en apps.toml, con el esfuerzo en contenido. Es una decisión de diez minutos y la que más tiempo te devuelve.<br>
+Éxito: el estado cambiado la primera semana. Fracaso: sigues haciendo ASO fino en diciembre.</li>
+<li><strong>Publicar el deshacer de nombres en Play.</strong> Ya estaba propuesto en el informe del 24 de octubre y es la única decisión con evidencia.<br>
+Mide: visitantes y adquisiciones de la ficha, frente a las semanas anteriores al 30 de septiembre.<br>
+Éxito: se acercan a lo que tenías antes de la edición en dos o tres semanas. Fracaso: no se mueven; lo dejas así y no haces más ediciones.</li>
+<li><strong>Medir el contenido por descargas, no por vistas.</strong> Descargas por 1.000 vistas de vídeo y visitas a la ficha por formato (ASMR, compilación, anime → real).<br>
+Éxito: un formato trae claramente más visitas a la ficha; ese es el que produces en diciembre. Fracaso: ninguno trae nada medible; la app es un destino secundario y el contenido se juzga por seguidores que vuelven.</li>
+<li><strong>El distinct_id, si haces una build.</strong> No abras una solo para esto, pero si la abres, que vaya dentro, con el trato del «not allowed» de TCM. Éxito: puedes seguir a una persona de la primera a la segunda sesión.</li>
+</ol>
+<h3>Qué no hacer este mes</h3>
+<ul>
+<li>No hagas ASO fino: es el retorno por hora más bajo del portfolio.</li>
+<li>Ningún intersticial en los pasos de una receta.</li>
+<li>Nada de anuncios ni de sortear la categoría Niños en iOS.</li>
+<li>No te alejes del anime hacia «cocina asiática».</li>
+</ul>
+
+<h2>Las siete apps menores</h2>
+<p><strong>Situación.</strong> Walk the World, Grandpa's Kitchen, Mythology Tower Defense, Bizarre Pose Camera, Stranger Quiz, Stranger Foods y Christmas Dinner están en las tiendas sin proyecto de analítica. Alguna descarga algo (Stranger Quiz iOS ronda las 2 descargas diarias y 11 visitas) y no sabes qué hace nadie dentro.</p>
+<p><strong>Objetivo de noviembre.</strong> Una decisión por app, escrita en una frase: dar de alta lo mínimo o declararla sin trabajar.</p>
+<h3>Tareas, por orden de impacto</h3>
+<ol>
+<li><strong>Las siete frases.</strong> Para cada una: mantener sin tocar, dar de alta analítica mínima o archivar. Es la segunda semana de <a href="#1203-que-hacer-al-volver">Qué hacer al volver</a>, y la decisión de foco de Essentialism la cierra en las semanas siguientes.<br>
+Éxito: siete de siete decididas el 29 de noviembre y su estado cambiado en apps.toml. Fracaso: alguna sin decidir; queda congelada por defecto.</li>
+<li><strong>Solo para las que reciban analítica: un evento.</strong> Sesión y «primera partida terminada» en los juegos; «primera receta abierta» en los recetarios. Nada de muros ni de formatos de anuncio nuevos antes de tener ese evento.<br>
+Éxito: el evento llega y puedes contar personas que vuelven. Fracaso: no tienes tiempo de hacerlo este mes; entonces la app pasa a la lista de las que no se trabajan.</li>
+</ol>
+<h3>Qué no hacer este mes</h3>
+<ul>
+<li>No inviertas marca, ni ASO, ni vídeo.</li>
+<li>No pongas muros ni toques precios donde no hay uso medido.</li>
+</ul>
+
+<h2>Calendario de las cuatro semanas</h2>
+<p>Una cosa clara por app y por semana. Si una semana solo puedes con una línea, que sea la de Leo Glow en la primera y la de TCM en las demás.</p>
+
+<h3>Semana 1 (15-22 de noviembre)</h3>
+<ul>
+<li><strong>TCM:</strong> la pantalla para «not allowed», y los mensajes a los cinco suscriptores y tres cancelados.</li>
+<li><strong>Leo Glow:</strong> comprobar la hoja de Google y copiar el muro de TCM.</li>
+<li><strong>Zodiaco:</strong> arreglar days_since_install y probar un aviso en la build de release.</li>
+<li><strong>Anime Food:</strong> declarar mantenimiento y publicar el deshacer de nombres en Play.</li>
+<li><strong>Menores:</strong> nada; solo la lista de las siete.</li>
+</ul>
+
+<h3>Semana 2 (22-29 de noviembre)</h3>
+<ul>
+<li><strong>TCM:</strong> days_since_install y el aviso de versión nueva en la misma build.</li>
+<li><strong>Leo Glow:</strong> leer la primera semana del muro nuevo y medir el día 1 del plan.</li>
+<li><strong>Zodiaco:</strong> primera lectura de retención y lista de febrero.</li>
+<li><strong>Anime Food:</strong> mirar la ficha tras el deshacer; ningún cambio.</li>
+<li><strong>Menores:</strong> las siete frases.</li>
+<li><strong>Todas:</strong> la frase de posicionamiento al principio de cada ficha y la cola de cinco experimentos con ICE (<a href="#1203-que-hacer-al-volver">Qué hacer al volver</a>).</li>
+</ul>
+
+<h3>Semana 3 (29 de noviembre - 6 de diciembre)</h3>
+<ul>
+<li><strong>TCM:</strong> los muros contextuales por source y el anual preseleccionado en todos.</li>
+<li><strong>Leo Glow:</strong> la pregunta en la app sobre qué compra la gente.</li>
+<li><strong>Zodiaco:</strong> publicar la build de los tres rewarded.</li>
+<li><strong>Anime Food:</strong> descargas por 1.000 vistas por formato de vídeo.</li>
+<li><strong>Menores:</strong> el estado en apps.toml.</li>
+</ul>
+
+<h3>Semana 4 (6-13 de diciembre)</h3>
+<ul>
+<li><strong>TCM:</strong> leer el precio por país, el primer día 7 y las conversaciones; escribir la respuesta a estudiante frente a curioso.</li>
+<li><strong>Leo Glow:</strong> con tres semanas de muro, decidir si la prueba funciona o si vuelves a la hoja de Google. El rewarded de la ruleta, solo si sobra tiempo.</li>
+<li><strong>Zodiaco:</strong> leer la cohorte del rewarded y cerrar la lista de febrero.</li>
+<li><strong>Anime Food:</strong> nada nuevo; elegir el formato de vídeo de diciembre.</li>
+<li><strong>Menores:</strong> el evento mínimo, solo en las que lo merezcan.</li>
+</ul>
+<p>El 13 de diciembre, haz la revisión que pide <a href="#1203-que-hacer-al-volver">Qué hacer al volver</a> y escribe el plan de diciembre con lo que hayas medido, no con lo que esperabas medir.</p></section>
 
 <hr>
 
@@ -4403,6 +5117,267 @@ li{margin:.35rem 0}
 
 <hr>
 
+<section id="1105-mapa-de-riesgos"><h1>Mapa de riesgos del portfolio y cómo cubrirte</h1>
+<p><em>Los riesgos reales de tus apps uno a uno, con probabilidad, impacto, señal temprana y cobertura, y una lista de comprobación para repasar cada trimestre.</em></p>
+
+<h2>Cómo leer este mapa</h2>
+<p>Las cuatro fichas anteriores te han dado cuatro herramientas. Taleb, en <em>Antifragile</em>, te pide que mires tu exposición en lugar de intentar adivinar el futuro, y que repartas el peso como una haltera: casi todo en lo seguro, una parte pequeña en apuestas con techo abierto, nada en el medio. En <em>Fooled by Randomness</em> te avisa de que con catorce o treinta personas casi todo lo que ves es ruido. Duke te da el premortem y el compromiso previo: imaginar el fracaso antes de que ocurra y escribir hoy lo que harás cuando llegue la señal. Housel te recuerda que lo primero es seguir en el juego y que el margen de seguridad es lo que te deja aguantar. Este capítulo junta las cuatro y las aplica a tu negocio, riesgo por riesgo.</p>
+<p>Cada riesgo lleva cuatro cosas:</p>
+<ul>
+<li><strong>Probabilidad.</strong> Alta, media o baja, dicha con palabras y no con un porcentaje, porque no tienes datos para poner uno sin inventarlo. Alta quiere decir «ya te ha pasado o te está pasando»; media, «es habitual en negocios como el tuyo y no tienes nada que lo impida»; baja, «puede pasar, pero hay poco que lo empuje».</li>
+<li><strong>Impacto.</strong> Lo que te costaría si ocurre: bajo (una molestia, unos días), medio (semanas de trabajo o una parte de los ingresos de una app) o alto (la mayor parte de lo que cobras, o una app entera).</li>
+<li><strong>Señal temprana.</strong> Lo que verías antes de que el golpe sea grande. Siempre algo que ya mides o que puedes medir con poco esfuerzo. Si no lo tienes medido, te lo digo.</li>
+<li><strong>Cobertura.</strong> Lo que puedes hacer hoy para que, si ocurre, duela menos. Casi siempre es una de tres cosas: quitar una dependencia (la vía negativa de Taleb), tener una alternativa preparada (una opción) o guardar margen (el colchón de Housel).</li>
+</ul>
+<p>Una advertencia antes de empezar, que viene de <em>Fooled by Randomness</em>: una señal temprana no es una cifra que se mueve una semana. Con tus volúmenes, una señal es algo que se repite (dos semanas seguidas en la misma dirección), algo brusco y sostenido (como la caída de la web de horóscopo desde el 12 de octubre) o algo que es un fallo y no una preferencia (un aviso que no se programa, un pago que no se puede hacer). Lo demás, anótalo y espera.</p>
+
+<h2>Los riesgos, uno a uno</h2>
+
+<h3>1. Casi todo el dinero sale de TCM</h3>
+<p>TCM es la única app con un negocio que se sostiene. Cobra con suscripción y, dentro de la suscripción, casi todo lo trae un único plan y un único paso: el anual con prueba del muro del onboarding (12 pruebas de 87 anuales empezados en la semana del 19 al 26 de octubre en Android, frente a 1 alta de 9 en el mensual). El tráfico también está concentrado: unas 43 descargas al día en Play y 10,7 en iOS. Y la concentración tiene capas: una app, una tienda que pesa más que la otra, un plan, un muro, una versión (la 1.0.10).</p>
+<p>Ya tienes tres fallos conocidos en esa cadena. El primero, el «not allowed» de Google Play: 29 personas y 74 intentos en 30 días, aproximadamente 1 de cada 6 que pulsa pagar. El segundo, que no tienes curva de retención porque la app no manda <code>days_since_install</code>: no sabes cuánta gente sigue usándola a los treinta días, y por tanto no sabes cuántos anuales renovarán. Las primeras pruebas anuales se cobraron entre el 14 y el 25 de octubre; la primera renovación de verdad no la verás hasta dentro de un año. El tercero, que la línea entre educar y prometer salud es la que más te puede costar con las tiendas, y TCM vive justo encima de ella.</p>
+<ul>
+<li><strong>Probabilidad:</strong> media. No hay nada que indique que vaya a romperse, pero cualquiera de los eslabones (una política de Google sobre suscripciones, un rechazo de una actualización, una versión que rompe el muro) puede fallar sin aviso.</li>
+<li><strong>Impacto:</strong> alto. Es casi todo lo que cobras.</li>
+<li><strong>Señal temprana:</strong> altas por vista del muro, por semana y por tienda, comparadas con la media de las cuatro semanas anteriores, no con la semana anterior sola (un salto de 4 a 10 altas en una semana es tan normal como uno de 10 a 4). Pruebas que se cobran al día ocho, desde RevenueCat. Personas con «not allowed» por semana. Y, en cuanto lo tengas, la retención a 30 días por cohorte de versión.</li>
+<li><strong>Cobertura:</strong> la lectura antifrágil de la ficha de Taleb es la correcta: no diversificar a la fuerza hacia otras apps, sino hacer más robusto lo que ya cobra. En concreto: arregla la pantalla del «not allowed» (vía negativa: quitar un error que ya cuesta ventas); manda <code>days_since_install</code> para tener curva; no toques el muro de la 1.0.10 sin un motivo medido (evitar la iatrogenia); empuja la actualización a los 41 que siguen en la 1.0.9; mantén el vitalicio como tercera opción tranquila, que es caja por adelantado. Y, del lado de Housel, que TCM financie tu colchón antes que cualquier experimento.</li>
+</ul>
+<p>Lo que <strong>no</strong> es cobertura: lanzar una quinta app para «no depender de TCM». Eso es el medio de la haltera: mucho tiempo, riesgo moderado y recorrido incierto, a costa de la única pieza que paga.</p>
+
+<h3>2. Dos tiendas deciden si existes</h3>
+<p>Es el riesgo que más veces se te ha materializado este año. Zodiaco iOS (la 1.1.3) lleva 28 días en la cola de revisión de Apple. Anime Food iOS 1.3.0 está rechazada, y la app está en la categoría Niños de iOS para siempre, sin vuelta atrás. Ninguna de tus apps iOS aparece en los 27 países de la Unión Europea mientras Apple revisa tu estatus de comerciante; tu propio historial lo refleja, porque tuviste que adaptar el script que baja las capturas de las fichas para que no se rompiera al no encontrar la App Store de la UE. A eso se suman los cambios de criterio que no ves llegar: un nombre de ficha que sube visitas pero baja descargas desde búsqueda (Leo Glow, ×0,64 tras el cambio del 7 de octubre) o una edición que empeora una app entera (Anime Food Play, visitantes ×0,31).</p>
+<ul>
+<li><strong>Probabilidad:</strong> alta. Ya está pasando, en varias apps a la vez.</li>
+<li><strong>Impacto:</strong> de medio a alto. Una revisión que se alarga te quita una tienda durante semanas; un rechazo en TCM en el momento equivocado te quita la actualización que arregla un cobro; perder la UE en iOS es perder un mercado entero sin haber hecho nada mal.</li>
+<li><strong>Señal temprana:</strong> días en revisión por app y versión (cualquier cosa por encima de lo que suele tardar Apple contigo ya es una señal; apúntalo para saber qué es lo normal); correos de las consolas sobre políticas, declaraciones pendientes o formularios que caducan; descargas por país en iOS, para ver el día que la UE vuelve o el día que otro mercado desaparece; y, tras cada edición de ficha, el multiplicador por edición que ya mides.</li>
+<li><strong>Cobertura:</strong>
+<ul>
+<li><strong>Resuelve lo administrativo antes que lo creativo.</strong> El estatus de comerciante en Apple no es un problema de marca ni de ASO: es un trámite. Mientras no esté cerrado, todo el trabajo de fichas iOS en mercados europeos es trabajo que no puede rendir.</li>
+<li><strong>Separa las subidas arriesgadas de las urgentes.</strong> Si una versión de TCM arregla un cobro, que no lleve a la vez una función nueva que pueda provocar un rechazo. Un cambio que urge, solo; un cambio que puede discutirse con el revisor, en otra versión.</li>
+<li><strong>Zodiaco iOS con fecha límite.</strong> El pico es febrero. Escribe hoy qué harás si a mediados de diciembre sigue sin salir (por ejemplo, reenviar una versión mínima, o dejar iOS para después del Año Nuevo chino y concentrar el esfuerzo en Android). Eso es el compromiso previo de Duke: decidirlo ahora, no en enero con prisa.</li>
+<li><strong>Revisa cada política que te toca, una vez por trimestre:</strong> salud en TCM, Niños en Anime Food iOS y público 13+ en Anime Food Play, contenido sobre apariencia en Leo Glow, predicciones graves en Zodiaco.</li>
+<li><strong>Una edición de ficha cada vez, medida.</strong> Ya lo haces. Es tu mejor protección contra los cambios de algoritmo: si algo cae, sabes qué lo causó y lo deshaces (como el deshacer de nombres de Anime Food en Play, que sigue pendiente).</li>
+</ul>
+</li>
+</ul>
+
+<h3>3. El vídeo corto y TikTok como canal</h3>
+<p>Tu máquina de vídeo es de las mejores cosas que has construido: avatares de IA, clips generados, montaje y publicación automática en TikTok, Instagram y YouTube, con la cola programada semanas por delante. Pero tiene tres puntos frágiles. El primero, la cuenta: una cuenta suspendida, con todo el calendario dentro, es una pérdida concentrada (lo dice la introducción de esta parte). El segundo, el algoritmo: decide qué se ve y puede cambiar de criterio sobre el contenido hecho con IA o sobre temas como salud y apariencia sin avisarte. El tercero, la infraestructura: un Mac en casa publica por ti; si se apaga, se cuelga o pierde la sesión de una red, la cola se para y nadie se entera.</p>
+<p>Hay algo que no sabes y que deberías saber antes de calibrar este riesgo: <strong>cuánto de tus descargas viene del vídeo</strong>. No lo tienes medido por app. Tienes las páginas de bio con el parámetro de origen hacia las tiendas, y en Leo Glow la pregunta de cómo nos conociste; con eso puedes empezar a medirlo.</p>
+<ul>
+<li><strong>Probabilidad:</strong> media. Publicas mucho y de forma automática, con avatares de IA, en nichos (salud, apariencia) que las plataformas vigilan.</li>
+<li><strong>Impacto:</strong> medio hoy, porque no sabes cuánto pesa; podría ser alto en Anime Food si decides que su papel es ser un motor de contenido, porque entonces la cuenta <em>es</em> la marca.</li>
+<li><strong>Señal temprana:</strong> avisos de contenido o de restricciones en cualquier cuenta (el primero ya es una señal, no esperes al tercero); una caída brusca de alcance en todas las piezas de una cuenta a la vez, y no en una sola (una pieza que no funciona es ruido; todas a la vez, un cambio de régimen); y, para el Mac, un día sin publicaciones que estaban programadas.</li>
+<li><strong>Cobertura:</strong>
+<ul>
+<li><strong>Que ninguna cuenta lo tenga todo.</strong> Los vídeos maestros, los guiones y los avatares guardados fuera de la plataforma, en tu disco y en una copia, para poder republicar en otra cuenta o en otra red en días y no en semanas.</li>
+<li><strong>Etiqueta lo que es IA y no prometas lo que no puedes.</strong> Las plataformas piden marcar el contenido realista generado con IA; revisa sus normas actuales en lugar de fiarte de lo que eran hace meses. En TCM, nada de curar; en Leo Glow, nada de antes y después; en Anime Food, nada de personajes ni series reales. Son las tres líneas que ya tienes en tus guías de marca y son también tu seguro.</li>
+<li><strong>Un canal propio, aunque sea pequeño.</strong> La lección de la web de Zodiaco vale aquí: depender de un intermediario es depender de su criterio. Un correo de estudiantes en TCM (con consentimiento, ver el riesgo 6), una comunidad o una lista de quien quiere saber cuándo sale Zodiaco en iOS. Es una opción barata en el sentido de Taleb: hoy rinde poco y el día que una red te cierre la puerta vale mucho.</li>
+<li><strong>Vigila al que publica.</strong> El Mac debería avisarte si una publicación programada falla. Antes del viaje ya te lo planteas en «Qué hacer al volver»; deja escrito qué vigila y cómo te enteras.</li>
+<li><strong>Mide el origen.</strong> Descargas por 1.000 vistas y visitas a la ficha desde las bios, por app y por red. Hasta que no lo midas, no sabes si este riesgo es pequeño o es el segundo de la lista.</li>
+</ul>
+</li>
+</ul>
+
+<h3>4. Zodiaco: febrero y un solo anuncio</h3>
+<p>Zodiaco tiene dos concentraciones a la vez. Una en el tiempo: el horóscopo chino tiene picos muy estacionales, con el Año Nuevo chino en febrero como el mayor. La otra en el ingreso: de unos 10,6 USD en 30 días, 7,81 vienen de un único hueco, el rewarded de duplicar la recompensa diaria en el Oráculo. Además, depende de que la gente vuelva cada día, y ya viste lo que pasa cuando los avisos fallan: entre el 26 de septiembre y el 1 de octubre la vuelta al día siguiente cayó del 26 % al 15 %, y con ella cae el rewarded diario. La web, que era otra pata, perdió casi todas sus impresiones en Google desde el 12 de octubre.</p>
+<p>Este riesgo tiene una particularidad: el suceso no es raro ni imprevisible. Sabes cuándo llega febrero. El riesgo real es llegar tarde, no que llegue.</p>
+<ul>
+<li><strong>Probabilidad:</strong> alta de que febrero decida el año de Zodiaco; media de que llegues sin estar preparado si no lo planificas.</li>
+<li><strong>Impacto:</strong> medio. En dinero, Zodiaco pesa poco frente a TCM; en oportunidad, perder la temporada es esperar otro año.</li>
+<li><strong>Señal temprana:</strong> a mediados de diciembre, ¿está iOS aprobado? ¿Están publicados los tres rewarded nuevos que esperan build desde el 17 de octubre? ¿Están las fichas y las notificaciones de «horóscopo chino 2027» preparadas? Y, todo el año, impresiones rewarded por persona activa y la vuelta al día siguiente después de cada versión.</li>
+<li><strong>Cobertura:</strong> el premortem que propone la ficha de Duke, hecho ahora: imagina que el Año Nuevo pasa y Zodiaco no ha crecido, y escribe por qué (iOS en revisión, vídeos de Mei y Lin sin terminar, rewarded sin mostrar, avisos rotos). Para cada causa, una tarea antes de mediados de enero, que es cuando el capítulo de anuncios te pide dejar cerrados los cambios. Publica los rewarded nuevos para que el ingreso no dependa de un solo hueco. Y del lado de Housel: planifica Zodiaco sobre el mes malo y trata el dinero de febrero como un extra que no se convierte en gastos fijos.</li>
+</ul>
+
+<h3>5. Leo Glow en un nicho delicado</h3>
+<p>Leo Glow vive cerca de una etiqueta con mucho volumen de búsqueda y mala fama. Tu postura (no escanea la cara ni puntúa el atractivo, funciona con hábitos) te separa del nicho y es tu mejor defensa. Pero el riesgo no desaparece: el tema es la imagen corporal, y el público probable, hombres jóvenes, incluye con bastante seguridad a menores, aunque tu política de privacidad diga que la app no se dirige a menores de 13 años. Hay tres frentes.</p>
+<ul>
+<li><strong>Políticas de las tiendas y de las redes.</strong> El contenido sobre apariencia, dietas y comparaciones de cuerpo está vigilado, más aún si llega a menores. Un endurecimiento de las normas puede afectar a la ficha, a los vídeos o a la palabra «looksmaxxing» que hoy te trae búsquedas.</li>
+<li><strong>El coach de IA.</strong> Leo contesta con un modelo de IA. Según tu política de privacidad, tu servidor no guarda el contenido de las conversaciones, lo cual es bueno para la privacidad, pero tiene una consecuencia: no puedes revisar qué le ha dicho Leo a nadie. Si un chaval de quince años le pregunta por una dieta extrema o le dice que se ve feo, no lo sabrás por los datos.</li>
+<li><strong>La edad real de tu público.</strong> No la tienes medida. La ficha de marca ya te pedía comprobarla antes de escribir un solo anuncio.</li>
+</ul>
+<ul>
+<li><strong>Probabilidad:</strong> media. Es un nicho en el punto de mira y tu público es joven.</li>
+<li><strong>Impacto:</strong> alto para Leo Glow (retirada de la ficha, de una cuenta o de la palabra que te trae tráfico), bajo para el resto del portfolio gracias a que cada app tiene su marca y el riesgo no se contagia.</li>
+<li><strong>Señal temprana:</strong> reseñas que hablen de cómo se siente alguien tras usar la app (léelas todas, son pocas); avisos de las tiendas o de TikTok sobre contenido; cambios en la clasificación por edades que te pidan las consolas; y, si decides medirlo, el reparto por edades de quien empieza el onboarding.</li>
+<li><strong>Cobertura:</strong>
+<ul>
+<li><strong>Una batería de preguntas difíciles para Leo</strong>, escrita una vez y repetida cada trimestre y tras cada cambio de modelo o de instrucciones: dietas extremas, «soy feo», autolesión, «tengo 14 años», comparaciones con otros. Comprueba que Leo responde con prudencia, no da cifras peligrosas y, cuando toca, recomienda hablar con alguien de confianza o un profesional. Es la única forma de auditar algo que no guardas.</li>
+<li><strong>Mantén la postura en todo el material:</strong> ni antes y después, ni lenguaje de la parte tóxica del nicho (ascender, mogging, rankings). Cada pieza que la respeta es una pieza que ninguna norma nueva tumba.</li>
+<li><strong>Mide la edad con respeto.</strong> Una pregunta opcional de tramo de edad en el onboarding o, al menos, entrevistas con cinco usuarios reales. Si la añades, actualiza antes la política de privacidad (tu propia política promete cambiar la página antes de que llegue la versión).</li>
+<li><strong>Revisa la clasificación por edades</strong> en las dos consolas para que diga la verdad sobre lo que hace la app, incluido el chat con IA.</li>
+<li><strong>Ten preparada la ficha sin «looksmaxxing».</strong> Si el término se vuelve problemático, que el cambio a «glow up» no te pille sin textos. La categoría de hábitos que recomienda la ficha de marca es, además, la que mejor aguanta un endurecimiento.</li>
+</ul>
+</li>
+</ul>
+
+<h3>6. Privacidad y normativa</h3>
+<p>Aquí partes de una posición mejor que la de muchos desarrolladores solos: tienes una política por app, escrita para lo que hace cada una, y varias dicen que no recogen casi nada porque es verdad. Pero cada app tiene sus propias zonas sensibles, y el RGPD te alcanza como responsable aunque seas una sola persona.</p>
+<ul>
+<li><strong>TCM</strong> es la única con cuentas, sincronización en la nube y suscripción. Permite guardar, si la persona lo activa, simulaciones y planes de tratamiento, que pueden contener datos de salud: una categoría especial en la ley europea. Tu política promete borrar cuentas en 30 días y separa esos datos del resto con un interruptor desactivado por defecto. Bien. El riesgo es que una mala configuración del acceso por usuario en la base de datos, o una petición de borrado que se queda sin atender, convierta esa promesa en un problema.</li>
+<li><strong>Leo Glow</strong> envía lo que se escribe a Leo a un servidor tuyo y a un proveedor de IA en Estados Unidos. La política lo explica y pide no compartir datos de salud, pero la gente lo hará.</li>
+<li><strong>Zodiaco y Leo Glow</strong> sirven anuncios con el formulario de consentimiento de Google en el Espacio Económico Europeo y el Reino Unido. Si el formulario dejara de salir tras una versión, servirías anuncios personalizados sin consentimiento sin darte cuenta.</li>
+<li><strong>Anime Food</strong> está en iOS en la categoría Niños, donde no lleva anuncios ni analítica, y en Play el público 13+. Su política vive en otro dominio (recetasdeanime.com): si ese dominio caduca o se rompe, la app se queda sin política enlazada.</li>
+<li><strong>Todas</strong> usan analítica que tu política describe como anónima por diseño y amparada en la exención de medición de audiencia. Es una interpretación razonable y bien explicada, pero es una interpretación: que la revise alguien que sepa de protección de datos es barato comparado con el coste de equivocarte.</li>
+</ul>
+<ul>
+<li><strong>Probabilidad:</strong> baja de que una autoridad te investigue; media de que tu política y tu app dejen de decir lo mismo tras alguna versión (es lo que pasa cuando se publica a menudo).</li>
+<li><strong>Impacto:</strong> medio. Rara vez es la multa lo que duele a tu escala; lo que duele es una app retirada por una declaración de datos que no coincide, o una reseña que te acusa con razón.</li>
+<li><strong>Señal temprana:</strong> cada versión que añade un SDK, un permiso o un evento nuevo; correos de las tiendas sobre la sección de seguridad de datos o las etiquetas de privacidad; peticiones de borrado o de acceso que llegan a tu correo (apunta cuándo llegan y cuándo las cierras).</li>
+<li><strong>Cobertura:</strong> una regla de una línea en tu lista de publicación: <strong>si la versión cambia lo que sale del móvil, la política, la sección de seguridad de datos de Play y la etiqueta de privacidad de Apple se cambian antes de enviarla</strong>. Una prueba trimestral del formulario de consentimiento con un móvil configurado en un país de la UE. Una prueba trimestral del acceso por usuario en la base de datos de TCM con dos cuentas de prueba. Un registro sencillo de peticiones de privacidad. Y no uses los correos de las cuentas de TCM para enviar novedades: si quieres un canal de correo, que sea con su propio consentimiento.</li>
+</ul>
+
+<h3>7. Errores técnicos silenciosos</h3>
+<p>Es el riesgo con más historial y el más barato de cubrir. Lo que lo hace peligroso es que no hace ruido: la app abre, nadie se queja y lo que se rompe es algo que solo se ve en los datos días después. Tu lista ya es larga:</p>
+<ul>
+<li>En TCM 1.0.7 el permiso de notificaciones se concedía y la app no programaba nada para quien terminaba el onboarding.</li>
+<li>En Zodiaco 1.1.2 y 1.1.3, R8 rompió la programación de todos los avisos en la build de release; entre el 26 de septiembre y el 1 de octubre la vuelta al día siguiente cayó del 26 % al 15 %.</li>
+<li>En Anime Food el <code>distinct_id</code> está roto y no puedes seguir a una persona de una sesión a otra.</li>
+<li>TCM y Zodiaco no mandan <code>days_since_install</code>, así que no hay curva de retención.</li>
+<li>Embudos con pasos que no cuadran (en Zodiaco entran más en «fecha» que en «welcome»; en Anime Food, «worlds» tiene 50 y el paso siguiente 83), que indican eventos perdidos o ramas sin medir.</li>
+<li>Errores de medición que parecían datos: los 212 «iOS» de Leo Glow que eran tu Mac, el salto falso de Sonar del 22 de septiembre, los robots de Play y los eventos desde desarrollo que se limpiaron el 24 de octubre.</li>
+<li>El ingreso de anuncios hacia RevenueCat, que salió por OTA el 14 de octubre y todavía no se ha comprobado en un móvil real.</li>
+</ul>
+<ul>
+<li><strong>Probabilidad:</strong> alta. Te ha pasado varias veces en dos meses y publicas a menudo.</li>
+<li><strong>Impacto:</strong> medio por cada fallo, pero acumulativo: cada semana con un aviso roto es una semana de retención perdida y de datos que no puedes leer, y te lleva a decisiones equivocadas sobre todo lo demás.</li>
+<li><strong>Señal temprana:</strong> fracciones que deberían ser estables y de repente se van a cero o se disparan. Las tres más útiles: avisos programados por persona que concede el permiso (<code>reminders_scheduled</code>), avisos abiertos por aviso enviado (<code>notification_opened</code>) y eventos por persona activa por versión. Un cero no es ruido aunque la muestra sea pequeña: es un fallo.</li>
+<li><strong>Cobertura:</strong>
+<ul>
+<li><strong>Una prueba en móvil real, con la build de release, antes de cada subida.</strong> Cinco comprobaciones fijas: se programa un aviso y llega; el muro abre y la hoja de la tienda enseña lo que promete tu botón; los tres eventos clave de la app llegan a PostHog marcados como producción; el formulario de consentimiento sale en la UE; la app arranca sin conexión. Te lleva un cuarto de hora y probablemente habría detectado los dos fallos de avisos.</li>
+<li><strong>Alertas en lugar de mirar.</strong> Taleb te pide mirar menos a menudo lo que cambia despacio; la otra cara es que lo que se rompe de golpe debe avisarte solo. Configura en tu analítica una alerta por app cuando los avisos programados por día o los eventos clave caigan muy por debajo de lo normal. Así puedes dejar de mirar la conversión cada mañana sin dejar de enterarte de una rotura.</li>
+<li><strong>Antes de explicar un salto, busca el error de medición.</strong> La regla que ya aplicas: dispositivos de prueba fuera, robots fuera, versión de desarrollo fuera.</li>
+<li><strong>Arregla las medidas que faltan antes de añadir nada.</strong> <code>days_since_install</code> en TCM y Zodiaco, el <code>distinct_id</code> de Anime Food. Son vía negativa en estado puro: quitar la venda de los ojos.</li>
+</ul>
+</li>
+</ul>
+
+<h3>8. Riesgo personal: solo, cansado, con ingresos que suben y bajan</h3>
+<p>El último riesgo es el que no aparece en ningún panel. Eres una empresa de uno: autónomo desde septiembre, sin equipo, con once apps, decenas de cuentas, varias webs, una máquina de vídeo, un informe diario a las siete de la mañana y un viaje de 17 días con el Mac publicando solo en casa. Hay tres formas de que esto se rompa, y ninguna es técnica.</p>
+<ul>
+<li><strong>Si tú no estás, nada funciona.</strong> Una enfermedad, un móvil perdido con la verificación en dos pasos dentro o una contraseña que solo sabes tú pueden dejarte sin acceso a una consola o a una cuenta durante semanas.</li>
+<li><strong>El desgaste.</strong> Muchas cosas en marcha, mucha información diaria y casi todas las cifras pequeñas. <em>Fooled by Randomness</em> lo explica bien: mirar a diario datos ruidosos no solo confunde, también cansa, porque las bajadas duelen más de lo que alegran las subidas. Y Duke añade que, después de una mala racha, todo parece peor de lo que es: es el peor momento para decidir.</li>
+<li><strong>El dinero personal.</strong> Ingresos que no se parecen a una nómina, concentrados en una app, con gastos fijos de herramientas de IA y cuotas, y obligaciones que llegan cada trimestre.</li>
+</ul>
+<ul>
+<li><strong>Probabilidad:</strong> media. No es que vaya a pasar, es que no hay nada en tu forma de trabajar que lo impida.</li>
+<li><strong>Impacto:</strong> alto. Es el único riesgo que afecta a todas las apps a la vez.</li>
+<li><strong>Señal temprana:</strong> no tienes métricas para esto y no hace falta inventarlas. Sirven preguntas honestas una vez al mes: ¿he tomado alguna decisión en caliente tras un informe malo? ¿He dejado de hacer algo que me gustaba por mirar paneles? ¿Cuántos meses podría aguantar si TCM cobrara la mitad? Si la respuesta a la última es «no lo sé», esa es la señal.</li>
+<li><strong>Cobertura:</strong>
+<ul>
+<li><strong>El colchón de Housel.</strong> Varios meses de gastos personales y del negocio, apartados, sin otro objetivo que no tener que decidir en el peor momento. Cuánto exactamente lo decides tú con tu cifra de «suficiente».</li>
+<li><strong>Lo que no es tuyo, fuera nada más entrar.</strong> Impuestos y cuotas apartados cuando cobras, no cuando toca pagar. Cuánto y cómo, con tu asesoría.</li>
+<li><strong>Gastos fijos revisados cada trimestre.</strong> Herramientas de vídeo, de IA, la API de Leo: quédate con lo que usas. Cada suscripción que quitas es margen.</li>
+<li><strong>Un sobre de acceso.</strong> Un documento cifrado con las consolas, los correos de cada cuenta, dónde están los códigos de recuperación y qué hacer si pierdes el móvil. Y códigos de recuperación de verdad, impresos o guardados fuera del móvil.</li>
+<li><strong>Menos superficie.</strong> La decisión de <em>Essentialism</em> (empujar TCM y Leo Glow con plazo, mantener Zodiaco y Anime Food, archivar las siete menores) es también una cobertura de este riesgo: cada app que no recibe horas es una cosa menos que puede romperse en tu cabeza.</li>
+<li><strong>El informe diario, para roturas; la conversión, por semanas.</strong> Y una regla escrita: ningún cambio en un muro que funciona por los datos de una sola semana.</li>
+</ul>
+</li>
+</ul>
+
+<h2>Tabla resumen</h2>
+<table>
+<thead>
+<tr><th>Riesgo</th><th>Prob.</th><th>Impacto</th><th>Señal temprana</th><th>Cobertura principal</th></tr>
+</thead>
+<tbody>
+<tr><td>Concentración en TCM</td><td>Media</td><td>Alto</td><td>Altas por vista del muro frente a la media de cuatro semanas; pruebas cobradas; «not allowed»</td><td>Arreglar «not allowed», medir retención, no tocar el muro, colchón</td></tr>
+<tr><td>Tiendas</td><td>Alta</td><td>Medio-alto</td><td>Días en revisión; correos de política; descargas iOS por país</td><td>Estatus de comerciante; versiones urgentes sin riesgo; fecha límite para Zodiaco iOS</td></tr>
+<tr><td>Vídeo y TikTok</td><td>Media</td><td>Medio (no medido)</td><td>Avisos en cuentas; caída de alcance en todas las piezas; publicaciones que no salen</td><td>Copias fuera de la plataforma; canal propio; medir el origen</td></tr>
+<tr><td>Zodiaco: febrero y un rewarded</td><td>Alta</td><td>Medio</td><td>iOS, rewarded nuevos y fichas listos a mediados de diciembre</td><td>Premortem ahora; tres rewarded nuevos; planificar sobre el mes malo</td></tr>
+<tr><td>Leo Glow, nicho delicado</td><td>Media</td><td>Alto para la app</td><td>Reseñas sobre cómo se sienten; avisos de contenido; edades</td><td>Preguntas difíciles a Leo cada trimestre; postura sin comparaciones; ficha alternativa</td></tr>
+<tr><td>Privacidad y normativa</td><td>Baja-media</td><td>Medio</td><td>Versiones con SDK o eventos nuevos; correos de las tiendas; peticiones de borrado</td><td>Política y formularios antes de cada versión; pruebas de consentimiento y de acceso</td></tr>
+<tr><td>Errores silenciosos</td><td>Alta</td><td>Medio, acumulativo</td><td>Avisos programados, avisos abiertos y eventos clave que caen a cero</td><td>Prueba en móvil real antes de cada subida; alertas; arreglar medidas</td></tr>
+<tr><td>Riesgo personal</td><td>Media</td><td>Alto</td><td>Decisiones en caliente; no saber cuántos meses aguantas</td><td>Colchón; impuestos aparte; sobre de acceso; menos superficie</td></tr>
+</tbody>
+</table>
+
+<h2>Por dónde empezar: los tres primeros</h2>
+<p>El plan de «Qué hacer al volver» te pide cubrir los tres primeros riesgos de este mapa entre el 29 de noviembre y el 13 de diciembre. No son los tres más graves en abstracto: son los que combinan más probabilidad e impacto con la cobertura más barata.</p>
+<ol>
+<li><strong>Errores técnicos silenciosos.</strong> Probabilidad alta, historial largo y una cobertura de un cuarto de hora por versión. Escribe la lista de cinco comprobaciones y crea las alertas de avisos y eventos. Es lo que protege la lectura de todo lo demás.</li>
+<li><strong>Concentración en TCM.</strong> Impacto alto. La pantalla del «not allowed» y <code>days_since_install</code> ya están en tu primera semana al volver; aquí se añade el colchón: calcula cuántos meses aguantarías con TCM a la mitad y empieza a apartar.</li>
+<li><strong>Tiendas.</strong> Probabilidad alta y fecha encima: el estatus de comerciante de Apple para volver a la UE, y el compromiso escrito de qué haces con Zodiaco iOS si a mediados de diciembre sigue en revisión.</li>
+</ol>
+<p>Los otros cinco no se olvidan: entran en la lista trimestral. Leo Glow y su coach de IA, en concreto, merecen la batería de preguntas difíciles antes de que vuelvas a empujar su adquisición.</p>
+
+<h2>Lista de comprobación trimestral</h2>
+<p>Hazla cuatro veces al año, con calma y sin informes diarios delante: la primera, en la ventana del 29 de noviembre al 13 de diciembre; después, a mediados de marzo, junio y septiembre. Añade una revisión corta de Zodiaco a primeros de enero, antes del pico. Apunta cada respuesta con la fecha, para que la siguiente revisión compare con algo.</p>
+
+<h3>Dinero y concentración</h3>
+<ol>
+<li>¿Qué parte de lo cobrado este trimestre viene de TCM, y ha cambiado frente al anterior?</li>
+<li>Altas por vista del muro de TCM, por tienda, sumando el trimestre. ¿Se mantiene la proporción del anual frente al mensual?</li>
+<li>Pruebas que se cobran al día ocho (RevenueCat), por cohorte.</li>
+<li>Personas con «not allowed» y con «Error performing request»: ¿bajan tras la pantalla nueva?</li>
+<li>Retención a 30 días de TCM por versión, en cuanto la tengas.</li>
+</ol>
+
+<h3>Tiendas y políticas</h3>
+<ol>
+<li>¿Todas las apps están disponibles donde deberían, en las dos tiendas, incluida la UE en iOS?</li>
+<li>¿Hay alguna revisión abierta, rechazo o aviso de política sin resolver?</li>
+<li>Relee las políticas que te tocan: salud (TCM), Niños y familias (Anime Food), contenido sobre apariencia (Leo Glow), predicciones (Zodiaco).</li>
+<li>¿Las clasificaciones por edades dicen la verdad sobre cada app?</li>
+<li>¿Qué ediciones de ficha has hecho y cuál se debe deshacer?</li>
+</ol>
+
+<h3>Canales</h3>
+<ol>
+<li>¿Alguna cuenta ha recibido avisos o restricciones? ¿Cuántas, en qué red?</li>
+<li>¿Los vídeos maestros y los avatares tienen copia fuera de las plataformas?</li>
+<li>Descargas por 1.000 vistas y visitas desde las bios, por app y por red: ¿qué parte de tus descargas viene del vídeo?</li>
+<li>¿El Mac ha dejado de publicar algún día sin que te enteraras?</li>
+<li>¿Ha crecido tu canal propio (correo, comunidad, lista)?</li>
+</ol>
+
+<h3>Apps sensibles</h3>
+<ol>
+<li>Pasa la batería de preguntas difíciles a Leo y anota cualquier respuesta que no te guste.</li>
+<li>Lee todas las reseñas del trimestre de Leo Glow y TCM buscando dos cosas: alguien que se siente peor, alguien que cree que la app le cura.</li>
+<li>¿El material nuevo (fichas, vídeos, avisos) respeta las tres líneas de marca: sin promesas de salud, sin comparaciones de cuerpo, sin propiedad intelectual ajena?</li>
+</ol>
+
+<h3>Privacidad</h3>
+<ol>
+<li>¿Alguna versión del trimestre cambió lo que sale del móvil? Si sí, ¿se actualizaron antes la política, la sección de seguridad de datos de Play y la etiqueta de Apple?</li>
+<li>Prueba del formulario de consentimiento en un móvil configurado en la UE, en Zodiaco y Leo Glow.</li>
+<li>Prueba con dos cuentas de que en TCM ninguna ve los datos de la otra.</li>
+<li>Peticiones de borrado o acceso recibidas y cerradas, con fechas, dentro de los 30 días que prometes.</li>
+<li>¿Siguen vivos todos los enlaces de las políticas, incluido el dominio de Anime Food?</li>
+</ol>
+
+<h3>Técnica y medición</h3>
+<ol>
+<li>¿Cada versión del trimestre pasó las cinco comprobaciones en móvil real?</li>
+<li>¿Han saltado las alertas? ¿Alguna falsa, alguna que debió saltar y no lo hizo?</li>
+<li>¿Siguen pendientes <code>days_since_install</code> o el <code>distinct_id</code> de Anime Food?</li>
+<li>¿Has comprobado en un móvil real el ingreso de anuncios hacia RevenueCat?</li>
+<li>¿Cuánta gente sigue en versiones antiguas con fallos conocidos?</li>
+</ol>
+
+<h3>Tú</h3>
+<ol>
+<li>¿Cuántos meses aguantarías si TCM cobrara la mitad desde mañana? ¿Más o menos que el trimestre pasado?</li>
+<li>¿Está apartado lo que corresponde a impuestos y cuotas?</li>
+<li>Gastos fijos de herramientas: ¿cuáles has usado de verdad este trimestre?</li>
+<li>¿El sobre de acceso está al día y los códigos de recuperación fuera del móvil?</li>
+<li>¿Qué decisión tomaste en caliente este trimestre, y cómo la juzgas ahora por el proceso y no por el resultado?</li>
+<li>¿Qué puedes quitar el próximo trimestre en lugar de añadir?</li>
+</ol>
+
+<h2>Errores comunes</h2>
+<ol>
+<li><strong>Confundir una semana mala con una señal.</strong> Con tus volúmenes, una señal se repite, es brusca y sostenida o es un fallo. Lo demás se anota y se espera.</li>
+<li><strong>Cubrir el riesgo vistoso y dejar el barato.</strong> Una app nueva «para diversificar» parece prudente y es el medio de la haltera. Una prueba en móvil real antes de cada subida parece poca cosa y probablemente habría detectado dos roturas de avisos.</li>
+<li><strong>Esperar a que el golpe llegue para decidir qué harás.</strong> El compromiso previo de Duke se escribe con la cabeza fría: qué harás con Zodiaco iOS si no sale, qué harás con Leo Glow si no llega a tu umbral, qué recortas si TCM cobra la mitad.</li>
+<li><strong>Tomar la ausencia de problemas por ausencia de riesgo.</strong> Taleb desconfía de la calma aparente: que ninguna cuenta haya sido suspendida no dice nada de la próxima semana.</li>
+<li><strong>Tratar la privacidad como un texto que se escribe una vez.</strong> La política tiene que cambiar con cada versión que cambia lo que sale del móvil.</li>
+<li><strong>Medir tu negocio y no medirte a ti.</strong> El único riesgo que toca todas las apps a la vez eres tú. Un colchón y unas horas de descanso son cobertura, no un lujo.</li>
+</ol></section>
+
+<hr>
+
 <section id="1200-parte-xii-cierre"><h1>Parte XII: Cierre</h1>
 <p><em>Cómo usar todo lo anterior: qué leer según el problema, un plan para los 17 días, qué hacer al volver, referencias y glosario.</em></p>
 <p>Esta última parte no añade ideas nuevas: las ordena. El <strong>mapa de lecturas</strong> te manda al libro adecuado según el problema que tengas delante. El <strong>plan de 17 días</strong> reparte las lecturas del viaje. <strong>Qué hacer al volver</strong> convierte lo leído en dos semanas de trabajo. Las <strong>referencias</strong> reúnen todos los libros del documento y el <strong>glosario</strong> explica los términos que salen una y otra vez (de <em>aha</em> a <em>North Star</em>).</p></section>
@@ -4575,6 +5550,216 @@ li{margin:.35rem 0}
 <h2>Cómo se usa este documento</h2>
 <p>Este documento es una <strong>lectura</strong>, no un oráculo. Los datos son tuyos y de hace dos días; las hipótesis (público de Leo Glow, estudiante frente a curioso en TCM, motor de Zodiaco) las he señalado como hipótesis. Contrástalas con personas, que es lo que enseña <em>The Mom Test</em>, y vuelve con las respuestas.</p>
 <p>Buen viaje.</p></section>
+
+<hr>
+
+<section id="1204-referencias"><h1>Referencias</h1>
+<p><em>Todos los libros del documento, agrupados por parte: título, autor, año, la ficha donde se trata y para qué te sirve cada uno.</em></p>
+<p>Aquí están los 48 libros que tienen ficha propia en las partes III a IX y XI (47 fichas: <em>The Brand Gap</em> y <em>Zag</em> comparten una), seguidos de los que se citan dentro de los textos, sobre todo en los apartados «Para seguir», sin ficha propia. Las partes I, II, X y XII no tienen fichas de libros: son tu portfolio, tus marcas, el manual práctico y este cierre.</p>
+<p>Cada entrada lleva el título original, el autor o autores y el año que figura en la ficha. Cuando conozco con seguridad el título de la edición en español lo indico; si no lo indico, no quiere decir que no exista. El título enlaza a la ficha. La última línea dice para qué te sirve a ti.</p>
+
+<h2>Parte III: Posicionamiento y marca</h2>
+<ul>
+<li><a href="#301-obviously-awesome"><strong>Obviously Awesome</strong></a>. April Dunford, 2019. Para decidir contra qué te comparan, qué tienes tú que nadie más tiene y en qué categoría te deben colocar; es el que antes se convierte en cambios en tus fichas de tienda.</li>
+<li><a href="#302-positioning"><strong>Positioning: The Battle for Your Mind</strong></a>. Al Ries y Jack Trout, 1981. En español: <em>Posicionamiento: la batalla por su mente</em>. Para entender que la batalla se gana en el hueco libre de la cabeza del cliente y no en la lista de funciones.</li>
+<li><a href="#303-22-leyes-inmutables"><strong>The 22 Immutable Laws of Marketing</strong></a>. Al Ries y Jack Trout, 1993. En español: <em>Las 22 leyes inmutables del marketing</em>. Como lista de comprobación contra la dispersión: foco, categoría y sacrificio.</li>
+<li><a href="#304-storybrand"><strong>Building a StoryBrand</strong></a>. Donald Miller, 2017. Para ordenar el mensaje de cada app como una historia en la que el usuario es el héroe y la app, la guía.</li>
+<li><a href="#305-brand-gap-y-zag"><strong>The Brand Gap</strong></a>. Marty Neumeier, 2003. Para tener claro qué es una marca (una sensación en la cabeza del cliente) y qué pedirle a un nombre.</li>
+<li><a href="#305-brand-gap-y-zag"><strong>Zag</strong></a>. Marty Neumeier, 2006. Para buscar una diferencia tan marcada que se note en una categoría saturada; comparte ficha con el anterior.</li>
+<li><a href="#306-how-brands-grow"><strong>How Brands Grow</strong></a>. Byron Sharp, 2010. El contrapeso basado en datos: crecer estando disponible en la mente y en la tienda para muchos compradores ocasionales, con activos reconocibles como tus mascotas.</li>
+</ul>
+
+<h2>Parte IV: Precio, monetización y psicología de la compra</h2>
+<ul>
+<li><a href="#401-monetizing-innovation"><strong>Monetizing Innovation</strong></a>. Madhavan Ramanujam y Georg Tacke, 2016. Para hablar de dinero con el usuario antes de construir y diseñar el producto alrededor del precio.</li>
+<li><a href="#402-subscribed"><strong>Subscribed</strong></a>. Tien Tzuo y Gabe Weisert, 2018. Para tratar la suscripción como una relación que se gana cada mes y medirla como tal (altas, bajas, neto).</li>
+<li><a href="#403-automatic-customer"><strong>The Automatic Customer</strong></a>. John Warrillow, 2015. Un catálogo de modelos de suscripción para negocios pequeños: elegir qué vendes antes de ponerle precio.</li>
+<li><a href="#404-predictably-irrational"><strong>Predictably Irrational</strong></a>. Dan Ariely, 2008. En español: <em>Las trampas del deseo</em>. Para conocer los errores de decisión que se repiten y diseñar el muro de pago con ellos en mente, con prudencia.</li>
+<li><a href="#405-influence"><strong>Influence</strong></a>. Robert Cialdini, 1984. En español: <em>Influencia</em>. Los atajos con los que decimos que sí, y dónde está la línea entre ayudar y engañar.</li>
+<li><a href="#406-alchemy"><strong>Alchemy</strong></a>. Rory Sutherland, 2019. Para recordar que la lógica no explica todas las elecciones y que el microcopy, el orden de pantallas y los nombres pesan.</li>
+</ul>
+
+<h2>Parte V: Crecimiento, retención y hábito</h2>
+<ul>
+<li><a href="#501-hacking-growth"><strong>Hacking Growth</strong></a>. Sean Ellis y Morgan Brown, 2017. Para crecer a base de experimentos rápidos sobre todo el embudo, empezando por saber qué hace que la gente se quede.</li>
+<li><a href="#502-traction"><strong>Traction</strong></a>. Gabriel Weinberg y Justin Mares, 2015. Diecinueve canales de adquisición y un método para concentrarte en uno.</li>
+<li><a href="#503-hooked"><strong>Hooked</strong></a>. Nir Eyal, 2014. En español: <em>Enganchado</em>. El ciclo de disparador, acción, recompensa variable e inversión, aplicado a Leo Glow y Zodiaco.</li>
+<li><a href="#504-atomic-habits"><strong>Atomic Habits</strong></a>. James Clear, 2018. En español: <em>Hábitos atómicos</em>. El hábito visto desde la persona: para tus usuarios y para tus propios propósitos de vuelta.</li>
+<li><a href="#505-lean-analytics"><strong>Lean Analytics</strong></a>. Alistair Croll y Benjamin Yoskovitz, 2013. Para elegir una sola métrica por etapa según el modelo de negocio y dejar de mirar todos los paneles a la vez.</li>
+<li><a href="#506-actionable-gamification"><strong>Actionable Gamification</strong></a>. Yu-kai Chou (la ficha no da año). Ocho motivaciones para diseñar mecánicas de juego que enganchen sin quemar al usuario.</li>
+</ul>
+
+<h2>Parte VI: Conocer al cliente y decidir el producto</h2>
+<ul>
+<li><a href="#601-the-mom-test"><strong>The Mom Test</strong></a>. Rob Fitzpatrick, 2013. Para entrevistar a usuarios sin que te mientan por educación; trae un guion listo para TCM y Leo Glow. Si solo lees uno de esta parte, este.</li>
+<li><a href="#602-competing-against-luck"><strong>Competing Against Luck</strong></a>. Clayton Christensen, Taddy Hall, Karen Dillon y David S. Duncan, 2016. Los trabajos por hacer: qué contrata el usuario y qué despide al contratarte.</li>
+<li><a href="#603-continuous-discovery-habits"><strong>Continuous Discovery Habits</strong></a>. Teresa Torres, 2021. Para convertir las entrevistas en una rutina semanal y ordenar lo aprendido en un árbol de oportunidades.</li>
+<li><a href="#604-the-lean-startup"><strong>The Lean Startup</strong></a>. Eric Ries, 2011. En español: <em>El método Lean Startup</em>. Construir, medir y aprender; el libro que responde a si Anime Food sigue o no.</li>
+<li><a href="#605-inspired"><strong>Inspired</strong></a>. Marty Cagan, segunda edición de 2017. Descubrir antes de construir y atacar los cuatro riesgos (valor, usabilidad, factibilidad y viabilidad de negocio) antes de escribir código.</li>
+<li><a href="#606-dont-make-me-think"><strong>Don't Make Me Think</strong></a>. Steve Krug, edición revisada de 2014. En español: <em>No me hagas pensar</em>. Usabilidad de sentido común para el onboarding, los muros de pago y las fichas de tienda.</li>
+</ul>
+
+<h2>Parte VII: Contenido, ganchos y vídeo corto</h2>
+<ul>
+<li><a href="#701-contagious"><strong>Contagious</strong></a>. Jonah Berger, 2013. En español: <em>Contagioso</em>. Por qué se comparten unas cosas y otras no, para diseñar vídeos y funciones que se transmitan solos.</li>
+<li><a href="#702-made-to-stick"><strong>Made to Stick</strong></a>. Chip Heath y Dan Heath, 2007. En español: <em>Ideas que pegan</em>. Para escribir guiones, fichas y pantallas que se recuerden.</li>
+<li><a href="#703-breakthrough-advertising"><strong>Breakthrough Advertising</strong></a>. Eugene Schwartz, 1966. Niveles de conciencia y sofisticación del mercado: qué decir en el primer segundo de un vídeo y en la primera línea de una ficha.</li>
+<li><a href="#704-ogilvy-on-advertising"><strong>Ogilvy on Advertising</strong></a>. David Ogilvy, 1983. La publicidad como oficio que se investiga y se mide: promesas concretas y titulares que trabajan.</li>
+<li><a href="#705-hook-point"><strong>Hook Point</strong></a>. Brendan Kane, 2020. Para ganar el primer segundo de un vídeo y encontrar el gancho probando en vez de adivinando.</li>
+<li><a href="#706-show-your-work"><strong>Show Your Work!</strong></a>. Austin Kleon, 2014. En español: <em>Enseña tu trabajo</em>. Construir en público como desarrollador independiente sin convertirte en spam.</li>
+<li><a href="#707-everybody-writes"><strong>Everybody Writes</strong></a>. Ann Handley, 2014. El oficio de escribir claro, aplicado a fichas, pies de post y pantallas de onboarding.</li>
+</ul>
+
+<h2>Parte VIII: Emprender solo: nicho, foco y sostenibilidad</h2>
+<ul>
+<li><a href="#801-this-is-marketing"><strong>This Is Marketing</strong></a>. Seth Godin, 2018. En español: <em>Esto es marketing</em>. El marketing como servicio a un grupo pequeño de personas, con el mapa de posicionamiento de dos ejes.</li>
+<li><a href="#802-purple-cow"><strong>Purple Cow</strong></a>. Seth Godin, 2003. En español: <em>La vaca púrpura</em>. Para preguntarte, app por app, qué contaría alguien de ella a un amigo.</li>
+<li><a href="#803-1000-true-fans"><strong>1,000 True Fans</strong></a>. Kevin Kelly, 2008. No es un libro sino un ensayo breve: unos pocos cientos o miles de fans que pagan bastan para vivir de lo que haces.</li>
+<li><a href="#804-minimalist-entrepreneur"><strong>The Minimalist Entrepreneur</strong></a>. Sahil Lavingia, 2021. Empezar desde una comunidad, construir lo mínimo y crecer solo lo que puedas sostener siendo rentable.</li>
+<li><a href="#805-start-small-stay-small"><strong>Start Small, Stay Small</strong></a>. Rob Walling, 2010. El manual del micronegocio de software: mercado antes que producto y un sistema que funcione sin ti.</li>
+<li><a href="#806-company-of-one"><strong>Company of One</strong></a>. Paul Jarvis, 2019. Para cuestionar el crecimiento por defecto y definir tu «suficiente».</li>
+<li><a href="#807-essentialism"><strong>Essentialism</strong></a>. Greg McKeown, 2014. En español: <em>Esencialismo</em>. Para decidir qué apps empujar, mantener o archivar.</li>
+</ul>
+
+<h2>Parte IX: Encontrar tu mercado y tu honey pot</h2>
+<ul>
+<li><a href="#901-blue-ocean-strategy"><strong>Blue Ocean Strategy</strong></a>. W. Chan Kim y Renée Mauborgne, 2005. En español: <em>La estrategia del océano azul</em>. Para dejar de pelear por la misma búsqueda que todos y competir con la alternativa real (en TCM, el libro de texto y los apuntes).</li>
+<li><a href="#902-play-bigger"><strong>Play Bigger</strong></a>. Al Ramadan, Dave Peterson, Christopher Lochhead y Kevin Maney, 2016. Diseño de categoría: nombrar el problema antes que la solución.</li>
+<li><a href="#903-crossing-the-chasm"><strong>Crossing the Chasm</strong></a>. Geoffrey Moore, 1991. En español: <em>Cruzando el abismo</em>. La cabeza de playa: dominar un segmento pequeño y concreto antes de ir a por todo el mercado.</li>
+<li><a href="#904-good-strategy-bad-strategy"><strong>Good Strategy Bad Strategy</strong></a>. Richard Rumelt, 2011. En español: <em>Estrategia buena, estrategia mala</em>. Diagnóstico, política guía y acciones coherentes, en lugar de una lista de metas.</li>
+<li><a href="#905-7-powers"><strong>7 Powers</strong></a>. Hamilton Helmer, 2016. Las siete fuentes de ventaja duradera y cuáles están al alcance de un desarrollador solo.</li>
+</ul>
+
+<h2>Parte XI: Cubrirte de riesgos</h2>
+<ul>
+<li><a href="#1101-antifragile"><strong>Antifragile</strong></a>. Nassim Nicholas Taleb, 2012. En español: <em>Antifrágil</em>. Para organizar las once apps de forma que el desorden te dé oportunidades en vez de hundirte; quitar antes de añadir.</li>
+<li><a href="#1102-fooled-by-randomness"><strong>Fooled by Randomness</strong></a>. Nassim Nicholas Taleb, 2001. En español: <em>¿Existe la suerte?</em> Para no confundir ruido con señal cuando una métrica se apoya en pocas decenas de personas.</li>
+<li><a href="#1103-thinking-in-bets"><strong>Thinking in Bets</strong></a>. Annie Duke, 2018. Para decidir sin información completa y juzgar la decisión por cómo se tomó, no por cómo salió.</li>
+<li><a href="#1104-psychology-of-money"><strong>The Psychology of Money</strong></a>. Morgan Housel, 2020. En español: <em>La psicología del dinero</em>. Colchón y margen de seguridad para un autónomo con ingresos que suben y bajan.</li>
+</ul>
+
+<h2>Libros mencionados sin ficha</h2>
+<p>Ordenados por la parte en la que aparecen por primera vez. Entre paréntesis, la ficha que los cita, para que veas el contexto. El año es el de la primera edición; cuando no lo tengo seguro, no lo pongo.</p>
+
+<h3>Mencionados en la Parte III</h3>
+<ul>
+<li><strong>Sales Pitch</strong>. April Dunford, 2023. La continuación de <em>Obviously Awesome</em>: convertir el posicionamiento en un relato de venta (<a href="#301-obviously-awesome">301</a>).</li>
+<li><strong>Differentiate or Die</strong>. Jack Trout, 2000. Cómo encontrar y mantener la diferencia una vez elegido el hueco (<a href="#302-positioning">302</a>).</li>
+<li><strong>The 22 Immutable Laws of Branding</strong>. Al Ries y Laura Ries, 1998. La lógica de las 22 leyes aplicada a la marca (<a href="#303-22-leyes-inmutables">303</a>).</li>
+<li><strong>The Origin of Brands</strong>. Al Ries y Laura Ries, 2004. Desarrolla la ley de la división de categorías (<a href="#303-22-leyes-inmutables">303</a>).</li>
+<li><strong>Marketing Made Simple</strong>. Donald Miller, 2020. El marco StoryBrand llevado a la web y al correo (<a href="#304-storybrand">304</a>).</li>
+<li><strong>The Hero with a Thousand Faces</strong>. Joseph Campbell, 1949. En español: <em>El héroe de las mil caras</em>. El origen de la estructura del viaje del héroe (<a href="#304-storybrand">304</a>).</li>
+<li><strong>The Brand Flip</strong>. Marty Neumeier, 2015. La marca que depende más del cliente que de la empresa (<a href="#305-brand-gap-y-zag">305</a>).</li>
+<li><strong>Scramble</strong>. Marty Neumeier. Una novela de negocios sobre estrategia ágil (<a href="#305-brand-gap-y-zag">305</a>).</li>
+<li><strong>Different</strong>. Youngme Moon, 2010. Por qué las categorías acaban pareciéndose y cómo escapar (<a href="#305-brand-gap-y-zag">305</a>).</li>
+<li><strong>How Brands Grow: Part 2</strong>. Jenni Romaniuk y Byron Sharp. Las leyes de Sharp en mercados nuevos y marcas pequeñas (<a href="#306-how-brands-grow">306</a>).</li>
+<li><strong>Building Distinctive Brand Assets</strong>. Jenni Romaniuk, 2018. Elegir, construir y medir activos como tus mascotas (<a href="#306-how-brands-grow">306</a>).</li>
+<li><strong>The Long and the Short of It</strong>. Les Binet y Peter Field, 2013. El equilibrio entre construir marca y activar ventas (<a href="#306-how-brands-grow">306</a>).</li>
+</ul>
+
+<h3>Mencionados en la Parte IV</h3>
+<ul>
+<li><strong>The Art of Pricing</strong>. Rafi Mohammed, 2005. Cobrar distinto a clientes que valoran distinto (<a href="#401-monetizing-innovation">401</a>).</li>
+<li><strong>Confessions of the Pricing Man</strong>. Hermann Simon, 2015. Precios contados por el fundador de la consultora de Ramanujam y Tacke (<a href="#401-monetizing-innovation">401</a>).</li>
+<li><strong>The Membership Economy</strong>. Robbie Kellman Baxter, 2015. Relaciones de pertenencia más que de suscripción (<a href="#402-subscribed">402</a>, <a href="#403-automatic-customer">403</a>).</li>
+<li><strong>Built to Sell</strong>. John Warrillow. Construir un negocio que no dependa de ti (<a href="#403-automatic-customer">403</a>).</li>
+<li><strong>Thinking, Fast and Slow</strong>. Daniel Kahneman, 2011. En español: <em>Pensar rápido, pensar despacio</em>. La base de buena parte de la economía conductual y de los sesgos de juicio; algún capítulo ha envejecido mal (<a href="#404-predictably-irrational">404</a>, <a href="#406-alchemy">406</a>, <a href="#1102-fooled-by-randomness">1102</a>, <a href="#1103-thinking-in-bets">1103</a>).</li>
+<li><strong>Nudge</strong>. Richard Thaler y Cass Sunstein, 2008. En español: <em>Un pequeño empujón</em>. Diseñar cómo se presentan las decisiones (<a href="#404-predictably-irrational">404</a>).</li>
+<li><strong>Misbehaving</strong>. Richard Thaler, 2015. En español: <em>Portarse mal</em>. La historia de la economía conductual contada por uno de sus fundadores (<a href="#404-predictably-irrational">404</a>).</li>
+<li><strong>Pre-Suasion</strong>. Robert Cialdini, 2016. En español: <em>Pre-suasión</em>. Lo que ocurre antes de la petición (<a href="#405-influence">405</a>).</li>
+</ul>
+
+<h3>Mencionados en la Parte V</h3>
+<ul>
+<li><strong>Tiny Habits</strong>. BJ Fogg, 2019. El modelo de conducta en el que se apoya Eyal, más riguroso en hacer fácil la conducta (<a href="#503-hooked">503</a>, <a href="#504-atomic-habits">504</a>).</li>
+<li><strong>Indistractable</strong>. Nir Eyal, 2019. La otra cara del autor de <em>Hooked</em>: cómo no dejarte enganchar (<a href="#503-hooked">503</a>).</li>
+<li><strong>The Power of Habit</strong>. Charles Duhigg, 2012. En español: <em>El poder de los hábitos</em>. El libro que popularizó el bucle de señal, rutina y recompensa (<a href="#504-atomic-habits">504</a>).</li>
+<li><strong>Deep Work</strong>. Cal Newport, 2016. Proteger la concentración, que es tu carencia declarada (<a href="#504-atomic-habits">504</a>, <a href="#807-essentialism">807</a>).</li>
+<li><strong>Drive</strong>. Daniel Pink, 2009. En español: <em>La sorprendente verdad sobre qué nos motiva</em>. Motivación interna frente a recompensas externas (<a href="#506-actionable-gamification">506</a>).</li>
+<li><strong>Reality Is Broken</strong>. Jane McGonigal, 2011. Una mirada optimista sobre lo que aportan los juegos (<a href="#506-actionable-gamification">506</a>).</li>
+</ul>
+
+<h3>Mencionados en la Parte VI</h3>
+<ul>
+<li><strong>Interviewing Users</strong>. Steve Portigal, 2013. Técnica de entrevista más profunda que la de <em>The Mom Test</em> (<a href="#601-the-mom-test">601</a>).</li>
+<li><strong>Demand-Side Sales 101</strong>. Bob Moesta, 2020. Entrevistas centradas en el momento en que alguien cambia de solución (<a href="#601-the-mom-test">601</a>, <a href="#602-competing-against-luck">602</a>).</li>
+<li><strong>When Coffee and Kale Compete</strong>. Alan Klement, 2016. Los trabajos por hacer centrados en el cambio que busca la persona (<a href="#602-competing-against-luck">602</a>).</li>
+<li><strong>Jobs to Be Done: Theory to Practice</strong>. Anthony Ulwick, 2016. Un enfoque cuantitativo, con resultados deseados medibles (<a href="#602-competing-against-luck">602</a>).</li>
+<li><strong>The Innovator's Dilemma</strong>. Clayton Christensen, 1997. En español: <em>El dilema de los innovadores</em>. Por qué los líderes no reaccionan a tiempo (<a href="#602-competing-against-luck">602</a>, <a href="#905-7-powers">905</a>).</li>
+<li><strong>Escaping the Build Trap</strong>. Melissa Perri, 2018. Citado en las fichas como <em>The Build Trap</em>: por qué los equipos construyen funciones en lugar de buscar resultados (<a href="#603-continuous-discovery-habits">603</a>, <a href="#605-inspired">605</a>).</li>
+<li><strong>Running Lean</strong>. Ash Maurya. La versión práctica de Lean Startup, con el modelo de negocio en una página (<a href="#604-the-lean-startup">604</a>).</li>
+<li><strong>The Four Steps to the Epiphany</strong>. Steve Blank. El origen del desarrollo de clientes del que parte Ries (<a href="#604-the-lean-startup">604</a>).</li>
+<li><strong>Empowered</strong>. Marty Cagan, 2020. La continuación de <em>Inspired</em>, sobre equipos con autonomía (<a href="#605-inspired">605</a>).</li>
+<li><strong>Sprint</strong>. Jake Knapp y otros, 2016. Cinco días para prototipar y probar una idea (<a href="#605-inspired">605</a>).</li>
+<li><strong>Rocket Surgery Made Easy</strong>. Steve Krug, 2009. Pruebas de usabilidad hechas por uno mismo (<a href="#606-dont-make-me-think">606</a>).</li>
+<li><strong>The Design of Everyday Things</strong>. Don Norman. En español: <em>La psicología de los objetos cotidianos</em>. Por qué las cosas se entienden o no (<a href="#606-dont-make-me-think">606</a>).</li>
+<li><strong>Lean UX</strong>. Jeff Gothelf y Josh Seiden, 2013. El diseño dentro de un ciclo de experimentos (<a href="#606-dont-make-me-think">606</a>).</li>
+</ul>
+
+<h3>Mencionados en la Parte VII</h3>
+<ul>
+<li><strong>The Catalyst</strong>. Jonah Berger, 2020. Cambiar opiniones quitando barreras en vez de empujar (<a href="#701-contagious">701</a>).</li>
+<li><strong>Switch</strong>. Chip Heath y Dan Heath, 2010. Cómo cambiar conductas, útil para onboarding y retención (<a href="#702-made-to-stick">702</a>).</li>
+<li><strong>The Sense of Style</strong>. Steven Pinker, 2014. La maldición del conocimiento aplicada a la escritura (<a href="#702-made-to-stick">702</a>, <a href="#707-everybody-writes">707</a>).</li>
+<li><strong>Scientific Advertising</strong>. Claude Hopkins, 1923. La base del anuncio que se mide, muy breve (<a href="#703-breakthrough-advertising">703</a>, <a href="#704-ogilvy-on-advertising">704</a>).</li>
+<li><strong>The Adweek Copywriting Handbook</strong>. Joseph Sugarman, 2006. Cómo se escribe un texto que se lee entero (<a href="#703-breakthrough-advertising">703</a>).</li>
+<li><strong>Confessions of an Advertising Man</strong>. David Ogilvy, 1963. El libro anterior de Ogilvy, más breve y personal (<a href="#704-ogilvy-on-advertising">704</a>).</li>
+<li><strong>Hey, Whipple, Squeeze This</strong>. Luke Sullivan, 1998. El oficio creativo moderno (<a href="#704-ogilvy-on-advertising">704</a>).</li>
+<li><strong>One Million Followers</strong>. Brendan Kane, 2018. El libro anterior de Kane, sobre crecer en redes a escala (<a href="#705-hook-point">705</a>).</li>
+<li><strong>Steal Like an Artist</strong>. Austin Kleon, 2012. En español: <em>Roba como un artista</em>. De dónde salen las ideas (<a href="#706-show-your-work">706</a>).</li>
+<li><strong>Keep Going</strong>. Austin Kleon, 2019. Sostener el trabajo creativo en el tiempo (<a href="#706-show-your-work">706</a>).</li>
+<li><strong>MAKE</strong>. Pieter Levels. El manual del desarrollador independiente que construye en público (<a href="#706-show-your-work">706</a>).</li>
+<li><strong>On Writing Well</strong>. William Zinsser, 1976. El clásico sobre escribir claro y sin relleno (<a href="#707-everybody-writes">707</a>).</li>
+<li><strong>Microcopy: The Complete Guide</strong>. Kinneret Yifrah. Los textos pequeños de la interfaz: botones, errores, onboarding (<a href="#707-everybody-writes">707</a>).</li>
+<li><strong>Content Rules</strong>. Ann Handley y C. C. Chapman, 2010. Estrategia de contenidos, el libro anterior de Handley (<a href="#707-everybody-writes">707</a>).</li>
+</ul>
+
+<h3>Mencionados en la Parte VIII</h3>
+<ul>
+<li><strong>Diffusion of Innovations</strong>. Everett M. Rogers, 1962. El estudio clásico del ciclo de adopción (<a href="#802-purple-cow">802</a>, <a href="#903-crossing-the-chasm">903</a>).</li>
+<li><strong>Tribes</strong>. Seth Godin, 2008. En español: <em>Tribus</em>. Liderar a un grupo pequeño y fiel (<a href="#803-1000-true-fans">803</a>).</li>
+<li><strong>Rework</strong>. Jason Fried y David Heinemeier Hansson, 2010. El precedente de la empresa pequeña a propósito (<a href="#804-minimalist-entrepreneur">804</a>).</li>
+<li><strong>The SaaS Playbook</strong>. Rob Walling, 2023. La visión posterior y más actual de Walling (<a href="#805-start-small-stay-small">805</a>).</li>
+<li><strong>Zero to Sold</strong>. Arvid Kahl, 2020. Un negocio pequeño de software, de cero a su venta (<a href="#805-start-small-stay-small">805</a>).</li>
+<li><strong>It Doesn't Have to Be Crazy at Work</strong>. Jason Fried y David Heinemeier Hansson, 2018. La calma aplicada al trabajo diario (<a href="#806-company-of-one">806</a>).</li>
+<li><strong>Slow Productivity</strong>. Cal Newport, 2024. Hacer menos cosas a un ritmo sostenible (<a href="#806-company-of-one">806</a>).</li>
+<li><strong>The One Thing</strong>. Gary Keller y Jay Papasan. La pregunta de la única cosa, aún más radical que <em>Essentialism</em> (<a href="#807-essentialism">807</a>).</li>
+<li><strong>The Goal</strong>. Eliyahu Goldratt, 1984. En español: <em>La meta</em>. La teoría de las restricciones, que da rigor a la idea del cuello de botella (<a href="#807-essentialism">807</a>).</li>
+<li><strong>Quit</strong>. Annie Duke, 2022. Cuándo abandonar un proyecto y cómo decidirlo bien (<a href="#807-essentialism">807</a>).</li>
+</ul>
+
+<h3>Mencionados en la Parte IX</h3>
+<ul>
+<li><strong>Blue Ocean Shift</strong>. W. Chan Kim y Renée Mauborgne, 2017. La continuación de <em>Blue Ocean Strategy</em>, paso a paso (<a href="#901-blue-ocean-strategy">901</a>).</li>
+<li><strong>Competitive Strategy</strong>. Michael E. Porter, 1980. En español: <em>Estrategia competitiva</em>. El marco clásico del océano rojo (<a href="#901-blue-ocean-strategy">901</a>).</li>
+<li><strong>Inside the Tornado</strong>. Geoffrey Moore, 1995. Lo que pasa cuando el mercado de masas despega (<a href="#903-crossing-the-chasm">903</a>).</li>
+<li><strong>The Crux</strong>. Richard Rumelt, 2022. Identificar el desafío clave (<a href="#904-good-strategy-bad-strategy">904</a>).</li>
+<li><strong>Playing to Win</strong>. A. G. Lafley y Roger L. Martin, 2013. La estrategia como cascada de elecciones (<a href="#904-good-strategy-bad-strategy">904</a>).</li>
+<li><strong>Competitive Advantage</strong>. Michael E. Porter, 1985. En español: <em>Ventaja competitiva</em>. El marco clásico del que Helmer se separa (<a href="#905-7-powers">905</a>).</li>
+</ul>
+
+<h3>Mencionados en la Parte XI</h3>
+<ul>
+<li><strong>The Black Swan</strong>. Nassim Nicholas Taleb, 2007. En español: <em>El cisne negro</em>. Sucesos raros de gran impacto que no se pueden prever (<a href="#1101-antifragile">1101</a>, <a href="#1102-fooled-by-randomness">1102</a>).</li>
+<li><strong>Skin in the Game</strong>. Nassim Nicholas Taleb, 2018. En español: <em>Jugarse la piel</em>. Quién paga las consecuencias de las decisiones (<a href="#1101-antifragile">1101</a>).</li>
+<li><strong>Trustworthy Online Controlled Experiments</strong>. Ron Kohavi, Diane Tang y Ya Xu, 2020. Para pasar de desconfiar de los datos a medir bien los experimentos (<a href="#1102-fooled-by-randomness">1102</a>).</li>
+<li><strong>Superforecasting</strong>. Philip Tetlock y Dan Gardner, 2015. Mejorar la calibración de las predicciones con práctica y método (<a href="#1103-thinking-in-bets">1103</a>).</li>
+<li><strong>How to Decide</strong>. Annie Duke, 2020. Ejercicios prácticos para decidir, posterior a <em>Thinking in Bets</em> (<a href="#1103-thinking-in-bets">1103</a>).</li>
+<li><strong>The Millionaire Next Door</strong>. Thomas J. Stanley y William D. Danko, 1996. La diferencia entre parecer rico y serlo (<a href="#1104-psychology-of-money">1104</a>).</li>
+<li><strong>Your Money or Your Life</strong>. Vicki Robin y Joe Dominguez, 1992. El dinero entendido como horas de vida, para pensar en lo suficiente (<a href="#1104-psychology-of-money">1104</a>).</li>
+<li><strong>Same as Ever</strong>. Morgan Housel, 2023. Lo que no cambia en el comportamiento humano y la incertidumbre (<a href="#1104-psychology-of-money">1104</a>).</li>
+</ul>
+
+<h3>Otras fuentes citadas que no son libros</h3>
+<ul>
+<li>Los estudios y charlas de Patrick Campbell y el equipo de ProfitWell (hoy Paddle) sobre precios de suscripción (<a href="#401-monetizing-innovation">401</a>).</li>
+<li>Los informes anuales de RevenueCat sobre suscripciones en apps (<a href="#402-subscribed">402</a>).</li>
+<li>El blog Product Talk, de Teresa Torres (<a href="#603-continuous-discovery-habits">603</a>).</li>
+<li>Los artículos de Nielsen Norman Group sobre usabilidad (<a href="#606-dont-make-me-think">606</a>).</li>
+<li>Los artículos de Andy Raskin sobre narrativa estratégica (<a href="#702-made-to-stick">702</a>).</li>
+<li>Las guías de creadores de TikTok Studio y YouTube sobre retención de audiencia (<a href="#705-hook-point">705</a>).</li>
+<li>Los ensayos de Li Jin sobre la economía de la pasión (<a href="#803-1000-true-fans">803</a>) y los de Patrick McKenzie sobre cobrar más (<a href="#805-start-small-stay-small">805</a>).</li>
+</ul></section>
 
 <hr>
 

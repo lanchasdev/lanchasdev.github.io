@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="es"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Mapa de riesgos del portfolio y cómo cubrirte</title>
+<meta name="description" content="Los riesgos reales de tus apps uno a uno, con probabilidad, impacto, señal temprana y cobertura, y una lista de comprobación para repasar cada trimestre.">
+<meta name="author" content="Claude">
+<meta property="og:title" content="Mapa de riesgos del portfolio y cómo cubrirte">
+<meta property="article:published_time" content="2026-10-29">
+<style>
+:root{--bg:#fbfaf7;--fg:#1f2933;--muted:#6b7280;--line:#e5e7eb;--accent:#9a3412}
+@media(prefers-color-scheme:dark){:root{--bg:#12100e;--fg:#ede7d4;--muted:#9a9384;--line:#2c2823;--accent:#e8a33d}}
+body{margin:0;background:var(--bg);color:var(--fg);font:18px/1.7 Georgia,"Times New Roman",serif}
+main{max-width:40em;margin:0 auto;padding:1.5rem 1rem 4rem}
+h1{font-size:1.8rem;line-height:1.25;margin:.2rem 0 1rem}
+h2{font-size:1.3rem;margin:2.2rem 0 .6rem;color:var(--accent)}
+a{color:var(--accent)}
+em{color:var(--muted)}
+hr{border:0;border-top:1px solid var(--line);margin:2rem 0}
+nav,footer{font:14px/1.5 -apple-system,sans-serif;color:var(--muted)}
+nav a,footer a{margin-right:1rem}
+li{margin:.35rem 0}
+</style></head><body><main>
+<nav><a href="./">← Índice</a></nav>
+<article>
+<h1>Mapa de riesgos del portfolio y cómo cubrirte</h1>
+<p><em>Los riesgos reales de tus apps uno a uno, con probabilidad, impacto, señal temprana y cobertura, y una lista de comprobación para repasar cada trimestre.</em></p>
+
+<h2>Cómo leer este mapa</h2>
+<p>Las cuatro fichas anteriores te han dado cuatro herramientas. Taleb, en <em>Antifragile</em>, te pide que mires tu exposición en lugar de intentar adivinar el futuro, y que repartas el peso como una haltera: casi todo en lo seguro, una parte pequeña en apuestas con techo abierto, nada en el medio. En <em>Fooled by Randomness</em> te avisa de que con catorce o treinta personas casi todo lo que ves es ruido. Duke te da el premortem y el compromiso previo: imaginar el fracaso antes de que ocurra y escribir hoy lo que harás cuando llegue la señal. Housel te recuerda que lo primero es seguir en el juego y que el margen de seguridad es lo que te deja aguantar. Este capítulo junta las cuatro y las aplica a tu negocio, riesgo por riesgo.</p>
+<p>Cada riesgo lleva cuatro cosas:</p>
+<ul>
+<li><strong>Probabilidad.</strong> Alta, media o baja, dicha con palabras y no con un porcentaje, porque no tienes datos para poner uno sin inventarlo. Alta quiere decir «ya te ha pasado o te está pasando»; media, «es habitual en negocios como el tuyo y no tienes nada que lo impida»; baja, «puede pasar, pero hay poco que lo empuje».</li>
+<li><strong>Impacto.</strong> Lo que te costaría si ocurre: bajo (una molestia, unos días), medio (semanas de trabajo o una parte de los ingresos de una app) o alto (la mayor parte de lo que cobras, o una app entera).</li>
+<li><strong>Señal temprana.</strong> Lo que verías antes de que el golpe sea grande. Siempre algo que ya mides o que puedes medir con poco esfuerzo. Si no lo tienes medido, te lo digo.</li>
+<li><strong>Cobertura.</strong> Lo que puedes hacer hoy para que, si ocurre, duela menos. Casi siempre es una de tres cosas: quitar una dependencia (la vía negativa de Taleb), tener una alternativa preparada (una opción) o guardar margen (el colchón de Housel).</li>
+</ul>
+<p>Una advertencia antes de empezar, que viene de <em>Fooled by Randomness</em>: una señal temprana no es una cifra que se mueve una semana. Con tus volúmenes, una señal es algo que se repite (dos semanas seguidas en la misma dirección), algo brusco y sostenido (como la caída de la web de horóscopo desde el 12 de octubre) o algo que es un fallo y no una preferencia (un aviso que no se programa, un pago que no se puede hacer). Lo demás, anótalo y espera.</p>
+
+<h2>Los riesgos, uno a uno</h2>
+
+<h3>1. Casi todo el dinero sale de TCM</h3>
+<p>TCM es la única app con un negocio que se sostiene. Cobra con suscripción y, dentro de la suscripción, casi todo lo trae un único plan y un único paso: el anual con prueba del muro del onboarding (12 pruebas de 87 anuales empezados en la semana del 19 al 26 de octubre en Android, frente a 1 alta de 9 en el mensual). El tráfico también está concentrado: unas 43 descargas al día en Play y 10,7 en iOS. Y la concentración tiene capas: una app, una tienda que pesa más que la otra, un plan, un muro, una versión (la 1.0.10).</p>
+<p>Ya tienes tres fallos conocidos en esa cadena. El primero, el «not allowed» de Google Play: 29 personas y 74 intentos en 30 días, aproximadamente 1 de cada 6 que pulsa pagar. El segundo, que no tienes curva de retención porque la app no manda <code>days_since_install</code>: no sabes cuánta gente sigue usándola a los treinta días, y por tanto no sabes cuántos anuales renovarán. Las primeras pruebas anuales se cobraron entre el 14 y el 25 de octubre; la primera renovación de verdad no la verás hasta dentro de un año. El tercero, que la línea entre educar y prometer salud es la que más te puede costar con las tiendas, y TCM vive justo encima de ella.</p>
+<ul>
+<li><strong>Probabilidad:</strong> media. No hay nada que indique que vaya a romperse, pero cualquiera de los eslabones (una política de Google sobre suscripciones, un rechazo de una actualización, una versión que rompe el muro) puede fallar sin aviso.</li>
+<li><strong>Impacto:</strong> alto. Es casi todo lo que cobras.</li>
+<li><strong>Señal temprana:</strong> altas por vista del muro, por semana y por tienda, comparadas con la media de las cuatro semanas anteriores, no con la semana anterior sola (un salto de 4 a 10 altas en una semana es tan normal como uno de 10 a 4). Pruebas que se cobran al día ocho, desde RevenueCat. Personas con «not allowed» por semana. Y, en cuanto lo tengas, la retención a 30 días por cohorte de versión.</li>
+<li><strong>Cobertura:</strong> la lectura antifrágil de la ficha de Taleb es la correcta: no diversificar a la fuerza hacia otras apps, sino hacer más robusto lo que ya cobra. En concreto: arregla la pantalla del «not allowed» (vía negativa: quitar un error que ya cuesta ventas); manda <code>days_since_install</code> para tener curva; no toques el muro de la 1.0.10 sin un motivo medido (evitar la iatrogenia); empuja la actualización a los 41 que siguen en la 1.0.9; mantén el vitalicio como tercera opción tranquila, que es caja por adelantado. Y, del lado de Housel, que TCM financie tu colchón antes que cualquier experimento.</li>
+</ul>
+<p>Lo que <strong>no</strong> es cobertura: lanzar una quinta app para «no depender de TCM». Eso es el medio de la haltera: mucho tiempo, riesgo moderado y recorrido incierto, a costa de la única pieza que paga.</p>
+
+<h3>2. Dos tiendas deciden si existes</h3>
+<p>Es el riesgo que más veces se te ha materializado este año. Zodiaco iOS (la 1.1.3) lleva 28 días en la cola de revisión de Apple. Anime Food iOS 1.3.0 está rechazada, y la app está en la categoría Niños de iOS para siempre, sin vuelta atrás. Ninguna de tus apps iOS aparece en los 27 países de la Unión Europea mientras Apple revisa tu estatus de comerciante; tu propio historial lo refleja, porque tuviste que adaptar el script que baja las capturas de las fichas para que no se rompiera al no encontrar la App Store de la UE. A eso se suman los cambios de criterio que no ves llegar: un nombre de ficha que sube visitas pero baja descargas desde búsqueda (Leo Glow, ×0,64 tras el cambio del 7 de octubre) o una edición que empeora una app entera (Anime Food Play, visitantes ×0,31).</p>
+<ul>
+<li><strong>Probabilidad:</strong> alta. Ya está pasando, en varias apps a la vez.</li>
+<li><strong>Impacto:</strong> de medio a alto. Una revisión que se alarga te quita una tienda durante semanas; un rechazo en TCM en el momento equivocado te quita la actualización que arregla un cobro; perder la UE en iOS es perder un mercado entero sin haber hecho nada mal.</li>
+<li><strong>Señal temprana:</strong> días en revisión por app y versión (cualquier cosa por encima de lo que suele tardar Apple contigo ya es una señal; apúntalo para saber qué es lo normal); correos de las consolas sobre políticas, declaraciones pendientes o formularios que caducan; descargas por país en iOS, para ver el día que la UE vuelve o el día que otro mercado desaparece; y, tras cada edición de ficha, el multiplicador por edición que ya mides.</li>
+<li><strong>Cobertura:</strong>
+<ul>
+<li><strong>Resuelve lo administrativo antes que lo creativo.</strong> El estatus de comerciante en Apple no es un problema de marca ni de ASO: es un trámite. Mientras no esté cerrado, todo el trabajo de fichas iOS en mercados europeos es trabajo que no puede rendir.</li>
+<li><strong>Separa las subidas arriesgadas de las urgentes.</strong> Si una versión de TCM arregla un cobro, que no lleve a la vez una función nueva que pueda provocar un rechazo. Un cambio que urge, solo; un cambio que puede discutirse con el revisor, en otra versión.</li>
+<li><strong>Zodiaco iOS con fecha límite.</strong> El pico es febrero. Escribe hoy qué harás si a mediados de diciembre sigue sin salir (por ejemplo, reenviar una versión mínima, o dejar iOS para después del Año Nuevo chino y concentrar el esfuerzo en Android). Eso es el compromiso previo de Duke: decidirlo ahora, no en enero con prisa.</li>
+<li><strong>Revisa cada política que te toca, una vez por trimestre:</strong> salud en TCM, Niños en Anime Food iOS y público 13+ en Anime Food Play, contenido sobre apariencia en Leo Glow, predicciones graves en Zodiaco.</li>
+<li><strong>Una edición de ficha cada vez, medida.</strong> Ya lo haces. Es tu mejor protección contra los cambios de algoritmo: si algo cae, sabes qué lo causó y lo deshaces (como el deshacer de nombres de Anime Food en Play, que sigue pendiente).</li>
+</ul>
+</li>
+</ul>
+
+<h3>3. El vídeo corto y TikTok como canal</h3>
+<p>Tu máquina de vídeo es de las mejores cosas que has construido: avatares de IA, clips generados, montaje y publicación automática en TikTok, Instagram y YouTube, con la cola programada semanas por delante. Pero tiene tres puntos frágiles. El primero, la cuenta: una cuenta suspendida, con todo el calendario dentro, es una pérdida concentrada (lo dice la introducción de esta parte). El segundo, el algoritmo: decide qué se ve y puede cambiar de criterio sobre el contenido hecho con IA o sobre temas como salud y apariencia sin avisarte. El tercero, la infraestructura: un Mac en casa publica por ti; si se apaga, se cuelga o pierde la sesión de una red, la cola se para y nadie se entera.</p>
+<p>Hay algo que no sabes y que deberías saber antes de calibrar este riesgo: <strong>cuánto de tus descargas viene del vídeo</strong>. No lo tienes medido por app. Tienes las páginas de bio con el parámetro de origen hacia las tiendas, y en Leo Glow la pregunta de cómo nos conociste; con eso puedes empezar a medirlo.</p>
+<ul>
+<li><strong>Probabilidad:</strong> media. Publicas mucho y de forma automática, con avatares de IA, en nichos (salud, apariencia) que las plataformas vigilan.</li>
+<li><strong>Impacto:</strong> medio hoy, porque no sabes cuánto pesa; podría ser alto en Anime Food si decides que su papel es ser un motor de contenido, porque entonces la cuenta <em>es</em> la marca.</li>
+<li><strong>Señal temprana:</strong> avisos de contenido o de restricciones en cualquier cuenta (el primero ya es una señal, no esperes al tercero); una caída brusca de alcance en todas las piezas de una cuenta a la vez, y no en una sola (una pieza que no funciona es ruido; todas a la vez, un cambio de régimen); y, para el Mac, un día sin publicaciones que estaban programadas.</li>
+<li><strong>Cobertura:</strong>
+<ul>
+<li><strong>Que ninguna cuenta lo tenga todo.</strong> Los vídeos maestros, los guiones y los avatares guardados fuera de la plataforma, en tu disco y en una copia, para poder republicar en otra cuenta o en otra red en días y no en semanas.</li>
+<li><strong>Etiqueta lo que es IA y no prometas lo que no puedes.</strong> Las plataformas piden marcar el contenido realista generado con IA; revisa sus normas actuales en lugar de fiarte de lo que eran hace meses. En TCM, nada de curar; en Leo Glow, nada de antes y después; en Anime Food, nada de personajes ni series reales. Son las tres líneas que ya tienes en tus guías de marca y son también tu seguro.</li>
+<li><strong>Un canal propio, aunque sea pequeño.</strong> La lección de la web de Zodiaco vale aquí: depender de un intermediario es depender de su criterio. Un correo de estudiantes en TCM (con consentimiento, ver el riesgo 6), una comunidad o una lista de quien quiere saber cuándo sale Zodiaco en iOS. Es una opción barata en el sentido de Taleb: hoy rinde poco y el día que una red te cierre la puerta vale mucho.</li>
+<li><strong>Vigila al que publica.</strong> El Mac debería avisarte si una publicación programada falla. Antes del viaje ya te lo planteas en «Qué hacer al volver»; deja escrito qué vigila y cómo te enteras.</li>
+<li><strong>Mide el origen.</strong> Descargas por 1.000 vistas y visitas a la ficha desde las bios, por app y por red. Hasta que no lo midas, no sabes si este riesgo es pequeño o es el segundo de la lista.</li>
+</ul>
+</li>
+</ul>
+
+<h3>4. Zodiaco: febrero y un solo anuncio</h3>
+<p>Zodiaco tiene dos concentraciones a la vez. Una en el tiempo: el horóscopo chino tiene picos muy estacionales, con el Año Nuevo chino en febrero como el mayor. La otra en el ingreso: de unos 10,6 USD en 30 días, 7,81 vienen de un único hueco, el rewarded de duplicar la recompensa diaria en el Oráculo. Además, depende de que la gente vuelva cada día, y ya viste lo que pasa cuando los avisos fallan: entre el 26 de septiembre y el 1 de octubre la vuelta al día siguiente cayó del 26 % al 15 %, y con ella cae el rewarded diario. La web, que era otra pata, perdió casi todas sus impresiones en Google desde el 12 de octubre.</p>
+<p>Este riesgo tiene una particularidad: el suceso no es raro ni imprevisible. Sabes cuándo llega febrero. El riesgo real es llegar tarde, no que llegue.</p>
+<ul>
+<li><strong>Probabilidad:</strong> alta de que febrero decida el año de Zodiaco; media de que llegues sin estar preparado si no lo planificas.</li>
+<li><strong>Impacto:</strong> medio. En dinero, Zodiaco pesa poco frente a TCM; en oportunidad, perder la temporada es esperar otro año.</li>
+<li><strong>Señal temprana:</strong> a mediados de diciembre, ¿está iOS aprobado? ¿Están publicados los tres rewarded nuevos que esperan build desde el 17 de octubre? ¿Están las fichas y las notificaciones de «horóscopo chino 2027» preparadas? Y, todo el año, impresiones rewarded por persona activa y la vuelta al día siguiente después de cada versión.</li>
+<li><strong>Cobertura:</strong> el premortem que propone la ficha de Duke, hecho ahora: imagina que el Año Nuevo pasa y Zodiaco no ha crecido, y escribe por qué (iOS en revisión, vídeos de Mei y Lin sin terminar, rewarded sin mostrar, avisos rotos). Para cada causa, una tarea antes de mediados de enero, que es cuando el capítulo de anuncios te pide dejar cerrados los cambios. Publica los rewarded nuevos para que el ingreso no dependa de un solo hueco. Y del lado de Housel: planifica Zodiaco sobre el mes malo y trata el dinero de febrero como un extra que no se convierte en gastos fijos.</li>
+</ul>
+
+<h3>5. Leo Glow en un nicho delicado</h3>
+<p>Leo Glow vive cerca de una etiqueta con mucho volumen de búsqueda y mala fama. Tu postura (no escanea la cara ni puntúa el atractivo, funciona con hábitos) te separa del nicho y es tu mejor defensa. Pero el riesgo no desaparece: el tema es la imagen corporal, y el público probable, hombres jóvenes, incluye con bastante seguridad a menores, aunque tu política de privacidad diga que la app no se dirige a menores de 13 años. Hay tres frentes.</p>
+<ul>
+<li><strong>Políticas de las tiendas y de las redes.</strong> El contenido sobre apariencia, dietas y comparaciones de cuerpo está vigilado, más aún si llega a menores. Un endurecimiento de las normas puede afectar a la ficha, a los vídeos o a la palabra «looksmaxxing» que hoy te trae búsquedas.</li>
+<li><strong>El coach de IA.</strong> Leo contesta con un modelo de IA. Según tu política de privacidad, tu servidor no guarda el contenido de las conversaciones, lo cual es bueno para la privacidad, pero tiene una consecuencia: no puedes revisar qué le ha dicho Leo a nadie. Si un chaval de quince años le pregunta por una dieta extrema o le dice que se ve feo, no lo sabrás por los datos.</li>
+<li><strong>La edad real de tu público.</strong> No la tienes medida. La ficha de marca ya te pedía comprobarla antes de escribir un solo anuncio.</li>
+</ul>
+<ul>
+<li><strong>Probabilidad:</strong> media. Es un nicho en el punto de mira y tu público es joven.</li>
+<li><strong>Impacto:</strong> alto para Leo Glow (retirada de la ficha, de una cuenta o de la palabra que te trae tráfico), bajo para el resto del portfolio gracias a que cada app tiene su marca y el riesgo no se contagia.</li>
+<li><strong>Señal temprana:</strong> reseñas que hablen de cómo se siente alguien tras usar la app (léelas todas, son pocas); avisos de las tiendas o de TikTok sobre contenido; cambios en la clasificación por edades que te pidan las consolas; y, si decides medirlo, el reparto por edades de quien empieza el onboarding.</li>
+<li><strong>Cobertura:</strong>
+<ul>
+<li><strong>Una batería de preguntas difíciles para Leo</strong>, escrita una vez y repetida cada trimestre y tras cada cambio de modelo o de instrucciones: dietas extremas, «soy feo», autolesión, «tengo 14 años», comparaciones con otros. Comprueba que Leo responde con prudencia, no da cifras peligrosas y, cuando toca, recomienda hablar con alguien de confianza o un profesional. Es la única forma de auditar algo que no guardas.</li>
+<li><strong>Mantén la postura en todo el material:</strong> ni antes y después, ni lenguaje de la parte tóxica del nicho (ascender, mogging, rankings). Cada pieza que la respeta es una pieza que ninguna norma nueva tumba.</li>
+<li><strong>Mide la edad con respeto.</strong> Una pregunta opcional de tramo de edad en el onboarding o, al menos, entrevistas con cinco usuarios reales. Si la añades, actualiza antes la política de privacidad (tu propia política promete cambiar la página antes de que llegue la versión).</li>
+<li><strong>Revisa la clasificación por edades</strong> en las dos consolas para que diga la verdad sobre lo que hace la app, incluido el chat con IA.</li>
+<li><strong>Ten preparada la ficha sin «looksmaxxing».</strong> Si el término se vuelve problemático, que el cambio a «glow up» no te pille sin textos. La categoría de hábitos que recomienda la ficha de marca es, además, la que mejor aguanta un endurecimiento.</li>
+</ul>
+</li>
+</ul>
+
+<h3>6. Privacidad y normativa</h3>
+<p>Aquí partes de una posición mejor que la de muchos desarrolladores solos: tienes una política por app, escrita para lo que hace cada una, y varias dicen que no recogen casi nada porque es verdad. Pero cada app tiene sus propias zonas sensibles, y el RGPD te alcanza como responsable aunque seas una sola persona.</p>
+<ul>
+<li><strong>TCM</strong> es la única con cuentas, sincronización en la nube y suscripción. Permite guardar, si la persona lo activa, simulaciones y planes de tratamiento, que pueden contener datos de salud: una categoría especial en la ley europea. Tu política promete borrar cuentas en 30 días y separa esos datos del resto con un interruptor desactivado por defecto. Bien. El riesgo es que una mala configuración del acceso por usuario en la base de datos, o una petición de borrado que se queda sin atender, convierta esa promesa en un problema.</li>
+<li><strong>Leo Glow</strong> envía lo que se escribe a Leo a un servidor tuyo y a un proveedor de IA en Estados Unidos. La política lo explica y pide no compartir datos de salud, pero la gente lo hará.</li>
+<li><strong>Zodiaco y Leo Glow</strong> sirven anuncios con el formulario de consentimiento de Google en el Espacio Económico Europeo y el Reino Unido. Si el formulario dejara de salir tras una versión, servirías anuncios personalizados sin consentimiento sin darte cuenta.</li>
+<li><strong>Anime Food</strong> está en iOS en la categoría Niños, donde no lleva anuncios ni analítica, y en Play el público 13+. Su política vive en otro dominio (recetasdeanime.com): si ese dominio caduca o se rompe, la app se queda sin política enlazada.</li>
+<li><strong>Todas</strong> usan analítica que tu política describe como anónima por diseño y amparada en la exención de medición de audiencia. Es una interpretación razonable y bien explicada, pero es una interpretación: que la revise alguien que sepa de protección de datos es barato comparado con el coste de equivocarte.</li>
+</ul>
+<ul>
+<li><strong>Probabilidad:</strong> baja de que una autoridad te investigue; media de que tu política y tu app dejen de decir lo mismo tras alguna versión (es lo que pasa cuando se publica a menudo).</li>
+<li><strong>Impacto:</strong> medio. Rara vez es la multa lo que duele a tu escala; lo que duele es una app retirada por una declaración de datos que no coincide, o una reseña que te acusa con razón.</li>
+<li><strong>Señal temprana:</strong> cada versión que añade un SDK, un permiso o un evento nuevo; correos de las tiendas sobre la sección de seguridad de datos o las etiquetas de privacidad; peticiones de borrado o de acceso que llegan a tu correo (apunta cuándo llegan y cuándo las cierras).</li>
+<li><strong>Cobertura:</strong> una regla de una línea en tu lista de publicación: <strong>si la versión cambia lo que sale del móvil, la política, la sección de seguridad de datos de Play y la etiqueta de privacidad de Apple se cambian antes de enviarla</strong>. Una prueba trimestral del formulario de consentimiento con un móvil configurado en un país de la UE. Una prueba trimestral del acceso por usuario en la base de datos de TCM con dos cuentas de prueba. Un registro sencillo de peticiones de privacidad. Y no uses los correos de las cuentas de TCM para enviar novedades: si quieres un canal de correo, que sea con su propio consentimiento.</li>
+</ul>
+
+<h3>7. Errores técnicos silenciosos</h3>
+<p>Es el riesgo con más historial y el más barato de cubrir. Lo que lo hace peligroso es que no hace ruido: la app abre, nadie se queja y lo que se rompe es algo que solo se ve en los datos días después. Tu lista ya es larga:</p>
+<ul>
+<li>En TCM 1.0.7 el permiso de notificaciones se concedía y la app no programaba nada para quien terminaba el onboarding.</li>
+<li>En Zodiaco 1.1.2 y 1.1.3, R8 rompió la programación de todos los avisos en la build de release; entre el 26 de septiembre y el 1 de octubre la vuelta al día siguiente cayó del 26 % al 15 %.</li>
+<li>En Anime Food el <code>distinct_id</code> está roto y no puedes seguir a una persona de una sesión a otra.</li>
+<li>TCM y Zodiaco no mandan <code>days_since_install</code>, así que no hay curva de retención.</li>
+<li>Embudos con pasos que no cuadran (en Zodiaco entran más en «fecha» que en «welcome»; en Anime Food, «worlds» tiene 50 y el paso siguiente 83), que indican eventos perdidos o ramas sin medir.</li>
+<li>Errores de medición que parecían datos: los 212 «iOS» de Leo Glow que eran tu Mac, el salto falso de Sonar del 22 de septiembre, los robots de Play y los eventos desde desarrollo que se limpiaron el 24 de octubre.</li>
+<li>El ingreso de anuncios hacia RevenueCat, que salió por OTA el 14 de octubre y todavía no se ha comprobado en un móvil real.</li>
+</ul>
+<ul>
+<li><strong>Probabilidad:</strong> alta. Te ha pasado varias veces en dos meses y publicas a menudo.</li>
+<li><strong>Impacto:</strong> medio por cada fallo, pero acumulativo: cada semana con un aviso roto es una semana de retención perdida y de datos que no puedes leer, y te lleva a decisiones equivocadas sobre todo lo demás.</li>
+<li><strong>Señal temprana:</strong> fracciones que deberían ser estables y de repente se van a cero o se disparan. Las tres más útiles: avisos programados por persona que concede el permiso (<code>reminders_scheduled</code>), avisos abiertos por aviso enviado (<code>notification_opened</code>) y eventos por persona activa por versión. Un cero no es ruido aunque la muestra sea pequeña: es un fallo.</li>
+<li><strong>Cobertura:</strong>
+<ul>
+<li><strong>Una prueba en móvil real, con la build de release, antes de cada subida.</strong> Cinco comprobaciones fijas: se programa un aviso y llega; el muro abre y la hoja de la tienda enseña lo que promete tu botón; los tres eventos clave de la app llegan a PostHog marcados como producción; el formulario de consentimiento sale en la UE; la app arranca sin conexión. Te lleva un cuarto de hora y probablemente habría detectado los dos fallos de avisos.</li>
+<li><strong>Alertas en lugar de mirar.</strong> Taleb te pide mirar menos a menudo lo que cambia despacio; la otra cara es que lo que se rompe de golpe debe avisarte solo. Configura en tu analítica una alerta por app cuando los avisos programados por día o los eventos clave caigan muy por debajo de lo normal. Así puedes dejar de mirar la conversión cada mañana sin dejar de enterarte de una rotura.</li>
+<li><strong>Antes de explicar un salto, busca el error de medición.</strong> La regla que ya aplicas: dispositivos de prueba fuera, robots fuera, versión de desarrollo fuera.</li>
+<li><strong>Arregla las medidas que faltan antes de añadir nada.</strong> <code>days_since_install</code> en TCM y Zodiaco, el <code>distinct_id</code> de Anime Food. Son vía negativa en estado puro: quitar la venda de los ojos.</li>
+</ul>
+</li>
+</ul>
+
+<h3>8. Riesgo personal: solo, cansado, con ingresos que suben y bajan</h3>
+<p>El último riesgo es el que no aparece en ningún panel. Eres una empresa de uno: autónomo desde septiembre, sin equipo, con once apps, decenas de cuentas, varias webs, una máquina de vídeo, un informe diario a las siete de la mañana y un viaje de 17 días con el Mac publicando solo en casa. Hay tres formas de que esto se rompa, y ninguna es técnica.</p>
+<ul>
+<li><strong>Si tú no estás, nada funciona.</strong> Una enfermedad, un móvil perdido con la verificación en dos pasos dentro o una contraseña que solo sabes tú pueden dejarte sin acceso a una consola o a una cuenta durante semanas.</li>
+<li><strong>El desgaste.</strong> Muchas cosas en marcha, mucha información diaria y casi todas las cifras pequeñas. <em>Fooled by Randomness</em> lo explica bien: mirar a diario datos ruidosos no solo confunde, también cansa, porque las bajadas duelen más de lo que alegran las subidas. Y Duke añade que, después de una mala racha, todo parece peor de lo que es: es el peor momento para decidir.</li>
+<li><strong>El dinero personal.</strong> Ingresos que no se parecen a una nómina, concentrados en una app, con gastos fijos de herramientas de IA y cuotas, y obligaciones que llegan cada trimestre.</li>
+</ul>
+<ul>
+<li><strong>Probabilidad:</strong> media. No es que vaya a pasar, es que no hay nada en tu forma de trabajar que lo impida.</li>
+<li><strong>Impacto:</strong> alto. Es el único riesgo que afecta a todas las apps a la vez.</li>
+<li><strong>Señal temprana:</strong> no tienes métricas para esto y no hace falta inventarlas. Sirven preguntas honestas una vez al mes: ¿he tomado alguna decisión en caliente tras un informe malo? ¿He dejado de hacer algo que me gustaba por mirar paneles? ¿Cuántos meses podría aguantar si TCM cobrara la mitad? Si la respuesta a la última es «no lo sé», esa es la señal.</li>
+<li><strong>Cobertura:</strong>
+<ul>
+<li><strong>El colchón de Housel.</strong> Varios meses de gastos personales y del negocio, apartados, sin otro objetivo que no tener que decidir en el peor momento. Cuánto exactamente lo decides tú con tu cifra de «suficiente».</li>
+<li><strong>Lo que no es tuyo, fuera nada más entrar.</strong> Impuestos y cuotas apartados cuando cobras, no cuando toca pagar. Cuánto y cómo, con tu asesoría.</li>
+<li><strong>Gastos fijos revisados cada trimestre.</strong> Herramientas de vídeo, de IA, la API de Leo: quédate con lo que usas. Cada suscripción que quitas es margen.</li>
+<li><strong>Un sobre de acceso.</strong> Un documento cifrado con las consolas, los correos de cada cuenta, dónde están los códigos de recuperación y qué hacer si pierdes el móvil. Y códigos de recuperación de verdad, impresos o guardados fuera del móvil.</li>
+<li><strong>Menos superficie.</strong> La decisión de <em>Essentialism</em> (empujar TCM y Leo Glow con plazo, mantener Zodiaco y Anime Food, archivar las siete menores) es también una cobertura de este riesgo: cada app que no recibe horas es una cosa menos que puede romperse en tu cabeza.</li>
+<li><strong>El informe diario, para roturas; la conversión, por semanas.</strong> Y una regla escrita: ningún cambio en un muro que funciona por los datos de una sola semana.</li>
+</ul>
+</li>
+</ul>
+
+<h2>Tabla resumen</h2>
+<table>
+<thead>
+<tr><th>Riesgo</th><th>Prob.</th><th>Impacto</th><th>Señal temprana</th><th>Cobertura principal</th></tr>
+</thead>
+<tbody>
+<tr><td>Concentración en TCM</td><td>Media</td><td>Alto</td><td>Altas por vista del muro frente a la media de cuatro semanas; pruebas cobradas; «not allowed»</td><td>Arreglar «not allowed», medir retención, no tocar el muro, colchón</td></tr>
+<tr><td>Tiendas</td><td>Alta</td><td>Medio-alto</td><td>Días en revisión; correos de política; descargas iOS por país</td><td>Estatus de comerciante; versiones urgentes sin riesgo; fecha límite para Zodiaco iOS</td></tr>
+<tr><td>Vídeo y TikTok</td><td>Media</td><td>Medio (no medido)</td><td>Avisos en cuentas; caída de alcance en todas las piezas; publicaciones que no salen</td><td>Copias fuera de la plataforma; canal propio; medir el origen</td></tr>
+<tr><td>Zodiaco: febrero y un rewarded</td><td>Alta</td><td>Medio</td><td>iOS, rewarded nuevos y fichas listos a mediados de diciembre</td><td>Premortem ahora; tres rewarded nuevos; planificar sobre el mes malo</td></tr>
+<tr><td>Leo Glow, nicho delicado</td><td>Media</td><td>Alto para la app</td><td>Reseñas sobre cómo se sienten; avisos de contenido; edades</td><td>Preguntas difíciles a Leo cada trimestre; postura sin comparaciones; ficha alternativa</td></tr>
+<tr><td>Privacidad y normativa</td><td>Baja-media</td><td>Medio</td><td>Versiones con SDK o eventos nuevos; correos de las tiendas; peticiones de borrado</td><td>Política y formularios antes de cada versión; pruebas de consentimiento y de acceso</td></tr>
+<tr><td>Errores silenciosos</td><td>Alta</td><td>Medio, acumulativo</td><td>Avisos programados, avisos abiertos y eventos clave que caen a cero</td><td>Prueba en móvil real antes de cada subida; alertas; arreglar medidas</td></tr>
+<tr><td>Riesgo personal</td><td>Media</td><td>Alto</td><td>Decisiones en caliente; no saber cuántos meses aguantas</td><td>Colchón; impuestos aparte; sobre de acceso; menos superficie</td></tr>
+</tbody>
+</table>
+
+<h2>Por dónde empezar: los tres primeros</h2>
+<p>El plan de «Qué hacer al volver» te pide cubrir los tres primeros riesgos de este mapa entre el 29 de noviembre y el 13 de diciembre. No son los tres más graves en abstracto: son los que combinan más probabilidad e impacto con la cobertura más barata.</p>
+<ol>
+<li><strong>Errores técnicos silenciosos.</strong> Probabilidad alta, historial largo y una cobertura de un cuarto de hora por versión. Escribe la lista de cinco comprobaciones y crea las alertas de avisos y eventos. Es lo que protege la lectura de todo lo demás.</li>
+<li><strong>Concentración en TCM.</strong> Impacto alto. La pantalla del «not allowed» y <code>days_since_install</code> ya están en tu primera semana al volver; aquí se añade el colchón: calcula cuántos meses aguantarías con TCM a la mitad y empieza a apartar.</li>
+<li><strong>Tiendas.</strong> Probabilidad alta y fecha encima: el estatus de comerciante de Apple para volver a la UE, y el compromiso escrito de qué haces con Zodiaco iOS si a mediados de diciembre sigue en revisión.</li>
+</ol>
+<p>Los otros cinco no se olvidan: entran en la lista trimestral. Leo Glow y su coach de IA, en concreto, merecen la batería de preguntas difíciles antes de que vuelvas a empujar su adquisición.</p>
+
+<h2>Lista de comprobación trimestral</h2>
+<p>Hazla cuatro veces al año, con calma y sin informes diarios delante: la primera, en la ventana del 29 de noviembre al 13 de diciembre; después, a mediados de marzo, junio y septiembre. Añade una revisión corta de Zodiaco a primeros de enero, antes del pico. Apunta cada respuesta con la fecha, para que la siguiente revisión compare con algo.</p>
+
+<h3>Dinero y concentración</h3>
+<ol>
+<li>¿Qué parte de lo cobrado este trimestre viene de TCM, y ha cambiado frente al anterior?</li>
+<li>Altas por vista del muro de TCM, por tienda, sumando el trimestre. ¿Se mantiene la proporción del anual frente al mensual?</li>
+<li>Pruebas que se cobran al día ocho (RevenueCat), por cohorte.</li>
+<li>Personas con «not allowed» y con «Error performing request»: ¿bajan tras la pantalla nueva?</li>
+<li>Retención a 30 días de TCM por versión, en cuanto la tengas.</li>
+</ol>
+
+<h3>Tiendas y políticas</h3>
+<ol>
+<li>¿Todas las apps están disponibles donde deberían, en las dos tiendas, incluida la UE en iOS?</li>
+<li>¿Hay alguna revisión abierta, rechazo o aviso de política sin resolver?</li>
+<li>Relee las políticas que te tocan: salud (TCM), Niños y familias (Anime Food), contenido sobre apariencia (Leo Glow), predicciones (Zodiaco).</li>
+<li>¿Las clasificaciones por edades dicen la verdad sobre cada app?</li>
+<li>¿Qué ediciones de ficha has hecho y cuál se debe deshacer?</li>
+</ol>
+
+<h3>Canales</h3>
+<ol>
+<li>¿Alguna cuenta ha recibido avisos o restricciones? ¿Cuántas, en qué red?</li>
+<li>¿Los vídeos maestros y los avatares tienen copia fuera de las plataformas?</li>
+<li>Descargas por 1.000 vistas y visitas desde las bios, por app y por red: ¿qué parte de tus descargas viene del vídeo?</li>
+<li>¿El Mac ha dejado de publicar algún día sin que te enteraras?</li>
+<li>¿Ha crecido tu canal propio (correo, comunidad, lista)?</li>
+</ol>
+
+<h3>Apps sensibles</h3>
+<ol>
+<li>Pasa la batería de preguntas difíciles a Leo y anota cualquier respuesta que no te guste.</li>
+<li>Lee todas las reseñas del trimestre de Leo Glow y TCM buscando dos cosas: alguien que se siente peor, alguien que cree que la app le cura.</li>
+<li>¿El material nuevo (fichas, vídeos, avisos) respeta las tres líneas de marca: sin promesas de salud, sin comparaciones de cuerpo, sin propiedad intelectual ajena?</li>
+</ol>
+
+<h3>Privacidad</h3>
+<ol>
+<li>¿Alguna versión del trimestre cambió lo que sale del móvil? Si sí, ¿se actualizaron antes la política, la sección de seguridad de datos de Play y la etiqueta de Apple?</li>
+<li>Prueba del formulario de consentimiento en un móvil configurado en la UE, en Zodiaco y Leo Glow.</li>
+<li>Prueba con dos cuentas de que en TCM ninguna ve los datos de la otra.</li>
+<li>Peticiones de borrado o acceso recibidas y cerradas, con fechas, dentro de los 30 días que prometes.</li>
+<li>¿Siguen vivos todos los enlaces de las políticas, incluido el dominio de Anime Food?</li>
+</ol>
+
+<h3>Técnica y medición</h3>
+<ol>
+<li>¿Cada versión del trimestre pasó las cinco comprobaciones en móvil real?</li>
+<li>¿Han saltado las alertas? ¿Alguna falsa, alguna que debió saltar y no lo hizo?</li>
+<li>¿Siguen pendientes <code>days_since_install</code> o el <code>distinct_id</code> de Anime Food?</li>
+<li>¿Has comprobado en un móvil real el ingreso de anuncios hacia RevenueCat?</li>
+<li>¿Cuánta gente sigue en versiones antiguas con fallos conocidos?</li>
+</ol>
+
+<h3>Tú</h3>
+<ol>
+<li>¿Cuántos meses aguantarías si TCM cobrara la mitad desde mañana? ¿Más o menos que el trimestre pasado?</li>
+<li>¿Está apartado lo que corresponde a impuestos y cuotas?</li>
+<li>Gastos fijos de herramientas: ¿cuáles has usado de verdad este trimestre?</li>
+<li>¿El sobre de acceso está al día y los códigos de recuperación fuera del móvil?</li>
+<li>¿Qué decisión tomaste en caliente este trimestre, y cómo la juzgas ahora por el proceso y no por el resultado?</li>
+<li>¿Qué puedes quitar el próximo trimestre en lugar de añadir?</li>
+</ol>
+
+<h2>Errores comunes</h2>
+<ol>
+<li><strong>Confundir una semana mala con una señal.</strong> Con tus volúmenes, una señal se repite, es brusca y sostenida o es un fallo. Lo demás se anota y se espera.</li>
+<li><strong>Cubrir el riesgo vistoso y dejar el barato.</strong> Una app nueva «para diversificar» parece prudente y es el medio de la haltera. Una prueba en móvil real antes de cada subida parece poca cosa y probablemente habría detectado dos roturas de avisos.</li>
+<li><strong>Esperar a que el golpe llegue para decidir qué harás.</strong> El compromiso previo de Duke se escribe con la cabeza fría: qué harás con Zodiaco iOS si no sale, qué harás con Leo Glow si no llega a tu umbral, qué recortas si TCM cobra la mitad.</li>
+<li><strong>Tomar la ausencia de problemas por ausencia de riesgo.</strong> Taleb desconfía de la calma aparente: que ninguna cuenta haya sido suspendida no dice nada de la próxima semana.</li>
+<li><strong>Tratar la privacidad como un texto que se escribe una vez.</strong> La política tiene que cambiar con cada versión que cambia lo que sale del móvil.</li>
+<li><strong>Medir tu negocio y no medirte a ti.</strong> El único riesgo que toca todas las apps a la vez eres tú. Un colchón y unas horas de descanso son cobertura, no un lujo.</li>
+</ol>
+</article>
+<footer><a href="1104-psychology-of-money.html">← The Psychology of Money (Morgan Housel, 2020)</a><br><a href="1200-parte-xii-cierre.html">Parte XII: Cierre →</a></footer>
+</main></body></html>
